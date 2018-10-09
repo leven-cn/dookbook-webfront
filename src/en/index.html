@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Dookbook - Developers' Cookbook, offers a wealth of useful code examples and snippets for all developers.</title>
+  <meta name="description" content="Dookbook (Developers' cookbook) is a new generatipn knowlege engine for developers, and offers a wealth of useful code examples and snippets for all developers. It now includes over 200 recipes that range from programming language, such as Python, Web front technology (HTML, CSS, JavaScript), Java, SQL, Go, PHP, and so on, to IT foundation and frameworks, such as TCP/IP networking, Linux, nginx, redis, MySQL, jQuery, Django/Flask, and so on."/>
+</head>
+<body>
+  <header>
+    <h1>Dookbook<sup>TM</sup></h1>
+    <p>Developers' Cookbook</p>
+    <p>Forget searching engine, remember <strong>Dookbook</strong> - a new generation knowledge engine for developers</p>
+    <a href="/wx/login/" title="WeChat Login">WeChat Login</a>
+    <a href="../zh-Hans/index.html" title="中文">中文</a>
+  </header>
+  <main>
+    <input type="text" placeholder="input here ..."/>
+  </main>
+  <script>
+  var inputBox = document.querySelector('input[type="text"]');
+  inputBox.onfocus = function(){
+    this.placeholder = "";
+  }
+  inputBox.onblur = function(){
+    var searchText = this.value;
+    console.log(searchText);
+    if(searchText){
+      location.href = "cookbook.html?search=" + searchText;
+    }else{
+      this.placeholder = "input here ...";
+    }
+  }
+  </script>
+</body>
+</html>
