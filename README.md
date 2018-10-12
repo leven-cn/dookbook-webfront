@@ -10,4 +10,4 @@ Totally different from traditional searching engine just like Google, Baidu, or 
 
 Besides that, you could (even if no networking exists) contribute your solutions or improvements to the global **Dookbook<sup>TM</sup>** community by `Git` and `Markdown`, and mean while you could get the corresponding income according to the contribution rate.
 
-> 除此之外，您可以随时随地(甚至在没有网络的情况下)使用`Git`和`Markdown`向**Dookbook**<sup>TM</sup>知识引擎贡献您的解决方案或改进，同时您将可以按贡献率获得相应收益。甚至在您没有网络的情况也可以。
+> 除此之外，您可以随时随地(甚至在没有网络的情况下)使用`Git`和`Markdown`向**Dookbook**<sup>TM</sup>知识引擎贡献您的解决方案或改进，同时您将可以按贡献率获得相应收益。
