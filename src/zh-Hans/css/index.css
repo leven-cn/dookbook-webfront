@@ -25,6 +25,14 @@ h1{
 	letter-spacing:3px;
 }
 
+h1 sup{
+	font-size: 28px;
+}
+
+.fuzzy{
+	display: inline-block;
+}
+
 @keyframes fuzzy{
 	0%{
 		filter:blur(0px);
@@ -32,6 +40,24 @@ h1{
 	100%{
 		filter:blur(6px);
 		opacity: 0.2;
+	}
+}
+
+@keyframes fuzzyWidth{
+	0%{
+		width: 30px;
+		opacity: 0.2;
+		filter:blur(6px);
+	}
+	50%{
+		width: 20px;
+		opacity: 0.1;
+		filter:blur(6px);
+	}
+	100%{
+		filter:blur(6px);
+		opacity: 0;
+		width: 0;
 	}
 }
 
@@ -46,9 +72,29 @@ h1{
 }
 
 
+@keyframes show{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 0.1;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+
 p{
-	padding-top: 33px;
+	padding-top: 23px;
 	display: none;
+}
+
+p img{
+	width: 320px;
 }
 
 main{
@@ -67,4 +113,13 @@ input[type="text"]{
 	padding-left: 30px;
 	font-size: 36px;
 	margin-top: 46px;
+}
+
+
+footer{
+	width: 100%;
+	position: fixed;
+	bottom: 3%;
+	text-align: center;
+	font-size: 14px;
 }
