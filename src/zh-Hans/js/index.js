@@ -14,7 +14,7 @@ inputBox.onblur = function(){
 }
 
 
-  // dookbook 字体效果
+// dookbook 字体效果
 var h1Element =  document.querySelector("h1");
 var pElement =  document.querySelector("p");
 var mainElement =  document.querySelector("main");
@@ -40,7 +40,7 @@ setTimeout(function(){
   h1Element.style.animationFillMode="forwards";
 },3000)
 
-// 显示开发者日本菜谱和输入框
+// 显示开发者日常菜谱和输入框
 setTimeout(function(){
   document.body.style.display = "block";
   h1Element.style.marginTop="12.5%";
