@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="15.0957mm" height="11.0674mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 55 41"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="666" font-variant="normal" style="fill-rule:nonzero" font-weight="400">
+	<font-face 
+		font-family="Arial">
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="n" horiz-adv-x="556"><path d="M66.0005 0l0 519.004 78.9927 0 0 -73.6777c38.0082,56.5044 93.0007,84.6621 164.836,84.6621 31.3467,0 60.0005,-5.64571 86.1739,-16.819 26.1734,-11.1733 45.8271,-26.0081 58.8194,-44.1736 13.0159,-18.1655 22.1813,-39.8271 27.3545,-64.8194 3.16538,-16.3466 4.81894,-44.835 4.81894,-85.5125l0 -318.664 -87.9928 0 0 315.333c0,35.8349 -3.33073,62.6698 -10.1812,80.3392 -6.82683,17.6694 -18.9923,31.8191 -36.331,42.4964 -17.3151,10.4883 -37.8192,15.8269 -61.158,15.8269 -37.3231,0 -69.4966,-11.8347 -96.6622,-35.6696 -27.1656,-23.6695 -40.6775,-68.8352 -40.6775,-135.166l0 -283.16 -87.9928 0z"/></glyph>
+   <glyph unicode="E" horiz-adv-x="666"><path d="M78.9927 0l0 715.99 516.996 0 0 -84.0007 -421.988 0 0 -219.994 394.987 0 0 -84.0007 -394.987 0 0 -243.994 438.996 0 0 -84.0007 -534.004 0z"/></glyph>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Arial";src:url("#FontID0") format(svg)}
+    .str0 {stroke:#1EADF4;stroke-width:1.29559}
+    .fil0 {fill:#1EADF4}
+    .fil1 {fill:white}
+    .fnt0 {font-weight:normal;font-size:15.546px;font-family:'Arial'}
+   ]]>
+  </style>
+ </defs>
+ <g id="图层_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_171744016">
+   <rect class="fil0" x="25" y="12" width="29.9514" height="28.8908"/>
+   <text x="30" y="32"  class="fil1 fnt0">E</text>
+   <text x="42" y="32"  class="fil1 fnt0">n</text>
+   <g>
+    <rect class="fil1 str0" x="1" y="1" width="29.9514" height="28.8908"/>
+    <path class="fil0" d="M15 6l2 0 0 4 7 0 0 10 -2 0 0 -1 -5 0 0 7 -2 0 0 -7 -5 0 0 1 -2 0 0 -10 7 0 0 -4zm-5 10l5 0 0 -5 -5 0 0 5zm7 0l5 0 0 -5 -5 0 0 5z"/>
+   </g>
+  </g>
+ </g>
+</svg>
