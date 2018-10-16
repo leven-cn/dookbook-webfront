@@ -1,5 +1,6 @@
 // 输入框
 var inputBox = document.querySelector('input[type="text"]');
+inputBox.placeholder = "请开始你的表演 ...";
 inputBox.onfocus = function(){
   this.placeholder = "";
 }
@@ -7,7 +8,7 @@ inputBox.onblur = function(){
   var searchText = this.value;
   console.log(searchText);
   if(searchText){
-    location.href = "cookbook.html?search=" + searchText;
+    location.href = "/search/?q=" + searchText;
   }else{
     this.placeholder = "请开始你的表演 ...";
   }
