@@ -12,10 +12,12 @@ body{
 	align-items: center;
 	color: #fff;
 	text-align: center;
+	font-size:10px;
 }
 
 header a:nth-child(2){
-  display: none;
+	display: none;
+	font-size:1rem;
 }
 
 header a:last-child{
@@ -24,7 +26,8 @@ header a:last-child{
   right: 3%;
   color: #fff;
   font-family: '微软雅黑', Roboto, sans-serif;
-  text-decoration: underline;
+	text-decoration: underline;
+	font-size:1rem;	
 }
 
 header{
@@ -32,18 +35,18 @@ header{
 }
 
 h1{
-	font-size: 48px;
+	font-size: 3rem;
 	letter-spacing:3px;
 }
 
 h1 sup{
-	font-size: 18px;
+	font-size: 1.23rem;
 	font-weight: normal;
 	font-family: Arial, Helvetica, sans-serif;
 	letter-spacing:2px;
 	position: relative;
-	top:-20px;
-	margin-left: 10px;
+	top:-1.3rem;
+	margin-left: 0.63rem;
   opacity: 0;
 }
 
@@ -81,10 +84,10 @@ h1 sup{
 
 @keyframes fontSize{
 	0%{
-		font-size: 48px;
+		font-size: 3rem;
   }
 	100%{
-		font-size: 72px;
+		font-size: 4.5rem;
 	}
 }
 
@@ -109,29 +112,29 @@ h1 sup{
 @keyframes up{
   0%{
     margin-top: 0;
-    font-size: 72px;
+    font-size: 4.5rem;
   }
   100%{
-    margin-top: -170px;
-    font-size: 72px;
+    margin-top: -10.63rem;
+    font-size: 4.5rem;
   }
 }
 
 main{
   width: 100%;
   opacity: 0;
-  margin-top: -30px;
+	margin-top: -1.88rem;
 }
 
 input[type="text"]{
 	display: inline-block;
 	width: 60%;
-  height: 80px;
+  height: 5rem;
 	border: none;
-	border-radius: 20px;
+	border-radius: 1.2rem;
 	box-sizing: border-box;
-	padding-left: 30px;
-	font-size: 36px;
+	padding-left: 1.88rem;
+	font-size: 2.25rem;
   position: relative;
   z-index: 2;
   color:#fff;
@@ -143,46 +146,10 @@ input::placeholder{
   opacity: 0.5;
 }
 
-nav{
-  display: none;
-  width:100%;
-  font-size:18px;
-}
-
-nav  ul{
-  width: 60%;
-  display: inline-block;
-  background: rgba(255,255,255,0.85);
-  border:1px solid #eee;
-  padding-top: 20px;
-  margin-top: -15px;
-  position: relative;
-  z-index: 1;
-  box-sizing: border-box;
-}
-
-ul li{
-  height: 40px;
-  line-height: 40px;
-  text-align: left;
-  box-sizing: border-box;
-  padding:0 30px;
-}
-
-ul li:hover{
-  background: rgba(255,255,255,0.85);
-}
-
-ul li a{
-  display: block;
-  height: 40px;
-  color: #666;
-}
-
 footer{
 	width: 100%;
 	position: fixed;
 	bottom: 3%;
 	text-align: center;
-	font-size: 15px;
+	font-size: 0.9rem;
 }
