@@ -1,8 +1,11 @@
 html,body{
+	background:linear-gradient(to bottom right, rgb(36,97,212) 35%, rgb(255,3,234));
+}
+
+body{
 	width: 100%;
 	height: 100%;
 	position: fixed;
-	background:linear-gradient(to bottom right, rgb(23,104,255) 35%, rgb(240,119,254));
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -181,5 +184,5 @@ footer{
 	position: fixed;
 	bottom: 3%;
 	text-align: center;
-	font-size: 14px;
+	font-size: 15px;
 }
