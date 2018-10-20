@@ -1,5 +1,5 @@
 html,body{
-	background:linear-gradient(to bottom right, rgb(36,97,212) 35%, rgb(255,3,234));
+	background:linear-gradient(to bottom right, rgb(36,97,212) 15%, rgb(255,3,234));
 }
 
 body{
@@ -115,7 +115,7 @@ h1 sup{
     font-size: 4.5rem;
   }
   100%{
-    margin-top: -10.63rem;
+    margin-top: -9rem;
     font-size: 4.5rem;
   }
 }
@@ -123,7 +123,7 @@ h1 sup{
 main{
   width: 100%;
   opacity: 0;
-	margin-top: -1.88rem;
+	margin-top: -0.9rem;
 }
 
 input[type="text"]{
@@ -131,7 +131,7 @@ input[type="text"]{
 	width: 60%;
   height: 5rem;
 	border: none;
-	border-radius: 1.2rem;
+	border-radius: 1rem;
 	box-sizing: border-box;
 	padding-left: 1.88rem;
 	font-size: 2.25rem;
@@ -149,7 +149,7 @@ input::placeholder{
 footer{
 	width: 100%;
 	position: fixed;
-	bottom: 3%;
+	bottom: 4%;
 	text-align: center;
 	font-size: 0.9rem;
 }
