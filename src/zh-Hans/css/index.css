@@ -26,7 +26,14 @@ h1{
 }
 
 h1 sup{
-	font-size: 28px;
+	font-size: 18px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing:2px;
+	position: relative;
+	top:-20px;
+	margin-left: 10px;
+	display: none;
 }
 
 .fuzzy{
@@ -87,16 +94,6 @@ h1 sup{
 	}
 }
 
-
-p{
-	padding-top: 23px;
-	display: none;
-}
-
-p img{
-	width: 320px;
-}
-
 main{
 	width: 100%;
 	display: none;
@@ -106,13 +103,17 @@ input[type="text"]{
 	display: inline-block;
 	min-width: 750px;
 	width: 60%;
-	height: 90px;
+	height: 85px;
 	border: none;
-	border-radius: 36px;
+	border-radius: 20px;
 	box-sizing: border-box;
 	padding-left: 30px;
 	font-size: 36px;
-	margin-top: 46px;
+	margin-top: 36px;
+}
+
+input::placeholder{
+	color: #ccc;
 }
 
 
