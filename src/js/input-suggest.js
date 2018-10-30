@@ -99,32 +99,42 @@ function inputSuggest(navBox, input, suggestList){
   };
 
   // 输入框输入建议
-  input.oninput = function(){
-    var searchText = this.value;
-    console.log(searchText);
+  input.oninput = function(event){
+    event.stopPropagation();
 
-    hints = [];
+    var searchText = this.value;    
     if(searchText){
+
+      // 构造搜索建议列表
+      var ul = navBox.querySelector("ul");
+      ul.innerHTML = "";
+
       var xhr = new XMLHttpRequest;
-      xhr.open("GET", "/search/?q="+searchText, true);
+      xhr.open("GET", "/search/?q="+searchText);
       xhr.send();
       xhr.onreadystatechange = function(){
         if(xhr.readyState == 4){
           if(xhr.status == 200){
-            var data = JSON.parse(xmlhttp.responseText);
-            hints = data.hints;
-            console.log(hints);
+            var data = JSON.parse(xhr.responseText);
+            console.log(data);
+
+            var hints = data.hints;
+            var lang = (location.pathname=="/zh-Hans/") ? "zh-Hans" : "en";
+            for(var i=0;i<hints.length;i++){
+              var url = "/cookbook/?lang=" + lang + "&id=" + hints[i][1];
+              ul.innerHTML += '<li><a href="'+url+'">'+hints[i][0]+'</a></li>';
+            }
           }else{
-            console.log(xhr.status);
+            ul.innerHTML = '<li><a href="#">暂无搜索结果</a></li>';
           }
         }
       }
     }
 
-    // 构造搜索建议列表
-    var ul = navBox.querySelector("ul");
-    ul.innerHTML = "";
-    console.log("a");
+    navBox.style.display = 'block';
+    var previousPos = navPos;
+    navPos = 0;
+    handleSelectSuggest(suggestList, previousPos);
   }
 
   // 鼠标控制选择
