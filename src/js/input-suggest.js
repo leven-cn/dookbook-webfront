@@ -30,7 +30,9 @@ function inputSuggest(navBox, input, suggestList){
 
     this.placeholder = "";
 
+    // 默认选中第一个
     navBox.style.display = 'block';
+    navPos = 0;
     handleSelectSuggest(suggestList, 0);
   };
 
@@ -40,6 +42,11 @@ function inputSuggest(navBox, input, suggestList){
       input.placeholder = "开发者的日常菜谱 ...";
     }
     navBox.style.display = "none";
+
+    // 清空已选择的样式及位置
+    var previousPos = navPos;
+    navPos = 0;
+    handleSelectSuggest(suggestList, previousPos);
   };
 
   // 键盘上下键控制选择
@@ -99,22 +106,19 @@ function inputSuggest(navBox, input, suggestList){
     //   }
   }
 
-  for(var i=0;i<navBox.querySelectorAll("li").length;i++){
-    var liList = navBox.querySelectorAll("li")[i];
+  // 鼠标控制选择
+  for(var i=0;i<suggestList.length;i++){
+    var item = suggestList[i];
 
-    liList.onmouseover = function(){
-      for(var j=0;j<navBox.querySelectorAll("li").length;j++){
-        navBox.querySelectorAll("li")[j].querySelector("a").style.background = "";
-        navBox.querySelectorAll("li")[j].querySelector("a").style.color = "rgba(255,255,255,0.8)";
+    item.onmouseover = function(){
+      var previousPos = navPos;
+      for(var j=0; j<suggestList.length;j++){
+        if(suggestList[j] == this){
+          navPos = j;
+          break;
+        }
       }
-      this.querySelector("a").style.background = "rgba(255,255,255,0.4)";
-      this.querySelector("a").style.color = "rgba(0,0,0,0.7)";
-    }
-
-    liList.onmouseout = function(){
-      this.querySelector("a").style.background = "";
-      this.querySelector("a").style.color = "rgba(255,255,255,0.8)";
-      handleSelectSuggest(suggestList, 0);
-    }
+      handleSelectSuggest(suggestList, previousPos);
+    };
   }
 }
