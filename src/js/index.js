@@ -9,4 +9,4 @@ animation(h1, mainElement, sup, fuzzyElements);
 var input = document.querySelector('input[type="text"]');
 var navBox = document.querySelector("nav");
 var suggestList = navBox.querySelectorAll("li");
-inputSuggest(navBox, input, suggestList);
+inputSuggest(navBox, input, suggestList, mainElement);

@@ -19,22 +19,57 @@ function handleSelectSuggest(suggestList, pos){
   suggestItem.color = "rgba(0,0,0,0.7)";
 }
 
+
+/**
+ * 鼠标滑动事件处理
+ * @param {*} suggestList 
+ */
+function mouseoverEventHandler(suggestList){
+  for(var i=0;i<suggestList.length;i++){
+    var item = suggestList[i];
+
+    item.onmouseover = function(){
+      var previousPos = navPos;
+      for(var j=0; j<suggestList.length;j++){
+        if(suggestList[j] == this){
+          navPos = j;
+          break;
+        }
+      }
+      handleSelectSuggest(suggestList, previousPos);
+    };
+  }
+}
+
+
 /**
  * 输入框搜索建议下拉列表
  */
-function inputSuggest(navBox, input, suggestList){
+function inputSuggest(navBox, input, suggestList, mainElement){
+
+  // 初始化
+  navPos = 0;
+  handleSelectSuggest(suggestList, navPos);
+
+  // 实现创建存放搜索建议的Node
+  var newBox = document.createElement("nav");
+  var newUl = document.createElement("ul");
+  newBox.appendChild(newUl);
+  mainElement.appendChild(newBox);
 
   // 点击输入框,清空输入框内文字，并且列出下拉列表
   input.onclick = function(event){
     event.stopPropagation();
 
-    this.placeholder = "";
+    if(!this.value){
+      this.placeholder = "";
 
-    // 默认选中第一个
-    navBox.style.display = 'block';
-    var previousPos = navPos;
-    navPos = 0;
-    handleSelectSuggest(suggestList, previousPos);
+      // 默认选中第一个
+      navBox.style.display = 'block';
+      var previousPos = navPos;
+      navPos = 0;
+      handleSelectSuggest(suggestList, previousPos);
+    }
   };
 
   // 点击页面其他地方，隐藏下拉列表
@@ -43,6 +78,7 @@ function inputSuggest(navBox, input, suggestList){
       input.placeholder = "开发者的日常菜谱 ...";
     }
     navBox.style.display = "none";
+    newBox.style.display = "none";
 
     // 清空已选择的样式及位置
     var previousPos = navPos;
@@ -76,7 +112,7 @@ function inputSuggest(navBox, input, suggestList){
 
   // 鼠标滑动控制选择
   var wheelFlag = true;  // 设置信号量，用于阻止过于频繁的滑动事件触发
-  input.onwheel = function(event){
+  document.body.onwheel = function(event){
     if(!wheelFlag){
       return false;
     }
@@ -108,13 +144,10 @@ function inputSuggest(navBox, input, suggestList){
       return false;
     }
 
-    var searchText = this.value;    
+    var searchText = this.value;
     if(searchText){
 
       // 构造搜索建议列表
-      var ul = navBox.querySelector("ul");
-      ul.innerHTML = "";
-
       var xhr = new XMLHttpRequest;
       xhr.open("GET", "/search/?q="+searchText);
       xhr.send();
@@ -126,41 +159,32 @@ function inputSuggest(navBox, input, suggestList){
 
             var hints = data.hints;
             var lang = (location.pathname=="/zh-Hans/") ? "zh-Hans" : "en";
+            newUl.innerHTML = "";
             for(var i=0;i<hints.length;i++){
               var url = "/cookbook/?lang=" + lang + "&id=" + hints[i][1];
-              ul.innerHTML += '<li><a href="'+url+'">'+hints[i][0]+'<em>'+hints[i][2]+'</em></a></li>';
+              newUl.innerHTML += '<li><a href="'+url+'">'+hints[i][0]+'<em>'+hints[i][2]+'</em></a></li>';
             }
           }else{
-            ul.innerHTML = '<li><a href="#">暂无搜索结果</a></li>';
+            newUl.innerHTML = '<li><a href="#">暂无搜索结果</a></li>';
           }
+          newBox.style.display = 'block';
         }
       }
+
+      navBox.style.display = 'none';
 
       inputFlag = false;
       setTimeout(function(){
         inputFlag = true;
       }, 450);
-    }
 
-    navBox.style.display = 'block';
-    var previousPos = navPos;
-    navPos = 0;
-    handleSelectSuggest(suggestList, previousPos);
+    }else{
+      // 清空输入框的事件处理
+      newBox.style.display = "none";
+      navBox.style.display = "block";
+    }
   }
 
   // 鼠标控制选择
-  for(var i=0;i<suggestList.length;i++){
-    var item = suggestList[i];
-
-    item.onmouseover = function(){
-      var previousPos = navPos;
-      for(var j=0; j<suggestList.length;j++){
-        if(suggestList[j] == this){
-          navPos = j;
-          break;
-        }
-      }
-      handleSelectSuggest(suggestList, previousPos);
-    };
-  }
+  mouseoverEventHandler(suggestList);
 }
