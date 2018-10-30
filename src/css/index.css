@@ -127,12 +127,12 @@ main{
 input[type="text"]{
 	display: inline-block;
 	width: 60%;
-  height: 4.3rem;
+  height: 3.8rem;
 	border: none;
 	border-radius: 0.7rem;
 	box-sizing: border-box;
 	padding-left: 1.88rem;
-	font-size: 2rem;
+	font-size: 1.7rem;
   position: relative;
   z-index: 2;
   color:#fff;
@@ -166,10 +166,6 @@ nav ul {
 	margin-top: 1.5rem;
 }
 
-nav ul li{
-	line-height: 3rem;
-}
-
 nav ul li a{
 	box-sizing: border-box;
 	width: 100%;
@@ -178,9 +174,4 @@ nav ul li a{
 	line-height:3rem; 
 	color:rgba(255,255,255,0.8);
 	font-size:1.2rem;
-}
-
-nav ul li a:hover{
-	background: rgba(255,255,255,0.4);
-	color: rgba(0,0,0,0.7);
 }

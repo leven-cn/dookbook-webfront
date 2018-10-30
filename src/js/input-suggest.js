@@ -57,6 +57,11 @@ function inputSuggest(navBox, input, suggestList){
         handleSelectSuggest(suggestList, navPos++);
       }
     }
+
+    // 回车跳转页面
+    if(e && e.keyCode == 13){  // 回车
+      console.log("huiche");
+    }
   };
 
   // 鼠标滑动控制选择
@@ -92,5 +97,24 @@ function inputSuggest(navBox, input, suggestList){
     //   }else{
     //     this.placeholder = this.placeholder.value;
     //   }
+  }
+
+  for(var i=0;i<navBox.querySelectorAll("li").length;i++){
+    var liList = navBox.querySelectorAll("li")[i];
+
+    liList.onmouseover = function(){
+      for(var j=0;j<navBox.querySelectorAll("li").length;j++){
+        navBox.querySelectorAll("li")[j].querySelector("a").style.background = "";
+        navBox.querySelectorAll("li")[j].querySelector("a").style.color = "rgba(255,255,255,0.8)";
+      }
+      this.querySelector("a").style.background = "rgba(255,255,255,0.4)";
+      this.querySelector("a").style.color = "rgba(0,0,0,0.7)";
+    }
+
+    liList.onmouseout = function(){
+      this.querySelector("a").style.background = "";
+      this.querySelector("a").style.color = "rgba(255,255,255,0.8)";
+      handleSelectSuggest(suggestList, 0);
+    }
   }
 }
