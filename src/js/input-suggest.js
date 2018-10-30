@@ -32,8 +32,9 @@ function inputSuggest(navBox, input, suggestList){
 
     // 默认选中第一个
     navBox.style.display = 'block';
+    var previousPos = navPos;
     navPos = 0;
-    handleSelectSuggest(suggestList, 0);
+    handleSelectSuggest(suggestList, previousPos);
   };
 
   // 点击页面其他地方，隐藏下拉列表
@@ -99,13 +100,31 @@ function inputSuggest(navBox, input, suggestList){
 
   // 输入框输入建议
   input.oninput = function(){
-    //   var searchText = this.value;
-    //   console.log(searchText);
-    //   if(searchText){
-    //     location.href = "/search/?q=" + searchText;
-    //   }else{
-    //     this.placeholder = this.placeholder.value;
-    //   }
+    var searchText = this.value;
+    console.log(searchText);
+
+    hints = [];
+    if(searchText){
+      var xhr = new XMLHttpRequest;
+      xhr.open("GET", "/search/?q="+searchText, true);
+      xhr.send();
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4){
+          if(xhr.status == 200){
+            var data = JSON.parse(xmlhttp.responseText);
+            hints = data.hints;
+            console.log(hints);
+          }else{
+            console.log(xhr.status);
+          }
+        }
+      }
+    }
+
+    // 构造搜索建议列表
+    var ul = navBox.querySelector("ul");
+    ul.innerHTML = "";
+    console.log("a");
   }
 
   // 鼠标控制选择
