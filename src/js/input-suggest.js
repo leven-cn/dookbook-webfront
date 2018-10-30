@@ -49,17 +49,19 @@ function inputSuggest(navBox, input, suggestList){
     handleSelectSuggest(suggestList, previousPos);
   };
 
-  // 键盘上下键控制选择
+  // 键盘控制
   input.onkeydown = function(event){
     var e = event || window.event || arguments.callee.caller.arguments[0];
 
-    if(e && e.keyCode == 38){  // 上
+    // 向上键
+    if(e && e.keyCode == 38){
       if(navPos > 0){
         handleSelectSuggest(suggestList, navPos--);
       }
     }
 
-    if(e && e.keyCode == 40){  // 下
+    // 向下键
+    if(e && e.keyCode == 40){
       if(navPos < suggestList.length-1){
         handleSelectSuggest(suggestList, navPos++);
       }
@@ -67,7 +69,7 @@ function inputSuggest(navBox, input, suggestList){
 
     // 回车跳转页面
     if(e && e.keyCode == 13){  // 回车
-      console.log("huiche");
+      window.location = suggestList[navPos].querySelector("a").href;
     }
   };
 
