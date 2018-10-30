@@ -122,7 +122,7 @@ function inputSuggest(navBox, input, suggestList){
             var lang = (location.pathname=="/zh-Hans/") ? "zh-Hans" : "en";
             for(var i=0;i<hints.length;i++){
               var url = "/cookbook/?lang=" + lang + "&id=" + hints[i][1];
-              ul.innerHTML += '<li><a href="'+url+'">'+hints[i][0]+'</a></li>';
+              ul.innerHTML += '<li><a href="'+url+'">'+hints[i][0]+'<em>'+hints[i][2]+'</em></a></li>';
             }
           }else{
             ul.innerHTML = '<li><a href="#">暂无搜索结果</a></li>';

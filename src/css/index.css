@@ -152,6 +152,10 @@ footer{
 	font-size: 0.9rem;
 }
 
+footer a{
+	color: #fff;
+}
+
 nav{
 	width: 100%;
 	text-align: center;
@@ -174,4 +178,15 @@ nav ul li a{
 	line-height:3rem; 
 	color:rgba(255,255,255,0.8);
 	font-size:1.2rem;
+}
+
+nav ul li a em{
+	float: right;
+	background: rgba(138, 74, 222,0.8);
+	border-radius: 0.2rem;
+	color: #fff;
+	line-height: 2rem;
+	vertical-align: middle;
+	padding: 0 1rem;
+	margin-top: 0.5rem;
 }
