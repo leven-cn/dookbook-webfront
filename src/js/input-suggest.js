@@ -92,6 +92,7 @@ function inputSuggest(navBox, input, suggestList){
         handleSelectSuggest(suggestList, navPos++);
       }
     }
+
     wheelFlag = false;
     setTimeout(function(){
       wheelFlag = true;
@@ -99,8 +100,13 @@ function inputSuggest(navBox, input, suggestList){
   };
 
   // 输入框输入建议
+  var inputFlag = true;
   input.oninput = function(event){
     event.stopPropagation();
+
+    if(!inputFlag){
+      return false;
+    }
 
     var searchText = this.value;    
     if(searchText){
@@ -129,6 +135,11 @@ function inputSuggest(navBox, input, suggestList){
           }
         }
       }
+
+      inputFlag = false;
+      setTimeout(function(){
+        inputFlag = true;
+      }, 450);
     }
 
     navBox.style.display = 'block';
