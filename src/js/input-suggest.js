@@ -109,6 +109,10 @@ function mousewheelEventHandler(suggestList, delta, timeout){
 
 /**
  * 输入框搜索建议下拉列表
+ * @param {Element} navBox <nav>元素
+ * @param {Element} input 搜索框<input>元素
+ * @param {Element []} suggestList 下拉列表
+ * @param {mainElement} <main>元素
  */
 function inputSuggest(navBox, input, suggestList, mainElement){
 
