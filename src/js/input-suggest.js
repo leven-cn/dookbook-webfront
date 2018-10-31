@@ -153,11 +153,10 @@ function inputSuggest(navBox, input, suggestList, mainElement){
     handleSelectSuggest(suggestList, previousPos);
   };
 
-  // 键盘控制
-  keydownEventHandler(suggestList);
-
-  // 鼠标滑动控制选择
-  mousewheelEventHandler(suggestList, mousewheelDelta, mousewheelTimeout);
+  // 事件注册
+  keydownEventHandler(suggestList);  // 键盘按键
+  mousewheelEventHandler(suggestList, mousewheelDelta, mousewheelTimeout);  // 鼠标滚轮滑动
+  mouseoverEventHandler(suggestList);  // 鼠标滑动
 
   // 输入框输入建议
   var inputFlag = true;
@@ -203,18 +202,16 @@ function inputSuggest(navBox, input, suggestList, mainElement){
 
       navBox.style.display = 'none';
 
+      // 设置阻断事件间隔，过滤过于频繁的请求
       inputFlag = false;
       setTimeout(function(){
         inputFlag = true;
       }, 450);
 
     }else{
-      // 清空输入框的事件处理
+      // 清空输入框的处理
       newBox.style.display = "none";
       navBox.style.display = "block";
     }
-  }
-
-  // 鼠标控制选择
-  mouseoverEventHandler(suggestList);
+  } 
 }
