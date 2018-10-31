@@ -6,6 +6,8 @@ var navPos = 0;
 
 /**
  * 列表选择事件触发后的处理函数
+ * @param {Element[]} suggestList 下拉列表
+ * @param {BigInteger} pos 清除的位置
  */
 function handleSelectSuggest(suggestList, pos){
   // 清除当前选择项样式
@@ -22,7 +24,7 @@ function handleSelectSuggest(suggestList, pos){
 
 /**
  * 鼠标滑动事件处理
- * @param {*} suggestList 
+ * @param {Element[]} suggestList 下拉列表
  */
 function mouseoverEventHandler(suggestList){
   for(var i=0;i<suggestList.length;i++){
@@ -43,6 +45,69 @@ function mouseoverEventHandler(suggestList){
 
 
 /**
+ * 键盘按键事件处理
+ * @param {Element[]} suggestList 下拉列表
+ */
+function keydownEventHandler(suggestList){
+  document.body.onkeydown = function(event){
+    var e = event || window.event || arguments.callee.caller.arguments[0];
+
+    // 向上键
+    if(e && e.keyCode == 38){
+      if(navPos > 0){
+        handleSelectSuggest(suggestList, navPos--);
+      }
+    }
+
+    // 向下键
+    if(e && e.keyCode == 40){
+      if(navPos < suggestList.length-1){
+        handleSelectSuggest(suggestList, navPos++);
+      }
+    }
+
+    // 回车跳转页面
+    if(e && e.keyCode == 13){  // 回车
+      window.location = suggestList[navPos].querySelector("a").href;
+    }
+  };
+}
+
+
+/**
+ * 鼠标滚轮或触控板滑动事件处理
+ * @param {Element []} suggestList 下拉列表
+ * @param {BigInteger} delta 滑动距离感应阀值
+ * @param {BigInteger} timeout 阻隔时长
+ */
+function mousewheelEventHandler(suggestList, delta, timeout){
+  var wheelFlag = true;  // 设置信号量，用于阻止过于频繁的滑动事件触发
+  document.body.onwheel = function(event){
+    if(!wheelFlag){
+      return false;
+    }
+
+    var e = event || window.event || arguments.callee.caller.arguments[0];
+    if(e && e.wheelDelta > delta){  // 向上滑动
+      if(navPos > 0){
+        handleSelectSuggest(suggestList, navPos--);
+      }
+    }
+    if(e && e.wheelDelta < -delta){  // 向下滑动
+      if(navPos < suggestList.length-1){
+        handleSelectSuggest(suggestList, navPos++);
+      }
+    }
+
+    wheelFlag = false;
+    setTimeout(function(){
+      wheelFlag = true;
+    }, timeout);  // 200毫秒内阻止滑动事件
+  };
+}
+
+
+/**
  * 输入框搜索建议下拉列表
  */
 function inputSuggest(navBox, input, suggestList, mainElement){
@@ -50,6 +115,8 @@ function inputSuggest(navBox, input, suggestList, mainElement){
   // 初始化
   navPos = 0;
   handleSelectSuggest(suggestList, navPos);
+  const mousewheelDelta = 30;
+  const mousewheelTimeout = 200;
 
   // 实现创建存放搜索建议的Node
   var newBox = document.createElement("nav");
@@ -87,53 +154,10 @@ function inputSuggest(navBox, input, suggestList, mainElement){
   };
 
   // 键盘控制
-  input.onkeydown = function(event){
-    var e = event || window.event || arguments.callee.caller.arguments[0];
-
-    // 向上键
-    if(e && e.keyCode == 38){
-      if(navPos > 0){
-        handleSelectSuggest(suggestList, navPos--);
-      }
-    }
-
-    // 向下键
-    if(e && e.keyCode == 40){
-      if(navPos < suggestList.length-1){
-        handleSelectSuggest(suggestList, navPos++);
-      }
-    }
-
-    // 回车跳转页面
-    if(e && e.keyCode == 13){  // 回车
-      window.location = suggestList[navPos].querySelector("a").href;
-    }
-  };
+  keydownEventHandler(suggestList);
 
   // 鼠标滑动控制选择
-  var wheelFlag = true;  // 设置信号量，用于阻止过于频繁的滑动事件触发
-  document.body.onwheel = function(event){
-    if(!wheelFlag){
-      return false;
-    }
-
-    var e = event || window.event || arguments.callee.caller.arguments[0];
-    if(e && e.wheelDelta > 30){  // 向上滑动
-      if(navPos > 0){
-        handleSelectSuggest(suggestList, navPos--);
-      }
-    }
-    if(e && e.wheelDelta < -30){  // 向下滑动
-      if(navPos < suggestList.length-1){
-        handleSelectSuggest(suggestList, navPos++);
-      }
-    }
-
-    wheelFlag = false;
-    setTimeout(function(){
-      wheelFlag = true;
-    }, 200);  // 200毫秒内阻止滑动事件
-  };
+  mousewheelEventHandler(suggestList, mousewheelDelta, mousewheelTimeout);
 
   // 输入框输入建议
   var inputFlag = true;
@@ -168,6 +192,12 @@ function inputSuggest(navBox, input, suggestList, mainElement){
             newUl.innerHTML = '<li><a href="#">暂无搜索结果</a></li>';
           }
           newBox.style.display = 'block';
+          var newSuggestList = newBox.querySelectorAll("li");
+          navPos = 0;
+          handleSelectSuggest(newSuggestList, 0);
+          mouseoverEventHandler(newSuggestList);
+          keydownEventHandler(newSuggestList);
+          mousewheelEventHandler(newSuggestList, mousewheelDelta, mousewheelTimeout);
         }
       }
 
