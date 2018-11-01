@@ -2,7 +2,6 @@ var input = document.querySelector("input[type='text']");
 var navBox = document.querySelector("nav");
 var navPos = -1;
 
-
 // 输入内容时请求接口
 var inputFlag = true;
 // input 输入时事件
@@ -24,22 +23,24 @@ input.oninput = function(){
           var data = JSON.parse(xhr.responseText);
           for(var i=0;i<data.hints.length;i++){
             var dataHints = data.hints[i];
-            console.log(data)
             navBox.innerHTML += '<ul><li><a href="#">'+dataHints[0]+'<em>'+dataHints[2]+'</em></a></li></ul>';
             var navList = navBox.querySelectorAll("li");
+            if(navList.length == 1){
+              navListStyle(navList,0);
+            }
             navListMouseover(navList);
             keyElement(navList);
             wheelElement(navList);
           }
         }else{
           navBox.innerHTML = '<ul><li><a href="#">暂无搜索结果</a></li></ul>';
+          inputFlag = false;
+          setTimeout(function(){
+            inputFlag = true;
+          },200); // 阻止输入太快请求次数
         }
       }
     }
-    inputFlag = false;
-    setTimeout(function(){
-      inputFlag = true;
-    },200); // 阻止输入太快请求次数
   }else{
     // 输入框为空时 下拉列表隐藏
     navBox.style.display = "none";
@@ -72,7 +73,6 @@ function navListStyle(element,pos){
 function keyDown(element){
   var e = event || window.event || arguments.callee.caller.arguments[0];
   if(e && e.keyCode == 38){ // 键盘上
-    console.log("shang");
     if(navPos != 0){
       navPos = navPos-1;
       navListStyle(element,navPos);
@@ -80,7 +80,6 @@ function keyDown(element){
   }
   
   if(e && e.keyCode == 40){ // 键盘下
-    console.log("xia");
     if(navPos < element.length-1){
       navPos = navPos+1;
       navListStyle(element,navPos);
@@ -92,7 +91,6 @@ function keyDown(element){
 function keyElement(element){
   // input 键盘事件
   input.onkeydown = function(event){
-    event.stopPropagation();   // 阻止事件冒泡
     keyDown(element);
   }
   // navBox 增加键盘事件
@@ -125,7 +123,7 @@ function wheelEvent(element){
   wheelFlag = false;
   setTimeout(function(){
     wheelFlag = true;
-  },300) // 阻止滚轮、模版滑动过快
+  },300) // 阻止滚轮、触模版滑动过快
 }
 
 // 滚轮、触发模版事件
