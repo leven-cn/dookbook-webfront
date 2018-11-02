@@ -30,7 +30,6 @@ input.oninput = function(){
             var navList = navUl.querySelectorAll("li");
             // 事件注册
             navPos = 0;
-            console.log(navPos)
             handleSelectSuggest(navList,navPos);
             mouseoverEventHandler(navList);
             keydownEventHandler(navList);
@@ -80,7 +79,6 @@ function keyDown(element){
   // 键盘上
   if(e && e.keyCode == 38){ // 键盘上
     if(navPos != 0){
-      console.log("shang")
       navPos--;
       handleSelectSuggest(element,navPos);
     }
@@ -88,7 +86,6 @@ function keyDown(element){
   // 键盘下
   if(e && e.keyCode == 40){ // 键盘下
     if(navPos < element.length-1){
-      console.log("xia")
       navPos++;
       handleSelectSuggest(element,navPos);
     }
