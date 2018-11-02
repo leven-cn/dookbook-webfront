@@ -25,19 +25,23 @@ input.oninput = function(){
         if(xhr.status == 200){
           navUl.innerHTML = "";
           var data = JSON.parse(xhr.responseText);
-          var lang = (location.pathname=="/zh-Hans/") ? "zh-Hans" : "en";
-          for(var i=0;i<data.hints.length;i++){
-            var dataHints = data.hints[i];
-            var url = "/cookbook/?lang=" + lang + "&id=" + dataHints[i][1];
-            navUl.innerHTML += '<li><a href="'+url+'">'+dataHints[0]+'<em>'+dataHints[2]+'</em></a></li>';
-            var navList = navUl.querySelectorAll("li");
-            // 事件注册
-            navPos = 0;
-            handleSelectSuggest(navList,navPos);
-            mouseoverEventHandler(navList);
-            keydownEventHandler(navList);
-            mousewheelEventHandler(navList);
-            bodyEvent(navList);
+          if(data.hints.length == 0){
+            navUl.innerHTML = '<ul><li><a href="#">暂无搜索结果</a></li></ul>';
+          }else{
+            var lang = (location.pathname=="/zh-Hans/") ? "zh-Hans" : "en";
+            for(var i=0;i<data.hints.length;i++){
+              var dataHints = data.hints[i];
+              var url = "/cookbook/?lang=" + lang + "&id=" + dataHints[1];
+              navUl.innerHTML += '<li><a href="'+url+'">'+dataHints[0]+'<em>'+dataHints[2]+'</em></a></li>';
+              var navList = navUl.querySelectorAll("li");
+              // 事件注册
+              navPos = 0;
+              handleSelectSuggest(navList,navPos);
+              mouseoverEventHandler(navList);
+              keydownEventHandler(navList);
+              mousewheelEventHandler(navList);
+              bodyEvent(navList);
+            }
           }
         }else{
           navUl.innerHTML = '<ul><li><a href="#">暂无搜索结果</a></li></ul>';
