@@ -1,6 +1,7 @@
 var input = document.querySelector("input[type='text']");
 var navBox = document.querySelector("nav");
-var navPos = -1;
+var navUl = document.querySelector("ul");
+var navPos = 0;
 
 // 输入内容时请求接口
 var inputFlag = true;
@@ -19,21 +20,25 @@ input.oninput = function(){
     xhr.onreadystatechange = function(){
       if(xhr.readyState == 4){
         if(xhr.status == 200){
-          navBox.innerHTML = "";
+          navUl.innerHTML = "";
           var data = JSON.parse(xhr.responseText);
+          var lang = (location.pathname=="/zh-Hans/") ? "zh-Hans" : "en";
           for(var i=0;i<data.hints.length;i++){
             var dataHints = data.hints[i];
-            navBox.innerHTML += '<ul><li><a href="#">'+dataHints[0]+'<em>'+dataHints[2]+'</em></a></li></ul>';
-            var navList = navBox.querySelectorAll("li");
-            if(navList.length == 1){
-              navListStyle(navList,0);
-            }
-            navListMouseover(navList);
-            keyElement(navList);
-            wheelElement(navList);
+            var url = "/cookbook/?lang=" + lang + "&id=" + dataHints[i][1];
+            navUl.innerHTML += '<li><a href="'+url+'">'+dataHints[0]+'<em>'+dataHints[2]+'</em></a></li>';
+            var navList = navUl.querySelectorAll("li");
+            // 事件注册
+            navPos = 0;
+            console.log(navPos)
+            handleSelectSuggest(navList,navPos);
+            mouseoverEventHandler(navList);
+            keydownEventHandler(navList);
+            mousewheelEventHandler(navList);
+            bodyEvent(navList);
           }
         }else{
-          navBox.innerHTML = '<ul><li><a href="#">暂无搜索结果</a></li></ul>';
+          navUl.innerHTML = '<ul><li><a href="#">暂无搜索结果</a></li></ul>';
           inputFlag = false;
           setTimeout(function(){
             inputFlag = true;
@@ -55,7 +60,7 @@ input.onclick = function(event){
 }
 
 // 清除和添加样式
-function navListStyle(element,pos){
+function handleSelectSuggest(element,pos){
   // 清除样式
   for(var i=0;i<element.length;i++){
     var item = element[i].querySelector("a").style;
@@ -72,23 +77,30 @@ function navListStyle(element,pos){
 // 键盘事件上下键改变样式和下标
 function keyDown(element){
   var e = event || window.event || arguments.callee.caller.arguments[0];
+  // 键盘上
   if(e && e.keyCode == 38){ // 键盘上
     if(navPos != 0){
-      navPos = navPos-1;
-      navListStyle(element,navPos);
+      console.log("shang")
+      navPos--;
+      handleSelectSuggest(element,navPos);
     }
   }
-  
+  // 键盘下
   if(e && e.keyCode == 40){ // 键盘下
     if(navPos < element.length-1){
-      navPos = navPos+1;
-      navListStyle(element,navPos);
+      console.log("xia")
+      navPos++;
+      handleSelectSuggest(element,navPos);
     }
+  }
+  // 回车跳转页面
+  if(e && e.keyCode == 13){  // 回车
+    window.location = element[navPos].querySelector("a").href;
   }
 }
 
 // 键盘事件（上下键）
-function keyElement(element){
+function keydownEventHandler(element){
   // input 键盘事件
   input.onkeydown = function(event){
     keyDown(element);
@@ -109,15 +121,15 @@ function wheelEvent(element){
   var e = event || window.event || arguments.callee.caller.arguments[0];
   if(e && e.wheelDelta > 10){  // 往上滑
     if(navPos > 0){
-      navPos = navPos-1;
-      navListStyle(element,navPos);
+      navPos--;
+      handleSelectSuggest(element,navPos);
     }
   }
 
   if(e && e.wheelDelta < -10){ // 往下滑
     if(navPos < element.length-1){
-      navPos = navPos+1;
-      navListStyle(element,navPos);
+      navPos++;
+      handleSelectSuggest(element,navPos);
     }
   }
   wheelFlag = false;
@@ -127,7 +139,7 @@ function wheelEvent(element){
 }
 
 // 滚轮、触发模版事件
-function wheelElement(element){
+function mousewheelEventHandler(element){
   // input 添加滚轮、触发模版事件
   input.onwheel = function(event){
     wheelEvent(element)
@@ -139,19 +151,24 @@ function wheelElement(element){
 }
 
 // 鼠标滑过事件（改变列表样式和下标）
-function navListMouseover(element){
+function mouseoverEventHandler(element){
   for(var i=0;i<element.length;i++){
     var item = element[i];
     item.index = i;
     element[i].onmouseover = function(){
       navPos = this.index;
-      navListStyle(element,navPos)
+      handleSelectSuggest(element,navPos)
     }
   }
 }
 
 // 点击其它地方下拉消失
-document.body.onclick = function(){
-  input.placeholder = "开发者的日常菜谱 ...";   // 点击 body 元素区域 input框的 placeholder 提示语恢复
-  navBox.style.display = "none";
+
+function bodyEvent(element){
+  document.body.onclick = function(){
+    input.placeholder = "开发者的日常菜谱 ...";   // 点击 body 元素区域 input框的 placeholder 提示语恢复
+    navBox.style.display = "none";
+    navPos = 0;
+    handleSelectSuggest(element,navPos);
+  }
 }
