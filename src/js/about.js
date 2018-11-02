@@ -1,3 +1,7 @@
+const MOUSE_WHEEL_DELTA = 30;
+const MOUSE_WHEEL_TIMEOUT = 200;
+const KEYDOWN_TIMEOUT = 300;
+
 var input = document.querySelector("input[type='text']");
 var navBox = document.querySelector("nav");
 var navUl = document.querySelector("ul");
@@ -8,11 +12,11 @@ var inputFlag = true;
 // input 输入时事件
 input.oninput = function(){
   // event.stopPropagation();  // 阻止事件冒泡
-  if(!inputFlag){
-    return false;
-  }
-
   if(this.value != ""){
+    if(!inputFlag){
+      return false;
+    }
+
     navBox.style.display = "block";
     var xhr = new XMLHttpRequest;
     xhr.open("GET", "/search/?q="+this.value);
@@ -30,7 +34,6 @@ input.oninput = function(){
             var navList = navUl.querySelectorAll("li");
             // 事件注册
             navPos = 0;
-            console.log(navPos)
             handleSelectSuggest(navList,navPos);
             mouseoverEventHandler(navList);
             keydownEventHandler(navList);
@@ -39,16 +42,17 @@ input.oninput = function(){
           }
         }else{
           navUl.innerHTML = '<ul><li><a href="#">暂无搜索结果</a></li></ul>';
-          inputFlag = false;
-          setTimeout(function(){
-            inputFlag = true;
-          },200); // 阻止输入太快请求次数
         }
       }
+      inputFlag = false;
+      setTimeout(function(){
+        inputFlag = true;
+      }, MOUSE_WHEEL_DELTA); // 阻止输入太快请求次数
     }
   }else{
     // 输入框为空时 下拉列表隐藏
     navBox.style.display = "none";
+    navPos = 0;
   }
 }
 
@@ -80,17 +84,15 @@ function keyDown(element){
   // 键盘上
   if(e && e.keyCode == 38){ // 键盘上
     if(navPos != 0){
-      console.log("shang")
       navPos--;
-      handleSelectSuggest(element,navPos);
+      handleSelectSuggest(element, navPos);
     }
   }
   // 键盘下
   if(e && e.keyCode == 40){ // 键盘下
     if(navPos < element.length-1){
-      console.log("xia")
       navPos++;
-      handleSelectSuggest(element,navPos);
+      handleSelectSuggest(element, navPos);
     }
   }
   // 回车跳转页面
@@ -119,14 +121,14 @@ function wheelEvent(element){
   }
 
   var e = event || window.event || arguments.callee.caller.arguments[0];
-  if(e && e.wheelDelta > 10){  // 往上滑
+  if(e && e.wheelDelta > MOUSE_WHEEL_DELTA){  // 往上滑
     if(navPos > 0){
       navPos--;
       handleSelectSuggest(element,navPos);
     }
   }
 
-  if(e && e.wheelDelta < -10){ // 往下滑
+  if(e && e.wheelDelta < -MOUSE_WHEEL_DELTA){ // 往下滑
     if(navPos < element.length-1){
       navPos++;
       handleSelectSuggest(element,navPos);
@@ -135,7 +137,7 @@ function wheelEvent(element){
   wheelFlag = false;
   setTimeout(function(){
     wheelFlag = true;
-  },300) // 阻止滚轮、触模版滑动过快
+  }, MOUSE_WHEEL_TIMEOUT) // 阻止滚轮、触模版滑动过快
 }
 
 // 滚轮、触发模版事件
@@ -163,7 +165,6 @@ function mouseoverEventHandler(element){
 }
 
 // 点击其它地方下拉消失
-
 function bodyEvent(element){
   document.body.onclick = function(){
     input.placeholder = "开发者的日常菜谱 ...";   // 点击 body 元素区域 input框的 placeholder 提示语恢复
