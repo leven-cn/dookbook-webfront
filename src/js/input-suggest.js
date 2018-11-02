@@ -2,6 +2,9 @@
  * 输入框搜索建议下拉列表
  */
 
+const MOUSE_WHEEL_DELTA = 30;
+const MOUSE_WHEEL_TIMEOUT = 200;
+const KEYDOWN_TIMEOUT = 300;
 var navPos = 0;
 
 /**
@@ -29,15 +32,11 @@ function handleSelectSuggest(suggestList, pos){
 function mouseoverEventHandler(suggestList){
   for(var i=0;i<suggestList.length;i++){
     var item = suggestList[i];
+    item.index = i;
 
     item.onmouseover = function(){
       var previousPos = navPos;
-      for(var j=0; j<suggestList.length;j++){
-        if(suggestList[j] == this){
-          navPos = j;
-          break;
-        }
-      }
+      navPos = this.index;
       handleSelectSuggest(suggestList, previousPos);
     };
   }
@@ -76,7 +75,7 @@ function keydownEventHandler(suggestList){
 
 /**
  * 鼠标滚轮或触控板滑动事件处理
- * @param {Element []} suggestList 下拉列表
+ * @param {Element[]} suggestList 下拉列表
  * @param {BigInteger} delta 滑动距离感应阀值
  * @param {BigInteger} timeout 阻隔时长
  */
@@ -108,19 +107,32 @@ function mousewheelEventHandler(suggestList, delta, timeout){
 
 
 /**
+ * 恢复到初始状态
+ * @param {Element[]} suggestList 
+ */
+function initInputSuggest(suggestList){
+  var previousPos = navPos;
+  navPos = 0;
+  handleSelectSuggest(suggestList, previousPos);
+
+  // 事件注册
+  keydownEventHandler(suggestList);  // 键盘按键
+  mousewheelEventHandler(suggestList, MOUSE_WHEEL_DELTA, MOUSE_WHEEL_TIMEOUT);  // 鼠标滚轮滑动
+  mouseoverEventHandler(suggestList);  // 鼠标滑动
+}
+
+
+/**
  * 输入框搜索建议下拉列表
  * @param {Element} navBox <nav>元素
  * @param {Element} input 搜索框<input>元素
- * @param {Element []} suggestList 下拉列表
- * @param {mainElement} <main>元素
+ * @param {Element[]} suggestList 下拉列表
+ * @param {Element} <main>元素
  */
 function inputSuggest(navBox, input, suggestList, mainElement){
 
   // 初始化
-  navPos = 0;
-  handleSelectSuggest(suggestList, navPos);
-  const mousewheelDelta = 30;
-  const mousewheelTimeout = 200;
+  initInputSuggest(suggestList);
 
   // 实现创建存放搜索建议的Node
   var newBox = document.createElement("nav");
@@ -134,12 +146,9 @@ function inputSuggest(navBox, input, suggestList, mainElement){
 
     if(!this.value){
       this.placeholder = "";
-
-      // 默认选中第一个
       navBox.style.display = 'block';
-      var previousPos = navPos;
-      navPos = 0;
-      handleSelectSuggest(suggestList, previousPos);
+      newBox.style.display = 'none';
+      initInputSuggest(suggestList);
     }
   };
 
@@ -150,29 +159,19 @@ function inputSuggest(navBox, input, suggestList, mainElement){
     }
     navBox.style.display = "none";
     newBox.style.display = "none";
-
-    // 清空已选择的样式及位置
-    var previousPos = navPos;
-    navPos = 0;
-    handleSelectSuggest(suggestList, previousPos);
+    initInputSuggest(suggestList);
   };
-
-  // 事件注册
-  keydownEventHandler(suggestList);  // 键盘按键
-  mousewheelEventHandler(suggestList, mousewheelDelta, mousewheelTimeout);  // 鼠标滚轮滑动
-  mouseoverEventHandler(suggestList);  // 鼠标滑动
 
   // 输入框输入建议
   var inputFlag = true;
   input.oninput = function(event){
     event.stopPropagation();
 
-    if(!inputFlag){
-      return false;
-    }
-
     var searchText = this.value;
     if(searchText){
+      if(!inputFlag){
+        return false;
+      }
 
       // 构造搜索建议列表
       var xhr = new XMLHttpRequest;
@@ -194,28 +193,24 @@ function inputSuggest(navBox, input, suggestList, mainElement){
           }else{
             newUl.innerHTML = '<li><a href="#">暂无搜索结果</a></li>';
           }
+          navBox.style.display = 'none';
           newBox.style.display = 'block';
           var newSuggestList = newBox.querySelectorAll("li");
-          navPos = 0;
-          handleSelectSuggest(newSuggestList, 0);
-          mouseoverEventHandler(newSuggestList);
-          keydownEventHandler(newSuggestList);
-          mousewheelEventHandler(newSuggestList, mousewheelDelta, mousewheelTimeout);
+          initInputSuggest(newSuggestList);
         }
       }
-
-      navBox.style.display = 'none';
 
       // 设置阻断事件间隔，过滤过于频繁的请求
       inputFlag = false;
       setTimeout(function(){
         inputFlag = true;
-      }, 450);
+      }, KEYDOWN_TIMEOUT);
 
     }else{
       // 清空输入框的处理
       newBox.style.display = "none";
       navBox.style.display = "block";
+      initInputSuggest(suggestList);
     }
   } 
 }
