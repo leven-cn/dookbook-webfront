@@ -9,7 +9,6 @@ var navPos = 0;
 
 // 输入内容时请求接口
 var inputFlag = true;
-// input 输入时事件
 input.oninput = function(){
   // event.stopPropagation();  // 阻止事件冒泡
   if(this.value != ""){
