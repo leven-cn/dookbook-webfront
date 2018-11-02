@@ -9,16 +9,16 @@ var navPos = 0;
 
 // 输入内容时请求接口
 var inputFlag = true;
-input.oninput = function(){
-  // event.stopPropagation();  // 阻止事件冒泡
-  if(this.value != ""){
+
+function inputEvent(value){
+  if(value != ""){
     if(!inputFlag){
       return false;
     }
 
     navBox.style.display = "block";
     var xhr = new XMLHttpRequest;
-    xhr.open("GET", "/search/?q="+this.value);
+    xhr.open("GET", "/search/?q="+value);
     xhr.send();
     xhr.onreadystatechange = function(){
       if(xhr.readyState == 4){
@@ -40,7 +40,7 @@ input.oninput = function(){
               mouseoverEventHandler(navList);
               keydownEventHandler(navList);
               mousewheelEventHandler(navList);
-              bodyEvent(navList);
+              inputBlurEvent(navList);
             }
           }
         }else{
@@ -59,11 +59,15 @@ input.oninput = function(){
   }
 }
 
+input.oninput = function(){
+  inputEvent(this.value);
+}
+
 // input 点击事件
 input.onclick = function(event){
   event.stopPropagation();   // 阻止事件冒泡
   this.placeholder = "";
-  navBox.style.display = "block";
+  inputEvent(this.value);
 }
 
 // 清除和添加样式
@@ -168,11 +172,15 @@ function mouseoverEventHandler(element){
 }
 
 // 点击其它地方下拉消失
-function bodyEvent(element){
-  document.body.onclick = function(){
-    input.placeholder = "开发者的日常菜谱 ...";   // 点击 body 元素区域 input框的 placeholder 提示语恢复
-    navBox.style.display = "none";
+function inputBlurEvent(element){
+  input.onblur = function(){
     navPos = 0;
     handleSelectSuggest(element,navPos);
   }
+}
+
+document.body.onclick = function(){
+  var prompt = input.getAttribute("data-prompt") // 获取data-prompt属性的值
+  input.placeholder = prompt;   // 点击 body 元素区域 input框的 placeholder 提示语恢复
+  navBox.style.display = "none";
 }

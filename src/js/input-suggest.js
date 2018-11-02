@@ -155,7 +155,8 @@ function inputSuggest(navBox, input, suggestList, mainElement){
   // 点击页面其他地方，隐藏下拉列表
   document.body.onclick = function(e){
     if(input.placeholder == ""){
-      input.placeholder = "开发者的日常菜谱 ...";
+      var prompt = input.getAttribute("data-prompt"); // 获取data-prompt 属性的值
+      input.placeholder = prompt;
     }
     navBox.style.display = "none";
     newBox.style.display = "none";
