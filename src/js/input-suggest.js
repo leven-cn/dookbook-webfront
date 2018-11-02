@@ -181,7 +181,6 @@ function inputSuggest(navBox, input, suggestList, mainElement){
         if(xhr.readyState == 4){
           if(xhr.status == 200){
             var data = JSON.parse(xhr.responseText);
-            console.log(data);
 
             var hints = data.hints;
             var lang = (location.pathname=="/zh-Hans/") ? "zh-Hans" : "en";
