@@ -1,47 +1,41 @@
 h1{
   font-size: 36px;
   text-align: center;
-  margin-bottom: 40px;
+  margin:10px 0 48px;
   color: #333;
 }
 
 main{
-  width: 500px;
-  min-height: 400px;
+  width: 670px;
+  min-height: 500px;
   background: #fff;
-  padding: 30px 20px 20px 20px;
+  padding: 40px 20px;
   border-radius: 10px;
   box-sizing: border-box;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -250px 0 0 -250px;
+  margin: -300px 0 0 -335px;
   box-shadow: 0 0 8px 2px rgb(235, 233, 233);
+  text-align: center;
 }
 
 label{
-  width: 75px;
+  width: 195px;
   display: inline-block;
   text-align: right;
   font-size: 15px;
   color: #555;
 }
 
-label{
-  padding-bottom: 15px;
-}
-
 form input{
   width: 350px;
   height: 38px;
-  line-height: 38px;
   border-radius: 4px;
   border:1px solid #ddd;
   padding:0 10px;
-}
-
-form input[type="tel"]{
-  width: 235px;
+  margin-bottom: 20px;
+  font-size: 14px;
 }
 
 form button{
@@ -55,22 +49,26 @@ form button{
   color: #fff;
   background: rgb(28, 172, 244);
   cursor: pointer;
+  font-size: 16px;
 }
 
-form p:last-child{
+main p{
   text-align: center;
-  margin-top: 20px;
+  color: #666;
+  font-size: 13px;
+  margin: 2px 0;
 }
 
-form a{
+form input[type="submit"]{
   display: inline-block;
   text-align: center;
-  width: 200px;
-  height: 45px;
-  line-height: 45px;
+  width: 566px;
+  height: 50px;
   background: rgb(28, 172, 244);
   border-radius: 4px;
   color: #fff;
+  font-size: 18px;
+  margin: 15px 0 35px;
 }
 
 footer{
@@ -79,6 +77,9 @@ footer{
   text-align: center;
   width: 100%;
   font-size: 14px;
+}
+
+footer a{
   color: #888;
 }
 
