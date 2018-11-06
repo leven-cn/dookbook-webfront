@@ -83,3 +83,11 @@ footer a{
   color: #888;
 }
 
+.err{
+  line-height: 2rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  width: 80%;
+  text-align: center;
+  color: red;
+}

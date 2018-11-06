@@ -184,19 +184,3 @@ document.body.onclick = function(){
   input.placeholder = prompt;   // 点击 body 元素区域 input框的 placeholder 提示语恢复
   navBox.style.display = "none";
 }
-
-// git-btn 选择git服务
-var gitBtn = document.querySelector(".git-btn");
-var popup = document.querySelector(".popup");
-var mask = document.querySelector(".mask");
-var shut = document.querySelector(".shut");
-
-gitBtn.onclick = function(){
-  popup.style.display = "block";
-  mask.style.display = "block";
-}
-
-shut.onclick = function(){
-  popup.style.display = "none";
-  mask.style.display = "none";
-}

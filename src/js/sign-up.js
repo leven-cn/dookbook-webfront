@@ -14,7 +14,6 @@ function smsVerify(phoneNumber){
 
 document.querySelectorAll("input[type='text']")[1].onclick = function(){
   var phoneNumber = document.querySelector("input[type='tel']").value;
-  console.log(phoneNumber);
   if(phoneNumber){
     smsVerify(phoneNumber);
   }
