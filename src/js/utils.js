@@ -22,6 +22,8 @@ function getCookie(name){
  * @param {URL} url request URL
  * @param {Object} headers HTTP headers: {"name": "value"}
  * @param {Object} data HTTP data
+ * @param {Function} handle handler for status 200, handle(data)
+ * @param {Function} handle_err handler for error, handle_err(status)
  */
 function ajax(method, url, headers, data, handle, handle_err){
   var xhr = new XMLHttpRequest;
@@ -47,4 +49,20 @@ function ajax(method, url, headers, data, handle, handle_err){
       }
     }
   }
+}
+
+
+/**
+ * Ajax with JSON to Django based backend
+ * @param {String} method HTTP method. Invalid value: "GET", "POST"
+ * @param {URL} url request URL
+ * @param {Object} headers HTTP headers: {"name": "value"}
+ * @param {Object} data HTTP data
+ * @param {Function} handle handler for status 200, handle(data)
+ * @param {Function} handle_err handler for error, handle_err(status)
+ */
+function ajax_django(method, url, headers, data, handle, handle_err){
+  headers["X-REQUESTED-WITH"] = "XMLHttpRequest";
+  headers["X-CSRFToken"] = getCookie("csrftoken");
+  ajax(method, url, headers=headers, data=data, handle, handle_err);
 }
