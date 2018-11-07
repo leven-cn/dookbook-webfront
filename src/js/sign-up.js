@@ -1,24 +1,38 @@
-/* 发送短信验证码 */
-function smsVerify(phoneNumber){
-  ajax("POST", "/sign-up/", headers={
-    "X-REQUESTED-WITH": "XMLHttpRequest",
-    "X-CSRFToken": getCookie("csrftoken")
-  }, data={"phone": phoneNumber}, function(data){
-    if(!data.ok){
-      alert(data.msg);
-    }
-  }, function(status){
-    alert("HTTP code: "+status);
-  });
+var inputElements = document.querySelectorAll("input[type='text']");
+
+// 验证昵称是否已存在
+var nicknameFlag = true;
+inputElements[0].oninput = function(){
+  if(this.value && nicknameFlag){
+    ajax_django("POST", "/sign-up/", headers={}, data={"nickname": this.value}, function(data){
+      if(!data.ok){
+        alert(data.msg);
+      }
+    }, function(status){
+      alert("HTTP code: "+status);
+    });
+
+    nicknameFlag = false;
+    setTimeout(function(){
+      nicknameFlag = true;
+    }, 400);
+  }
 }
 
+// 验证短信验证码
 var smsFlag = true;
-document.querySelectorAll("input[type='text']")[1].onclick = function(){
+inputElements[1].onclick = function(){
   var phoneNumber = document.querySelector("input[type='tel']").value;
   if(phoneNumber && smsFlag){
-    smsVerify(phoneNumber);
-    smsFlag = false;
+    ajax_django("POST", "/sign-up/", headers={}, data={"phone": phoneNumber}, function(data){
+      if(!data.ok){
+        alert(data.msg);
+      }
+    }, function(status){
+      alert("HTTP code: "+status);
+    });
 
+    smsFlag = false;
     setTimeout(function(){
       smsFlag = true;
     }, 6000);
