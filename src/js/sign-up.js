@@ -12,9 +12,15 @@ function smsVerify(phoneNumber){
   });
 }
 
+var smsFlag = true;
 document.querySelectorAll("input[type='text']")[1].onclick = function(){
   var phoneNumber = document.querySelector("input[type='tel']").value;
-  if(phoneNumber){
+  if(phoneNumber && smsFlag){
     smsVerify(phoneNumber);
+    smsFlag = false;
+
+    setTimeout(function(){
+      smsFlag = true;
+    }, 6000);
   }
 }
