@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Test - Dookbook</title>
+  <link rel="stylesheet" href="/static/css/cookbook/cookbook.css" />
+  <style>
+    header input[type="text"]{
+      background: url("/static/img/search.svg") no-repeat 0.56rem rgb(28, 172, 244);
+      background-size: 1.88rem;
+    }
+    .toc li a.fold, .toc li.active a.fold{
+      background: url("/static/img/right.svg") no-repeat 12rem 0.8rem;
+      background-size: 0.45rem;
+    }
+    .toc li a.unfold, .toc li.active a.unfold{
+      background: url("/static/img/down.svg") no-repeat 12rem 0.9rem;
+      background-size: 0.8rem;
+    }
+    .toc li.active ul{
+      display: block;
+    }
+  </style>
+  <link rel="stylesheet" href="/static/css/cookbook/table.css" />
+</head>
+
+<body>
+  <header>
+    <img src="/static/img/logo.svg" alt="Dookbook's logo" title="Goto Dookbook's Homepage">
+    <input type="text" placeholder="Search" readonly>
+    <a href="#" title="About Dookbook">About</a>
+    <button><img src="/static/img/lang-switch.svg" alt="Switch to Chinese version" title="Switch to Chinese version"></button>
+  </header>
+
+  <main>
+    <article>
+      <header>
+        <h1>Test</h1>
+        <p><span>Updated</span>:&nbsp;&nbsp;2018-10-12 09:30 <span>Views</span>:&nbsp;&nbsp; 6</p>
+      </header>
+
+      <h1 id="test">Test</h1>
+<div class="toc">
+<ul>
+<li><a href="#test">Test</a><ul>
+<li><a href="#heading-2-1">Heading 2-1</a></li>
+<li><a href="#table">Table</a><ul>
+<li><a href="#table-with-column-alignment">Table with column alignment</a></li>
+</ul>
+</li>
+<li><a href="#heading-2-2">Heading 2-2</a><ul>
+<li><a href="#heading-3">Heading 3</a></li>
+</ul>
+</li>
+<li><a href="#list">List</a><ul>
+<li><a href="#unordered-list">Unordered List</a></li>
+<li><a href="#ordered-list">Ordered List</a></li>
+</ul>
+</li>
+<li><a href="#block-quote">Block Quote</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><code>Windows</code> lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (~~keyboard shortcuts~~). A <a href="https://dookbook.zhiliaokeji.com/">link</a>. A <strong>strong</strong> and <em>italic</em>.</p>
+<h2 id="heading-2-1">Heading 2-1</h2>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). A <a href="https://dookbook.zhiliaokeji.com/">link</a>. A <strong>strong</strong> and <em>italic</em>.</p>
+<h2 id="table">Table</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Command</th>
+<th>Hot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + C</td>
+<td>Copy</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Ctrl + V</td>
+<td>Paste</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td>Bold</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td>Bold</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-with-column-alignment">Table with column alignment</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th align="center">Command</th>
+<th align="right">Hot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + C</td>
+<td align="center">Copy</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>Ctrl + V</td>
+<td align="center">Paste</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td align="center">Bold</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td align="center">Bold</td>
+<td align="right">3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="heading-2-2">Heading 2-2</h2>
+<p>something about heading 2</p>
+<h3 id="heading-3">Heading 3</h3>
+<p>something about heading 3</p>
+<h2 id="list">List</h2>
+<h3 id="unordered-list">Unordered List</h3>
+<ul>
+<li>a</li>
+<li>b</li>
+<li>c</li>
+</ul>
+<h3 id="ordered-list">Ordered List</h3>
+<ol>
+<li>a</li>
+<li>b</li>
+<li>c</li>
+</ol>
+<h2 id="block-quote">Block Quote</h2>
+<p>As Kanye West said:</p>
+<blockquote>
+<p>We're living the future so
+the present is our past.</p>
+</blockquote>
+    </article>
+
+    <aside>
+      <h2>Contributors</h2>
+      <ul></ul>
+    </aside>
+  </main>
+
+  <!-- enable Django's static CSS style -->
+  <div class="fold unfold" hidden></div>
+  <script src="/static/js/toc.js"></script>
+</body>
+
+</html>
