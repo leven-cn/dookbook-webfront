@@ -1,6 +1,5 @@
-/**
- * 左侧TOC菜单
- */
+/** TOC tree of content page */
+
 const selectedClassName = "active";
 
 var tocList = document.querySelectorAll(".toc>ul>li");
