@@ -197,6 +197,9 @@ article a:hover{
   background: none;
   border-left: 0.06rem solid #E6ECF1;
   font-size: 16px;
+  overflow-y: auto;
+  white-space:nowrap;
+  padding-bottom: 0.4rem;
 }
 
 .toc ul li a:hover{
