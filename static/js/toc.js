@@ -14,7 +14,8 @@ for (var i = 0; i < tocList.length; i++) {
     // 子菜单点击事件处理
     var submenuList = menu.querySelectorAll("ul>li");
     for(var j = 0; j < submenuList.length; j++){
-      submenuList[j].onclick = function(){
+      submenuList[j].onclick = function(event){
+        event.stopPropagation();
         if(!this.classList.contains("selected")){
           // 清除上一次选中的菜单样式
           if (selectedSubmenu) {
@@ -44,6 +45,9 @@ for (var i = 0; i < tocList.length; i++) {
       this.classList.add(selectedClassName);
       selectedMenu = this;
       this.querySelector("a").classList.replace("fold", "unfold");
+    }else{
+      this.classList.remove(selectedClassName);
+      this.querySelector("a").classList.replace("unfold", "fold");
     }
   }
 }
