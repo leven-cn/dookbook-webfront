@@ -177,6 +177,10 @@ article a:hover{
   background: rgb(230,236,240);
 }
 
+.toc ul li:hover ul{
+  background: rgb(245, 246, 247);
+}
+
 .toc ul li a{
   width: 100%;
   display: inline-block;
@@ -212,9 +216,17 @@ article a:hover{
   color: rgb(56, 132, 255);
 }
 
+.toc li.active ul li a{
+  color: rgb(123, 124, 127);
+}
+
+.toc li ul li.selected a{
+  color: rgb(56, 132, 255);
+}
+
 .toc ul li li a:hover{
   background: rgb(230,236,240);
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 aside{
