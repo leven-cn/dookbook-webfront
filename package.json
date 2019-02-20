@@ -39,8 +39,13 @@
     }
   },
   "lint-staged": {
-    "static/js/*.js": "eslint --ext .js",
-    "static/css/*.css": "stylelint",
-    "*.html": "stylelint && htmlhint"
+    "concurrent": true,
+    "ignore": [],
+    "linters": {
+      "static/js/*.js": "eslint --ext .js",
+      "static/css/*.css": "stylelint",
+      "static/css/*.scss": "stylelint --syntax scss",
+      "*.html": ["htmlhint", "stylelint"]
+    }
   }
 }
