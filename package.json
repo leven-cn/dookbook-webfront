@@ -1,0 +1,27 @@
+{
+  "name": "dookbook-webfront",
+  "version": "0.01",
+  "description": "Dookbook's WebFront.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leven-cn/dookbook-webfront.git"
+  },
+  "keywords": [
+    "dookbook"
+  ],
+  "author": "Li Yun <leven.cn@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leven-cn/dookbook-webfront/issues"
+  },
+  "homepage": "https://github.com/leven-cn/dookbook-webfront#readme"
+}
