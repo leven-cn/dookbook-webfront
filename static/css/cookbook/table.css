@@ -1,14 +1,14 @@
 /* styles for <table> of content page */
 
-table{
+table {
   border: 0.06rem solid rgb(224, 224, 224);
-  border-left:none;
+  border-left: none;
   line-height: 2rem;
   text-align: center;
-  border-spacing:0;
+  border-spacing: 0;
 }
 
-table th{
+table th {
   border-bottom: 0.06rem solid rgb(224, 224, 224);
   border-left: 0.06rem solid rgb(224, 224, 224);
   background: rgb(28, 172, 244);
@@ -17,12 +17,12 @@ table th{
   font-size: 20px;
 }
 
-table td{
+table td {
   border-bottom: 0.06rem solid rgb(224, 224, 224);
   border-left: 0.06rem solid rgb(224, 224, 224);
   padding: 0.15rem 0;
 }
 
-table tbody tr:nth-of-type(even){
- background: rgb(235, 235, 235);
+table tbody tr:nth-of-type(even) {
+  background: rgb(235, 235, 235);
 }
