@@ -43,7 +43,7 @@
     "concurrent": true,
     "ignore": [],
     "linters": {
-      "static/js/*.js": "eslint --ext .js",
+      "static/js/*.js": "eslint --ext .js,.html",
       "static/css/*.css": "stylelint",
       "static/css/*.scss": "stylelint --syntax scss",
       "*.html": [
