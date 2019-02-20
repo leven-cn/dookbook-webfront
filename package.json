@@ -1,6 +1,6 @@
 {
   "name": "dookbook-webfront",
-  "version": "0.01",
+  "version": "0.0.1",
   "description": "Dookbook's WebFront.",
   "main": "index.js",
   "dependencies": {},
