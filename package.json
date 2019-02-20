@@ -41,6 +41,6 @@
   "lint-staged": {
     "static/js/*.js": "eslint --ext .js",
     "static/css/*.css": "stylelint",
-    "*.html": "stylelint"
+    "*.html": "stylelint && htmlhint"
   }
 }
