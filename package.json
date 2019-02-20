@@ -40,6 +40,7 @@
   },
   "lint-staged": {
     "static/js/*.js": "eslint --ext .js",
-    "static/css/*.css": "stylelint"
+    "static/css/*.css": "stylelint",
+    "*.html": "stylelint"
   }
 }
