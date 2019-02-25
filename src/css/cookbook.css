@@ -1,0 +1,280 @@
+ul,li{list-style: none;}
+a{text-decoration: none;}
+
+em{
+  font-style: normal;
+}
+
+button,input{
+  outline:none;
+}
+
+body,h1,h2,h3,button,ul,ol,li,img,a,main,section,article,header,footer,aside,p{
+  margin: 0;
+  padding: 0;
+  font-family: '微软雅黑', Roboto, sans-serif;
+}
+
+header{
+	height: 80px;
+	width: 100%;
+	box-shadow: 0 0 8px 5px #ccc;
+	position: fixed;
+	top: 0;
+	line-height: 80px;
+	display: flex;
+	z-index: 1;
+	background: #fff;
+}
+
+header img{
+	width: 210px;
+	padding: 0 44px;
+}
+
+header a{
+	width: 60px;
+	border:1px solid rgb(28, 172, 244);
+	color: rgb(28, 172, 244);
+	display: inline-block;
+	height: 38px;
+	margin:17px 40px 0;
+	line-height: 38px;
+	text-align: center;
+	border-radius: 6px;
+}
+
+header button{
+	border: none;
+	height: 40px;
+	margin:17px 40px 0 0;
+	background: none;
+}
+
+header button img{
+	height: 40px;
+	padding: 0;
+	width: auto;
+}
+
+header input[type="text"]{
+	flex: 1;
+	height: 40px;
+	background:url(../img/search.svg) no-repeat 10px rgb(28, 172, 244);
+	background-size: 30px;
+	border:none;
+	border-radius: 6px;
+	line-height: 40px;
+	margin-top: 17px;
+	padding-left: 55px;
+	color: #fff;
+	font-size: 16px;
+}
+header input[type="text"]::placeholder{
+	color: #fff;
+}
+
+main{
+	width: 100%;
+	height: 100%;
+	padding-top:80px;
+	font-family: Roboto, sans-serif;
+	position: fixed;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.toc{
+ background: rgb(245, 246, 247);
+ width: 280px;
+ height: 100%;
+ position: relative;
+ float: left;
+ overflow-x: auto;
+ padding: 30px 0 40px;
+ box-sizing: border-box;
+}
+
+.toc ul{
+	padding-left: 20px;
+	width: 260px;
+	overflow: hidden;
+}
+
+.toc ul li{
+	line-height: 36px;
+	background-size: 10px;
+	margin-top: 1px;
+}
+
+.toc ul li.active a{
+	background-color: #fff;
+	border:1px solid rgb(232,233,235);
+	color: rgb(28, 172, 244);
+}
+
+.toc ul li a{
+	width: 100%;
+	display: inline-block;
+	box-sizing: border-box;
+	padding-left: 10px;
+	color: rgb(123, 124, 127);
+	border:1px solid rgb(245, 246, 247);
+}
+
+.toc ul li ul{
+	display: none;
+}
+
+.toc ul li ul{
+	padding: 0;
+	margin-left: 20px;
+	border-left: 1px solid #E6ECF1;
+}
+
+.toc ul li ul li{
+	background: none;
+}
+
+.toc ul li.active ul li a{
+	background: none;
+	border: none;
+	color: rgb(160, 160, 160);
+}
+
+.toc ul li ul li a:hover{
+	background: rgb(230,236,240);
+}
+
+.main-right{
+	max-width: 800px;
+	height: 100%;
+	display: inline-block;
+	flex: 1;
+	overflow-x: auto;
+	margin-left:80px;
+	padding: 30px 35px 30px 0;
+	box-sizing: border-box;
+	border-right: 1px solid rgb(241, 241, 241);
+}
+
+.main-right h2{
+	font-size:26px;
+	padding: 30px 0 5px;
+	color: #242A31;
+}
+
+.main-right h3{
+	font-size:20px;
+	color: rgb(36, 42, 49);
+	padding:5px 0 10px;
+}
+
+.main-right p{
+	font-size:14px;
+	line-height: 26px;
+	color: #3B454E;
+}
+
+.main-right a{
+	color:#3884FF;
+}
+
+.main-right a:hover{
+	text-decoration: underline;
+}
+
+
+.codehilite{
+	width: 100%;
+	overflow-y: hidden;
+  margin:10px 0 40px;
+  background-color: rgb(250, 250, 250);
+}
+
+
+.main-right section{
+	position: relative;
+	font-size: 14px;
+	border-left: 2px solid rgb(28, 172, 244);
+	padding-left: 20px;
+	margin-bottom: 30px;
+}
+
+.main-right section h1{
+	font-size: 32px;
+	color: #3B454E;
+}
+
+.main-right section img{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 35px;
+}
+
+.main-right section em:last-child{
+	margin-left: 30px;
+}
+
+aside{
+	position: fixed;
+	right: 15px;
+	top: 100px;
+	width: 250px;
+}
+
+aside section{
+	text-align: center;
+	width: 100%;
+	margin: 20px 0;
+	font-size: 16px;
+	color: #999;
+}
+
+aside section h2{
+	font-size: 22px;
+	color: #888;
+}
+
+
+aside ul{
+	height: 360px;
+	overflow-x:auto;
+}
+
+aside ul li{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid rgb(241, 241, 241);
+	padding: 10px 0;
+}
+
+aside ul li img{
+	width: 30px;
+	border-radius: 100%;
+	vertical-align: middle;
+	margin-left:15px;
+}
+aside ul li progress {
+	-webkit-appearance: none;
+	width: 144px;
+	height: 10px;
+	border: 1px solid rgb(241, 241, 241);
+	margin: 0 10px;
+	border-radius: 2px;
+}
+
+progress::-webkit-progress-bar{
+	background-color: #fff;
+}
+
+progress::-webkit-progress-value{
+	background-color: rgb(28, 172, 244);
+}
+
+
+aside ul li em:last-child{
+	font-size: 13px;
+	color: rgb(28, 172, 244);
+}

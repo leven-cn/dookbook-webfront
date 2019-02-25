@@ -1,0 +1,192 @@
+html,body{
+	background:linear-gradient(to bottom right, rgb(36,97,212) 15%, rgb(255,3,234));
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	color: #fff;
+	text-align: center;
+	font-size:10px;
+}
+
+header a:last-child{
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  color: #fff;
+  font-family: '微软雅黑', Roboto, sans-serif;
+	text-decoration: underline;
+	font-size:1rem;	
+}
+
+header{
+	font-family: Arial Black, Helvetica, sans-serif;
+}
+
+h1{
+	font-size: 3rem;
+	letter-spacing:3px;
+	position: absolute;
+	top:50%;
+	margin-top: -3.5rem;
+	text-align: center;
+	width: 100%;
+}
+
+h1 sup{
+	font-size: 1.23rem;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing:2px;
+	position: relative;
+	top:-1.3rem;
+	margin-left: 0.63rem;
+  opacity: 0;
+}
+
+.fuzzy{
+	display: inline-block;
+}
+
+@keyframes fuzzy{
+	0%{
+		filter:blur(0px);
+	}
+	100%{
+		filter:blur(6px);
+		opacity: 0.2;
+	}
+}
+
+@keyframes fuzzyWidth{
+	0%{
+		width: 30px;
+		opacity: 0.2;
+		filter:blur(6px);
+	}
+	50%{
+		width: 20px;
+		opacity: 0.1;
+		filter:blur(6px);
+	}
+	100%{
+		filter:blur(6px);
+		opacity: 0;
+		width: 0;
+	}
+}
+
+@keyframes fontSize{
+	0%{
+		font-size: 3rem;
+  }
+	100%{
+		font-size: 4.5rem;
+	}
+}
+
+@keyframes show{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.3;
+	}
+	80%{
+		opacity: 0.7;
+  }
+  90%{
+		opacity: 0.9;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes up{
+  0%{
+    margin-top: -3.5rem;
+    font-size: 4.5rem;
+  }
+  100%{
+    margin-top: -13rem;
+    font-size: 4.5rem;
+  }
+}
+
+main{
+  width: 100%;
+  opacity: 0;
+	position: absolute;
+	top: 50%;
+	margin-top: -5.5rem;
+}
+
+input[type="text"]{
+	display: inline-block;
+	width: 60%;
+  height: 3.8rem;
+	border: none;
+	border-radius: 0.7rem;
+	box-sizing: border-box;
+	padding-left: 1.88rem;
+	font-size: 1.7rem;
+  position: relative;
+  z-index: 2;
+  color:#fff;
+  background: rgba(255,255,255,0.2);
+}
+
+input::placeholder{
+  color: #fff;
+  opacity: 0.5;
+}
+
+footer{
+	width: 100%;
+	position: fixed;
+	bottom: 4%;
+	text-align: center;
+	font-size: 0.9rem;
+}
+
+footer a{
+	color: #fff;
+}
+
+nav{
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+
+nav ul {
+	display: inline-block;
+	width: 60%;
+	text-align: left;
+	background: rgba(255,255,255,0.4);
+	margin-top: 1.5rem;
+}
+
+nav ul li a{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 2rem;
+	display: inline-block;
+	line-height:3rem; 
+	color:rgba(255,255,255,0.8);
+	font-size:1.2rem;
+}
+
+nav ul li a em{
+	float: right;
+	background: rgba(138, 74, 222,0.8);
+	border-radius: 0.2rem;
+	color: #fff;
+	line-height: 2rem;
+	vertical-align: middle;
+	padding: 0 1rem;
+	margin-top: 0.5rem;
+}

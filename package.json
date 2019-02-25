@@ -1,0 +1,56 @@
+{
+  "name": "dookbook-webfront",
+  "version": "0.0.1",
+  "description": "Dookbook's WebFront.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "htmlhint": "^0.10.1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-staged": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leven-cn/dookbook-webfront.git"
+  },
+  "keywords": [
+    "dookbook"
+  ],
+  "author": "Li Yun <leven.cn@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leven-cn/dookbook-webfront/issues"
+  },
+  "homepage": "https://github.com/leven-cn/dookbook-webfront#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "concurrent": true,
+    "ignore": [],
+    "linters": {
+      "static/js/*.js": "eslint --ext .js,.html",
+      "static/css/*.css": "stylelint",
+      "static/css/*.scss": "stylelint --syntax scss",
+      "*.html": [
+        "htmlhint",
+        "stylelint"
+      ]
+    }
+  }
+}

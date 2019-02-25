@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8"/>
+  <title>网页标题</title>
+  <link rel="stylesheet" href="../css/cookbook.css"/>
+</head>
+<body>
+<header>
+  <img src="../img/logo.svg" alt="logo">
+  <input type="text" placeholder="按Enter键搜索">
+  <a href="#">关于</a>
+  <button><img src="../img/cn.svg" alt="cn"></button>
+</header>
+
+<main>
+  <article>
+    <div class="toc">
+      <ul>
+        <li><a href="#quick-start">Quick Start</a></li>
+        <li><a href="#github-workflow">GitHub Workflow</a></li>
+        <li>
+          <a href="#git-workflow">Git Workflow</a>
+          <ul>
+            <li><a href="#git-branch-model">Git Branch Model</a></li>
+            <li><a href="#mainstream">Mainstream</a></li>
+            <li><a href="#bugfix-for-mainstream">Bugfix for Mainstream</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#releases">Releases</a></li>
+            <li><a href="#lets-go-gitflow-user-guide">Let's Go! (GitFlow User Guide)</a></li>
+          </ul>
+        </li>
+        <li><a href="#commit-message">Commit Message</a></li>
+        <li><a href="#undo">Undo</a></li>
+        <li><a href="#log">Log</a></li>
+        <li><a href="#version-difference">Version Difference</a></li>
+        <li><a href="#delete-branch">Delete Branch</a></li>
+        <li><a href="#tag">Tag</a></li>
+        <li>
+          <a href="#remote-branch">Remote Branch</a>
+          <ul>
+            <li><a href="#delete-remote-branch">Delete Remote Branch</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#patch">Patch</a>
+          <ul>
+            <li><a href="#create-git-patch">Create Git Patch</a></li>
+            <li><a href="#apply-git-patch">Apply Git Patch</a></li>
+            <li><a href="#create-standard-patch">Create Standard Patch</a></li>
+            <li><a href="#apply-standard-patch">Apply Standard Patch</a></li>
+          </ul>
+        </li>
+        <li><a href="#git-server-ssh-based">Git Server (SSH-based)</a></li>
+      </ul>
+    </div>
+
+    <div class="main-right">
+      <section>
+        <h1>What is dookbook</h1>
+        <p><em>更新时间：</em>2018-10-12 09:30  <em>浏览量</em>：6666</p>
+        <img src="../img/editor.svg" alt="编辑">
+      </section>
+
+  <p>Getting started with Git, please read the Chapter 1,2,3 of <a href="https://www.git-scm.com/book/en/">Pro Git</a> (<a href="https://www.git-scm.com/book/zh/">中文版</a>).</p>
+  <p><a href="http://zhiliaokeji.com/bash-cookbook">Bash Cookbook</a> should be able to help you.</p>
+  <div class="codehilite"><pre><span></span>  git version  <span class="c1"># v2.0+</span></pre></div>
+
+
+  <p>Before start, configure it:</p>
+  <p>For system wide configuration (All users in the system):</p>
+  <div class="codehilite"><pre><span></span>
+  sudo git config --system help.autocorrect <span class="m">1</span>
+  sudo git config --system core.eol lf
+  sudo git config --system core.autocrlf input
+  sudo git config --system core.filemode <span class="nb">true</span>
+  sudo git config --system core.editor vim
+  sudo git config --system color.ui auto
+  sudo git config --system diff.tool vimdiff
+  sudo git config --system merge.tool vimdiff
+  sudo git config --system push.default simple
+  sudo git config --system credential.helper <span class="s2">&quot;cache --timeout=3600&quot;</span>
+  sudo git config --system gui.encoding utf-8
+  </pre></div>
+
+
+  <p>For user wide configuration:</p>
+  <div class="codehilite"><pre><span></span>
+  git config --global user.name <span class="s1">&#39;Li Yun&#39;</span>                   <span class="c1"># Your name</span>
+  git config --global user.email leven.cn@gmail.com        <span class="c1"># Your working email, just as GitHub registered email</span>
+
+  <span class="c1"># VS Code</span>
+  git config --global core.editor <span class="s2">&quot;code --wait&quot;</span>
+  git config --global diff.tool <span class="s2">&quot;code --wait ---diff </span><span class="nv">$LOCAL</span><span class="s2"> </span><span class="nv">$REMOTE</span><span class="s2">&quot;</span>
+
+  <span class="c1"># Show your current configuration</span>
+  git config --list
+
+  <span class="c1"># Warning: Store your password in local host, ensure you are working in a secure environment</span>
+  git config --global credential.helper store
+  </pre></div>
+
+
+  <h2 id="quick-start">Quick Start</h2>
+  <p>Refer to Chapter 5,6 of <a href="https://www.git-scm.com/book/">Pro Git</a> (<a href="https://www.git-scm.com/book/zh/">中文版</a>).</p>
+  <p>All text files (including code and doc) in your repo should be <code>UTF-8</code> encoded.</p>
+  <p>For more details about <a href="https://semver.org">Semantic Versioning</a> (<a href="https://semver.org/lang/zh-CN/">语义化版本规范</a>).</p>
+  <ol>
+  <li><code>git clone &lt;repo-url&gt; [&lt;dir&gt;]</code></li>
+  <li>(optional)<code>git remote add &lt;upstream&gt; &lt;repo-url&gt;</code> (default <code>origin</code>)</li>
+  <li>(optional)<code>git pull &lt;upstream&gt; &lt;branch&gt;</code></li>
+  <li><code>git checkout &lt;branch&gt;</code> (default <code>master</code>) or <code>git checkout -b &lt;branch&gt;</code></li>
+  <li>Update files</li>
+  <li><code>git status</code></li>
+  <li><code>git diff</code></li>
+  <li><code>git diff --check</code></li>
+  <li><code>git add|rm|mv &lt;file ... or dir&gt;</code></li>
+  <li><code>git diff --cached</code></li>
+  <li><code>git commit -m '&lt;commit message&gt;'</code> or <code>git commit --amend</code></li>
+  <li><code>git push</code> to Git Server</li>
+  </ol>
+  <h2 id="github-workflow">GitHub Workflow</h2>
+  <p>Reter to:</p>
+  <ul>
+  <li><a href="http://scottchacon.com/2011/08/31/github-flow.html">GitHub Flow</a></li>
+  <li><a href="https://guides.github.com/introduction/flow/index.html">GitHub Flow Guide</a></li>
+  </ul>
+  <p>And follow steps:</p>
+  <ul>
+  <li><code>Star</code> / <code>Watch</code></li>
+  <li><code>Fork</code></li>
+  <li><code>Pull Request</code>: <code>git merge --no-ff &lt;branch-name&gt;</code></li>
+  </ul>
+  <h2 id="git-workflow">Git Workflow</h2>
+  <h3 id="git-branch-model">Git Branch Model</h3>
+  <p>Refer to Vincent Driessen's <a href="http://nvie.com/posts/a-successful-git-branching-model/">Git Branch Model, 2010</a> and <a href="https://jeffkreeftmeijer.com/git-flow/">How to use a scalable Git branching model called git-flow (by Build a Module)</a></p>
+  <p><img alt="Git Branch Model" src="https://raw.githubusercontent.com/leven-cn/git-cookbook/master/Git-Branch-Model.png"></p>
+  <h3 id="mainstream">Mainstream</h3>
+  <p>Branch <code>master</code> contains codes only for official releases with some version tags for production.</p>
+  <p><strong>NOTE</strong>: The perils of rebasing: <strong>DONOT</strong> <code>rebase</code> commits that you have pushed to a public repository.</p>
+  <div class="codehilite"><pre><span></span>
+  git checkout master
+  git pull --rebase
+  git merge --no-ff dev
+
+  <span class="c1"># If any upstream repo (e.g., GitHub Fork)</span>
+  git remote add upstream &lt;git-url&gt;
+  git fetch upstream
+  git merge --no-ff upstream/master
+
+  git tag -a &lt;tag&gt; -m <span class="s1">&#39;&lt;tag-comment&gt;&#39;</span> <span class="c1"># e.g., git tag -a &#39;v0.1&#39; -m &#39;v0.1 - Initial version&#39;</span>
+
+  git push
+  git push --tag
+  </pre></div>
+
+
+  <h3 id="bugfix-for-mainstream">Bugfix for Mainstream</h3>
+  <div class="codehilite"><pre><span></span>
+  git checkout -b &lt;bugfix-A&gt; master
+  <span class="c1"># ... (git add/rm/mv)</span>
+  git diff <span class="o">[</span>--cached<span class="o">]</span> &lt;path ...&gt;
+  git diff --check <span class="c1"># Avoid white space issues commit</span>
+  <span class="c1"># ... (git commit -m)</span>
+  git diff &lt;bugfix-A&gt;..master
+
+  git checkout master
+  git pull --rebase
+  git rebase &lt;bugfix-A&gt;
+  git branch -d &lt;bugfix-A&gt;
+  </pre></div>
+
+
+  <h3 id="features">Features</h3>
+  <p>I think that it is better for same features by using <code>rebase</code>, while for different ones by using <code>merge</code>. Since it will keep the branch structure clean.</p>
+  <div class="codehilite"><pre><span></span>
+  git checkout &lt;feature-A&gt; develop
+  git pull --rebase
+  <span class="c1"># ... (git add/rm/mv)</span>
+  git diff <span class="o">[</span>--cached<span class="o">]</span> &lt;path ...&gt;
+  git diff --check <span class="c1"># Avoid white space issues commit</span>
+  <span class="c1"># ... (git commit -m)</span>
+  git diff &lt;feature-A&gt;..develop
+
+  git checkout develop
+  git pull --rebase
+  git merge --no-ff &lt;feature-A&gt;
+  </pre></div>
+
+
+  <h3 id="releases">Releases</h3>
+  <p>一旦<code>develop</code>分支上有了做一次发布（或者说快到了既定的发布日）的足够功能，就从<code>develop</code>分支上fork一个发布分支<code>release</code>。新建的分支用于开始发布循环，所以从这个时间点开始之后新的功能不能再加到这个分支上 —— 这个分支只应该做<strong>Bug修复</strong>、<strong>文档生成</strong>和其它面向发布任务。一旦对外发布的工作都完成了，发布分支合并到master分支并分配一个版本号打好Tag。另外，这些从新建发布分支以来的做的修改要合并回<code>develop</code>分支。</p>
+  <h3 id="lets-go-gitflow-user-guide">Let's Go! (GitFlow User Guide)</h3>
+  <p>Read <a href="https://github.com/nvie/gitflow">GitFlow GitHub</a>.</p>
+  <div class="codehilite"><pre><span></span>
+  git flow init <span class="o">[</span>-d<span class="o">]</span>
+  </pre></div>
+
+
+  <div class="codehilite"><pre><span></span>
+  git flow feature/release/hotfix
+  git flow feature/release/hotfix start &lt;branch-name&gt;
+  git flow feature/release/hotfix finish &lt;branch-name&gt;
+
+  git flow feature/release/hotfix pull &lt;reomote&gt; &lt;branch-name&gt;
+  git flow feature/release/hotfix publish &lt;branch-name&gt;
+  </pre></div>
+
+
+  <h2 id="commit-message">Commit Message</h2>
+  <div class="codehilite"><pre><span></span>
+  This update contains improvement and bug fixes, including:
+
+  - Fixed bugs where user cannot signup
+
+  - Fixed bugs that prevent A from doing sth
+
+  - Fixed issues that could cause B crash when ...
+
+  - Improved reliability of C when ...
+
+  - Improved performance of D when ..
+  </pre></div>
+
+
+  <h2 id="undo">Undo</h2>
+  <div class="codehilite"><pre><span></span>
+  git checkout -- &lt;file ...&gt;      <span class="c1"># undo updates of `git add`</span>
+
+  git reset HEAD &lt;file ...&gt;       <span class="c1"># undo `git add`</span>
+
+  git commit --amend              <span class="c1"># update `git commit`</span>
+  </pre></div>
+
+
+  <h2 id="log">Log</h2>
+  <div class="codehilite"><pre><span></span>
+  git log
+
+  git log -p             <span class="c1"># Show difference</span>
+  git log -p -N          <span class="c1"># Show difference among lastest N commits</span>
+  </pre></div>
+
+
+  <h2 id="version-difference">Version Difference</h2>
+  <div class="codehilite"><pre><span></span>
+  git diff &lt;branch-A&gt;..&lt;branch-B&gt;
+  </pre></div>
+
+
+  <h2 id="delete-branch">Delete Branch</h2>
+  <div class="codehilite"><pre><span></span>
+  git branch -d &lt;branch-name&gt;    <span class="c1"># merged branch</span>
+
+  git branch -D &lt;branch-name&gt;    <span class="c1"># NOT merged branch</span>
+  </pre></div>
+
+
+  <h2 id="tag">Tag</h2>
+  <div class="codehilite"><pre><span></span>
+  git tag -a &lt;tag&gt; -m <span class="s1">&#39;&lt;tag-comment&gt;&#39;</span>      <span class="c1"># e.g., git tag -a &#39;v0.1&#39; -m &#39;v0.1 - Initial version&#39;</span>
+
+  git push --tag                           <span class="c1"># Add remote tag</span>
+  git push origin :refs/tags/&lt;tag-name&gt;    <span class="c1"># Delete remote tag</span>
+  </pre></div>
+
+
+  <h2 id="remote-branch">Remote Branch</h2>
+  <div class="codehilite"><pre><span></span>
+  git remote -v
+  </pre></div>
+
+
+  <h3 id="delete-remote-branch">Delete Remote Branch</h3>
+  <div class="codehilite"><pre><span></span>
+  git push <span class="o">[</span>-f<span class="o">]</span> &lt;remote-repo&gt; :&lt;remote-branch&gt;
+  </pre></div>
+
+
+  <h2 id="patch">Patch</h2>
+  <h3 id="create-git-patch">Create Git Patch</h3>
+  <div class="codehilite"><pre><span></span>
+  ... <span class="o">(</span>git commit -m<span class="o">)</span>
+  git format-patch -M &lt;upstream-branch&gt; &lt;current-branch&gt;.patch
+  </pre></div>
+
+
+  <h3 id="apply-git-patch">Apply Git Patch</h3>
+  <div class="codehilite"><pre><span></span>
+  git am &lt;current-branch&gt;.patch
+  ... <span class="o">(</span>git add+commit<span class="o">)</span>
+  </pre></div>
+
+
+  <h3 id="create-standard-patch">Create Standard Patch</h3>
+  <div class="codehilite"><pre><span></span>
+  ... <span class="o">(</span>git commit<span class="o">)</span>
+  git diff &lt;upstream-branch&gt; &gt; &lt;current-branch&gt;.patch
+  </pre></div>
+
+
+  <h3 id="apply-standard-patch">Apply Standard Patch</h3>
+  <div class="codehilite"><pre><span></span>
+  git apply --check &lt;current-branch&gt;.patch
+  git apply &lt;current-branch&gt;.patch
+  ... <span class="o">(</span>git add+commit<span class="o">)</span>
+  </pre></div>
+
+
+  <h2 id="git-server-ssh-based">Git Server (SSH-based)</h2>
+  <div class="codehilite"><pre><span></span>
+  mkdir &lt;project&gt;.git
+  <span class="nb">cd</span> &lt;project&gt;.git
+  git init --bare
+
+  git clone --bare &lt;project-dir&gt; &lt;git-repo&gt;.git
+  scp -r &lt;git-repo&gt;.git &lt;user&gt;@&lt;git-server&gt;:/&lt;path-to-git-repo&gt;
+
+  <span class="c1"># On Git Server</span>
+  sudo adduer git
+  sudo passwd git
+  ssh &lt;user&gt;@&lt;git-server&gt;
+  sudo adduser git
+  sudo passwd git
+  sudo chown git:git  /&lt;path-to-git-repo&gt;
+  gpasswd -a &lt;user&gt; git
+  </pre></div>
+  </div>
+  </article>
+
+  <aside>
+    <section>
+      <h2>贡献度</h2>
+      <p>Contribution</p>
+    </section>
+    <ul>
+      <li><img src="../img/a8.jpg" alt="头像"><progress value="50" max="100"></progress><em>50%</em></li>
+      <li><img src="../img/a8.jpg" alt="头像"><progress value="30" max="100"></progress><em>30%</em></li>
+      <li><img src="../img/a8.jpg" alt="头像"><progress value="20" max="100"></progress><em>20%</em></li>
+      <li><img src="../img/a8.jpg" alt="头像"><progress value="80" max="100"></progress><em>80%</em></li>
+      <li><img src="../img/a8.jpg" alt="头像"><progress value="50" max="100"></progress><em>50%</em></li>
+      <li><img src="../img/a8.jpg" alt="头像"><progress value="30" max="100"></progress><em>30%</em></li>
+      <li><img src="../img/a8.jpg" alt="头像"><progress value="20" max="100"></progress><em>20%</em></li>
+      <li><img src="../img/a8.jpg" alt="头像"><progress value="1" max="100"></progress><em>1%</em></li>
+    </ul>
+  </aside>
+</main>
+
+
+<script src="../js/content.js"></script>
+</body>
+</html>
