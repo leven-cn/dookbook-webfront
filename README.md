@@ -6,8 +6,7 @@ Dookbook's WebFront.
 
 ## About
 
-**Dookbook&trade;**=**D**evelopers' C**ookbook**, is a knowledge engine for developers,
-that offers a wealth of code examples and snippets, as well as programming tips and tricks.
+**Dookbook&trade;**=**D**evelopers' C**ookbook**, as a new generation knowledge engine for developers, offers a wealth of useful code examples and snippets, even tips and tricks for Windows/Mac, as well as popular programming tools and IDEs.
 
 > **Dookbook&trade;**=**D**evelopers's C**ookbook** (开发人员的日常菜谱)，是为开发人员
 > 提供大量有用的代码示例和代码片段，以及编程技巧的新一代知识引擎。
