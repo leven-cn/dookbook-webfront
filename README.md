@@ -40,7 +40,7 @@ which the platform would calcuate automatically.
 > 开发者可以自由地上传新的、更新完善已有的文档。**Dookbook&trade;** 会自动计算每篇知识文档的贡献率，贡献者
 > 按各自贡献率百分比共享平台的（广告）收益。
 >
-> DookbookTM的盈利模式非常简单，即依靠Google Adsense或百度联盟等线上广告的方式。平台会严格限制广告内容，
+> Dookbook&trade;的盈利模式非常简单，即依靠*Google Adsense*或*百度联盟*等线上广告的方式。平台会严格限制广告内容，
 > 仅限于与当前文档相关联的广告，比如搜Python相关文档时，只会出现Python培训或者招聘类广告。
 
 ### 3. Understand Developers
