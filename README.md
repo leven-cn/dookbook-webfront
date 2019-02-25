@@ -62,8 +62,9 @@ solutions or improvements to the global **Dookbook&trade;** community by `Git` a
 
 * Content Page
   * layout, including TOC, content
-  * TOC
-  * tables
+  * Supported for paragraphs, headings, text strong and italic, links
+  * Supported for TOC
+  * Supported for tables
 
 ### Browser Compability
 
