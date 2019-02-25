@@ -4,16 +4,18 @@ Dookbook's WebFront.
 
 > Dookbook Web前端。
 
-## About
+## Dookbook
+
+### About Dookbook
 
 **Dookbook&trade;**=**D**evelopers' C**ookbook**, as a new generation knowledge engine for developers, offers a wealth of useful code examples and snippets, even tips and tricks for Windows/Mac, as well as popular programming tools and IDEs.
 
 > **Dookbook&trade;**=**D**evelopers's C**ookbook** (开发人员的日常菜谱)，是为开发人员
 > 提供大量有用的代码示例和代码片段，以及编程（工具）技巧的新一代知识引擎。
 
-## Features
+### Dookbook Features
 
-### 1. Precise Search
+#### 1. Precise Search
 
 Totally different from traditional searching engine just like *Google* or others that
 throws a lengthy list of results to you to find what you want from sea of links by yourself,
@@ -28,7 +30,7 @@ always luck (to hit your needs).
 > 制造者。它是一个知识引擎，引入了一套全新的索引机制和算法，使得搜索的结果始终是**唯一**的，并且它总是幸运的
 > （满足您的需求）。
 
-### 2. Stake in Knowledge
+#### 2. Stake in Knowledge
 
 You could contribute your own knowlege (documents or notes) to the **Dookbook&trade;**
 platform and obtain the corresponding income according to the respective contribution rate
@@ -42,7 +44,7 @@ which the platform would calcuate automatically.
 > Dookbook&trade;的盈利模式非常简单，即依靠*Google Adsense*或*百度联盟*等线上广告的方式。平台会严格限制广告内容，
 > 仅限于与当前文档相关联的广告，比如搜Python相关文档时，只会出现Python培训或者招聘类广告。
 
-### 3. Understand Developers
+#### 3. Understand Developers
 
 **Dookbook&trade;** understands developers.
 
@@ -54,6 +56,14 @@ solutions or improvements to the global **Dookbook&trade;** community by `Git` a
 > **Dookbook&trade;** 更懂开发人员，采用 `Git` + `Markdown` 的组合。用Markdown编辑文档，
 > 用Git提交文档，一切尽如你日常工作提交代码一样。
 
-## Browser Compability
+## Features
 
-- Chrome 71+
+### Content Page
+
+* layout, including TOC, content
+* TOC
+* tables
+
+### Browser Compability
+
+* Chrome 71+
