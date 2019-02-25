@@ -57,4 +57,3 @@ solutions or improvements to the global **Dookbook&trade;** community by `Git` a
 ## Browser Compability
 
 - Chrome 71+
-- 
