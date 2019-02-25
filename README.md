@@ -58,11 +58,12 @@ solutions or improvements to the global **Dookbook&trade;** community by `Git` a
 
 ## Features
 
-### Content Page
+### Web
 
-* layout, including TOC, content
-* TOC
-* tables
+* Content Page
+  * layout, including TOC, content
+  * TOC
+  * tables
 
 ### Browser Compability
 
