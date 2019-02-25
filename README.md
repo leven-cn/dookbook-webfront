@@ -53,3 +53,8 @@ solutions or improvements to the global **Dookbook&trade;** community by `Git` a
 >
 > **Dookbook&trade;** 更懂开发人员，采用 `Git` + `Markdown` 的组合。用Markdown编辑文档，
 > 用Git提交文档，一切尽如你日常工作提交代码一样。
+
+## Browser Compability
+
+- Chrome 71+
+- 
