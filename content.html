@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="/static/css/content.css" />
   <style>
   header input[type="text"] {
-    background: url("/static/img/search.svg") no-repeat 0.56rem rgb(28, 172, 244);
-    background-size: 1.88rem;
+    background: rgb(255, 255, 255);
   }
 
   .toc li a.fold,
@@ -32,10 +31,13 @@
 
 <body>
   <header>
-    <img src="/static/img/logo.svg" alt="Dookbook's logo" title="Goto Dookbook's Homepage">
-    <input type="text" placeholder="Search" readonly>
-    <a href="#" title="About Dookbook">About</a>
-    <button><img src="/static/img/lang-switch.svg" alt="Switch to Chinese version" title="Switch to Chinese version"></button>
+    <img src="/static/img/logo.svg" alt="Dookbook's logo" title="Goto Dookbook's Homepage" class="logo">
+    <p class="search"><input type="button" readonly><input type="text" placeholder="Search" readonly></p>
+    <div class="menu">
+      <a href="#" title="About Dookbook"><img src="/static/img/about.svg" alt="about"></a>
+      <button title="Switch to Chinese version">中</button>
+    </div>
+    
   </header>
 
   <main>

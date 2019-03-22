@@ -48,7 +48,7 @@ thead {
 }
 
 header {
-  height: 5.6rem;
+  height: 5.63rem;
   width: 100%;
   box-shadow: 0 0 0.3rem 0.2rem #000;
   position: fixed;
@@ -59,29 +59,41 @@ header {
   background: #111;
 }
 
-header img {
+.logo {
   width: 13.8rem;
   padding: 0 6.4rem 0 7rem;
-  fill: #fff;
 }
 
 header a {
-  width: 3.75rem;
-  border: 0.06rem solid rgb(28, 172, 244);
-  color: rgb(28, 172, 244);
+  width: 1.9rem;
+  height: 1.9rem;
+  line-height: 1.9rem;
+  border: 0.1rem solid rgb(255, 255, 255);
   display: inline-block;
-  height: 2.38rem;
-  margin: 1.1rem 2.5rem 0;
-  line-height: 2.38rem;
+  border-radius: 1.9rem;
+  margin-top: 1.9rem;
   text-align: center;
-  border-radius: 0.38rem;
+}
+
+.menu {
+  width: 19.4rem;
+  text-align: right;
+}
+
+header a img {
+  width: 1.1rem;
+  vertical-align: top;
+  padding: 0.4rem 0 0 0.13rem;
 }
 
 header button {
-  border: none;
-  height: 2.5rem;
-  margin: 1.1rem 2.5rem 0 0;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin: 1.9rem 2.2rem 0 1.9rem;
   background: none;
+  border-radius: 1.9rem;
+  border: 0.1rem solid rgb(255, 255, 255);
+  font-size: 14px;
 }
 
 header button img {
@@ -90,16 +102,36 @@ header button img {
   width: auto;
 }
 
-header input[type="text"] {
+.search {
   flex: 1;
-  height: 2.5rem;
+  height: 2.33rem;
+  border-radius: 0.6rem;
+  line-height: 2.33rem;
+  margin: 1.7rem 4.5rem 0 0;
+  background: #fff;
+  display: flex;
+}
+
+header input[type="text"] {
+  height: 2.2rem;
   border: none;
-  border-radius: 0.38rem;
-  line-height: 2.5rem;
-  margin-top: 1.1rem;
-  padding-left: 3.44rem;
+  line-height: 2.2rem;
+  padding-left: 4.3rem;
   color: #fff;
-  font-size: 16px;
+  font-size: 12px;
+  flex: 1;
+  vertical-align: top;
+  border-radius: 0 0.6rem 0.6rem 0;
+}
+
+header input[type="button"] {
+  float: left;
+  height: 2.33rem;
+  width: 3.3rem;
+  border: none;
+  border-radius: 0.6rem 0 0 0.6rem;
+  background: url("../img/search.svg") no-repeat center 0.4rem #ccc;
+  background-size: 1.4rem;
 }
 
 header input[type="text"]::placeholder {
@@ -120,7 +152,7 @@ article {
   width: calc(100% - 18rem);
   height: 100%;
   box-sizing: border-box;
-  padding: 0 1.88rem 0 19rem;
+  padding: 0 1.88rem 0 27.3rem;
   flex-direction: column;
   border-right: 0.06rem solid rgb(241, 241, 241);
   font-size: 16px;
@@ -179,8 +211,8 @@ article a:hover {
 }
 
 .toc {
-  background: #252527;
-  width: 16.1rem;
+  background: rgb(36, 37, 39);
+  width: 17.9rem;
   height: 100%;
   position: absolute;
   left: 0;
