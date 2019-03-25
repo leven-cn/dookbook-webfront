@@ -212,6 +212,17 @@ article p {
   padding-bottom: 1.9rem;
 }
 
+blockquote {
+  border-left: 0.4rem solid rgb(0, 63, 103);
+  padding: 0.5rem 1rem;
+  background: rgb(30, 30, 30);
+  margin-bottom: 1.8rem;
+}
+
+blockquote p {
+  padding: 0.1rem;
+}
+
 article header p {
   padding-bottom: 1rem;
   color: #888;
