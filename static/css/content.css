@@ -9,10 +9,6 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 36px;
-}
-
 input,
 button {
   outline: none;
@@ -20,6 +16,7 @@ button {
 
 body {
   background: #111;
+  color: #aaa;
 }
 
 body,
@@ -44,7 +41,31 @@ thead {
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif, Arial;
-  color: #ddd;
+}
+
+code {
+  color: #f1ca7c;
+  font-family: Roboto, sans-serif, Arial;
+}
+
+del {
+  color: #666;
+}
+
+strong {
+  color: #e91212;
+}
+
+em {
+  color: #fff;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 32px;
+  color: #fff;
+  padding-top: 1rem;
+  display: inline-block;
 }
 
 header {
@@ -94,6 +115,7 @@ header button {
   border-radius: 1.9rem;
   border: 0.1rem solid rgb(255, 255, 255);
   font-size: 14px;
+  color: #fff;
 }
 
 header button img {
@@ -116,8 +138,8 @@ header input[type="text"] {
   height: 2.2rem;
   border: none;
   line-height: 2.2rem;
-  padding-left: 4.3rem;
-  color: #fff;
+  padding-left: 0.93rem;
+  color: #aaa;
   font-size: 12px;
   flex: 1;
   vertical-align: top;
@@ -135,7 +157,7 @@ header input[type="button"] {
 }
 
 header input[type="text"]::placeholder {
-  color: #fff;
+  color: #aaa;
 }
 
 main {
@@ -149,41 +171,51 @@ main {
 
 article {
   display: flex;
-  width: calc(100% - 18rem);
+  width: calc(100% - 19.4rem);
   height: 100%;
   box-sizing: border-box;
-  padding: 0 1.88rem 0 27.3rem;
+  padding: 0 4.5rem 0 27.3rem;
   flex-direction: column;
-  border-right: 0.06rem solid rgb(241, 241, 241);
   font-size: 16px;
   overflow-y: auto;
+  margin-top: 4.3rem;
 }
 
 article header {
   height: auto;
-  line-height: 3.4rem;
+  line-height: 2rem;
   display: block;
-  position: static;
   box-shadow: none;
   font-size: 14px;
-  border-left: 0.12rem solid rgb(28, 172, 244);
-  padding-left: 1.25rem;
-  margin: 1.88rem 0;
+  margin-bottom: 3.4rem;
+  position: relative;
+  padding-left: 4rem;
+}
+
+article header::before {
+  position: absolute;
+  top: 32px;
+  left: -27px;
+  content: "{";
+  font-size: 138px;
+  color: rgb(23, 51, 89);
+  font-family: Courier New, sans-serif, Arial;
+  font-weight: normal;
 }
 
 article p {
-  line-height: 1.8rem;
-  padding-bottom: 1.5rem;
+  line-height: 2.13rem;
+  padding-bottom: 1.9rem;
 }
 
 article header p {
-  padding-bottom: 0.7rem;
+  padding-bottom: 1rem;
   color: #888;
   font-size: 14px;
 }
 
 article header span {
-  color: #555;
+  color: #666;
 }
 
 article header span:last-child {
@@ -192,9 +224,10 @@ article header span:last-child {
 
 article h2 {
   font-size: 28px;
-  margin: 2rem 0 1rem;
-  padding-bottom: 0.5rem;
+  margin: 2rem 0 2.2rem;
+  padding-bottom: 0.7rem;
   border-bottom: 0.06rem solid #eee;
+  color: #eee;
 }
 
 article h3 {
@@ -210,23 +243,13 @@ article a:hover {
   text-decoration: underline;
 }
 
-.toc {
-  background: rgb(36, 37, 39);
-  width: 17.9rem;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  overflow-y: auto;
-  padding-top: 3.75rem;
-  box-sizing: border-box;
-  margin-left: 4.9rem;
-}
-
 aside {
   position: fixed;
-  right: 0.85rem;
-  top: 7.25rem;
-  width: 15.62rem;
+  right: 0;
+  top: 5.5rem;
+  width: 19.4rem;
+  padding-top: 4.4rem;
+  border-left: 1px solid #333;
 }
 
 aside ul {
@@ -236,71 +259,6 @@ aside ul {
 
 aside h2 {
   text-align: center;
-  font-size: 22px;
-  color: #888;
-}
-
-.toc ul {
-  width: 100%;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.toc ul li {
-  line-height: 3rem;
-  background-size: 0.63rem;
-  font-size: 16px;
-}
-
-.toc ul li a {
-  width: 100%;
-  display: inline-block;
-  padding-left: 34px;
-  color: rgb(153, 153, 153);
-  box-sizing: border-box;
-}
-
-.toc ul li ul {
-  display: none;
-  width: 100%;
-  padding: 0.19rem 0 0.19rem 2.1rem;
-  box-sizing: border-box;
-}
-
-.toc ul li li {
-  border-left: 0.06rem solid #333;
-  font-size: 14px;
-  overflow-y: auto;
-  white-space: nowrap;
-  line-height: 2.1rem;
-}
-
-.toc li.active a {
-  border-left: 3px solid rgb(153, 153, 153);
-  color: rgb(238, 238, 238);
-  padding-left: 31px;
-  background: rgb(48, 48, 49);
-}
-
-.toc ul li a:hover {
-  text-decoration: none;
-  color: #fff;
-}
-
-.toc ul li.active li a {
-  padding-left: 21px;
-}
-
-.toc li.active ul li a {
-  color: rgb(123, 124, 127);
-  background: none;
-  border: none;
-}
-
-.toc li ul li.selected a {
-  color: rgb(187, 187, 187);
-}
-
-.toc li ul li.selected {
-  border-left: 0.06rem solid #888;
+  font-size: 32px;
+  color: #eee;
 }
