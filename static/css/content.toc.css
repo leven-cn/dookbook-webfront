@@ -1,0 +1,78 @@
+/* styles for <toc> of content page */
+
+.toc {
+  background: rgb(36, 37, 39);
+  width: 17.9rem;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  overflow-y: auto;
+  padding-top: 4.3rem;
+  box-sizing: border-box;
+  margin: -4.3rem 0 0 4.9rem;
+}
+
+.toc ul {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.toc ul li {
+  line-height: 3rem;
+  background-size: 0.63rem;
+  font-size: 16px;
+}
+
+.toc ul li a {
+  width: 100%;
+  display: inline-block;
+  padding-left: 34px;
+  color: rgb(153, 153, 153);
+  box-sizing: border-box;
+}
+
+.toc ul li ul {
+  display: none;
+  width: 100%;
+  padding: 0.19rem 0 0.19rem 2.1rem;
+  box-sizing: border-box;
+}
+
+.toc ul li li {
+  border-left: 0.06rem solid #333;
+  font-size: 14px;
+  overflow-y: auto;
+  white-space: nowrap;
+  line-height: 2.1rem;
+}
+
+.toc li.active a {
+  border-left: 3px solid rgb(153, 153, 153);
+  color: rgb(238, 238, 238);
+  padding-left: 31px;
+  background: rgb(48, 48, 49);
+}
+
+.toc ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.toc ul li.active li a {
+  padding-left: 21px;
+}
+
+.toc li.active ul li a {
+  color: rgb(123, 124, 127);
+  background: none;
+  border: none;
+}
+
+.toc li ul li.selected a {
+  color: rgb(187, 187, 187);
+}
+
+.toc li ul li.selected {
+  border-left: 0.06rem solid #888;
+}
