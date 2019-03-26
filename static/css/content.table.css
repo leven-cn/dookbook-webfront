@@ -1,9 +1,11 @@
 /* styles for <table> of content page */
 
 table {
+  width: 100%;
   line-height: 2.7rem;
   text-align: center;
   border-spacing: 0;
+  margin-bottom: 2.2rem;
 }
 
 table th {
