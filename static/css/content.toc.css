@@ -2,14 +2,14 @@
 
 .toc {
   background: rgb(36, 37, 39);
-  width: 17.9rem;
+  width: 290px;
   height: 100%;
   position: absolute;
   left: 0;
   overflow-y: auto;
-  padding-top: 4.3rem;
   box-sizing: border-box;
-  margin: -4.3rem 0 0 4.9rem;
+  margin-left: 90px;
+  padding-top: 30px;
 }
 
 .toc ul {
@@ -20,7 +20,7 @@
 }
 
 .toc ul li {
-  line-height: 3rem;
+  line-height: 48px;
   background: none;
   background-size: 0.63rem;
   font-size: 16px;
@@ -74,9 +74,17 @@
 }
 
 .toc li ul li.selected a {
-  color: rgb(187, 187, 187);
+  color: #fff;
+}
+
+.toc ul li.active li:hover a {
+  color: #fff;
 }
 
 .toc li ul li.selected {
   border-left: 0.06rem solid #888;
+}
+
+.toc li.active ul {
+  display: block;
 }
