@@ -5,6 +5,11 @@ li {
   list-style: none;
 }
 
+@font-face {
+  font-family: 'Fineliner';
+  src: url('../img/Fineliner.ttf');
+}
+
 a {
   text-decoration: none;
 }
@@ -57,12 +62,11 @@ del {
 }
 
 strong {
-  color: #e91212;
+  color: #fff;
 }
 
 em {
-  color: #fff;
-  font-weight: bold;
+  font-family: "雅痞", Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -73,95 +77,93 @@ h1 {
 }
 
 header {
-  height: 5.63rem;
+  height: 90px;
+  line-height: 90px;
   width: 100%;
   box-shadow: 0 0 0.3rem 0.2rem #000;
   position: fixed;
   top: 0;
-  line-height: 5rem;
   display: flex;
   z-index: 1;
   background: #111;
 }
 
-.logo {
-  width: 13.8rem;
-  padding: 0 6.4rem 0 7rem;
-}
-
-header a {
-  width: 1.9rem;
-  height: 1.9rem;
-  line-height: 1.9rem;
-  border: 0.1rem solid rgb(255, 255, 255);
-  display: inline-block;
-  border-radius: 1.9rem;
-  margin-top: 1.9rem;
-  text-align: center;
-}
-
-.menu {
-  width: 19.4rem;
-  text-align: right;
-}
-
-header a img {
-  width: 1.1rem;
-  vertical-align: top;
-  padding: 0.4rem 0 0 0.13rem;
-}
-
-header button {
-  width: 2.1rem;
-  height: 2.1rem;
-  margin: 1.9rem 2.2rem 0 1.9rem;
-  background: none;
-  border-radius: 1.9rem;
-  border: 0.1rem solid rgb(255, 255, 255);
-  font-size: 14px;
-  color: #fff;
-}
-
-header button img {
-  height: 2.4rem;
-  padding: 0;
-  width: auto;
-}
-
-.search {
-  flex: 1;
-  height: 2.33rem;
-  border-radius: 0.6rem;
-  line-height: 2.33rem;
-  margin: 1.7rem 4.5rem 0 0;
-  background: #fff;
-  display: flex;
-}
-
-header input[type="text"] {
-  height: 2.2rem;
-  border: none;
-  line-height: 2.2rem;
-  padding-left: 0.93rem;
-  color: #aaa;
-  font-size: 12px;
-  flex: 1;
-  vertical-align: top;
-  border-radius: 0 0.6rem 0.6rem 0;
-}
-
-header input[type="button"] {
+/* logo */
+header > img {
+  width: 250px;
+  padding: 0 80px 0 110px;
   float: left;
-  height: 2.33rem;
-  width: 3.3rem;
-  border: none;
-  border-radius: 0.6rem 0 0 0.6rem;
-  background: url("../img/search.svg") no-repeat center 0.4rem #ccc;
-  background-size: 1.4rem;
 }
 
-header input[type="text"]::placeholder {
+/* 搜索框 */
+header > div {
+  flex: 1;
+  display: flex;
+  height: 38px;
+  margin-top: 24px;
+}
+
+header > div > img {
+  background: #ccc;
+  padding: 0 15px;
+  border-radius: 8px 0 0 8px;
+  width: 26px;
+}
+
+header > div > input {
+  background-size: 4%;
+  background-color: #fff;
+  flex: 1;
+  border-radius: 0 8px 8px 0;
+  border: none;
+  padding-left: 20px;
+  font-family: Roboto, sans-serif, Arial;
+  font-size: 14px;
+}
+
+header > div > input::placeholder {
   color: #aaa;
+}
+
+header > nav {
+  width: 280px;
+  text-align: center;
+  margin: 24px 0 0 60px;
+  box-sizing: border-box;
+  border-left: 1px solid #333;
+  height: 40px;
+  padding-left: 45px;
+  position: relative;
+}
+
+article a {
+  color: rgb(28, 172, 244);
+}
+
+header > nav a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  padding: 3px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  color: #fff;
+  float: left;
+  margin: 0 15px;
+}
+
+article a:hover {
+  text-decoration: underline;
+}
+
+header > nav a:last-child {
+  font-size: 23px;
+}
+
+header > nav a img {
+  width: 22px;
+  height: 22px;
+  margin: 4px 0 0 2px;
 }
 
 main {
@@ -170,19 +172,18 @@ main {
   position: fixed;
   box-sizing: border-box;
   display: flex;
-  padding: 5rem 0 0 0;
+  padding: 120px 0 0 0;
 }
 
 article {
   display: flex;
-  width: calc(100% - 19.4rem);
+  width: calc(100% - 280px);
   height: 100%;
   box-sizing: border-box;
-  padding: 0 4.5rem 0 27.3rem;
+  padding: 0 60px 0 440px;
   flex-direction: column;
   font-size: 16px;
   overflow-y: auto;
-  margin-top: 4.3rem;
 }
 
 article header {
@@ -220,7 +221,9 @@ blockquote {
 }
 
 blockquote p {
+  font-size: 18px;
   padding: 0.1rem;
+  font-family: 'LingWai SC', 'Wawati SC', Herculanum, sans-serif;
 }
 
 article header p {
@@ -247,36 +250,8 @@ article h2 {
 
 article h3 {
   font-size: 22px;
-  margin: 1rem 0 0.5rem;
+  margin: 1rem 0;
   color: #ddd;
-}
-
-article a {
-  color: rgb(28, 172, 244);
-}
-
-article a:hover {
-  text-decoration: underline;
-}
-
-aside {
-  position: fixed;
-  right: 0;
-  top: 5.5rem;
-  width: 19.4rem;
-  padding-top: 4.4rem;
-  border-left: 1px solid #333;
-}
-
-aside ul {
-  height: 220.5rem;
-  overflow-y: auto;
-}
-
-aside h2 {
-  text-align: center;
-  font-size: 32px;
-  color: #eee;
 }
 
 main ul,
@@ -286,8 +261,6 @@ main dl {
 }
 
 main ul li {
-  background: url("../img/list.svg") no-repeat -3px 4px;
-  background-size: 1.7rem;
   padding-left: 2.3rem;
   line-height: 2rem;
   margin-bottom: 1rem;
@@ -306,11 +279,11 @@ main ol li p {
 
 main dl dt {
   color: #ddd;
-  padding-bottom: 0.6rem;
+  padding-bottom: 15px;
 }
 
 main dl dd {
-  padding: 0 0 1rem 1.3rem;
+  padding: 0 0 30px 35px;
   line-height: 2rem;
 }
 
@@ -319,6 +292,8 @@ main dl dd {
 }
 
 hr {
+  width: 100%;
+  border: 1px solid #ddd;
   margin-bottom: 2.5rem;
 }
 
@@ -329,51 +304,54 @@ hr {
   position: relative;
 }
 
+.admonition-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
 .admonition p {
   padding: 0;
 }
 
-.note {
-  border: 4px solid rgb(233, 173, 79);
+.warn {
+  border: 0.25rem solid rgb(233, 173, 79);
 }
 
-.note::before {
+.warn::before {
   position: absolute;
   content: ".";
   color: rgba(1, 1, 1, 0);
-  top: -4px;
-  left: 19px;
-  background: url("../img/admonition.png") no-repeat left top;
-  height: 4px;
-  width: 70px;
+  top: -0.25rem;
+  left: 1.2rem;
+  height: 0.25rem;
+  width: 4.4rem;
 }
 
-.danger {
-  border: 4px solid rgb(209, 0, 17);
+.error {
+  border: 0.25rem solid rgb(209, 0, 17);
 }
 
-.danger::before {
+.error::before {
   position: absolute;
   content: ".";
   color: rgba(1, 1, 1, 0);
-  top: -4px;
-  left: 19px;
-  background: url("../img/admonition.png") no-repeat left -10px;
-  height: 4px;
-  width: 70px;
+  top: -0.25rem;
+  left: 1.2rem;
+  height: 0.25rem;
+  width: 4.4rem;
 }
 
-.important {
-  border: 4px solid rgb(238, 238, 238);
+.info {
+  border: 0.25rem solid rgb(238, 238, 238);
 }
 
-.important::before {
+.info::before {
   position: absolute;
   content: ".";
   color: rgba(1, 1, 1, 0);
-  top: -4px;
-  left: 19px;
-  background: url("../img/admonition.png") no-repeat left -5px;
-  height: 4px;
-  width: 70px;
+  top: -0.25rem;
+  left: 1.2rem;
+  height: 0.25rem;
+  width: 4.4rem;
 }
