@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 
 <head>
   <meta charset="utf-8" />
   <title>Examples For Test - Dookbook</title>
   <link rel="stylesheet" href="/static/css/content.css" />
+  <link rel="stylesheet" href="/static/css/content.toc.css" />
   <style>
-  header input[type="text"] {
-    background: rgb(255, 255, 255);
-  }
-
   .toc li a.fold,
   .toc li.active a.fold {
-    background: url("/static/img/right.svg") no-repeat 16rem 0.8rem;
+    background: url("/static/img/right.svg") no-repeat 260px 18px;
     background-size: 0.45rem;
   }
 
   .toc li a.unfold,
   .toc li.active a.unfold {
-    background: url("/static/img/down.svg") no-repeat 15.7rem 1.3rem rgb(48, 48, 49);
+    background: url("/static/img/down.svg") no-repeat 253px 20px rgb(48, 48, 49);
     background-size: 0.8rem;
   }
 
-  .toc li.active ul {
-    display: block;
+  main ul li {
+    background: url("/static/img/list.svg") no-repeat -3px 4px;
+    background-size: 1.7rem;
+  }
+
+  .warn::before {
+    background: url("/static/img/admonition.png") no-repeat left top;
+  }
+
+  .error::before {
+    background: url("/static/img/admonition.png") no-repeat left -10px;
+  }
+
+  .info::before {
+    background: url("/static/img/admonition.png") no-repeat left -5px;
   }
   </style>
+  <link rel="stylesheet" href="/static/css/content.contributors.css" />
   <link rel="stylesheet" href="/static/css/content.table.css" />
-  <link rel="stylesheet" href="/static/css/content.toc.css" />
+  <link rel="stylesheet" href="/static/css/content.footnnte.css" />
 </head>
 
 <body>
   <header>
-    <img src="/static/img/logo.svg" alt="Dookbook's logo" title="Goto Dookbook's Homepage" class="logo">
-    <p class="search"><input type="button" readonly><input type="text" placeholder="Search" readonly></p>
-    <div class="menu">
-      <a href="#" title="About Dookbook"><img src="/static/img/about.svg" alt="about"></a>
-      <button title="Switch to Chinese version">中</button>
+    <img src="/static/img/logo.svg" alt="Dookbook's logo" title="Goto Dookbook's Homepage">
+    <div>
+      <img src="/static/img/search.svg" alt="Search">
+      <input type="text" placeholder="Search" readonly>
     </div>
-    
+    <nav>
+      <a href="#" title="About Dookbook"><img src="/static/img/about.svg" alt="About Dookbook"></a>
+      <a href="" title="Switch to Chinese version">中</a>
+      <a href="" title="Help">?</a>
+    </nav>
   </header>
 
   <main>
@@ -97,67 +111,67 @@ Windows lets you perform most tasks directly from the keyboard. This page lists 
 </thead>
 <tbody>
 <tr>
-<td><span>Ctrl</span> + <span>C</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>C</kbd></td>
 <td>Copy</td>
 <td>5</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>V</span></td>
+<td><kbd>Alt</kbd> + <kbd>V</kbd></td>
 <td>Paste</td>
 <td>1</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Shift</kbd> + <kbd>B</kbd></td>
 <td>Bold</td>
 <td>2</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Cmd</kbd> + <kbd>B</kbd></td>
 <td>Bold</td>
 <td>3</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
 <td>Bold</td>
 <td>3</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
 <td>Bold</td>
 <td>3</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
 <td>Bold</td>
 <td>3</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
 <td>Bold</td>
 <td>3</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
 <td>Bold</td>
 <td>3</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
 <td>Bold</td>
 <td>3</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
 <td>Bold</td>
 <td>3</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
 <td>Bold</td>
 <td>3</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
 <td>Bold</td>
 <td>3</td>
 </tr>
@@ -174,17 +188,17 @@ Windows lets you perform most tasks directly from the keyboard. This page lists 
 </thead>
 <tbody>
 <tr>
-<td><span>Ctrl</span> + <span>C</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>C</kbd></td>
 <td align="center">Copy</td>
 <td align="right">5</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>V</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>V</kbd></td>
 <td align="center">Paste</td>
 <td align="right">1</td>
 </tr>
 <tr>
-<td><span>Ctrl</span> + <span>B</span></td>
+<td><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
 <td align="center">Bold</td>
 <td align="right">2</td>
 </tr>
@@ -199,17 +213,18 @@ Windows lets you perform most tasks directly from the keyboard. This page lists 
 <p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
 <p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
 <h2 id="list">List<a class="headerlink" href="#list" title="Permanent link">&para;</a></h2>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
 <h3 id="unordered-list">Unordered List<a class="headerlink" href="#unordered-list" title="Permanent link">&para;</a></h3>
 <ul>
-<li>a</li>
-<li>b</li>
-<li>c</li>
+<li>Windows lets you perform most tasks directly from the keyboard</li>
+<li>Windows lets you perform most tasks directly from the keyboard</li>
+<li>Windows lets you perform most tasks directly from the keyboard</li>
 </ul>
 <h3 id="ordered-list">Ordered List<a class="headerlink" href="#ordered-list" title="Permanent link">&para;</a></h3>
 <ol>
-<li>a</li>
-<li>b</li>
-<li>c</li>
+<li>Windows lets you perform most tasks directly from the keyboard</li>
+<li>Windows lets you perform most tasks directly from the keyboard</li>
+<li>Windows lets you perform most tasks directly from the keyboard</li>
 </ol>
 <h3 id="definition-list">Definition List<a class="headerlink" href="#definition-list" title="Permanent link">&para;</a></h3>
 <dl>
@@ -223,7 +238,7 @@ the family Rosaceae.</dd>
 <p>As Kanye West said:</p>
 <blockquote>
 <p>We're living the future so
-the present is our past.</p>
+  the present is our past. 你好,世界！</p>
 </blockquote>
 <h2 id="horizontal-rule">Horizontal Rule<a class="headerlink" href="#horizontal-rule" title="Permanent link">&para;</a></h2>
 <hr>
@@ -253,15 +268,15 @@ sys.exit()
 </ol>
 </div>
 <h2 id="admonition">Admonition<a class="headerlink" href="#admonition" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
+<div class="admonition warn">
 <p class="admonition-title">Note</p>
 <p>You should note that the title will be automatically capitalized.</p>
 </div>
-<div class="admonition danger">
+<div class="admonition error">
 <p class="admonition-title">Don't try this at home</p>
 <p>You should note that the title will be automatically capitalized.</p>
 </div>
-<div class="admonition important">
+<div class="admonition info">
 <p>This is a admonition box without a title.</p>
 </div>
 <h2 id="image">Image<a class="headerlink" href="#image" title="Permanent link">&para;</a></h2>
@@ -270,7 +285,33 @@ sys.exit()
 
     <aside>
       <h2>Contributors</h2>
-      <ul></ul>
+      <ul>
+        <li>
+          <img src="/src/img/a8.jpg" alt="tx">
+          <meter value="90" max="100" high="50" low="10" optimum="80" title="80%"></meter>
+        </li>
+        <li>
+          <img src="/src/img/a8.jpg" alt="tx">
+          <meter value="30" max="100" high="50" low="10" optimum="80" title="50%"></meter>
+        </li>
+        <li>
+          <img src="/src/img/a8.jpg" alt="tx">
+          <meter value="1" max="100" high="0.5" low="10" optimum="80" title="70%"></meter>
+        </li>
+        <li>
+          <img src="/src/img/a8.jpg" alt="tx">
+          <meter value="90" max="100" high="50" low="10" optimum="80" title="80%"></meter>
+        </li>
+        <li>
+          <img src="/src/img/a8.jpg" alt="tx">
+          <meter value="30" max="100" high="50" low="10" optimum="80" title="50%"></meter>
+        </li>
+        <li>
+          <img src="/src/img/a8.jpg" alt="tx">
+          <meter value="1" max="100" high="0.5" low="10" optimum="80" title="70%"></meter>
+        </li>
+      </ul>
+      <iframe width="260" height="200"></iframe>
     </aside>
   </main>
 
