@@ -21,8 +21,8 @@ table td {
   font-size: 14px;
 }
 
-table span {
-  background: rgba(245, 245, 245, 0.3);
+table kbd {
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 2px;
-  padding: 1px 5px;
+  padding: 3px 5px;
 }
