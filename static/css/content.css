@@ -5,11 +5,6 @@ li {
   list-style: none;
 }
 
-@font-face {
-  font-family: 'Fineliner';
-  src: url('../img/Fineliner.ttf');
-}
-
 a {
   text-decoration: none;
 }
