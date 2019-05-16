@@ -1,0 +1,20 @@
+/* styles for .footnote of content page */
+
+.footnote-ref {
+  color: rgb(28, 172, 244);
+  margin: 0 0.3rem;
+}
+
+.footnote > ol li {
+  margin-bottom: 0;
+  list-style-type: decimal;
+  font-size: 12px;
+}
+
+.footnote > ol li p {
+  line-height: 18px;
+}
+
+.footnote > hr {
+  margin-bottom: 0;
+}

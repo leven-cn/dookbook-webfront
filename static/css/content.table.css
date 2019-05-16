@@ -1,28 +1,28 @@
 /* styles for <table> of content page */
 
 table {
-  border: 0.06rem solid rgb(224, 224, 224);
-  border-left: none;
-  line-height: 2rem;
+  width: 100%;
+  line-height: 2.7rem;
   text-align: center;
   border-spacing: 0;
+  margin-bottom: 2.2rem;
 }
 
 table th {
-  border-bottom: 0.06rem solid rgb(224, 224, 224);
-  border-left: 0.06rem solid rgb(224, 224, 224);
-  background: rgb(28, 172, 244);
-  color: #fff;
-  line-height: 2.7rem;
-  font-size: 20px;
+  border-bottom: 0.06rem solid rgb(238, 238, 238);
+  font-weight: bold;
+  color: #eee;
+  font-size: 16px;
 }
 
 table td {
-  border-bottom: 0.06rem solid rgb(224, 224, 224);
-  border-left: 0.06rem solid rgb(224, 224, 224);
-  padding: 0.15rem 0;
+  border-bottom: 0.06rem solid rgb(153, 153, 153);
+  color: rgb(245, 245, 245);
+  font-size: 14px;
 }
 
-table tbody tr:nth-of-type(even) {
-  background: rgb(235, 235, 235);
+table kbd {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  padding: 3px 5px;
 }

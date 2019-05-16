@@ -1,0 +1,86 @@
+/* styles for Contributors of content page */
+
+aside {
+  height: 100%;
+  position: fixed;
+  right: 0;
+  flex: 1;
+  width: 280px;
+  border-left: 1px solid #333;
+  box-sizing: border-box;
+}
+
+aside ul {
+  width: 100%;
+  height: 250px;
+  box-sizing: border-box;
+  padding: 0 30px;
+  margin-top: 40px;
+  overflow-y: auto;
+  border-bottom: 1px dashed #333;
+}
+
+aside ul li {
+  display: flex;
+  background: none;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 38px;
+}
+
+aside h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #eee;
+  padding: 0 4%;
+  line-height: 32px;
+  margin-top: 28px;
+}
+
+aside img {
+  width: 32px;
+  height: 32px;
+  border-radius: 38px;
+  margin-right: 15px;
+  float: left;
+}
+
+meter {
+  flex: 1;
+  margin-top: 3px;
+  height: 24px;
+}
+
+meter::-webkit-meter-bar {
+  background: none;
+  border: 2px solid #ccc;
+  border-radius: 24px;
+  padding: 2px;
+}
+
+/* 最优 */
+meter::-webkit-meter-optimum-value {
+  border-radius: 24px;
+  background: #ffea00;
+}
+
+/* 凑合 */
+meter::-webkit-meter-suboptimum-value {
+  border-radius: 24px;
+  background: #ccc;
+}
+
+/* 最糟糕 */
+meter::-webkit-meter-even-less-good-value {
+  border-radius: 24px;
+  background: rgb(255, 4, 4);
+}
+
+iframe {
+  background: #eee;
+  margin-left: 10px;
+  border: none;
+  position: absolute;
+  bottom: 130px;
+}
