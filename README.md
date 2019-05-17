@@ -63,7 +63,7 @@ solutions or improvements to the global **Dookbook&trade;** community by `Git` a
 - Content Page
   - layout, including TOC, content, Logo
   - Styles for Markdown Documents Rendering Engine
-    - HTML Tags (26)
+    - HTML Elements (26)
       - Heading `<h1>-<h6>`
       - Paragraph `<p>`
       - Link `<a>`
@@ -91,6 +91,7 @@ solutions or improvements to the global **Dookbook&trade;** community by `Git` a
       - **Markdown**
       - **Bash**
       - **INI**/**TOML**
+    - Code Block Themes (89)
 
 ### Browser Compability
 
