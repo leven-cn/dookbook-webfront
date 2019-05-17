@@ -70,7 +70,7 @@ solutions or improvements to the global **Dookbook&trade;** community by `Git` a
       - List (Ordered `<ol>`, Unordered `<ul>-<li>`, and Definition `<dl>`)
       - Table `<table>`
       - Emphasis Text (Strong `<strong>`, Italic `<em>`, Deleted `<del>` and Inserted `<ins>`)
-      - Horizontal Rule `<br/>`
+      - Horizontal Rule `<hr/>`
       - Quote Block `<blockquote>`
       - Inline Code `<code>`
       - Abbreviation `<abbr>`
