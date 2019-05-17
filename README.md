@@ -58,14 +58,41 @@ solutions or improvements to the global **Dookbook&trade;** community by `Git` a
 
 ## Features
 
-### Web
+### PC Web
 
-* Content Page
-  * layout, including TOC, content
-  * Supported for paragraphs, headings, text strong and italic, links
-  * Supported for TOC
-  * Supported for tables
+- Content Page
+  - layout, including TOC, content, Logo
+  - Styles for Markdown Documents Rendering Engine
+    - HTML Elements (26)
+      - Heading `<h1>-<h6>`
+      - Paragraph `<p>`
+      - Link `<a>`
+      - List (Ordered `<ol>`, Unordered `<ul>-<li>`, and Definition `<dl>`)
+      - Table `<table>`
+      - Emphasis Text (Strong `<strong>`, Italic `<em>`, Deleted `<del>` and Inserted `<ins>`)
+      - Horizontal Rule `<hr/>`
+      - Quote Block `<blockquote>`
+      - Inline Code `<code>`
+      - Abbreviation `<abbr>`
+      - Code Block `<pre><code>`
+      - Image `<img>`
+      - Superscript `<sup>`
+      - Subscript `<sub>`
+      - Keyboard `<kbd>`
+    - Features (3)
+      - TOC `class ="toc"`
+      - Footnote `<sub>`, `<a>`, and `<ol>`
+      - Admonition `class="admonition note danger import admonition-title"`
+    - Code Syntax Highlight (9)
+      - **HTML**/**XML**
+      - **CSS**
+      - **JavaScript** (*ES6+*)
+      - **Python**
+      - **Markdown**
+      - **Bash**
+      - **INI**/**TOML**
+    - Code Block Themes (89)
 
 ### Browser Compability
 
-* Chrome 71+
+- Chrome 71+
