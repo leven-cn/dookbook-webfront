@@ -13,11 +13,22 @@
 
 .toc ul {
   width: 100%;
-  overflow: hidden;
   box-sizing: border-box;
   margin: 0;
-  height: 460px;
-  overflow-y: auto;
+}
+
+@media screen and (max-height: 700px) {
+  .toc ul {
+    height: 520px;
+    overflow-y: auto;
+  }
+}
+
+@media screen and (min-height: 700px) {
+  .toc ul {
+    height: 710px;
+    overflow-y: auto;
+  }
 }
 
 .toc ul li {
