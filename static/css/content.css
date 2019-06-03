@@ -179,6 +179,7 @@ main article {
   flex-direction: column;
   font-size: 16px;
   overflow-y: auto;
+  border-right: 1px solid #333;
 }
 
 main article header {

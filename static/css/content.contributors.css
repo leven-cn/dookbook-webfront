@@ -6,7 +6,6 @@ aside {
   right: 0;
   flex: 1;
   width: 280px;
-  border-left: 1px solid #333;
   box-sizing: border-box;
 }
 

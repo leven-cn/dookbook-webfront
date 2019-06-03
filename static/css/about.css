@@ -1,0 +1,132 @@
+main button a {
+  border: 1px solid rgb(255, 255, 255);
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+main button {
+  width: 100%;
+  text-align: center;
+  background: none;
+  border: none;
+  margin: 30px 0;
+}
+
+aside {
+  text-align: center;
+  width: 280px;
+}
+
+aside img {
+  padding: 80px 0;
+}
+
+aside h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+aside ul li {
+  text-align: left;
+  width: 280px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 35px;
+  float: left;
+}
+
+aside ul li svg {
+  float: left;
+  margin-right: 20px;
+}
+
+aside ul li a {
+  color: #fff;
+}
+
+.copyright {
+  width: 280px;
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  color: #999;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: none;
+}
+
+.popup {
+  width: 500px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -250px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 2;
+  display: none;
+}
+
+.popup p:first-child {
+  font-size: 24px;
+  margin: 55px 0 30px;
+  color: #333;
+}
+
+.popup p:last-child {
+  font-size: 14px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #999;
+  text-align: center;
+}
+
+.github-logo {
+  width: 70px;
+  height: 70px;
+}
+
+.gitee-logo {
+  margin: 0 20px;
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  padding: 7px;
+  background: rgb(211, 0, 18);
+  border-radius: 40px;
+  text-align: center;
+}
+
+.gitee-logo svg {
+  float: left;
+  vertical-align: middle;
+}
+
+.popup .shut {
+  width: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.popup img {
+  margin: 0 20px;
+}
