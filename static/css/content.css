@@ -203,15 +203,15 @@ main article header::before {
   font-weight: normal;
 }
 
-blockquote p {
-  font-size: 18px;
-  padding: 0.1rem;
-  font-family: 'LingWai SC', 'Wawati SC', Herculanum, sans-serif;
-}
-
 main article p {
   line-height: 2.13rem;
   padding-bottom: 1.9rem;
+}
+
+main blockquote p {
+  font-size: 18px;
+  padding: 0.1rem;
+  font-family: 'LingWai SC', 'Wawati SC', Herculanum, sans-serif;
 }
 
 blockquote {
