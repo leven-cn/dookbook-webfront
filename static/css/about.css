@@ -21,7 +21,22 @@ aside {
 }
 
 aside img {
-  padding: 80px 0;
+  padding: 80px 0 20px;
+  width: 100px;
+}
+
+.logo-tail {
+  margin-bottom: 80px;
+  letter-spacing: 3px;
+}
+
+.logo-tail span {
+  color: #e10101;
+}
+
+.logo-tail sup {
+  font-weight: normal;
+  font-size: 10px;
 }
 
 aside h2 {
@@ -29,6 +44,13 @@ aside h2 {
   letter-spacing: 2px;
   color: #fff;
   margin-bottom: 40px;
+}
+
+aside ul {
+  width: 280px;
+  height: 220px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 aside ul li {
@@ -47,6 +69,19 @@ aside ul li svg {
 
 aside ul li a {
   color: #fff;
+}
+
+aside ul li img {
+  width: 40px;
+  padding: 0;
+  float: left;
+  margin-right: 20px;
+}
+
+.mozilla {
+  padding: 0;
+  width: 130px;
+  height: 40px;
 }
 
 .copyright {
