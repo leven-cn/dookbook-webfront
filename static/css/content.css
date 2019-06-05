@@ -232,7 +232,7 @@ main article header span {
   color: #666;
 }
 
-main article header span:last-child {
+main article header span:nth-child(2) {
   margin-left: 1.88rem;
 }
 
