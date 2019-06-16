@@ -15,6 +15,35 @@ main button {
   margin: 30px 0;
 }
 
+table thead {
+  color: #fff;
+  font-size: 14px;
+}
+
+table tbody {
+  font-size: 12px;
+}
+
+table td {
+  line-height: 40px;
+}
+
+table td:nth-child(odd) {
+  width: 30px;
+  text-align: center;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+table td:nth-child(even) {
+  width: 100px;
+}
+
+table img {
+  width: 25px;
+  vertical-align: middle;
+}
+
 aside {
   text-align: center;
   width: 280px;
@@ -48,7 +77,7 @@ aside h2 {
 
 aside ul {
   width: 280px;
-  height: 220px;
+  height: 193px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -164,4 +193,9 @@ aside ul li img {
 
 .popup img {
   margin: 0 20px;
+}
+
+.down {
+  padding: 0;
+  width: 20px;
 }
