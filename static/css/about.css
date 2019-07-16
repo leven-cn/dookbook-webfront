@@ -15,6 +15,12 @@ main button {
   margin: 30px 0;
 }
 
+table {
+  width: 660px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
 table thead {
   color: #fff;
   font-size: 14px;
@@ -29,14 +35,14 @@ table td {
 }
 
 table td:nth-child(odd) {
-  width: 30px;
+  width: 10%;
   text-align: center;
   margin-right: 10px;
   display: inline-block;
 }
 
 table td:nth-child(even) {
-  width: 100px;
+  width: 30%;
 }
 
 table img {
@@ -47,16 +53,22 @@ table img {
 aside {
   text-align: center;
   width: 280px;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
 }
 
 aside img {
   padding: 80px 0 20px;
   width: 100px;
+  margin: 0 auto;
 }
 
-.logo-tail {
-  margin-bottom: 80px;
+aside .logo-tail {
+  width: 100%;
+  padding-bottom: 80px;
   letter-spacing: 3px;
+  float: left;
 }
 
 .logo-tail span {
@@ -72,14 +84,16 @@ aside h2 {
   font-size: 20px;
   letter-spacing: 2px;
   color: #fff;
-  margin-bottom: 40px;
+  padding-bottom: 20px;
+  width: 100%;
 }
 
 aside ul {
-  width: 280px;
-  height: 193px;
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  margin: 0;
+  float: left;
 }
 
 aside ul li {
@@ -87,7 +101,7 @@ aside ul li {
   width: 280px;
   font-size: 20px;
   line-height: 40px;
-  margin-bottom: 35px;
+  padding-top: 30px;
   float: left;
 }
 
@@ -104,6 +118,7 @@ aside ul li img {
   width: 40px;
   padding: 0;
   float: left;
+  height: auto;
   margin-right: 20px;
 }
 
@@ -198,4 +213,7 @@ aside ul li img {
 .down {
   padding: 0;
   width: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 140px;
 }
