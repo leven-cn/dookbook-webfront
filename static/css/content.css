@@ -84,9 +84,9 @@ header {
 }
 
 /* logo */
-header > img {
+header > a > img {
   width: 250px;
-  padding: 0 80px 0 110px;
+  padding: 25px 80px 0 110px;
   float: left;
 }
 
@@ -153,6 +153,11 @@ article a:hover {
 
 header > nav a:last-child {
   font-size: 23px;
+}
+
+header > nav a:first-child {
+  font-size: 22px;
+  font-weight: bold;
 }
 
 header > nav a img {
