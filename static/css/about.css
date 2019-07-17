@@ -54,8 +54,6 @@ aside {
   text-align: center;
   width: 280px;
   height: 100%;
-  overflow-y: auto;
-  position: relative;
 }
 
 aside img {
@@ -84,7 +82,7 @@ aside h2 {
   font-size: 20px;
   letter-spacing: 2px;
   color: #fff;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   width: 100%;
 }
 
@@ -93,7 +91,7 @@ aside ul {
   overflow-y: auto;
   overflow-x: hidden;
   margin: 0;
-  float: left;
+  height: calc(100% - 450px);
 }
 
 aside ul li {
@@ -101,7 +99,7 @@ aside ul li {
   width: 280px;
   font-size: 20px;
   line-height: 40px;
-  padding-top: 30px;
+  padding-bottom: 30px;
   float: left;
 }
 
@@ -126,6 +124,15 @@ aside ul li img {
   padding: 0;
   width: 130px;
   height: 40px;
+}
+
+.w3c,
+.gitee {
+  padding: 0;
+  width: auto;
+  height: 30px;
+  vertical-align: bottom;
+  margin-top: 5px;
 }
 
 .copyright {
@@ -213,7 +220,4 @@ aside ul li img {
 .down {
   padding: 0;
   width: 20px;
-  position: fixed;
-  bottom: 20px;
-  right: 140px;
 }
