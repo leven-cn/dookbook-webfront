@@ -11,7 +11,7 @@ aside {
 
 aside ul {
   width: 100%;
-  height: 250px;
+  height: calc(100% - 450px);
   box-sizing: border-box;
   padding: 0 30px;
   margin-top: 40px;
