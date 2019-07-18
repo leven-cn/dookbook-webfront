@@ -8,11 +8,11 @@ main button a {
 }
 
 main button {
-  width: 100%;
+  width: 15%;
   text-align: center;
   background: none;
   border: none;
-  margin: 30px 0;
+  margin: auto;
 }
 
 table {
