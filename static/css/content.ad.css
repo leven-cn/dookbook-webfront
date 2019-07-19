@@ -1,0 +1,17 @@
+/* styles for advertising of content page */
+
+body,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.advertising {
+  text-align: center;
+  line-height: 200px;
+  color: #444;
+  font-size: 30px;
+  letter-spacing: 20px;
+  box-sizing: border-box;
+  padding-left: 30px;
+}

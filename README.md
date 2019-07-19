@@ -63,12 +63,12 @@ solutions or improvements to the global **Dookbook&trade;** community by `Git` a
 - Content Page
   - layout, including TOC, content, Logo
   - Styles for Markdown Documents Rendering Engine
-    - HTML Elements (26)
+    - HTML Elements (32)
       - Heading `<h1>-<h6>`
       - Paragraph `<p>`
       - Link `<a>`
-      - List (Ordered `<ol>`, Unordered `<ul>-<li>`, and Definition `<dl>`)
-      - Table `<table>`
+      - List (Ordered `<ol>-<li>`, Unordered `<ul>-<li>`, and Definition `<dl>-<dt>-<dd>`)
+      - Table `<table>-<thead>-<tr>-<th>-<tbody>`
       - Emphasis Text (Strong `<strong>`, Italic `<em>`, Deleted `<del>` and Inserted `<ins>`)
       - Horizontal Rule `<hr/>`
       - Quote Block `<blockquote>`
@@ -79,10 +79,11 @@ solutions or improvements to the global **Dookbook&trade;** community by `Git` a
       - Superscript `<sup>`
       - Subscript `<sub>`
       - Keyboard `<kbd>`
-    - Features (3)
+    - Features (4)
       - TOC `class ="toc"`
       - Footnote `<sub>`, `<a>`, and `<ol>`
       - Admonition `class="admonition note danger import admonition-title"`
+      - Auto Wiki Links (Glossary) `<a href="..." class="glossary">` and `<article class="glossary">`
     - Code Syntax Highlight (9)
       - **HTML**/**XML**
       - **CSS**

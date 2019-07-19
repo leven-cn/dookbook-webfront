@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Examples For Test - Dookbook</title>
-  <link rel="stylesheet" href="/static/css/content.css" />
-  <link rel="stylesheet" href="/static/css/content.table.css" />
-  <link rel="stylesheet" href="/static/css/content.contributors.css" />
-  <link rel="stylesheet" href="/static/css/content.footnote.css" />
-  <link rel="stylesheet" href="/static/css/content.toc.css" />
+  <meta charset="utf-8"/>
+  <title>Examples For Demonstration - Dookbook</title>
+  <link rel="stylesheet" href="/static/css/content.css"/>
+  <link rel="stylesheet" href="/static/css/content.toc.css"/>
+  <link rel="stylesheet" href="/static/css/content.contributors.css"/>
+  <link rel="stylesheet" href="/static/css/content.ad.css"/>
+  <link rel="stylesheet" href="/static/css/content.table.css"/>
+  <link rel="stylesheet" href="/static/css/content.footnote.css"/>
+  <link rel="stylesheet" href="/static/libs/highlight/styles/agate.css"/>
   <style>
   .toc li a.fold,
   .toc li.active a.fold {
@@ -38,19 +40,23 @@
   .info::before {
     background: url("/static/img/admonition.png") no-repeat left -5px;
   }
+
+  aside ul li {
+    background: none;
+  }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="/static/img/logo.svg" alt="Dookbook's logo" title="Goto Dookbook's Homepage">
+    <a href="/"><img src="/static/img/logo.svg" alt="Dookbook's logo" title="Dookbook's Homepage"></a>
     <div>
       <img src="/static/img/search.svg" alt="Search">
       <input type="text" placeholder="Search here" readonly>
     </div>
       <nav>
-        <a href="#" title="About Dookbook"><img src="/static/img/about.svg" alt="About Dookbook"></a>
-        <a href="" title="Switch to Chinese version">中</a>
+        <a href="/about/" title="About Dookbook®">i</a>
+        <a href="" title="切换至中文" lang="zh-Hans">中</a>
         <a href="" title="Help">?</a>
       </nav>
   </header>
@@ -58,8 +64,8 @@
   <main>
     <article>
       <header>
-        <h1>Examples For Test</h1>
-        <p><span>Updated</span>:&nbsp;&nbsp;2019-05-15 01:29:12 <span>Views</span>:&nbsp;&nbsp; 6</p>
+        <h1>Examples For Demonstration</h1>
+        <p><span>Updated</span>:&nbsp;&nbsp;2019-06-01 03:32:47 (UTC) <span>Views</span>:&nbsp;&nbsp; 20</p>
       </header>
 
       <div class="toc">
@@ -83,9 +89,20 @@
 <li><a href="#horizontal-rule">Horizontal Rule</a></li>
 <li><a href="#abbreviation">Abbreviation</a></li>
 <li><a href="#head-id">Attribute List</a></li>
-<li><a href="#code-block">Code Block</a></li>
+<li><a href="#code-block">Code Block</a><ul>
+<li><a href="#html">HTML</a></li>
+<li><a href="#xml">XML</a></li>
+<li><a href="#css">CSS</a></li>
+<li><a href="#javascript">JavaScript</a></li>
+<li><a href="#python">Python</a></li>
+<li><a href="#markdown">Markdown</a></li>
+<li><a href="#bash">Bash</a></li>
+<li><a href="#initoml">INI/TOML</a></li>
+</ul>
+</li>
 <li><a href="#footnote">Footnote</a></li>
 <li><a href="#admonition">Admonition</a></li>
+<li><a href="#glossary">Glossary</a></li>
 <li><a href="#image">Image</a></li>
 </ul>
 </div>
@@ -253,10 +270,125 @@ is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
 <h2 id="head-id">Attribute List<a class="headerlink" href="#head-id" title="Permanent link">&para;</a></h2>
 <p attrname="value" class="someclass" id="someid">Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the <strong attrname="value">default</strong> bindings (keyboard shortcuts).</p>
 <h2 id="code-block">Code Block<a class="headerlink" href="#code-block" title="Permanent link">&para;</a></h2>
+<h3 id="html"><abbr title="Hyper Text Markup Language">HTML</abbr><a class="headerlink" href="#html" title="Permanent link">&para;</a></h3>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Title&lt;/title&gt;
+  &lt;style&gt;body {width: 500px;}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p checked class=&quot;title&quot; id='title'&gt;Title&lt;/p&gt;
+  &lt;!-- here goes the rest of the page --&gt;
+
+  &lt;script&gt;
+    function $init() {return true;}
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="xml">XML<a class="headerlink" href="#xml" title="Permanent link">&para;</a></h3>
+<pre><code class="xml">&lt;xml&gt;
+  &lt;tag1 attr=&quot;value&quot;&gt;tag-1 text&lt;/tag&gt;
+&lt;/xml&gt;
+</code></pre>
+
+<h3 id="css">CSS<a class="headerlink" href="#css" title="Permanent link">&para;</a></h3>
+<pre><code class="css">@font-face {
+  font-family: Chunkfive; src: url('Chunkfive.otf');
+}
+
+body, .usertext {
+  color: #F0F0F0; background: #600;
+  font-family: Chunkfive, sans;
+}
+
+@import url(print.css);
+@media print {
+  a[href^=http]::after {
+    content: attr(href)
+  }
+}
+</code></pre>
+
+<h3 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h3>
+<pre><code class="javascript">function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class=&quot;${cls}&quot;`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i &lt; classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+}
+
+export  $initHighlight;
+</code></pre>
+
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
 <pre><code class="python">import sys
 
 print('hello')
 sys.exit()
+
+@requires_authorization
+def somefunc(param1='', param2=0):
+    r'''A docstring'''
+    if param1 &gt; param2: # interesting
+        print 'Gre\'ater'
+    return (param2 - param1 + 1 + 0b10l) or None
+
+class SomeClass:
+    pass
+
+&gt;&gt;&gt; message = '''interpreter
+... prompt'''
+</code></pre>
+
+<h3 id="markdown">Markdown<a class="headerlink" href="#markdown" title="Permanent link">&para;</a></h3>
+<pre><code class="markdown">## Heading 2
+
+### Heading 3
+
+A paragraph with a **strong** text and *italic* text.
+</code></pre>
+
+<h3 id="bash">Bash<a class="headerlink" href="#bash" title="Permanent link">&para;</a></h3>
+<pre><code class="bash">#!/bin/bash
+
+###### CONFIG
+ACCEPTED_HOSTS=&quot;/root/.hag_accepted.conf&quot;
+BE_VERBOSE=false
+
+if [ &quot;$UID&quot; -ne 0 ]
+then
+ echo &quot;Superuser rights required&quot;
+ exit 2
+fi
+
+genApacheConf(){
+ echo -e &quot;# Host ${HOME_DIR}$1/$2 :&quot;
+}
+</code></pre>
+
+<h3 id="initoml">INI/TOML<a class="headerlink" href="#initoml" title="Permanent link">&para;</a></h3>
+<pre><code class="toml">; boilerplate
+[package]
+name = &quot;some_name&quot;
+authors = [&quot;Author&quot;]
+description = &quot;This is \
+a description&quot;
+
+[[lib]]
+name = ${NAME}
+default = True
+auto = no
+counter = 1_000
 </code></pre>
 
 <h2 id="footnote">Footnote<a class="headerlink" href="#footnote" title="Permanent link">&para;</a></h2>
@@ -284,44 +416,46 @@ sys.exit()
 <div class="admonition info">
 <p>This is a admonition box without a title.</p>
 </div>
+<h2 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h2>
+<p>This is a glossary: Computer Programming, Computer programming, computer pRogramming.</p>
 <h2 id="image">Image<a class="headerlink" href="#image" title="Permanent link">&para;</a></h2>
-<p><img alt="A" src="img/down.svg"></p>
+<p><img alt="An image" src="github-logo.svg"></p>
     </article>
 
     <aside>
       <h2>Contributors</h2>
       <ul>
         <li>
-          <img src="/src/img/a8.jpg" alt="tx">
-          <meter value="90" max="100" high="50" low="10" optimum="80" title="80%"></meter>
+          <img src="https://avatars1.githubusercontent.com/u/1094316?s=40&v=4" alt="leven-cn" title="L">
+          <meter value="50" max="100" high="50" low="10" optimum="80" title="50%"></meter>
         </li>
         <li>
-          <img src="/src/img/a8.jpg" alt="tx">
-          <meter value="30" max="100" high="50" low="10" optimum="80" title="50%"></meter>
+          <img src="https://avatars1.githubusercontent.com/u/40712008?s=40&v=4" alt="Liaoyazhi" title="廖娅芝">
+          <meter value="30" max="100" high="50" low="10" optimum="80" title="30%"></meter>
         </li>
         <li>
-          <img src="/src/img/a8.jpg" alt="tx">
-          <meter value="1" max="100" high="0.5" low="10" optimum="80" title="70%"></meter>
+          <img src="https://avatars1.githubusercontent.com/u/13096801?s=40&v=4" alt="tanglang1990" title="Tang Lang">
+          <meter value="10" max="100" high="50" low="10" optimum="80" title="5%"></meter>
         </li>
         <li>
-          <img src="/src/img/a8.jpg" alt="tx">
-          <meter value="90" max="100" high="50" low="10" optimum="80" title="80%"></meter>
+          <img src="https://avatars1.githubusercontent.com/u/775669?s=40&v=4" alt="jestevez" title="Jose Luis Estevez">
+          <meter value="5" max="100" high="50" low="10" optimum="80" title="5%"></meter>
         </li>
         <li>
-          <img src="/src/img/a8.jpg" alt="tx">
-          <meter value="30" max="100" high="50" low="10" optimum="80" title="50%"></meter>
-        </li>
-        <li>
-          <img src="/src/img/a8.jpg" alt="tx">
-          <meter value="1" max="100" high="0.5" low="10" optimum="80" title="70%"></meter>
+          <img src="https://avatars1.githubusercontent.com/u/50867911?s=40&v=4" alt="mssm199996" title="MOULEY SLIMANE Sidi Mohamed">
+          <meter value="5" max="100" high="50" low="10" optimum="80" title="5%"></meter>
         </li>
       </ul>
-      <iframe width="260" height="200"></iframe>
+      <iframe width="260" height="200" src="/ad.html"></iframe>
     </aside>
   </main>
 
-  <!-- enable Django's static CSS style -->
-  <div class="fold unfold" hidden></div>
+  
+
+  <div class="fold unfold" hidden></div><!-- enable Django's static CSS style -->
+
   <script src="/static/js/toc.js"></script>
+  <script src="/static/libs/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
