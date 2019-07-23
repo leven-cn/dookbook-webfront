@@ -158,7 +158,7 @@
 <script src="/static/js/git-service.js"></script>
 <script src="/static/js/about.js"></script>
 <script>
-const eventName = "oauth-github";
+const eventName = "oauth:github";
 
 function getQueryVariable(variable) {
   var query = window.location.search.substring(1);
@@ -170,7 +170,7 @@ function getQueryVariable(variable) {
   return false;
 }
 
-var evtSource = new EventSource("/stream/?event="+eventName+"&state="+getQueryVariable("state"));
+var evtSource = new EventSource("/oauth/github/stream/"+getQueryVariable("state")+"/");
 evtSource.onmessage = function(e) {
   console.log("message: " + e.data);
 }
