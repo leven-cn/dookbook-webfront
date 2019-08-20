@@ -15,7 +15,7 @@ function getQueryVariable (param) {
 /**
  * 滚动下箭头消失显示
  */
-function triggerDownIcon (asideUL, downIcon) {
+function toggleDownIcon (asideUL, downIcon) {
   asideUL.onmouseover = function () {
     if (this.scrollTop === 0) {
       downIcon.style.display = 'inline-block'
@@ -45,7 +45,7 @@ function serverNotify (session) {
 document.ready(function () {
   var asideUL = document.querySelector('aside ul')
   var downIcon = document.querySelector('.down')
-  triggerDownIcon(asideUL, downIcon)
+  toggleDownIcon(asideUL, downIcon)
 
   var session = getQueryVariable('session')
   serverNotify(session)
