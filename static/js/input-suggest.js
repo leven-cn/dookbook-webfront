@@ -2,10 +2,10 @@
  * 输入框搜索建议下拉列表
  */
 
-const MOUSE_WHEEL_DELTA = 30;
-const MOUSE_WHEEL_TIMEOUT = 200;
-const KEYDOWN_TIMEOUT = 300;
-var navPos = 0;
+const MOUSE_WHEEL_DELTA = 30
+const MOUSE_WHEEL_TIMEOUT = 200
+const KEYDOWN_TIMEOUT = 300
+var navPos = 0
 
 /**
  * 列表选择事件触发后的处理函数
@@ -104,7 +104,7 @@ function mousewheelEventHandler (suggestList, delta, timeout) {
 
 /**
  * 恢复到初始状态
- * @param {Element[]} suggestList 
+ * @param {Element[]} suggestList
  */
 function initInputSuggest (suggestList) {
   var previousPos = navPos
@@ -148,7 +148,7 @@ function inputSuggest (navBox, input, suggestList, mainElement) {
 
   // 点击页面其他地方，隐藏下拉列表
   document.body.onclick = function (e) {
-    if (input.placeholder == '') {
+    if (input.placeholder === '') {
       var prompt = input.getAttribute('data-prompt') // 获取data-prompt 属性的值
       input.placeholder = prompt
     }
@@ -169,16 +169,22 @@ function inputSuggest (navBox, input, suggestList, mainElement) {
       }
 
       // 构造搜索建议列表
-      var xhr = new XMLHttpRequest
-      xhr.open('GET', '/search/?q=' + searchText)
-      xhr.send()
+      var csrftoken = getCookie('csrftoken')
+      var xhr = new XMLHttpRequest()
+      xhr.setRequestHeader('Accept-Language', 'en') // TODO
+      xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+      xhr.setRequestHeader('X-CSRFToken', csrftoken)
+      xhr.open('POST', '/search/hints/', true)
+      xhr.send(JSON.stringify({
+        'query': searchText
+      }))
       xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4) {
-          if (xhr.status == 200) {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText)
 
             var hints = data.hints
-            var lang = (location.pathname == '/zh-Hans/') ? 'zh-Hans' : 'en'
+            var lang = (location.pathname === '/zh-Hans/') ? 'zh-Hans' : 'en'
             newUl.innerHTML = ''
             for (var i = 0; i < hints.length; i++) {
               var url = '/cookbook/?lang=' + lang + '&id=' + hints[i][1]
