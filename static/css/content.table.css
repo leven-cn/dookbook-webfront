@@ -20,9 +20,3 @@ table td {
   color: rgb(245, 245, 245);
   font-size: 14px;
 }
-
-table kbd {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 2px;
-  padding: 3px 5px;
-}
