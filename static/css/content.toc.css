@@ -35,7 +35,7 @@
   line-height: 48px;
   background: none;
   background-size: 0.63rem;
-  font-size: 16px;
+  font-size: 14px;
   padding: 0;
   margin: 0;
 }
@@ -58,7 +58,7 @@
 
 .toc ul li li {
   border-left: 0.06rem solid #333;
-  font-size: 14px;
+  font-size: 12px;
   overflow-y: auto;
   white-space: nowrap;
   line-height: 2.1rem;
