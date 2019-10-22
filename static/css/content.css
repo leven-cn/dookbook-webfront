@@ -71,6 +71,12 @@ h1 {
   display: inline-block;
 }
 
+kbd {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  padding: 3px 5px;
+}
+
 header {
   height: 90px;
   line-height: 90px;
