@@ -1,18 +1,40 @@
 main button a {
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgb(218, 218, 218);
   display: inline-block;
   color: rgb(255, 255, 255);
-  padding: 15px 20px;
+  padding: 0.5rem 1.2rem;
   border-radius: 5px;
-  font-size: 16px;
+  text-align: left;
 }
 
 main button {
-  width: 15%;
-  text-align: center;
   background: none;
-  border: none;
+  border: 0;
   margin: auto;
+  margin-bottom: 2.3rem;
+}
+
+main button p {
+  line-height: 0;
+  padding: 0.4rem 0 0.8rem;
+  font-size: 0.2rem;
+  color: #ddd;
+}
+
+main button svg {
+  fill: #fff;
+  width: 5rem;
+}
+
+main button em {
+  height: 1rem;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.git-l {
+  width: 1.6rem;
+  margin-left: 0.3rem;
 }
 
 table {
@@ -168,6 +190,11 @@ aside ul li img {
   display: none;
 }
 
+main button a:hover p {
+  color: #000;
+  transition: all 2s;
+}
+
 .popup p:first-child {
   font-size: 24px;
   margin: 55px 0 30px;
@@ -220,4 +247,15 @@ aside ul li img {
 .down {
   padding: 0;
   width: 20px;
+}
+
+main button a:hover {
+  text-decoration: none;
+  background: #fff;
+  transition: all 2s;
+}
+
+main button a:hover svg {
+  fill: #000;
+  transition: all 2s;
 }
