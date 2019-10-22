@@ -13,22 +13,11 @@
 
 .toc ul {
   width: 100%;
+  height: calc(100% - 240px);
   box-sizing: border-box;
   margin: 0;
-}
-
-@media screen and (max-height: 700px) {
-  .toc ul {
-    height: 520px;
-    overflow-y: auto;
-  }
-}
-
-@media screen and (min-height: 700px) {
-  .toc ul {
-    height: 710px;
-    overflow-y: auto;
-  }
+  overflow-y: auto;
+  border-bottom: 1px dashed #666;
 }
 
 .toc ul li {
@@ -54,6 +43,7 @@
   padding: 0.19rem 0 0.19rem 2.1rem;
   box-sizing: border-box;
   height: auto;
+  border-bottom: none;
 }
 
 .toc ul li li {
