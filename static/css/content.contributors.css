@@ -11,7 +11,7 @@ aside {
 
 aside ul {
   width: 100%;
-  height: calc(100% - 450px);
+  height: calc(100% - 550px);
   box-sizing: border-box;
   padding: 0 30px;
   margin-top: 40px;
@@ -51,6 +51,61 @@ meter {
   height: 24px;
 }
 
+aside button a {
+  border: 1px solid rgb(218, 218, 218);
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  text-align: left;
+}
+
+aside button p {
+  line-height: 0;
+  padding: 0.4rem 0 0.8rem;
+  font-size: 0.2rem;
+  color: #ddd;
+}
+
+aside button {
+  background: none;
+  border: 0;
+  margin: 0 auto;
+  width: 280px;
+}
+
+aside button svg {
+  fill: #fff;
+  width: 5rem;
+}
+
+aside button em {
+  height: 1rem;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.git-l {
+  width: 1.6rem;
+  margin-left: 0.3rem;
+}
+
+main button a:hover p {
+  color: #000;
+  transition: all 2s;
+}
+
+main button a:hover {
+  text-decoration: none;
+  background: #fff;
+  transition: all 2s;
+}
+
+main button a:hover svg {
+  fill: #000;
+  transition: all 2s;
+}
+
 meter::-webkit-meter-bar {
   background: none;
   border: 2px solid #ccc;
@@ -82,4 +137,5 @@ iframe {
   border: 3px dashed #222;
   position: absolute;
   bottom: 130px;
+  left: 0;
 }
