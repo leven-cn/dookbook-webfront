@@ -127,6 +127,7 @@ aside ul li {
   line-height: 40px;
   padding-bottom: 30px;
   float: left;
+  background: none;
 }
 
 aside ul li svg {
