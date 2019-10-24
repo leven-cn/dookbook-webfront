@@ -21,7 +21,7 @@ aside ul {
 
 aside ul li {
   display: flex;
-  background: none;
+  background: none !important;
   padding: 0;
   width: 100%;
   margin-bottom: 20px;

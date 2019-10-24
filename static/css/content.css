@@ -272,6 +272,8 @@ main ul li {
   padding-left: 2.3rem;
   line-height: 2rem;
   margin-bottom: 1rem;
+  background: url("/static/img/list.svg") no-repeat -3px 4px;
+  background-size: 1.7rem;
 }
 
 main ol li {
@@ -334,6 +336,7 @@ hr {
   left: 1.2rem;
   height: 0.25rem;
   width: 4.4rem;
+  background: url("/static/img/admonition.png") no-repeat left top;
 }
 
 .error {
@@ -348,6 +351,7 @@ hr {
   left: 1.2rem;
   height: 0.25rem;
   width: 4.4rem;
+  background: url("/static/img/admonition.png") no-repeat left -10px;
 }
 
 .info {
@@ -362,6 +366,7 @@ hr {
   left: 1.2rem;
   height: 0.25rem;
   width: 4.4rem;
+  background: url("/static/img/admonition.png") no-repeat left -5px;
 }
 
 #company-logo a {
