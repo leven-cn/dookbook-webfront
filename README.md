@@ -14,15 +14,16 @@ Home: https://dookbook.info/
 
 ### PC Web
 
+- Dark Mode (Focus Mode)
 - Content Page
-  - layout, including TOC, content, Logo, Contributions
+  - Layout: TOC + Content + Logo + Contributions
   - Styles for Markdown Documents Rendering Engine
     - HTML Elements (32)
-      - Heading `<h1>-<h6>`
+      - Heading `<h1>`-`<h6>`
       - Paragraph `<p>`
       - Link `<a>`
-      - List (Ordered `<ol>-<li>`, Unordered `<ul>-<li>`, and Definition `<dl>-<dt>-<dd>`)
-      - Table `<table>-<thead>-<tr>-<th>-<tbody>`
+      - List (Ordered `<ol>`-`<li>`, Unordered `<ul>`-`<li>`, and Definition `<dl>`-`<dt>`-`<dd>`)
+      - Table `<table>`-`<thead>`-`<tr>`-`<th>`-`<tbody>`
       - Emphasis Text (Strong `<strong>`, Italic `<em>`, Deleted `<del>` and Inserted `<ins>`)
       - Horizontal Rule `<hr/>`
       - Quote Block `<blockquote>`
@@ -35,8 +36,8 @@ Home: https://dookbook.info/
       - Keyboard `<kbd>`
     - Features (4)
       - TOC `class ="toc"`
-      - Footnote `<sub>`, `<a>`, and `<ol>`
-      - Admonition `class="admonition note danger import admonition-title"`
+      - Footnote `<sub>`, `<a>`, and `<ol>` 脚注
+      - Admonition `class="admonition note danger import admonition-title"` 提示
       - Auto Wiki Links (Glossary) `<a href="..." class="glossary">` and `<article class="glossary">`
     - Code Syntax Highlight (9)
       - **HTML**/**XML**
