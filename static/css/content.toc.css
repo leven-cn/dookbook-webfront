@@ -3,21 +3,19 @@
 .toc {
   background: rgb(36, 37, 39);
   width: 290px;
-  height: 100%;
+  height: calc(100% - 260px);
   position: absolute;
   left: 0;
   box-sizing: border-box;
   margin-left: 90px;
+  overflow-y: auto;
   padding-top: 30px;
 }
 
 .toc ul {
   width: 100%;
-  height: calc(100% - 240px);
   box-sizing: border-box;
   margin: 0;
-  overflow-y: auto;
-  border-bottom: 1px dashed #666;
 }
 
 .toc ul li {
@@ -27,15 +25,6 @@
   font-size: 14px;
   padding: 0;
   margin: 0;
-}
-
-.toc button a {
-  border: 1px solid rgb(218, 218, 218);
-  display: inline-block;
-  color: rgb(255, 255, 255);
-  padding: 0.7rem 1.2rem;
-  border-radius: 5px;
-  text-align: left;
 }
 
 .toc ul li a {
@@ -99,30 +88,4 @@
 
 .toc li.active ul {
   display: block;
-}
-
-.toc button p {
-  line-height: 0;
-  padding: 0.4rem 0 0.9rem;
-  font-size: 0.2rem;
-  color: #ddd;
-}
-
-.toc button {
-  background: none;
-  border: 0;
-  position: fixed;
-  bottom: 27px;
-  left: 124px;
-}
-
-.toc button img {
-  fill: #fff;
-  width: 9rem;
-}
-
-.toc button em {
-  height: 1rem;
-  overflow: hidden;
-  display: inline-block;
 }
