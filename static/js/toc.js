@@ -21,6 +21,7 @@ for (var i = 0; i < tocList.length; i++) {
           if (selectedSubmenu) {
             selectedSubmenu.classList.remove('selected')
           }
+
           selectedSubmenu = this
           this.classList.add('selected')
         }
@@ -35,8 +36,8 @@ for (var i = 0; i < tocList.length; i++) {
       if (selectedMenu) {
         selectedMenu.classList.remove(selectedClassName)
         selectedMenu.querySelector('a').classList.replace('unfold', 'fold')
-        // selectedSubmenu = null;
       }
+
       // 点击二级菜单清除子菜单样式
       if (selectedSubmenu) {
         selectedSubmenu.classList.remove('selected')

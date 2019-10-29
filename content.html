@@ -16,10 +16,10 @@
 <body>
   <header>
     <a href="/"><img src="/static/img/logo.svg" alt="Dookbook's logo" title="Dookbook's Homepage"></a>
-    <div>
+    <section id="search">
       <img src="/static/img/search.svg" alt="Search">
-      <input type="text" placeholder="Search here" readonly>
-    </div>
+      <input type="text" placeholder="Search here" data-prompt="Search here">
+    </section>
       <nav>
         <a href="/about/" title="About Dookbook®">i</a>
         <a href="" title="切换至中文" lang="zh-Hans">中</a>
@@ -433,6 +433,7 @@ counter = 1_000
   <div class="fold unfold" hidden></div><!-- enable Django's static CSS style -->
 
   <script src="/static/js/toc.js"></script>
+  <script src="/static/js/search-hint.js"></script>
   <script src="/static/libs/highlight/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </body>

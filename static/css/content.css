@@ -97,14 +97,15 @@ header > a > img {
 }
 
 /* 搜索框 */
-header > div {
+header > section {
   flex: 1;
   display: flex;
   height: 38px;
   margin-top: 24px;
+  position: relative;
 }
 
-header > div > img {
+header > section > img {
   background: #333;
   padding: 8px 17px;
   border-radius: 8px 0 0 8px;
@@ -112,7 +113,7 @@ header > div > img {
   height: 22px;
 }
 
-header > div > input {
+header > section > input {
   background-size: 4%;
   background-color: #fff;
   flex: 1;
@@ -123,7 +124,7 @@ header > div > input {
   font-size: 14px;
 }
 
-header > div > input::placeholder {
+header > section > input::placeholder {
   color: #aaa;
 }
 
@@ -394,6 +395,55 @@ hr {
   left: 90px;
 }
 
+.search-hints-subject img {
+  width: 20px;
+  vertical-align: middle;
+  padding-right: 0.5rem;
+}
+
 #company-logo img {
   width: 9rem;
+}
+
+#search ul {
+  position: absolute;
+  margin-top: 40px;
+  line-height: 40px;
+  width: 100%;
+  background: rgba(1, 1, 1, 0.8);
+  display: none;
+}
+
+#search ul li {
+  border-bottom: 1px #333 solid;
+  float: left;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+#search ul li a {
+  height: 40px;
+  color: #fff;
+  width: 100%;
+  display: inline-block;
+}
+
+.search-hints-subject {
+  float: left;
+  font-size: 14px;
+  color: rgb(28, 172, 244);
+  padding: 0 1rem 0 1.2rem;
+  font-style: normal;
+  font-weight: bold;
+  background: rgba(39, 39, 39, 0.8);
+}
+
+.search-hints-topic {
+  padding-left: 1rem;
+  font-size: 14px;
+}
+
+#search ul li:hover {
+  background: rgba(255, 255, 255, 0.2);
 }

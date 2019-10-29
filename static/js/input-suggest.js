@@ -172,9 +172,9 @@ function inputSuggest (navBox, input, suggestList, mainElement) {
       var csrftoken = getCookie('csrftoken')
       var xhr = new XMLHttpRequest()
       xhr.setRequestHeader('Accept-Language', 'en') // TODO
-      xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+      // xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
       xhr.setRequestHeader('X-CSRFToken', csrftoken)
-      xhr.open('POST', '/search/hints/', true)
+      xhr.open('GET', '/search/hints/?q=html', true)
       xhr.send(JSON.stringify({
         'query': searchText
       }))
