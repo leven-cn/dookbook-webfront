@@ -6,15 +6,16 @@
   <meta name="description" content="Dookbook® (Developers' Cookbook) is a knowledge engine for developers, that offers a wealth of useful code examples and snippets, even tips and tricks for Windows/Mac, as well as popular programming tools and IDEs."/>
   <link rel="stylesheet" href="/static/css/content.css"/>
   <link rel="stylesheet" href="/static/css/content.toc.css"/>
+  <link rel="stylesheet" href="/static/css/content.search.css"/>
   <link rel="stylesheet" href="/static/css/about.css"/>
 </head>
 <body>
   <header>
     <a href="/"><img src="/static/img/logo.svg" alt="Dookbook's logo" title="Goto Dookbook's Homepage"></a>
-    <div>
+    <section id="search">
       <img src="/static/img/search.svg" alt="Search">
-      <input type="text" placeholder="Search here" readonly>
-    </div>
+      <input type="text" placeholder="Search here">
+    </section>
     <nav>
       <a href="#" title="About Dookbook®">i</a>
       <a href="/about/zh-hans/" title="切换至中文" lang="zh-Hans">中</a>
@@ -167,6 +168,7 @@
 
 <script src="/static/js/utils.js"></script>
 <script src="/static/js/toc.js"></script>
+<script src="/static/js/search-hint.js"></script>
 <script src="/static/js/about.js"></script>
 </body>
 </html>

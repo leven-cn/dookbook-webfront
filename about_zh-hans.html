@@ -6,15 +6,16 @@
   <meta name="description" content="Dookbook® (开发者的日常菜谱)是面向开发者的全新一代知识引擎，它提供了海量、实用的代码示例片段，以及Windows/Mac操作技巧，同时还包括常用的编程工具和集成开发环境(IDE)。"/>
   <link rel="stylesheet" href="/static/css/content.css"/>
   <link rel="stylesheet" href="/static/css/content.toc.css"/>
+  <link rel="stylesheet" href="/static/css/content.search.css"/>
   <link rel="stylesheet" href="/static/css/about.css"/>
 </head>
 <body>
   <header>
     <a href="/"><img src="/static/img/logo.svg" alt="Dookbook的logo" title="Dookbook的主页"></a>
-    <div>
+    <section id="search">
       <img src="/static/img/search.svg" alt="搜索">
-      <input type="text" placeholder="在这里搜索" readonly>
-    </div>
+      <input type="text" placeholder="在这里搜索">
+    </section>
     <nav>
       <a href="#" title="关于Dookbook®">i</a>
       <a href="/about/en/" title="Switch to English version" lang="en">En</a>
@@ -161,6 +162,7 @@
 
 <script src="/static/js/utils.js"></script>
 <script src="/static/js/toc.js"></script>
+<script src="/static/js/search-hint.js"></script>
 <script src="/static/js/about.js"></script>
 </body>
 </html>
