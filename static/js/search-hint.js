@@ -8,6 +8,7 @@ function createSearchHintList (hints) {
   if (hints == null || !hints) {
     ulBox.innerHTML = '<li><a href="#">暂无搜索结果</a></li>'
   } else {
+    ulBox.innerHTML = ''
     for (var i = 0; i < hints.length; i++) {
       ulBox.innerHTML += '<li><a href="#"><span class="search-hints-subject"><img src="' + hints[i].subject_icon_url + '" alt="' + hints[i].subject + '">' + hints[i].subject + '</span><span class="search-hints-topic">' + hints[i].topic + '</span></a></li>'
     }
@@ -15,22 +16,24 @@ function createSearchHintList (hints) {
 }
 
 /* 获取搜索提示列表 */
-function fetchSearchHintList () {
+function fetchSearchHintList (queryText) {
   var xhr = new XMLHttpRequest()
-  xhr.open('GET', '/static/js/text.json', true)
+  xhr.open('GET', '/search/hints/?q=' + queryText, true)
+  xhr.setRequestHeader('Accept-Language', 'en')
+  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
   xhr.send()
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
         var data = JSON.parse(xhr.responseText)
-        return data.hints
+        console.info('fetchSearchHintList: ' + data.hints)
+        createSearchHintList(data.hints)
+        showSearchHintList()
       } else {
         console.error('请求接口失败, status=' + xhr.status)
-        return null
       }
     } else {
-      console.error('请求接口失败')
-      return null
+      console.debug('正在请求')
     }
   }
 }
@@ -39,8 +42,6 @@ function fetchSearchHintList () {
 function showSearchHintList () {
   if (ulBox != null) {
     ulBox.style.display = 'block'
-  } else {
-    createSearchHintList(fetchSearchHintList())
   }
 }
 
@@ -54,7 +55,7 @@ input.onclick = function (event) {
   if (!this.value) {
     this.placeholder = ''
   } else {
-    ulBox.style.display = 'block'
+    showSearchHintList()
   }
 }
 
@@ -63,7 +64,8 @@ input.oninput = function () {
     ulBox.style.display = 'none'
     return
   }
-  showSearchHintList()
+
+  fetchSearchHintList(this.value.trim())
 }
 
 // 点击页面其他地方，隐藏下拉列表
