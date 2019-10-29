@@ -83,7 +83,7 @@ input.oninput = function () {
   }
 
   if (!inputSilence) {
-    var pos = (location.pathname.startsWith('/about')) ? 1 : 2
+    var pos = (location.pathname.startsWith('/about')) ? 2 : 1
     var lang = location.pathname.split('/')[pos]
     if (lang) {
       lang = lang.toLowerCase()
