@@ -1,3 +1,5 @@
+const KEYDOWN_SILENCE = 300 // 按键静默时间，避免过于频繁快速输入
+
 /* 创建搜索提示下拉列表 */
 function createSearchHintList (hints) {
   if (ulBox == null) {
@@ -32,6 +34,8 @@ function fetchSearchHintList (queryText) {
       } else {
         console.error('请求接口失败, status=' + xhr.status)
       }
+
+      keydownKeepSilence()
     } else {
       console.debug('正在请求')
     }
@@ -45,8 +49,17 @@ function showSearchHintList () {
   }
 }
 
+/* 设置阻断事件间隔，过滤过于频繁的请求 */
+function keydownKeepSilence () {
+  inputSilence = true
+  setTimeout(function () {
+    inputSilence = false
+  }, KEYDOWN_SILENCE)
+}
+
 var ulBox = null
 var input = document.querySelector('input')
+var inputSilence = false
 
 // 点击输入框,清空输入框内文字，并且列出下拉列表
 input.onclick = function (event) {
@@ -60,12 +73,14 @@ input.onclick = function (event) {
 }
 
 input.oninput = function () {
-  if (!this.value) {
+  if (!this.value && ulBox) {
     ulBox.style.display = 'none'
     return
   }
 
-  fetchSearchHintList(this.value.trim())
+  if (!inputSilence) {
+    fetchSearchHintList(this.value.trim())
+  }
 }
 
 // 点击页面其他地方，隐藏下拉列表
