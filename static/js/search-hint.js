@@ -50,11 +50,11 @@ function showSearchHintList () {
 }
 
 /* 设置阻断事件间隔，过滤过于频繁的请求 */
-function keydownKeepSilence (seconds = 300) {
+function keydownKeepSilence (microseconds = 200) {
   inputSilence = true
   setTimeout(function () {
     inputSilence = false
-  }, seconds)
+  }, microseconds)
 }
 
 var ulBox = null
