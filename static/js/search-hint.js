@@ -59,7 +59,7 @@ function keydownKeepSilence (seconds = 300) {
 
 var ulBox = null
 var input = document.querySelector('input')
-var originInputPlaceholder = input.placeholder
+const DEFAULT_INPUT_PLACEHOLDER = input.placeholder
 var inputSilence = false
 
 // 点击输入框
@@ -97,7 +97,7 @@ input.oninput = function () {
 // 点击页面其他地方，隐藏下拉列表
 document.body.onclick = function (e) {
   if (input.placeholder === '') {
-    input.placeholder = originInputPlaceholder
+    input.placeholder = DEFAULT_INPUT_PLACEHOLDER
   }
   if (ulBox != null) {
     ulBox.style.display = 'none'
