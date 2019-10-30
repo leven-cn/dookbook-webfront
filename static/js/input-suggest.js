@@ -139,8 +139,6 @@ function inputSuggest (navBox, input, suggestList, mainElement) {
     event.stopPropagation()
 
     if (!this.value) {
-      this.placeholder = ''
-      navBox.style.display = 'block'
       newBox.style.display = 'none'
       initInputSuggest(suggestList)
     }
@@ -148,11 +146,6 @@ function inputSuggest (navBox, input, suggestList, mainElement) {
 
   // 点击页面其他地方，隐藏下拉列表
   document.body.onclick = function (e) {
-    if (input.placeholder === '') {
-      var prompt = input.getAttribute('data-prompt') // 获取data-prompt 属性的值
-      input.placeholder = prompt
-    }
-    navBox.style.display = 'none'
     newBox.style.display = 'none'
     initInputSuggest(suggestList)
   }

@@ -2,42 +2,59 @@
 <html lang="zh-Hans">
 <head>
   <meta charset="utf-8"/>
-  <title>Dookbook - Developers' Cookbook, 开发者的日常菜谱，为所有开发人员提供大量有用的代码示例和代码片段。</title>
-  <meta name="description" content="Dookbook (Developers' Cookbook, 开发者的日常菜谱)是全新的知识引擎，为所有开发人员提供了大量有用的代码示例和代码片段。现在包含超过200个菜谱，涵盖从编程语言Python, Web前端技术(HTML, CSS, JavaScript), Java, SQL, Go, PHP等, 到IT基础技术及各类开发库框架, 比如TCP/IP网络, Linux, nginx, redis, MySQL, Vue/React, Django/Flask等等."/>
+  <title>Dookbook - Developers' Cookbook, 开发者的日常菜谱，为开发人员提供海量、实用的代码示例片段，以及编程（工具）技巧</title>
+  <meta name="description" content="Dookbook (Developers' Cookbook, 开发者的日常菜谱)是新一代知识引擎。为开发人员提供海量、实用的代码示例片段，以及编程（工具）技巧。现在包含超过600个菜谱，涵盖从编程语言Python, Web前端技术(HTML, CSS, JavaScript), Java, SQL, Go等, 到IT基础技术及各类开发库框架, 比如TCP/IP网络, Linux, nginx, redis, MySQL, Vue/React, Django/Flask等等."/>
   <link rel="stylesheet" href="/static/css/index.css"/>
+  <link rel="stylesheet" href="/static/css/content.search.css"/>
 </head>
 <body>
-  <img src="/static/img/sealing.png" alt="信封封口"  class="envelope">
-  <canvas id="myCanvas">
-    您的浏览器不支持 HTML5 canvas 标签。
-  </canvas>
-  <img src="/static/img/postmark.svg" alt="长沙知了科技有限公司" class="postmark"/>
-  <img src="/static/img/geek.svg" alt="给所有极客的一封情书" class="geek"/>
+  <!-- 介绍动画 -->
+  <section id="introduce">
+    <img id="envelope" src="/static/img/sealing.png" alt="信封封口">
+    <canvas>
+      您的浏览器不支持<code>&lt;canvas&gt;</code>标签。
+    </canvas>
+    <img id="postmark" src="/static/img/postmark.svg" alt="长沙知了科技有限公司"/>
+    <img id="geek" src="/static/img/geek.svg" alt="给所有极客的一封情书"/>
+  </section>
 
   <header>
-    <h1 title="Developers' Cookbook"><img src="/static/img/d.svg" alt="D"><img src="/static/img/e.svg" alt="evelopers' c" class="developer"><img src="/static/img/o.svg" alt="o"><img src="/static/img/o.svg" alt="o"><img src="/static/img/k.svg" alt="K"><img src="/static/img/b.svg" alt="B"><img src="/static/img/o.svg" alt="o"><img src="/static/img/o.svg" alt="o"><img src="/static/img/k.svg" alt="K"></h1>
-    <a href="/en/" title="switch to English version"><em></em>EN</a>
+    <img src="/static/img/logo-tail.svg" alt="logo-tail" id="logo-tail">
+    <section>
+      <p><em><a href="https://zhiliaokeji.com/" title="长沙知了信息科技有限公司首页">&copy; &nbsp;长沙知了信息科技有限公司</a> 湘ICP备16014566号-2</em></p>
+      <p><a href="#">服务条款</a><a href="#">隐私条款</a></p>
+    </section>
   </header>
+
   <main>
-    <label><input type="text" placeholder="开发者的日常菜谱 ..." data-prompt="开发者的日常菜谱 ..."/></label>
+    <header title="Developers' Cookbook">
+      <h1 hidden>Developers' Cookbook</h1>
+      <img src="/static/img/d.svg" alt="D">
+      <img id="developer-text" src="/static/img/e.svg" alt="evelopers' c">
+      <img src="/static/img/o.svg" alt="o">
+      <img src="/static/img/o.svg" alt="o">
+      <img src="/static/img/k.svg" alt="K">
+      <img src="/static/img/b.svg" alt="B">
+      <img src="/static/img/o.svg" alt="o">
+      <img src="/static/img/o.svg" alt="o">
+      <img src="/static/img/k.svg" alt="K">
+    </header>
+
+    <label><input type="text" placeholder="开发者的日常菜谱 ..."/></label>
     <nav>
       <ul>
-        <li><a href="about.html">什么是Dookbook？</a></li>
-        <li><a href="about.html">用知识入股</a></li>
-        <li><a href="about.html">共享笔记，参与分红</a></li>
+        <li><a href="/about/zh-hans/"><img src="/static/img/search.svg" alt="logo">什么是Dookbook？</a></li>
+        <li><a href="/about/zh-hans/#features-contributors-2"><img src="/static/img/search.svg" alt="logo">知识协作，收益共享</a></li>
+        <li><a href="/zh-hans/help/readme/"><img src="/static/img/search.svg" alt="logo">如何贡献</a></li>
       </ul>
     </nav>
   </main>
+
   <footer>
-    <img src="/static/img/logo-tail.svg" alt="logo-tail">
-    <div>
-      <p><em><a href="https://zhiliaokeji.com/" title="长沙知了信息科技有限公司首页">&copy; &nbsp;长沙知了信息科技有限公司</a> 湘ICP备16014566号-2</em></p>
-      <p><a href="#">服务条款</a><a href="#">隐私条款</a></p>
-    </div>
+    <a href="/en/" title="switch to English version"><em></em>EN</a>
   </footer>
-  <script src="/static/js/envelope.js"></script>
-  <script src="/static/js/start-animation.js"></script>
-  <script src="/static/js/input-suggest.js"></script>
+
+  <script src="/static/js/search-hint.js"></script>
   <script src="/static/js/index.js"></script>
 </body>
 </html>

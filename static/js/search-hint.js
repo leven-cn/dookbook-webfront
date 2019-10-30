@@ -1,3 +1,6 @@
+
+/* eslint-disable no-unused-vars */
+
 /* 创建搜索提示下拉列表 */
 function createSearchHintList (hints, lang) {
   if (ulBox == null) {
@@ -6,7 +9,7 @@ function createSearchHintList (hints, lang) {
   }
 
   if (hints == null || hints.length === 0) {
-    ulBox.innerHTML = '<li><a href="#">暂无搜索结果</a></li>'
+    ulBox.innerHTML = '<li><a href="#" class="search-results">暂无搜索结果</a></li>'
   } else {
     ulBox.innerHTML = ''
     for (var i = 0; i < hints.length; i++) {
@@ -26,16 +29,17 @@ function fetchSearchHintList (queryText, lang) {
   xhr.send()
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
+      var hints = []
       if (xhr.status === 200) {
         var data = JSON.parse(xhr.responseText)
         console.info('fetchSearchHintList: ' + data.hints)
-        createSearchHintList(data.hints, lang)
-        showSearchHintList()
+        hints = data.hints
       } else {
         console.error('请求接口失败, status=' + xhr.status)
       }
-
-      keydownKeepSilence()
+      createSearchHintList(hints, lang)
+      showSearchHintList()
+      keydownKeepSilence(inputSilence)
     } else {
       console.debug('正在请求')
     }
@@ -50,56 +54,27 @@ function showSearchHintList () {
 }
 
 /* 设置阻断事件间隔，过滤过于频繁的请求 */
-function keydownKeepSilence (microseconds = 200) {
+function keydownKeepSilence (inputSilence, microseconds = 200) {
   inputSilence = true
   setTimeout(function () {
     inputSilence = false
   }, microseconds)
 }
 
-var ulBox = null
-var input = document.querySelector('input')
-const DEFAULT_INPUT_PLACEHOLDER = input.placeholder
-var inputSilence = false
+/**
+ * 初始化搜索框
+ * @param {Element} input 搜索框元素
+ */
+function initInput (input) {
+  const DEFAULT_INPUT_PLACEHOLDER = input.placeholder
 
-// 点击输入框
-input.onclick = function (event) {
-  event.stopPropagation()
-
-  if (!this.value) {
-    this.placeholder = ''
-  } else {
-    showSearchHintList()
-  }
-}
-
-// 处理搜索输入
-input.oninput = function () {
-  if (!this.value) {
-    if (ulBox) {
+  // 点击页面其他地方，隐藏下拉列表
+  document.body.onclick = function () {
+    if (input.placeholder === '') {
+      input.placeholder = DEFAULT_INPUT_PLACEHOLDER
+    }
+    if (ulBox != null) {
       ulBox.style.display = 'none'
     }
-    return
-  }
-
-  if (!inputSilence) {
-    var pos = (location.pathname.startsWith('/about')) ? 2 : 1
-    var lang = location.pathname.split('/')[pos]
-    if (lang) {
-      lang = lang.toLowerCase()
-    } else {
-      lang = (lang !== 'en' && lang !== 'zh-hans') ? 'en' : lang
-    }
-    fetchSearchHintList(this.value.trim(), lang)
-  }
-}
-
-// 点击页面其他地方，隐藏下拉列表
-document.body.onclick = function (e) {
-  if (input.placeholder === '') {
-    input.placeholder = DEFAULT_INPUT_PLACEHOLDER
-  }
-  if (ulBox != null) {
-    ulBox.style.display = 'none'
   }
 }

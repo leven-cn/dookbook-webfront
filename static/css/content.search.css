@@ -8,6 +8,12 @@
   position: relative;
 }
 
+.search-hints-subject img {
+  width: 20px !important;
+  vertical-align: middle;
+  padding: 0 0.5rem 0 0;
+}
+
 #search > img {
   background: #333;
   padding: 8px 17px;
@@ -57,4 +63,23 @@
 
 #search ul li:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.search-results {
+  text-align: center;
+}
+
+.search-hints-subject {
+  float: left;
+  font-size: 16px;
+  color: rgb(28, 172, 244);
+  padding: 0 1rem 0 1.2rem;
+  font-style: normal;
+  font-weight: bold;
+  background: rgba(39, 39, 39, 0.8);
+}
+
+.search-hints-topic {
+  padding-left: 1rem;
+  font-size: 14px;
 }
