@@ -363,27 +363,6 @@ hr {
   left: 90px;
 }
 
-.search-hints-subject img {
-  width: 20px;
-  vertical-align: middle;
-  padding-right: 0.5rem;
-}
-
 #company-logo img {
   width: 9rem;
-}
-
-.search-hints-subject {
-  float: left;
-  font-size: 14px;
-  color: rgb(28, 172, 244);
-  padding: 0 1rem 0 1.2rem;
-  font-style: normal;
-  font-weight: bold;
-  background: rgba(39, 39, 39, 0.8);
-}
-
-.search-hints-topic {
-  padding-left: 1rem;
-  font-size: 14px;
 }

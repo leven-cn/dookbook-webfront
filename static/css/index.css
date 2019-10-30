@@ -272,7 +272,8 @@ header p:first-child {
 }
 
 nav {
-  width: 100%;
+  width: 60%;
+  padding: 0 20%;
   text-align: center;
   display: block;
   position: absolute;
@@ -282,19 +283,19 @@ nav {
 
 nav ul {
   display: none;
-  width: 60%;
+  width: 100%;
   text-align: left;
   margin-top: 1.5rem;
 }
 
 nav ul li {
-  border-bottom: 0.08rem solid #333;
+  border-bottom: 1px solid #333;
 }
 
 nav ul li a {
   box-sizing: border-box;
   width: 100%;
-  padding: 0 2rem 0 1rem;
+  padding-right: 2rem;
   display: inline-block;
   line-height: 3rem;
   color: rgba(255, 255, 255, 0.8);
@@ -304,7 +305,7 @@ nav ul li a {
 nav ul li a img {
   width: 1.2rem;
   vertical-align: middle;
-  padding-right: 1rem;
+  padding: 0 1rem;
   opacity: 0.9;
 }
 
@@ -328,19 +329,4 @@ nav ul li a em {
 
 nav ul li a:hover {
   background: rgba(100, 100, 100, 0.8);
-}
-
-.search-hints-subject {
-  float: left;
-  font-size: 14px;
-  color: rgb(28, 172, 244);
-  padding: 0 1rem 0 1.2rem;
-  font-style: normal;
-  font-weight: bold;
-  background: rgba(39, 39, 39, 0.8);
-}
-
-.search-hints-topic {
-  padding-left: 1rem;
-  font-size: 14px;
 }

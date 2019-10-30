@@ -9,7 +9,7 @@ function createSearchHintList (hints, lang) {
   }
 
   if (hints == null || hints.length === 0) {
-    ulBox.innerHTML = '<li><a href="#">暂无搜索结果</a></li>'
+    ulBox.innerHTML = '<li><a href="#" class="search-results">暂无搜索结果</a></li>'
   } else {
     ulBox.innerHTML = ''
     for (var i = 0; i < hints.length; i++) {
