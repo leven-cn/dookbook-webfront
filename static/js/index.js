@@ -107,7 +107,41 @@ function fontTwister () {
 
 /* 显示开场动画 */
 function showIntroduce (input) {
+  var openIntroduce = localStorage.getItem('openIntroduce')
   var envelope = document.getElementById('envelope')
+  var geek = document.getElementById('geek')
+  var popostmark = document.getElementById('postmark')
+
+  if (openIntroduce === '1') {
+    envelope.style.opacity = '0'
+    popostmark.style.opacity = '0'
+    geek.style.opacity = '0'
+
+    var logoHeader = document.querySelector('main > header')
+    logoHeader.style.display = 'block'
+    logoHeader.style.animation = '0.5s up linear'
+    logoHeader.style.animationFillMode = 'forwards'
+    var img = logoHeader.querySelectorAll('img')
+    for (var i = 0; i < img.length; i++) {
+      img[i].style.transition = 'all 1s'
+      img[i].style.width = '4%'
+      img[0].style.width = '5%'
+      img[5].style.width = '5%'
+    }
+    document.getElementById('developer-text').style.display = 'none'
+
+    // 显示输入框
+    var label = document.querySelector('main > label')
+    label.style.animation = '1.2s show linear'
+    label.style.animationFillMode = 'forwards'
+
+    // 显示页眉
+    var header = document.querySelector('body > header')
+    header.style.transition = 'all 1s'
+    header.style.opacity = '1'
+    return
+  }
+
   var canvas = showEnvelope()
   var timeoutID = setTimeout(function () {
     openEnvelope(envelope, canvas)
@@ -127,6 +161,8 @@ function showIntroduce (input) {
     }, 2000)
     clearTimeout(timeoutID)
   }
+
+  localStorage.setItem('openIntroduce', '1')
 }
 
 var input = document.querySelector('input')
