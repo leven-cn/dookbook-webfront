@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 
 /* 创建搜索提示下拉列表 */
-function createSearchHintList (ulBox, hints, lang) {
+function createSearchHintList (hints, lang) {
   if (ulBox == null) {
     ulBox = document.createElement('ul')
     document.getElementById('search').appendChild(ulBox)
@@ -19,7 +19,7 @@ function createSearchHintList (ulBox, hints, lang) {
 }
 
 /* 获取搜索提示列表 */
-function fetchSearchHintList (ulBox, queryText, lang) {
+function fetchSearchHintList (queryText, lang) {
   console.debug('fetchSearchHintList: queryText=' + queryText + ', lang=' + lang)
 
   var xhr = new XMLHttpRequest()
@@ -29,15 +29,16 @@ function fetchSearchHintList (ulBox, queryText, lang) {
   xhr.send()
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
+      var hints = []
       if (xhr.status === 200) {
         var data = JSON.parse(xhr.responseText)
         console.info('fetchSearchHintList: ' + data.hints)
-        createSearchHintList(ulBox, data.hints, lang)
-        showSearchHintList(ulBox)
+        hints = data.hints
       } else {
         console.error('请求接口失败, status=' + xhr.status)
       }
-
+      createSearchHintList(hints, lang)
+      showSearchHintList()
       keydownKeepSilence(inputSilence)
     } else {
       console.debug('正在请求')
@@ -46,7 +47,7 @@ function fetchSearchHintList (ulBox, queryText, lang) {
 }
 
 /* 显示搜索下拉列表 */
-function showSearchHintList (ulBox) {
+function showSearchHintList () {
   if (ulBox != null) {
     ulBox.style.display = 'block'
   }
@@ -64,7 +65,7 @@ function keydownKeepSilence (inputSilence, microseconds = 200) {
  * 初始化搜索框
  * @param {Element} input 搜索框元素
  */
-function initInput (input, ulBox) {
+function initInput (input) {
   const DEFAULT_INPUT_PLACEHOLDER = input.placeholder
 
   // 点击页面其他地方，隐藏下拉列表

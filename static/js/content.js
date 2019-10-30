@@ -4,7 +4,18 @@ var input = document.querySelector('input')
 var ulBox = null
 var inputSilence = false
 
-initInput(input, ulBox)
+initInput(input)
+
+// 点击输入框
+input.onclick = function (event) {
+  event.stopPropagation()
+
+  if (!this.value) {
+    this.placeholder = ''
+  } else {
+    showSearchHintList()
+  }
+}
 
 // 处理搜索输入
 input.oninput = function () {
@@ -23,17 +34,6 @@ input.oninput = function () {
     } else {
       lang = (lang !== 'en' && lang !== 'zh-hans') ? 'en' : lang
     }
-    fetchSearchHintList(ulBox, this.value.trim(), lang)
-  }
-}
-
-// 点击输入框
-input.onclick = function (event) {
-  event.stopPropagation()
-
-  if (!this.value) {
-    this.placeholder = ''
-  } else {
-    showSearchHintList(ulBox)
+    fetchSearchHintList(this.value.trim(), lang)
   }
 }

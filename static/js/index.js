@@ -130,24 +130,43 @@ function showIntroduce (input) {
 }
 
 var input = document.querySelector('input')
-var navBox = document.querySelector('nav')
-const DEFAULT_INPUT_PLACEHOLDER = input.placeholder
-showIntroduce(input)
+var ulBox = document.querySelector('nav')
+const ORIGIN_UL = ulBox.innerHTML
+var inputSilence = false
 
+showIntroduce(input)
+initInput(input)
+
+// 点击输入框
 input.onclick = function (event) {
   event.stopPropagation()
+
   if (!this.value) {
     this.placeholder = ''
-    navBox.style.display = 'block'
+    ulBox.innerHTML = ORIGIN_UL
+    ulBox.style.display = 'block'
+  } else {
+    showSearchHintList()
   }
 }
 
-// 点击页面其他地方，隐藏下拉列表
-document.body.onclick = function (e) {
-  if (input.placeholder === '') {
-    input.placeholder = DEFAULT_INPUT_PLACEHOLDER
+// 处理搜索输入
+input.oninput = function () {
+  if (!this.value) {
+    ulBox.innerHTML = ORIGIN_UL
+    ulBox.style.display = 'block'
+    return
   }
-  navBox.style.display = 'none'
+
+  if (!inputSilence) {
+    var lang = location.pathname.split('/')[1]
+    if (lang) {
+      lang = lang.toLowerCase()
+    } else {
+      lang = (lang !== 'en' && lang !== 'zh-hans') ? 'en' : lang
+    }
+    fetchSearchHintList(this.value.trim(), lang)
+  }
 }
 
 // 搜索建议下拉列表
