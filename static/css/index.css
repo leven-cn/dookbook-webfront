@@ -274,14 +274,14 @@ header p:first-child {
 nav {
   width: 100%;
   text-align: center;
-  display: none;
+  display: block;
   position: absolute;
   top: 50%;
   margin-top: 3.5rem;
 }
 
 nav ul {
-  display: inline-block;
+  display: none;
   width: 60%;
   text-align: left;
   margin-top: 1.5rem;
