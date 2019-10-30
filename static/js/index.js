@@ -130,7 +130,7 @@ function showIntroduce (input) {
 }
 
 var input = document.querySelector('input')
-var ulBox = document.querySelector('nav')
+var ulBox = document.querySelector('nav > ul')
 const ORIGIN_UL = ulBox.innerHTML
 var inputSilence = false
 
