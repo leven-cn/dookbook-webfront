@@ -31,8 +31,9 @@ input.oninput = function () {
     var lang = location.pathname.split('/')[pos]
     if (lang) {
       lang = lang.toLowerCase()
-    } else {
       lang = (lang !== 'en' && lang !== 'zh-hans') ? 'en' : lang
+    } else {
+      lang = 'en'
     }
     fetchSearchHintList(this.value.trim(), lang)
   }
