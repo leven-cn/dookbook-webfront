@@ -1,7 +1,7 @@
 // dookbook
-var h1 = document.querySelector('h1')
+var mainHeader = document.querySelector('main header')
 var mainElement = document.querySelector('main')
-var footer = document.querySelector('footer')
+var header = document.querySelector('body > header')
 var developer = document.getElementsByClassName('developer')[0]
 
 // 搜索建议下拉列表
@@ -40,7 +40,7 @@ ctx.fill()
 envelope.onclick = function () {
   automatic(envelope, geek, popostmark, c)
   setTimeout(function () {
-    animation(h1, mainElement, developer, footer)
+    animation(mainHeader, input, developer, header)
     inputSuggest(navBox, input, suggestList, mainElement)
   }, 2000)
   clearTimeout(times)
@@ -49,6 +49,6 @@ envelope.onclick = function () {
 var times = setTimeout(function () {
   automatic(envelope, geek, popostmark, c)
   setTimeout(function () {
-    animation(h1, mainElement, developer, footer)
+    animation(mainHeader, input, developer, header)
   }, 1000)
 }, 3000)
