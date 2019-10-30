@@ -47,7 +47,7 @@ canvas {
   top: 0;
 }
 
-.envelope {
+#envelope {
   width: 15%;
   position: absolute;
   left: 50%;
@@ -57,7 +57,7 @@ canvas {
   z-index: 1;
 }
 
-.postmark {
+#postmark {
   width: 20%;
   position: absolute;
   z-index: 1;
@@ -65,7 +65,7 @@ canvas {
   left: 7%;
 }
 
-.geek {
+#geek {
   width: 48%;
   position: absolute;
   top: 70%;
@@ -135,7 +135,7 @@ main header img {
   vertical-align: middle;
 }
 
-.developer {
+#developer {
   width: auto;
 }
 
@@ -204,22 +204,17 @@ main header img {
 
 input {
   display: inline-block;
-  width: 60%;
+  width: 100%;
   height: 56px;
   border: 0.08rem solid #fff;
   border-radius: 8px;
   box-sizing: border-box;
   padding-left: 1.88rem;
   font-size: 18px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -30%;
   z-index: 2;
   color: #fff;
   background: none;
   outline: none;
-  opacity: 0;
 }
 
 .keyup {
@@ -228,9 +223,13 @@ input {
 }
 
 label {
+  opacity: 0;
   width: 60%;
   display: inline-block;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -30%;
 }
 
 label::before {
@@ -260,7 +259,7 @@ input::placeholder {
   opacity: 0.5;
 }
 
-.logo-tail {
+#logo-tail {
   width: 3rem;
   opacity: 0.5;
   float: left;
