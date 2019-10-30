@@ -122,7 +122,6 @@ function showIntroduce (input) {
     setTimeout(function () {
       fontTwister()
 
-      // var navBox = document.querySelector('nav')
       // var suggestList = navBox.querySelectorAll('li')
       // inputSuggest(navBox, input, suggestList, mainElement)
     }, 2000)
@@ -131,7 +130,25 @@ function showIntroduce (input) {
 }
 
 var input = document.querySelector('input')
+var navBox = document.querySelector('nav')
+const DEFAULT_INPUT_PLACEHOLDER = input.placeholder
 showIntroduce(input)
+
+input.onclick = function (event) {
+  event.stopPropagation()
+  if (!this.value) {
+    this.placeholder = ''
+    navBox.style.display = 'block'
+  }
+}
+
+// 点击页面其他地方，隐藏下拉列表
+document.body.onclick = function (e) {
+  if (input.placeholder === '') {
+    input.placeholder = DEFAULT_INPUT_PLACEHOLDER
+  }
+  navBox.style.display = 'none'
+}
 
 // 搜索建议下拉列表
 input.onkeydown = function () {
