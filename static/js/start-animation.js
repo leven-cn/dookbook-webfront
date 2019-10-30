@@ -1,11 +1,11 @@
 /**
  * dookbook动画效果
  */
-function animation(h1, mainElement, developer, footer) {
+function animation(mainHeader, input, developer, header) {
   // 显示dookbook动画效果
   setTimeout(function () {
-    h1.style.display = 'block'
-    mainElement.style.display = 'block'
+    mainHeader.style.display = 'block'
+    input.style.display = 'block'
     developer.style.animation = '1.2s fuzzy linear'
     developer.style.animationFillMode = 'forwards'
     setTimeout(function () {
@@ -14,13 +14,13 @@ function animation(h1, mainElement, developer, footer) {
       developer.style.animationFillMode = 'forwards'
 
       setTimeout(function () {
-        // 整个h1再上移
-        h1.style.animation = '0.5s up linear'
-        h1.style.animationFillMode = 'forwards'
+        // 整个mainHeader再上移
+        mainHeader.style.animation = '0.5s up linear'
+        mainHeader.style.animationFillMode = 'forwards'
 
         setTimeout(function () {
           // dookbook 慢慢放大
-          var img = h1.querySelectorAll('img')
+          var img = mainHeader.querySelectorAll('img')
           for (var i = 0; i < img.length; i++) {
             img[i].style.transition = 'all 1s'
             img[i].style.width = '4%'
@@ -31,10 +31,10 @@ function animation(h1, mainElement, developer, footer) {
 
         // 输入框显示
         setTimeout(function () {
-          mainElement.style.animation = '1.2s show linear'
-          mainElement.style.animationFillMode = 'forwards'
-          footer.style.transition = 'all 1s'
-          footer.style.opacity = '1'
+          input.style.animation = '1.2s show linear'
+          input.style.animationFillMode = 'forwards'
+          header.style.transition = 'all 1s'
+          header.style.opacity = '1'
         }, 800)
       }, 1500)
     }, 1000)
