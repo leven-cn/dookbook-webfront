@@ -14,8 +14,7 @@ main button a {
 main button {
   background: none;
   border: 0;
-  margin: auto;
-  margin-bottom: 2.3rem;
+  margin: 2.3rem auto;
 }
 
 main button p {
@@ -45,6 +44,7 @@ table {
   width: 660px;
   display: inline-block;
   margin: 0 auto;
+  padding-top: 1.5rem;
 }
 
 table thead {
@@ -207,10 +207,6 @@ main button a:hover {
 main button a:hover svg {
   fill: #000;
   transition: all 2s;
-}
-
-.pb0 {
-  padding-bottom: 0;
 }
 
 .geek-img {
