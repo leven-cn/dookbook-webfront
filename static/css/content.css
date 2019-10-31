@@ -245,6 +245,16 @@ main ul li {
   background-size: 1.7rem;
 }
 
+main ul li ul,
+main ol li ol {
+  margin-top: 1rem;
+}
+
+main ul li p,
+main ol li p {
+  padding: 0;
+}
+
 main ol li {
   list-style-type: upper-roman;
   line-height: 2rem;

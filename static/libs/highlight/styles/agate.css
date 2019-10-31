@@ -19,7 +19,7 @@
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
+  padding: 0.8em 1rem;
   background: #333;
   color: white;
 }
