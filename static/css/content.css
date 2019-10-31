@@ -169,7 +169,7 @@ main article header {
   display: block;
   box-shadow: none;
   font-size: 14px;
-  margin-bottom: 3.4rem;
+  margin-bottom: 1rem;
   position: relative;
   padding-left: 4rem;
 }
@@ -187,7 +187,7 @@ main article header::before {
 
 main article p {
   line-height: 2.13rem;
-  padding-bottom: 1.9rem;
+  padding-top: 1.9rem;
 }
 
 main blockquote p {
@@ -200,7 +200,7 @@ blockquote {
   border-left: 0.4rem solid rgb(0, 63, 103);
   padding: 0.5rem 1rem;
   background: rgb(30, 30, 30);
-  margin-bottom: 1.8rem;
+  margin-top: 1.8rem;
 }
 
 main article header p {
@@ -219,7 +219,7 @@ main article header span:nth-child(2) {
 
 main article h2 {
   font-size: 28px;
-  margin: 2rem 0 2.2rem;
+  margin-top: 2.5rem;
   padding-bottom: 0.7rem;
   border-bottom: 0.06rem solid #eee;
   color: #eee;
@@ -227,14 +227,14 @@ main article h2 {
 
 main article h3 {
   font-size: 22px;
-  margin: 1rem 0;
+  margin-top: 2.5rem;
   color: #ddd;
 }
 
 main ul,
 main ol,
 main dl {
-  margin: 1.2rem 0 1.6rem;
+  margin-top: 1.9rem;
 }
 
 main ul li {
@@ -273,11 +273,11 @@ main dl dd {
 hr {
   width: 100%;
   border: 1px solid #ddd;
-  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .admonition {
-  margin-bottom: 2.2rem;
+  margin-top: 2.2rem;
   box-sizing: border-box;
   padding: 0.7rem 1.2rem;
   position: relative;
