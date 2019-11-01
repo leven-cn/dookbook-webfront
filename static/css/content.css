@@ -204,7 +204,7 @@ blockquote {
 }
 
 main article header p {
-  padding-bottom: 1rem;
+  padding: 0 0 1rem;
   color: #888;
   font-size: 14px;
 }
@@ -243,6 +243,16 @@ main ul li {
   margin-bottom: 1rem;
   background: url("/static/img/list.svg") no-repeat -3px 4px;
   background-size: 1.7rem;
+}
+
+main ul li ul,
+main ol li ol {
+  margin-top: 1rem;
+}
+
+main ul li p,
+main ol li p {
+  padding: 0;
 }
 
 main ol li {
