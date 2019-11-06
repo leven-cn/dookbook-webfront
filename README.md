@@ -38,7 +38,7 @@ Home: https://dookbook.info/
       - TOC `class ="toc"`
       - Footnote `<sub>`, `<a>`, and `<ol>` 脚注
       - Admonition `class="admonition note danger import admonition-title"` 提示
-      - Auto Wiki Links (Glossary) `<a href="..." class="glossary">` and `<article class="glossary">`
+      - Wiki Links (Glossary) `<a href="..." class="glossary">` and `<article class="glossary">`
     - Code Syntax Highlight (9)
       - **HTML**/**XML**
       - **CSS**
