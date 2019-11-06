@@ -16,7 +16,7 @@ Home: https://dookbook.info/
 
 - Dark Mode (Focus Mode)
 - Content Page
-  - Layout: TOC + Content + Logo + Contributions
+  - Layout: TOC + Content + Logo + Contributors + Search Box
   - Styles for Markdown Documents Rendering Engine
     - HTML Elements (32)
       - Heading `<h1>`-`<h6>`
@@ -48,8 +48,14 @@ Home: https://dookbook.info/
       - **Bash**
       - **INI**/**TOML**
     - Code Block Themes (89)
+  - Search Box (搜索框)
+  - Chinese / English Switching (中英文切换)
 - About Page
+  - Search Box (搜索框)
+- Index Page
+  - Opening Animation (开场动画)
+  - Search Box (搜索框)
 
 ### Browser Compability
 
-- Chrome 71+
+- Chrome 80+
