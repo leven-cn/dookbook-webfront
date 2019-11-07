@@ -4,7 +4,6 @@
 
 const MOUSE_WHEEL_DELTA = 30
 const MOUSE_WHEEL_TIMEOUT = 200
-const KEYDOWN_TIMEOUT = 300
 var navPos = 0
 
 /**
@@ -160,44 +159,6 @@ function inputSuggest (navBox, input, suggestList, mainElement) {
       if (!inputFlag) {
         return false
       }
-
-      // 构造搜索建议列表
-      var csrftoken = getCookie('csrftoken')
-      var xhr = new XMLHttpRequest()
-      xhr.setRequestHeader('Accept-Language', 'en') // TODO
-      // xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
-      xhr.setRequestHeader('X-CSRFToken', csrftoken)
-      xhr.open('GET', '/search/hints/?q=html', true)
-      xhr.send(JSON.stringify({
-        'query': searchText
-      }))
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            var data = JSON.parse(xhr.responseText)
-
-            var hints = data.hints
-            var lang = (location.pathname === '/zh-Hans/') ? 'zh-Hans' : 'en'
-            newUl.innerHTML = ''
-            for (var i = 0; i < hints.length; i++) {
-              var url = '/cookbook/?lang=' + lang + '&id=' + hints[i][1]
-              newUl.innerHTML += '<li><a href="' + url + '">' + hints[i][0] + '<em>' + hints[i][2] + '</em></a></li>'
-            }
-          } else {
-            newUl.innerHTML = '<li><a href="#">暂无搜索结果</a></li>'
-          }
-          navBox.style.display = 'none'
-          newBox.style.display = 'block'
-          var newSuggestList = newBox.querySelectorAll('li')
-          initInputSuggest(newSuggestList)
-        }
-      }
-
-      // 设置阻断事件间隔，过滤过于频繁的请求
-      inputFlag = false
-      setTimeout(function () {
-        inputFlag = true
-      }, KEYDOWN_TIMEOUT)
     } else {
       // 清空输入框的处理
       newBox.style.display = 'none'
