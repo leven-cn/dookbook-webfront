@@ -54,7 +54,7 @@ function showSearchHintList () {
 }
 
 /* 设置阻断事件间隔，过滤过于频繁的请求 */
-function keydownKeepSilence (inputSilence, microseconds = 200) {
+function keydownKeepSilence (inputSilence, microseconds = 100) {
   inputSilence = true
   setTimeout(function () {
     inputSilence = false
