@@ -13,7 +13,7 @@ function createSearchHintList (hints, lang) {
   } else {
     ulBox.innerHTML = ''
     for (var i = 0; i < hints.length; i++) {
-      ulBox.innerHTML += '<li><a href="/' + lang + '/' + hints[i].subject + '/' + hints[i].topic + '/"><span class="search-hints-subject"><img src="' + hints[i].subject_icon_url + '" alt="' + hints[i].subject + '">' + hints[i].subject + '</span><span class="search-hints-topic">' + hints[i].topic + '</span></a></li>'
+      ulBox.innerHTML += '<li><a href="/' + lang + '/' + hints[i].subject + '/' + hints[i].topic + '/"><span class="search-hints-subject"><img src="' + hints[i].subject_icon_url + '" alt="' + hints[i].subject + '">' + hints[i].subject + '</span><span class="search-hints-topic">' + hints[i].topics + '</span></a></li>'
     }
   }
 }
