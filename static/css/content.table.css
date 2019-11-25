@@ -9,14 +9,17 @@ table {
 }
 
 table th {
-  border-bottom: 0.06rem solid rgb(238, 238, 238);
+  border-bottom: 0.06rem solid #eee;
   font-weight: bold;
   color: #eee;
   font-size: 16px;
 }
 
+table tr:nth-child(even) {
+  background: rgb(42, 44, 53);
+}
+
 table td {
-  border-bottom: 0.06rem solid rgb(153, 153, 153);
-  color: rgb(245, 245, 245);
+  border-bottom: 0.06rem solid #454752;
   font-size: 14px;
 }
