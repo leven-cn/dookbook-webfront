@@ -1,7 +1,7 @@
 /* styles for <toc> of content page */
 
 .toc {
-  background: rgb(36, 37, 39);
+  background: rgb(42, 44, 53);
   width: 290px;
   height: calc(100% - 260px);
   position: absolute;
@@ -31,7 +31,7 @@
   width: 100%;
   display: inline-block;
   padding-left: 34px;
-  color: rgb(153, 153, 153);
+  color: #dfe5ef;
   box-sizing: border-box;
 }
 
@@ -53,10 +53,10 @@
 }
 
 .toc li.active a {
-  border-left: 3px solid rgb(153, 153, 153);
+  border-left: 3px solid #454855;
   color: rgb(238, 238, 238);
   padding-left: 31px;
-  background: rgb(48, 48, 49);
+  background: #353740;
 }
 
 .toc ul li a:hover {
@@ -98,6 +98,6 @@
 
 .toc li a.unfold,
 .toc li.active a.unfold {
-  background: url("/static/img/down.svg") no-repeat 253px 20px rgb(48, 48, 49);
+  background: url("/static/img/down.svg") no-repeat 253px 20px #353740;
   background-size: 0.8rem;
 }

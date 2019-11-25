@@ -15,7 +15,7 @@ button {
 }
 
 body {
-  background: #111;
+  background: #1d1e24;
   color: #aaa;
 }
 
@@ -75,6 +75,7 @@ kbd {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 2px;
   padding: 3px 5px;
+  color: #dfe5ef;
 }
 
 header {
@@ -86,7 +87,6 @@ header {
   top: 0;
   display: flex;
   z-index: 1;
-  background: #111;
 }
 
 /* logo */
@@ -108,7 +108,7 @@ header > nav {
 }
 
 article a {
-  color: rgb(28, 172, 244);
+  color: #1BA9F5;
 }
 
 header > nav a {
@@ -160,6 +160,7 @@ main article {
   flex-direction: column;
   font-size: 16px;
   overflow-y: auto;
+  overflow-x: hidden;
   border-right: 1px solid #333;
 }
 
@@ -197,9 +198,9 @@ main blockquote p {
 }
 
 blockquote {
-  border-left: 0.4rem solid rgb(0, 63, 103);
+  border-left: 0.4rem solid rgb(2, 85, 136);
   padding: 0.5rem 1rem;
-  background: rgb(30, 30, 30);
+  background: rgb(42, 44, 53);
   margin-top: 1.8rem;
 }
 
@@ -219,10 +220,10 @@ main article header span:nth-child(2) {
 
 main article h2 {
   font-size: 28px;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   padding-bottom: 0.7rem;
-  border-bottom: 0.06rem solid #eee;
-  color: #eee;
+  border-bottom: 0.06rem solid #fdd224;
+  color: #fdd224;
 }
 
 main article h3 {
@@ -238,16 +239,24 @@ main dl {
 }
 
 main ul li {
-  padding-left: 2.3rem;
-  line-height: 2rem;
-  margin-bottom: 1rem;
-  background: url("/static/img/list.svg") no-repeat -3px 4px;
-  background-size: 1.7rem;
+  padding-left: 2rem;
+  line-height: 1.8rem;
+  margin-bottom: 0.5rem;
+  background: url("/static/img/list.svg") no-repeat -3px 2px;
+  background-size: 1.55rem;
+}
+
+main ul li ul li {
+  line-height: 1.5rem;
+  background: url("/static/img/list.svg") no-repeat -3px 2px;
+  background-size: 1.4rem;
+  padding-left: 1.8rem;
+  margin: 0.5rem 0 0;
 }
 
 main ul li ul,
 main ol li ol {
-  margin-top: 1rem;
+  margin-top: 0rem;
 }
 
 main ul li p,
@@ -257,9 +266,13 @@ main ol li p {
 
 main ol li {
   list-style-type: upper-roman;
-  line-height: 2rem;
-  margin: 0 0 1rem 1.3rem;
-  padding-left: 1rem;
+  line-height: 1.8rem;
+  margin: 0 0 0.5rem 1rem;
+  padding-left: 0.6rem;
+}
+
+main ol li ol li {
+  margin: 0.5rem 0 0 1rem;
 }
 
 main ol li p {
@@ -291,6 +304,7 @@ hr {
   box-sizing: border-box;
   padding: 0.7rem 1.2rem;
   position: relative;
+  color: #dfe5ef;
 }
 
 .admonition-title {
@@ -305,6 +319,7 @@ hr {
 
 .warn {
   border: 0.25rem solid rgb(233, 173, 79);
+  background: rgba(233, 173, 79, 0.15);
 }
 
 .warn::before {
@@ -320,6 +335,7 @@ hr {
 
 .error {
   border: 0.25rem solid rgb(209, 0, 17);
+  background:rgba(209, 0, 17, 0.15);
 }
 
 .error::before {
@@ -335,6 +351,7 @@ hr {
 
 .info {
   border: 0.25rem solid rgb(238, 238, 238);
+  background:rgba(238, 238, 238, 0.15);
 }
 
 .info::before {
