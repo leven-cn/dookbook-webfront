@@ -164,6 +164,33 @@ main article {
   border-right: 1px solid #333;
 }
 
+/*滚动条样式*/
+main article::-webkit-scrollbar,
+.toc::-webkit-scrollbar,
+aside ul::-webkit-scrollbar,
+.hljs::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+main article::-webkit-scrollbar-thumb,
+.toc::-webkit-scrollbar-thumb,
+aside ul::-webkit-scrollbar-thumb,
+.hljs::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.2);
+}
+
+main article::-webkit-scrollbar-track,
+.toc::-webkit-scrollbar-track,
+aside ul::-webkit-scrollbar-track,
+.hljs::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  border-radius: 0;
+  background: rgba(0,0,0,0.1);
+}
+
 main article header {
   height: auto;
   line-height: 2rem;
