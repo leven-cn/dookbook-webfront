@@ -55,7 +55,7 @@ asideUL.onmouseover = function () {
 // 服务器消息推送
 var session = getQueryVariable('session')
 if (session) {
-  var evtSource = new EventSource('/github/oauth/notify/' + session + '/')
+  var evtSource = new EventSource('/helper/github/oauth/notify/' + session + '/')
   evtSource.onmessage = function (e) {
     console.log('message: ' + e.data)
   }
