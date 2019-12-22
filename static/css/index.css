@@ -364,3 +364,7 @@ nav ul li a:hover {
   text-align: center;
   opacity: 0.3;
 }
+
+.record a {
+  color: #fff;
+}
