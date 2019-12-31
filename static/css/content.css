@@ -111,6 +111,10 @@ article a {
   color: #1BA9F5;
 }
 
+article a strong {
+  color: #1BA9F5;
+}
+
 header > nav a {
   width: 30px;
   height: 30px;
