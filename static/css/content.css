@@ -260,7 +260,8 @@ main article h2 {
 main article h3 {
   font-size: 22px;
   margin-top: 2.5rem;
-  color: #ddd;
+  color: #fdd224;
+  opacity: 0.9;
 }
 
 main ul,
