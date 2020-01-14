@@ -8,8 +8,9 @@ var selectedSubmenu = null // 当前选中的子菜单
 
 for (var i = 0; i < tocList.length; i++) {
   var menu = tocList[i]
+  menu.querySelector('a').title = menu.querySelector('a').innerHTML
   if (menu.querySelector('ul')) {
-    menu.querySelector('a').classList.add('fold')
+    menu.classList.add('fold')
 
     // 子菜单点击事件处理
     var submenuList = menu.querySelectorAll('ul>li')
@@ -35,7 +36,7 @@ for (var i = 0; i < tocList.length; i++) {
       // 清空当前选中的菜单样式
       if (selectedMenu) {
         selectedMenu.classList.remove(selectedClassName)
-        selectedMenu.querySelector('a').classList.replace('unfold', 'fold')
+        selectedMenu.classList.replace('unfold', 'fold')
       }
 
       // 点击二级菜单清除子菜单样式
@@ -44,10 +45,10 @@ for (var i = 0; i < tocList.length; i++) {
       }
       this.classList.add(selectedClassName)
       selectedMenu = this
-      this.querySelector('a').classList.replace('fold', 'unfold')
+      this.classList.replace('fold', 'unfold')
     } else {
       this.classList.remove(selectedClassName)
-      this.querySelector('a').classList.replace('unfold', 'fold')
+      this.classList.replace('unfold', 'fold')
     }
   }
 }
