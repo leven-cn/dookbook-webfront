@@ -111,6 +111,10 @@ article a {
   color: #1BA9F5;
 }
 
+article a strong {
+  color: #1BA9F5;
+}
+
 header > nav a {
   width: 30px;
   height: 30px;
@@ -256,7 +260,8 @@ main article h2 {
 main article h3 {
   font-size: 22px;
   margin-top: 2.5rem;
-  color: #ddd;
+  color: #fdd224;
+  opacity: 0.9;
 }
 
 main ul,
@@ -271,6 +276,14 @@ main ul li {
   margin-bottom: 0.5rem;
   background: url("/static/img/list.svg") no-repeat -3px 2px;
   background-size: 1.55rem;
+}
+
+main ul li ol li {
+  background: none;
+}
+
+main ul li ol {
+  margin-top: 0.5rem;
 }
 
 main ul li ul li {
@@ -296,6 +309,18 @@ main ol li {
   line-height: 1.8rem;
   margin: 0 0 0.5rem 1rem;
   padding-left: 0.6rem;
+}
+
+main ol li ul li {
+  list-style-type: none;
+  padding-left: 1.8rem;
+  margin-left: 0;
+  background: url("/static/img/list.svg") no-repeat -3px 4px;
+  background-size: 1.4rem;
+}
+
+main ol li ul {
+  margin-top: 0.5rem;
 }
 
 main ol li ol li {

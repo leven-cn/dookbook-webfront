@@ -25,14 +25,18 @@
   font-size: 14px;
   padding: 0;
   margin: 0;
+  border-left: 3px solid rgb(42, 44, 53);
 }
 
 .toc ul li a {
-  width: 100%;
-  display: inline-block;
-  padding-left: 34px;
+  width: 250px;
+  display: block;
+  padding-left: 30px;
   color: #dfe5ef;
   box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .toc ul li ul {
@@ -52,10 +56,9 @@
   line-height: 2.1rem;
 }
 
-.toc li.active a {
+.toc li.active{
   border-left: 3px solid #454855;
   color: rgb(238, 238, 238);
-  padding-left: 31px;
   background: #353740;
 }
 
@@ -90,14 +93,13 @@
   display: block;
 }
 
-.toc li a.fold,
-.toc li.active a.fold {
+.toc li.fold {
   background: url("/static/img/right.svg") no-repeat 260px 18px;
   background-size: 0.45rem;
 }
 
-.toc li a.unfold,
-.toc li.active a.unfold {
-  background: url("/static/img/down.svg") no-repeat 253px 20px #353740;
+.toc li.unfold {
+  background: url("/static/img/down.svg") no-repeat 257px 20px #353740;
   background-size: 0.8rem;
+  border-left: 3px solid #454855;
 }
