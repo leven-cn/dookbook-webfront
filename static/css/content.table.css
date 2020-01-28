@@ -9,11 +9,11 @@ table {
 }
 
 table th {
-  border-bottom: 0.06rem solid #eee;
+  border-bottom: 1px solid #eee;
   font-weight: bold;
   color: #eee;
   font-size: 16px;
-  padding: 0 1.2rem;
+  padding-left: 1.2rem;
   box-sizing: border-box;
 }
 
@@ -24,6 +24,7 @@ table tr:nth-child(even) {
 table td {
   border-bottom: 0.06rem solid #454752;
   font-size: 14px;
-  padding: 0 1.2rem;
+  padding-left: 1.2rem;
   box-sizing: border-box;
+  min-width: 110px;
 }
