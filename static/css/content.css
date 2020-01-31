@@ -23,6 +23,7 @@ body,
 h1,
 h2,
 h3,
+h4,
 button,
 ul,
 ol,
@@ -262,6 +263,18 @@ main article h3 {
   margin-top: 2.5rem;
   color: #fdd224;
   opacity: 0.9;
+}
+
+main article h4 {
+  font-size: 18px;
+  padding-top: 1.5rem;
+  margin-bottom: -0.5rem;
+  color: #f1ca7c;
+  opacity: 0.8;
+}
+
+main article pre + h4 {
+  padding-top: 0.5rem;
 }
 
 main ul,
