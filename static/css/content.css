@@ -219,8 +219,8 @@ main article header::before {
 }
 
 main article p {
-  line-height: 2.13rem;
-  padding-top: 1.9rem;
+  line-height: 2rem;
+  padding-top: 1.2rem;
 }
 
 main blockquote p {
