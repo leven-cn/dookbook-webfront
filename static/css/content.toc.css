@@ -49,11 +49,17 @@
 }
 
 .toc ul li li {
+  width: 220px;
   border-left: 0.06rem solid #333;
   font-size: 12px;
-  overflow-y: auto;
+  text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
   line-height: 2.1rem;
+}
+
+.toc ul li li a {
+  width: auto;
 }
 
 .toc li.active{
