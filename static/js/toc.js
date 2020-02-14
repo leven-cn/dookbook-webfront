@@ -8,13 +8,20 @@ var selectedSubmenu = null // 当前选中的子菜单
 
 for (var i = 0; i < tocList.length; i++) {
   var menu = tocList[i]
-  menu.querySelector('a').title = menu.querySelector('a').innerHTML
+  var menuStr = menu.querySelector('a').innerHTML
+  var menuLeftArrow = menuStr.replace("&lt;","<");
+  var menuRightArrow = menuLeftArrow.replace("&gt;",">");
+  menu.querySelector('a').title = menuRightArrow
   if (menu.querySelector('ul')) {
     menu.classList.add('fold')
 
     // 子菜单点击事件处理
     var submenuList = menu.querySelectorAll('ul>li')
     for (var j = 0; j < submenuList.length; j++) {
+      var str = submenuList[j].querySelector('a').innerHTML
+      var leftArrow = str.replace("&lt;","<");
+      var rightArrow = leftArrow.replace("&gt;",">");
+      submenuList[j].querySelector('a').title = rightArrow
       submenuList[j].onclick = function (event) {
         event.stopPropagation()
         if (!this.classList.contains('selected')) {
