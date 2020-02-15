@@ -224,6 +224,10 @@ main article p {
   padding-top: 1.2rem;
 }
 
+main article img {
+  width: 100%;
+}
+
 main blockquote p {
   font-size: 18px;
   padding: 0.1rem;
