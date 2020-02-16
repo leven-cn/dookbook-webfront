@@ -93,18 +93,18 @@ header {
 /* logo */
 header > a > img {
   width: 250px;
-  padding: 25px 60px 0 70px;
+  padding: 25px 45px 0 50px;
   float: left;
 }
 
 header > nav {
-  width: 280px;
+  width: 251px;
   text-align: center;
-  margin: 24px 0 0 60px;
+  margin: 24px 0 0 44px;
   box-sizing: border-box;
   border-left: 1px solid #333;
   height: 40px;
-  padding-left: 45px;
+  padding-left: 30px;
   position: relative;
 }
 
@@ -158,10 +158,10 @@ main {
 
 main article {
   display: flex;
-  width: calc(100% - 280px);
+  width: calc(100% - 250px);
   height: 100%;
   box-sizing: border-box;
-  padding: 0 40px 3rem 380px;
+  padding: 0 40px 3rem 345px;
   flex-direction: column;
   font-size: 16px;
   overflow-y: auto;
