@@ -2,14 +2,14 @@
 
 .toc {
   background: rgb(42, 44, 53);
-  width: 290px;
+  width: 270px;
   height: calc(100% - 260px);
   position: absolute;
   left: 0;
   box-sizing: border-box;
-  margin-left: 50px;
+  margin-left: 40px;
   overflow-y: auto;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .toc ul {
@@ -29,9 +29,9 @@
 }
 
 .toc ul li a {
-  width: 250px;
+  width: 220px;
   display: block;
-  padding-left: 30px;
+  padding-left: 20px;
   color: #dfe5ef;
   box-sizing: border-box;
   overflow: hidden;
@@ -100,12 +100,12 @@
 }
 
 .toc li.fold {
-  background: url("/static/img/right.svg") no-repeat 260px 18px;
+  background: url("/static/img/right.svg") no-repeat 240px 18px;
   background-size: 0.45rem;
 }
 
 .toc li.unfold {
-  background: url("/static/img/down.svg") no-repeat 257px 20px #353740;
+  background: url("/static/img/down.svg") no-repeat 237px 20px #353740;
   background-size: 0.8rem;
   border-left: 3px solid #454855;
 }
