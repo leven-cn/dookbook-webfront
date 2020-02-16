@@ -5,7 +5,7 @@ aside {
   position: fixed;
   right: 0;
   flex: 1;
-  width: 280px;
+  width: 250px;
   box-sizing: border-box;
 }
 
@@ -71,7 +71,7 @@ aside button {
   background: none;
   border: 0;
   margin: 1.5rem auto;
-  width: 280px;
+  width: 250px;
 }
 
 aside button svg {

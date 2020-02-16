@@ -27,8 +27,5 @@ table td {
   padding: 0.5rem 0.5rem 0.5rem 1.2rem;
   box-sizing: border-box;
   line-height: 1.8rem;
-}
-
-table td:first-child {
-  width: 115px;
+  min-width: 115px;
 }
