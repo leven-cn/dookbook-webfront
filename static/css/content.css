@@ -224,6 +224,10 @@ main article p {
   padding-top: 1.2rem;
 }
 
+main article em {
+  padding: 0 4px 0 1px;
+}
+
 main article img {
   width: 100%;
 }
