@@ -1,0 +1,13 @@
+/**
+ * 维基百科-计算机科学页面
+*/
+
+header > a > img {
+  padding-top: 2px;
+}
+
+main article {
+  border-right: 0;
+  width: 100%;
+  padding-right: 30px;
+}
