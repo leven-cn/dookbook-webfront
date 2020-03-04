@@ -184,6 +184,6 @@ initSearch(searchInput, searchList, beian=beianElement)
 searchInput.onkeydown = function () {
   this.classList.add('keyup')
   setTimeout(function () {
-    this.classList.remove('keyup')
+    searchInput.classList.remove('keyup')
   }, 100)
 }
