@@ -12,14 +12,6 @@ function initSearch (searchInput, searchList, beian = null) {
   const DEFAULT_PLACEHOLDER = searchInput.placeholder
   const DEFAULT_SEARCH = searchList.innerHTML
 
-  // 点击页面其他地方，隐藏下拉列表
-  document.body.onclick = function () {
-    if (searchInput.placeholder === '') {
-      searchInput.placeholder = DEFAULT_PLACEHOLDER
-    }
-    searchList.style.display = 'none'
-  }
-
   // 点击输入框
   searchInput.onclick = function (event) {
     event.stopPropagation()
