@@ -41,35 +41,6 @@ function mouseoverEventHandler (suggestList) {
 }
 
 /**
- * 键盘按键事件处理
- * @param {Element[]} suggestList 下拉列表
- */
-function keydownEventHandler (suggestList) {
-  document.body.onkeydown = function (event) {
-    var e = event || window.event || arguments.callee.caller.arguments[0]
-
-    // 向上键
-    if (e && e.keyCode == 38) {
-      if (navPos > 0) {
-        handleSelectSuggest(suggestList, navPos--)
-      }
-    }
-
-    // 向下键
-    if (e && e.keyCode == 40) {
-      if (navPos < suggestList.length - 1) {
-        handleSelectSuggest(suggestList, navPos++)
-      }
-    }
-
-    // 回车跳转页面
-    if (e && e.keyCode == 13) { // 回车
-      window.location = suggestList[navPos].querySelector('a').href
-    }
-  }
-}
-
-/**
  * 鼠标滚轮或触控板滑动事件处理
  * @param {Element[]} suggestList 下拉列表
  * @param {BigInteger} delta 滑动距离感应阀值

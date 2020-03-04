@@ -1,6 +1,6 @@
-/* index page  */
+/* index page */
 
-/* 显示信封 */
+/* 首页 - 显示信封 */
 function showEnvelope () {
   var canvas = document.querySelector('#introduce canvas')
   var ctx = canvas.getContext('2d')
@@ -19,7 +19,7 @@ function showEnvelope () {
 }
 
 /**
- * 动画:开启印章
+ * 首页动画: 开启印章
  */
 function openEnvelope (envelope, canvas) {
   var geek = document.getElementById('geek')
@@ -56,7 +56,7 @@ function openEnvelope (envelope, canvas) {
 }
 
 /**
- * DOOKBOOK文字效果
+ * 首页 - DOOKBOOK文字效果
  */
 function fontTwister () {
   var logoHeader = document.querySelector('main > header')
@@ -105,8 +105,10 @@ function fontTwister () {
   }, 1000)
 }
 
-/* 显示开场动画 */
-function showIntroduce (input) {
+/**
+ * 首页 - 显示开场动画
+ */
+function showIntroduce () {
   var openIntroduce = localStorage.getItem('openIntroduce')
   var envelope = document.getElementById('envelope')
   var geek = document.getElementById('geek')
@@ -162,74 +164,26 @@ function showIntroduce (input) {
   localStorage.setItem('openIntroduce', '1')
 }
 
-var input = document.querySelector('input')
-var ulBox = document.querySelector('nav > ul')
-const ORIGIN_UL = ulBox.innerHTML
-const INPUT_SILENCE_TIME = 100  // in microseconds
-var inputSilence = false
+var searchInput = document.querySelector('input')
+var searchList = document.querySelector('nav > ul')
 var beianElement = document.getElementsByClassName("record")
-if ( beianElement.length != 0 ) {
+if (beianElement.length != 0) {
   beianElement = beianElement[0]
 } else {
   beianElement = null
 }
 
-showIntroduce(input)
-initInput(input)
+// const INPUT_COUNT_PER_SECOND = 5
+// var inputCount = 0  // 一段时间内的输入字符数
+// var inputTime = 0  // 输入计时
 
-// 点击输入框
-input.onclick = function (event) {
-  event.stopPropagation()
-
-  if (beianElement) {
-    beianElement.style.display = "none" 
-  }
-
-  if (!this.value) {
-    this.placeholder = ''
-    ulBox.innerHTML = ORIGIN_UL
-    ulBox.style.display = 'block'
-  } else {
-    showSearchHintList()
-  }
-}
-
-input.onblur = function () {
-  if(beianElement){
-    beianElement.style.display = "block" 
-  }
-}
-
-// 处理搜索输入
-input.oninput = function () {
-  if (!this.value) {
-    ulBox.innerHTML = ORIGIN_UL
-    ulBox.style.display = 'block'
-    return
-  }
-
-  if (!inputSilence) {
-    var lang = location.pathname.split('/')[1]
-    if (lang) {
-      lang = lang.toLowerCase()
-      lang = (lang !== 'en' && lang !== 'zh-hans') ? 'zh-hans' : lang
-    } else {
-      lang = 'zh-hans'
-    }
-    fetchSearchHintList(this.value.trim(), lang)
-
-    /* 设置阻断事件间隔，过滤过于频繁的请求 */
-    inputSilence = true
-    setTimeout(function () {
-      inputSilence = false
-    }, INPUT_SILENCE_TIME)
-  }
-}
+showIntroduce()
+initSearch(searchInput, searchList, beian=beianElement)
 
 // 搜索建议下拉列表
-input.onkeydown = function () {
-  input.classList.add('keyup')
+searchInput.onkeydown = function () {
+  this.classList.add('keyup')
   setTimeout(function () {
-    input.classList.remove('keyup')
+    this.classList.remove('keyup')
   }, 100)
 }
