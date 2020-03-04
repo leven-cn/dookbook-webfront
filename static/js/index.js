@@ -176,8 +176,9 @@ initInput(input)
 // 点击输入框
 input.onclick = function (event) {
   event.stopPropagation()
-  console.log(11)
-  document.getElementsByClassName("record")[0].style.display = "none"
+  if(document.getElementsByClassName("record").length != 0){
+    document.getElementsByClassName("record")[0].style.display = "none" 
+  }
   if (!this.value) {
     this.placeholder = ''
     ulBox.innerHTML = ORIGIN_UL
@@ -188,7 +189,9 @@ input.onclick = function (event) {
 }
 
 input.onblur = function () {
-  document.getElementsByClassName("record")[0].style.display = "block"
+  if(document.getElementsByClassName("record").length != 0){
+    document.getElementsByClassName("record")[0].style.display = "block" 
+  }
 }
 
 // 处理搜索输入
