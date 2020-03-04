@@ -32,7 +32,7 @@ function initSearch (searchInput, searchList, beian = null) {
     if (this.placeholder === '') {
       this.placeholder = DEFAULT_PLACEHOLDER
     }
-    this.style.display = 'none'
+    searchList.style.display = 'none'
 
     if(beian){
       beian.style.display = "block" 
