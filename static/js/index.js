@@ -155,9 +155,6 @@ function showIntroduce (input) {
     openEnvelope(envelope, canvas)
     setTimeout(function () {
       fontTwister()
-
-      // var suggestList = navBox.querySelectorAll('li')
-      // inputSuggest(navBox, input, suggestList, mainElement)
     }, 2000)
     clearTimeout(timeoutID)
   }
@@ -168,7 +165,14 @@ function showIntroduce (input) {
 var input = document.querySelector('input')
 var ulBox = document.querySelector('nav > ul')
 const ORIGIN_UL = ulBox.innerHTML
+const INPUT_SILENCE_TIME = 100  // in microseconds
 var inputSilence = false
+var beianElement = document.getElementsByClassName("record")
+if ( beianElement.length != 0 ) {
+  beianElement = beianElement[0]
+} else {
+  beianElement = null
+}
 
 showIntroduce(input)
 initInput(input)
@@ -176,9 +180,11 @@ initInput(input)
 // 点击输入框
 input.onclick = function (event) {
   event.stopPropagation()
-  if(document.getElementsByClassName("record").length != 0){
-    document.getElementsByClassName("record")[0].style.display = "none" 
+
+  if (beianElement) {
+    beianElement.style.display = "none" 
   }
+
   if (!this.value) {
     this.placeholder = ''
     ulBox.innerHTML = ORIGIN_UL
@@ -189,8 +195,8 @@ input.onclick = function (event) {
 }
 
 input.onblur = function () {
-  if(document.getElementsByClassName("record").length != 0){
-    document.getElementsByClassName("record")[0].style.display = "block" 
+  if(beianElement){
+    beianElement.style.display = "block" 
   }
 }
 
@@ -211,6 +217,12 @@ input.oninput = function () {
       lang = 'zh-hans'
     }
     fetchSearchHintList(this.value.trim(), lang)
+
+    /* 设置阻断事件间隔，过滤过于频繁的请求 */
+    inputSilence = true
+    setTimeout(function () {
+      inputSilence = false
+    }, INPUT_SILENCE_TIME)
   }
 }
 
