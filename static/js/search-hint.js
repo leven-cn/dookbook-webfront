@@ -51,7 +51,7 @@ function initSearch (searchInput, searchList, beian = null) {
       return
     }
 
-    fetchSearchHintList(this.value.trim(), getLanguage())
+    fetchSearchHintList(searchList, this.value.trim(), getLanguage())
 
     // if (!inputSilence) {
       /* 设置阻断事件间隔，过滤过于频繁的请求 */
