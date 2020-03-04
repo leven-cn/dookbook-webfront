@@ -37,13 +37,18 @@ function initSearch (searchInput, searchList, beian = null) {
 
   // 输入框失去焦点
   searchInput.onblur = function () {
+    if (this.placeholder === '') {
+      this.placeholder = DEFAULT_PLACEHOLDER
+    }
+    this.style.display = 'none'
+
     if(beian){
       beian.style.display = "block" 
     }
   }
 
   // 处理搜索输入
-  input.oninput = function () {
+  searchInput.oninput = function () {
     if (!this.value) {
       searchList.innerHTML = DEFAULT_SEARCH
       searchList.style.display = 'block'
