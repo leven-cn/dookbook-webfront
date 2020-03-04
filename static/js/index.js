@@ -165,6 +165,7 @@ function showIntroduce (input) {
 var input = document.querySelector('input')
 var ulBox = document.querySelector('nav > ul')
 const ORIGIN_UL = ulBox.innerHTML
+const INPUT_SILENCE_TIME = 100  // in microseconds
 var inputSilence = false
 var beianElement = document.getElementsByClassName("record")
 if ( beianElement.length != 0 ) {
@@ -179,9 +180,11 @@ initInput(input)
 // 点击输入框
 input.onclick = function (event) {
   event.stopPropagation()
+
   if (beianElement) {
     beianElement.style.display = "none" 
   }
+
   if (!this.value) {
     this.placeholder = ''
     ulBox.innerHTML = ORIGIN_UL
@@ -214,6 +217,12 @@ input.oninput = function () {
       lang = 'zh-hans'
     }
     fetchSearchHintList(this.value.trim(), lang)
+
+    /* 设置阻断事件间隔，过滤过于频繁的请求 */
+    inputSilence = true
+    setTimeout(function () {
+      inputSilence = false
+    }, INPUT_SILENCE_TIME)
   }
 }
 

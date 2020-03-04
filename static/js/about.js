@@ -4,6 +4,7 @@
 
 var input = document.querySelector('input')
 var ulBox = null
+const INPUT_SILENCE_TIME = 100  // in microseconds
 var inputSilence = false
 
 initInput(input)
@@ -38,6 +39,12 @@ input.oninput = function () {
       lang = 'en'
     }
     fetchSearchHintList(this.value.trim(), lang)
+
+    /* 设置阻断事件间隔，过滤过于频繁的请求 */
+    inputSilence = true
+    setTimeout(function () {
+      inputSilence = false
+    }, INPUT_SILENCE_TIME)
   }
 }
 
