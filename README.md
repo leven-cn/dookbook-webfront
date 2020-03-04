@@ -49,12 +49,15 @@ Home: https://dookbook.info/
       - **INI**/**TOML**
     - Code Block Themes (89)
   - Search Box (搜索框)
+  - Input Silence (输入静默技术)
   - Chinese / English Switching (中英文切换)
 - About Page
   - Search Box (搜索框)
+  - Input Silence (输入静默技术)
 - Index Page
   - Opening Animation (开场动画)
   - Search Box (搜索框)
+  - Input Silence (输入静默技术)
 
 ### Browser Compability
 
