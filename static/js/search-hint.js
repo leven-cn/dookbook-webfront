@@ -27,14 +27,16 @@ function initSearch (searchInput, searchList, beian = null) {
     searchList.style.display = 'block'
   }
 
-  // 输入框失去焦点
-  searchInput.onblur = function (event) {
-    event.stopPropagation()
-
-    if (this.placeholder === '') {
-      this.placeholder = DEFAULT_PLACEHOLDER
-    }
+  // 点击其他地方，下拉菜单隐藏
+  document.body.onclick = function () {
     searchList.style.display = 'none'
+  }
+
+  // 输入框失去焦点
+  searchInput.onblur = function () {
+    if (searchInput.placeholder === '') {
+      searchInput.placeholder = DEFAULT_PLACEHOLDER
+    }
 
     if(beian){
       beian.style.display = "block" 
