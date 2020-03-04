@@ -155,9 +155,6 @@ function showIntroduce (input) {
     openEnvelope(envelope, canvas)
     setTimeout(function () {
       fontTwister()
-
-      // var suggestList = navBox.querySelectorAll('li')
-      // inputSuggest(navBox, input, suggestList, mainElement)
     }, 2000)
     clearTimeout(timeoutID)
   }
@@ -169,6 +166,12 @@ var input = document.querySelector('input')
 var ulBox = document.querySelector('nav > ul')
 const ORIGIN_UL = ulBox.innerHTML
 var inputSilence = false
+var beianElement = document.getElementsByClassName("record")
+if ( beianElement.length != 0 ) {
+  beianElement = beianElement[0]
+} else {
+  beianElement = null
+}
 
 showIntroduce(input)
 initInput(input)
@@ -176,8 +179,8 @@ initInput(input)
 // 点击输入框
 input.onclick = function (event) {
   event.stopPropagation()
-  if(document.getElementsByClassName("record").length != 0){
-    document.getElementsByClassName("record")[0].style.display = "none" 
+  if (beianElement) {
+    beianElement.style.display = "none" 
   }
   if (!this.value) {
     this.placeholder = ''
@@ -189,8 +192,8 @@ input.onclick = function (event) {
 }
 
 input.onblur = function () {
-  if(document.getElementsByClassName("record").length != 0){
-    document.getElementsByClassName("record")[0].style.display = "block" 
+  if(beianElement){
+    beianElement.style.display = "block" 
   }
 }
 
