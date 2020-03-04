@@ -28,7 +28,9 @@ function initSearch (searchInput, searchList, beian = null) {
   }
 
   // 输入框失去焦点
-  searchInput.onblur = function () {
+  searchInput.onblur = function (event) {
+    event.stopPropagation()
+
     if (this.placeholder === '') {
       this.placeholder = DEFAULT_PLACEHOLDER
     }
