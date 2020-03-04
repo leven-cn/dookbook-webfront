@@ -71,7 +71,7 @@ table td:nth-child(even) {
   width: 30%;
 }
 
-table img {
+main article table img {
   width: 25px;
   vertical-align: middle;
 }
