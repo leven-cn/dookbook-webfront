@@ -176,13 +176,21 @@ initInput(input)
 // 点击输入框
 input.onclick = function (event) {
   event.stopPropagation()
-
+  if(document.getElementsByClassName("record").length != 0){
+    document.getElementsByClassName("record")[0].style.display = "none" 
+  }
   if (!this.value) {
     this.placeholder = ''
     ulBox.innerHTML = ORIGIN_UL
     ulBox.style.display = 'block'
   } else {
     showSearchHintList()
+  }
+}
+
+input.onblur = function () {
+  if(document.getElementsByClassName("record").length != 0){
+    document.getElementsByClassName("record")[0].style.display = "block" 
   }
 }
 
