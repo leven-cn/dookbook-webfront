@@ -157,12 +157,10 @@ main {
 }
 
 main article {
-  display: flex;
   width: calc(100% - 250px);
   height: 100%;
   box-sizing: border-box;
   padding: 0 40px 3rem 345px;
-  flex-direction: column;
   font-size: 16px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -451,7 +449,7 @@ hr {
 #company-logo p {
   line-height: 0;
   padding: 0.4rem 0 0.9rem;
-  font-size: 0.2rem;
+  font-size: 12px;
   color: #ddd;
 }
 
