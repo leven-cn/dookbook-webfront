@@ -3,19 +3,19 @@ article p {
 }
 
 main button a {
-  border: 1px solid rgb(218, 218, 218);
   display: inline-block;
   color: rgb(255, 255, 255);
   padding: 0.5rem 1.2rem;
-  border-radius: 5px;
   text-align: left;
 }
 
 main button {
   background: none;
-  border: 0;
-  margin: 2.3rem 0 1rem;
-  width: 100%;
+  border: 1px solid rgb(218, 218, 218);
+  border-radius: 5px;
+  margin: 2.3rem 0 1rem -5rem;
+  position: relative;
+  left: 50%;
 }
 
 main button p {
