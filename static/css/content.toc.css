@@ -6,6 +6,7 @@
   height: calc(100% - 260px);
   position: absolute;
   left: 0;
+  top: 120px;
   box-sizing: border-box;
   margin-left: 40px;
   overflow-y: auto;

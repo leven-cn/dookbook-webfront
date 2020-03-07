@@ -178,9 +178,3 @@ function inputBlurEvent(element){
     handleSelectSuggest(element,navPos);
   }
 }
-
-document.body.onclick = function(){
-  var prompt = input.getAttribute("data-prompt") // 获取data-prompt属性的值
-  input.placeholder = prompt;   // 点击 body 元素区域 input框的 placeholder 提示语恢复
-  navBox.style.display = "none";
-}

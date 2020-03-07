@@ -63,7 +63,7 @@ aside button a {
 aside button p {
   line-height: 0;
   padding: 0.4rem 0 0.8rem;
-  font-size: 0.2rem;
+  font-size: 12px;
   color: #ddd;
 }
 
