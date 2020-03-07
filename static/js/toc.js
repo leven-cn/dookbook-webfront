@@ -38,7 +38,7 @@ for (var i = 0; i < tocList.length; i++) {
   }
 
   // 展开或折叠子菜单
-  menu.onclick = function () {
+  tocList[i].onclick = function () {
     if (!this.classList.contains(selectedClassName)) {
       // 清空当前选中的菜单样式
       if (selectedMenu) {
