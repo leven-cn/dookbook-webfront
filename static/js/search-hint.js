@@ -3,7 +3,6 @@
 
 /**
  * 初始化搜索框
- *
  * @param {Element} searchInput 搜索输入框
  * @param {Element} searchList 搜索下拉列表
  * @param {Element} beian 备案信息
@@ -65,7 +64,6 @@ function initSearch (searchInput, searchList, beian = null) {
 
 /**
  * 获取当前页面语音
- *
  * @returns {String} 语言
  */
 function getLanguage() {
@@ -82,7 +80,6 @@ function getLanguage() {
 
 /**
  * 创建搜索提示下拉列表
- *
  * @param {Element} searchList 搜索下拉列表
  */
 function createSearchHintList (searchList, hints, lang) {
@@ -99,7 +96,6 @@ function createSearchHintList (searchList, hints, lang) {
 
 /** 
  * 获取搜索提示列表
- *
  * @param {Element} searchList 搜索下拉列表
  * @param {String} queryText 搜索文本
  * @param {String} lang 语言
