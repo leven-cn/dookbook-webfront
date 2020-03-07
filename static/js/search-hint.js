@@ -50,6 +50,11 @@ function initSearch (searchInput, searchList, beian = null) {
       return
     }
 
+    // 做输入减振，减少无效请求，减轻服务器压力
+    if (sessionStorage.getItem('InputDamper') == '1') {
+
+    }
+
     fetchSearchHintList(searchList, this.value.trim(), getLanguage())
 
     // if (!inputSilence) {
@@ -113,17 +118,40 @@ function fetchSearchHintList (searchList, queryText, lang) {
       var hints = []
       if (xhr.status === 200) {
         var data = JSON.parse(xhr.responseText)
-        console.info('fetchSearchHintList: ' + data.hints)
+        console.info('fetchSearchHintList, hints=' + data.hints)
         hints = data.hints
       } else {
-        console.error('请求接口失败, status=' + xhr.status)
+        console.error('fetchSearchHintList, status=' + xhr.status)
       }
       createSearchHintList(searchList, hints, lang)
       searchList.style.display = 'block'
     } else {
-      console.debug('正在请求搜索提示')
+      console.debug('fetchSearchHintList: connecting')
     }
   }
+}
+
+/**
+ * Enable Input Damper 启用输入减振 (输入阻尼), 减少无效请求，减轻服务器压力
+ * @param {number} boundary 边界条件
+ * @param {number} interval interval time in ms for Damper Timer 减振计时器时间间隔
+ * @param {String} storageKey key for (session) storage to store input frequency
+ * @param {number} initialFreq initial input frequency 输入频率初始值
+ */
+function enableInputDamper(boundary, interval = 1, storageKey = 'InputFreq', initialFreq = 0) {
+  sessionStorage.setItem('InputDamper', '1')
+  sessionStorage.setItem(storageKey, str(initialFreq))
+
+  setInterval(function (){
+    var freq = sessionStorage.getItem(storageKey)
+    if (freq == null) freq = initialFreq
+    freq = parseFloat(freq)
+
+    if (freq < boundary && freq > initialFreq) {
+      freq--
+    }
+    sessionStorage.setItem(storageKey, str(freq))
+  }, interval)
 }
 
 var _navPos = 0
