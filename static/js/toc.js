@@ -1,9 +1,9 @@
 /** TOC tree of content page */
 
 function handleTocHTML(menuLink) {
-  var text = menuLink.innerHTML.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">")
+  var text = menuLink.innerHTML.replace(/&amp;/g,"&")
   menuLink.innerHTML = text
-  menuLink.title = text
+  menuLink.title = text.replace(/&lt;/g,"<").replace(/&gt;/g,">")
 }
 
 const selectedClassName = 'active'
