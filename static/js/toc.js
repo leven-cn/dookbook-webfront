@@ -9,7 +9,8 @@ var selectedSubmenu = null // 当前选中的子菜单
 for (var i = 0; i < tocList.length; i++) {
   var menu = tocList[i]
   var menuStr = menu.querySelector('a').innerHTML
-  var menuLeftArrow = menuStr.replace("&lt;","<");
+  var menuAmp = menuStr.replace("&amp;","&")
+  var menuLeftArrow = menuAmp.replace("&lt;","<");
   var menuRightArrow = menuLeftArrow.replace("&gt;",">");
   menu.querySelector('a').title = menuRightArrow
   if (menu.querySelector('ul')) {
