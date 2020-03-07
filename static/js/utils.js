@@ -35,3 +35,22 @@ function getQueryVariable (param) {
   }
   return false
 }
+
+/**
+ * 服务器消息推送
+ * 
+ * @param {String} url SSE URL地址
+ * @param {String} eventName SSE事件名
+ * @param {Function} handler 消息处理函数
+ */
+function serverEvent(url, eventName, handler) {
+  var evtSource = new EventSource(url)
+  evtSource.onmessage = function (e) {
+    console.log('serverEvent message: ' + e.data)
+  }
+  evtSource.addEventListener(eventName, function (e) {
+    if (e.data) {
+      handler(e.data)
+    }
+  }, false)
+}
