@@ -62,3 +62,4 @@ Home: https://dookbook.info/
 ### Browser Compability
 
 - Chrome 80+
+- Safari 13+
