@@ -22,7 +22,7 @@ for (var i = 0; i < tocList.length; i++) {
     var subMenuList = tocList[i].querySelectorAll('ul>li')
     for (var j = 0; j < subMenuList.length; j++) {
       handleTocHTML(subMenuList[j].querySelector('a'))
-      submenuList[j].onclick = function (event) {
+      subMenuList[j].onclick = function (event) {
         event.stopPropagation()
         if (!this.classList.contains('selected')) {
           // 清除上一次选中的菜单样式
