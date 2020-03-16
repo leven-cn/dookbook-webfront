@@ -1,0 +1,32 @@
+/* styles for <table> of content page */
+
+table {
+  width: 100%;
+  line-height: 2.4rem;
+  border-spacing: 0;
+  margin-top: 1.3rem;
+  display: inline-block;
+  overflow-y: auto;
+}
+
+table th {
+  border-bottom: 0.06rem solid #eee;
+  font-weight: bold;
+  color: #eee;
+  padding-left: 0.8rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+table tr:nth-child(even) {
+  background: rgb(42, 44, 53);
+}
+
+table td {
+  border-bottom: 0.06rem solid #454752;
+  padding: 0.4rem 0 0.4rem 0.8rem;
+  box-sizing: border-box;
+  line-height: 1.3rem;
+  min-width: 5.9rem;
+  font-size: 0.8rem;
+}

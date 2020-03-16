@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Examples For Demonstration - Dookbook</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Dookbook (Developers' Cookbook, 开发者的日常菜谱)是面向开发人员的新一代知识引擎。提供海量、实用的代码示例片段，以及编程（工具）技巧。现在包含超过1200个菜谱，涵盖从编程语言Python, Web前端技术(HTML, CSS, JavaScript), Java, SQL, Go等, 到IT基础技术及各类开发库框架, 比如TCP/IP网络, Linux, nginx, redis, MySQL, Vue/React, Django/Flask等等."/>
+  <link rel="stylesheet" href="/static/css/m_content.css"/>
+  <link rel="stylesheet" href="/static/css/m_content.table.css"/>
+  <link rel="stylesheet" href="/static/css/m_content.toc.css"/>
+  <link rel="stylesheet" href="/static/libs/highlight/styles/agate.css"/>
+</head>
+
+<body>
+  <header>
+    <section id="search">
+      <span><img src="/static/img/search.svg" alt="Search"></span>
+      <input type="text" placeholder="Search here">
+    </section>
+    <button><img src="/static/img/m_more.svg" alt="更多"></button>
+    <nav>
+      <a href="/m_about/" title="About Dookbook®">i</a>
+      <a href="" title="切换至中文" lang="zh-Hans">中</a>
+      <a href="" title="Help">?</a>
+    </nav>
+  </header>
+
+  <button id="menu"><img src="/static/img/m_menu.svg" alt=""></button>
+
+  <main>
+    <article>
+      <header>
+        <h1>Examples For Demonstration</h1>
+        <p><span>Updated</span>:&nbsp;&nbsp;2019-06-01 03:32:47 (UTC)</p>
+      </header>
+
+      <div class="toc">
+<ul>
+<li><a href="#heading-2-1">HeadingHeadingHeadingHeadingHeadingHeadingHeadingHeading 2-1</a></li>
+<li><a href="#table">Table</a><ul>
+<li><a href="#table-with-column-alignment">Table with column alignment</a></li>
+</ul>
+</li>
+<li><a href="#heading-2-2">Heading 2-2</a><ul>
+<li><a href="#heading-3">Heading 3</a></li>
+</ul>
+</li>
+<li><a href="#list">List</a><ul>
+<li><a href="#unordered-list">Unordered List</a></li>
+<li><a href="#ordered-list">Ordered List</a></li>
+<li><a href="#definition-list">Definition List</a></li>
+</ul>
+</li>
+<li><a href="#block-quote">Block Quote</a></li>
+<li><a href="#horizontal-rule">Horizontal Rule</a></li>
+<li><a href="#abbreviation">AbbreviationAbbreviationAbbreviationAbbreviationAbbreviationAbbreviation</a></li>
+<li><a href="#head-id">Attribute List</a></li>
+<li><a href="#code-block">Code Block</a><ul>
+<li><a href="#html">HTML</a></li>
+<li><a href="#xml">XML</a></li>
+<li><a href="#css">CSS</a></li>
+<li><a href="#javascript">JavaScript</a></li>
+<li><a href="#python">Python</a></li>
+<li><a href="#markdown">Markdown</a></li>
+<li><a href="#bash">Bash</a></li>
+<li><a href="#initoml">INI/TOML</a></li>
+</ul>
+</li>
+<li><a href="#footnote">Footnote</a></li>
+<li><a href="#admonition">Admonition</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#image">Image</a></li>
+</ul>
+</div>
+<p><strong>HTML <code>&lt;p&gt;</code> 元素</strong>（或者说 <strong>HTML段落元素</strong>）表示文本的一个<strong>段落</strong>。该元素通常表现为一整块与相邻文本分离的文本，或以垂直的空白隔离或以首行缩进。另外，<code>&lt;p&gt;</code> 是<em>块级</em>元素。</p>
+<p>The second paragraph. Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<p>A <a href="https://dookbook.info/">link</a>. A <strong>strong text</strong>, <em>italic text</em>, <ins>inserted text</ins>, <del>deleted text</del>, <code>code text</code>,
+2<sup>10</sup>=1024, H<sub>2</sub>O=water.</p>
+<h2 id="heading-2-1">Heading 2-1<a class="headerlink" href="#heading-2-1" title="Permanent link">&para;</a></h2>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<h2 id="table">Table<a class="headerlink" href="#table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Command</th>
+<th>Hot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>Ctrl</kbd> + C</td>
+<td>Copy</td>
+<td>5</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + V</td>
+<td>Paste</td>
+<td>1</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + B</td>
+<td>Bold</td>
+<td>2</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + B</td>
+<td>Bold</td>
+<td>3</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + B</td>
+<td>Bold</td>
+<td>3</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + B</td>
+<td>Bold</td>
+<td>3</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + B</td>
+<td>Bold</td>
+<td>3</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + B</td>
+<td>Bold</td>
+<td>3</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + B</td>
+<td>Bold</td>
+<td>3</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + B</td>
+<td>Bold</td>
+<td>3</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + B</td>
+<td>Bold</td>
+<td>3</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + B</td>
+<td>Bold</td>
+<td>3</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + B</td>
+<td>Bold</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-with-column-alignment">Table with column alignment<a class="headerlink" href="#table-with-column-alignment" title="Permanent link">&para;</a></h3>
+
+<table>
+  <thead>
+  <tr>
+  <th align="left"></th>
+  <th align="left"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td align="left"><strong>内容分类</strong></td>
+  <td align="left"><em>流式内容</em>，<em>可触知的内容</em>。</td>
+  </tr>
+  <tr>
+  <td align="left"><strong>允许的内容</strong></td>
+  <td align="left"><em>短语内容</em>。</td>
+  </tr>
+  <tr>
+  <td align="left"><strong>标签省略</strong></td>
+  <td align="left">起始标签是必需的，结束标签在以下情形中可以省略。<code>&lt;p&gt;</code>元素后紧跟<a href="/zh-hans/webfrontend/<address>"><code>&lt;address&gt;</code></a>, <a href="/zh-hans/webfrontend/<article>"><code>&lt;article&gt;</code></a>, <a href="/zh-hans/webfrontend/<aside>"><code>&lt;aside&gt;</code></a>, <a href="/zh-hans/webfrontend/<blockquote>"><code>&lt;blockquote&gt;</code></a>, <a href="/zh-hans/webfrontend/<div>"><code>&lt;div&gt;</code></a>, <a href="/zh-hans/webfrontend/<dl>"><code>&lt;dl&gt;</code></a>, <a href="/zh-hans/webfrontend/<fieldset>"><code>&lt;fieldset&gt;</code></a>, <a href="/zh-hans/webfrontend/<footer>"><code>&lt;footer&gt;</code></a>, <a href="/zh-hans/webfrontend/<form>"><code>&lt;form&gt;</code></a>, <a href="/zh-hans/webfrontend/<h1>"><code>&lt;h1&gt;</code></a>, <a href="/zh-hans/webfrontend/<h2>"><code>&lt;h2&gt;</code></a>, <a href="/zh-hans/webfrontend/<h3>"><code>&lt;h3&gt;</code></a>, <a href="/zh-hans/webfrontend/<h4>"><code>&lt;h4&gt;</code></a>, <a href="/zh-hans/webfrontend/<h5>"><code>&lt;h5&gt;</code></a>, <a href="/zh-hans/webfrontend/<h6>"><code>&lt;h6&gt;</code></a>, <a href="/zh-hans/webfrontend/<header>"><code>&lt;header&gt;</code></a>, <a href="/zh-hans/webfrontend/<hr>"><code>&lt;hr&gt;</code></a>, <a href="/zh-hans/webfrontend/<menu>"><code>&lt;menu&gt;</code></a>, <a href="/zh-hans/webfrontend/<nav>"><code>&lt;nav&gt;</code></a>, <a href="/zh-hans/webfrontend/<ol>"><code>&lt;ol&gt;</code></a>, <a href="/zh-hans/webfrontend/<pre>"><code>&lt;pre&gt;</code></a>, <a href="/zh-hans/webfrontend/<section>"><code>&lt;section&gt;</code></a>, <a href="/zh-hans/webfrontend/<table>"><code>&lt;table&gt;</code></a>, <a href="/zh-hans/webfrontend/<ul>"><code>&lt;ul&gt;</code></a>或另一个<code>&lt;p&gt;</code>元素；或者父元素中没有其他内容了，而且父元素不是<a href="/zh-hans/webfrontend/<a>"><code>&lt;a&gt;</code></a>元素。</td>
+  </tr>
+  <tr>
+  <td align="left"><strong>允许的父元素</strong></td>
+  <td align="left">任何接受<em>流式内容</em>的元素</td>
+  </tr>
+  <tr>
+  <td align="left"><strong>DOM接口</strong></td>
+  <td align="left"><strong><code>HTMLParagraphElement</code></strong></td>
+  </tr>
+  </tbody>
+  </table>
+  <table>
+    <thead>
+    <tr>
+    <th align="left">-</th>
+    <th align="left"><code>&lt;form&gt;</code></th>
+    <th align="left"><code>&lt;input&gt;</code></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td align="left"><strong>内容分类</strong></td>
+    <td align="left"><em>流式内容</em>，<em>可触知内容</em>。</td>
+    <td align="left"><em>流式内容</em>，<em>列表型</em>，<em>可提交</em>，<em>可重置</em>，<em>表单相关元素</em>，<em>短语内容</em>。如果 <em><code>type</code></em> 属性不是 <em><code>hidden</code></em> 的，则为<em>可标记</em>元素，<em>可触知内容</em>。</td>
+    </tr>
+    <tr>
+    <td align="left"><strong>允许的内容</strong></td>
+    <td align="left"><em>流式内容</em>, 但是不包括 <code>&lt;form&gt;</code> 元素。</td>
+    <td align="left">无，这是一个 <strong><a href="/zh-hans/webfrontend/Empty_Element">空元素</a></strong>。</td>
+    </tr>
+    <tr>
+    <td align="left"><strong>标签省略</strong></td>
+    <td align="left">不允许，开始标签和结束标签都不能省略。</td>
+    <td align="left">必须具有开始标签，不得具有结束标签。</td>
+    </tr>
+    <tr>
+    <td align="left"><strong>允许的父元素</strong></td>
+    <td align="left">任何接受 <em>流式内容</em> 的元素。</td>
+    <td align="left">任何接受 <em>短语内容</em> 的元素。</td>
+    </tr>
+    <tr>
+    <td align="left"><strong>允许的 ARIA 角色</strong></td>
+    <td align="left"><code>group</code>, <code>presentation</code></td>
+    <td align="left"><strong><code>type=button</code></strong>: <code>link</code>, <code>menuitem</code>,<code>menuitemcheckbox</code>,<code>menuitemradio</code>,<code>radio</code>,<code>switch</code>,<code>tab</code><br><strong><code>checkbox</code></strong>: <code>button</code>,<code>menuitemcheckbox</code>,<code>option</code>,<code>switch</code><br><strong><code>image</code></strong>: <code>link</code>,<code>menuitem</code>,<code>menuitemcheckbox</code>,<code>menuitemradio</code>,<code>radio</code>,<code>switch</code><br><strong><code>radio</code></strong>: <code>menuitemradio</code><br><strong><code>color</code></strong>,<strong><code>file</code></strong>: None<br><strong><code>text</code></strong>,<strong><code>password</code></strong>,<strong><code>hidden</code></strong>,<strong><code>submit</code></strong>,<strong><code>reset</code></strong>,<strong><code>email</code></strong>,<strong><code>url</code></strong>,<strong><code>tel</code></strong>,<strong><code>search</code></strong>: 无<br><strong><code>number</code></strong>,<strong><code>range</code></strong>: 无<br><strong><code>time</code></strong>,<strong><code>date</code></strong>,<strong><code>datetime</code></strong>,<strong><code>datetime-local</code></strong>,<strong><code>month</code></strong>,<strong><code>week</code></strong>: 无</td>
+    </tr>
+    <tr>
+    <td align="left"><strong>DOM 接口</strong></td>
+    <td align="left"><strong><code>HTMLFormElement</code></strong></td>
+    <td align="left"><strong><code>HTMLInputElement</code></strong></td>
+    </tr>
+    </tbody>
+    </table>
+    <table>
+      <thead>
+      <tr>
+      <th align="left">-</th>
+      <th align="left"><code>&lt;ruby&gt;</code></th>
+      <th align="left"><code>&lt;rp&gt;</code></th>
+      <th align="left"><code>&lt;rt&gt;</code></th>
+      <th align="left"><code>&lt;rb&gt;</code></th>
+      <th align="left"><code>&lt;rtc&gt;</code></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td align="left"><strong>内容范畴</strong></td>
+      <td align="left"><em>流式内容</em>, <em>短语内容</em>, <em>可触达内容</em>。</td>
+      <td align="left">无</td>
+      <td align="left">无</td>
+      <td align="left">无</td>
+      <td align="left">无</td>
+      </tr>
+      <tr>
+      <td align="left"><strong>允许的内容</strong></td>
+      <td align="left"><em>短语内容</em></td>
+      <td align="left">文本</td>
+      <td align="left"><em>短语内容</em></td>
+      <td align="left">作为 <em><code>&lt;ruby&gt;</code></em> 元素的子元素。</td>
+      <td align="left"><em>短语内容</em> 或 <em><code>&lt;rt&gt;</code></em> 元素。</td>
+      </tr>
+      <tr>
+      <td align="left"><strong>标签省略</strong></td>
+      <td align="left">不允许，开始标签和结束标签都不能省略。</td>
+      <td align="left">不允许，开始标签和结束标签都不能省略。</td>
+      <td align="left">如果该元素紧跟 <code>&lt;rt&gt;</code> 或 <code>&lt;rp&gt;</code> 元素，或者父元素中没有其他内容，结束标签可省略。</td>
+      <td align="left">如果该元素紧跟 <code>&lt;rt&gt;</code>、<code>&lt;rtc&gt;</code> 或 <code>&lt;rp&gt;</code> 元素，或者父元素中没有其他内容，结束标签可省略。</td>
+      <td align="left">如果该元素紧跟 <code>&lt;rt&gt;</code>、<code>&lt;rtc&gt;</code> 或 <code>&lt;rb&gt;</code> 元素，或者父元素中没有其他内容，结束标签可省略。</td>
+      </tr>
+      <tr>
+      <td align="left"><strong>允许的父元素</strong></td>
+      <td align="left">任意可接受 <em>短语内容</em> 的元素。</td>
+      <td align="left"><em><code>&lt;ruby&gt;</code></em> 元素。 <code>&lt;rp&gt;</code> 必须位于 <em><code>&lt;rt&gt;</code></em> 的前面和后面。</td>
+      <td align="left"><em><code>&lt;ruby&gt;</code></em> 元素。</td>
+      <td align="left"><em><code>&lt;ruby&gt;</code></em> 元素。</td>
+      <td align="left"><em><code>&lt;ruby&gt;</code></em> 元素。</td>
+      </tr>
+      <tr>
+      <td align="left"><strong>DOM 接口</strong></td>
+      <td align="left"><strong><code>HTMLElement</code></strong></td>
+      <td align="left"><strong><code>HTMLElement</code></strong></td>
+      <td align="left"><strong><code>HTMLElement</code></strong></td>
+      <td align="left"><strong><code>HTMLElement</code></strong></td>
+      <td align="left"><strong><code>HTMLElement</code></strong></td>
+      </tr>
+      </tbody>
+      </table>
+<h2 id="heading-2-2">Heading 2-2<a class="headerlink" href="#heading-2-2" title="Permanent link">&para;</a></h2>
+<p>something about heading 2</p>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<h3 id="heading-3">Heading 3<a class="headerlink" href="#heading-3" title="Permanent link">&para;</a></h3>
+<p>something about heading 3</p>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<h2 id="list">List<a class="headerlink" href="#list" title="Permanent link">&para;</a></h2>
+<p>Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts).</p>
+<h3 id="unordered-list">Unordered List<a class="headerlink" href="#unordered-list" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Windows lets you perform most tasks directly from the keyboard
+  <ul>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+  </ul>
+</li>
+<li>Windows lets you perform most tasks directly from the keyboard
+  <ol>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+  </ol>
+</li>
+<li>Windows lets you perform most tasks directly from the keyboard</li>
+</ul>
+<h3 id="ordered-list">Ordered List<a class="headerlink" href="#ordered-list" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Windows lets you perform most tasks directly from the keyboard
+  <ul>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+  </ul>
+</li>
+<li>Windows lets you perform most tasks directly from the keyboard
+  <ol>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+    <li>Windows</li>
+  </ol>
+</li>
+<li>Windows lets you perform most tasks directly from the keyboard</li>
+</ol>
+<h3 id="definition-list">Definition List<a class="headerlink" href="#definition-list" title="Permanent link">&para;</a></h3>
+<dl>
+<dt>Apple</dt>
+<dd>Pomaceous fruit of plants of the genus Malus in
+the family Rosaceae.</dd>
+<dt>Orange</dt>
+<dd>The fruit of an evergreen tree of the genus Citrus.</dd>
+</dl>
+<h2 id="block-quote">Block Quote<a class="headerlink" href="#block-quote" title="Permanent link">&para;</a></h2>
+<p>As Kanye West said:</p>
+<blockquote>
+<p>We're living the future so the present is our past. 你好,世界！</p>
+</blockquote>
+<h2 id="horizontal-rule">Horizontal Rule<a class="headerlink" href="#horizontal-rule" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="abbreviation">Abbreviation<a class="headerlink" href="#abbreviation" title="Permanent link">&para;</a></h2>
+<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification
+is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+<h2 id="head-id">Attribute List<a class="headerlink" href="#head-id" title="Permanent link">&para;</a></h2>
+<p attrname="value" class="someclass" id="someid">Windows lets you perform most tasks directly from the keyboard. This page lists out the default bindings (keyboard shortcuts). Windows lets you perform most tasks directly from the keyboard. This page lists out the <strong attrname="value">default</strong> bindings (keyboard shortcuts).</p>
+<h2 id="code-block">Code Block<a class="headerlink" href="#code-block" title="Permanent link">&para;</a></h2>
+<h3 id="html"><abbr title="Hyper Text Markup Language">HTML</abbr><a class="headerlink" href="#html" title="Permanent link">&para;</a></h3>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Title&lt;/title&gt;
+  &lt;style&gt;body {width: 500px;}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p checked class=&quot;title&quot; id='title'&gt;Title&lt;/p&gt;
+  &lt;!-- here goes the rest of the page --&gt;
+
+  &lt;script&gt;
+    function $init() {return true;}
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="xml">XML<a class="headerlink" href="#xml" title="Permanent link">&para;</a></h3>
+<pre><code class="xml">&lt;xml&gt;
+  &lt;tag1 attr=&quot;value&quot;&gt;tag-1 text&lt;/tag&gt;
+&lt;/xml&gt;
+</code></pre>
+
+<h3 id="css">CSS<a class="headerlink" href="#css" title="Permanent link">&para;</a></h3>
+<pre><code class="css">@font-face {
+  font-family: Chunkfive; src: url('Chunkfive.otf');
+}
+
+body, .usertext {
+  color: #F0F0F0; background: #600;
+  font-family: Chunkfive, sans;
+}
+
+@import url(print.css);
+@media print {
+  a[href^=http]::after {
+    content: attr(href)
+  }
+}
+</code></pre>
+
+<h3 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h3>
+<pre><code class="javascript">function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class=&quot;${cls}&quot;`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i &lt; classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+}
+
+export  $initHighlight;
+</code></pre>
+
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<pre><code class="python">import sys
+
+print('hello')
+sys.exit()
+
+@requires_authorization
+def somefunc(param1='', param2=0):
+    r'''A docstring'''
+    if param1 &gt; param2: # interesting
+        print 'Gre\'ater'
+    return (param2 - param1 + 1 + 0b10l) or None
+
+class SomeClass:
+    pass
+
+&gt;&gt;&gt; message = '''interpreter
+... prompt'''
+</code></pre>
+
+<h3 id="markdown">Markdown<a class="headerlink" href="#markdown" title="Permanent link">&para;</a></h3>
+<pre><code class="markdown">## Heading 2
+
+### Heading 3
+
+A paragraph with a **strong** text and *italic* text.
+</code></pre>
+
+<h3 id="bash">Bash<a class="headerlink" href="#bash" title="Permanent link">&para;</a></h3>
+<pre><code class="bash">#!/bin/bash
+
+###### CONFIG
+ACCEPTED_HOSTS=&quot;/root/.hag_accepted.conf&quot;
+BE_VERBOSE=false
+
+if [ &quot;$UID&quot; -ne 0 ]
+then
+ echo &quot;Superuser rights required&quot;
+ exit 2
+fi
+
+genApacheConf(){
+ echo -e &quot;# Host ${HOME_DIR}$1/$2 :&quot;
+}
+</code></pre>
+
+<h3 id="initoml">INI/TOML<a class="headerlink" href="#initoml" title="Permanent link">&para;</a></h3>
+<pre><code class="toml">; boilerplate
+[package]
+name = &quot;some_name&quot;
+authors = [&quot;Author&quot;]
+description = &quot;This is \
+a description&quot;
+
+[[lib]]
+name = ${NAME}
+default = True
+auto = no
+counter = 1_000
+</code></pre>
+
+<h2 id="footnote">Footnote<a class="headerlink" href="#footnote" title="Permanent link">&para;</a></h2>
+<p>Footnotes have a label<sup id="fnref:label1"><a class="footnote-ref" href="#fn:label1">1</a></sup> and the footnote's content<sup id="fnref:label2"><a class="footnote-ref" href="#fn:label2">2</a></sup>.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:label1">
+<p>A footnote on the label: "label1".&#160;<a class="footnote-backref" href="#fnref:label1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:label2">
+<p>A footnote on the label: "label2".&#160;<a class="footnote-backref" href="#fnref:label2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+<h2 id="admonition">Admonition<a class="headerlink" href="#admonition" title="Permanent link">&para;</a></h2>
+<div class="admonition warn">
+<p class="admonition-title">Warn</p>
+<p>You should note that the title will be automatically capitalized.</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Don't try this at home</p>
+<p>You should note that the title will be automatically capitalized.</p>
+</div>
+<div class="admonition info">
+<p>This is a admonition box without a title.</p>
+</div>
+<h2 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h2>
+<p>This is a glossary: Computer Programming, Computer programming, computer pRogramming.</p>
+<h2 id="image">Image<a class="headerlink" href="#image" title="Permanent link">&para;</a></h2>
+<p><img alt="An image" src="/static/img/geek-en.svg"></p>
+    </article>
+  </main>
+
+  <div class="fold unfold" hidden></div><!-- enable Django's static CSS style -->
+
+  <script src="/static/js/m_toc.js"></script>
+  <script src="/static/js/search-hint.js"></script>
+  <script src="/static/js/m_content.js"></script>
+  <script src="/static/libs/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
