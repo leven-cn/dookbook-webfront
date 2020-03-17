@@ -117,12 +117,11 @@ article a strong {
 }
 
 header > nav a {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  padding: 3px;
+  width: 33px;
+  height: 33px;
+  line-height: 35px;
   border: 1px solid #fff;
-  border-radius: 100%;
+  border-radius: 33px;
   color: #fff;
   float: left;
   margin: 0 15px;
@@ -132,13 +131,12 @@ article a:hover {
   text-decoration: underline;
 }
 
-header > nav a:last-child {
-  font-size: 23px;
+header > nav a:first-child {
+  font-size: 1.3rem;
 }
 
-header > nav a:first-child {
-  font-size: 22px;
-  font-weight: bold;
+header > nav a:last-child {
+  font-size: 1.2rem;
 }
 
 header > nav a img {
