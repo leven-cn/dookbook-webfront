@@ -6,9 +6,9 @@ Dookbook's Web front-end.
 
 ## Dookbook
 
-Introduction: https://dookbook.info/about/
+Introduction: <https://dookbook.info/about/>
 
-Home: https://dookbook.info/
+Home: <https://dookbook.info/>
 
 ## Features
 
@@ -49,17 +49,16 @@ Home: https://dookbook.info/
       - **INI**/**TOML**
     - Code Block Themes (89)
   - Search Box (搜索框)
-  - Input Silence (输入静默技术)
   - Chinese / English Switching (中英文切换)
 - About Page
   - Search Box (搜索框)
-  - Input Silence (输入静默技术)
 - Index Page
   - Opening Animation (开场动画)
   - Search Box (搜索框)
-  - Input Silence (输入静默技术)
+- Input Damper™ (输入减振技术)
 
 ### Browser Compability
 
 - Chrome 80+
 - Safari 13+
+- FireFox 72+
