@@ -155,10 +155,6 @@ meter::-webkit-meter-optimum-value {
   background: var(--meter-optimum-background);
 }
 
-:-moz-meter-optimum::-moz-meter-bar {
-  -moz-optimal: red;
-}
-
 /* 凑合 */
 meter::-webkit-meter-suboptimum-value {
   border-radius: var(--meter-border-radius);
