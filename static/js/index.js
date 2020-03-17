@@ -23,15 +23,15 @@ function showEnvelope () {
  */
 function openEnvelope (envelope, canvas) {
   var geek = document.getElementById('geek')
-  var popostmark = document.getElementById('postmark')
+  var postmark = document.getElementById('postmark')
 
   // 印章消失
   envelope.style.transition = 'all 2s'
   envelope.style.opacity = '0'
 
   // 邮戳
-  popostmark.style.transition = 'all 2s'
-  popostmark.style.opacity = '0'
+  postmark.style.transition = 'all 2s'
+  postmark.style.opacity = '0'
 
   // 极客
   geek.style.transition = 'all 2s'
@@ -39,7 +39,7 @@ function openEnvelope (envelope, canvas) {
 
   setTimeout(function () {
     envelope.style.display = 'none'
-    popostmark.style.display = 'none'
+    postmark.style.display = 'none'
     geek.style.display = 'none'
 
     // 三角形阴影变白慢慢消失
@@ -112,11 +112,11 @@ function showIntroduce () {
   var openIntroduce = localStorage.getItem('openIntroduce')
   var envelope = document.getElementById('envelope')
   var geek = document.getElementById('geek')
-  var popostmark = document.getElementById('postmark')
+  var postmark = document.getElementById('postmark')
 
   if (openIntroduce === '1') {
     envelope.style.opacity = '0'
-    popostmark.style.opacity = '0'
+    postmark.style.opacity = '0'
     geek.style.opacity = '0'
 
     var logoHeader = document.querySelector('main > header')
