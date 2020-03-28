@@ -5,3 +5,30 @@
 header > a > img {
   padding-top: 2px;
 }
+
+.toc ul {
+  height: calc(100% - 66px);
+  overflow-y: auto;
+}
+
+/*滚动条样式*/
+.toc ul::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.toc ul::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.2);
+}
+
+.toc ul::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  border-radius: 0;
+  background: rgba(0,0,0,0.1);
+}
+
+main article img {
+  width: auto;
+}
