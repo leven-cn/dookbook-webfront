@@ -323,7 +323,7 @@ main ol li p {
 }
 
 main ol li {
-  list-style-type: upper-roman;
+  list-style-type: decimal;
   line-height: 1.8rem;
   margin: 0 0 0.5rem 1rem;
   padding-left: 0.6rem;
