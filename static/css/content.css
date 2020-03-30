@@ -288,12 +288,14 @@ main dl {
   margin-top: 1.9rem;
 }
 
+main ul {
+  margin-left: 1.3rem;
+}
+
 main ul li {
-  padding-left: 2rem;
   line-height: 1.8rem;
   margin-bottom: 0.5rem;
-  background: url("/static/img/list.svg") no-repeat -3px 2px;
-  background-size: 1.55rem;
+  list-style: square;
 }
 
 main ul li ol li {
@@ -306,9 +308,7 @@ main ul li ol {
 
 main ul li ul li {
   line-height: 1.5rem;
-  background: url("/static/img/list.svg") no-repeat -3px 2px;
-  background-size: 1.4rem;
-  padding-left: 1.8rem;
+  list-style: square;
   margin: 0.5rem 0 0;
 }
 
@@ -325,16 +325,14 @@ main ol li p {
 main ol li {
   list-style-type: decimal;
   line-height: 1.8rem;
-  margin: 0 0 0.5rem 1rem;
-  padding-left: 0.6rem;
+  margin: 0 0 0.5rem 1.1rem;
+  padding-left: 0.29rem;
 }
 
 main ol li ul li {
   list-style-type: none;
-  padding-left: 1.8rem;
   margin-left: 0;
-  background: url("/static/img/list.svg") no-repeat -3px 4px;
-  background-size: 1.4rem;
+  list-style: square;
 }
 
 main ol li ul {
@@ -342,7 +340,8 @@ main ol li ul {
 }
 
 main ol li ol li {
-  margin: 0.5rem 0 0 1rem;
+  margin: 0.5rem 0 0 1.1rem;
+  padding-left: 0.4rem;
 }
 
 main ol li p {

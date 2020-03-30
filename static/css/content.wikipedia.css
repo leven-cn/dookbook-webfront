@@ -29,6 +29,32 @@ header > a > img {
   background: rgba(0,0,0,0.1);
 }
 
+main article h2 {
+  margin-top: 2.5rem;
+}
+
+main article h3 {
+  margin-top: 2rem;
+}
+
 main article img {
   width: auto;
+  padding: 0.5rem 0;
+}
+
+main dl {
+  margin-top: 0;
+}
+
+main dl dt {
+  margin-top: 1.7rem;
+  padding-bottom: 10px;
+}
+
+main dl dd {
+  padding-bottom: 0;
+}
+
+main dl dd ul {
+  margin-top: 0.4rem;
 }
