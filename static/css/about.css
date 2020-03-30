@@ -126,9 +126,10 @@ aside ul li {
   width: 250px;
   font-size: 20px;
   line-height: 40px;
-  padding-bottom: 30px;
+  padding: 0 0 30px 1.6rem;
   float: left;
   background: none;
+  box-sizing: border-box;
 }
 
 aside ul li svg {
