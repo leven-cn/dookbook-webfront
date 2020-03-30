@@ -29,6 +29,52 @@ header > a > img {
   background: rgba(0,0,0,0.1);
 }
 
+main article h2 {
+  margin-top: 2.5rem;
+}
+
+main article h3 {
+  margin-top: 2rem;
+}
+
 main article img {
   width: auto;
+}
+
+main dl {
+  margin-top: 0;
+}
+
+main dl dt {
+  padding-top: 1.7rem;
+  padding-bottom: 10px;
+}
+
+main dl dd {
+  padding-bottom: 0;
+}
+
+main dl dd ul {
+  margin-top: 0.4rem;
+}
+
+figure {
+  width: 220px;
+  float: left;
+  text-align: center;
+  border: 1px solid #666;
+  margin: 1.9rem 1rem 0 0;
+  background: rgb(42, 44, 53);
+}
+
+figure img {
+  box-sizing: border-box;
+  padding: 0.7rem 1rem;
+}
+
+figcaption {
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-top: 1px solid #666;
+  font-size: 14px;
 }
