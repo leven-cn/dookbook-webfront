@@ -12,6 +12,29 @@
   <link rel="stylesheet" href="/static/css/content.table.css"/>
   <link rel="stylesheet" href="/static/css/content.footnote.css"/>
   <link rel="stylesheet" href="/static/libs/highlight/styles/agate.css"/>
+  <style>
+  .toc li.fold {
+    background: url("{% static 'img/right.svg' %}") no-repeat 240px 18px;
+    background-size: 0.45rem;
+  }
+
+  .toc li.unfold {
+    background: url("{% static 'img/down.svg' %}") no-repeat 237px 20px #353740;
+    background-size: 0.8rem;
+  }
+
+  .warn::before {
+    background: url("{% static 'img/admonition.png' %}") no-repeat left top;
+  }
+
+  .error::before {
+    background: url("{% static 'img/admonition.png' %}") no-repeat left -10px;
+  }
+
+  .info::before {
+    background: url("{% static 'img/admonition.png' %}") no-repeat left -5px;
+  }
+  </style>
 </head>
 
 <body>
@@ -437,6 +460,7 @@ counter = 1_000
   <script src="/static/js/search-hint.js"></script>
   <script src="/static/js/content.js"></script>
   <script src="/static/libs/highlight/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>hljs.initHighlightingOnLoad()
+</script>
 </body>
 </html>
