@@ -468,3 +468,18 @@ hr {
 #company-logo img {
   width: 9rem;
 }
+
+
+@media (min-width: 1600px) {
+  .column { 
+    width: 100%;
+    clear: both;
+    display: inline-block;
+    column-width: 500px;
+  }
+
+  .column li {
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+}
