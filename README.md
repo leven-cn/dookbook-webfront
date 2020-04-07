@@ -55,6 +55,7 @@ Home: <https://dookbook.info/>
 - Index Page
   - Opening Animation (开场动画)
   - Search Box (搜索框)
+- Wikipedia Page (维基百科页面)
 - Input Damper™ (输入减振技术)
 
 ### Browser Compability
