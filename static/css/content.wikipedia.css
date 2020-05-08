@@ -78,3 +78,98 @@ figcaption {
   border-top: 1px solid #666;
   font-size: 14px;
 }
+
+.copyright {
+  width: 270px;
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  color: #999;
+}
+
+.navbox > table {
+  width: 100%;
+  border: 1px solid #666;
+  margin-bottom: 10px;
+}
+
+.navbox table table {
+  width: 100%;
+}
+
+.navbox > table > tbody > tr > th[scope="col"] {
+  width: 100%;
+  background: #333;
+  display: inline-block;
+  line-height: 34px;
+}
+
+.navbox th {
+  background: #444;
+  line-height: 30px;
+}
+
+.navbox table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr {
+  display: flex;
+  width: 100%;
+}
+
+.navbox th[scope="row"] {
+  background: #666;
+  width: 150px;
+}
+
+.navbox table td {
+  flex: 1;
+}
+
+.navbox table > tbody > tr > td > table > tbody > tr,
+.navbox table > tbody > tr {
+  border-bottom: 1px solid #666;
+  margin-bottom: 2px;
+}
+
+.navbox[aria-labelledby="World_Wide_Web_Consortium_(W3C)"] table > tbody > tr,
+.navbox[aria-labelledby="Document_markup_languages"] table > tbody > tr,
+.navbox[aria-labelledby="ISO_standards_by_standard_number"] table > tbody > tr,
+.navbox[aria-labelledby="List_of_International_Electrotechnical_Commission_standards"] table > tbody > tr {
+  width: 100%;
+  display: inline-block;
+}
+
+.navbox > table > tbody > tr > td[colspan="2"] {
+  width: 100%;
+  display: inline-block;
+}
+
+.navbox > table > tbody > tr > td[colspan="2"] > div {
+  text-align: center;
+  background: #444;
+  line-height: 30px;
+}
+
+.navbox table ul {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+.navbox table ul li ul {
+  padding: 0;
+}
+
+.navbox table ul li ul li {
+  font-size: 13px;
+  padding: 0 5px 0 0;
+}
+
+.navbox table ul li {
+  float: left;
+  list-style: none;
+  line-height: 30px;
+  margin: 0;
+  padding-left: 8px;
+}
