@@ -41,6 +41,10 @@ main article img {
   width: auto;
 }
 
+main ul {
+  margin-top: 1rem;
+}
+
 main dl {
   margin-top: 0;
 }
@@ -89,10 +93,44 @@ figcaption {
   color: #999;
 }
 
-.navbox > table {
+table {
+  border-spacing: 0;
+  margin-top: 2rem;
+  border: 1px solid #666;
+  background: rgb(42, 44, 53);
+  border-left: none;
+  border-bottom: none;
+}
+
+table tr td {
+  border-bottom: 1px solid #666;
+  border-left: 1px solid #666;
+  line-height: 1.8rem;
+  min-width: 140px;
+  padding: 0.5rem 0.5rem 0.5rem 1.2rem;
+}
+
+.navbox table {
   width: 100%;
   border: 1px solid #666;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  background: none;
+  padding: 2px 2px 0 2px;
+  margin-top: 0;
+}
+
+.navbox table table {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbox table tr td {
+  padding: 0;
+  border-bottom: none;
+  min-width: auto;
+  line-height: 30px;
+  border-left: none;
 }
 
 .navbox table table {
@@ -119,23 +157,42 @@ figcaption {
 .navbox th[scope="row"] {
   background: #666;
   width: 150px;
+  margin-right: 2px;
 }
 
 .navbox table td {
   flex: 1;
 }
 
-.navbox table > tbody > tr > td > table > tbody > tr,
-.navbox table > tbody > tr {
+.navbox table tbody tr {
   border-bottom: 1px solid #666;
   margin-bottom: 2px;
+  width: 100%;
+  display: flex;
 }
 
-.navbox[aria-labelledby="World_Wide_Web_Consortium_(W3C)"] table > tbody > tr,
-.navbox[aria-labelledby="Document_markup_languages"] table > tbody > tr,
-.navbox[aria-labelledby="ISO_standards_by_standard_number"] table > tbody > tr,
-.navbox[aria-labelledby="List_of_International_Electrotechnical_Commission_standards"] table > tbody > tr {
+.navbox table tbody tr:last-child {
+  border-bottom: none;
+}
+
+
+.navbox > table > tbody > tr > td[colspan="2"] > table > tbody > tr > th[scope="col"] {
   width: 100%;
+  display: inline-block;
+}
+
+.navbox > table > tbody > tr > td[colspan="3"] {
+  background: #444;
+  text-align: center;
+}
+
+.navbox > table > tbody > tr > td[rowspan="5"]{
+  flex: none;
+  border-left: 1px solid #666;
+  padding: 0 10px;
+}
+
+.navbox > table > tbody > tr > td[rowspan="5"] div {
   display: inline-block;
 }
 
@@ -163,7 +220,7 @@ figcaption {
 
 .navbox table ul li ul li {
   font-size: 13px;
-  padding: 0 5px 0 0;
+  padding: 0 10px 0 0;
 }
 
 .navbox table ul li {
@@ -171,5 +228,5 @@ figcaption {
   list-style: none;
   line-height: 30px;
   margin: 0;
-  padding-left: 8px;
+  padding: 0 10px;
 }

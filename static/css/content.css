@@ -294,14 +294,11 @@ main dl {
   margin-top: 1.9rem;
 }
 
-main ul {
-  margin-left: 1.3rem;
-}
-
 main ul li {
   line-height: 1.8rem;
   margin-bottom: 0.5rem;
   list-style: square;
+  list-style-position: inside;
 }
 
 main ul li ol li {
