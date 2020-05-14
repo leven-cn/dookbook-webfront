@@ -11,6 +11,10 @@ header > a > img {
   overflow-y: auto;
 }
 
+main article {
+  width: 100%;
+}
+
 /*滚动条样式*/
 .toc ul::-webkit-scrollbar {
   width: 4px;
