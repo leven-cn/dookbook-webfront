@@ -67,17 +67,18 @@ main dl dd ul {
 }
 
 figure {
-  width: 220px;
-  float: left;
+  max-width: 300px;
   text-align: center;
+  float: left;
   border: 1px solid #666;
   margin: 1.9rem 1rem 0 0;
   background: rgb(42, 44, 53);
 }
 
-figure img {
+main figure img {
   box-sizing: border-box;
   padding: 0.7rem 1rem;
+  max-width: 300px;
 }
 
 figcaption {
@@ -106,12 +107,21 @@ table {
   border-bottom: none;
 }
 
-table tr td {
+table caption {
+  padding-bottom: 20px;
+}
+
+table tr td,
+table tr th {
   border-bottom: 1px solid #666;
   border-left: 1px solid #666;
   line-height: 1.8rem;
-  min-width: 140px;
-  padding: 0.5rem 0.5rem 0.5rem 1.2rem;
+  padding: 0.5rem 0.8em;
+}
+
+table tr th {
+  color: #fff;
+  background: rgba(0,0,0,0.2);
 }
 
 .navbox table {
@@ -151,6 +161,9 @@ table tr td {
 .navbox th {
   background: #444;
   line-height: 30px;
+  border-left: none;
+  border-bottom: none;
+  padding: 0;
 }
 
 .navbox table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr {
@@ -190,7 +203,8 @@ table tr td {
   text-align: center;
 }
 
-.navbox > table > tbody > tr > td[rowspan="5"]{
+.navbox > table > tbody > tr > td[rowspan="5"],
+.navbox > table > tbody > tr > td[rowspan="6"]{
   flex: none;
   border-left: 1px solid #666;
   padding: 0 10px;
@@ -233,4 +247,22 @@ table tr td {
   line-height: 30px;
   margin: 0;
   padding: 0 10px;
+}
+
+#section_SpokenWikipedia {
+  border: 1px solid #666;
+  margin: 1.5rem 0;
+  padding: 1rem;
+}
+
+#section_SpokenWikipedia > div:nth-child(1) {
+  text-align: center;
+}
+
+#section_SpokenWikipedia audio {
+  margin-top: 1rem;
+}
+
+#section_SpokenWikipedia div:nth-child(2) {
+  display: inline-block;
 }

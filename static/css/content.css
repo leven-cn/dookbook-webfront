@@ -321,8 +321,7 @@ main ul li ol {
 
 main ul li ul li {
   line-height: 1.5rem;
-  list-style: square;
-  margin: 0.5rem 0 0;
+  margin: 0.5rem 0 0 1.5rem;
 }
 
 main ul li ul,
