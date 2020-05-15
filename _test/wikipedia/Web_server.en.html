@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Web server - Wikipedia for Computer Science, hosted by Dookbook&reg;</title>
+  <meta name="description" content="Wood (Fibrous material from trees or other plants) on Wikipedia for Computer Science, hosted by Dookbook®"/>
+  <meta name="keywords" content="Wood,Wikipedia,Computer Science,Dookbook"/>
+  <meta name="generator" content="Dookbook"/>
+  <link rel="stylesheet" href="/static/libs/highlight/styles/agate.css"/>
+  <link rel="stylesheet" href="/static/css/content.css"/>
+  <link rel="stylesheet" href="/static/css/content.toc.css"/>
+  <link rel="stylesheet" href="/static/css/content.search.css"/>
+  <link rel="stylesheet" href="/static/css/content.wikipedia.css"/>
+  <!-- <link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/> -->
+  <!-- <link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/> -->
+  <link rel="canonical" href="https://dookbook.info/wikipedia/en/HTML"/>
+  <link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+</head>
+<body>
+  <!-- htmlhint attr-value-double-quotes:false -->
+  <header>
+    <a href="/"><img src="/static/img/wikipedia-en.png" alt="Wikipedia for Computer Science" title="Wikipedia for Computer Science"></a>
+    <section id="search">
+      <img src="/static/img/search.svg" alt="Search">
+      <input type="text" placeholder="Search here">
+    </section>
+    <nav>
+      <a href="#" title="About Dookbook®">i</a>
+      <a href="/about/zh-hans/" title="切换至中文" lang="zh-Hans">中</a>
+      <a href="/en/help/readme/" title="Help">?</a>
+    </nav>
+  </header>
+
+<main>
+  <article>
+    <header>
+      <h1>Wood - Wikipedia</h1>
+      <p><span>Updated</span>:&nbsp;&nbsp;2020-03-01 10:24:00 (UTC)</p>
+    </header>
+    <div class="toc">
+      <ul>
+        <li><a href="#history">History</a></li>
+        <li><a href="#path_translation">Path translation</a></li>
+        <li><a href="#kernel-mode_and_user-mode_web_servers">Kernel-mode and user-mode web servers</a></li>
+        <li>
+        <a href="#load_limits">Load limits</a>
+        <ul>
+        <li><a href="#causes_of_overload">Causes of overload</a></li>
+        <li><a href="#symptoms_of_overload">Symptoms of overload</a></li>
+        <li><a href="#anti-overload_techniques">Anti-overload techniques</a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="#market_share">Market share</a>
+        <ul>
+        <li><a href="#february_2019">February 2019</a></li>
+        <li><a href="#july_2018">July 2018</a></li>
+        <li><a href="#february_2017">February 2017</a></li>
+        <li><a href="#february_2016">February 2016</a></li>
+        </ul>
+        </li>
+        <li><a href="#see_also">See also</a></li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#external_links">External links</a></li>
+      </ul>
+      <a class="copyright" href="https://zhiliaokeji.com" title="All Copyrights Reserved by Known LLC.">&copy;&nbsp;Known LLC.</a>
+    </div>
+
+<!-- Main content -->
+<div>
+
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Inside_and_Rear_of_Webserver.jpg/220px-Inside_and_Rear_of_Webserver.jpg" decoding="async" width="220" height="147" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Inside_and_Rear_of_Webserver.jpg/330px-Inside_and_Rear_of_Webserver.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/38/Inside_and_Rear_of_Webserver.jpg/440px-Inside_and_Rear_of_Webserver.jpg 2x" data-file-width="3504" data-file-height="2336"><figcaption>The inside and front of a <a href="/wikipedia/en/Dell_PowerEdge" title="Dell PowerEdge">Dell PowerEdge</a> server, a computer designed to be mounted in a <a href="/wikipedia/en/Rack_mount" title="Rack mount">rack mount</a> environment.</figcaption></figure>
+<p>A <b>web server</b> is <a href="/wikipedia/en/Server_software" title="Server software">server software</a>, or <a href="/wikipedia/en/Computer_hardware" title="Computer hardware">hardware</a> dedicated to running this software, that can satisfy <a href="/wikipedia/en/Client_(computing)" title="Client (computing)">client</a> requests on the <a href="/wikipedia/en/World_Wide_Web" title="World Wide Web">World Wide Web</a>. A web server can, in general, contain one or more <a href="/wikipedia/en/Website" title="Website">websites</a>. A web server processes incoming <a href="/wikipedia/en/Computer_network" title="Computer network">network</a> requests over <a href="/wikipedia/en/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a> and several other related <a href="/wikipedia/en/Communication_protocol" title="Communication protocol">protocols</a>.
+</p><p>The primary function of a web server is to store, process and deliver <a href="/wikipedia/en/Web_page" title="Web page">web pages</a> to clients.<sup id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> The communication between client and server takes place using the <a href="/wikipedia/en/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">Hypertext Transfer Protocol (HTTP)</a>. Pages delivered are most frequently <a href="/wikipedia/en/HTML" title="HTML">HTML documents</a>, which may include <a href="/wikipedia/en/Image" title="Image">images</a>, <a href="/wikipedia/en/Style_sheet_(web_development)" title="Style sheet (web development)">style sheets</a> and <a href="/wikipedia/en/JavaScript" title="JavaScript">scripts</a> in addition to the text content. 
+</p>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Wikimedia_Foundation_Servers-8055_35.jpg/275px-Wikimedia_Foundation_Servers-8055_35.jpg" decoding="async" width="275" height="183" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/69/Wikimedia_Foundation_Servers-8055_35.jpg/413px-Wikimedia_Foundation_Servers-8055_35.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/69/Wikimedia_Foundation_Servers-8055_35.jpg/550px-Wikimedia_Foundation_Servers-8055_35.jpg 2x" data-file-width="5184" data-file-height="3456"><figcaption>Multiple web servers may be used for a high traffic website; here, <a href="/wikipedia/en/Dell" title="Dell">Dell</a> servers are installed together being used for the <a href="/wikipedia/en/Wikimedia_Foundation" title="Wikimedia Foundation">Wikimedia Foundation</a>.</figcaption></figure>
+<p>A <a href="/wikipedia/en/User_agent" title="User agent">user agent</a>, commonly a <a href="/wikipedia/en/Web_browser" title="Web browser">web browser</a> or <a href="/wikipedia/en/Web_crawler" title="Web crawler">web crawler</a>, initiates communication by making a <a href="/wikipedia/en/Hypertext_Transfer_Protocol#Request_message" title="Hypertext Transfer Protocol">request</a> for a specific resource using HTTP and the server responds with the content of that resource or an <a href="/wikipedia/en/List_of_HTTP_status_codes#4xx_Client_Error" title="List of HTTP status codes">error message</a> if unable to do so. The resource is typically a real file on the server's <a href="/wikipedia/en/Secondary_memory" title="Secondary memory">secondary storage</a>, but this is not necessarily the case and depends on how the web server is <a href="/wikipedia/en/Implementation" title="Implementation">implemented</a>.
+</p><p>While the major function is to serve content, a full implementation of HTTP also includes ways of receiving content from clients. This feature is used for submitting <a href="/wikipedia/en/Form_(web)" title="Form (web)">web forms</a>, including <a href="/wikipedia/en/Upload" title="Upload">uploading</a> of files.
+</p><p>Many generic web servers also support <a href="/wikipedia/en/Server-side_scripting" title="Server-side scripting">server-side scripting</a> using <a href="/wikipedia/en/Active_Server_Pages" title="Active Server Pages">Active Server Pages</a> (ASP), <a href="/wikipedia/en/PHP" title="PHP">PHP</a> (Hypertext Preprocessor), or other <a href="/wikipedia/en/Scripting_language" title="Scripting language">scripting languages</a>. This means that the behaviour of the web server can be scripted in separate files, while the actual server software remains unchanged. Usually, this function is used to generate HTML documents <a href="/wikipedia/en/Dynamic_web_page" title="Dynamic web page">dynamically</a> ("on-the-fly") as opposed to returning <a href="/wikipedia/en/Static_web_page" title="Static web page">static documents</a>. The former is primarily used for retrieving or modifying information from <a href="/wikipedia/en/Database" title="Database">databases</a>. The latter is typically much faster and more easily <a href="/wikipedia/en/Web_cache" title="Web cache">cached</a> but cannot deliver <a href="/wikipedia/en/Dynamic_content" title="Dynamic content">dynamic content</a>.
+</p><p>Web servers can frequently be found <a href="/wikipedia/en/Embedded_system" title="Embedded system">embedded</a> in devices such as <a href="/wikipedia/en/Printer_(computing)" title="Printer (computing)">printers</a>, <a href="/wikipedia/en/Router_(computing)" title="Router (computing)">routers</a>, <a href="/wikipedia/en/Webcam" title="Webcam">webcams</a> and serving only a <a href="/wikipedia/en/Local_area_network" title="Local area network">local network</a>. The web server may then be used as a part of a system for monitoring or administering the device in question. This usually means that no additional software has to be installed on the client computer since only a web browser is required (which now is included with most <a href="/wikipedia/en/Operating_system" title="Operating system">operating systems</a>).
+</p>
+<h2 id="history">History</h2>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/First_Web_Server.jpg/220px-First_Web_Server.jpg" decoding="async" width="220" height="165" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/First_Web_Server.jpg/330px-First_Web_Server.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d1/First_Web_Server.jpg/440px-First_Web_Server.jpg 2x" data-file-width="2048" data-file-height="1536"><figcaption>The world's first web server, a <a href="/wikipedia/en/NeXT_Computer" title="NeXT Computer">NeXT Computer</a> workstation with Ethernet, 1990. The case label reads: "This machine is a server. DO NOT POWER IT DOWN!!"</figcaption></figure>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Cobalt_Qube_3_Front.jpg/220px-Cobalt_Qube_3_Front.jpg" decoding="async" width="220" height="165" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Cobalt_Qube_3_Front.jpg/330px-Cobalt_Qube_3_Front.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Cobalt_Qube_3_Front.jpg/440px-Cobalt_Qube_3_Front.jpg 2x" data-file-width="1600" data-file-height="1200"><figcaption>Sun's <a href="/wikipedia/en/Cobalt_Qube" title="Cobalt Qube">Cobalt Qube</a> 3 – a computer <a href="/wikipedia/en/Server_appliance" title="Server appliance">server appliance</a> (2002, discontinued)</figcaption></figure>
+<p>In March 1989 <a href="/wikipedia/en/Sir_Tim_Berners-Lee" title="Sir Tim Berners-Lee">Sir Tim Berners-Lee</a> proposed a new project to his employer <a href="/wikipedia/en/CERN" title="CERN">CERN</a>, with the goal of easing the exchange of information between scientists by using a <a href="/wikipedia/en/Hypertext" title="Hypertext">hypertext</a> system.<sup id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup><sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> The project resulted in Berners-Lee writing two programs in 1990:
+</p>
+<ul><li>A <a href="/wikipedia/en/Web_browser" title="Web browser">Web browser</a> called <a href="/wikipedia/en/WorldWideWeb" title="WorldWideWeb">WorldWideWeb</a><sup id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup></li>
+<li>The world's first web server, later known as <a href="/wikipedia/en/CERN_httpd" title="CERN httpd">CERN httpd</a>, which ran on <a href="/wikipedia/en/NeXTSTEP" title="NeXTSTEP">NeXTSTEP</a></li></ul>
+<p>Between 1991 and 1994, the simplicity and effectiveness of early technologies used to surf and exchange data through the World Wide Web helped to port them to many different operating systems and spread their use among scientific organizations and universities, and subsequently to the industry.
+</p><p>In 1994 Berners-Lee decided to constitute the <a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a> (W3C) to regulate the further development of the many technologies involved (<a href="/wikipedia/en/HTTP" title="HTTP">HTTP</a>, <a href="/wikipedia/en/HTML" title="HTML">HTML</a>, etc.) through a standardization process.
+</p>
+<h2 id="path_translation">Path translation</h2>
+<p>Web servers are able to map the path component of a <a href="/wikipedia/en/Uniform_Resource_Locator" title="Uniform Resource Locator">Uniform Resource Locator</a> (URL) into:
+</p>
+<ul><li>A local <a href="/wikipedia/en/File_system" title="File system">file system</a> resource (for static requests)</li>
+<li>An internal or external program name (for dynamic requests)</li></ul>
+<p>For a <i>static request</i> the URL path specified by the client is relative to the web server's root directory.
+</p><p>Consider the following URL as it would be requested by a client over HTTP:
+</p>
+<pre>http://www.example.com/path/file.html
+</pre>
+<p>The client's <a href="/wikipedia/en/User_agent" title="User agent">user agent</a> will translate it into a connection to <samp>www.example.com</samp> with the following <a href="/wikipedia/en/HTTP/2" title="HTTP/2">HTTP/2</a> request:
+</p>
+<pre>GET /path/file.html HTTP/2
+Host: www.example.com
+</pre>
+<p>The web server on <samp>www.example.com</samp> will append the given path to the path of its root directory. On an <a href="/wikipedia/en/Apache_HTTP_Server" title="Apache HTTP Server">Apache server</a>, this is commonly <samp>/home/www</samp> (on <a href="/wikipedia/en/Unix" title="Unix">Unix</a> machines, usually <samp>/var/www</samp>). The result is the local file system resource:
+</p>
+<pre>/home/www/path/file.html
+</pre>
+<p>The web server then reads the <a href="/wikipedia/en/Computer_file" title="Computer file">file</a>, if it exists, and sends a response to the client's web browser. The response will describe the content of the file and contain the file itself or an error message will return saying that the file does not exist or is unavailable.
+</p>
+<h2 id="kernel-mode_and_user-mode_web_servers">Kernel-mode and user-mode web servers</h2>
+<p>A web server can be either incorporated into the <a href="/wikipedia/en/Operating_system" title="Operating system">OS</a> <a href="/wikipedia/en/Kernel_(computing)" title="Kernel (computing)">kernel</a>, or in <a href="/wikipedia/en/User_space" title="User space">user space</a> (like other regular applications).
+</p><p>Web servers that run in <a href="/wikipedia/en/User-mode" title="User-mode">user-mode</a> have to ask the system for permission to use more memory or more CPU resources. Not only do these requests to the kernel take time, but they are not always satisfied because the system reserves resources for its own usage and has the responsibility to share hardware resources with all the other running applications. Executing in user mode can also mean useless buffer copies which are another limitation for user-mode web servers.
+</p>
+<h2 id="load_limits">Load limits</h2>
+<p>A web server (program) has defined load limits, because it can handle only a limited number of concurrent client connections (usually between 2 and 80,000, by default between 500 and 1,000) per <a href="/wikipedia/en/IP_address" title="IP address">IP address</a> (and TCP port) and it can serve only a certain maximum number of <i>requests per second</i> (RPS, also known as <a href="/wikipedia/en/Queries_per_second" title="Queries per second">queries per second</a> or QPS) depending on:
+</p>
+<ul><li>its own settings,</li>
+<li>the HTTP request type,</li>
+<li>whether the content is static or dynamic,</li>
+<li>whether the content is <a href="/wikipedia/en/Web_cache" title="Web cache">cached</a>, and</li>
+<li>the <a href="/wikipedia/en/Personal_computer_hardware" title="Personal computer hardware">hardware</a> and <a href="/wikipedia/en/Computer_software" title="Computer software">software</a> limitations of the OS of the computer on which the web server runs.</li></ul>
+<p>When a web server is near to or over its limit, it becomes unresponsive.
+</p>
+<h3 id="causes_of_overload">Causes of overload</h3>
+<p>At any time web servers can be overloaded due to:
+</p>
+<ul><li>Excess legitimate web traffic. Thousands or even millions of clients connecting to the web site in a short interval, e.g., <a href="/wikipedia/en/Slashdot_effect" title="Slashdot effect">Slashdot effect</a>;</li>
+<li><a href="/wikipedia/en/Distributed_Denial_of_Service" title="Distributed Denial of Service">Distributed Denial of Service</a> attacks. A denial-of-service attack (DoS attack) or distributed denial-of-service attack (DDoS attack) is an attempt to make a computer or network resource unavailable to its intended users;</li>
+<li><a href="/wikipedia/en/Computer_worm" title="Computer worm">Computer worms</a> that sometimes cause abnormal traffic because of millions of infected computers (not coordinated among them)</li>
+<li><a href="/wikipedia/en/XSS_worm" title="XSS worm">XSS worms</a> can cause high traffic because of millions of infected browsers or web servers;</li>
+<li><a href="/wikipedia/en/Internet_bot" title="Internet bot">Internet bots</a> Traffic not filtered/limited on large web sites with very few resources (bandwidth, etc.);</li>
+<li><a href="/wikipedia/en/Internet" title="Internet">Internet</a> (network) slowdowns, so that client requests are served more slowly and the number of connections increases so much that server limits are reached;</li>
+<li>Web servers (<a href="/wikipedia/en/Computer" title="Computer">computers</a>) partial unavailability. This can happen because of required or urgent maintenance or upgrade, hardware or software failures, <a href="/wikipedia/en/Front_and_back_ends" title="Front and back ends">back-end</a> (e.g., <a href="/wikipedia/en/Database" title="Database">database</a>) failures, etc.; in these cases the remaining web servers get too much traffic and become overloaded.</li></ul>
+<h3 id="symptoms_of_overload">Symptoms of overload</h3>
+<p>The symptoms of an overloaded web server are:
+</p>
+<ul><li>Requests are served with (possibly long) delays (from 1 second to a few hundred seconds).</li>
+<li>The web server returns an <a href="/wikipedia/en/List_of_HTTP_status_codes" title="List of HTTP status codes">HTTP error code</a>, such as 500, 502,<sup id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> 503,<sup id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> 504,<sup id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> 408, or even <a href="/wikipedia/en/HTTP_404" title="HTTP 404">404</a>, which is inappropriate for an overload condition.<sup id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup></li>
+<li>The web server refuses or resets (interrupts) <a href="/wikipedia/en/Transmission_control_protocol" title="Transmission control protocol">TCP</a> connections before it returns any content.</li>
+<li>In very rare cases, the web server returns only a part of the requested content. This behavior can be considered a <a href="/wikipedia/en/Software_bug" title="Software bug">bug</a>, even if it usually arises as a symptom of overload.</li></ul>
+<h3 id="anti-overload_techniques">Anti-overload techniques</h3>
+<p>To partially overcome above average load limits and to prevent overload, most popular web sites use common techniques like:
+</p>
+<ul><li>Managing network traffic, by using:
+<ul><li><a href="/wikipedia/en/Firewall_(computing)" title="Firewall (computing)">Firewalls</a> to block unwanted traffic coming from bad IP sources or having bad patterns</li>
+<li>HTTP traffic managers to drop, redirect or rewrite requests having bad <a href="/wikipedia/en/HTTP" title="HTTP">HTTP</a> patterns</li>
+<li><a href="/wikipedia/en/Bandwidth_management" title="Bandwidth management">Bandwidth management</a> and <a href="/wikipedia/en/Traffic_shaping" title="Traffic shaping">traffic shaping</a>, in order to smooth down peaks in network usage</li></ul></li>
+<li>Deploying <a href="/wikipedia/en/Web_cache" title="Web cache">web cache</a> techniques</li>
+<li>Using different <a href="/wikipedia/en/Domain_name" title="Domain name">domain names</a> or IP addresses to serve different (static and dynamic) content by separate web servers, e.g.:
+<ul><li><code>http://images.example.com</code></li>
+<li><code>http://example.com</code></li></ul></li>
+<li>Using different domain names or computers to separate big files from small and medium-sized files; the idea is to be able to fully <a href="/wikipedia/en/Web_cache" title="Web cache">cache</a> small and medium-sized files and to efficiently serve big or huge (over 10 – 1000 MB) files by using different settings</li>
+<li>Using many internet servers (programs) per computer, each one bound to its own <a href="/wikipedia/en/Network_card" title="Network card">network card</a> and <a href="/wikipedia/en/IP_address" title="IP address">IP address</a></li>
+<li>Using many internet servers (computers) that are grouped together behind a <a href="/wikipedia/en/Load_balancing_(computing)" title="Load balancing (computing)">load balancer</a> so that they act or are seen as one big web server</li>
+<li>Adding more hardware resources (i.e. <a href="/wikipedia/en/RAM" title="RAM">RAM</a>, <a href="/wikipedia/en/Disk_storage" title="Disk storage">disks</a>) to each computer</li>
+<li>Tuning OS parameters for hardware capabilities and usage</li>
+<li>Using more efficient <a href="/wikipedia/en/Computer_program" title="Computer program">computer programs</a> for web servers, etc.</li>
+<li>Using other <a href="/wikipedia/en/Workaround" title="Workaround">workarounds</a>, especially if dynamic content is involved</li></ul>
+<h2 id="market_share">Market share</h2>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/LAMP_software_bundle.svg/300px-LAMP_software_bundle.svg.png" decoding="async" width="300" height="169" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/82/LAMP_software_bundle.svg/450px-LAMP_software_bundle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/82/LAMP_software_bundle.svg/600px-LAMP_software_bundle.svg.png 2x" data-file-width="1280" data-file-height="720"><figcaption>The <a href="/wikipedia/en/LAMP_(software_bundle)" title="LAMP (software bundle)">LAMP (software bundle)</a> (here additionally with <a href="/wikipedia/en/Squid_(software)" title="Squid (software)">Squid</a>), composed entirely of <a href="/wikipedia/en/Free_and_open-source_software" title="Free and open-source software">free and open-source software</a>, is a high performance and high-availability heavy duty solution for a hostile environment</figcaption></figure>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Usage_share_of_web_servers_%28Source_Netcraft%29.svg/300px-Usage_share_of_web_servers_%28Source_Netcraft%29.svg.png" decoding="async" width="300" height="175" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/12/Usage_share_of_web_servers_%28Source_Netcraft%29.svg/450px-Usage_share_of_web_servers_%28Source_Netcraft%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/12/Usage_share_of_web_servers_%28Source_Netcraft%29.svg/600px-Usage_share_of_web_servers_%28Source_Netcraft%29.svg.png 2x" data-file-width="1080" data-file-height="630"><figcaption>Chart:<br><i>Market share of all sites</i> of major web servers 2005–2018</figcaption></figure>
+<h3 id="february_2019">February 2019</h3>
+<p>Below are the latest statistics of the <i>market share of all sites</i> of the top web servers on the Internet by W3Techs
+<a rel="nofollow" href="https://w3techs.com/technologies/overview/web_server/all">Usage of Web Servers for Websites</a>.
+</p>
+<table><tbody><tr>
+<th>Product</th>
+<th>Vendor</th>
+<th>Percent
+</th></tr>
+<tr>
+<td><a href="/wikipedia/en/Apache_HTTP_Server" title="Apache HTTP Server">Apache</a></td>
+<td><a href="/wikipedia/en/Apache_Software_Foundation" title="Apache Software Foundation">Apache</a></td>
+<td>44.3%
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Nginx" title="Nginx">nginx</a></td>
+<td><a href="/wikipedia/en/NGINX,_Inc." title="NGINX, Inc.">NGINX, Inc.</a></td>
+<td>41.0%
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Internet_Information_Services" title="Internet Information Services">IIS</a></td>
+<td><a href="/wikipedia/en/Microsoft" title="Microsoft">Microsoft</a></td>
+<td>8.9%
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/LiteSpeed_Web_Server" title="LiteSpeed Web Server">LiteSpeed Web Server</a></td>
+<td>LiteSpeed Technologies</td>
+<td>3.9%
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Google_Web_Server" title="Google Web Server">GWS</a></td>
+<td><a href="/wikipedia/en/Google" title="Google">Google</a></td>
+<td>0.9%
+</td></tr></tbody></table>
+<p>All other web servers are used by less than 1% of the websites.
+</p>
+<h3 id="july_2018">July 2018</h3>
+<p>Below are the latest statistics of the <i>market share of all sites</i> of the top web servers on the Internet by W3Techs
+<a rel="nofollow" href="https://w3techs.com/technologies/overview/web_server/all">Usage of Web Servers for Websites</a>.
+</p>
+<table><tbody><tr>
+<th>Product</th>
+<th>Vendor</th>
+<th>Percent
+</th></tr>
+<tr>
+<td><a href="/wikipedia/en/Apache_HTTP_Server" title="Apache HTTP Server">Apache</a></td>
+<td><a href="/wikipedia/en/Apache_Software_Foundation" title="Apache Software Foundation">Apache</a></td>
+<td>45.9%
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Nginx" title="Nginx">nginx</a></td>
+<td><a href="/wikipedia/en/NGINX,_Inc." title="NGINX, Inc.">NGINX, Inc.</a></td>
+<td>39.0%
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Internet_Information_Services" title="Internet Information Services">IIS</a></td>
+<td><a href="/wikipedia/en/Microsoft" title="Microsoft">Microsoft</a></td>
+<td>9.5%
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/LiteSpeed_Web_Server" title="LiteSpeed Web Server">LiteSpeed Web Server</a></td>
+<td>LiteSpeed Technologies</td>
+<td>3.4%
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Google_Web_Server" title="Google Web Server">GWS</a></td>
+<td><a href="/wikipedia/en/Google" title="Google">Google</a></td>
+<td>1.0%
+</td></tr></tbody></table>
+<p>All other web servers are used by less than 1% of the websites.
+</p>
+<h3 id="february_2017">February 2017</h3>
+<p>Below are the latest statistics of the <i>market share of all sites</i> of the top web servers on the Internet by <a href="/wikipedia/en/Netcraft" title="Netcraft">Netcraft</a>
+<a rel="nofollow" href="https://news.netcraft.com/archives/2017/02/27/february-2017-web-server-survey.html">February 2017 Web Server Survey</a>.
+</p>
+<table><tbody><tr>
+<th>Product</th>
+<th>Vendor</th>
+<th>January 2017</th>
+<th>Percent</th>
+<th>February 2017</th>
+<th>Percent</th>
+<th>Change</th>
+<th>Chart color
+</th></tr>
+<tr>
+<td><a href="/wikipedia/en/Internet_Information_Services" title="Internet Information Services">IIS</a></td>
+<td><a href="/wikipedia/en/Microsoft" title="Microsoft">Microsoft</a></td>
+<td>821,905,283</td>
+<td>45.66%</td>
+<td>773,552,454</td>
+<td>43.16%</td>
+<td>−2.50</td>
+<td>red
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Apache_HTTP_Server" title="Apache HTTP Server">Apache</a></td>
+<td><a href="/wikipedia/en/Apache_Software_Foundation" title="Apache Software Foundation">Apache</a></td>
+<td>387,211,503</td>
+<td>21.51%</td>
+<td>374,297,080</td>
+<td>20.89%</td>
+<td>−0.63</td>
+<td>black
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Nginx" title="Nginx">nginx</a></td>
+<td><a href="/wikipedia/en/NGINX,_Inc." title="NGINX, Inc.">NGINX, Inc.</a></td>
+<td>317,398,317</td>
+<td>17.63%</td>
+<td>348,025,788</td>
+<td>19.42%</td>
+<td>1.79</td>
+<td>green
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Google_Web_Server" title="Google Web Server">GWS</a></td>
+<td><a href="/wikipedia/en/Google" title="Google">Google</a></td>
+<td>17,933,762</td>
+<td>1.00%</td>
+<td>18,438,702</td>
+<td>1.03%</td>
+<td>0.03</td>
+<td>blue
+</td></tr></tbody></table>
+<h3 id="february_2016">February 2016</h3>
+<p>Below are the latest statistics of the <i>market share of all sites</i> of the top web servers on the Internet by <a href="/wikipedia/en/Netcraft" title="Netcraft">Netcraft</a>
+<a rel="nofollow" href="http://news.netcraft.com/archives/2016/02/22/february-2016-web-server-survey.html">February 2016 Web Server Survey</a>.
+</p>
+<table><tbody><tr>
+<th>Product</th>
+<th>Vendor</th>
+<th>January 2016</th>
+<th>Percent</th>
+<th>February 2016</th>
+<th>Percent</th>
+<th>Change</th>
+<th>Chart color
+</th></tr>
+<tr>
+<td><a href="/wikipedia/en/Apache_HTTP_Server" title="Apache HTTP Server">Apache</a></td>
+<td><a href="/wikipedia/en/Apache_Software_Foundation" title="Apache Software Foundation">Apache</a></td>
+<td>304,271,061</td>
+<td>33.56%</td>
+<td>306,292,557</td>
+<td>32.80%</td>
+<td>0.76</td>
+<td>black
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Internet_Information_Services" title="Internet Information Services">IIS</a></td>
+<td><a href="/wikipedia/en/Microsoft" title="Microsoft">Microsoft</a></td>
+<td>262,471,886</td>
+<td>28.95%</td>
+<td>278,593,041</td>
+<td>29.83%</td>
+<td>0.88</td>
+<td>red
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Nginx" title="Nginx">nginx</a></td>
+<td><a href="/wikipedia/en/NGINX,_Inc." title="NGINX, Inc.">NGINX, Inc.</a></td>
+<td>141,443,630</td>
+<td>15.60%</td>
+<td>137,459,391</td>
+<td>16.61%</td>
+<td>−0.88</td>
+<td>green
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Google_Web_Server" title="Google Web Server">GWS</a></td>
+<td><a href="/wikipedia/en/Google" title="Google">Google</a></td>
+<td>20,799,087</td>
+<td>2.29%</td>
+<td>20,640,058</td>
+<td>2.21%</td>
+<td>−0.08</td>
+<td>blue
+</td></tr></tbody></table>
+<p>Apache, IIS and Nginx are the most used web servers on the World Wide Web.<sup id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup><sup id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</p>
+<h2 id="see_also">See also</h2>
+<ul><li><a href="/wikipedia/en/Server_(computing)" title="Server (computing)">Server (computing)</a></li>
+<li><a href="/wikipedia/en/Application_server" title="Application server">Application server</a></li>
+<li><a href="/wikipedia/en/Comparison_of_web_server_software" title="Comparison of web server software">Comparison of web server software</a></li>
+<li><a href="/wikipedia/en/HTTP_compression" title="HTTP compression">HTTP compression</a></li>
+<li><a href="/wikipedia/en/Open_source_web_application" title="Open source web application">Open source web application</a></li>
+<li><a href="/wikipedia/en/Server_Side_Includes" title="Server Side Includes">Server Side Includes</a>, <a href="/wikipedia/en/Common_Gateway_Interface" title="Common Gateway Interface">Common Gateway Interface</a>, <a href="/wikipedia/en/Simple_Common_Gateway_Interface" title="Simple Common Gateway Interface">Simple Common Gateway Interface</a>, <a href="/wikipedia/en/FastCGI" title="FastCGI">FastCGI</a>, <a href="/wikipedia/en/PHP" title="PHP">PHP</a>, <a href="/wikipedia/en/Java_Servlet" title="Java Servlet">Java Servlet</a>, <a href="/wikipedia/en/JavaServer_Pages" title="JavaServer Pages">JavaServer Pages</a>, <a href="/wikipedia/en/Active_Server_Pages" title="Active Server Pages">Active Server Pages</a>, <a href="/wikipedia/en/ASP.NET" title="ASP.NET">ASP.NET</a>, and <a href="/wikipedia/en/Server_Application_Programming_Interface" title="Server Application Programming Interface">Server Application Programming Interface</a></li>
+<li><a href="/wikipedia/en/Variant_object" title="Variant object">Variant object</a></li>
+<li><a href="/wikipedia/en/Virtual_hosting" title="Virtual hosting">Virtual hosting</a></li>
+<li><a href="/wikipedia/en/Web_hosting_service" title="Web hosting service">Web hosting service</a></li>
+<li><a href="/wikipedia/en/Web_container" title="Web container">Web container</a></li>
+<li><a href="/wikipedia/en/Web_proxy" title="Web proxy">Web proxy</a></li>
+<li><a href="/wikipedia/en/Web_service" title="Web service">Web service</a></li></ul>
+<h2 id="references">References</h2>
+<div>
+<div><ol>
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <cite>Patrick, Killelea (2002). <i>Web performance tuning</i> (2nd ed.). Beijing: O'Reilly. p. 264. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 059600172X. <a href="/wikipedia/en/OCLC" title="OCLC">OCLC</a> <a rel="nofollow" href="//www.worldcat.org/oclc/49502686">49502686</a>.</cite>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <cite>Zolfagharifard, Ellie (24 November 2018). <a rel="nofollow" href="https://www.telegraph.co.uk/technology/2018/11/24/father-web-sir-tim-berners-lee-plan-fight-fake-news/">"'Father of the web' Sir Tim Berners-Lee on his plan to fight fake news"</a>. <i>The Telegraph</i>. <a href="/wikipedia/en/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a> <a rel="nofollow" href="//www.worldcat.org/issn/0307-1235">0307-1235</a>. Retrieved 1 February 2019.</cite>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <cite><a rel="nofollow" href="http://history-computer.com/Internet/Maturing/Lee.html">"History of Computers and Computing, Internet, Birth, The World Wide Web of Tim Berners-Lee"</a>. <i>history-computer.com</i>. Retrieved 1 February 2019.</cite>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <cite>Macaulay, Tom. <a rel="nofollow" href="https://www.computerworlduk.com/galleries/open-source/best-open-source-web-servers-for-your-organisation-3655327/">"What are the best open source web servers?"</a>. <i>ComputerworldUK</i>. Retrieved 1 February 2019.</cite>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <cite>Fisher, Tim; Lifewire. <a rel="nofollow" href="https://www.lifewire.com/502-bad-gateway-error-explained-2622939">"Getting a 502 Bad Gateway Error? Here's What to Do"</a>. <i>Lifewire</i>. Retrieved 1 February 2019.</cite>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <cite>Fisher, Tim; Lifewire. <a rel="nofollow" href="https://www.lifewire.com/503-service-unavailable-explained-2622940">"Getting a 503 Service Unavailable Error? Here's What to Do"</a>. <i>Lifewire</i>. Retrieved 1 February 2019.</cite>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <cite><a rel="nofollow" href="https://www.itpro.co.uk/go/30258">"What is a 502 bad gateway and how do you fix it?"</a>. <i>IT PRO</i>. Retrieved 1 February 2019.</cite>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <cite><i>Handbook of digital forensics and investigation</i>. Casey, Eoghan., Altheide, Cory. Burlington, Mass.: Academic Press. 2010. p. 451. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 9780080921471. <a href="/wikipedia/en/OCLC" title="OCLC">OCLC</a> <a rel="nofollow" href="//www.worldcat.org/oclc/649907705">649907705</a>.</cite>CS1 maint: others (<a href="/wiki/Category-CS1_maint:_others" title="Category:CS1 maint: others">link</a>)
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <cite>Vaughan-Nichols, Steven J. <a rel="nofollow" href="https://www.zdnet.com/article/apache-and-iis-web-server-rival-nginx-is-growing-fast/">"Apache and IIS' Web server rival NGINX is growing fast"</a>. <i>ZDNet</i>. Retrieved 1 February 2019.</cite>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <cite>Hadi, Nahari (2011). <i>Web commerce security: design and development</i>. Krutz, Ronald L. Indianapolis: Wiley Pub. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 9781118098899. <a href="/wikipedia/en/OCLC" title="OCLC">OCLC</a> <a rel="nofollow" href="//www.worldcat.org/oclc/757394142">757394142</a>.</cite>
+</li>
+</ol></div></div>
+<h2 id="external_links">External links</h2>
+<ul><li><a rel="nofollow" href="https://tools.ietf.org/html/rfc2616">RFC 2616</a>, the <a href="/wikipedia/en/Request_for_Comments" title="Request for Comments">Request for Comments</a> document that defines the <a href="/wikipedia/en/HTTP" title="HTTP">HTTP</a> 1.1 protocol</li></ul>
+<div aria-labelledby="Website_management" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="Website_management">Website management</div></th></tr><tr><th scope="row">Concepts</th><td><div>
+<ul><li><a href="/wikipedia/en/Overselling" title="Overselling">Overselling</a></li>
+<li><a href="/wikipedia/en/Web_document" title="Web document">Web document</a></li>
+<li><a href="/wikipedia/en/Web_content" title="Web content">Web content</a></li>
+<li><a href="/wikipedia/en/Web_content_lifecycle" title="Web content lifecycle">Web content lifecycle</a></li>
+<li><a href="/wikipedia/en/Web_hosting_service" title="Web hosting service">Web hosting service</a></li>
+<li><a>Web server</a></li>
+<li><a href="/wikipedia/en/Webmaster" title="Webmaster">Webmaster</a></li>
+<li><a href="/wikipedia/en/Website_governance" title="Website governance">Website governance</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Web_hosting_control_panel" title="Web hosting control panel">Web hosting control panels</a> (<a href="/wikipedia/en/Comparison_of_web_hosting_control_panels" title="Comparison of web hosting control panels">comparison</a>)</th><td><div>
+<ul><li><a href="/wikipedia/en/AlternC" title="AlternC">AlternC</a></li>
+<li><a href="/wikipedia/en/CPanel" title="CPanel">cPanel</a></li>
+<li><a href="/wikipedia/en/DirectAdmin" title="DirectAdmin">DirectAdmin</a></li>
+<li><a href="/wikipedia/en/Domain_Technologie_Control" title="Domain Technologie Control">Domain Technologie Control</a></li>
+<li><a href="/wikipedia/en/GNUPanel" title="GNUPanel">GNUPanel</a></li>
+<li><a href="/wikipedia/en/I-MSCP" title="I-MSCP">i-MSCP</a></li>
+<li><a href="/wikipedia/en/InterWorx" title="InterWorx">InterWorx</a></li>
+<li><a href="/wikipedia/en/ISPConfig" title="ISPConfig">ISPConfig</a></li>
+<li><a href="/wikipedia/en/Kloxo" title="Kloxo">Kloxo</a></li>
+<li><a href="/wikipedia/en/Plesk" title="Plesk">Plesk</a></li>
+<li><a href="/wikipedia/en/Usermin" title="Usermin">Usermin</a></li>
+<li><a href="/wikipedia/en/Webmin" title="Webmin">Webmin</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Top-level_domain" title="Top-level domain">Top-level domain</a> registries</th><td><div>
+<ul><li><a href="/wikipedia/en/Afilias" title="Afilias">Afilias</a></li>
+<li><a href="/wikipedia/en/CentralNic" title="CentralNic">CentralNic</a></li>
+<li><a href="/wikipedia/en/Canadian_Internet_Registration_Authority" title="Canadian Internet Registration Authority">CIRA</a></li>
+<li><a href="/wikipedia/en/Donuts_(company)" title="Donuts (company)">Donuts</a></li>
+<li><a href="/wikipedia/en/Neustar" title="Neustar">Neustar</a></li>
+<li><a href="/wikipedia/en/OVH" title="OVH">OVH</a></li>
+<li><a href="/wikipedia/en/Public_Interest_Registry" title="Public Interest Registry">Public Interest Registry</a></li>
+<li><a href="/wikipedia/en/Uniregistry" title="Uniregistry">Uniregistry</a></li>
+<li><a href="/wikipedia/en/Verisign" title="Verisign">Verisign</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Domain_name" title="Domain name">Domain name</a> managers and <a href="/wikipedia/en/Domain_name_registrar" title="Domain name registrar">registrars</a></th><td><div>
+<ul><li><a href="/wikipedia/en/AusRegistry" title="AusRegistry">AusRegistry</a></li>
+<li><a href="/wikipedia/en/CZ.NIC" title="CZ.NIC">CZ.NIC</a></li>
+<li><a href="/wikipedia/en/China_Internet_Network_Information_Center" title="China Internet Network Information Center">CNNIC</a></li>
+<li><a href="/wikipedia/en/DENIC" title="DENIC">DENIC</a></li>
+<li><a href="/wikipedia/en/DNS_Belgium" title="DNS Belgium">DNS Belgium</a></li>
+<li><a href="/wikipedia/en/Domainz" title="Domainz">Domainz</a></li>
+<li><a href="/wikipedia/en/DreamHost" title="DreamHost">DreamHost</a></li>
+<li><a href="/wikipedia/en/Dynadot" title="Dynadot">Dynadot</a></li>
+<li><a href="/wikipedia/en/Enom" title="Enom">Enom</a></li>
+<li><a href="/wikipedia/en/Epik_(domain_registrar)" title="Epik (domain registrar)">Epik</a></li>
+<li><a href="/wikipedia/en/Gandi" title="Gandi">Gandi</a></li>
+<li><a href="/wikipedia/en/GoDaddy" title="GoDaddy">GoDaddy</a></li>
+<li>Voteq - Website Solutions</li>
+<li><a href="/wikipedia/en/Hover_(domain_registrar)" title="Hover (domain registrar)">Hover</a></li>
+<li><a href="/wikipedia/en/Infomaniak" title="Infomaniak">Infomaniak</a></li>
+<li><a href="/wikipedia/en/Institute_for_Research_in_Fundamental_Sciences" title="Institute for Research in Fundamental Sciences">IPM</a></li>
+<li><a href="/wikipedia/en/Japan_Registry_Services" title="Japan Registry Services">Japan Registry Services</a></li>
+<li><a href="/wikipedia/en/Jimdo" title="Jimdo">Jimdo</a></li>
+<li><a href="/wikipedia/en/Melbourne_IT" title="Melbourne IT">Melbourne IT</a></li>
+<li><a href="/wikipedia/en/Museum_Domain_Management_Association" title="Museum Domain Management Association">Museum Domain Management Association</a></li>
+<li><a href="/wikipedia/en/Name.com" title="Name.com">Name.com</a></li>
+<li><a href="/wikipedia/en/Namecheap" title="Namecheap">Namecheap</a></li>
+<li><a href="/wikipedia/en/NearlyFreeSpeech" title="NearlyFreeSpeech">NearlyFreeSpeech</a></li>
+<li><a href="/wikipedia/en/Network_Solutions" title="Network Solutions">Network Solutions</a></li>
+<li><a href="/wikipedia/en/Net4" title="Net4">Net4</a></li>
+<li><a href="/wikipedia/en/NIC_M%C3%A9xico" title="NIC México">NIC México</a></li>
+<li><a href="/wikipedia/en/Register.com" title="Register.com">Register.com</a></li>
+<li><a href="/wikipedia/en/Tucows" title="Tucows">Tucows</a></li>
+<li><a href="/wikipedia/en/Uniregistry" title="Uniregistry">Uniregistry</a></li>
+<li><a href="/wikipedia/en/UK2_Group" title="UK2 Group">UK2</a></li>
+<li><a href="/wikipedia/en/Web.com" title="Web.com">Web.com</a></li>
+<li><a href="/wikipedia/en/Wix.com" title="Wix.com">Wix.com</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Web_content_management_system" title="Web content management system">Web content management system</a></th><td><div>
+<ul><li><a href="/wikipedia/en/Document_management_system" title="Document management system">Document management system</a></li>
+<li><a href="/wikipedia/en/Wiki_software" title="Wiki software">Wiki software</a></li>
+<li><a href="/wikipedia/en/Blog_software" title="Blog software">Blog software</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q11288&amp;#124;Edit_this_at_Wikidata" class="navbox"><table><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q11288&amp;#124;Edit_this_at_Wikidata" scope="row"><a href="/wikipedia/en/Help:Authority_control" title="Help:Authority control">Authority control</a> <a href="https://www.wikidata.org/wiki/Q11288" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20"></a></th><td><div>
+<ul><li><a href="/wikipedia/en/Biblioth%C3%A8que_nationale_de_France" title="Bibliothèque nationale de France">BNF</a>: <a rel="nofollow" href="https://catalogue.bnf.fr/ark:/12148/cb124996255">cb124996255</a> <a rel="nofollow" href="https://data.bnf.fr/ark:/12148/cb124996255">(data)</a></li>
+<li><a href="/wikipedia/en/Library_of_Congress_Control_Number" title="Library of Congress Control Number">LCCN</a>: <a rel="nofollow" href="https://id.loc.gov/authorities/subjects/sh95009237">sh95009237</a></li></ul>
+</div></td></tr></tbody></table></div>
+</div>
+
+  </article>
+</main>
+
+<footer>
+  <button id="company-logo"><a href="https://zhiliaokeji.com/" target="_blank" title="Known LLC. (长沙知了信息科技有限公司)">
+    <p>Powered by</p>
+    <img src="/static/img/known.svg" alt="Known LLC. (长沙知了信息科技有限公司)">
+  </a></button>
+</footer>
+
+<script src="/static/libs/highlight/highlight.pack.js"></script>
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+<script src="/static/js/utils.js"></script>
+<script src="/static/js/toc.js"></script>
+<script src="/static/js/search-hint.js"></script>
+</body>
+</html>

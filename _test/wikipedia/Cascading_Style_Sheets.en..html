@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Cascading Style Sheets - Wikipedia for Computer Science, hosted by Dookbook&reg;</title>
+  <meta name="description" content="Cascading Style Sheets (style sheet language) on Wikipedia for Computer Science, hosted by Dookbook®"/>
+  <meta name="keywords" content="Cascading Style Sheets,Wikipedia,Computer Science,Dookbook"/>
+  <meta name="generator" content="Dookbook"/>
+  <link rel="stylesheet" href="/static/libs/highlight/styles/agate.css"/>
+  <link rel="stylesheet" href="/static/css/content.css"/>
+  <link rel="stylesheet" href="/static/css/content.toc.css"/>
+  <link rel="stylesheet" href="/static/css/content.search.css"/>
+  <link rel="stylesheet" href="/static/css/content.wikipedia.css"/>
+  <!-- <link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/> -->
+  <!-- <link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/> -->
+  <link rel="canonical" href="https://dookbook.info/wikipedia/en/HTML"/>
+  <link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+</head>
+<body>
+  <!-- htmlhint attr-value-double-quotes:false -->
+  <header>
+    <a href="/"><img src="/static/img/wikipedia-en.png" alt="Wikipedia for Computer Science" title="Wikipedia for Computer Science"></a>
+    <section id="search">
+      <img src="/static/img/search.svg" alt="Search">
+      <input type="text" placeholder="Search here">
+    </section>
+    <nav>
+      <a href="#" title="About Dookbook®">i</a>
+      <a href="/about/zh-hans/" title="切换至中文" lang="zh-Hans">中</a>
+      <a href="/en/help/readme/" title="Help">?</a>
+    </nav>
+  </header>
+
+<main>
+  <article>
+    <header>
+      <h1>Cascading Style Sheets - Wikipedia</h1>
+      <p><span>Updated</span>:&nbsp;&nbsp;2020-03-01 10:24:00 (UTC)</p>
+    </header>
+    <div class="toc">
+      <ul>
+        <li>
+        <a href="#syntax">Syntax</a>
+        <ul>
+        <li><a href="#selector">Selector</a></li>
+        <li>
+        <a href="#declaration_block">Declaration block</a>
+        <ul>
+        <li><a href="#length_units">Length units</a></li>
+        </ul>
+        </li>
+        <li><a href="#use">Use</a></li>
+        <li><a href="#sources">Sources</a></li>
+        <li>
+        <a href="#specificity">Specificity</a>
+        <ul>
+        <li><a href="#examples">Examples</a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="#inheritance">Inheritance</a>
+        <ul>
+        <li><a href="#example">Example</a></li>
+        </ul>
+        </li>
+        <li><a href="#whitespace">Whitespace</a></li>
+        <li>
+        <a href="#positioning">Positioning</a>
+        <ul>
+        <li><a href="#position_property">Position property</a></li>
+        <li><a href="#float_and_clear">Float and clear</a></li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        <li>
+        <a href="#history">History</a>
+        <ul>
+        <li><a href="#difficulty_with_adoption">Difficulty with adoption</a></li>
+        <li>
+        <a href="#variations">Variations</a>
+        <ul>
+        <li><a href="#css_1">CSS 1</a></li>
+        <li><a href="#css_2">CSS 2</a></li>
+        <li><a href="#css_2.1">CSS 2.1</a></li>
+        <li><a href="#css_3">CSS 3</a></li>
+        <li><a href="#css_4">CSS 4</a></li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        <li><a href="#browser_support">Browser support</a></li>
+        <li>
+        <a href="#limitations">Limitations</a>
+        <ul>
+        <li><a href="#former_issues">Former issues</a></li>
+        </ul>
+        </li>
+        <li><a href="#advantages">Advantages</a></li>
+        <li>
+        <a href="#standardization">Standardization</a>
+        <ul>
+        <li><a href="#frameworks">Frameworks</a></li>
+        <li><a href="#design_methodologies">Design methodologies</a></li>
+        </ul>
+        </li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#further_reading">Further reading</a></li>
+        <li><a href="#external_links">External links</a></li>
+      </ul>
+      <a class="copyright" href="https://zhiliaokeji.com" title="All Copyrights Reserved by Known LLC.">&copy;&nbsp;Known LLC.</a>
+    </div>
+
+<!-- Main content -->
+<div> 
+
+
+
+
+
+
+<p><b>Cascading Style Sheets</b> (<b>CSS</b>) is a <a href="/wikipedia/en/Style_sheet_language" title="Style sheet language">style sheet language</a> used for describing the <a href="/wikipedia/en/Presentation_semantics" title="Presentation semantics">presentation</a> of a document written in a <a href="/wikipedia/en/Markup_language" title="Markup language">markup language</a> like <a href="/wikipedia/en/HTML" title="HTML">HTML</a>.<sup id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> CSS is a cornerstone technology of the <a href="/wikipedia/en/World_Wide_Web" title="World Wide Web">World Wide Web</a>, alongside HTML and <a href="/wikipedia/en/JavaScript" title="JavaScript">JavaScript</a>.<sup id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p><p>CSS is designed to enable the separation of presentation and content, including <a href="/wikipedia/en/Page_layout" title="Page layout">layout</a>, <a href="/wikipedia/en/Color" title="Color">colors</a>, and <a href="/wikipedia/en/Typeface" title="Typeface">fonts</a>.<sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> This separation can improve content <a href="/wikipedia/en/Accessibility" title="Accessibility">accessibility</a>, provide more flexibility and control in the specification of presentation characteristics, enable multiple <a href="/wikipedia/en/Web_page" title="Web page">web pages</a> to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content.
+</p><p>Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or <a href="/wikipedia/en/Screen_reader" title="Screen reader">screen reader</a>), and on <a href="/wikipedia/en/Braille_display" title="Braille display">Braille-based</a> tactile devices. CSS also has rules for alternate formatting if the content is accessed on a <a href="/wikipedia/en/Mobile_device" title="Mobile device">mobile device</a>.<sup id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</p><p>The name <i>cascading</i> comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable.
+</p><p>The CSS specifications are maintained by the <a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a> (W3C). Internet media type (<a href="/wikipedia/en/MIME_media_type" title="MIME media type">MIME type</a>) <code>text/css</code> is registered for use with CSS by <a rel="nofollow" href="https://tools.ietf.org/html/rfc2318">RFC 2318</a> (March 1998). The W3C operates a free <a href="/wikipedia/en/W3C_Markup_Validation_Service#CSS_validation" title="W3C Markup Validation Service">CSS validation service</a> for CSS documents.<sup id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+</p><p>In addition to HTML, other markup languages support the use of CSS including <a href="/wikipedia/en/XHTML" title="XHTML">XHTML</a>, <a href="/wikipedia/en/Plain_Old_XML" title="Plain Old XML">plain XML</a>, <a href="/wikipedia/en/Scalable_Vector_Graphics" title="Scalable Vector Graphics">SVG</a>, and <a href="/wikipedia/en/XUL" title="XUL">XUL</a>.
+</p>
+<h2 id="syntax">Syntax</h2>
+<p>CSS has a simple <a href="/wikipedia/en/Syntax" title="Syntax">syntax</a> and uses a number of English keywords to specify the names of various style properties.
+</p><p>A style sheet consists of a list of <i>rules</i>. Each rule or rule-set consists of one or more <i>selectors</i>, and a <i>declaration block</i>.
+</p>
+<h3 id="selector">Selector</h3>
+<p>In CSS, <i>selectors</i> declare which part of the markup a style applies to by matching tags and attributes in the markup itself.
+</p><p>Selectors may apply to the following:
+</p>
+<ul><li>all <a href="/wikipedia/en/HTML_element" title="HTML element">elements</a> of a specific type, e.g. the second-level headers <a href="/wikipedia/en/HTML_element#Basic_text" title="HTML element">h2</a></li>
+<li>elements specified by <a href="/wikipedia/en/HTML_attribute" title="HTML attribute">attribute</a>, in particular:
+<ul><li><i>id</i>: an identifier unique within the document</li>
+<li><i>class</i>: an identifier that can annotate multiple elements in a document</li></ul></li>
+<li>elements depending on how they are placed relative to others in the <a href="/wikipedia/en/Document_Object_Model" title="Document Object Model">document tree</a>.</li></ul>
+<p>Classes and IDs are case-sensitive, start with letters, and can include alphanumeric characters, hyphens and underscores. A class may apply to any number of instances of any elements. An ID may only be applied to a single element.
+</p><p><i>Pseudo-classes</i> are used in CSS selectors to permit formatting based on information that is not contained in the document tree. One example of a widely used pseudo-class is <code>:hover</code>, which identifies content only when the user "points to" the visible element, usually by holding the mouse cursor over it. It is appended to a selector as in <code>a:hover</code> or <code>#elementid:hover</code>. A pseudo-class classifies document elements, such as <code>:link</code> or <code>:visited</code>, whereas a <i>pseudo-element</i> makes a selection that may consist of partial elements, such as <code>::first-line</code> or <code>::first-letter</code>.<sup id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+</p><p>Selectors may be combined in many ways to achieve great specificity and flexibility.<sup id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> Multiple selectors may be joined in a spaced list to specify elements by location, element type, id, class, or any combination thereof. The order of the selectors is important. For example, <code>div .myClass {color: red;}</code> applies to all elements of class myClass that are inside div elements, whereas <code>.myClass div {color: red;}</code> applies to all div elements that are in elements of class myClass.
+</p><p>The following table provides a summary of selector syntax indicating usage and the version of CSS that introduced it.<sup id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
+</p>
+<table><tbody><tr>
+<th>Pattern</th>
+<th>Matches</th>
+<th>First defined<br>in CSS level
+</th></tr>
+<tr>
+<td><code>E</code></td>
+<td>an element of type E</td>
+<td>1
+</td></tr>
+<tr>
+<td><code>E:link</code></td>
+<td>an E element is the source anchor of a hyperlink of which the target is not yet visited (:link) or already visited (:visited)</td>
+<td>1
+</td></tr>
+<tr>
+<td><code>E:active</code></td>
+<td>an E element during certain user actions</td>
+<td>1
+</td></tr>
+<tr>
+<td><code>E::first-line</code></td>
+<td>the first formatted line of an E element</td>
+<td>1
+</td></tr>
+<tr>
+<td><code>E::first-letter</code></td>
+<td>the first formatted letter of an E element</td>
+<td>1
+</td></tr>
+<tr>
+<td><code>.c</code></td>
+<td>all elements with class="c"</td>
+<td>1
+</td></tr>
+<tr>
+<td><code>#myid</code></td>
+<td>the element with id="myid"</td>
+<td>1
+</td></tr>
+<tr>
+<td><code>E.warning</code></td>
+<td>an E element whose class is "warning" (the document language specifies how class is determined)</td>
+<td>1
+</td></tr>
+<tr>
+<td><code>E#myid</code></td>
+<td>an E element with ID equal to "myid"</td>
+<td>1
+</td></tr>
+<tr>
+<td><code>.c#myid</code></td>
+<td>the element with class="c" and ID equal to "myid"</td>
+<td>1
+</td></tr>
+<tr>
+<td><code>E F</code></td>
+<td>an F element descendant of an E element</td>
+<td>1
+</td></tr>
+<tr>
+<td><code>*</code></td>
+<td>any element</td>
+<td>2
+</td></tr>
+<tr>
+<td><code>E[foo]</code></td>
+<td>an E element with a "foo" attribute</td>
+<td>2
+</td></tr>
+<tr>
+<td><code>E[foo="bar"]</code></td>
+<td>an E element whose "foo" attribute value is exactly equal to "bar"</td>
+<td>2
+</td></tr>
+<tr>
+<td><code>E[foo~="bar"]</code></td>
+<td>an E element whose "foo" attribute value is a list of whitespace-separated values, one of which is exactly equal to "bar"</td>
+<td>2
+</td></tr>
+<tr>
+<td><code>E[foo|="en"]</code></td>
+<td>an E element whose "foo" attribute has a hyphen-separated list of values beginning (from the left) with "en"</td>
+<td>2
+</td></tr>
+<tr>
+<td><code>E:first-child</code></td>
+<td>an E element, first child of its parent</td>
+<td>2
+</td></tr>
+<tr>
+<td><code>E:lang(fr)</code></td>
+<td>an element of type E in language "fr" (the document language specifies how language is determined)</td>
+<td>2
+</td></tr>
+<tr>
+<td><code>E::before</code></td>
+<td>generated content before an E element's content</td>
+<td>2
+</td></tr>
+<tr>
+<td><code>E::after</code></td>
+<td>generated content after an E element's content</td>
+<td>2
+</td></tr>
+<tr>
+<td><code>E &gt; F</code></td>
+<td>an F element child of an E element</td>
+<td>2
+</td></tr>
+<tr>
+<td><code>E + F</code></td>
+<td>an F element immediately preceded by an E element</td>
+<td>2
+</td></tr>
+<tr>
+<td><code>E[foo^="bar"]</code></td>
+<td>an E element whose "foo" attribute value begins exactly with the string "bar"</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E[foo$="bar"]</code></td>
+<td>an E element whose "foo" attribute value ends exactly with the string "bar"</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E[foo*="bar"]</code></td>
+<td>an E element whose "foo" attribute value contains the substring "bar"</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:root</code></td>
+<td>an E element, root of the document</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:nth-child(n)</code></td>
+<td>an E element, the n-th child of its parent</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:nth-last-child(n)</code></td>
+<td>an E element, the n-th child of its parent, counting from the last one</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:nth-of-type(n)</code></td>
+<td>an E element, the n-th sibling of its type</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:nth-last-of-type(n)</code></td>
+<td>an E element, the n-th sibling of its type, counting from the last one</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:last-child</code></td>
+<td>an E element, last child of its parent</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:first-of-type</code></td>
+<td>an E element, first sibling of its type</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:last-of-type</code></td>
+<td>an E element, last sibling of its type</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:only-child</code></td>
+<td>an E element, only child of its parent</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:only-of-type</code></td>
+<td>an E element, only sibling of its type</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:empty</code></td>
+<td>an E element that has no children (including text nodes)</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:target</code></td>
+<td>an E element being the target of the referring URI</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:enabled</code></td>
+<td>a user interface element E that is enabled</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:disabled</code></td>
+<td>a user interface element E that is disabled</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:checked</code></td>
+<td>a user interface element E that is checked (for instance a radio-button or checkbox)</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E:not(s)</code></td>
+<td>an E element that does not match simple selector s</td>
+<td>3
+</td></tr>
+<tr>
+<td><code>E ~ F</code></td>
+<td>an F element preceded by an E element</td>
+<td>3
+</td></tr></tbody></table>
+<h3 id="declaration_block">Declaration block</h3>
+<p>A declaration block consists of a list of <i>declarations</i> in braces. Each declaration itself consists of a <i>property</i>, a colon (<code>:</code>), and a <i>value</i>. If there are multiple declarations in a block, a semi-colon (<code>;</code>) must be inserted to separate each declaration.<sup id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+</p><p>Properties are specified in the CSS standard. Each property has a set of possible values. Some properties can affect any type of element, and others apply only to particular groups of elements.<sup id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</p><p>Values may be keywords, such as "center" or "inherit", or numerical values, such as <code>200px</code> (200 pixels), <code>50vw</code> (50 percent of the viewport width) or 80% (80 percent of the parent element's width). Color values can be specified with keywords (e.g. "<code>red</code>"), hexadecimal values (e.g. <code>#FF0000</code>, also abbreviated as <code>#F00</code>), RGB values on a 0 to 255 scale (e.g. <code><code>rgb(255, 0, 0)</code></code>), RGBA values that specify both color and alpha transparency (e.g. <code>rgba(255, 0, 0, 0.8)</code>), or HSL or HSLA values (e.g. <code>hsl(000, 100%, 50%)</code>, <code>hsla(000, 100%, 50%, 80%)</code>).<sup id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
+</p>
+<h4 id="length_units">Length units</h4>
+<p>Non-zero numeric values representing linear measures must include a length unit, which is either an alphabetic code or abbreviation, as in <code>200px</code> or <code>50vw</code>; or a percentage sign, as in <code>80%</code>. Some units – <code>cm</code> (<a href="/wikipedia/en/Centimetre" title="Centimetre">centimetre</a>); <code>in</code> (<a href="/wikipedia/en/Inch" title="Inch">inch</a>); <code>mm</code> (<a href="/wikipedia/en/Millimetre" title="Millimetre">millimetre</a>); <code>pc</code> (<a href="/wikipedia/en/Pica_(typography)" title="Pica (typography)">pica</a>); and <code>pt</code> (<a href="/wikipedia/en/Point_(typography)" title="Point (typography)">point</a>) – are <i>absolute</i>, which means that the rendered dimension does not depend upon the structure of the page; others – <code>em</code> (<a href="/wikipedia/en/Em_(typography)" title="Em (typography)">em</a>); <code>ex</code> (<a href="/wikipedia/en/Ex_(typography)" title="Ex (typography)">ex</a>) and <code>px</code> (<a href="/wikipedia/en/Pixel" title="Pixel">pixel</a>) – are <i>relative</i>, which means that factors such as the font size of a parent element can affect the rendered measurement. These eight units were a feature of CSS 1<sup id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> and retained in all subsequent revisions. The proposed CSS Values and Units Module Level 3 will, if adopted as a W3C Recommendation, provide seven further length units: <code>ch</code>; <code>Q</code>; <code>rem</code>; <code>vh</code>; <code>vmax</code>; <code>vmin</code>; and <code>vw</code>.<sup id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>
+</p>
+<h3 id="use">Use</h3>
+<p>Before CSS, nearly all presentational attributes of HTML documents were contained within the HTML markup. All font colors, background styles, element alignments, borders and sizes had to be explicitly described, often repeatedly, within the HTML. CSS lets authors move much of that information to another file, the style sheet, resulting in considerably simpler HTML.
+</p><p>For example, headings (<code>h1</code> elements), sub-headings (<code>h2</code>), sub-sub-headings (<code>h3</code>), etc., are defined structurally using HTML. In print and on the screen, choice of <a href="/wikipedia/en/Typeface" title="Typeface">font</a>, <a href="/wikipedia/en/Point_(typography)" title="Point (typography)">size</a>, <a href="/wikipedia/en/Color" title="Color">color</a> and <a href="/wikipedia/en/Emphasis_(typography)" title="Emphasis (typography)">emphasis</a> for these elements is <i>presentational</i>.
+</p><p>Before CSS, document authors who wanted to assign such <a href="/wikipedia/en/Typography" title="Typography">typographic</a> characteristics to, say, all <code>h2</code> headings had to repeat HTML presentational markup for each occurrence of that heading type. This made documents more complex, larger, and more error-prone and difficult to maintain. CSS allows the separation of presentation from structure. CSS can define color, font, text alignment, size, borders, spacing, layout and many other typographic characteristics, and can do so independently for on-screen and printed views. CSS also defines non-visual styles, such as reading speed and emphasis for aural text readers. The <a href="/wikipedia/en/W3C" title="W3C">W3C</a> has now <a href="/wikipedia/en/Deprecation" title="Deprecation">deprecated</a> the use of all presentational HTML markup.<sup id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+</p><p>For example, under pre-CSS HTML, a heading element defined with red text would be written as:
+</p>
+<div><pre><code>&lt;h1&gt;&lt;font color="red"&gt; Chapter 1. &lt;/font&gt;&lt;/h1&gt;
+</code></pre></div>
+<p>Using CSS, the same element can be coded using style properties instead of HTML presentational attributes:
+</p>
+<div><pre><code>&lt;h1 style="color: red;"&gt; Chapter 1. &lt;/h1&gt;
+</code></pre></div>
+<p>The advantages of this may not be immediately clear but the power of CSS becomes more apparent when the style properties are placed in an internal style element or, even better, an external CSS file. For example, suppose the document contains the style element:
+</p>
+<div><pre><code>&lt;style&gt;
+h1 {
+    color: red;
+}
+&lt;/style&gt;
+</code></pre></div>
+<p>All <code>h1</code> elements in the document will then automatically become red without requiring any explicit code. If the author later wanted to make <code>h1</code> elements blue instead, this could be done by changing the style element to:
+</p>
+<div><pre><code>&lt;style&gt;
+h1 {
+    color: blue;
+}
+&lt;/style&gt;
+</code></pre></div>
+<p>rather than by laboriously going through the document and changing the color for each individual <code>h1</code> element.
+</p><p>The styles can also be placed in an external CSS file, as described below, and loaded using syntax similar to:
+</p>
+<div><pre><code>&lt;link href="path/to/file.css" rel="stylesheet" type="text/css"&gt;
+</code></pre></div>
+<p>This further decouples the styling from the HTML document, and makes it possible to restyle multiple documents by simply editing a shared external CSS file.
+</p>
+<h3 id="sources">Sources</h3>
+<p>CSS information can be provided from various sources. These sources can be the web browser, the user and the author. The information from the author can be further classified into inline, media type, importance, selector specificity, rule order, inheritance and property definition. CSS style information can be in a separate document or it can be embedded into an HTML document. Multiple style sheets can be imported. Different styles can be applied depending on the output device being used; for example, the screen version can be quite different from the printed version, so that authors can tailor the presentation appropriately for each medium.
+</p><p>The style sheet with the highest priority controls the content display. Declarations not set in the highest priority source are passed on to a source of lower priority, such as the user agent style. The process is called <i>cascading</i>.
+</p><p>One of the goals of CSS is to allow users greater control over presentation. Someone who finds red italic headings difficult to read may apply a different style sheet. Depending on the browser and the web site, a user may choose from various style sheets provided by the designers, or may remove all added styles and view the site using the browser's default styling, or may override just the red italic heading style without altering other attributes.
+</p>
+<table>
+<caption>CSS priority scheme (highest to lowest)
+</caption>
+<tbody><tr>
+<th>Priority</th>
+<th>CSS source type</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Importance</td>
+<td>The "<code>!important</code>" annotation overwrites the previous priority types
+</td></tr>
+<tr>
+<td>2</td>
+<td>Inline</td>
+<td>A style applied to an HTML element via HTML "style" attribute
+</td></tr>
+<tr>
+<td>3</td>
+<td>Media Type</td>
+<td>A property definition applies to all media types, unless a media specific CSS is defined
+</td></tr>
+<tr>
+<td>4</td>
+<td>User defined</td>
+<td>Most browsers have the accessibility feature: a user defined CSS
+</td></tr>
+<tr>
+<td>5</td>
+<td>Selector specificity</td>
+<td>A specific contextual selector (<code>#heading p</code>) overwrites generic definition
+</td></tr>
+<tr>
+<td>6</td>
+<td>Rule order</td>
+<td>Last rule declaration has a higher priority
+</td></tr>
+<tr>
+<td>7</td>
+<td>Parent inheritance</td>
+<td>If a property is not specified, it is inherited from a parent element
+</td></tr>
+<tr>
+<td>8</td>
+<td>CSS property definition in HTML document</td>
+<td>CSS rule or CSS inline style overwrites a default browser value
+</td></tr>
+<tr>
+<td>9</td>
+<td>Browser default</td>
+<td>The lowest priority: browser default value is determined by W3C initial value specifications
+</td></tr></tbody></table>
+<h3 id="specificity">Specificity</h3>
+<p><i>Specificity</i> refers to the relative weights of various rules.<sup id="cite_ref-Cascading_15-0"><a href="#cite_note-Cascading-15">[15]</a></sup> It determines which styles apply to an element when more than one rule could apply.  Based on specification, a simple selector (e.g. H1) has a specificity of 1, class selectors have a specificity of 1,0, and ID selectors a specificity of 1,0,0. Because the specificity values do not carry over as in the decimal system, commas are used to separate the "digits"<sup id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup> (a CSS rule having 11 elements and 11 classes would have a specificity of 11,11, not 121).
+</p><p>Thus the following rules selectors result in the indicated specificity:
+</p>
+<table><tbody><tr>
+<th>Selectors</th>
+<th>Specificity
+</th></tr>
+<tr>
+<td><code>H1 {color: white;}</code></td>
+<td>0, 0, 0, 1
+</td></tr>
+<tr>
+<td><code>P EM {color: green;}</code></td>
+<td>0, 0, 0, 2
+</td></tr>
+<tr>
+<td><code>.grape {color: red;}</code></td>
+<td>0, 0, 1, 0
+</td></tr>
+<tr>
+<td><code>P.bright {color: blue;}</code></td>
+<td>0, 0, 1, 1
+</td></tr>
+<tr>
+<td><code>P.bright EM.dark {color: yellow;}</code></td>
+<td>0, 0, 2, 2
+</td></tr>
+<tr>
+<td><code>#id218 {color: brown;}</code></td>
+<td>0, 1, 0, 0
+</td></tr>
+<tr>
+<td><code>style=" "</code></td>
+<td>1, 0, 0, 0
+</td></tr></tbody></table>
+<h4 id="examples">Examples</h4>
+<p>Consider this HTML fragment:
+</p>
+<div><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;style&gt;
+    #xyz { color: blue; }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="xyz" style="color: green;"&gt; To demonstrate specificity &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<p>In the above example, the declaration in the <code>style</code> attribute overrides the one in the <code>&lt;style&gt;</code> element because it has a higher specificity, and thus, the paragraph appears green.
+</p>
+<h3 id="inheritance">Inheritance</h3>
+<p>Inheritance is a key feature in CSS; it relies on the ancestor-descendant relationship to operate. Inheritance is the mechanism by which properties are applied not only to a specified element, but also to its descendants.<sup id="cite_ref-Cascading_15-1"><a href="#cite_note-Cascading-15">[15]</a></sup> Inheritance relies on the document tree, which is the hierarchy of <a href="/wikipedia/en/XHTML" title="XHTML">XHTML</a> elements in a page based on nesting. Descendant elements may inherit CSS property values from any ancestor element enclosing them.
+In general, descendant elements inherit text-related properties, but their box-related properties are not inherited. Properties that can be inherited are color, font, letter-spacing, line-height, list-style, text-align, text-indent, text-transform, visibility, white-space and word-spacing. Properties that cannot be inherited are background, border, display, float and clear, height, and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align and z-index.
+</p><p>Inheritance can be used to avoid declaring certain properties over and over again in a style sheet, allowing for shorter CSS.
+</p><p>Inheritance in CSS is not the same as <a href="/wikipedia/en/Class-based_programming#Inheritance" title="Class-based programming">inheritance in class-based programming languages</a>, where it is possible to define class B as "like class A, but with modifications".<sup id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup> With CSS, it is possible to style an <i>element</i> with "class A, but with modifications". However, it is not possible to define a CSS <i>class</i> B like that, which could then be used to style multiple elements without having to repeat the modifications.
+</p>
+<h4 id="example">Example</h4>
+<p>Given the following style sheet:
+</p>
+<div><pre><code>h1 {
+    color: pink;
+}
+</code></pre></div>
+<p>Suppose there is an h1 element with an emphasizing element (em) inside:
+</p>
+<div><pre><code>&lt;h1&gt;
+    This is to &lt;em&gt;illustrate&lt;/em&gt; inheritance
+&lt;/h1&gt;
+</code></pre></div>
+<p>If no color is assigned to the em element, the emphasized word "illustrate" inherits the color of the parent element, h1. The style sheet h1 has the color pink, hence, the em element is likewise pink.
+</p>
+<h3 id="whitespace">Whitespace</h3>
+<p>Whitespace between properties and selectors is ignored. This code snippet:
+</p>
+<div><pre><code>body{overflow:hidden;background:#000000;background-image:url(images/bg.gif);background-repeat:no-repeat;background-position:left top;}
+</code></pre></div>
+<p>is functionally equivalent to this one:
+</p>
+<div><pre><code>body {
+    overflow: hidden;
+    background-color: #000000;
+    background-image: url(images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+</code></pre></div>
+<p>One common way to format CSS for readability is to indent each property and give it its own line. In addition to formatting CSS for readability, shorthand properties can be used to write out the code faster, which also gets processed more quickly when being rendered:<sup id="cite_ref-Mozilla_Developers_18-0"><a href="#cite_note-Mozilla_Developers-18">[18]</a></sup>
+</p>
+<div><pre><code>body {
+    overflow: hidden;
+    background: #000 url(images/bg.gif) no-repeat left top;
+}
+</code></pre></div>
+<h3 id="positioning">Positioning</h3>
+<p>CSS 2.1 defines three positioning schemes:
+</p>
+<dl><dt>Normal flow</dt>
+<dd><i>Inline</i> items are laid out in the same way as the letters in words in text, one after the other across the available space until there is no more room, then starting a new line below. <i>Block</i> items stack vertically, like paragraphs and like the items in a bulleted list. Normal flow also includes relative positioning of block or inline items, and run-in boxes.</dd>
+<dt>Floats</dt>
+<dd>A floated item is taken out of the normal flow and shifted to the left or right as far as possible in the space available. Other content then flows alongside the floated item.</dd>
+<dt>Absolute positioning</dt>
+<dd>An absolutely positioned item has no place in, and no effect on, the normal flow of other items. It occupies its assigned position in its container independently of other items.<sup id="cite_ref-W3C-positioning_19-0"><a href="#cite_note-W3C-positioning-19">[19]</a></sup></dd></dl>
+<h4 id="position_property">Position property</h4>
+<p>There are four possible values of the <code>position</code> property. If an item is positioned in any way other than <code>static</code>, then the further properties <code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code> are used to specify offsets and positions.
+</p>
+<dl><dt>Static</dt>
+<dd>The default value places the item in the <i>normal flow</i></dd>
+<dt>Relative</dt>
+<dd>The item is placed in the <i>normal flow</i>, and then shifted or offset from that position. Subsequent flow items are laid out as if the item had not been moved.</dd>
+<dt>Absolute</dt>
+<dd>Specifies <i>absolute positioning</i>. The element is positioned in relation to its nearest non-static ancestor.</dd>
+<dt>Fixed</dt>
+<dd>The item is <i>absolutely positioned</i> in a fixed position on the screen even as the rest of the document is scrolled<sup id="cite_ref-W3C-positioning_19-1"><a href="#cite_note-W3C-positioning-19">[19]</a></sup></dd></dl>
+<h4 id="float_and_clear">Float and clear</h4>
+<p>The <code>float</code> property may have one of three values. <i>Absolutely</i> positioned or <i>fixed</i> items cannot be floated. Other elements normally flow around floated items, unless they are prevented from doing so by their <code>clear</code> property.
+</p>
+<dl><dt>left</dt>
+<dd>The item <i>floats</i> to the left of the line that it would have appeared in; other items may flow around its right side.</dd>
+<dt>right</dt>
+<dd>The item <i>floats</i> to the right of the line that it would have appeared in; other items may flow around its left side.</dd>
+<dt>clear</dt>
+<dd>Forces the element to appear underneath ('clear') floated elements to the left (<code>clear:left</code>), right (<code>clear:right</code>) or both sides (<code>clear:both</code>).<sup id="cite_ref-W3C-positioning_19-2"><a href="#cite_note-W3C-positioning-19">[19]</a></sup><sup id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup></dd></dl>
+<h2 id="history">History</h2>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/H%C3%A5kon_Wium_Lie.jpg/170px-H%C3%A5kon_Wium_Lie.jpg" decoding="async" width="170" height="227" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/54/H%C3%A5kon_Wium_Lie.jpg/255px-H%C3%A5kon_Wium_Lie.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/54/H%C3%A5kon_Wium_Lie.jpg/340px-H%C3%A5kon_Wium_Lie.jpg 2x" data-file-width="1920" data-file-height="2560"><figcaption><a href="/wikipedia/en/H%C3%A5kon_Wium_Lie" title="Håkon Wium Lie">Håkon Wium Lie</a>, chief technical officer of the Opera Software company and co-creator of the CSS web standards</figcaption></figure>
+<p>CSS was first proposed by <a href="/wikipedia/en/H%C3%A5kon_Wium_Lie" title="Håkon Wium Lie">Håkon Wium Lie</a> on October 10, 1994.<sup id="cite_ref-chss-proposal_21-0"><a href="#cite_note-chss-proposal-21">[21]</a></sup> At the time, Lie was working with <a href="/wikipedia/en/Tim_Berners-Lee" title="Tim Berners-Lee">Tim Berners-Lee</a> at <a href="/wikipedia/en/CERN" title="CERN">CERN</a>.<sup id="cite_ref-chapter20_22-0"><a href="#cite_note-chapter20-22">[22]</a></sup> Several other style sheet languages for the web were proposed around the same time, and discussions on public mailing lists and inside <a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a> resulted in the first W3C CSS Recommendation (CSS1)<sup id="cite_ref-w3c-css1_23-0"><a href="#cite_note-w3c-css1-23">[23]</a></sup> being released in 1996. In particular, a proposal by <a href="/wikipedia/en/Bert_Bos" title="Bert Bos">Bert Bos</a> was influential; he became co-author of CSS1, and is regarded as co-creator of CSS.<sup id="cite_ref-WWW3_24-0"><a href="#cite_note-WWW3-24">[24]</a></sup>
+</p><p>Style sheets have existed in one form or another since the beginnings of Standard Generalized Markup Language (<a href="/wikipedia/en/SGML" title="SGML">SGML</a>) in the 1980s, and CSS was developed to provide style sheets for the web.<sup id="cite_ref-css-phd_25-0"><a href="#cite_note-css-phd-25">[25]</a></sup> One requirement for a web style sheet language was for style sheets to come from different sources on the web. Therefore, existing style sheet languages like <a href="/wikipedia/en/Document_Style_Semantics_and_Specification_Language" title="Document Style Semantics and Specification Language">DSSSL</a> and <a href="/wikipedia/en/Formatting_Output_Specification_Instance" title="Formatting Output Specification Instance">FOSI</a> were not suitable. CSS, on the other hand, let a document's style be influenced by multiple style sheets by way of "cascading" styles.<sup id="cite_ref-css-phd_25-1"><a href="#cite_note-css-phd-25">[25]</a></sup>
+</p><p>As HTML grew, it came to encompass a wider variety of stylistic capabilities to meet the demands of <a href="/wikipedia/en/Web_development" title="Web development">web developers</a>. This evolution gave the designer more control over site appearance, at the cost of more complex HTML. Variations in <a href="/wikipedia/en/Web_browser" title="Web browser">web browser</a> implementations, such as <a href="/wikipedia/en/ViolaWWW" title="ViolaWWW">ViolaWWW</a> and <a href="/wikipedia/en/WorldWideWeb" title="WorldWideWeb">WorldWideWeb</a>,<sup id="cite_ref-IEEE_26-0"><a href="#cite_note-IEEE-26">[26]</a></sup> made consistent site appearance difficult, and users had less control over how web content was displayed. The browser/editor developed by Tim Berners-Lee had style sheets that were hard-coded into the program. The style sheets could therefore not be linked to documents on the web.<sup id="cite_ref-chapter20_22-1"><a href="#cite_note-chapter20-22">[22]</a></sup> <a href="/wikipedia/en/Robert_Cailliau" title="Robert Cailliau">Robert Cailliau</a>, also of CERN, wanted to separate the structure from the presentation so that different style sheets could describe different presentation for printing, screen-based presentations, and editors.<sup id="cite_ref-IEEE_26-1"><a href="#cite_note-IEEE-26">[26]</a></sup>
+</p><p>Improving web presentation capabilities was a topic of interest to many in the web community and nine different style sheet languages were proposed on the www-style mailing list.<sup id="cite_ref-css-phd_25-2"><a href="#cite_note-css-phd-25">[25]</a></sup> Of these nine proposals, two were especially influential on what became CSS: Cascading HTML Style Sheets<sup id="cite_ref-chss-proposal_21-1"><a href="#cite_note-chss-proposal-21">[21]</a></sup> and Stream-based Style Sheet Proposal (SSP).<sup id="cite_ref-WWW3_24-1"><a href="#cite_note-WWW3-24">[24]</a></sup><sup id="cite_ref-ssp_27-0"><a href="#cite_note-ssp-27">[27]</a></sup> Two browsers served as testbeds for the initial proposals; Lie worked with Yves Lafon to implement CSS in <a href="/wikipedia/en/Dave_Raggett" title="Dave Raggett">Dave Raggett</a>'s <a href="/wikipedia/en/Arena_(web_browser)" title="Arena (web browser)">Arena</a> browser.<sup id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup><sup id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup><sup id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup> Bert Bos implemented his own SSP proposal in the <a href="/wikipedia/en/Argo_(web_browser)" title="Argo (web browser)">Argo</a> browser.<sup id="cite_ref-WWW3_24-2"><a href="#cite_note-WWW3-24">[24]</a></sup> Thereafter, Lie and Bos worked together to develop the CSS standard (the 'H' was removed from the name because these style sheets could also be applied to other markup languages besides HTML).<sup id="cite_ref-chapter20_22-2"><a href="#cite_note-chapter20-22">[22]</a></sup>
+</p><p>Lie's proposal was presented at the "Mosaic and the Web" conference (later called WWW2) in Chicago, Illinois in 1994, and again with Bert Bos in 1995.<sup id="cite_ref-chapter20_22-3"><a href="#cite_note-chapter20-22">[22]</a></sup> Around this time the W3C was already being established, and took an interest in the development of CSS. It organized a workshop toward that end chaired by <a href="/wikipedia/en/Steven_Pemberton" title="Steven Pemberton">Steven Pemberton</a>. This resulted in W3C adding work on CSS to the deliverables of the HTML editorial review board (ERB). Lie and Bos were the primary technical staff on this aspect of the project, with additional members, including <a href="/wikipedia/en/Thomas_Reardon" title="Thomas Reardon">Thomas Reardon</a> of Microsoft, participating as well. In August 1996, <a href="/wikipedia/en/Netscape" title="Netscape">Netscape Communication Corporation</a> presented an alternative style sheet language called <a href="/wikipedia/en/JavaScript_Style_Sheets" title="JavaScript Style Sheets">JavaScript Style Sheets</a> (JSSS).<sup id="cite_ref-chapter20_22-4"><a href="#cite_note-chapter20-22">[22]</a></sup> The spec was never finished, and is deprecated.<sup id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup> By the end of 1996, CSS was ready to become official, and the CSS level 1 Recommendation was published in December.
+</p><p>Development of HTML, CSS, and the <a href="/wikipedia/en/Document_Object_Model" title="Document Object Model">DOM</a> had all been taking place in one group, the HTML Editorial Review Board (ERB). Early in 1997, the ERB was split into three working groups: <a href="/wikipedia/en/HTML_Working_group" title="HTML Working group">HTML Working group</a>, chaired by <a href="/wikipedia/en/Dan_Connolly_(computer_scientist)" title="Dan Connolly (computer scientist)">Dan Connolly</a> of W3C; DOM Working group, chaired by Lauren Wood of <a href="/wikipedia/en/SoftQuad" title="SoftQuad">SoftQuad</a>; and <a href="/wikipedia/en/CSS_Working_group" title="CSS Working group">CSS Working group</a>, chaired by <a href="/wikipedia/en/Chris_Lilley_(W3C)" title="Chris Lilley (W3C)">Chris Lilley</a> of W3C.
+</p><p>The CSS Working Group began tackling issues that had not been addressed with CSS level 1, resulting in the creation of CSS level 2 on November 4, 1997. It was published as a W3C Recommendation on May 12, 1998. CSS level 3, which was started in 1998, is still under development as of 2014.
+</p><p>In 2005, the CSS Working Groups decided to enforce the requirements for standards more strictly. This meant that already published standards like CSS 2.1, CSS 3 Selectors, and CSS 3 Text were pulled back from Candidate Recommendation to Working Draft level.
+</p>
+<h3 id="difficulty_with_adoption">Difficulty with adoption</h3>
+<table><tbody><tr><td><div>This article needs to be <b>updated</b>. Please update this article to reflect recent events or newly available information. <small><i>(January 2019)</i></small></div></td></tr></tbody></table>
+<p>The CSS 1 specification was completed in 1996. Microsoft's <a href="/wikipedia/en/Internet_Explorer_3" title="Internet Explorer 3">Internet Explorer 3</a><sup id="cite_ref-chapter20_22-5"><a href="#cite_note-chapter20-22">[22]</a></sup> was released in that year, featuring some limited support for CSS.  <a href="/wikipedia/en/Internet_Explorer_4" title="Internet Explorer 4">IE 4</a> and <a href="/wikipedia/en/Netscape_Navigator" title="Netscape Navigator">Netscape 4.x</a> added more support, but it was typically incomplete and had many <a href="/wikipedia/en/Software_bug" title="Software bug">bugs</a> that prevented CSS from being usefully adopted. It was more than three years before any web browser achieved near-full implementation of the specification. <a href="/wikipedia/en/Internet_Explorer_for_Mac" title="Internet Explorer for Mac">Internet Explorer 5.0</a> for the <a href="/wikipedia/en/Apple_Macintosh" title="Apple Macintosh">Macintosh</a>, shipped in March 2000, was the first browser to have full (better than 99 percent) CSS 1 support,<sup id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup> surpassing <a href="/wikipedia/en/Opera_(web_browser)" title="Opera (web browser)">Opera</a>, which had been the leader since its introduction of CSS support fifteen months earlier. Other browsers followed soon afterwards, and many of them additionally implemented parts of CSS 2.<sup>[<i><a href="/wiki/Wikipedia-Citation_needed" title="Wikipedia:Citation needed">citation needed</a></i>]</sup>
+</p><p>However, even when later 'version 5' web browsers began to offer a fairly full implementation of CSS, they were still incorrect in certain areas and were fraught with inconsistencies, bugs and other <a href="/wikipedia/en/Quirks_mode" title="Quirks mode">quirks</a>. <a href="/wikipedia/en/Internet_Explorer_5" title="Internet Explorer 5">Microsoft Internet Explorer 5.x for Windows</a>, as opposed to the very different <a href="/wikipedia/en/Internet_Explorer_for_Mac" title="Internet Explorer for Mac">IE for Macintosh</a>, had a flawed implementation of the '<a href="/wikipedia/en/CSS_box_model" title="CSS box model">CSS box model</a>', as compared with the CSS standards. Such inconsistencies and variation in feature support made it difficult for designers to achieve a consistent appearance across browsers and <a href="/wikipedia/en/Computing_platform" title="Computing platform">platforms</a> without the use of <a href="/wikipedia/en/Workaround" title="Workaround">workarounds</a> termed <a href="/wikipedia/en/CSS_hack" title="CSS hack">CSS hacks and filters</a>. The IE/Windows box model bugs were so serious that, when <a href="/wikipedia/en/Internet_Explorer_6" title="Internet Explorer 6">Internet Explorer 6</a> was released, Microsoft introduced a backwards-compatible mode of CSS interpretation ('<a href="/wikipedia/en/Quirks_mode" title="Quirks mode">quirks mode</a>') alongside an alternative, corrected 'standards mode'. Other non-Microsoft browsers also provided such 'mode'-switch behavior capability. It therefore became necessary for authors of <a href="/wikipedia/en/HTML" title="HTML">HTML</a> files to ensure they contained special distinctive <a href="/wikipedia/en/Document_type_declaration#HTML5_DTD-less_DOCTYPE" title="Document type declaration">'standards-compliant CSS intended' marker</a> to show that the authors intended CSS to be interpreted correctly, in compliance with standards, as opposed to being intended for the now long-obsolete <a href="/wikipedia/en/Internet_Explorer_5" title="Internet Explorer 5">IE5/Windows browser</a>. Without this marker, web browsers that have the 'quirks mode'-switching capability will size objects in web pages as IE5/Windows would rather than following CSS standards.<sup>[<i><a href="/wiki/Wikipedia-Citation_needed" title="Wikipedia:Citation needed">citation needed</a></i>]</sup>
+</p><p>Problems with patchy adoption of CSS, along with errata in the original specification, led the W3C to revise the CSS 2 standard into CSS 2.1, which moved nearer to a working snapshot of current CSS support in HTML browsers. Some CSS 2 properties that no browser successfully implemented were dropped, and in a few cases, defined behaviors were changed to bring the standard into line with the predominant existing implementations. CSS 2.1 became a Candidate Recommendation on February 25, 2004, but CSS 2.1 was pulled back to Working Draft status on June 13, 2005,<sup id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup> and only returned to Candidate Recommendation status on July 19, 2007.<sup id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup>
+</p><p>In addition to these problems, the <code>.css</code> extension was used by a software product used to convert <a href="/wikipedia/en/Microsoft_PowerPoint" title="Microsoft PowerPoint">PowerPoint</a> files into Compact Slide Show files,<sup id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup>
+so some web servers served all <code>.css</code><sup id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup> as <a href="/wikipedia/en/Internet_media_type" title="Internet media type">MIME type</a> <code>application/x-pointplus</code><sup id="cite_ref-37"><a href="#cite_note-37">[37]</a></sup> rather than <code>text/css</code>.
+</p>
+<h3 id="variations">Variations</h3>
+<p>CSS has various levels and profiles. Each level of CSS builds upon the last, typically adding new features and typically denoted as CSS 1, CSS 2, CSS 3, and CSS 4. Profiles are typically a subset of one or more levels of CSS built for a particular device or user interface. Currently there are profiles for mobile devices, printers, and television sets. Profiles should not be confused with media types, which were added in CSS 2.
+</p>
+<h4 id="css_1">CSS 1</h4>
+<p>The first  CSS specification to become an official W3C Recommendation is CSS level 1, published on December 17, 1996.  <a href="/wikipedia/en/H%C3%A5kon_Wium_Lie" title="Håkon Wium Lie">Håkon Wium Lie</a> and <a href="/wikipedia/en/Bert_Bos" title="Bert Bos">Bert Bos</a> are credited as the original developers.<sup id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup><sup id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup> Among its capabilities are support for
+</p>
+<ul><li><a href="/wikipedia/en/Typeface" title="Typeface">Font</a> properties such as typeface and emphasis</li>
+<li>Color of text, backgrounds, and other elements</li>
+<li>Text attributes such as spacing between words, letters, and lines of text</li>
+<li><a href="/wikipedia/en/Alignment_(typesetting)" title="Alignment (typesetting)">Alignment</a> of text, images, <a href="/wikipedia/en/Table_(HTML)" title="Table (HTML)">tables</a> and other elements</li>
+<li>Margin, border, padding, and positioning for most elements</li>
+<li>Unique identification and generic classification of groups of attributes</li></ul>
+<p>The W3C no longer maintains the CSS 1 Recommendation.<sup id="cite_ref-40"><a href="#cite_note-40">[40]</a></sup>
+</p>
+<h4 id="css_2">CSS 2</h4>
+<p>CSS level 2 specification was developed by the W3C and published as a recommendation in May 1998. A superset of CSS 1, CSS 2 includes a number of new capabilities like absolute, relative, and fixed positioning of elements and <a href="/wikipedia/en/Z-index" title="Z-index">z-index</a>, the concept of media types, support for aural style sheets (which were later replaced by the CSS 3 speech modules)<sup id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup> and bidirectional text, and new font properties such as shadows.
+</p><p>The W3C no longer maintains the CSS 2 recommendation.<sup id="cite_ref-42"><a href="#cite_note-42">[42]</a></sup>
+</p>
+<h4 id="css_2.1">CSS 2.1</h4>
+<p>CSS level 2 revision 1, often referred to as "CSS 2.1", fixes errors in CSS 2, removes poorly supported or not fully interoperable features and adds already implemented browser extensions to the specification. To comply with the W3C Process for standardizing technical specifications, CSS 2.1 went back and forth between Working Draft status and Candidate Recommendation status for many years. CSS 2.1 first became a <a rel="nofollow" href="http://www.w3.org/TR/2004/CR-CSS21-20040225/">Candidate Recommendation</a> on February 25, 2004, but it was reverted to a Working Draft on June 13, 2005 for further review. It returned to Candidate Recommendation on 19 July 2007 and then updated twice in 2009. However, because changes and clarifications were made, it again went back to Last Call Working Draft on 7 December 2010.
+</p><p>CSS 2.1 went to Proposed Recommendation on 12 April 2011.<sup id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup> After being reviewed by the W3C Advisory Committee, it was finally published as a W3C Recommendation on 7 June 2011.<sup id="cite_ref-w3.org_44-0"><a href="#cite_note-w3.org-44">[44]</a></sup>
+</p><p>CSS 2.1 was planned as the first and final revision of level 2—but low priority work on CSS 2.2 began in 2015.
+</p>
+<h4 id="css_3">CSS 3</h4>
+  
+<p>Unlike CSS 2, which is a large single specification defining various features, CSS 3 is divided into several separate documents called "modules". Each module adds new capabilities or extends features defined in CSS 2, preserving backward compatibility. Work on CSS level 3 started around the time of publication of the original CSS 2 recommendation. The earliest CSS 3 drafts were published in June 1999.<sup id="cite_ref-World_Wide_Web_Consortium_45-0"><a href="#cite_note-World_Wide_Web_Consortium-45">[45]</a></sup>
+</p><p>Due to the modularization, different modules have different stability and statuses.<sup id="cite_ref-46"><a href="#cite_note-46">[46]</a></sup>
+</p><p>Some modules have <i><a href="/wikipedia/en/W3C_Recommendation#Candidate_Recommendation_(CR)" title="W3C Recommendation">Candidate Recommendation</a></i> (<i>CR</i>) status and are considered moderately stable. At <i>CR</i> stage, implementations are advised to drop vendor prefixes.<sup id="cite_ref-47"><a href="#cite_note-47">[47]</a></sup>
+</p>
+<table>
+<caption>Summary of main module-specifications<sup id="cite_ref-48"><a href="#cite_note-48">[48]</a></sup>
+</caption>
+<tbody><tr>
+<th>Module
+</th>
+<th>Specification title
+</th>
+<th>Status
+</th>
+<th>Date
+</th></tr>
+<tr>
+<td><samp>css3-background</samp>
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css3-background/">CSS Backgrounds and Borders Module Level 3</a> 
+</td>
+<td><i>Candidate</i> Rec.</td>
+<td align="right">Oct 2017
+</td></tr>
+<tr>
+<td><samp>css3-box</samp>
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css3-box">CSS basic box model</a>
+</td>
+<td>Working <i>Draft</i></td>
+<td align="right">Jul 2018
+</td></tr>
+<tr>
+<td><samp>css-cascade-3</samp>
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css-cascade-3/">CSS Cascading and Inheritance Level 3</a> 
+</td>
+<td><i>Candidate</i> Rec.</td>
+<td align="right">May 2016
+</td></tr>
+<tr>
+<td><samp>css3-color</samp>
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css3-color">CSS Color Module Level 3</a>
+</td>
+<td><i>Recommendation</i></td>
+<td align="right">Jun 2018
+</td></tr>
+<tr>
+<td><samp>css3-content</samp>
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css-content-3/">CSS3 Generated and Replaced Content Module</a> 
+</td>
+<td>Working <i>Draft</i></td>
+<td align="right">Jun 2016
+</td></tr>
+<tr>
+<td><samp>css-fonts-3</samp>
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css-fonts-3/">CSS Fonts Module Level 3</a>
+</td>
+<td><i>Recommendation</i></td>
+<td align="right">Sep 2018
+</td></tr>
+<tr>
+<td><samp>css3-gcpm</samp>
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css-gcpm-3/">CSS Generated Content for Paged Media Module</a>
+</td>
+<td>Working <i>Draft</i></td>
+<td align="right">May 2014
+</td></tr>
+<tr>
+<td><samp>css3-layout</samp>
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css-template-3/">CSS Template Layout Module</a>
+</td>
+<td><i>Note</i></td>
+<td align="right">Mar 2015
+</td></tr>
+<tr>
+<td><samp>css3-mediaqueries</samp> 
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css3-mediaqueries/">Media Queries</a>
+</td>
+<td><i>Recommendation</i></td>
+<td align="right">Jun 2012
+</td></tr>
+<tr>
+<td><samp>mediaqueries-4</samp> 
+</td>
+<td><a rel="nofollow" href="https://www.w3.org/TR/mediaqueries-4/">Media Queries Level 4</a>
+</td>
+<td><i>Candidate</i> Rec.</td>
+<td align="right">Sep 2017
+</td></tr>
+<tr>
+<td><samp>css3-multicol</samp> 
+</td>
+<td><a rel="nofollow" href="https://www.w3.org/TR/css-multicol-1/">Multi-column Layout Module Level 1</a>
+</td>
+<td>Working <i>Draft</i></td>
+<td align="right">May 2018
+</td></tr>
+<tr>
+<td><samp>css3-page</samp>
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css3-page/">CSS Paged Media Module Level 3</a>
+</td>
+<td>Working <i>Draft</i></td>
+<td align="right">Mar 2013
+</td></tr>
+<tr>
+<td><samp>selectors-3</samp>
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css3-selectors/">Selectors Level 3</a>
+</td>
+<td><i>Recommendation</i></td>
+<td align="right">Nov 2018
+</td></tr>
+<tr>
+<td><samp>selectors-4</samp>
+</td>
+<td><a rel="nofollow" href="https://www.w3.org/TR/selectors-4/">Selectors Level 4</a>
+</td>
+<td>Working <i>Draft</i></td>
+<td align="right">Feb 2018
+</td></tr>
+<tr>
+<td><samp>css3-ui</samp>
+</td>
+<td><a rel="nofollow" href="http://www.w3.org/TR/css-ui-3/">CSS Basic User Interface Module Level 3 (CSS3 UI)</a>
+</td>
+<td><i>Recommendation</i></td>
+<td align="right">Jun 2018
+</td></tr></tbody></table>
+<h4 id="css_4">CSS 4</h4>
+<p>There is no single, integrated CSS4 specification,<sup id="cite_ref-49"><a href="#cite_note-49">[49]</a></sup> because the specification has been split into many separate modules which level independently. 
+</p><p>Modules that build on things from CSS Level 2 started at Level 3. Some of them have already reached Level 4 or are already approaching Level 5. Other modules that define entirely new functionality, such as <a href="/wikipedia/en/Flexbox" title="Flexbox">Flexbox</a><sup id="cite_ref-50"><a href="#cite_note-50">[50]</a></sup>, have been designated as Level 1 and some of them are approaching Level 2.
+</p><p>The CSS Working Group sometimes publishes "Snapshots", a collection of whole modules and parts of other drafts that are considered stable enough to be implemented by browser developers. So far, five such "best current practices" documents have been published as Notes, in 2007,<sup id="cite_ref-51"><a href="#cite_note-51">[51]</a></sup> 2010,<sup id="cite_ref-52"><a href="#cite_note-52">[52]</a></sup> 2015,<sup id="cite_ref-53"><a href="#cite_note-53">[53]</a></sup>, 2017,<sup id="cite_ref-54"><a href="#cite_note-54">[54]</a></sup> and 2018.<sup id="cite_ref-55"><a href="#cite_note-55">[55]</a></sup>
+</p><p>Since these specification snapshots are primarily intended for developers, there has been growing demand for as similar versioned reference document targeted at authors, which would present the state of interoperable implementations as meanwhile documented by sites like Can I Use…<sup id="cite_ref-caniuse_56-0"><a href="#cite_note-caniuse-56">[56]</a></sup> and the Mozilla Developer Network.<sup id="cite_ref-mdn_57-0"><a href="#cite_note-mdn-57">[57]</a></sup> A W3C Community Group has been established in early 2020 in order to discuss and define such a resource.<sup id="cite_ref-css4_58-0"><a href="#cite_note-css4-58">[58]</a></sup> The actual kind of <a href="/wikipedia/en/Software_versioning" title="Software versioning">versioning</a> is also up to debate, which means that the document once produced might not be called "CSS4".
+</p>
+<h2 id="browser_support">Browser support</h2>
+  
+<p>Each web browser uses a <a href="/wikipedia/en/Web_browser_engine" title="Web browser engine">layout engine</a> to render web pages, and support for CSS functionality is not consistent between them. Because browsers do not parse CSS perfectly, multiple coding techniques have been developed to target specific browsers with workarounds (commonly known as <a href="/wikipedia/en/CSS_hacks" title="CSS hacks">CSS hacks</a> or CSS filters). Adoption of new functionality in CSS can be hindered by lack of support in major browsers. For example, Internet Explorer was slow to add support for many CSS 3 features, which slowed adoption of those features and damaged the browser's reputation among developers.<sup id="cite_ref-59"><a href="#cite_note-59">[59]</a></sup> In order to ensure a consistent experience for their users, web developers often test their sites across multiple operating systems, browsers, and browser versions, increasing development time and complexity. Tools such as <a href="/wikipedia/en/BrowserStack" title="BrowserStack">BrowserStack</a> have been built to reduce the complexity of maintaining these environments.
+</p><p>In addition to these testing tools, many sites maintain lists of browser support for specific CSS properties, including <a rel="nofollow" href="http://caniuse.com/">CanIUse</a> and the <a href="/wikipedia/en/Mozilla_Developer_Network" title="Mozilla Developer Network">Mozilla Developer Network</a>. Additionally, the CSS 3 defines feature queries, which provide an <code>@supports</code> directive that will allow developers to target browsers with support for certain functionality directly within their CSS.<sup id="cite_ref-60"><a href="#cite_note-60">[60]</a></sup> CSS that is not supported by older browsers can also sometimes be patched in using JavaScript <a href="/wikipedia/en/Polyfill_(programming)" title="Polyfill (programming)">polyfills</a>, which are pieces of JavaScript code designed to make browsers behave consistently. These workarounds—and the need to support fallback functionality—can add complexity to development projects, and consequently, companies frequently define a list of browser versions that they will and will not support.
+</p><p>As websites adopt newer code standards that are incompatible with older browsers, these browsers can be cut off from accessing many of the resources on the web (sometimes intentionally).<sup id="cite_ref-61"><a href="#cite_note-61">[61]</a></sup> Many of the most popular sites on the internet are not just visually degraded on older browsers due to poor CSS support, but do not work at all, in large part due to the evolution of JavaScript and other web technologies.
+</p>
+<h2 id="limitations">Limitations</h2>
+<p>Some noted limitations of the current capabilities of CSS include:
+</p>
+<dl><dt>Selectors are unable to ascend</dt>
+<dd>CSS currently offers no way to select a <i>parent</i> or <i>ancestor</i> of an element that satisfies certain criteria.<sup id="cite_ref-css-missing_62-0"><a href="#cite_note-css-missing-62">[62]</a></sup> CSS Selectors Level 4, which is still in Working Draft status, proposes such a selector,<sup id="cite_ref-63"><a href="#cite_note-63">[63]</a></sup> but only as part of the "complete" selector profile, not the "fast" profile used in dynamic CSS styling.<sup id="cite_ref-64"><a href="#cite_note-64">[64]</a></sup> A more advanced selector scheme (such as <a href="/wikipedia/en/XPath" title="XPath">XPath</a>) would enable more sophisticated style sheets. The major reasons for the CSS Working Group previously rejecting proposals for parent selectors are related to browser performance and <a href="/wikipedia/en/Incremental_rendering" title="Incremental rendering">incremental rendering</a> issues.<sup id="cite_ref-why-not-parent-selector_65-0"><a href="#cite_note-why-not-parent-selector-65">[65]</a></sup></dd>
+<dt>Cannot explicitly declare new scope independently of position</dt>
+<dd>Scoping rules for properties such as z-index look for the closest parent element with a position:absolute or position:relative attribute. This odd coupling has undesired effects. For example, it is impossible to avoid declaring a new scope when one is forced to adjust an element's position, preventing one from using the desired scope of a parent element.</dd>
+<dt>Pseudo-class dynamic behavior not controllable</dt>
+<dd>CSS implements pseudo-classes that allow a degree of user feedback by conditional application of alternate styles. One CSS pseudo-class, "<code>:hover</code>", is dynamic (equivalent of JavaScript "onmouseover") and has potential for abuse (e.g., implementing cursor-proximity popups),<sup id="cite_ref-66"><a href="#cite_note-66">[66]</a></sup> but CSS has no ability for a client to disable it (no "disable"-like property) or limit its effects (no "nochange"-like values for each property).</dd>
+<dt>Cannot name rules</dt>
+<dd>There is no way to name a CSS rule, which would allow (for example) client-side scripts to refer to the rule even if its selector changes.</dd>
+<dt>Cannot include styles from a rule into another rule</dt>
+<dd>CSS styles often must be duplicated in several rules to achieve a desired effect, causing additional maintenance and requiring more thorough testing. Some new CSS features were proposed to solve this, but (as of February, 2016) are not yet implemented anywhere.<sup id="cite_ref-67"><a href="#cite_note-67">[67]</a></sup></dd>
+<dt>Cannot target specific text without altering markup</dt>
+<dd>Besides the <code>:first-letter</code> pseudo-element, one cannot target specific ranges of text without needing to utilize place-holder elements.</dd></dl>
+<h3 id="former_issues">Former issues</h3>
+<p>Additionally, several more issues were present in prior versions of the CSS standard, but have been alleviated:
+</p>
+<dl><dt>Vertical control limitations</dt>
+<dd>Though horizontal placement of elements was always generally easy to control, vertical placement was frequently unintuitive, convoluted, or outright impossible. Simple tasks, such as centering an element vertically or placing a footer no higher than bottom of the viewport required either complicated and unintuitive style rules, or simple but widely unsupported rules.<sup id="cite_ref-css-missing_62-1"><a href="#cite_note-css-missing-62">[62]</a></sup> The Flexible Box Module improved the situation considerably and vertical control is much more straightforward and supported in all of the modern browsers.<sup id="cite_ref-68"><a href="#cite_note-68">[68]</a></sup> Older browsers still have those issues, but most of those (mainly Internet Explorer 9 and below) are no longer supported by their vendors.<sup id="cite_ref-69"><a href="#cite_note-69">[69]</a></sup></dd>
+<dt>Absence of expressions</dt>
+<dd>There was no standard ability to specify property values as simple expressions (such as <code>margin-left: 10% – 3em + 4px;</code>).  This would be useful in a variety of cases, such as calculating the size of columns subject to a constraint on the sum of all columns. Internet Explorer versions 5 to 7 support a proprietary expression() statement,<sup id="cite_ref-properties1_70-0"><a href="#cite_note-properties1-70">[70]</a></sup> with similar functionality. This proprietary expression() statement is no longer supported from Internet Explorer 8 onwards, except in compatibility modes. This decision was taken for "standards compliance, browser performance, and security reasons".<sup id="cite_ref-properties1_70-1"><a href="#cite_note-properties1-70">[70]</a></sup> However, a <a href="/wikipedia/en/W3C_recommendation" title="W3C recommendation">candidate recommendation</a> with a calc() value to address this limitation has been published by the CSS WG<sup id="cite_ref-71"><a href="#cite_note-71">[71]</a></sup> and has since been supported in all of the modern browsers.<sup id="cite_ref-72"><a href="#cite_note-72">[72]</a></sup></dd>
+<dt>Lack of column declaration</dt>
+<dd>Although possible in current CSS 3 (using the <code>column-count</code> module),<sup id="cite_ref-73"><a href="#cite_note-73">[73]</a></sup> layouts with multiple columns can be complex to implement in CSS 2.1. With CSS 2.1, the process is often done using floating elements, which are often rendered differently by different browsers, different computer screen shapes, and different screen ratios set on standard monitors. All of the modern browsers support this CSS 3 feature in one form or another.<sup id="cite_ref-74"><a href="#cite_note-74">[74]</a></sup></dd></dl>
+<h2 id="advantages">Advantages</h2>
+<dl><dt>Separation of content from presentation</dt>
+<dd></dd>
+<dd>CSS facilitates publication of content in multiple presentation formats based on nominal parameters. Nominal parameters include explicit user preferences, different web browsers, the type of device being used to view the content (a desktop computer or mobile device), the geographic location of the user and many other variables.</dd>
+<dt>Site-wide consistency</dt>
+<dd></dd>
+<dd>When CSS is used effectively, in terms of inheritance and "cascading", a global style sheet can be used to affect and style elements site-wide. If the situation arises that the styling of the elements should be changed or adjusted, these changes can be made by editing rules in the global style sheet. Before CSS, this sort of maintenance was more difficult, expensive and time-consuming.</dd>
+<dt>Bandwidth</dt>
+<dd>A stylesheet, internal or external, specifies the style once for a range of HTML elements selected by <code>class</code>, type or relationship to others. This is much more efficient than repeating style information inline for each occurrence of the element. An external stylesheet is usually stored in the <a href="/wikipedia/en/Browser_cache" title="Browser cache">browser cache</a>, and can therefore be used on multiple pages without being reloaded, further reducing data transfer over a network.</dd>
+<dt>Page reformatting</dt>
+<dd></dd>
+<dd>With a simple change of one line, a different style sheet can be used for the same page. This has advantages for accessibility, as well as providing the ability to tailor a page or site to different target devices. Furthermore, devices not able to understand the styling still display the content.</dd>
+<dt>Accessibility</dt>
+<dd>Without CSS, web designers must typically lay out their pages with techniques such as HTML tables that hinder accessibility for vision-impaired users (see <a href="/wikipedia/en/Tableless_web_design#Accessibility" title="Tableless web design">Tableless web design#Accessibility</a>).</dd></dl>
+<h2 id="standardization">Standardization</h2>
+<h3 id="frameworks">Frameworks</h3>
+  
+<p><a href="/wikipedia/en/CSS_framework" title="CSS framework">CSS frameworks</a> are pre-prepared <a href="/wikipedia/en/Library_(computing)" title="Library (computing)">libraries</a> that are meant to allow for easier, more <a href="/wikipedia/en/Standards-compliant" title="Standards-compliant">standards-compliant</a> styling of <a href="/wikipedia/en/Web_page" title="Web page">web pages</a> using the Cascading Style Sheets language. CSS frameworks include <a href="/wikipedia/en/Foundation_(framework)" title="Foundation (framework)">Foundation</a>, <a href="/wikipedia/en/Blueprint_(CSS_framework)" title="Blueprint (CSS framework)">Blueprint</a>, <a href="/wikipedia/en/Bootstrap_(framework)" title="Bootstrap (framework)">Bootstrap</a>, <a href="/wikipedia/en/Cascade_Framework" title="Cascade Framework">Cascade Framework</a> and Materialize. Like programming and scripting language libraries, CSS frameworks are usually incorporated as external .css sheets referenced in the HTML <code>&lt;head&gt;</code>. They provide a number of ready-made options for designing and laying out the web page. Although many of these frameworks have been published, some authors use them mostly for rapid prototyping, or for learning from, and prefer to 'handcraft' CSS that is appropriate to each published site without the design, maintenance and download overhead of having many unused features in the site's styling.<sup id="cite_ref-75"><a href="#cite_note-75">[75]</a></sup>
+</p>
+<h3 id="design_methodologies">Design methodologies</h3>
+<p>As the size of CSS resources used in a project increases, a development team often needs to decide on a common design methodology to keep them organized. The goals are ease of development, ease of collaboration during development and performance of the deployed stylesheets in the browser. Popular methodologies include OOCSS (object oriented CSS), ACSS (atomic CSS), oCSS (organic Cascade Style Sheet), SMACSS (scalable and modular architecture for CSS), and BEM (block, element, modifier).<sup id="cite_ref-76"><a href="#cite_note-76">[76]</a></sup>
+</p>
+<h2 id="references">References</h2>
+<div>
+<ol>
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS">"CSS developer guide"</a>. <i>Mozilla Developer Network</i>. Retrieved 2015-09-24.</cite>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <cite>Flanagan, David. <i>JavaScript - The definitive guide</i> (6 ed.). p. 1. <q>JavaScript is part of the triad of technologies that all Web developers must learn: HTML to specify the content of web pages, CSS to specify the presentation of web pages, and JavaScript to specify the behaviour of web pages.</q></cite>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/standards/webdesign/htmlcss#whatcss">"What is CSS?"</a>. World Wide Web Consortium. Retrieved 2010-12-01.</cite>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <cite><a rel="nofollow" href="http://www.htmlgoodies.com/beyond/article.php/3893911/Web-based-Mobile-Apps-of-the-Future-Using-HTML-5-CSS-and-JavaScript.htm">"Web-based Mobile Apps of the Future Using HTML 5, CSS and JavaScript"</a>. HTMLGoodies.</cite>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <cite><a rel="nofollow" href="http://jigsaw.w3.org/css-validator/">"W3C CSS validation service"</a>.</cite>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/CSS21/selector.html#pseudo-elements">"W3C CSS2.1 specification for pseudo-elements and pseudo-classes"</a>. World Wide Web Consortium. 7 June 2011. Retrieved 30 April 2012.</cite>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> see <a rel="nofollow" href="http://www.w3.org/TR/CSS21/selector.html">the complete definition of selectors at the W3C Web site</a>.
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/selectors/">"Selectors Level 3"</a>. W3.org. Retrieved 2014-05-30.</cite>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/CSS21/syndata.html#q10">"W3C CSS2.1 specification for rule sets, declaration blocks, and selectors"</a>. World Wide Web Consortium. 7 June 2011. Retrieved 2009-06-20.</cite>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/CSS2/propidx.html">"Full property table"</a>. W3.org. Retrieved 2014-05-30.</cite>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">"CSS Color"</a>. Mozilla Developer Network. 2016-06-28. Retrieved 2016-08-23.</cite>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <cite><a rel="nofollow" href="https://www.w3.org/TR/REC-CSS1-961217#length-units">"6.1 Length units"</a>. <i>Cascading Style Sheets, level 1</i>. 17 December 1996. Retrieved 20 June 2019.</cite>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <cite><a rel="nofollow" href="https://www.w3.org/TR/2019/CR-css-values-3-20190606/#lengths">"5. Distance Units: the &lt;length&gt; type"</a>. <i>CSS Values and Units Module Level 3</i>. 6 June 2019. Retrieved 20 June 2019.</cite>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <cite>W3C HTML Working Group. <a rel="nofollow" href="http://www.w3.org/TR/html/introduction.html#presentational-markup">"HTML 5. A vocabulary and associated APIs for HTML and XHTML"</a>. <a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a>. Retrieved 28 June 2014.</cite>
+</li>
+<li id="cite_note-Cascading-15">^ <a href="#cite_ref-Cascading_15-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Cascading_15-1"><sup><i><b>b</b></i></sup></a> <cite>Meyer, Eric A. (2006). <a rel="nofollow" href="http://shop.oreilly.com/product/9781565926226.do"><i>Cascading Style Sheets: The Definitive Guide</i></a> (3rd ed.). O'Reilly Media, Inc. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 0-596-52733-0.</cite>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/CSS21/cascade.html#specificity">"Assigning property values, Cascading, and Inheritance"</a>.</cite>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <cite><a rel="nofollow" href="https://stackoverflow.com/questions/1065435/can-a-css-class-inherit-one-or-more-other-classes">"Can a CSS class inherit one or more other classes?"</a>. <i>StackOverflow</i>. Retrieved 2017-09-10.</cite>
+</li>
+<li id="cite_note-Mozilla_Developers-18"><b><a href="#cite_ref-Mozilla_Developers_18-0">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">"Shorthand properties"</a>. <i>Tutorial</i>. Mozilla Developers. 2017-12-07.</cite>
+</li>
+<li id="cite_note-W3C-positioning-19">^ <a href="#cite_ref-W3C-positioning_19-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-W3C-positioning_19-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-W3C-positioning_19-2"><sup><i><b>c</b></i></sup></a> <cite>Bos, Bert;  et al. (7 December 2010). <a rel="nofollow" href="http://www.w3.org/TR/CSS2/visuren.html#positioning-scheme">"9.3 Positioning schemes"</a>. <i>Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification</i>. W3C. Retrieved 16 February 2011.</cite>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <cite><a href="/wikipedia/en/Molly_Holzschlag" title="Molly Holzschlag">Holzschlag, Molly E</a> (2005). <i>Spring into HTML and CSS</i>. Pearson Education, Inc. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 0-13-185586-7.</cite>
+</li>
+<li id="cite_note-chss-proposal-21">^ <a href="#cite_ref-chss-proposal_21-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-chss-proposal_21-1"><sup><i><b>b</b></i></sup></a> <cite>Lie, Hakon W (10 Oct 1994). <a rel="nofollow" href="http://www.w3.org/People/howcome/p/cascade.html">"Cascading HTML style sheets - a proposal"</a> (Proposal) (0.92). CERN. Retrieved 25 May 2014.</cite> Cite journal requires <code>|journal=</code> 
+</li>
+<li id="cite_note-chapter20-22">^ <a href="#cite_ref-chapter20_22-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-chapter20_22-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-chapter20_22-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-chapter20_22-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-chapter20_22-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-chapter20_22-5"><sup><i><b>f</b></i></sup></a> <cite><a href="/wikipedia/en/H%C3%A5kon_Wium_Lie" title="Håkon Wium Lie">Lie, Håkon Wium</a>; <a href="/wikipedia/en/Bert_Bos" title="Bert Bos">Bos, Bert</a> (1999). <a rel="nofollow" href="https://archive.org/details/cascadingstyles000lieh"><i>Cascading Style Sheets, designing for the Web</i></a>. Addison Wesley. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 0-201-59625-3. Retrieved 23 June 2010.</cite>
+</li>
+<li id="cite_note-w3c-css1-23"><b><a href="#cite_ref-w3c-css1_23-0">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/1999/REC-CSS1-19990111">"Cascading Style Sheets, level 1"</a>. World Wide Web Consortium.</cite>
+</li>
+<li id="cite_note-WWW3-24">^ <a href="#cite_ref-WWW3_24-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-WWW3_24-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-WWW3_24-2"><sup><i><b>c</b></i></sup></a> <cite><a href="/wikipedia/en/Bert_Bos" title="Bert Bos">Bos, Bert</a> (14 April 1995). <a rel="nofollow" href="http://www.w3.org/People/Bos/style.html">"Simple style sheets for SGML &amp; HTML on the web"</a>. World Wide Web Consortium. Retrieved 20 June 2010.</cite>
+</li>
+<li id="cite_note-css-phd-25">^ <a href="#cite_ref-css-phd_25-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-css-phd_25-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-css-phd_25-2"><sup><i><b>c</b></i></sup></a> <cite><a rel="nofollow" href="https://web.archive.org/web/20060906211843/http://people.opera.com/howcome/2006/phd/">"Cascading Style Sheets"</a>. University of Oslo. Archived from <a rel="nofollow" href="http://people.opera.com/howcome/2006/phd/">the original</a> on 2006-09-06. Retrieved 3 September 2014.</cite>
+</li>
+<li id="cite_note-IEEE-26">^ <a href="#cite_ref-IEEE_26-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-IEEE_26-1"><sup><i><b>b</b></i></sup></a> <cite>Petrie, Charles; <a href="/wikipedia/en/Robert_Cailliau" title="Robert Cailliau">Cailliau, Robert</a> (November 1997). <a rel="nofollow" href="https://web.archive.org/web/20110106041256/http://www.computer.org/portal/web/computingnow/ic-cailliau">"Interview Robert Cailliau on the WWW Proposal: "How It Really Happened.""</a>. <a href="/wikipedia/en/Institute_of_Electrical_and_Electronics_Engineers" title="Institute of Electrical and Electronics Engineers">Institute of Electrical and Electronics Engineers</a>. Archived from <a rel="nofollow" href="http://www.computer.org/portal/web/computingnow/ic-cailliau">the original</a> on 6 January 2011. Retrieved 18 August 2010.</cite>
+</li>
+<li id="cite_note-ssp-27"><b><a href="#cite_ref-ssp_27-0">^</a></b> <cite><a href="/wikipedia/en/Bert_Bos" title="Bert Bos">Bos, Bert</a> (31 March 1995). <a rel="nofollow" href="http://www.w3.org/People/Bos/stylesheets.html">"Stream-based Style sheet Proposal"</a>. Retrieved 3 September 2014.</cite>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <cite><a href="/wikipedia/en/Henrik_Frystyk_Nielsen" title="Henrik Frystyk Nielsen">Nielsen, Henrik Frystyk</a> (7 June 2002). <a rel="nofollow" href="http://www.w3.org/Library/Collaborators.html">"Libwww Hackers"</a>. World Wide Web Consortium. Retrieved 6 June 2010.</cite>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/People/Lafon/">"Yves Lafon"</a>. World Wide Web Consortium. Retrieved 17 June 2010.</cite>
+</li>
+<li id="cite_note-30"><b><a href="#cite_ref-30">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/People/domain?domain=Technology+and+Society">"The W3C Team: Technology and Society"</a>. World Wide Web Consortium. 18 July 2008. Retrieved 22 January 2011.</cite>
+</li>
+<li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <cite><a href="/wikipedia/en/Lou_Montulli" title="Lou Montulli">Lou Montulli</a>; <a href="/wikipedia/en/Brendan_Eich" title="Brendan Eich">Brendan Eich</a>; Scott Furman; Donna Converse; Troy Chevalier (22 August 1996). <a rel="nofollow" href="http://www.w3.org/Submission/1996/1/WD-jsss-960822">"JavaScript-Based Style Sheets"</a>. W3C. Retrieved 23 June 2010.</cite>
+</li>
+<li id="cite_note-32"><b><a href="#cite_ref-32">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/Style/CSS/software.en.html#w26">"CSS software"</a>. W3.org. Retrieved 2011-01-15.</cite>
+</li>
+<li id="cite_note-33"><b><a href="#cite_ref-33">^</a></b> <cite><a href="/wikipedia/en/Anne_van_Kesteren" title="Anne van Kesteren">Anne van Kesteren</a>. <a rel="nofollow" href="https://annevankesteren.nl/2005/06/css-21">"CSS 2.1 – Anne's Weblog"</a>. Retrieved 2011-02-16.</cite>
+</li>
+<li id="cite_note-34"><b><a href="#cite_ref-34">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/News/2007.html#entry-7058">"Archive of W3C News in 2007"</a>. <a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a>. Retrieved 2011-02-16.</cite>
+</li>
+<li id="cite_note-35"><b><a href="#cite_ref-35">^</a></b> <cite>Nitot, Tristan (18 March 2002). <a rel="nofollow" href="https://web.archive.org/web/20110520044919/https://developer.mozilla.org/en/Incorrect_MIME_Type_for_CSS_Files">"Incorrect MIME Type for CSS Files"</a>. <i><a href="/wikipedia/en/Mozilla_Developer_Center" title="Mozilla Developer Center">Mozilla Developer Center</a></i>. <a href="/wikipedia/en/Mozilla" title="Mozilla">Mozilla</a>. Archived from <a rel="nofollow" href="https://developer.mozilla.org/en/Incorrect_MIME_Type_for_CSS_Files">the original</a> on 2011-05-20. Retrieved 20 June 2010.</cite>
+</li>
+<li id="cite_note-36"><b><a href="#cite_ref-36">^</a></b> <cite>McBride, Don (27 November 2009). <a rel="nofollow" href="http://donsnotes.com/tech/filetype.html">"File Types"</a>. Retrieved 20 June 2010.</cite>
+</li>
+<li id="cite_note-37"><b><a href="#cite_ref-37">^</a></b> <cite><a rel="nofollow" href="https://web.archive.org/web/20110718182554/http://extensions.pndesign.cz/css-file">"css file extension details"</a>. File extension database. 12 March 2010. Archived from <a rel="nofollow" href="http://extensions.pndesign.cz/css-file">the original</a> on 18 July 2011. Retrieved 20 June 2010.</cite>
+</li>
+<li id="cite_note-38"><b><a href="#cite_ref-38">^</a></b> <cite>Bos, / Håkon Wium Lie, Bert (1997). <a rel="nofollow" href="https://archive.org/details/cascadingstylesh00lieh"><i>Cascading style sheets: designing for the Web</i></a> (1st print. ed.). Harlow, England ; Reading, MA.: Addison Wesley Longman. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 0-201-41998-X.</cite>
+</li>
+<li id="cite_note-39"><b><a href="#cite_ref-39">^</a></b> <a href="/wikipedia/en/W3C" title="W3C">W3C</a>: <i><a rel="nofollow" href="http://www.w3.org/TR/CSS1">Cascading Style Sheets, level 1</a> CSS 1 specification</i>
+</li>
+<li id="cite_note-40"><b><a href="#cite_ref-40">^</a></b> <a href="/wikipedia/en/W3C" title="W3C">W3C</a>: <i><a rel="nofollow" href="http://www.w3.org/TR/2008/REC-CSS1-20080411/">Cascading Style Sheets level 1 specification</a> CSS level 1 specification</i>
+</li>
+<li id="cite_note-41"><b><a href="#cite_ref-41">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/CSS21/aural.html#aural-media-group">"Aural style sheets"</a>. W3C.</cite>
+</li>
+<li id="cite_note-42"><b><a href="#cite_ref-42">^</a></b> <a href="/wikipedia/en/W3C" title="W3C">W3C</a>: <i><a rel="nofollow" href="http://www.w3.org/TR/2008/REC-CSS2-20080411/">Cascading Style Sheets, level 2</a> CSS 2 specification (1998 recommendation)</i>
+</li>
+<li id="cite_note-43"><b><a href="#cite_ref-43">^</a></b> <a href="/wikipedia/en/W3C" title="W3C">W3C</a>:<i><a rel="nofollow" href="http://www.w3.org/TR/2011/PR-CSS2-20110412/">Cascading Style Sheets, level 2 revision 1</a> CSS 2.1 specification (W3C Proposed Recommendation)</i>
+</li>
+<li id="cite_note-w3.org-44"><b><a href="#cite_ref-w3.org_44-0">^</a></b> W3C: <a rel="nofollow" href="http://www.w3.org/2011/05/css-pr.html.en">Cascading Style Sheets Standard Boasts Unprecedented Interoperability</a>
+</li>
+<li id="cite_note-World_Wide_Web_Consortium-45"><b><a href="#cite_ref-World_Wide_Web_Consortium_45-0">^</a></b> <cite><a href="/wikipedia/en/Bert_Bos" title="Bert Bos">Bos, Bert</a> (18 February 2011). <a rel="nofollow" href="http://www.w3.org/Style/CSS/specs">"Descriptions of all CSS specifications"</a>. <a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a>. Retrieved 3 March 2011.</cite>
+</li>
+<li id="cite_note-46"><b><a href="#cite_ref-46">^</a></b> <cite><a href="/wikipedia/en/Bert_Bos" title="Bert Bos">Bos, Bert</a> (26 February 2011). <a rel="nofollow" href="http://www.w3.org/Style/CSS/current-work">"CSS current work"</a>. <a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a>. Retrieved 3 March 2011.</cite>
+</li>
+<li id="cite_note-47"><b><a href="#cite_ref-47">^</a></b> <cite>Etemad, Elika J. (12 December 2010). <a rel="nofollow" href="http://www.w3.org/TR/css-2010/#css">"Cascading Style Sheets (CSS) Snapshot 2010"</a>. <a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a>. Retrieved 3 March 2011.</cite>
+</li>
+<li id="cite_note-48"><b><a href="#cite_ref-48">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/Style/CSS/specs">"All CSS specifications"</a>. W3.org. 2014-05-22. Retrieved 2014-05-30.</cite>
+</li>
+<li id="cite_note-49"><b><a href="#cite_ref-49">^</a></b> <cite>Atkins Jr, Tab. <a rel="nofollow" href="http://www.xanthir.com/b4Ko0">"A Word About CSS4"</a>. Retrieved 18 October 2012.</cite>
+</li>
+<li id="cite_note-50"><b><a href="#cite_ref-50">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/css3-flexbox/">"CSS Flexible Box Layout Module Level 1"</a>. W3C. 19 November 2018.</cite>
+</li>
+<li id="cite_note-51"><b><a href="#cite_ref-51">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/css-beijing/">"Cascading Style Sheets (CSS) Snapshot 2007"</a>. 12 May 2011.</cite>
+</li>
+<li id="cite_note-52"><b><a href="#cite_ref-52">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/css-2010/">"Cascading Style Sheets (CSS) Snapshot 2010"</a>. 12 May 2011.</cite>
+</li>
+<li id="cite_note-53"><b><a href="#cite_ref-53">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/css-2015/">"CSS Snapshot 2015"</a>. <i>W3C</i>. 13 October 2015.</cite>
+</li>
+<li id="cite_note-54"><b><a href="#cite_ref-54">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/css-2017/">"CSS Snapshot 2017"</a>. 31 January 2017.</cite>
+</li>
+<li id="cite_note-55"><b><a href="#cite_ref-55">^</a></b> <cite><a rel="nofollow" href="https://www.w3.org/TR/css-2018/">"CSS Snapshot 2018"</a>. 15 November 2018.</cite>
+</li>
+<li id="cite_note-caniuse-56"><b><a href="#cite_ref-caniuse_56-0">^</a></b> <cite><a rel="nofollow" href="https://caniuse.com/#cats=CSS">"Can I Use… Support tables for HTML5, CSS3 etc"</a>.</cite>
+</li>
+<li id="cite_note-mdn-57"><b><a href="#cite_ref-mdn_57-0">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/docs/Web/CSS">"MDN Web Docs: CSS"</a>.</cite>
+</li>
+<li id="cite_note-css4-58"><b><a href="#cite_ref-css4_58-0">^</a></b> <cite><a rel="nofollow" href="https://www.w3.org/community/css4/">"CSS4 Community Group"</a>.</cite>
+</li>
+<li id="cite_note-59"><b><a href="#cite_ref-59">^</a></b> <cite><a rel="nofollow" href="https://www.smashingmagazine.com/2010/04/css3-solutions-for-internet-explorer/">"CSS3 Solutions for Internet Explorer – Smashing Magazine"</a>. <i>Smashing Magazine</i>. 2010-04-28. Retrieved 2016-10-12.</cite>
+</li>
+<li id="cite_note-60"><b><a href="#cite_ref-60">^</a></b> <cite><a rel="nofollow" href="https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/">"Using Feature Queries in CSS ★         Mozilla Hacks – the Web developer blog"</a>. <i>hacks.mozilla.org</i>. Retrieved 2016-10-12.</cite>
+</li>
+<li id="cite_note-61"><b><a href="#cite_ref-61">^</a></b> <cite><a rel="nofollow" href="https://arstechnica.com/information-technology/2014/04/looking-at-the-web-with-internet-explorer-6-one-last-time/">"Looking at the Web with Internet Explorer 6, one last time"</a>. <i>Ars Technica</i>. Retrieved 2016-10-12.</cite>
+</li>
+<li id="cite_note-css-missing-62">^ <a href="#cite_ref-css-missing_62-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-css-missing_62-1"><sup><i><b>b</b></i></sup></a> <cite><a href="/wikipedia/en/Molly_Holzschlag" title="Molly Holzschlag">Molly Holzschlag</a> (January 2012). <a rel="nofollow" href="http://www.creativebloq.com/css3/seven-things-still-missing-css-1126553">"Seven Things Still Missing from CSS"</a>. .net Magazine.</cite>
+</li>
+<li id="cite_note-63"><b><a href="#cite_ref-63">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/selectors4/#subject">"Selectors Level 4 – Determining the Subject of a Selector"</a>. W3.org. Retrieved 2013-08-13.</cite>
+</li>
+<li id="cite_note-64"><b><a href="#cite_ref-64">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/selectors4/#profiles">"Selectors Level 4 – Fast vs Complete Selector Profiles"</a>. W3.org. Retrieved 2013-08-13.</cite>
+</li>
+<li id="cite_note-why-not-parent-selector-65"><b><a href="#cite_ref-why-not-parent-selector_65-0">^</a></b> <cite>Snook, Jonathan (October 2010). <a rel="nofollow" href="http://snook.ca/archives/html_and_css/css-parent-selectors">"Why we don't have a parent selector"</a>. snook.ca.</cite>
+</li>
+<li id="cite_note-66"><b><a href="#cite_ref-66">^</a></b> <cite><a rel="nofollow" href="http://meyerweb.com/eric/css/edge/popups/demo.html">"Pure CSS Popups"</a>. meyerweb.com. Retrieved 2009-11-19.</cite>
+</li>
+<li id="cite_note-67"><b><a href="#cite_ref-67">^</a></b> <cite>Tab Atkins Jr. <a rel="nofollow" href="https://tabatkins.github.io/specs/css-apply-rule/">"CSS apply rule"</a>. GitHub. Retrieved 2016-02-27.</cite>
+</li>
+<li id="cite_note-68"><b><a href="#cite_ref-68">^</a></b> <cite><a rel="nofollow" href="http://caniuse.com/flexbox">"CSS Flexible Box Layout Module"</a>. <i>Can I use... Support tables for HTML5, CSS3, etc</i>. CanIUse.com.</cite>
+</li>
+<li id="cite_note-69"><b><a href="#cite_ref-69">^</a></b> <cite><a rel="nofollow" href="https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support">"Internet Explorer End of Support"</a>. Microsoft. Retrieved 2016-02-27.</cite>
+</li>
+<li id="cite_note-properties1-70">^ <a href="#cite_ref-properties1_70-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-properties1_70-1"><sup><i><b>b</b></i></sup></a> <cite><a rel="nofollow" href="https://web.archive.org/web/20171014054847/https://msdn.microsoft.com/en-us/library/ms537634.aspx">"About Dynamic Properties"</a>. Msdn.microsoft.com. Archived from <a rel="nofollow" href="http://msdn.microsoft.com/en-us/library/ms537634.aspx">the original</a> on 2017-10-14. Retrieved 2009-06-20.</cite>
+</li>
+<li id="cite_note-71"><b><a href="#cite_ref-71">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/css3-values/#calc">"CSS Values and Units Module Level 3"</a>. W3.org. 6 June 2019.</cite>
+</li>
+<li id="cite_note-72"><b><a href="#cite_ref-72">^</a></b> <cite><a rel="nofollow" href="http://caniuse.com/calc">"calc() as CSS unit value"</a>. <i>Can I use... Support tables for HTML5, CSS3, etc</i>. CanIUse.com.</cite>
+</li>
+<li id="cite_note-73"><b><a href="#cite_ref-73">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/css3-multicol/">"CSS Multi-column Layout Module"</a>. World Wide Web Consortium. Retrieved 2011-05-01.</cite>
+</li>
+<li id="cite_note-74"><b><a href="#cite_ref-74">^</a></b> <cite><a rel="nofollow" href="http://webarchive.loc.gov/all/20100821011307/https://caniuse.com/">"Can I use... Support tables for HTML5, CSS3, etc"</a>. CanIUse.com. Archived from <a rel="nofollow" href="http://caniuse.com/columns">the original</a> on 2010-08-21. Retrieved 2016-02-27.</cite>
+</li>
+<li id="cite_note-75"><b><a href="#cite_ref-75">^</a></b> <cite>Cederholm, Dan; Ethan Marcotte (2009). <a rel="nofollow" href="https://books.google.com/books?id=UgrUeIwsS60C&amp;pg=PA114"><i>Handcrafted CSS: More Bulletproof Web Design</i></a>. New Riders. p. 114. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 978-0-321-64338-4. Retrieved 19 June 2010.</cite>
+</li>
+<li id="cite_note-76"><b><a href="#cite_ref-76">^</a></b> 
+<cite>Antti, Hiljá. <a rel="nofollow" href="http://clubmate.fi/oocss-acss-bem-smacss-what-are-they-what-should-i-use/">"OOCSS, ACSS, BEM, SMACSS: what are they? What should I use?"</a>. <i>clubmate.fi</i>. Hiljá. Retrieved 2 June 2015.</cite>
+</li>
+</ol></div>
+<h2 id="further_reading">Further reading</h2>
+<table><tbody><tr><td><div>This section needs to be <b>updated</b>. Please update this article to reflect recent events or newly available information. <small><i>(July 2012)</i></small></div></td></tr></tbody></table>
+<div>
+<ul><li><a href="/wikipedia/en/Jeffrey_Zeldman" title="Jeffrey Zeldman">Jeffrey Zeldman</a> (2009): <i>Designing With Web Standards</i>, New Riders, <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 978-0321616951 (paperback) (<a rel="nofollow" href="http://www.zeldman.com/dwws/">book's companion site</a>)</li>
+<li>Dan Cederholm (2009): <i>Web Standards Solutions, The Markup and Style Handbook</i>, Friends of Ed, <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 978-1430219200 (paperback) (<a rel="nofollow" href="https://web.archive.org/web/20060409154734/http://www.simplebits.com/publications/solutions/">Author's site</a>)</li>
+<li><cite><a href="/wikipedia/en/Eric_A._Meyer" title="Eric A. Meyer">Meyer, Eric A.</a> (2006). <a rel="nofollow" href="http://www.oreilly.com/catalog/csstdg3/"><i>Cascading Style Sheets: The Definitive Guide, Third Edition</i></a>. O'Reilly Media, Inc. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 0-596-52733-0.</cite></li>
+<li><a rel="nofollow" href="http://more.ericmeyeroncss.com/">More Eric Meyer On CSS</a> (2004) <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 0-7357-1425-8</li>
+<li><a rel="nofollow" href="http://www.ericmeyeroncss.com/">Eric Meyer On CSS</a> (2002), <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 0-7357-1245-X</li>
+<li>Meyer, Eric A. (2001) <i>Cascading Style Sheets 2.0 Programmer's Reference</i>, McGraw-Hill Osborne Media, <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 0-07-213178-0</li>
+<li><i><a href="/wikipedia/en/The_Zen_of_CSS_Design" title="The Zen of CSS Design">The Zen of CSS Design</a></i> (2005) (co-authored by CSS Zen Garden Owner, <a href="/wikipedia/en/Dave_Shea_(web_designer)" title="Dave Shea (web designer)">Dave Shea</a>, and <a href="/wikipedia/en/Molly_E._Holzschlag" title="Molly E. Holzschlag">Molly E. Holzschlag</a>), <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 0-321-30347-4</li>
+<li>Kynn Bartlett: <i>Teach Yourself CSS in 24 Hours</i>, 2nd Edition (2006), Sams Publishing, <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 978-0672329067</li>
+<li><a rel="nofollow" href="https://web.archive.org/web/20050310045939/http://www.aw-bc.com/catalog/academic/product/0,1144,0321193121,00.html"><i>Cascading Style Sheets: Designing for the Web</i></a> (2005) by Håkon Wium Lie and Bert Bos, <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 0-321-19312-1</li>
+<li><a rel="nofollow" href="https://web.archive.org/web/20060906211843/http://people.opera.com/howcome/2006/phd/">Cascading Style Sheets</a> <i>Cascading Style Sheets</i>, PhD thesis, by Håkon Wium Lie – provides an authoritative historical reference of CSS</li>
+<li><a href="/wikipedia/en/Keith_Schengili-Roberts" title="Keith Schengili-Roberts">Keith Schengili-Roberts</a> (2003): <i>Core CSS, 2nd Edition</i>, Prentice Hall, <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 0-13-009278-9</li>
+<li><a rel="nofollow" href="http://dl.acm.org/citation.cfm?doid=2187836.2187946">On the Analysis of Cascading Style Sheets</a>, <a href="/wikipedia/en/Pierre_Geneves" title="Pierre Geneves">Pierre Geneves</a>, Nabil Layaida, and Vincent Quint, Proceedings of the 21st International Conference on World Wide Web (WWW'12), pp. 809–818, 2012.</li></ul>
+</div>
+<h2 id="external_links">External links</h2>
+  
+<ul><li><a rel="nofollow" href="https://www.w3.org/Style/CSS/">Official website</a> <a href="https://www.wikidata.org/wiki/Q46441#P856" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20"></a></li>
+<li><a rel="nofollow" href="https://curlie.org/Computers/Data_Formats/Style_Sheets/CSS/">CSS</a> at <a href="/wikipedia/en/Curlie" title="Curlie">Curlie</a></li></ul>
+<div aria-labelledby="Web_browsers" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="Web_browsers"><a href="/wikipedia/en/Web_browser" title="Web browser">Web browsers</a></div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="col" colspan="2"><div id="Features_·_standards_·_protocols">Features <b>·</b>  standards <b>·</b>  protocols</div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="row">Features</th><td><div>
+<ul><li><a href="/wikipedia/en/Bookmark_(digital)" title="Bookmark (digital)">Bookmarks</a></li>
+<li><a href="/wikipedia/en/Browser_extension" title="Browser extension">Extensions</a></li>
+<li><a href="/wikipedia/en/Private_browsing" title="Private browsing">Privacy mode</a></li>
+<li><a href="/wikipedia/en/Browser_synchronization" title="Browser synchronization">Sync</a></li></ul>
+</div></td></tr><tr><th scope="row">Web standards</th><td><div>
+<ul><li><a href="/wikipedia/en/HTML" title="HTML">HTML</a>
+<ul><li><a href="/wikipedia/en/HTML5" title="HTML5">v5</a></li></ul></li>
+<li><a>CSS</a></li>
+<li><a href="/wikipedia/en/Document_Object_Model" title="Document Object Model">DOM</a></li>
+<li><a href="/wikipedia/en/JavaScript" title="JavaScript">JavaScript</a>
+<ul><li><a href="/wikipedia/en/Indexed_Database_API" title="Indexed Database API">IndexedDB</a></li>
+<li><a href="/wikipedia/en/Web_storage" title="Web storage">Web storage</a></li>
+<li><a href="/wikipedia/en/WebAssembly" title="WebAssembly">WebAssembly</a></li>
+<li><a href="/wikipedia/en/WebGL" title="WebGL">WebGL</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row">Protocols</th><td><div>
+<ul><li><a href="/wikipedia/en/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a>
+<ul><li><a href="/wikipedia/en/HTTP/2" title="HTTP/2">v2</a></li>
+<li><a href="/wikipedia/en/HTTP/3" title="HTTP/3">v3</a></li>
+<li><a href="/wikipedia/en/HTTP_cookie" title="HTTP cookie">Cookies</a></li>
+<li><a href="/wikipedia/en/HTTPS" title="HTTPS">Encryption</a></li></ul></li>
+<li><a href="/wikipedia/en/Online_Certificate_Status_Protocol" title="Online Certificate Status Protocol">OCSP</a></li>
+<li><a href="/wikipedia/en/WebRTC" title="WebRTC">WebRTC</a></li>
+<li><a href="/wikipedia/en/WebSocket" title="WebSocket">WebSocket</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="2"><table><tbody><tr><th scope="col" colspan="2"><div id="Active">Active</div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="row"><a href="/wikipedia/en/Blink_(browser_engine)" title="Blink (browser engine)">Blink</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/Avast_Secure_Browser" title="Avast Secure Browser">Avast Secure Browser</a></li>
+<li><a href="/wikipedia/en/Beaker_(web_browser)" title="Beaker (web browser)">Beaker</a></li>
+<li><a href="/wikipedia/en/Blisk_(browser)" title="Blisk (browser)">Blisk</a></li>
+<li><a href="/wikipedia/en/Brave_(web_browser)" title="Brave (web browser)">Brave</a></li>
+<li><a href="/wikipedia/en/Google_Chrome" title="Google Chrome">Chrome</a></li>
+<li><a href="/wikipedia/en/Chromium_(web_browser)" title="Chromium (web browser)">Chromium</a></li>
+<li><a href="/wikipedia/en/C%E1%BB%91c_C%E1%BB%91c" title="Cốc Cốc">Coc Coc</a></li>
+<li><a href="/wikipedia/en/Comodo_Dragon" title="Comodo Dragon">Dragon</a></li>
+<li><a href="/wikipedia/en/Microsoft_Edge" title="Microsoft Edge">Edge</a></li>
+<li><a href="/wikipedia/en/Epic_(web_browser)" title="Epic (web browser)">Epic</a></li>
+<li><a href="/wikipedia/en/Falkon" title="Falkon">Falkon</a></li>
+<li><a href="/wikipedia/en/Kinza_browser" title="Kinza browser">Kinza</a></li>
+<li><a href="/wikipedia/en/Maxthon" title="Maxthon">Maxthon</a></li>
+<li><a href="/wikipedia/en/Opera_(web_browser)" title="Opera (web browser)">Opera</a></li>
+<li><a href="/wikipedia/en/Otter_Browser" title="Otter Browser">Otter</a></li>
+<li><a href="/wikipedia/en/Puffin_Browser" title="Puffin Browser">Puffin </a></li>
+<li><a href="/wikipedia/en/SalamWeb" title="SalamWeb">SalamWeb</a></li>
+<li><a href="/wikipedia/en/Samsung_Internet" title="Samsung Internet">Samsung Internet</a></li>
+<li><a href="/wikipedia/en/Amazon_Silk" title="Amazon Silk">Silk</a></li>
+<li><a href="/wikipedia/en/Sleipnir_(web_browser)" title="Sleipnir (web browser)">Sleipnir</a></li>
+<li><a href="/wikipedia/en/Sputnik_(search_engine)" title="Sputnik (search engine)">Sputnik</a></li>
+<li><a href="/wikipedia/en/SRWare_Iron" title="SRWare Iron">SRWare</a></li>
+<li><a href="/wikipedia/en/Torch_(browser)" title="Torch (browser)">Torch</a></li>
+<li><a href="/wikipedia/en/UC_Browser" title="UC Browser">UC</a></li>
+<li><a href="/wikipedia/en/Vivaldi_(web_browser)" title="Vivaldi (web browser)">Vivaldi</a></li>
+<li><a href="/wikipedia/en/Naver_Whale" title="Naver Whale">Whale</a></li>
+<li><a href="/wikipedia/en/Yandex_Browser" title="Yandex Browser">Yandex</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Gecko_(software)" title="Gecko (software)">Gecko</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/Firefox" title="Firefox">Firefox</a></li>
+<li><a href="/wikipedia/en/Conkeror" title="Conkeror">Conkeror</a></li>
+<li><a href="/wikipedia/en/GNU_IceCat" title="GNU IceCat">GNU IceCat</a></li>
+<li><a href="/wikipedia/en/Comodo_IceDragon" title="Comodo IceDragon">IceDragon</a></li>
+<li><a href="/wikipedia/en/K-Meleon" title="K-Meleon">K-Meleon</a></li>
+<li><a href="/wikipedia/en/PirateBrowser" title="PirateBrowser">PirateBrowser</a></li>
+<li><a href="/wikipedia/en/SeaMonkey" title="SeaMonkey">SeaMonkey</a></li>
+<li><a href="/wikipedia/en/TenFourFox" title="TenFourFox">TenFourFox</a></li>
+<li><a href="/wikipedia/en/Tor_Browser" title="Tor Browser">Tor</a></li>
+<li><a href="/wikipedia/en/Waterfox" title="Waterfox">Waterfox</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/WebKit" title="WebKit">WebKit</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/Dolphin_Browser" title="Dolphin Browser">Dolphin</a></li>
+<li><a href="/wikipedia/en/Dooble" title="Dooble">Dooble</a></li>
+<li><a href="/wikipedia/en/GNOME_Web" title="GNOME Web">GNOME Web</a></li>
+<li><a href="/wikipedia/en/ICab" title="ICab">iCab</a></li>
+<li><a href="/wikipedia/en/Konqueror" title="Konqueror">Konqueror</a></li>
+<li><a href="/wikipedia/en/Midori_(web_browser)" title="Midori (web browser)">Midori</a></li>
+<li><a href="/wikipedia/en/Safari_(web_browser)" title="Safari (web browser)">Safari</a></li>
+<li><a href="/wikipedia/en/Surf_(web_browser)" title="Surf (web browser)">surf</a></li></ul>
+</div></td></tr><tr><th scope="row">Other</th><td><div>
+<ul><li><a href="/wikipedia/en/360_Secure_Browser" title="360 Secure Browser">360</a></li>
+<li><a href="/wikipedia/en/Avant_Browser" title="Avant Browser">Avant</a></li>
+<li><a href="/wikipedia/en/Basilisk_(web_browser)" title="Basilisk (web browser)">Basilisk</a></li>
+<li><a href="/wikipedia/en/Cake_Browser" title="Cake Browser">Cake Browser</a></li>
+<li><a href="/wikipedia/en/CM_Browser" title="CM Browser">CM Browser</a></li>
+<li><a href="/wikipedia/en/Eww_(web_browser)" title="Eww (web browser)">eww</a></li>
+<li><a href="/wikipedia/en/Internet_Explorer" title="Internet Explorer">Internet Explorer</a></li>
+<li><a href="/wikipedia/en/Links_(web_browser)" title="Links (web browser)">Links</a></li>
+<li><a href="/wikipedia/en/Lunascape" title="Lunascape">Lunascape</a></li>
+<li><a href="/wikipedia/en/Lynx_(web_browser)" title="Lynx (web browser)">Lynx</a></li>
+<li><a href="/wikipedia/en/NetFront" title="NetFront">NetFront</a></li>
+<li><a href="/wikipedia/en/NetSurf" title="NetSurf">NetSurf</a></li>
+<li><a href="/wikipedia/en/Pale_Moon_(web_browser)" title="Pale Moon (web browser)">Pale Moon</a></li>
+<li><a href="/wikipedia/en/QQ_browser" title="QQ browser">QQ browser</a></li>
+<li><a href="/wikipedia/en/Qutebrowser" title="Qutebrowser">qutebrowser</a></li>
+<li><a href="/wikipedia/en/SlimBrowser" title="SlimBrowser">SlimBrowser</a></li>
+<li><a href="/wikipedia/en/W3m" title="W3m">w3m</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="2"><table><tbody><tr><th scope="col" colspan="2"><div id="Discontinued">Discontinued</div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="row"><a href="/wikipedia/en/Gecko_(software)" title="Gecko (software)">Gecko</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/Beonex_Communicator" title="Beonex Communicator">Beonex Communicator</a></li>
+<li><a href="/wikipedia/en/Camino_(web_browser)" title="Camino (web browser)">Camino</a></li>
+<li><a href="/wikipedia/en/Classilla" title="Classilla">Classilla</a></li>
+<li><a href="/wikipedia/en/Galeon" title="Galeon">Galeon</a></li>
+<li><a href="/wikipedia/en/Ghostzilla" title="Ghostzilla">Ghostzilla</a></li>
+<li><a href="/wikipedia/en/Kazehakase" title="Kazehakase">Kazehakase</a></li>
+<li><a href="/wikipedia/en/Kylo_(web_browser)" title="Kylo (web browser)">Kylo</a></li>
+<li><a href="/wikipedia/en/IBM_Lotus_Symphony" title="IBM Lotus Symphony">Lotus</a></li>
+<li><a href="/wikipedia/en/MicroB" title="MicroB">MicroB</a></li>
+<li><a href="/wikipedia/en/Minimo" title="Minimo">Minimo</a></li>
+<li><a href="/wikipedia/en/Mozilla_Application_Suite" title="Mozilla Application Suite">Mozilla suite</a></li>
+<li><a href="/wikipedia/en/AT%26T_Pogo" title="AT&amp;T Pogo">Pogo</a></li>
+<li><a href="/wikipedia/en/Kirix_Strata" title="Kirix Strata">Strata</a></li>
+<li><a href="/wikipedia/en/Swiftfox" title="Swiftfox">Swiftfox</a></li>
+<li><a href="/wikipedia/en/Swiftweasel" title="Swiftweasel">Swiftweasel</a></li>
+<li><a href="/wikipedia/en/Timberwolf_(web_browser)" title="Timberwolf (web browser)">Timberwolf</a></li>
+<li><a href="/wikipedia/en/XB_Browser" title="XB Browser">xB</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Trident_(software)" title="Trident (software)">Trident</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/AOL_Explorer" title="AOL Explorer">AOL</a></li>
+<li><a href="/wikipedia/en/Deepnet_Explorer" title="Deepnet Explorer">Deepnet</a></li>
+<li><a href="/wikipedia/en/GreenBrowser" title="GreenBrowser">GreenBrowser</a></li>
+<li><a href="/wikipedia/en/MediaBrowser" title="MediaBrowser">MediaBrowser</a></li>
+<li><a href="/wikipedia/en/MenuBox" title="MenuBox">MenuBox</a></li>
+<li><a href="/wikipedia/en/NeoPlanet" title="NeoPlanet">NeoPlanet</a></li>
+<li><a href="/wikipedia/en/NetCaptor" title="NetCaptor">NetCaptor</a></li>
+<li><a href="/wikipedia/en/SpaceTime_(software)#SpaceTime_Browser" title="SpaceTime (software)">SpaceTime</a></li>
+<li><a href="/wikipedia/en/UltraBrowser" title="UltraBrowser">UltraBrowser</a></li>
+<li><a href="/wikipedia/en/WebbIE" title="WebbIE">WebbIE</a></li>
+<li><a href="/wikipedia/en/ZAC_Browser" title="ZAC Browser">ZAC</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/WebKit" title="WebKit">WebKit</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/Arora_(web_browser)" title="Arora (web browser)">Arora</a></li>
+<li><a href="/wikipedia/en/Bolt_(web_browser)" title="Bolt (web browser)">BOLT</a></li>
+<li><a href="/wikipedia/en/Opera_Coast" title="Opera Coast">Opera Coast</a></li>
+<li><a href="/wikipedia/en/Flock_(web_browser)" title="Flock (web browser)">Flock</a></li>
+<li><a href="/wikipedia/en/Fluid_(web_browser)" title="Fluid (web browser)">Fluid</a></li>
+<li><a href="/wikipedia/en/Google_TV" title="Google TV">Google TV</a></li>
+<li><a href="/wikipedia/en/Iris_Browser" title="Iris Browser">Iris</a></li>
+<li><a href="/wikipedia/en/Mercury_Browser" title="Mercury Browser">Mercury</a></li>
+<li><a href="/wikipedia/en/OmniWeb" title="OmniWeb">OmniWeb</a></li>
+<li><a href="/wikipedia/en/Origyn_Web_Browser" title="Origyn Web Browser">Origyn</a></li>
+<li><a href="/wikipedia/en/QtWeb" title="QtWeb">QtWeb</a></li>
+<li><a href="/wikipedia/en/Rekonq" title="Rekonq">rekonq</a></li>
+<li><a href="/wikipedia/en/Rockmelt" title="Rockmelt">Rockmelt</a></li>
+<li><a href="/wikipedia/en/Shiira" title="Shiira">Shiira</a></li>
+<li><a href="/wikipedia/en/Steel_(web_browser)" title="Steel (web browser)">Steel</a></li>
+<li><a href="/wikipedia/en/Nokia_Browser_for_Symbian" title="Nokia Browser for Symbian">Browser for Symbian</a></li>
+<li><a href="/wikipedia/en/Uzbl" title="Uzbl">Uzbl</a></li>
+<li><a href="/wikipedia/en/WebPositive" title="WebPositive">WebPositive</a></li>
+<li><a href="/wikipedia/en/Xombrero" title="Xombrero">xombrero</a></li></ul>
+</div></td></tr><tr><th scope="row">Other</th><td><div>
+<ul><li><a href="/wikipedia/en/Abaco_(web_browser)" title="Abaco (web browser)">abaco</a></li>
+<li><a href="/wikipedia/en/Amaya_(web_editor)" title="Amaya (web editor)">Amaya</a></li>
+<li><a href="/wikipedia/en/Arachne_(web_browser)" title="Arachne (web browser)">Arachne</a></li>
+<li><a href="/wikipedia/en/Arena_(web_browser)" title="Arena (web browser)">Arena</a></li>
+<li><a href="/wikipedia/en/Blazer_(web_browser)" title="Blazer (web browser)">Blazer</a></li>
+<li><a href="/wikipedia/en/Charon_(web_browser)" title="Charon (web browser)">Charon</a></li>
+<li><a href="/wikipedia/en/Microsoft_Live_Labs_Deepfish" title="Microsoft Live Labs Deepfish">Deepfish</a></li>
+<li><a href="/wikipedia/en/Dillo" title="Dillo">Dillo</a></li>
+<li><a href="/wikipedia/en/ELinks" title="ELinks">ELinks</a></li>
+<li><a href="/wikipedia/en/Gazelle_(web_browser)" title="Gazelle (web browser)">Gazelle</a></li>
+<li><a href="/wikipedia/en/HotJava" title="HotJava">HotJava</a></li>
+<li><a href="/wikipedia/en/IBM_Home_Page_Reader" title="IBM Home Page Reader">IBM Home Page Reader</a></li>
+<li><a href="/wikipedia/en/IBM_WebExplorer" title="IBM WebExplorer">IBM WebExplorer</a></li>
+<li><a href="/wikipedia/en/IBrowse" title="IBrowse">IBrowse</a></li>
+<li><a href="/wikipedia/en/KidZui" title="KidZui">KidZui</a></li>
+<li><a href="/wikipedia/en/Line_Mode_Browser" title="Line Mode Browser">Line Mode</a></li>
+<li><a href="/wikipedia/en/Mosaic_(web_browser)" title="Mosaic (web browser)">Mosaic</a></li>
+<li><a href="/wikipedia/en/MSN_TV" title="MSN TV">MSN TV</a></li>
+<li><a href="/wikipedia/en/NetPositive" title="NetPositive">NetPositive</a></li>
+<li><a href="/wikipedia/en/Netscape_(web_browser)" title="Netscape (web browser)">Netscape</a></li>
+<li><a href="/wikipedia/en/Skweezer" title="Skweezer">Skweezer</a></li>
+<li><a href="/wikipedia/en/Skyfire_(company)" title="Skyfire (company)">Skyfire</a></li>
+<li><a href="/wikipedia/en/Teashark" title="Teashark">Teashark</a></li>
+<li><a href="/wikipedia/en/ThunderHawk" title="ThunderHawk">ThunderHawk</a></li>
+<li><a href="/wikipedia/en/Vision_Mobile_Browser" title="Vision Mobile Browser">Vision</a></li>
+<li><a href="/wikipedia/en/WinWAP" title="WinWAP">WinWAP</a></li>
+<li><a href="/wikipedia/en/WorldWideWeb" title="WorldWideWeb">WorldWideWeb</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="2"><div>
+<ul><li><a href="/wiki/Category-Web_browsers" title="Category:Web browsers">Category</a></li>
+<li><a href="/wikipedia/en/Comparison_of_web_browsers" title="Comparison of web browsers">Comparisons</a></li>
+<li><a href="/wikipedia/en/List_of_web_browsers" title="List of web browsers">List</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div aria-labelledby="Style_sheet_languages" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="Style_sheet_languages"><a href="/wikipedia/en/Style_sheet_language" title="Style sheet language">Style sheet languages</a></div></th></tr><tr><th scope="row">Modes</th><td><div>
+<ul><li><a href="/wikipedia/en/Style_sheet_(desktop_publishing)" title="Style sheet (desktop publishing)">Desktop publishing</a></li>
+<li><a href="/wikipedia/en/Style_sheet_(web_development)" title="Style sheet (web development)">Web development</a></li>
+<li><a href="/wikipedia/en/User_interface_style_sheet_language" title="User interface style sheet language">User interfaces</a></li></ul>
+</div></td></tr><tr><th scope="row">Standard</th><td><div>
+<ul><li><a>Cascading (CSS)</a></li>
+<li><a href="/wikipedia/en/Document_Style_Semantics_and_Specification_Language" title="Document Style Semantics and Specification Language">DSSSL</a></li>
+<li><a href="/wikipedia/en/Extensible_Stylesheet_Language" title="Extensible Stylesheet Language">Extensible (XSL)</a></li></ul>
+</div></td></tr><tr><th scope="row">Preprocessor</th><td><div>
+<ul><li><a href="/wikipedia/en/JavaScript_Style_Sheets" title="JavaScript Style Sheets">JavaScript (JSSS)</a></li>
+<li><a href="/wikipedia/en/Formatting_Output_Specification_Instance" title="Formatting Output Specification Instance">FOSI</a></li>
+<li><a href="/wikipedia/en/Qt_Style_Sheets" title="Qt Style Sheets">Qt</a></li>
+<li><a href="/wikipedia/en/Sass_(stylesheet_language)" title="Sass (stylesheet language)">Sass</a></li>
+<li><a href="/wikipedia/en/Less_(stylesheet_language)" title="Less (stylesheet language)">Less</a></li>
+<li><a href="/wikipedia/en/Stylus_(stylesheet_language)" title="Stylus (stylesheet language)">Stylus</a></li>
+<li><a href="/wikipedia/en/SMIL_Timesheets" title="SMIL Timesheets">SMIL Timesheets</a></li>
+<li><a href="/wikipedia/en/PostCSS" title="PostCSS">PostCSS</a></li></ul>
+</div></td></tr><tr><td colspan="2"><div>
+<ul><li><a href="/wikipedia/en/List_of_stylesheet_languages" title="List of stylesheet languages">List</a></li>
+<li><a href="/wikipedia/en/Comparison_of_stylesheet_languages" title="Comparison of stylesheet languages">Comparison</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div aria-labelledby="World_Wide_Web_Consortium_(W3C)" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="World_Wide_Web_Consortium_(W3C)"><a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium (W3C)</a></div></th></tr><tr><th scope="row">Products and standards</th><td><table><tbody><tr><th scope="row"><a href="/wikipedia/en/World_Wide_Web_Consortium#Specification_maturation" title="World Wide Web Consortium">Recommendations</a></th><td><div>
+<ul><li><a href="/wikipedia/en/ActivityPub" title="ActivityPub">ActivityPub</a></li>
+<li><a href="/wikipedia/en/WAI-ARIA" title="WAI-ARIA">ARIA</a></li>
+<li><a href="/wikipedia/en/Canonical_XML" title="Canonical XML">Canonical XML</a></li>
+<li><a href="/wikipedia/en/Compound_Document_Format" title="Compound Document Format">CDF</a></li>
+<li><a>CSS</a></li>
+<li><a href="/wikipedia/en/Document_Object_Model" title="Document Object Model">DOM</a></li>
+<li><a href="/wikipedia/en/W3C_Geolocation_API" title="W3C Geolocation API">Geolocation API</a></li>
+<li><a href="/wikipedia/en/HTML" title="HTML">HTML</a> (<a href="/wikipedia/en/HTML5" title="HTML5">HTML5</a>)</li>
+<li><a href="/wikipedia/en/Internationalization_Tag_Set" title="Internationalization Tag Set">ITS</a></li>
+<li><a href="/wikipedia/en/JSON-LD" title="JSON-LD">JSON-LD</a></li>
+<li><a href="/wikipedia/en/Linked_Data_Notifications" title="Linked Data Notifications">Linked Data Notifications</a></li>
+<li><a href="/wikipedia/en/MathML" title="MathML">MathML</a></li>
+<li><a href="/wikipedia/en/Micropub_(protocol)" title="Micropub (protocol)">Micropub</a></li>
+<li><a href="/wikipedia/en/Web_Ontology_Language" title="Web Ontology Language">OWL</a></li>
+<li><a href="/wikipedia/en/Pronunciation_Lexicon_Specification" title="Pronunciation Lexicon Specification">PLS</a></li>
+<li><a href="/wikipedia/en/Resource_Description_Framework" title="Resource Description Framework">RDF</a></li>
+<li><a href="/wikipedia/en/RDF_Schema" title="RDF Schema">RDF Schema</a></li>
+<li><a href="/wikipedia/en/Semantic_Interpretation_for_Speech_Recognition" title="Semantic Interpretation for Speech Recognition">SISR</a></li>
+<li><a href="/wikipedia/en/Simple_Knowledge_Organization_System" title="Simple Knowledge Organization System">SKOS</a></li>
+<li><a href="/wikipedia/en/Synchronized_Multimedia_Integration_Language" title="Synchronized Multimedia Integration Language">SMIL</a></li>
+<li><a href="/wikipedia/en/SOAP" title="SOAP">SOAP</a></li>
+<li><a href="/wikipedia/en/Speech_Recognition_Grammar_Specification" title="Speech Recognition Grammar Specification">SRGS</a></li>
+<li><a href="/wikipedia/en/Subresource_Integrity" title="Subresource Integrity">SRI</a></li>
+<li><a href="/wikipedia/en/Speech_Synthesis_Markup_Language" title="Speech Synthesis Markup Language">SSML</a></li>
+<li><a href="/wikipedia/en/Scalable_Vector_Graphics" title="Scalable Vector Graphics">SVG</a></li>
+<li><a href="/wikipedia/en/SCXML" title="SCXML">SCXML</a></li>
+<li><a href="/wikipedia/en/SHACL" title="SHACL">SHACL</a></li>
+<li><a href="/wikipedia/en/SPARQL" title="SPARQL">SPARQL</a></li>
+<li><a href="/wikipedia/en/Timed_text" title="Timed text">Timed text</a></li>
+<li><a href="/wikipedia/en/VoiceXML" title="VoiceXML">VoiceXML</a></li>
+<li><a href="/wikipedia/en/Web_storage" title="Web storage">Web storage</a></li>
+<li><a href="/wikipedia/en/Web_Services_Description_Language" title="Web Services Description Language">WSDL</a></li>
+<li><a href="/wikipedia/en/Webmention" title="Webmention">Webmention</a></li>
+<li><a href="/wikipedia/en/WebSub" title="WebSub">WebSub</a></li>
+<li><a href="/wikipedia/en/XForms" title="XForms">XForms</a></li>
+<li><a href="/wikipedia/en/XHTML" title="XHTML">XHTML</a></li>
+<li><a href="/wikipedia/en/XHTML%2BRDFa" title="XHTML+RDFa">XHTML+RDFa</a></li>
+<li><a href="/wikipedia/en/XInclude" title="XInclude">XInclude</a></li>
+<li><a href="/wikipedia/en/XLink" title="XLink">XLink</a></li>
+<li><a href="/wikipedia/en/XML" title="XML">XML</a></li>
+<li><a href="/wikipedia/en/XML_Base" title="XML Base">XML Base</a></li>
+<li><a href="/wikipedia/en/XML_Encryption" title="XML Encryption">XML Encryption</a></li>
+<li><a href="/wikipedia/en/XML_Events" title="XML Events">XML Events</a></li>
+<li><a href="/wikipedia/en/XML_Information_Set" title="XML Information Set">XML Information Set</a></li>
+<li><a href="/wikipedia/en/XML_namespace" title="XML namespace">XML namespace</a></li>
+<li><a href="/wikipedia/en/XML_Schema_(W3C)" title="XML Schema (W3C)">XML Schema</a></li>
+<li><a href="/wikipedia/en/XML_Signature" title="XML Signature">XML Signature</a></li>
+<li><a href="/wikipedia/en/XML-binary_Optimized_Packaging" title="XML-binary Optimized Packaging">XOP</a></li>
+<li><a href="/wikipedia/en/XPath" title="XPath">XPath</a></li>
+<li><a href="/wikipedia/en/XPath_2.0" title="XPath 2.0">XPath 2.0</a></li>
+<li><a href="/wikipedia/en/XPointer" title="XPointer">XPointer</a></li>
+<li><a href="/wikipedia/en/XProc" title="XProc">XProc</a></li>
+<li><a href="/wikipedia/en/XQuery" title="XQuery">XQuery</a></li>
+<li><a href="/wikipedia/en/XSL" title="XSL">XSL</a></li>
+<li><a href="/wikipedia/en/XSL_Formatting_Objects" title="XSL Formatting Objects">XSL-FO</a></li>
+<li><a href="/wikipedia/en/XSLT" title="XSLT">XSLT</a> (<a href="/wikipedia/en/XSLT_elements" title="XSLT elements">elements</a>)</li></ul>
+</div></td></tr><tr><th scope="row">Notes</th><td><div>
+<ul><li><a href="/wikipedia/en/IndieAuth" title="IndieAuth">IndieAuth</a></li>
+<li>JF2</li>
+<li>Post Type Discovery</li>
+<li><a href="/wikipedia/en/XAdES" title="XAdES">XAdES</a></li>
+<li><a href="/wikipedia/en/XHTML%2BSMIL" title="XHTML+SMIL">XHTML+SMIL</a></li>
+<li><a href="/wikipedia/en/Extensible_User_Interface_Protocol" title="Extensible User Interface Protocol">XUP</a></li></ul>
+</div></td></tr><tr><th scope="row">Working drafts</th><td><div>
+<ul><li><a href="/wikipedia/en/Call_Control_eXtensible_Markup_Language" title="Call Control eXtensible Markup Language">CCXML</a></li>
+<li><a href="/wikipedia/en/CURIE" title="CURIE">CURIE</a></li>
+<li><a href="/wikipedia/en/Encrypted_Media_Extensions" title="Encrypted Media Extensions">EME</a></li>
+<li><a href="/wikipedia/en/InkML" title="InkML">InkML</a></li>
+<li><a href="/wikipedia/en/Media_Source_Extensions" title="Media Source Extensions">MSE</a></li>
+<li><a href="/wikipedia/en/Rule_Interchange_Format" title="Rule Interchange Format">RIF</a></li>
+<li><a href="/wikipedia/en/SMIL_Timesheets" title="SMIL Timesheets">SMIL Timesheets</a></li>
+<li><a href="/wikipedia/en/SXBL" title="SXBL">sXBL</a></li>
+<li><a href="/wikipedia/en/Extensible_Forms_Description_Language" title="Extensible Forms Description Language">XFDL</a></li>
+<li><a href="/wikipedia/en/XFrames" title="XFrames">XFrames</a></li>
+<li><a href="/wikipedia/en/XBL" title="XBL">XBL</a></li>
+<li><a href="/wikipedia/en/XMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a></li></ul>
+</div></td></tr><tr><th scope="row">Guidelines</th><td><div>
+<ul><li><a href="/wikipedia/en/Web_Content_Accessibility_Guidelines" title="Web Content Accessibility Guidelines">Web Content Accessibility Guidelines</a></li></ul>
+</div></td></tr><tr><th scope="row">Initiative</th><td><div>
+<ul><li><a href="/wikipedia/en/W3C_MMI" title="W3C MMI">Multimodal Interaction Activity (MMI)</a></li>
+<li><a href="/wikipedia/en/W3C_Markup_Validation_Service" title="W3C Markup Validation Service">Markup Validation Service</a></li>
+<li><a href="/wikipedia/en/Web_Accessibility_Initiative" title="Web Accessibility Initiative">Web Accessibility Initiative</a></li>
+<li><a href="/wikipedia/en/WebPlatform" title="WebPlatform">WebPlatform</a></li></ul>
+</div></td></tr><tr><th scope="row">Deprecated</th><td><div>
+<ul><li><a href="/wikipedia/en/C-HTML" title="C-HTML">C-HTML</a></li>
+<li><a href="/wikipedia/en/Handheld_Device_Markup_Language" title="Handheld Device Markup Language">HDML</a></li>
+<li><a href="/wikipedia/en/JavaScript_Style_Sheets" title="JavaScript Style Sheets">JSSS</a></li>
+<li><a href="/wikipedia/en/Precision_Graphics_Markup_Language" title="Precision Graphics Markup Language">PGML</a></li>
+<li><a href="/wikipedia/en/Vector_Markup_Language" title="Vector Markup Language">VML</a></li>
+<li><a href="/wikipedia/en/XHTML%2BMathML%2BSVG" title="XHTML+MathML+SVG">XHTML+MathML+SVG</a></li></ul>
+</div></td></tr><tr><th scope="row">Obsoleted</th><td><div>
+<ul><li><a href="/wikipedia/en/P3P" title="P3P">P3P</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><th scope="row">Organizations</th><td><table><tbody><tr><td colspan="2"><div>
+<ul><li>Advisory Committee (AC)</li>
+<li><a href="/wikipedia/en/World_Wide_Web_Foundation" title="World Wide Web Foundation">World Wide Web Foundation</a></li></ul>
+</div></td></tr><tr><th scope="row">Elected groups</th><td><div>
+<ul><li>Advisory Board (AB)</li></ul>
+</div></td></tr><tr><th scope="row">Working groups</th><td><div>
+<ul><li><a href="/wikipedia/en/CSS_Working_Group" title="CSS Working Group">CSS</a></li>
+<li>Geolocation</li>
+<li>Social Web</li>
+<li><a href="/wikipedia/en/SVG_Working_Group" title="SVG Working Group">SVG</a></li>
+<li><a href="/wikipedia/en/WHATWG" title="WHATWG">Web Hypertext Application Technology (WHATWG)</a></li>
+<li>Web Platform</li></ul>
+</div></td></tr><tr><th scope="row">Community groups</th><td><div>
+<ul><li>Web Incubator Community Group (WICG)</li></ul>
+</div></td></tr><tr><th scope="row">Closed groups</th><td><div>
+<ul><li><a href="/wikipedia/en/W3C_Device_Description_Working_Group" title="W3C Device Description Working Group">Device Description (DDWG)</a></li>
+<li><a href="/wikipedia/en/HTML_Working_Group" title="HTML Working Group">HTML</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><th scope="row">Software</th><td><table><tbody><tr><td colspan="2"><div>
+<ul><li><a href="/wikipedia/en/CERN_httpd" title="CERN httpd">CERN httpd</a></li>
+<li><a href="/wikipedia/en/Libwww" title="Libwww">Libwww</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Web_browser" title="Web browser">Browsers</a></th><td><div>
+<ul><li><a href="/wikipedia/en/Line_Mode_Browser" title="Line Mode Browser">Line Mode (1990–)</a></li>
+<li><a href="/wikipedia/en/Arena_(web_browser)" title="Arena (web browser)">Arena (1993–98)</a></li>
+<li><a href="/wikipedia/en/Agora_(web_browser)" title="Agora (web browser)">Agora (1994–97)</a></li>
+<li><a href="/wikipedia/en/Argo_(web_browser)" title="Argo (web browser)">Argo (1994–97)</a></li>
+<li><a href="/wikipedia/en/Amaya_(web_editor)" title="Amaya (web editor)">Amaya (browser/editor, 1996–2012)</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><th scope="row">Conferences</th><td><div>
+<ul><li><a href="/wikipedia/en/International_World_Wide_Web_Conference" title="International World Wide Web Conference">International World Wide Web Conference (IW3C)</a>
+<ul><li><a href="/wikipedia/en/International_World_Wide_Web_Conferences_Steering_Committee" title="International World Wide Web Conferences Steering Committee">Steering Committee (IW3C2)</a></li>
+<li><a href="/wikipedia/en/First_International_Conference_on_the_World-Wide_Web" title="First International Conference on the World-Wide Web">First conference ("WWW1", 1994)</a></li></ul></li></ul>
+</div></td></tr></tbody></table></div>
+<div aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q46441&amp;#124;Edit_this_at_Wikidata" class="navbox"><table><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q46441&amp;#124;Edit_this_at_Wikidata" scope="row"><a href="/wikipedia/en/Help:Authority_control" title="Help:Authority control">Authority control</a> <a href="https://www.wikidata.org/wiki/Q46441" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20"></a></th><td><div>
+<ul><li><a href="/wikipedia/en/Biblioteca_Nacional_de_Espa%C3%B1a" title="Biblioteca Nacional de España">BNE</a>: <a rel="nofollow" href="http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&amp;authority_id=XX550325">XX550325</a></li>
+<li><a href="/wikipedia/en/Biblioth%C3%A8que_nationale_de_France" title="Bibliothèque nationale de France">BNF</a>: <a rel="nofollow" href="https://catalogue.bnf.fr/ark:/12148/cb13739222f">cb13739222f</a> <a rel="nofollow" href="https://data.bnf.fr/ark:/12148/cb13739222f">(data)</a></li>
+<li><a href="/wikipedia/en/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <a rel="nofollow" href="https://d-nb.info/gnd/4467617-7">4467617-7</a></li>
+<li><a href="/wikipedia/en/Library_of_Congress_Control_Number" title="Library of Congress Control Number">LCCN</a>: <a rel="nofollow" href="https://id.loc.gov/authorities/subjects/sh2001004461">sh2001004461</a></li></ul>
+</div></td></tr></tbody></table></div>
+</div>
+
+  </article>
+</main>
+
+<footer>
+  <button id="company-logo"><a href="https://zhiliaokeji.com/" target="_blank" title="Known LLC. (长沙知了信息科技有限公司)">
+    <p>Powered by</p>
+    <img src="/static/img/known.svg" alt="Known LLC. (长沙知了信息科技有限公司)">
+  </a></button>
+</footer>
+
+<script src="/static/libs/highlight/highlight.pack.js"></script>
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+<script src="/static/js/utils.js"></script>
+<script src="/static/js/toc.js"></script>
+<script src="/static/js/search-hint.js"></script>
+</body>
+</html>
