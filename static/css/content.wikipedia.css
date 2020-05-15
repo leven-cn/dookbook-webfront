@@ -43,6 +43,7 @@ main article h3 {
 
 main article img {
   width: auto;
+  margin-top: 2rem;
 }
 
 main ul {
@@ -75,10 +76,15 @@ figure {
   background: rgb(42, 44, 53);
 }
 
+figure div {
+  width: auto;
+}
+
 main figure img {
   box-sizing: border-box;
   padding: 0.7rem 1rem;
   max-width: 300px;
+  margin: 0;
 }
 
 figcaption {
@@ -158,6 +164,11 @@ table tr th {
   line-height: 34px;
 }
 
+.navbox th[colspan="26"] {
+  display: inline-block;
+  width: 100%;
+}
+
 .navbox th {
   background: #444;
   line-height: 30px;
@@ -203,15 +214,13 @@ table tr th {
   text-align: center;
 }
 
+
+.navbox > table > tbody > tr > td[rowspan="4"],
 .navbox > table > tbody > tr > td[rowspan="5"],
 .navbox > table > tbody > tr > td[rowspan="6"]{
   flex: none;
   border-left: 1px solid #666;
   padding: 0 10px;
-}
-
-.navbox > table > tbody > tr > td[rowspan="5"] div {
-  display: inline-block;
 }
 
 .navbox > table > tbody > tr > td[colspan="2"] {
