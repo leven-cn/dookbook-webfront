@@ -153,6 +153,7 @@ table tr th {
   min-width: auto;
   line-height: 30px;
   border-left: none;
+  flex: 1;
 }
 
 .navbox table table {
@@ -184,26 +185,17 @@ table tr th {
   margin: 0;
 }
 
-.navbox table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr {
-  display: flex;
-  width: 100%;
-}
-
 .navbox th[scope="row"] {
   background: #666;
   width: 150px;
-  margin-right: 2px;
-}
-
-.navbox table td {
-  flex: 1;
+  border-right: 2px solid #1d1e24;
 }
 
 .navbox table tbody tr {
   border-bottom: 1px solid #666;
   margin-bottom: 2px;
   width: 100%;
-  display: flex;
+  display: inline-block;
 }
 
 .navbox table tbody tr:last-child {
@@ -218,6 +210,7 @@ table tr th {
 .navbox > table > tbody > tr > td[colspan="3"] {
   background: #444;
   text-align: center;
+  display: block;
 }
 
 
@@ -225,7 +218,6 @@ table tr th {
 .navbox > table > tbody > tr > td[rowspan="5"],
 .navbox > table > tbody > tr > td[rowspan="6"],
 .navbox > table > tbody > tr > td[rowspan="7"]{
-  flex: none;
   border-left: 1px solid #666;
   padding: 0 10px;
 }
