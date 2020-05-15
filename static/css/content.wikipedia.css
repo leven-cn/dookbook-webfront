@@ -34,7 +34,9 @@ main article {
 }
 
 main article h2 {
-  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  clear: both;
+  margin: 0;
 }
 
 main article h3 {
@@ -175,6 +177,11 @@ table tr th {
   border-left: none;
   border-bottom: none;
   padding: 0;
+  color: #aaa;
+}
+
+.navbox img {
+  margin: 0;
 }
 
 .navbox table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr {
@@ -203,7 +210,6 @@ table tr th {
   border-bottom: none;
 }
 
-
 .navbox > table > tbody > tr > td[colspan="2"] > table > tbody > tr > th[scope="col"] {
   width: 100%;
   display: inline-block;
@@ -217,7 +223,8 @@ table tr th {
 
 .navbox > table > tbody > tr > td[rowspan="4"],
 .navbox > table > tbody > tr > td[rowspan="5"],
-.navbox > table > tbody > tr > td[rowspan="6"]{
+.navbox > table > tbody > tr > td[rowspan="6"],
+.navbox > table > tbody > tr > td[rowspan="7"]{
   flex: none;
   border-left: 1px solid #666;
   padding: 0 10px;
