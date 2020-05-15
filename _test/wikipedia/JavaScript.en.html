@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>JavaScript - Wikipedia for Computer Science, hosted by Dookbook&reg;</title>
+  <meta name="description" content="JavaScript (programming language) on Wikipedia for Computer Science, hosted by Dookbook®"/>
+  <meta name="keywords" content="JavaScript,Wikipedia,Computer Science,Dookbook"/>
+  <meta name="generator" content="Dookbook"/>
+  <link rel="stylesheet" href="/static/libs/highlight/styles/agate.css"/>
+  <link rel="stylesheet" href="/static/css/content.css"/>
+  <link rel="stylesheet" href="/static/css/content.toc.css"/>
+  <link rel="stylesheet" href="/static/css/content.search.css"/>
+  <link rel="stylesheet" href="/static/css/content.wikipedia.css"/>
+  <!-- <link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/> -->
+  <!-- <link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/> -->
+  <link rel="canonical" href="https://dookbook.info/wikipedia/en/HTML"/>
+  <link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+</head>
+<body>
+  <!-- htmlhint attr-value-double-quotes:false -->
+  <header>
+    <a href="/"><img src="/static/img/wikipedia-en.png" alt="Wikipedia for Computer Science" title="Wikipedia for Computer Science"></a>
+    <section id="search">
+      <img src="/static/img/search.svg" alt="Search">
+      <input type="text" placeholder="Search here">
+    </section>
+    <nav>
+      <a href="#" title="About Dookbook®">i</a>
+      <a href="/about/zh-hans/" title="切换至中文" lang="zh-Hans">中</a>
+      <a href="/en/help/readme/" title="Help">?</a>
+    </nav>
+  </header>
+
+<main>
+  <article>
+    <header>
+      <h1>JavaScript - Wikipedia</h1>
+      <p><span>Updated</span>:&nbsp;&nbsp;2020-03-01 10:24:00 (UTC)</p>
+    </header>
+    <div class="toc">
+      <ul>
+        <li>
+        <a href="#history">History</a>
+        <ul>
+        <li><a href="#creation_at_netscape">Creation at Netscape</a></li>
+        <li><a href="#adoption_by_microsoft">Adoption by Microsoft</a></li>
+        <li><a href="#the_rise_of_jscript">The rise of JScript</a></li>
+        <li><a href="#growth_and_standardization">Growth and standardization</a></li>
+        <li><a href="#reaching_maturity">Reaching maturity</a></li>
+        </ul>
+        </li>
+        <li><a href="#trademark">Trademark</a></li>
+        <li>
+        <a href="#website_client-side_usage">Website client-side usage</a>
+        <ul>
+        <li><a href="#examples_of_scripted_behavior">Examples of scripted behavior</a></li>
+        <li><a href="#libraries_and_frameworks">Libraries and frameworks</a></li>
+        </ul>
+        </li>
+        <li><a href="#other_usage">Other usage</a></li>
+        <li>
+        <a href="#features">Features</a>
+        <ul>
+        <li><a href="#imperative_and_structured">Imperative and structured</a></li>
+        <li><a href="#weakly_typed">Weakly typed</a></li>
+        <li><a href="#dynamic">Dynamic</a></li>
+        <li><a href="#object-orientation_(prototype-based)">Object-orientation (prototype-based)</a></li>
+        <li><a href="#functional">Functional</a></li>
+        <li><a href="#delegative">Delegative</a></li>
+        <li><a href="#miscellaneous">Miscellaneous</a></li>
+        <li><a href="#vendor-specific_extensions">Vendor-specific extensions</a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="#syntax">Syntax</a>
+        <ul>
+        <li><a href="#simple_examples">Simple examples</a></li>
+        <li><a href="#more_advanced_example">More advanced example</a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="#security">Security</a>
+        <ul>
+        <li><a href="#cross-site_vulnerabilities">Cross-site vulnerabilities</a></li>
+        <li><a href="#misplaced_trust_in_the_client">Misplaced trust in the client</a></li>
+        <li><a href="#misplaced_trust_in_developers">Misplaced trust in developers</a></li>
+        <li><a href="#browser_and_plugin_coding_errors">Browser and plugin coding errors</a></li>
+        <li><a href="#sandbox_implementation_errors">Sandbox implementation errors</a></li>
+        <li><a href="#hardware_vulnerabilities">Hardware vulnerabilities</a></li>
+        </ul>
+        </li>
+        <li><a href="#development_tools">Development tools</a></li>
+        <li>
+        <a href="#related_technologies">Related technologies</a>
+        <ul>
+        <li><a href="#java">Java</a></li>
+        <li><a href="#json">JSON</a></li>
+        <li><a href="#webassembly">WebAssembly</a></li>
+        <li><a href="#transpilers">Transpilers</a></li>
+        </ul>
+        </li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#external_links">External links</a></li>
+      </ul>
+      <a class="copyright" href="https://zhiliaokeji.com" title="All Copyrights Reserved by Known LLC.">&copy;&nbsp;Known LLC.</a>
+    </div>
+
+<!-- Main content -->
+<div> 
+ 
+ 
+ 
+ 
+  <p><b>JavaScript</b> (/ˈdʒɑːvəˌskrɪpt/),<sup id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> often abbreviated as <b>JS</b>, is a <a href="/wikipedia/en/Programming_language" title="Programming language">programming language</a> that conforms to the <a href="/wikipedia/en/ECMAScript" title="ECMAScript">ECMAScript</a> specification.<sup id="cite_ref-tc39_7-0"><a href="#cite_note-tc39-7">[7]</a></sup> JavaScript is <a href="/wikipedia/en/High-level_programming_language" title="High-level programming language">high-level</a>, often <a href="/wikipedia/en/Just-in-time_compilation" title="Just-in-time compilation">just-in-time compiled</a>, and <a href="/wikipedia/en/Programming_paradigm" title="Programming paradigm">multi-paradigm</a>. It has <a href="/wikipedia/en/List_of_programming_languages_by_type#Curly-bracket_languages" title="List of programming languages by type">curly-bracket syntax</a>, <a href="/wikipedia/en/Dynamic_typing" title="Dynamic typing">dynamic typing</a>, <a href="/wikipedia/en/Prototype-based_programming" title="Prototype-based programming">prototype-based</a> <a href="/wikipedia/en/Object-oriented_programming" title="Object-oriented programming">object-orientation</a>, and <a href="/wikipedia/en/First-class_function" title="First-class function">first-class functions</a>.
+  </p><p>Alongside <a href="/wikipedia/en/HTML" title="HTML">HTML</a> and <a href="/wikipedia/en/CSS" title="CSS">CSS</a>, JavaScript is one of the core technologies of the <a href="/wikipedia/en/World_Wide_Web" title="World Wide Web">World Wide Web</a>.<sup id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> JavaScript enables interactive <a href="/wikipedia/en/Web_page" title="Web page">web pages</a> and is an essential part of <a href="/wikipedia/en/Web_application" title="Web application">web applications</a>. The vast majority of <a href="/wikipedia/en/Website" title="Website">websites</a> use it for <a href="/wikipedia/en/Client-side" title="Client-side">client-side</a> page behavior,<sup id="cite_ref-deployedstats_9-0"><a href="#cite_note-deployedstats-9">[9]</a></sup> and all major <a href="/wikipedia/en/Web_browser" title="Web browser">web browsers</a> have a dedicated <a href="/wikipedia/en/JavaScript_engine" title="JavaScript engine">JavaScript engine</a> to execute it.
+  </p><p>As a multi-paradigm language, JavaScript supports <a href="/wikipedia/en/Event-driven_programming" title="Event-driven programming">event-driven</a>, <a href="/wikipedia/en/Functional_programming" title="Functional programming">functional</a>, and <a href="/wikipedia/en/Imperative_programming" title="Imperative programming">imperative</a> <a href="/wikipedia/en/Programming_paradigm" title="Programming paradigm">programming styles</a>. It has <a href="/wikipedia/en/Application_programming_interface" title="Application programming interface">application programming interfaces</a> (APIs) for working with text, dates, <a href="/wikipedia/en/Regular_expression" title="Regular expression">regular expressions</a>, standard <a href="/wikipedia/en/Data_structure" title="Data structure">data structures</a>, and the <a href="/wikipedia/en/Document_Object_Model" title="Document Object Model">Document Object Model</a> (DOM). However, the language itself does not include any <a href="/wikipedia/en/Input/output" title="Input/output">input/output</a> (I/O), such as <a href="/wikipedia/en/Computer_network" title="Computer network">networking</a>, <a href="/wikipedia/en/Data_storage" title="Data storage">storage</a>, or <a href="/wikipedia/en/Computer_graphics" title="Computer graphics">graphics</a> facilities, as the host environment (usually a web browser) provides those APIs.
+  </p><p>Originally used only in web browsers, JavaScript engines are also now embedded in <a href="/wikipedia/en/Server-side" title="Server-side">server-side</a> website deployments and non-browser applications.
+  </p><p>Although there are similarities between JavaScript and <a href="/wikipedia/en/Java_(programming_language)" title="Java (programming language)">Java</a>, including language name, <a href="/wikipedia/en/Syntax_(programming_languages)" title="Syntax (programming languages)">syntax</a>, and respective <a href="/wikipedia/en/Standard_library" title="Standard library">standard libraries</a>, the two languages are distinct and differ greatly in design.
+  </p>
+  <h2 id="history">History</h2>
+  <h3 id="creation_at_netscape">Creation at Netscape</h3>
+  <p>The <a href="/wikipedia/en/Mosaic_(web_browser)" title="Mosaic (web browser)">Mosaic</a> <a href="/wikipedia/en/Web_browser" title="Web browser">web browser</a> was released in 1993. As the first browser with a <a href="/wikipedia/en/Graphical_user_interface" title="Graphical user interface">graphical user interface</a> accessible to non-technical people, it played a prominent role in the rapid growth of the nascent <a href="/wikipedia/en/World_Wide_Web" title="World Wide Web">World Wide Web</a>.<sup id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup> The lead developers of Mosaic then founded the <a href="/wikipedia/en/Netscape" title="Netscape">Netscape</a> corporation, which released a more polished browser, <a href="/wikipedia/en/Netscape_Navigator" title="Netscape Navigator">Netscape Navigator</a>, in 1994. Navigator quickly became the most used browser.<sup id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
+  </p><p>During these formative years of the Web, <a href="/wikipedia/en/Web_page" title="Web page">web pages</a> could only be static, lacking the capability for dynamic behavior after the page was loaded in the browser. There was a desire in the burgeoning web development scene to remove this limitation, so in 1995, Netscape decided to add a <a href="/wikipedia/en/Scripting_language" title="Scripting language">scripting language</a> to Navigator. They pursued two routes to achieve this: collaborating with <a href="/wikipedia/en/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> to embed the <a href="/wikipedia/en/Java_(programming_language)" title="Java (programming language)">Java</a> <a href="/wikipedia/en/Programming_language" title="Programming language">programming language</a>, while also hiring <a href="/wikipedia/en/Brendan_Eich" title="Brendan Eich">Brendan Eich</a> to embed the <a href="/wikipedia/en/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a> language.<sup id="cite_ref-origin_12-0"><a href="#cite_note-origin-12">[12]</a></sup>
+  </p><p>Netscape management soon decided that the best option was for Eich to devise a new language, with syntax similar to Java and less like Scheme or other extant scripting languages.<sup id="cite_ref-origin_12-1"><a href="#cite_note-origin-12">[12]</a></sup> Although the new language and its <a href="/wikipedia/en/Interpreter_(computing)" title="Interpreter (computing)">interpreter</a> implementation were officially called LiveScript when first shipped as part of a Navigator release in September 1995, the name was changed to JavaScript three months later.<sup id="cite_ref-origin_12-2"><a href="#cite_note-origin-12">[12]</a></sup><sup id="cite_ref-press_release_1-1"><a href="#cite_note-press_release-1">[1]</a></sup><sup id="cite_ref-techvision_13-0"><a href="#cite_note-techvision-13">[13]</a></sup>
+  </p><p>The choice of the JavaScript name has caused confusion, sometimes giving the impression that it is a spin-off of Java. Since Java was the hot new programming language at the time, this has been characterized as a marketing ploy by Netscape to give its own new language cachet.<sup id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+  </p>
+  <h3 id="adoption_by_microsoft">Adoption by Microsoft</h3>
+  <p><a href="/wikipedia/en/Microsoft" title="Microsoft">Microsoft</a> debuted <a href="/wikipedia/en/Internet_Explorer" title="Internet Explorer">Internet Explorer</a> in 1995, leading to a <a href="/wikipedia/en/Browser_war" title="Browser war">browser war</a> with Netscape. On the JavaScript front, Microsoft <a href="/wikipedia/en/Reverse_engineering#Reverse_engineering_of_software" title="Reverse engineering">reverse-engineered</a> the Navigator <a href="/wikipedia/en/Interpreter_(computing)" title="Interpreter (computing)">interpreter</a> to create its own, called <a href="/wikipedia/en/JScript" title="JScript">JScript</a>.
+  </p><p>JScript was first released in 1996, alongside initial support for <a href="/wikipedia/en/CSS" title="CSS">CSS</a> and extensions to <a href="/wikipedia/en/HTML" title="HTML">HTML</a>. Each of these implementations was noticeably different from their counterparts in Navigator.<sup id="cite_ref-O'Reilly-2001_15-0"><a href="#cite_note-O'Reilly-2001-15">[15]</a></sup><sup id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup> These differences made it difficult for developers to make their websites work well in both browsers, leading to widespread use of "best viewed in Netscape" and "best viewed in Internet Explorer" logos for several years.<sup id="cite_ref-O'Reilly-2001_15-1"><a href="#cite_note-O'Reilly-2001-15">[15]</a></sup><sup id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
+  </p>
+  <h3 id="the_rise_of_jscript">The rise of JScript</h3>
+  <p>In November 1996, <a href="/wikipedia/en/Netscape" title="Netscape">Netscape</a> submitted JavaScript to <a href="/wikipedia/en/Ecma_International" title="Ecma International">ECMA International</a>, as the starting point for a standard specification that all browser vendors could conform to. This led to the official release of the first <a href="/wikipedia/en/ECMAScript" title="ECMAScript">ECMAScript</a> language specification in June 1997.
+  </p><p>The standards process continued for a few years, with the release of ECMAScript 2 in June 1998 and ECMAScript 3 in December 1999. Work on ECMAScript 4 began in 2000.
+  </p><p>Meanwhile, <a href="/wikipedia/en/Microsoft" title="Microsoft">Microsoft</a> gained an increasingly dominant position in the browser market. By the early 2000s, Internet Explorer's market share reached 95%.<sup id="cite_ref-searchenginejournal.com_18-0"><a href="#cite_note-searchenginejournal.com-18">[18]</a></sup> This meant that <a href="/wikipedia/en/JScript" title="JScript">JScript</a> became the de facto standard for <a href="/wikipedia/en/Client-side_scripting" title="Client-side scripting">client-side scripting</a> on the Web.
+  </p><p>Microsoft initially participated in the standards process and implemented some proposals in its JScript language, but eventually it stopped collaborating on ECMA work. Thus ECMAScript 4 was mothballed.
+  </p>
+  <h3 id="growth_and_standardization">Growth and standardization</h3>
+  <p>During the period of <a href="/wikipedia/en/Internet_Explorer" title="Internet Explorer">Internet Explorer</a> dominance in the early 2000s, client-side scripting was stagnant. This started to change in 2004, when the successor of Netscape, <a href="/wikipedia/en/Mozilla" title="Mozilla">Mozilla</a>, released the <a href="/wikipedia/en/Firefox" title="Firefox">Firefox</a> browser. Firefox was well-received by many, taking significant market share from Internet Explorer.<sup id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>
+  </p><p>In 2005, Mozilla joined ECMA International, and work started on the <a href="/wikipedia/en/ECMAScript_for_XML" title="ECMAScript for XML">ECMAScript for XML</a> (E4X) standard. This led to Mozilla working jointly with <a href="/wikipedia/en/Macromedia" title="Macromedia">Macromedia</a> (later acquired by <a href="/wikipedia/en/Adobe_Systems" title="Adobe Systems">Adobe Systems</a>), who were implementing E4X in their ActionScript 3 language, which was based on an ECMAScript 4 draft. The goal became standardizing ActionScript 3 as the new ECMAScript 4. To this end, Adobe Systems released the <a href="/wikipedia/en/Tamarin_(software)" title="Tamarin (software)">Tamarin</a> implementation as an <a href="/wikipedia/en/Open-source_model" title="Open-source model">open source</a> project. However, Tamarin and ActionScript 3 were too different from established client-side scripting, and without cooperation from <a href="/wikipedia/en/Microsoft" title="Microsoft">Microsoft</a>, ECMAScript 4 never reached fruition.
+  </p><p>Meanwhile, very important developments were occurring in open source communities not affiliated with ECMA work. In 2005, <a href="/wikipedia/en/Jesse_James_Garrett" title="Jesse James Garrett">Jesse James Garrett</a> released a white paper in which he coined the term <a href="/wikipedia/en/Ajax_(programming)" title="Ajax (programming)">Ajax</a> and described a set of technologies, of which JavaScript was the backbone, to create <a href="/wikipedia/en/Web_application" title="Web application">web applications</a> where data can be loaded in the background, avoiding the need for full page reloads. This sparked a renaissance period of JavaScript, spearheaded by open source libraries and the communities that formed around them. Many new libraries were created, including <a href="/wikipedia/en/JQuery" title="JQuery">jQuery</a>, <a href="/wikipedia/en/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype</a>, <a href="/wikipedia/en/Dojo_Toolkit" title="Dojo Toolkit">Dojo Toolkit</a>, and <a href="/wikipedia/en/MooTools" title="MooTools">MooTools</a>.
+  </p><p><a href="/wikipedia/en/Google" title="Google">Google</a> debuted its <a href="/wikipedia/en/Google_Chrome" title="Google Chrome">Chrome</a> browser in 2008, with the <a href="/wikipedia/en/V8_(JavaScript_engine)" title="V8 (JavaScript engine)">V8</a> JavaScript engine that was the first to use <a href="/wikipedia/en/Just-in-time_compilation" title="Just-in-time compilation">just-in-time compilation</a>, significantly improving execution times.<sup id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup><sup id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup> Other browser vendors needed to overhaul their engines to compete.<sup id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>
+  </p><p>In July 2008, these disparate parties came together for a conference in <a href="/wikipedia/en/Oslo" title="Oslo">Oslo</a>. This led to the eventual agreement in early 2009 to combine all relevant work and drive the language forward. The result was the ECMAScript 5 standard, released in December 2009.
+  </p>
+  <h3 id="reaching_maturity">Reaching maturity</h3>
+  <p>Ambitious work on the language continued for several years, culminating in an extensive collection of additions and refinements being formalized with the publication of <a href="/wikipedia/en/ECMAScript" title="ECMAScript">ECMAScript</a> 6 in 2015.<sup id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>
+  </p><p>From 2016 to 2019, a new version of the ECMAScript standard was published each year, but the scope of changes was much smaller than the 5th or 6th editions. Thus JavaScript can now be considered a mature language that has largely settled down.
+  </p><p>The current JavaScript ecosystem has many <a href="/wikipedia/en/List_of_JavaScript_libraries" title="List of JavaScript libraries">libraries and frameworks</a>, established programming practices, and increased usage of JavaScript outside of web browsers. Plus, with the rise of <a href="/wikipedia/en/Single-page_application" title="Single-page application">single-page applications</a> and other JavaScript-heavy websites, a number of <a href="/wikipedia/en/Source-to-source_compiler" title="Source-to-source compiler">transpilers</a> have been created to aid the development process.<sup id="cite_ref-transpilers_24-0"><a href="#cite_note-transpilers-24">[24]</a></sup>
+  </p>
+  <h2 id="trademark">Trademark</h2>
+  <p>"JavaScript" is a <a href="/wikipedia/en/Trademark" title="Trademark">trademark</a> of <a href="/wikipedia/en/Oracle_Corporation" title="Oracle Corporation">Oracle Corporation</a> in the United States.<sup id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup> It is used under license for technology invented and implemented by Netscape Communications and other parties.<sup id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup>
+  </p>
+  <h2 id="website_client-side_usage">Website client-side usage</h2>
+  <p>JavaScript is the dominant <a href="/wikipedia/en/Client-side" title="Client-side">client-side</a> scripting language of the Web, with 95% of <a href="/wikipedia/en/Website" title="Website">websites</a> using it for this purpose.<sup id="cite_ref-deployedstats_9-1"><a href="#cite_note-deployedstats-9">[9]</a></sup> Scripts are embedded in or included from <a href="/wikipedia/en/HTML" title="HTML">HTML</a> documents and interact with the DOM. All major <a href="/wikipedia/en/Web_browser" title="Web browser">web browsers</a> have a built-in <a href="/wikipedia/en/JavaScript_engine" title="JavaScript engine">JavaScript engine</a> that executes the code on the user's device.
+  </p>
+  <h3 id="examples_of_scripted_behavior">Examples of scripted behavior</h3>
+   
+  <ul><li>Loading new page content without reloading the page. For example, <a href="/wikipedia/en/Social_media" title="Social media">social media</a> websites use Ajax so that users can post new messages without leaving the page.</li>
+  <li>Animation of page elements, such as fading them in and out, resizing, and moving them.</li>
+  <li>Interactive content, such as games and video.</li>
+  <li><a href="/wikipedia/en/Data_validation" title="Data validation">Validating</a> input values of a <a href="/wikipedia/en/Form_(HTML)" title="Form (HTML)">web form</a> to make sure that they are acceptable before being submitted to the server.</li>
+  <li>Transmitting information about the user's behavior for <a href="/wikipedia/en/Web_analytics" title="Web analytics">analytics</a>, <a href="/wikipedia/en/Ad_tracking" title="Ad tracking">ad tracking</a>, and <a href="/wikipedia/en/Personalization" title="Personalization">personalization</a>.</li></ul>
+  <h3 id="libraries_and_frameworks">Libraries and frameworks</h3>
+  <p>The majority of websites use a third-party <a href="/wikipedia/en/JavaScript_library" title="JavaScript library">JavaScript library</a> or <a href="/wikipedia/en/Web_application_framework" title="Web application framework">web application framework</a> as part of their client-side page scripting.<sup id="cite_ref-lib_usage_27-0"><a href="#cite_note-lib_usage-27">[27]</a></sup>
+  </p><p><a href="/wikipedia/en/JQuery" title="JQuery">jQuery</a> is the most popular library, used by over 70% of websites.<sup id="cite_ref-lib_usage_27-1"><a href="#cite_note-lib_usage-27">[27]</a></sup>
+  </p><p>The <a href="/wikipedia/en/Angular_(web_framework)" title="Angular (web framework)">Angular</a> framework was created by <a href="/wikipedia/en/Google" title="Google">Google</a> for its web services; it is now <a href="/wikipedia/en/Open-source_software" title="Open-source software">open source</a> and used by other websites. Likewise, <a href="/wikipedia/en/Facebook" title="Facebook">Facebook</a> created the <a href="/wikipedia/en/React_(web_framework)" title="React (web framework)">React</a> framework for its website and later released it as open source; other sites, including <a href="/wikipedia/en/Twitter" title="Twitter">Twitter</a>, now use it.
+  </p>
+  <h2 id="other_usage">Other usage</h2>
+  <p>The use of JavaScript has expanded beyond its <a href="/wikipedia/en/Web_browser" title="Web browser">web browser</a> roots. <a href="/wikipedia/en/JavaScript_engine" title="JavaScript engine">JavaScript engines</a> are now embedded in a variety of other software systems, both for <a href="/wikipedia/en/Server-side" title="Server-side">server-side</a> website deployments and non-browser <a href="/wikipedia/en/Application_software" title="Application software">applications</a>.
+  </p><p>Initial attempts at promoting server-side JavaScript usage were <a href="/wikipedia/en/Netscape_Enterprise_Server" title="Netscape Enterprise Server">Netscape Enterprise Server</a> and <a href="/wikipedia/en/Microsoft" title="Microsoft">Microsoft</a>'s <a href="/wikipedia/en/Internet_Information_Services" title="Internet Information Services">Internet Information Services</a>,<sup id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup><sup id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup> but they were small niches.<sup id="cite_ref-2009server_30-0"><a href="#cite_note-2009server-30">[30]</a></sup> Server-side usage eventually started to grow in the late-2000s, with the creation of <a href="/wikipedia/en/Node.js" title="Node.js">Node.js</a> and <a href="/wikipedia/en/List_of_server-side_JavaScript_implementations" title="List of server-side JavaScript implementations">other approaches</a>.<sup id="cite_ref-2009server_30-1"><a href="#cite_note-2009server-30">[30]</a></sup>
+  </p><p><a href="/wikipedia/en/Electron_(software_framework)" title="Electron (software framework)">Electron</a>, <a href="/wikipedia/en/Apache_Cordova" title="Apache Cordova">Cordova</a>, and other <a href="/wikipedia/en/Software_framework" title="Software framework">software frameworks</a> have been used to create many applications with behavior implemented in JavaScript. Other non-browser applications include <a href="/wikipedia/en/Adobe_Acrobat" title="Adobe Acrobat">Adobe Acrobat</a> support for scripting <a href="/wikipedia/en/PDF" title="PDF">PDF</a> documents<sup id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup> and <a href="/wikipedia/en/GNOME_Shell" title="GNOME Shell">GNOME Shell</a> extensions written in JavaScript.<sup id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup>
+  </p>
+  <h2 id="features">Features</h2>
+  <p>The following features are common to all conforming ECMAScript implementations, unless explicitly specified otherwise.
+  </p>
+  <h3 id="imperative_and_structured">Imperative and structured</h3>
+  <p>JavaScript supports much of the <a href="/wikipedia/en/Structured_programming" title="Structured programming">structured programming</a> syntax from <a href="/wikipedia/en/C_(computer_language)" title="C (computer language)">C</a> (e.g., <code>if</code> statements, <code>while</code> loops, <code>switch</code> statements, <code>do while</code> loops, etc.). One partial exception is <a href="/wikipedia/en/Scope_(computer_science)" title="Scope (computer science)">scoping</a>: JavaScript originally had only <a href="/wikipedia/en/Function_scoping" title="Function scoping">function scoping</a> with <code>var</code>. ECMAScript 2015 added keywords <code>let</code> and <code>const</code> for block scoping, meaning JavaScript now has both function and block scoping. Like C, JavaScript makes a distinction between <a href="/wikipedia/en/Expression_(computer_science)" title="Expression (computer science)">expressions</a> and <a href="/wikipedia/en/Statement_(computer_science)" title="Statement (computer science)">statements</a>. One syntactic difference from C is <a href="/wikipedia/en/Defensive_semicolon" title="Defensive semicolon">automatic semicolon insertion</a>, which allows the semicolons that would normally terminate statements to be omitted.<sup id="cite_ref-Flanagan2006_33-0"><a href="#cite_note-Flanagan2006-33">[33]</a></sup>
+  </p>
+  <h3 id="weakly_typed">Weakly typed</h3>
+  <p>JavaScript is <a href="/wikipedia/en/Strong_and_weak_typing" title="Strong and weak typing">weakly typed</a>, which means certain types are implicitly cast depending on the operation used. JavaScript has received criticism for the way it implements these conversions as well as the inconsistency between them. For example, when adding a number to a string, the number will be cast to a string before performing concatenation, but when subtracting a number from a string, the string is cast to a number before performing subtraction.
+  </p>
+  <table>
+  <caption>JavaScript includes many other type quirks that have been subject to criticism:<sup id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup><sup id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup>
+  </caption>
+  <tbody><tr>
+  <th>left operand
+  </th>
+  <th>operator
+  </th>
+  <th>right operand
+  </th>
+  <th>result
+  </th></tr>
+  <tr>
+  <td><code>[]</code>(empty array)
+  </td>
+  <td><code>+</code>
+  </td>
+  <td><code>[]</code>(empty array)
+  </td>
+  <td><code>""</code>(empty string)
+  </td></tr>
+  <tr>
+  <td><code>{}</code> (empty object)
+  </td>
+  <td><code>+</code>
+  </td>
+  <td><code>[]</code> (empty array)
+  </td>
+  <td><code>0</code> (number)
+  </td></tr>
+  <tr>
+  <td><code>[]</code> (empty array)
+  </td>
+  <td><code>+</code>
+  </td>
+  <td><code>{}</code> (empty object)
+  </td>
+  <td><code>{}</code> (empty object)
+  </td></tr>
+  <tr>
+  <td><code>false</code> (boolean)
+  </td>
+  <td><code>+</code>
+  </td>
+  <td><code>[]</code> (empty array)
+  </td>
+  <td><code>"false"</code> (string)
+  </td></tr>
+  <tr>
+  <td><code>"123"</code>(string)
+  </td>
+  <td><code>+</code>
+  </td>
+  <td><code>1</code> (number)
+  </td>
+  <td><code>"1231"</code> (string)
+  </td></tr>
+  <tr>
+  <td><code>"123"</code> (string)
+  </td>
+  <td><code>-</code>
+  </td>
+  <td><code>1</code> (number)
+  </td>
+  <td><code>122</code> (number)
+  </td></tr></tbody></table>
+  <h3 id="dynamic">Dynamic</h3>
+  <dl><dt>Typing</dt>
+  <dd>JavaScript is <a href="/wikipedia/en/Dynamic_typing" title="Dynamic typing">dynamically typed</a> like most other <a href="/wikipedia/en/Scripting_language" title="Scripting language">scripting languages</a>. A <a href="/wikipedia/en/Type_system" title="Type system">type</a> is associated with a <a href="/wikipedia/en/Value_(computer_science)" title="Value (computer science)">value</a> rather than an expression. For example, a <a href="/wikipedia/en/Variable_(programming)" title="Variable (programming)">variable</a> initially bound to a number may be reassigned to a <a href="/wikipedia/en/String_(computer_science)" title="String (computer science)">string</a>.<sup id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup>  JavaScript supports various ways to test the type of objects, including <a href="/wikipedia/en/Duck_typing" title="Duck typing">duck typing</a>.<sup id="cite_ref-FOOTNOTEFlanagan2006176–178_37-0"><a href="#cite_note-FOOTNOTEFlanagan2006176%E2%80%93178-37">[37]</a></sup></dd>
+  <dt>Run-time evaluation</dt>
+  <dd>JavaScript includes an <code><a href="/wikipedia/en/Eval" title="Eval">eval</a></code> function that can execute statements provided as strings at run-time.</dd></dl>
+  <h3 id="object-orientation_(prototype-based)">Object-orientation (prototype-based)</h3>
+  <p>Prototypal inheritance in JavaScript is described by <a href="/wikipedia/en/Douglas_Crockford" title="Douglas Crockford">Douglas Crockford</a> as: 
+  </p>
+  <blockquote><p>You make prototype objects, and then … make new instances. Objects are mutable in JavaScript, so we can augment the new instances, giving them new fields and methods. These can then act as prototypes for even newer objects. We don't need classes to make lots of similar objects… Objects inherit from objects. What could be more object oriented than that?<sup id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup>
+  </p></blockquote>
+  <p>In JavaScript, an <a href="/wikipedia/en/Object_(computer_science)" title="Object (computer science)">object</a> is an <a href="/wikipedia/en/Associative_array" title="Associative array">associative array</a>, augmented with a prototype (see below); each string key provides the name for an object property, and there are two syntactical ways to specify such a name: dot notation (<code>obj.x = 10</code>) and bracket notation (<code>obj['x'] = 10</code>). A property may be added, rebound, or deleted at run-time. Most properties of an object (and any property that belongs to an object's prototype inheritance chain) can be enumerated using a <code>for...in</code> loop.
+  </p><p>JavaScript has a small number of built-in objects, including <code>Function</code> and <code>Date</code>.
+  </p>
+  <dl><dt>Prototypes</dt>
+  <dd>JavaScript uses <a href="/wikipedia/en/Prototype-based_programming" title="Prototype-based programming">prototypes</a> where many other object-oriented languages use <a href="/wikipedia/en/Class_(computer_science)" title="Class (computer science)">classes</a> for <a href="/wikipedia/en/Inheritance_(computer_science)" title="Inheritance (computer science)">inheritance</a>.<sup id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup> It is possible to simulate many class-based features with prototypes in JavaScript.<sup id="cite_ref-40"><a href="#cite_note-40">[40]</a></sup></dd>
+  <dt>Functions as object constructors</dt>
+  <dd>Functions double as object constructors, along with their typical role. Prefixing a function call with <i>new</i> will create an instance of a prototype, inheriting properties and methods from the constructor (including properties from the <code>Object</code> prototype).<sup id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup> ECMAScript 5 offers the <code>Object.create</code> method, allowing explicit creation of an instance without automatically inheriting from the <code>Object</code> prototype (older environments can assign the prototype to <code>null</code>).<sup id="cite_ref-42"><a href="#cite_note-42">[42]</a></sup> The constructor's <code>prototype</code> property determines the object used for the new object's internal prototype. New methods can be added by modifying the prototype of the function used as a constructor. JavaScript's built-in constructors, such as <code>Array</code> or <code>Object</code>, also have prototypes that can be modified. While it is possible to modify the <code>Object</code> prototype, it is generally considered bad practice because most objects in JavaScript will inherit methods and properties from the <code>Object</code> prototype, and they may not expect the prototype to be modified.<sup id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup></dd>
+  <dt>Functions as methods</dt>
+  <dd>Unlike many object-oriented languages, there is no distinction between a function definition and a <a href="/wikipedia/en/Method_(computer_science)" title="Method (computer science)">method</a> definition. Rather, the distinction occurs during function calling; when a function is called as a method of an object, the function's local <i>this</i> keyword is bound to that object for that invocation.</dd></dl>
+  <h3 id="functional">Functional</h3>
+  <p>A <a href="/wikipedia/en/Subroutine" title="Subroutine">function</a> is <a href="/wikipedia/en/First-class_function" title="First-class function">first-class</a>; a function is considered to be an object. As such, a function may have properties and methods, such as <code>.call()</code> and <code>.bind()</code>.<sup id="cite_ref-44"><a href="#cite_note-44">[44]</a></sup> A <i>nested</i> function is a function defined within another function. It is created each time the outer function is invoked. In addition, each nested function forms a <a href="/wikipedia/en/Closure_(computer_programming)" title="Closure (computer programming)">lexical closure</a>: The <a href="/wikipedia/en/Scope_(programming)#Lexical_scoping_vs._dynamic_scoping" title="Scope (programming)">lexical scope</a> of the outer function (including any constant, local variable, or argument value) becomes part of the internal state of each inner function object, even after execution of the outer function concludes.<sup id="cite_ref-FOOTNOTEFlanagan2006141_45-0"><a href="#cite_note-FOOTNOTEFlanagan2006141-45">[45]</a></sup> JavaScript also supports <a href="/wikipedia/en/Anonymous_function" title="Anonymous function">anonymous functions</a>.
+  </p>
+  <h3 id="delegative">Delegative</h3>
+  <p>JavaScript supports implicit and explicit <a href="/wikipedia/en/Delegation_(object-oriented_programming)" title="Delegation (object-oriented programming)">delegation</a>.
+  </p>
+  <dl><dt>Functions as roles (Traits and Mixins)</dt>
+  <dd>JavaScript natively supports various function-based implementations of <a href="/wikipedia/en/Role-oriented_programming" title="Role-oriented programming">Role</a><sup id="cite_ref-46"><a href="#cite_note-46">[46]</a></sup> patterns like <a href="/wikipedia/en/Traits_(computer_science)" title="Traits (computer science)">Traits</a><sup id="cite_ref-47"><a href="#cite_note-47">[47]</a></sup><sup id="cite_ref-48"><a href="#cite_note-48">[48]</a></sup> and <a href="/wikipedia/en/Mixin" title="Mixin">Mixins</a>.<sup id="cite_ref-49"><a href="#cite_note-49">[49]</a></sup> Such a function defines additional behavior by at least one method bound to the <code>this</code> keyword within its <code>function</code> body. A Role then has to be delegated explicitly via <code>call</code> or <code>apply</code> to objects that need to feature additional behavior that is not shared via the prototype chain.</dd>
+  <dt>Object composition and inheritance</dt>
+  <dd>Whereas explicit function-based delegation does cover <a href="/wikipedia/en/Object_composition" title="Object composition">composition</a> in JavaScript, implicit delegation already happens every time the prototype chain is walked in order to, e.g., find a method that might be related to but is not directly owned by an object. Once the method is found it gets called within this object's context. Thus <a href="/wikipedia/en/Inheritance_(computer_science)" title="Inheritance (computer science)">inheritance</a> in JavaScript is covered by a delegation automatism that is bound to the prototype property of constructor functions.</dd></dl>
+  <h3 id="miscellaneous">Miscellaneous</h3>
+  <dl><dt>Run-time environment</dt>
+  <dd>JavaScript typically relies on a run-time environment (e.g., a <a href="/wikipedia/en/Web_browser" title="Web browser">Web browser</a>) to provide objects and methods by which scripts can interact with the environment (e.g., a webpage <a href="/wikipedia/en/Document_Object_Model" title="Document Object Model">DOM</a>). It also relies on the run-time environment to provide the ability to include/import scripts (e.g., <a href="/wikipedia/en/HTML" title="HTML">HTML</a> <code>&lt;script&gt;</code> elements). This is not a language feature per se, but it is common in most JavaScript implementations. JavaScript processes <a href="/wikipedia/en/Message_(computer_science)" title="Message (computer science)">messages</a> from a <a href="/wikipedia/en/Queue_(abstract_data_type)" title="Queue (abstract data type)">queue</a> one at a time. JavaScript calls a <a href="/wikipedia/en/Subroutine" title="Subroutine">function</a> associated with each new message, creating a <a href="/wikipedia/en/Call_stack" title="Call stack">call stack</a> frame with the function's <a href="/wikipedia/en/Parameter_(computer_programming)" title="Parameter (computer programming)">arguments</a> and <a href="/wikipedia/en/Local_variable" title="Local variable">local variables</a>. The call stack shrinks and grows based on the function's needs. When the call stack is empty upon function completion, JavaScript proceeds to the next message in the queue. This is called the <a href="/wikipedia/en/Event_loop" title="Event loop">event loop</a>, described as "run to completion" because each message is fully processed before the next message is considered. However, the language's <a href="/wikipedia/en/Concurrency_(computer_science)" title="Concurrency (computer science)">concurrency model</a> describes the event loop as <a href="/wikipedia/en/Asynchronous_I/O" title="Asynchronous I/O">non-blocking</a>: program <a href="/wikipedia/en/Input/output" title="Input/output">input/output</a> is performed using <a href="/wikipedia/en/Event_(computing)" title="Event (computing)">events</a> and <a href="/wikipedia/en/Callback_(computer_programming)" title="Callback (computer programming)">callback functions</a>. This means, for instance, that JavaScript can process a mouse click while waiting for a database query to return information.<sup id="cite_ref-50"><a href="#cite_note-50">[50]</a></sup></dd></dl>
+  <dl><dt>Variadic functions</dt>
+  <dd>An indefinite number of parameters can be passed to a function. The function can access them through <a href="/wikipedia/en/Formal_parameter" title="Formal parameter">formal parameters</a> and also through the local <code>arguments</code> object. <a href="/wikipedia/en/Variadic_functions" title="Variadic functions">Variadic functions</a> can also be created by using the <code><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind</a></code> method.</dd></dl>
+  <dl><dt>Array and object literals</dt>
+  <dd>Like many scripting languages, arrays and objects (<a href="/wikipedia/en/Associative_arrays" title="Associative arrays">associative arrays</a> in other languages) can each be created with a succinct shortcut syntax. In fact, these <a href="/wikipedia/en/Object_literal" title="Object literal">literals</a> form the basis of the <a href="/wikipedia/en/JSON" title="JSON">JSON</a> data format.</dd></dl>
+  <dl><dt>Regular expressions</dt>
+  <dd>JavaScript also supports <a href="/wikipedia/en/Regular_expression" title="Regular expression">regular expressions</a> in a manner similar to <a href="/wikipedia/en/Perl" title="Perl">Perl</a>, which provide a concise and powerful syntax for text manipulation that is more sophisticated than the built-in string functions.<sup id="cite_ref-51"><a href="#cite_note-51">[51]</a></sup></dd></dl>
+  <dl><dt>Promises</dt>
+  <dd>JavaScript also supports promises which is its way of handling asynchronous operations. There's a built-in Promise object that gives access to a lot of functionalities for handling promises and defines how they should be handled.  It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future. Recently, combinator methods were introduced in the JavaScript specification which allows developers to combine multiple JavaScript promises and do operations on the basis of different scenarios. The methods introduced are: Promise.race, Promise.all, Promise.allSettled and Promise.any.</dd></dl>
+  <h3 id="vendor-specific_extensions">Vendor-specific extensions</h3>
+  <p>Historically, some <a href="/wikipedia/en/JavaScript_engine" title="JavaScript engine">JavaScript engines</a> supported these non-standard features:
+  </p>
+  <ul><li>conditional <code>catch</code> clauses (like Java)</li>
+  <li><a href="/wikipedia/en/List_comprehension" title="List comprehension">array comprehensions</a> and generator expressions (like Python)</li>
+  <li>concise function expressions (<code>function(args) expr</code>; this experimental syntax predated arrow functions)</li>
+  <li><a href="/wikipedia/en/ECMAScript_for_XML" title="ECMAScript for XML">ECMAScript for XML</a> (E4X), an extension that adds native XML support to ECMAScript (unsupported in Firefox since version 21<sup id="cite_ref-52"><a href="#cite_note-52">[52]</a></sup>)</li></ul>
+  <h2 id="syntax">Syntax</h2>
+   
+  <h3 id="simple_examples">Simple examples</h3>
+  <p><a href="/wikipedia/en/Variable_(computer_science)" title="Variable (computer science)">Variables</a> in JavaScript can be defined using either the <code>var</code>,<sup id="cite_ref-53"><a href="#cite_note-53">[53]</a></sup> <code>let</code><sup id="cite_ref-moz_let_54-0"><a href="#cite_note-moz_let-54">[54]</a></sup> or <code>const</code><sup id="cite_ref-moz_const_55-0"><a href="#cite_note-moz_const-55">[55]</a></sup> keywords.
+  </p>
+  <div><pre><code>// Declares a function-scoped variable named `x`, and implicitly assigns the
+  // special value `undefined` to it.
+  var x;// More explicit version of the above.
+  var x2 = undefined;// Declares a block-scoped variable named `y`, and implicitly sets it to
+  // `undefined`. The `let` keyword was introduced in ECMAScript 2015.
+  let y;// More explicit version of the above.
+  let y2 = undefined;// Declares a block-scoped, un-reassign-able variable named `z`, and sets it to
+  // `undefined`. The `const` keyword was also introduced in ECMAScript 2015, and
+  // must be explicitly assigned to.
+  const z = undefined;// Declares a variable named `myNumber`, and assigns a number literal (the value
+  // `2`) to it.
+  let myNumber = 2;// Reassigns `myNumber`, setting it to a string literal (the value `"foo"`).
+  // JavaScript is a dynamically-typed language, so this is legal.
+  myNumber = "foo";
+  </code></pre></div>
+  <p>Note the <a href="/wikipedia/en/Comment_(computer_programming)" title="Comment (computer programming)">comments</a> in the example above, all of which were preceded with two <a href="/wikipedia/en/Slash_(punctuation)" title="Slash (punctuation)">forward slashes</a>.
+  </p><p>There is no built-in <a href="/wikipedia/en/Input/output" title="Input/output">Input/output</a> functionality in JavaScript; the run-time environment provides that. The ECMAScript specification in edition 5.1 mentions:<sup id="cite_ref-56"><a href="#cite_note-56">[56]</a></sup>
+  </p>
+  <blockquote><p>indeed, there are no provisions in this specification for input of external data or output of computed results.</p></blockquote>
+  <p>However, most runtime environments have a <code>console</code> object<sup id="cite_ref-57"><a href="#cite_note-57">[57]</a></sup> that can be used to print output. Here is a minimalist <a href="/wikipedia/en/Hello_World_program" title="Hello World program">Hello World program</a> in JavaScript:
+  </p>
+  <div><pre><code>console.log("Hello World!");
+  </code></pre></div>
+  <p>A simple <a href="/wikipedia/en/Recursion_(computer_science)" title="Recursion (computer science)">recursive</a> function:
+  </p>
+  <div><pre><code>function factorial(n) {
+      if (n === 0)
+          return 1; // 0! = 1    return n * factorial(n - 1);
+  }factorial(3); // returns 6
+  </code></pre></div>
+  <p>An <a href="/wikipedia/en/Anonymous_function" title="Anonymous function">anonymous function</a> (or lambda):
+  </p>
+  <div><pre><code>function counter() {
+      let count = 0;    return function() {
+          return ++count;
+      };
+  }let closure = counter();
+  closure(); // returns 1
+  closure(); // returns 2
+  closure(); // returns 3
+  </code></pre></div>
+  <p>This example shows that, in JavaScript, <a href="/wikipedia/en/Closure_(computer_programming)" title="Closure (computer programming)">function closures</a> capture their non-local variables by reference.
+  </p><p>Arrow functions were first introduced in <a href="/wikipedia/en/ECMAScript#6th_Edition_-_ECMAScript_2015" title="ECMAScript">6th Edition - ECMAScript 2015</a> . They shorten the syntax for writing functions in JavaScript. Arrow functions are anonymous in nature; a variable is needed to refer to them in order to invoke them after their creation.
+  </p><p>Example of arrow function:
+  </p>
+  <div><pre><code>// Arrow functions let us omit the `function` keyword. Here `long_example`
+  // points to an anonymous function value.
+  const long_example = (input1, input2) =&gt; {
+      console.log("Hello, World!");
+      const output = input1 + input2;    return output;
+  };// Arrow functions also let us automatically return the expression to the right
+  // of the arrow (here `input + 5`), omitting braces and the `return` keyword.
+  const short_example = input =&gt; input + 5;long_example(2, 3); // Prints "Hello, World!" and returns 5.
+  short_example(2);  // Returns 7.
+  </code></pre></div>
+  <p>In JavaScript, <a href="/wikipedia/en/Object_(computer_science)" title="Object (computer science)">objects</a> are created in the same way as functions; this is known as a <a href="/wikipedia/en/Function_object" title="Function object">function object</a>.
+  </p><p>Object example:
+  </p>
+  <div><pre><code>function Ball(r) {
+      this.radius = r; // the radius variable is local to the ball object
+      this.area = pi * r ** 2;
+      this.show = function(){ // objects can contain functions
+          drawCircle(r); // references a circle drawing function
+      }
+  }let myBall = new Ball(5); // creates a new instance of the ball object with radius 5
+  myBall.show(); // this instance of the ball object has the show function performed on it
+  </code></pre></div>
+  <p><a href="/wikipedia/en/Variadic_function" title="Variadic function">Variadic function</a> demonstration (<code>arguments</code> is a special <a href="/wikipedia/en/Variable_(programming)" title="Variable (programming)">variable</a>):<sup id="cite_ref-58"><a href="#cite_note-58">[58]</a></sup>
+  </p>
+  <div><pre><code>function sum() {
+      let x = 0;    for (let i = 0; i &lt; arguments.length; ++i)
+          x += arguments[i];    return x;
+  }sum(1, 2); // returns 3
+  sum(1, 2, 3); // returns 6
+  </code></pre></div>
+  <p><a href="/wikipedia/en/Immediately-invoked_function_expression" title="Immediately-invoked function expression">Immediately-invoked function expressions</a> are often used to create modules; before ECMAScript 2015 there was no built-in module construct in the language. Modules allow gathering properties and methods in a namespace and making some of them private:
+  </p>
+  <div><pre><code>let counter = (function() {
+      let i = 0; // private property    return {   // public methods
+          get: function() {
+              alert(i);
+          },
+          set: function(value) {
+              i = value;
+          },
+          increment: function() {
+              alert(++i);
+          }
+      };
+  })(); // modulecounter.get();      // shows 0
+  counter.set(6);
+  counter.increment(); // shows 7
+  counter.increment(); // shows 8
+  </code></pre></div>
+  <p>Exporting and Importing modules in javascript<sup id="cite_ref-59"><a href="#cite_note-59">[59]</a></sup>
+  </p><p>Export example:
+  </p>
+  <div><pre><code>/* mymodule.js */
+  // This function remains private, as it is not exported
+  let sum = (a, b) =&gt; {
+      return a + b;
+  }// Export variables
+  export let name = 'Alice';
+  export let age = 23;// Export named functions
+  export function add(num1, num2){
+      return num1 + num2;
+  }// Export class
+  export class Multiplication {
+      constructor(num1, num2) {
+          this.num1 = num1;
+          this.num2 = num2;
+      }    add() {
+          return sum(this.num1, this.num2);
+      }
+  }
+  </code></pre></div>
+  <p>Import example:
+  </p>
+  <div><pre><code>// Import one property
+  import { add } from './mymodule.js';console.log(add(1, 2)); // 3// Import multiple properties
+  import { name, age } from './mymodule.js';
+  console.log(name, age);
+  //&gt; "Alice", 23// Import all properties from a module
+  import * from './module.js'
+  console.log(name, age);
+  //&gt; "Alice", 23
+  console.log(add(1,2));
+  //&gt; 3
+  </code></pre></div>
+  <h3 id="more_advanced_example">More advanced example</h3>
+  <p>This sample code displays various JavaScript features.
+  </p>
+  <div><pre><code>/* Finds the lowest common multiple (LCM) of two numbers */
+  function LCMCalculator(x, y) { // constructor function
+      let checkInt = function(x) { // inner function
+          if (x % 1 !== 0)
+              throw new TypeError(x + "is not an integer"); // var a = mouseX        return x;
+      };
+      
+      this.a = checkInt(x)
+      // semicolons ^^^^ are optional, a newline is enough
+      this.b = checkInt(y);
+  }
+  // The prototype of object instances created by a constructor is
+  // that constructor's "prototype" property.
+  LCMCalculator.prototype = { // object literal
+      constructor: LCMCalculator, // when reassigning a prototype, set the constructor property appropriately
+      gcd: function() { // method that calculates the greatest common divisor
+          // Euclidean algorithm:
+          let a = Math.abs(this.a), b = Math.abs(this.b), t;        if (a &lt; b) {
+              // swap variables
+              // t = b; b = a; a = t;
+              [a, b] = [b, a]; // swap using destructuring assignment (ES6)
+          }        while (b !== 0) {
+              t = b;
+              b = a % b;
+              a = t;
+          }        // Only need to calculate GCD once, so "redefine" this method.
+          // (Actually not redefinition—it's defined on the instance itself,
+          // so that this.gcd refers to this "redefinition" instead of LCMCalculator.prototype.gcd.
+          // Note that this leads to a wrong result if the LCMCalculator object members "a" and/or "b" are altered afterwards.)
+          // Also, 'gcd' === "gcd", this['gcd'] === this.gcd
+          this['gcd'] = function() {
+              return a;
+          };        return a;
+      },    // Object property names can be specified by strings delimited by double (") or single (') quotes.
+      lcm: function() {
+          // Variable names do not collide with object properties, e.g., |lcm| is not |this.lcm|.
+          // not using |this.a*this.b| to avoid FP precision issues
+          let lcm = this.a / this.gcd() * this.b;
+          
+          // Only need to calculate lcm once, so "redefine" this method.
+          this.lcm = function() {
+              return lcm;
+          };        return lcm;
+      },    toString: function() {
+          return "LCMCalculator: a = " + this.a + ", b = " + this.b;
+      }
+  };// Define generic output function; this implementation only works for Web browsers
+  function output(x) {
+      document.body.appendChild(document.createTextNode(x));
+      document.body.appendChild(document.createElement('br'));
+  }// Note: Array's map() and forEach() are defined in JavaScript 1.6.
+  // They are used here to demonstrate JavaScript's inherent functional nature.
+  [
+      [25, 55],
+      [21, 56],
+      [22, 58],
+      [28, 56]
+  ].map(function(pair) { // array literal + mapping function
+      return new LCMCalculator(pair[0], pair[1]);
+  }).sort((a, b) =&gt; a.lcm() - b.lcm()) // sort with this comparative function; =&gt; is a shorthand form of a function, called "arrow function"
+      .forEach(printResult);function printResult(obj) {
+      output(obj + ", gcd = " + obj.gcd() + ", lcm = " + obj.lcm());
+  }
+  </code></pre></div>
+  <p>The following output should be displayed in the browser window.
+  </p>
+  <div><pre><code>LCMCalculator: a = 28, b = 56, gcd = 28, lcm = 56
+  LCMCalculator: a = 21, b = 56, gcd = 7, lcm = 168
+  LCMCalculator: a = 25, b = 55, gcd = 5, lcm = 275
+  LCMCalculator: a = 22, b = 58, gcd = 2, lcm = 638
+  </code></pre></div>
+  <h2 id="security">Security</h2>
+   
+  <p>JavaScript and the <a href="/wikipedia/en/Document_Object_Model" title="Document Object Model">DOM</a> provide the potential for malicious authors to deliver scripts to run on a client computer via the Web. Browser authors minimize this risk using two restrictions. First, scripts run in a <a href="/wikipedia/en/Sandbox_(computer_security)" title="Sandbox (computer security)">sandbox</a> in which they can only perform Web-related actions, not general-purpose programming tasks like creating files. Second, scripts are constrained by the <a href="/wikipedia/en/Same-origin_policy" title="Same-origin policy">same-origin policy</a>: scripts from one Web site do not have access to information such as usernames, passwords, or cookies sent to another site. Most JavaScript-related security bugs are breaches of either the same origin policy or the sandbox.
+  </p><p>There are subsets of general JavaScript—ADsafe, Secure ECMAScript (SES)—that provide greater levels of security, especially on code created by third parties (such as advertisements).<sup id="cite_ref-60"><a href="#cite_note-60">[60]</a></sup><sup id="cite_ref-61"><a href="#cite_note-61">[61]</a></sup> <a href="/wikipedia/en/Caja_project" title="Caja project">Caja</a> is another project for safe embedding and isolation of third-party JavaScript and HTML.
+  </p><p><a href="/wikipedia/en/Content_Security_Policy" title="Content Security Policy">Content Security Policy</a> is the main intended method of ensuring that only trusted code is executed on a Web page.
+  </p>
+   
+  <h3 id="cross-site_vulnerabilities">Cross-site vulnerabilities</h3>
+   
+  <p>A common JavaScript-related security problem is <a href="/wikipedia/en/Cross-site_scripting" title="Cross-site scripting">cross-site scripting</a> (XSS), a violation of the <a href="/wikipedia/en/Same-origin_policy" title="Same-origin policy">same-origin policy</a>. XSS vulnerabilities occur when an attacker is able to cause a target Web site, such as an online banking website, to include a malicious script in the webpage presented to a victim. The script in this example can then access the banking application with the privileges of the victim, potentially disclosing secret information or transferring money without the victim's authorization. A solution to XSS vulnerabilities is to use <i>HTML escaping</i> whenever displaying untrusted data.
+  </p><p>Some browsers include partial protection against <i>reflected</i> XSS attacks, in which the attacker provides a URL including malicious script. However, even users of those browsers are vulnerable to other XSS attacks, such as those where the malicious code is stored in a database. Only correct design of Web applications on the server side can fully prevent XSS.
+  </p><p>XSS vulnerabilities can also occur because of implementation mistakes by browser authors.<sup id="cite_ref-62"><a href="#cite_note-62">[62]</a></sup>
+  </p><p>Another cross-site vulnerability is <a href="/wikipedia/en/Cross-site_request_forgery" title="Cross-site request forgery">cross-site request forgery</a> (CSRF). In CSRF, code on an attacker's site tricks the victim's browser into taking actions the user did not intend at a target site (like transferring money at a bank). When target sites rely solely on cookies for request authentication, requests originating from code on the attacker's site can carry the same valid login credentials of the initiating user. In general, the solution to CSRF is to require an authentication value in a hidden form field, and not only in the cookies, to authenticate any request that might have lasting effects. Checking the HTTP Referrer header can also help.
+  </p><p>"JavaScript hijacking" is a type of CSRF attack in which a <code>&lt;script&gt;</code> tag on an attacker's site exploits a page on the victim's site that returns private information such as <a href="/wikipedia/en/JSON" title="JSON">JSON</a> or JavaScript. Possible solutions include:
+  </p>
+  <ul><li>requiring an authentication token in the <a href="/wikipedia/en/POST_(HTTP)" title="POST (HTTP)">POST</a> and <a href="/wikipedia/en/GET_(HTTP)" title="GET (HTTP)">GET</a> parameters for any response that returns private information.</li></ul>
+  <h3 id="misplaced_trust_in_the_client">Misplaced trust in the client</h3>
+  <p>Developers of client-server applications must recognize that untrusted clients may be under the control of attackers. The application author cannot assume that their JavaScript code will run as intended (or at all) because any secret embedded in the code could be extracted by a determined adversary. Some implications are:
+  </p>
+  <ul><li>Web site authors cannot perfectly conceal how their JavaScript operates because the raw source code must be sent to the client. The code can be <a href="/wikipedia/en/Obfuscated_code" title="Obfuscated code">obfuscated</a>, but obfuscation can be reverse-engineered.</li>
+  <li>JavaScript form validation only provides convenience for users, not security. If a site verifies that the user agreed to its terms of service, or filters invalid characters out of fields that should only contain numbers, it must do so on the server, not only the client.</li>
+  <li>Scripts can be selectively disabled, so JavaScript cannot be relied on to prevent operations such as right-clicking on an image to save it.<sup id="cite_ref-63"><a href="#cite_note-63">[63]</a></sup></li>
+  <li>It is considered very bad practice to embed sensitive information such as passwords in JavaScript because it can be extracted by an attacker.<sup id="cite_ref-64"><a href="#cite_note-64">[64]</a></sup></li></ul>
+  <h3 id="misplaced_trust_in_developers">Misplaced trust in developers</h3>
+  <p>Package management systems such as <a href="/wikipedia/en/Npm_(software)" title="Npm (software)">npm</a> and Bower are popular with JavaScript developers. Such systems allow a developer to easily manage their program's dependencies upon other developer's program libraries. Developers trust that the maintainers of the libraries will keep them secure and up to date, but that is not always the case. A vulnerability has emerged because of this blind trust. Relied-upon libraries can have new releases that cause bugs or vulnerabilities to appear in all programs that rely upon the libraries. Inversely, a library can go unpatched with known vulnerabilities out in the wild. In a study done looking over a sample of 133k websites, researchers found 37% of the websites included a library with at least one known vulnerability.<sup id="cite_ref-jslibs_65-0"><a href="#cite_note-jslibs-65">[65]</a></sup> "The median lag between the oldest library version used on each website and the newest available version of that library is 1,177 days in ALEXA, and development of some libraries still in active use ceased years ago."<sup id="cite_ref-jslibs_65-1"><a href="#cite_note-jslibs-65">[65]</a></sup> Another possibility is that the maintainer of a library may remove the library entirely. This occurred in March 2016 when Azer Koçulu removed his repository from <a href="/wikipedia/en/Npm_(software)" title="Npm (software)">npm</a>. This caused all tens of thousands of programs and websites depending upon his libraries to break.<sup id="cite_ref-66"><a href="#cite_note-66">[66]</a></sup><sup id="cite_ref-67"><a href="#cite_note-67">[67]</a></sup>
+  </p>
+  <h3 id="browser_and_plugin_coding_errors">Browser and plugin coding errors</h3>
+  <p>JavaScript provides an interface to a wide range of browser capabilities, some of which may have flaws such as <a href="/wikipedia/en/Buffer_overflow" title="Buffer overflow">buffer overflows</a>. These flaws can allow attackers to write scripts that would run any code they wish on the user's system. This code is not by any means limited to another JavaScript application. For example, a buffer overrun exploit can allow an attacker to gain access to the operating system's <a href="/wikipedia/en/API" title="API">API</a> with superuser privileges.
+  </p><p>These flaws have affected major browsers including Firefox,<sup id="cite_ref-68"><a href="#cite_note-68">[68]</a></sup> Internet Explorer,<sup id="cite_ref-69"><a href="#cite_note-69">[69]</a></sup> and Safari.<sup id="cite_ref-70"><a href="#cite_note-70">[70]</a></sup>
+  </p><p>Plugins, such as video players, <a href="/wikipedia/en/Adobe_Flash#Flash_client_security" title="Adobe Flash">Adobe Flash</a>, and the wide range of <a href="/wikipedia/en/ActiveX" title="ActiveX">ActiveX</a> controls enabled by default in Microsoft Internet Explorer, may also have flaws exploitable via JavaScript (such flaws have been exploited in the past).<sup id="cite_ref-71"><a href="#cite_note-71">[71]</a></sup><sup id="cite_ref-72"><a href="#cite_note-72">[72]</a></sup>
+  </p><p>In Windows Vista, Microsoft has attempted to contain the risks of bugs such as buffer overflows by running the Internet Explorer process with limited privileges.<sup id="cite_ref-73"><a href="#cite_note-73">[73]</a></sup> <a href="/wikipedia/en/Google_Chrome" title="Google Chrome">Google Chrome</a> similarly confines its page renderers to their own "sandbox".
+  </p>
+  <h3 id="sandbox_implementation_errors">Sandbox implementation errors</h3>
+  <p>Web browsers are capable of running JavaScript outside the sandbox, with the privileges necessary to, for example, create or delete files. Such privileges are not intended to be granted to code from the Web.
+  </p><p>Incorrectly granting privileges to JavaScript from the Web has played a role in vulnerabilities in both Internet Explorer<sup id="cite_ref-74"><a href="#cite_note-74">[74]</a></sup> and Firefox.<sup id="cite_ref-75"><a href="#cite_note-75">[75]</a></sup> In Windows XP Service Pack 2, Microsoft demoted JScript's privileges in Internet Explorer.<sup id="cite_ref-76"><a href="#cite_note-76">[76]</a></sup>
+  </p><p><a href="/wikipedia/en/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a> allows JavaScript source files on a computer's hard drive to be launched as general-purpose, non-sandboxed programs (see: <a href="/wikipedia/en/Windows_Script_Host" title="Windows Script Host">Windows Script Host</a>). This makes JavaScript (like <a href="/wikipedia/en/VBScript" title="VBScript">VBScript</a>) a theoretically viable vector for a <a href="/wikipedia/en/Trojan_horse_(computing)" title="Trojan horse (computing)">Trojan horse</a>, although JavaScript Trojan horses are uncommon in practice.<sup id="cite_ref-77"><a href="#cite_note-77">[77]</a></sup><sup>[<i><a href="/wiki/Wikipedia-Verifiability" title="Wikipedia:Verifiability">failed verification</a></i>]</sup>
+  </p>
+  <h3 id="hardware_vulnerabilities">Hardware vulnerabilities</h3>
+  <p>In 2015, a JavaScript-based proof-of-concept implementation of a <a href="/wikipedia/en/Rowhammer" title="Rowhammer">rowhammer</a> attack was described in a paper by security researchers.<sup id="cite_ref-78"><a href="#cite_note-78">[78]</a></sup><sup id="cite_ref-79"><a href="#cite_note-79">[79]</a></sup><sup id="cite_ref-80"><a href="#cite_note-80">[80]</a></sup><sup id="cite_ref-81"><a href="#cite_note-81">[81]</a></sup>
+  </p><p>In 2017, a JavaScript-based attack via browser was demonstrated that could bypass <a href="/wikipedia/en/Address_space_layout_randomization" title="Address space layout randomization">ASLR</a>. It's called "ASLR⊕Cache" or AnC.<sup id="cite_ref-82"><a href="#cite_note-82">[82]</a></sup><sup id="cite_ref-83"><a href="#cite_note-83">[83]</a></sup>
+  </p>
+  <h2 id="development_tools">Development tools</h2>
+  <p>Important tools have evolved with the language.
+  </p>
+  <ul><li>Every major web browser has built-in <a href="/wikipedia/en/Web_development_tools" title="Web development tools">web development tools</a>, including a JavaScript <a href="/wikipedia/en/Debugger" title="Debugger">debugger</a>.</li></ul>
+  <ul><li><a href="/wikipedia/en/Static_program_analysis" title="Static program analysis">Static program analysis</a> tools, such as <a href="/wikipedia/en/ESLint" title="ESLint">ESLint</a> and <a href="/wikipedia/en/JSLint" title="JSLint">JSLint</a>, scan JavaScript code for conformance to a set of standards and guidelines.</li></ul>
+  <ul><li>Some browsers have built-in <a href="/wikipedia/en/Profiling_(computer_programming)" title="Profiling (computer programming)">profilers</a>. Stand-alone profiling libraries have also been created, such as benchmark.js and jsbench.<sup id="cite_ref-84"><a href="#cite_note-84">[84]</a></sup><sup id="cite_ref-auto1_85-0"><a href="#cite_note-auto1-85">[85]</a></sup></li></ul>
+  <ul><li>Many <a href="/wikipedia/en/Text_editor" title="Text editor">text editors</a> have syntax highlighting support for JavaScript code.</li></ul>
+  <h2 id="related_technologies">Related technologies</h2>
+  <h3 id="java">Java</h3>
+  <p>A common misconception is that JavaScript is similar or closely related to <a href="/wikipedia/en/Java_(programming_language)" title="Java (programming language)">Java</a>. It is true that both have a C-like syntax (the C language being their most immediate common ancestor language). They also are both typically <a href="/wikipedia/en/Sandbox_(computer_security)" title="Sandbox (computer security)">sandboxed</a> (when used inside a browser), and JavaScript was designed with Java's syntax and standard library in mind. In particular, all Java keywords were reserved in original JavaScript, JavaScript's standard library follows Java's naming conventions, and JavaScript's <code>Math</code> and <code>Date</code> objects are based on classes from Java 1.0,<sup id="cite_ref-popularity_86-0"><a href="#cite_note-popularity-86">[86]</a></sup> but the similarities end there.
+  </p><p><a href="/wikipedia/en/Java_(programming_language)" title="Java (programming language)">Java</a> and JavaScript both first appeared in 1995, but Java was developed by <a href="/wikipedia/en/James_Gosling" title="James Gosling">James Gosling</a> of Sun Microsystems, and JavaScript by <a href="/wikipedia/en/Brendan_Eich" title="Brendan Eich">Brendan Eich</a> of Netscape Communications.
+  </p><p>The differences between the two languages are more prominent than their similarities. Java has <a href="/wikipedia/en/Static_typing" title="Static typing">static typing</a>, while JavaScript's typing is <a href="/wikipedia/en/Dynamic_typing" title="Dynamic typing">dynamic</a>. Java is loaded from compiled bytecode, while JavaScript is loaded as human-readable source code. Java's objects are <a href="/wikipedia/en/Class-based_programming" title="Class-based programming">class-based</a>, while JavaScript's are <a href="/wikipedia/en/Prototype-based_programming" title="Prototype-based programming">prototype-based</a>. Finally, Java did not support functional programming until Java 8, while JavaScript has done so from the beginning, being influenced by <a href="/wikipedia/en/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a>.
+  </p>
+  <h3 id="json">JSON</h3>
+  <p><a href="/wikipedia/en/JSON" title="JSON">JSON</a>, or JavaScript Object Notation, is a general-purpose data interchange format that is defined as a subset of JavaScript's object literal syntax.
+  </p>
+  <h3 id="webassembly">WebAssembly</h3>
+  <p>Since 2017, web browsers have supported <a href="/wikipedia/en/WebAssembly" title="WebAssembly">WebAssembly</a>, a binary format that enables a <a href="/wikipedia/en/JavaScript_engine" title="JavaScript engine">JavaScript engine</a> to execute performance-critical portions of <a href="/wikipedia/en/Web_page" title="Web page">web page</a> scripts close to native speed.<sup id="cite_ref-87"><a href="#cite_note-87">[87]</a></sup> WebAssembly code runs in the same <a href="/wikipedia/en/Sandbox_(computer_security)" title="Sandbox (computer security)">sandbox</a> as regular JavaScript code.
+  </p><p><a href="/wikipedia/en/Asm.js" title="Asm.js">asm.js</a> is a subset of JavaScript that served as the forerunner of WebAssembly.<sup id="cite_ref-88"><a href="#cite_note-88">[88]</a></sup>
+  </p>
+  <h3 id="transpilers">Transpilers</h3>
+  <p>JavaScript is the dominant client-side language of the Web, and many websites are script-heavy. Thus <a href="/wikipedia/en/Transpiler" title="Transpiler">transpilers</a> have been created to convert code written in other languages, which can aid the development process.<sup id="cite_ref-transpilers_24-1"><a href="#cite_note-transpilers-24">[24]</a></sup>
+  </p>
+  <h2 id="references">References</h2>
+  <div>
+  <ol>
+  <li id="cite_note-press_release-1">^ <a href="#cite_ref-press_release_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-press_release_1-1"><sup><i><b>b</b></i></sup></a> <a rel="nofollow" href="https://web.archive.org/web/20070916144913/http://wp.netscape.com/newsref/pr/newsrelease67.html">Press release announcing JavaScript</a>, "Netscape and Sun announce JavaScript", PR Newswire, December 4, 1995
+  </li>
+  <li id="cite_note-auto-2"><b><a href="#cite_ref-auto_2-0">^</a></b> <cite><a rel="nofollow" href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">"Standard ECMA-262"</a>. Ecma International. 2017-07-03.</cite>
+  </li>
+  <li id="cite_note-node.js_ECMAScript_Modules_Specification-3"><b><a href="#cite_ref-node.js_ECMAScript_Modules_Specification_3-0">^</a></b> <cite><a rel="nofollow" href="https://github.com/nodejs/node-eps/blob/master/002-es-modules.md">"nodejs/node-eps"</a>. <i>GitHub</i>.</cite>
+  </li>
+  <li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <cite><a rel="nofollow" href="https://www.youtube.com/watch?v=1EyRscXrehw">"Brendan Eich: An Introduction to JavaScript, JSConf 2010"</a>. p. 22m. Retrieved November 25, 2019. <q>Eich: "function", eight letters, I was influenced by AWK.</q></cite>
+  </li>
+  <li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <cite><a rel="nofollow" href="https://books.google.com/books?id=nneBa6-mWfgC&amp;pg=PA141&amp;lpg=PA141&amp;dq=The+immediate+concern+at+Netscape+was+it+must+look+like+Java.&amp;source=bl&amp;ots=gGvuIcRU5u&amp;sig=OGPam0PUoNHEn9DA3OYrbWpQXX8&amp;hl=en&amp;sa=X&amp;ved=2ahUKEwi53LL6nbvfAhUK7YMKHUX3CgIQ6AEwAHoECAUQAQ#v=onepage&amp;q=The%20immediate%20concern%20at%20Netscape%20was%20it%20must%20look%20like%20Java.&amp;f=false">""Coders at Work: Reflections on the Craft of Programming""</a>. Retrieved December 25, 2018. <q>Eich: The immediate concern at Netscape was it must look like Java.</q></cite>
+  </li>
+  <li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <cite><a rel="nofollow" href="http://dictionary.reference.com/browse/javascript">"JavaScript"</a>. <i>Collins English Dictionary – Complete &amp; Unabridged 2012 Digital Edition</i>. William Collins Sons &amp; Co. 2012. Retrieved 21 August 2015.</cite>
+  </li>
+  <li id="cite_note-tc39-7"><b><a href="#cite_ref-tc39_7-0">^</a></b> <cite><a rel="nofollow" href="https://tc39.es/ecma262/#sec-overview">"ECMAScript® 2020 Language Specification"</a>.</cite>
+  </li>
+  <li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <cite>Flanagan, David. <i>JavaScript - The definitive guide</i> (6 ed.). p. 1. <q>JavaScript is part of the triad of technologies that all Web developers must learn: HTML to specify the content of web pages, CSS to specify the presentation of web pages and JavaScript to specify the behaviour of web pages.</q></cite>
+  </li>
+  <li id="cite_note-deployedstats-9">^ <a href="#cite_ref-deployedstats_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-deployedstats_9-1"><sup><i><b>b</b></i></sup></a> <cite><a rel="nofollow" href="https://w3techs.com/technologies/details/cp-javascript/">"Usage statistics of JavaScript as client-side programming language on websites"</a>. <i>w3techs.com</i>.</cite>
+  </li>
+  <li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <cite><a rel="nofollow" href="https://www.bloomberg.com/video/67758394">"Bloomberg Game Changers: Marc Andreessen"</a>. Bloomberg. 17 March 2011. Retrieved 2011-12-07.</cite>
+  </li>
+  <li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <cite>Enzer, Larry (31 August 2018). <a rel="nofollow" href="https://www.mwdwebsites.com/nj-web-design-web-browsers.html">"The Evolution of the Web Browsers"</a>. <i>Monmouth Web Developers</i>. Retrieved 31 August 2018.</cite>
+  </li>
+  <li id="cite_note-origin-12">^ <a href="#cite_ref-origin_12-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-origin_12-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-origin_12-2"><sup><i><b>c</b></i></sup></a> <cite><a rel="nofollow" href="http://speakingjs.com/es5/ch04.html">"Chapter 4. How JavaScript Was Created"</a>. <i>speakingjs.com</i>.</cite>
+  </li>
+  <li id="cite_note-techvision-13"><b><a href="#cite_ref-techvision_13-0">^</a></b> <cite><a rel="nofollow" href="https://web.archive.org/web/20080208124612/http://wp.netscape.com/comprod/columns/techvision/innovators_be.html">"TechVision: Innovators of the Net: Brendan Eich and JavaScript"</a>. web.archive.org. Archived from <a rel="nofollow" href="http://wp.netscape.com/comprod/columns/techvision/innovators_be.html">the original</a> on 2008-02-08.</cite>
+  </li>
+  <li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <cite id="CITEREFFin_JS2016">Fin JS (2016-06-17), <a rel="nofollow" href="https://www.youtube.com/watch?v=XOmhtfTrRxc&amp;t=2m5s"><i>Brendan Eich - CEO of Brave</i></a>, retrieved 2018-02-07</cite>
+  </li>
+  <li id="cite_note-O'Reilly-2001-15">^ <a href="#cite_ref-O'Reilly-2001_15-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-O'Reilly-2001_15-1"><sup><i><b>b</b></i></sup></a> <cite>Champeon, Steve (6 April 2001). <a rel="nofollow" href="https://web.archive.org/web/20160719020828/http://archive.oreilly.com/pub/a/javascript/2001/04/06/js_history.html">"JavaScript, How Did We Get Here?"</a>. <i>oreilly.com</i>. Archived from <a rel="nofollow" href="http://archive.oreilly.com/pub/a/javascript/2001/04/06/js_history.html">the original</a> on 2016-07-19. Retrieved 16 July 2016.</cite>
+  </li>
+  <li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <cite><a rel="nofollow" href="http://news.microsoft.com/1996/05/29/microsoft-internet-explorer-3-0-beta-now-available/">"Microsoft Internet Explorer 3.0 Beta Now Available"</a>. <i>microsoft.com</i>. Microsoft. 29 May 1996. Retrieved 16 July 2016.</cite>
+  </li>
+  <li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <cite>McCracken, Harry (16 September 2010). <a rel="nofollow" href="http://www.technologizer.com/2010/09/16/the-unwelcome-return-of-best-viewed-with-internet-explorer/">"The Unwelcome Return of "Best Viewed with Internet Explorer""</a>. <i>technologizer.com</i>. Retrieved 16 July 2016.</cite>
+  </li>
+  <li id="cite_note-searchenginejournal.com-18"><b><a href="#cite_ref-searchenginejournal.com_18-0">^</a></b> <cite><a rel="nofollow" href="http://www.searchenginejournal.com/mozilla-firefox-internet-browser-market-share-gains-to-74/1082/">"Mozilla Firefox Internet Browser Market Share Gains to 7.4%"</a>. Search Engine Journal. 24 November 2004. Retrieved 2011-12-07.</cite>
+  </li>
+  <li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <cite>Weber, Tim (May 9, 2005). <a rel="nofollow" href="https://web.archive.org/web/20170925233936/http://news.bbc.co.uk/2/hi/business/4508897.stm">"The assault on software giant Microsoft"</a>. <a href="/wikipedia/en/BBC_News" title="BBC News">BBC News</a>. Archived from <a rel="nofollow" href="http://news.bbc.co.uk/1/hi/business/4508897.stm">the original</a> on September 25, 2017.</cite>
+  </li>
+  <li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <cite><a rel="nofollow" href="http://www.pcgameshardware.com/aid,687738/Big-browser-comparison-test-Internet-Explorer-vs-Firefox-Opera-Safari-and-Chrome-Update-Firefox-35-Final/Practice/">"Big browser comparison test: Internet Explorer vs. Firefox, Opera, Safari and Chrome"</a>. <i>PC Games Hardware</i>. Computec Media AG. Retrieved 2010-06-28.</cite>
+  </li>
+  <li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <cite><a rel="nofollow" href="http://lifehacker.com/5286869/lifehacker-speed-tests-safari-4-chrome-2-and-more">"Lifehacker Speed Tests: Safari 4, Chrome 2"</a>. <a href="/wikipedia/en/Lifehacker" title="Lifehacker">Lifehacker</a>. Retrieved 2010-06-28.</cite>
+  </li>
+  <li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <cite><a rel="nofollow" href="https://www.wired.com/2010/09/mozilla-asks-are-we-fast-yet/">"Mozilla asks, 'Are we fast yet?'"</a>. <i>Wired</i>. Retrieved 18 January 2019.</cite>
+  </li>
+  <li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <cite><a rel="nofollow" href="http://es6-features.org/">"ECMAScript 6: New Features: Overview and Comparison"</a>. <i>es6-features.org</i>. Retrieved 2018-03-19.</cite>
+  </li>
+  <li id="cite_note-transpilers-24">^ <a href="#cite_ref-transpilers_24-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-transpilers_24-1"><sup><i><b>b</b></i></sup></a> <cite><a rel="nofollow" href="https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS">"List of languages that compile to JS"</a>. Retrieved 6 February 2020.</cite>
+  </li>
+  <li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <cite><a rel="nofollow" href="http://tarr.uspto.gov/servlet/tarr?regser=serial&amp;entry=75026640">"USPTO Copyright entry #75026640"</a>. USPTO.</cite>
+  </li>
+  <li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <cite><a rel="nofollow" href="https://web.archive.org/web/20100528154600/http://www.sun.com/suntrademarks/">"Sun Trademarks"</a>. Sun Microsystems. Archived from <a rel="nofollow" href="http://www.sun.com/suntrademarks/">the original</a> on 28 May 2010. Retrieved 2007-11-08.</cite>
+  </li>
+  <li id="cite_note-lib_usage-27">^ <a href="#cite_ref-lib_usage_27-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-lib_usage_27-1"><sup><i><b>b</b></i></sup></a> <cite><a rel="nofollow" href="https://w3techs.com/technologies/overview/javascript_library">"Usage statistics of JavaScript libraries for websites"</a>. <i>w3techs.com</i>.</cite>
+  </li>
+  <li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <cite>Netscape Communications Corporation (11 December 1998). <a rel="nofollow" href="http://docs.oracle.com/cd/E19957-01/816-6411-10/contents.htm">"Server-Side JavaScript Guide"</a>. <i>oracle.com</i>. Netscape Communications Corporation. Retrieved 2016-07-16.</cite>
+  </li>
+  <li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <cite>Clinick, Andrew (July 14, 2000). <a rel="nofollow" href="https://msdn.microsoft.com/en-us/library/ms974588.aspx">"Introducing JScript .NET"</a>. <i>Microsoft Developer Network</i>. Microsoft. Retrieved 10 April 2018. <q>[S]ince the 1996 introduction of JScript version 1.0 ... we've been seeing a steady increase in the usage of JScript on the server—particularly in Active Server Pages (ASP)</q></cite>
+  </li>
+  <li id="cite_note-2009server-30">^ <a href="#cite_ref-2009server_30-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-2009server_30-1"><sup><i><b>b</b></i></sup></a> <cite>Mahemoff, Michael (17 December 2009). <a rel="nofollow" href="http://readwrite.com/2009/12/17/server-side_javascript_back_with_a_vengeance/">"Server-Side JavaScript, Back with a Vengeance"</a>. <i>readwrite.com</i>. Retrieved 2016-07-16.</cite>
+  </li>
+  <li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <cite><a rel="nofollow" href="https://www.adobe.com/devnet/acrobat/javascript.html">"JavaScript for Acrobat"</a>. Retrieved 2009-08-18.</cite>
+  </li>
+  <li id="cite_note-32"><b><a href="#cite_ref-32">^</a></b> <cite><a rel="nofollow" href="http://treitter.livejournal.com/14871.html">"Answering the question: "How do I develop an app for GNOME?""</a>.</cite>
+  </li>
+  <li id="cite_note-Flanagan2006-33"><b><a href="#cite_ref-Flanagan2006_33-0">^</a></b> <cite id="CITEREFFlanagan2006">Flanagan, David (17 August 2006). <a rel="nofollow" href="https://books.google.com/books?id=2weL0iAfrEMC"><i>JavaScript: The Definitive Guide: The Definitive Guide</i></a>. "O'Reilly Media, Inc.". p. 16. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 978-0-596-55447-7.</cite>
+  </li>
+  <li id="cite_note-34"><b><a href="#cite_ref-34">^</a></b> <cite><a rel="nofollow" href="https://www.destroyallsoftware.com/talks/wat">"Wat"</a>. <i>www.destroyallsoftware.com</i>. Retrieved 2019-10-28.</cite>
+  </li>
+  <li id="cite_note-35"><b><a href="#cite_ref-35">^</a></b> <cite><a rel="nofollow" href="https://dev.to/mkrl/javascript-quirks-in-one-image-from-the-internet-52m7">"JavaScript quirks in one image from the Internet"</a>. <i>The DEV Community</i>. Retrieved 2019-10-28.</cite>
+  </li>
+  <li id="cite_note-36"><b><a href="#cite_ref-36">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">"JavaScript data types and data structures - JavaScript | MDN"</a>. <i>Developer.mozilla.org</i>. 2017-02-16. Retrieved 2017-02-24.</cite>
+  </li>
+  <li id="cite_note-FOOTNOTEFlanagan2006176–178-37"><b><a href="#cite_ref-FOOTNOTEFlanagan2006176%E2%80%93178_37-0">^</a></b> <a href="#CITEREFFlanagan2006">Flanagan 2006</a>, pp. 176–178.
+  </li>
+  <li id="cite_note-38"><b><a href="#cite_ref-38">^</a></b> <cite>Crockford, Douglas. <a rel="nofollow" href="http://javascript.crockford.com/prototypal.html">"Prototypal Inheritance in JavaScript"</a>. Retrieved 20 August 2013.</cite>
+  </li>
+  <li id="cite_note-39"><b><a href="#cite_ref-39">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Inheritance_and_the_prototype_chain">"Inheritance and the prototype chain"</a>. <i>Mozilla Developer Network</i>. <a href="/wikipedia/en/Mozilla" title="Mozilla">Mozilla</a>. Retrieved 6 April 2013.</cite>
+  </li>
+  <li id="cite_note-40"><b><a href="#cite_ref-40">^</a></b> <cite>Herman, David (2013). <i>Effective JavaScript</i>. Addison-Wesley. p. 83. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 978-0-321-81218-6.</cite>
+  </li>
+  <li id="cite_note-41"><b><a href="#cite_ref-41">^</a></b> <cite>Haverbeke, Marijn (2011). <i>Eloquent JavaScript</i>. No Starch Press. pp. 95–97. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 978-1-59327-282-1.</cite>
+  </li>
+  <li id="cite_note-42"><b><a href="#cite_ref-42">^</a></b> <cite>Katz, Yehuda. <a rel="nofollow" href="http://yehudakatz.com/2011/08/12/understanding-prototypes-in-javascript/">"Understanding "Prototypes" in JavaScript"</a>. Retrieved 6 April 2013.</cite>
+  </li>
+  <li id="cite_note-43"><b><a href="#cite_ref-43">^</a></b> <cite>Herman, David (2013). <i>Effective JavaScript</i>. Addison-Wesley. pp. 125–127. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 978-0-321-81218-6.</cite>
+  </li>
+  <li id="cite_note-44"><b><a href="#cite_ref-44">^</a></b> <cite><a rel="nofollow" href="https://es5.github.com/#x15.3.4-toc">"Properties of the Function Object"</a>. Es5.github.com. Retrieved 2013-05-26.</cite>
+  </li>
+  <li id="cite_note-FOOTNOTEFlanagan2006141-45"><b><a href="#cite_ref-FOOTNOTEFlanagan2006141_45-0">^</a></b> <a href="#CITEREFFlanagan2006">Flanagan 2006</a>, p. 141.
+  </li>
+  <li id="cite_note-46"><b><a href="#cite_ref-46">^</a></b> <a rel="nofollow" href="http://peterseliger.blogspot.de/2014/04/the-many-talents-of-javascript.html#the-many-talents-of-javascript-for-generalizing-role-oriented-programming-approaches-like-traits-and-mixins">The many talents of JavaScript for generalizing Role-Oriented Programming approaches like Traits and Mixins</a>, Peterseliger.blogpsot.de, April 11, 2014.
+  </li>
+  <li id="cite_note-47"><b><a href="#cite_ref-47">^</a></b> <a rel="nofollow" href="http://soft.vub.ac.be/~tvcutsem/traitsjs/">Traits for JavaScript</a>, 2010.
+  </li>
+  <li id="cite_note-48"><b><a href="#cite_ref-48">^</a></b> <cite><a rel="nofollow" href="https://cocktailjs.github.io/">"Home | CocktailJS"</a>. <i>Cocktailjs.github.io</i>. Retrieved 2017-02-24.</cite>
+  </li>
+  <li id="cite_note-49"><b><a href="#cite_ref-49">^</a></b> Angus Croll, <a rel="nofollow" href="http://javascriptweblog.wordpress.com/2011/05/31/a-fresh-look-at-javascript-mixins/">A fresh look at JavaScript Mixins</a>, published May 31, 2011.
+  </li>
+  <li id="cite_note-50"><b><a href="#cite_ref-50">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop">"Concurrency model and Event Loop"</a>. <i>Mozilla Developer Network</i>. Retrieved 2015-08-28.</cite>
+  </li>
+  <li id="cite_note-51"><b><a href="#cite_ref-51">^</a></b> <cite>Haverbeke, Marijn (2011). <i>Eloquent JavaScript</i>. No Starch Press. pp. 139–149. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> 978-1-59327-282-1.</cite>
+  </li>
+  <li id="cite_note-52"><b><a href="#cite_ref-52">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Archive/Web/E4X">"E4X – Archive of obsolete content | MDN"</a>. <i>Mozilla Developer Network</i>. Mozilla Foundation. Feb 14, 2014. Retrieved 13 July 2014.</cite>
+  </li>
+  <li id="cite_note-53"><b><a href="#cite_ref-53">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/var">"var – JavaScript – MDN"</a>. The <a href="/wikipedia/en/Mozilla_Developer_Network" title="Mozilla Developer Network">Mozilla Developer Network</a>. Retrieved 22 December 2012.</cite>
+  </li>
+  <li id="cite_note-moz_let-54"><b><a href="#cite_ref-moz_let_54-0">^</a></b> <cite id="moz_let"><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">"let"</a>. <i>MDN web docs</i>. Mozilla. Retrieved 27 June 2018.</cite>
+  </li>
+  <li id="cite_note-moz_const-55"><b><a href="#cite_ref-moz_const_55-0">^</a></b> <cite id="moz_const"><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">"const"</a>. <i>MDN web docs</i>. Mozilla. Retrieved 27 June 2018.</cite>
+  </li>
+  <li id="cite_note-56"><b><a href="#cite_ref-56">^</a></b> <cite><a rel="nofollow" href="http://www.ecma-international.org/ecma-262/5.1/#sec-4">"ECMAScript Language Specification – ECMA-262 Edition 5.1"</a>. <a href="/wikipedia/en/Ecma_International" title="Ecma International">Ecma International</a>. Retrieved 22 December 2012.</cite>
+  </li>
+  <li id="cite_note-57"><b><a href="#cite_ref-57">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/DOM/console">"console"</a>. <i>Mozilla Developer Network</i>. <a href="/wikipedia/en/Mozilla" title="Mozilla">Mozilla</a>. Retrieved 6 April 2013.</cite>
+  </li>
+  <li id="cite_note-58"><b><a href="#cite_ref-58">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments">"arguments"</a>. <i>Mozilla Developer Network</i>. <a href="/wikipedia/en/Mozilla" title="Mozilla">Mozilla</a>. Retrieved 6 April 2013.</cite>
+  </li>
+  <li id="cite_note-59"><b><a href="#cite_ref-59">^</a></b> <cite><a rel="nofollow" href="https://learnersbucket.com/tutorials/es6/es6-modules/">"Import &amp; Export Modules in javascript"</a>. <i>Learnersbucket.com</i>. Retrieved 23 April 2019.</cite>
+  </li>
+  <li id="cite_note-60"><b><a href="#cite_ref-60">^</a></b> <cite><a rel="nofollow" href="http://www.adsafe.org/">"Making JavaScript Safe for Advertising"</a>. ADsafe. Retrieved 2013-05-26.</cite>
+  </li>
+  <li id="cite_note-61"><b><a href="#cite_ref-61">^</a></b> <cite><a rel="nofollow" href="https://code.google.com/p/es-lab/wiki/SecureEcmaScript">"Secure ECMA Script (SES)"</a>. Code.google.com. Retrieved 2013-05-26.</cite>
+  </li>
+  <li id="cite_note-62"><b><a href="#cite_ref-62">^</a></b> <cite><a rel="nofollow" href="http://www.mozillazine.org/talkback.html?article=4392">"Mozilla Cross-Site Scripting Vulnerability Reported and Fixed - MozillaZine Talkback"</a>. <i>Mozillazine.org</i>. Retrieved 2017-02-24.</cite>
+  </li>
+  <li id="cite_note-63"><b><a href="#cite_ref-63">^</a></b> <cite><a rel="nofollow" href="https://web.archive.org/web/20110809195359/http://blog.anta.net/2008/06/17/right-click-%E2%80%9Cprotection%E2%80%9D-forget-about-it/">"Right-click "protection"? Forget about it"</a>. 2008-06-17. <a href="/wikipedia/en/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a> <a rel="nofollow" href="//www.worldcat.org/issn/1797-1993">1797-1993</a>. Archived from <a rel="nofollow" href="http://blog.anta.net/2008/06/17/right-click-%e2%80%9cprotection%e2%80%9d-forget-about-it/">the original</a> on 2011-08-09. Retrieved 2008-06-17.</cite> Cite journal requires <code>|journal=</code> 
+  </li>
+  <li id="cite_note-64"><b><a href="#cite_ref-64">^</a></b> <cite>Rehorik, Jan. <a rel="nofollow" href="https://www.serviceobjects.com/blog/why-you-should-never-put-sensitive-data-in-your-javascript/">"Why You Should Never Put Sensitive Data in Your JavaScript"</a>. <i>ServiceObjects Blog</i>. ServiceObjects. Retrieved 3 June 2019.</cite>
+  </li>
+  <li id="cite_note-jslibs-65">^ <a href="#cite_ref-jslibs_65-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-jslibs_65-1"><sup><i><b>b</b></i></sup></a> 
+  <cite><a rel="nofollow" href="https://web.archive.org/web/20170329045344/http://www.ccs.neu.edu/home/arshad/publications/ndss2017jslibs.pdf">"Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web"</a> (PDF). 2016-12-21. Archived from <a rel="nofollow" href="http://www.ccs.neu.edu/home/arshad/publications/ndss2017jslibs.pdf">the original</a> (PDF) on 2017-03-29. Retrieved 2017-02-22.</cite> Cite journal requires <code>|journal=</code> 
+  </li>
+  <li id="cite_note-66"><b><a href="#cite_ref-66">^</a></b> Quartz, <a rel="nofollow" href="https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/">How one programmer broke the internet by deleting a tiny piece of code</a>
+  </li>
+  <li id="cite_note-67"><b><a href="#cite_ref-67">^</a></b> SC Magazine UK, <a rel="nofollow" href="https://www.scmagazineuk.com/developers-11-lines-of-deleted-code-breaks-the-internet/article/532050/">Developer's 11 lines of deleted code 'breaks the internet'</a>
+  </li>
+  <li id="cite_note-68"><b><a href="#cite_ref-68">^</a></b> Mozilla Corporation, <a rel="nofollow" href="https://www.mozilla.org/security/announce/2006/mfsa2006-38.html">Buffer overflow in crypto.signText()</a>
+  </li>
+  <li id="cite_note-69"><b><a href="#cite_ref-69">^</a></b> <cite>Festa, Paul (August 19, 1998). <a rel="nofollow" href="https://web.archive.org/web/20021225190522/http://news.com.com/2100-1001-214620.html">"Buffer-overflow bug in IE"</a>. <i><a href="/wikipedia/en/CNET" title="CNET">CNET</a></i>. Archived from <a rel="nofollow" href="http://news.com.com/2100-1001-214620.html">the original</a> on December 25, 2002.</cite>
+  </li>
+  <li id="cite_note-70"><b><a href="#cite_ref-70">^</a></b> SecurityTracker.com, <a rel="nofollow" href="http://securitytracker.com/alerts/2006/Mar/1015713.html">Apple Safari JavaScript Buffer Overflow Lets Remote Users Execute Arbitrary Code and HTTP Redirect Bug Lets Remote Users Access Files</a>
+  </li>
+  <li id="cite_note-71"><b><a href="#cite_ref-71">^</a></b> SecurityFocus, <a rel="nofollow" href="http://www.securityfocus.com/bid/19030/info">Microsoft WebViewFolderIcon ActiveX Control Buffer Overflow Vulnerability</a>
+  </li>
+  <li id="cite_note-72"><b><a href="#cite_ref-72">^</a></b> Fusion Authority, <a rel="nofollow" href="http://www.fusionauthority.com/security/3234-macromedia-flash-activex-buffer-overflow.htm">Macromedia Flash ActiveX Buffer Overflow</a> <a rel="nofollow" href="https://web.archive.org/web/20110813160055/http://www.fusionauthority.com/security/3234-macromedia-flash-activex-buffer-overflow.htm">Archived</a> 2011-08-13 at the <a href="/wikipedia/en/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>
+  </li>
+  <li id="cite_note-73"><b><a href="#cite_ref-73">^</a></b> <cite><a rel="nofollow" href="http://blogs.msdn.com/ie/archive/2006/02/09/528963.aspx">"Protected Mode in Vista IE7 – IEBlog"</a>. <i>Blogs.msdn.com</i>. 2006-02-09. Retrieved 2017-02-24.</cite>
+  </li>
+  <li id="cite_note-74"><b><a href="#cite_ref-74">^</a></b> US CERT, <a rel="nofollow" href="https://www.kb.cert.org/vuls/id/713878">Vulnerability Note VU#713878: Microsoft Internet Explorer does not properly validate source of redirected frame</a>
+  </li>
+  <li id="cite_note-75"><b><a href="#cite_ref-75">^</a></b> Mozilla Foundation, <a rel="nofollow" href="https://www.mozilla.org/security/announce/2005/mfsa2005-41.html">Mozilla Foundation Security Advisory 2005–41: Privilege escalation via DOM property overrides</a>
+  </li>
+  <li id="cite_note-76"><b><a href="#cite_ref-76">^</a></b> Microsoft Corporation, <a rel="nofollow" href="https://technet.microsoft.com/en-us/library/bb457150.aspx">Changes to Functionality in Microsoft Windows XP Service Pack 2: Part 5: Enhanced Browsing Security</a>
+  </li>
+  <li id="cite_note-77"><b><a href="#cite_ref-77">^</a></b> For one example of a rare JavaScript Trojan Horse, see Symantec Corporation, <a rel="nofollow" href="http://www.symantec.com/security_response/writeup.jsp?docid=2003-100111-0931-99">JS.Seeker.K</a>
+  </li>
+  <li id="cite_note-78"><b><a href="#cite_ref-78">^</a></b> <cite>Gruss, Daniel; Maurice, Clémentine; Mangard, Stefan (2015-07-24). "Rowhammer.js: A Remote Software-Induced Fault Attack in JavaScript". <a href="/wikipedia/en/ArXiv" title="ArXiv">arXiv</a>:<a rel="nofollow" href="//arxiv.org/abs/1507.06955">1507.06955</a> [<a rel="nofollow" href="//arxiv.org/archive/cs.CR">cs.CR</a>].</cite>
+  </li>
+  <li id="cite_note-79"><b><a href="#cite_ref-79">^</a></b> <cite>Jean-Pharuns, Alix (2015-07-30). <a rel="nofollow" href="https://motherboard.vice.com/en_us/article/9akpwz/rowhammerjs-is-the-most-ingenious-hack-ive-ever-seen">"Rowhammer.js Is the Most Ingenious Hack I've Ever Seen"</a>. Motherboard.</cite>
+  </li>
+  <li id="cite_note-80"><b><a href="#cite_ref-80">^</a></b> <cite>Goodin, Dan (2015-08-04). <a rel="nofollow" href="https://arstechnica.com/information-technology/2015/08/dram-bitflipping-exploit-for-attacking-pcs-just-add-javascript/">"DRAM 'Bitflipping' exploit for attacking PCs: Just add JavaScript"</a>. <i>Ars Technica</i>.</cite>
+  </li>
+  <li id="cite_note-81"><b><a href="#cite_ref-81">^</a></b> <cite>David Auerbach (July 28, 2015). <a rel="nofollow" href="http://www.slate.com/articles/technology/bitwise/2015/07/rowhammer_security_exploit_why_a_new_security_attack_is_truly_terrifying.html">"Rowhammer security exploit: Why a new security attack is truly terrifying"</a>. <i>slate.com</i>. Retrieved July 29, 2015.</cite>
+  </li>
+  <li id="cite_note-82"><b><a href="#cite_ref-82">^</a></b> <a rel="nofollow" href="https://www.vusec.net/projects/anc/">AnC</a> VUSec, 2017
+  </li>
+  <li id="cite_note-83"><b><a href="#cite_ref-83">^</a></b> <a rel="nofollow" href="https://arstechnica.com/security/2017/02/new-aslr-busting-javascript-is-about-to-make-drive-by-exploits-much-nastier/">New ASLR-busting JavaScript is about to make drive-by exploits much nastier</a> Ars Technica, 2017
+  </li>
+  <li id="cite_note-84"><b><a href="#cite_ref-84">^</a></b> <cite><a rel="nofollow" href="https://benchmarkjs.com/">"Benchmark.js"</a>. <i>benchmarkjs.com</i>.</cite>
+  </li>
+  <li id="cite_note-auto1-85"><b><a href="#cite_ref-auto1_85-0">^</a></b> <cite>JSBEN.CH. <a rel="nofollow" href="http://jsben.ch">"JSBEN.CH Performance Benchmarking Playground for JavaScript"</a>. <i>jsben.ch</i>.</cite>
+  </li>
+  <li id="cite_note-popularity-86"><b><a href="#cite_ref-popularity_86-0">^</a></b> <cite>Brendan Eich (3 April 2008). <a rel="nofollow" href="http://brendaneich.com/2008/04/popularity/">"Popularity"</a>. Retrieved 2012-01-19.</cite>
+  </li>
+  <li id="cite_note-87"><b><a href="#cite_ref-87">^</a></b> <cite><a rel="nofollow" href="https://visualstudiomagazine.com/articles/2017/11/06/edge-webassembly.aspx">"Edge Browser Switches WebAssembly to 'On' -- Visual Studio Magazine"</a>. <i>Visual Studio Magazine</i>.</cite>
+  </li>
+  <li id="cite_note-88"><b><a href="#cite_ref-88">^</a></b> <cite><a rel="nofollow" href="http://asmjs.org/faq.html">"frequently asked questions"</a>. asm.js. Retrieved 2014-04-13.</cite>
+  </li>
+  </ol></div>
+  <h2 id="external_links">External links</h2>
+   
+  <div id="section_SpokenWikipedia"><div><b>Listen to this article</b> (<a href="https://en.wikipedia.org/wiki/File:En-JavaScript.ogg" title="File:En-JavaScript.ogg">info/dl</a>)
+  <div><div><div><audio id="mwe_player_0" controls="" preload="none" data-durationhint="2901.0953287982" data-startoffset="0" data-mwtitle="En-JavaScript.ogg" data-mwprovider="wikimediacommons"><source src="https://upload.wikimedia.org/wikipedia/commons/4/4c/En-JavaScript.ogg" type='audio/ogg; codecs="vorbis"' data-title="Original Ogg file (67 kbps)" data-shorttitle="Ogg source" data-width="0" data-height="0" data-bandwidth="66662"><source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4c/En-JavaScript.ogg/En-JavaScript.ogg.mp3" type="audio/mpeg" data-title="MP3" data-shorttitle="MP3" data-transcodekey="mp3" data-width="0" data-height="0" data-bandwidth="121896"></audio></div></div></div>
+  </div>
+  <p><br>
+  </p>
+  <div><div><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sound-icon.svg/45px-Sound-icon.svg.png" decoding="async" title="Spoken Wikipedia" width="45" height="34" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sound-icon.svg/68px-Sound-icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sound-icon.svg/90px-Sound-icon.svg.png 2x" data-file-width="128" data-file-height="96"></div></div>
+  <div>This audio file was created from a revision of the article "JavaScript" dated 2013-08-20, and does not reflect subsequent edits to the article. (<a href="/wiki/Wikipedia-Media_help" title="Wikipedia:Media help">Audio help</a>)</div>
+  <div><b><a href="/wiki/Wikipedia-Spoken_articles" title="Wikipedia:Spoken articles">More spoken articles</a></b></div>
+  </div>
+  <ul><li><a rel="nofollow" href="https://curlie.org/Computers/Programming/Languages/JavaScript/">JavaScript</a> at <a href="/wikipedia/en/Curlie" title="Curlie">Curlie</a></li>
+  <li><a href="/wikipedia/en/Douglas_Crockford" title="Douglas Crockford">Douglas Crockford</a>'s <a rel="nofollow" href="https://www.youtube.com/playlist?list=PL62E185BB8577B63D">video lectures on JavaScript</a></li></ul>
+  <div aria-labelledby="JavaScript" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="JavaScript"><a>JavaScript</a></div></th></tr><tr><th scope="row"><a href="/wikipedia/en/Static_program_analysis" title="Static program analysis">Code analysis</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/ESLint" title="ESLint">ESLint</a></li>
+  <li><a href="/wikipedia/en/JSHint" title="JSHint">JSHint</a></li>
+  <li><a href="/wikipedia/en/JSLint" title="JSLint">JSLint</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Source-to-source_compiler" title="Source-to-source compiler">Transpilers</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/Babel_(transpiler)" title="Babel (transpiler)">Babel.js</a></li>
+  <li><a href="/wikipedia/en/CoffeeScript" title="CoffeeScript">CoffeeScript</a></li>
+  <li><a href="/wikipedia/en/LiveScript" title="LiveScript">LiveScript</a></li>
+  <li><a href="/wikipedia/en/Dart_(programming_language)" title="Dart (programming language)">Dart</a></li>
+  <li><a href="/wikipedia/en/Emscripten" title="Emscripten">Emscripten</a></li>
+  <li><a href="/wikipedia/en/Google_Closure_Compiler" title="Google Closure Compiler">Google Closure Compiler</a></li>
+  <li><a href="/wikipedia/en/Google_Web_Toolkit" title="Google Web Toolkit">Google Web Toolkit</a></li>
+  <li><a href="/wikipedia/en/Morfik" title="Morfik">Morfik</a></li>
+  <li><a href="/wikipedia/en/TypeScript" title="TypeScript">TypeScript</a></li>
+  <li><a href="/wikipedia/en/AtScript" title="AtScript">AtScript</a></li>
+  <li><a href="/wikipedia/en/Opa_(programming_language)" title="Opa (programming language)">Opa</a></li>
+  <li><a href="/wikipedia/en/Nim_(programming_language)" title="Nim (programming language)">Nim</a></li>
+  <li><a href="/wikipedia/en/Haxe" title="Haxe">Haxe</a></li>
+  <li><a href="/wikipedia/en/ClojureScript" title="ClojureScript">ClojureScript</a></li>
+  <li><a href="/wikipedia/en/WebSharper" title="WebSharper">WebSharper</a></li>
+  <li><a href="/wikipedia/en/PureScript" title="PureScript">PureScript</a></li>
+  <li><a href="/wikipedia/en/Reason_(programming_language)" title="Reason (programming language)">Reason</a></li>
+  <li><a href="/wikipedia/en/Elm_(programming_language)" title="Elm (programming language)">Elm</a></li></ul>
+  </div></td></tr><tr><th scope="row">Concepts</th><td><div>
+  <ul><li><a href="/wikipedia/en/Client-side_JavaScript" title="Client-side JavaScript">Client-side</a></li>
+  <li><a href="/wikipedia/en/JavaScript_library" title="JavaScript library">JavaScript library</a></li>
+  <li><a href="/wikipedia/en/JavaScript_syntax" title="JavaScript syntax">JavaScript syntax</a></li>
+  <li><a href="/wikipedia/en/Unobtrusive_JavaScript" title="Unobtrusive JavaScript">Unobtrusive JavaScript</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Debugger" title="Debugger">Debuggers</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/Firebug_(software)" title="Firebug (software)">Firebug</a></li>
+  <li><a href="/wikipedia/en/Komodo_IDE" title="Komodo IDE">Komodo IDE</a></li>
+  <li><a href="/wikipedia/en/Microsoft_Script_Debugger" title="Microsoft Script Debugger">Microsoft Script Debugger</a></li>
+  <li><a href="/wikipedia/en/Microsoft_Script_Editor" title="Microsoft Script Editor">Microsoft Script Editor</a></li>
+  <li><a href="/wikipedia/en/Opera_Dragonfly" title="Opera Dragonfly">Opera Dragonfly</a></li>
+  <li><a href="/wikipedia/en/Web_Inspector" title="Web Inspector">Web Inspector</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Documentation_generator" title="Documentation generator">Doc generators</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/JSDoc" title="JSDoc">JSDoc</a></li></ul>
+  </div></td></tr><tr><th scope="row">Editors (<a href="/wikipedia/en/Comparison_of_JavaScript-based_source_code_editors" title="Comparison of JavaScript-based source code editors">comparison</a>)</th><td><div>
+  <ul><li><a href="/wikipedia/en/Ace_(editor)" title="Ace (editor)">Ace</a>
+  <ul><li><a href="/wikipedia/en/Cloud9_IDE" title="Cloud9 IDE">Cloud9 IDE</a></li></ul></li>
+  <li><a href="/wikipedia/en/Atom_(text_editor)" title="Atom (text editor)">Atom</a></li>
+  <li><a href="/wikipedia/en/CodeMirror" title="CodeMirror">CodeMirror</a>
+  <ul><li><a href="/wikipedia/en/Light_Table_(software)" title="Light Table (software)">Light Table</a></li>
+  <li><a href="/wikipedia/en/Brackets_(text_editor)" title="Brackets (text editor)">Brackets</a></li></ul></li>
+  <li><a href="/wikipedia/en/Koding" title="Koding">Koding</a></li>
+  <li><a href="/wikipedia/en/PhpStorm" title="PhpStorm">PhpStorm</a></li>
+  <li><a href="/wikipedia/en/List_of_Eclipse_projects#Top-level_sub-projects" title="List of Eclipse projects">Orion</a></li>
+  <li><a href="/wikipedia/en/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Visual Studio</a>
+  <ul><li><a href="/wikipedia/en/Microsoft_Visual_Studio_Express" title="Microsoft Visual Studio Express">Visual Studio Express</a></li></ul></li>
+  <li><a href="/wikipedia/en/Visual_Studio_Code" title="Visual Studio Code">Visual Studio Code</a></li>
+  <li><a href="/wikipedia/en/Microsoft_Visual_Studio#Team_Services" title="Microsoft Visual Studio">Visual Studio Team Services</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/JavaScript_engine" title="JavaScript engine">Engines</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/Comparison_of_JavaScript_engines" title="Comparison of JavaScript engines">Comparison of engines</a>
+  <ul><li><a href="/wikipedia/en/Comparison_of_JavaScript_engines_(DOM_support)" title="Comparison of JavaScript engines (DOM support)">DOM support</a></li></ul></li>
+  <li><a href="/wikipedia/en/List_of_ECMAScript_engines" title="List of ECMAScript engines">List of ECMAScript engines</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Software_framework" title="Software framework">Frameworks</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/Comparison_of_JavaScript_frameworks" title="Comparison of JavaScript frameworks">Comparison of JavaScript frameworks</a></li>
+  <li><a href="/wikipedia/en/List_of_JavaScript_libraries" title="List of JavaScript libraries">List of JavaScript libraries</a></li></ul>
+  </div></td></tr><tr><th scope="row">Related <a href="/wikipedia/en/Technology" title="Technology">technologies</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/Cascading_Style_Sheets" title="Cascading Style Sheets">Cascading Style Sheets</a></li>
+  <li><a href="/wikipedia/en/Document_Object_Model" title="Document Object Model">Document Object Model</a></li>
+  <li><a href="/wikipedia/en/HTML" title="HTML">HTML</a></li>
+  <li><a href="/wikipedia/en/Dynamic_HTML" title="Dynamic HTML">Dynamic HTML</a></li>
+  <li><a href="/wikipedia/en/Ajax_(programming)" title="Ajax (programming)">Ajax</a></li>
+  <li><a href="/wikipedia/en/JSON" title="JSON">JSON</a></li>
+  <li><a href="/wikipedia/en/WebAssembly" title="WebAssembly">WebAssembly</a></li>
+  <li><a href="/wikipedia/en/Asm.js" title="Asm.js">asm.js</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Package_manager" title="Package manager">Package managers</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/Npm_(software)" title="Npm (software)">npm</a></li></ul>
+  </div></td></tr><tr><th scope="row">Application Bundlers</th><td><div>
+  <ul><li><a href="/wikipedia/en/Webpack" title="Webpack">Webpack</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Server-side_JavaScript" title="Server-side JavaScript">Server-side</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/Active_Server_Pages" title="Active Server Pages">Active Server Pages</a></li>
+  <li><a href="/wikipedia/en/CommonJS" title="CommonJS">CommonJS</a></li>
+  <li><a href="/wikipedia/en/Deno_(software)" title="Deno (software)">Deno</a></li>
+  <li><a href="/wikipedia/en/JSGI" title="JSGI">JSGI</a></li>
+  <li><a href="/wikipedia/en/Node.js" title="Node.js">Node.js</a></li>
+  <li><a href="/wikipedia/en/Wakanda_(software)" title="Wakanda (software)">Wakanda</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Unit_testing" title="Unit testing">Unit testing</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/Jasmine_(JavaScript_testing_framework)" title="Jasmine (JavaScript testing framework)">Jasmine</a></li>
+  <li><a href="/wikipedia/en/Mocha_(JavaScript_framework)" title="Mocha (JavaScript framework)">Mocha</a></li>
+  <li><a href="/wikipedia/en/QUnit" title="QUnit">QUnit</a></li>
+  <li><a href="/wikipedia/en/List_of_unit_testing_frameworks#JavaScript" title="List of unit testing frameworks">List of JavaScript unit testing frameworks</a></li>
+  <li><a href="/wikipedia/en/Jest_(JavaScript_framework)" title="Jest (JavaScript framework)">Jest</a></li></ul>
+  </div></td></tr><tr><th scope="row">People</th><td><div>
+  <ul><li><a href="/wikipedia/en/Douglas_Crockford" title="Douglas Crockford">Douglas Crockford</a></li>
+  <li><a href="/wikipedia/en/Brendan_Eich" title="Brendan Eich">Brendan Eich</a></li>
+  <li><a href="/wikipedia/en/John_Resig" title="John Resig">John Resig</a></li></ul>
+  </div></td></tr></tbody></table></div>
+  <div aria-labelledby="Programming_languages" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="Programming_languages"><a href="/wikipedia/en/Programming_language" title="Programming language">Programming languages</a></div></th></tr><tr><td colspan="2"><div id="*_Comparison&amp;#10;*_Timeline&amp;#10;*_History">
+  <ul><li><a href="/wikipedia/en/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison</a></li>
+  <li><a href="/wikipedia/en/Timeline_of_programming_languages" title="Timeline of programming languages">Timeline</a></li>
+  <li><a href="/wikipedia/en/History_of_programming_languages" title="History of programming languages">History</a></li></ul>
+  </div></td></tr><tr><td colspan="2"><div>
+  <ul><li><a href="/wikipedia/en/ALGOL" title="ALGOL">ALGOL</a></li>
+  <li><a href="/wikipedia/en/APL_(programming_language)" title="APL (programming language)">APL</a></li>
+  <li><a href="/wikipedia/en/Assembly_language" title="Assembly language">Assembly</a></li>
+  <li><a href="/wikipedia/en/BASIC" title="BASIC">BASIC</a></li>
+  <li><a href="/wikipedia/en/C_(programming_language)" title="C (programming language)">C</a></li>
+  <li><a href="/wikipedia/en/C%2B%2B" title="C++">C++</a></li>
+  <li><a href="/wikipedia/en/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a></li>
+  <li><a href="/wikipedia/en/COBOL" title="COBOL">COBOL</a></li>
+  <li><a href="/wikipedia/en/Go_(programming_language)" title="Go (programming language)">Go</a></li>
+  <li><a href="/wikipedia/en/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a></li>
+  <li><a href="/wikipedia/en/Forth_(programming_language)" title="Forth (programming language)">Forth</a></li>
+  <li><a href="/wikipedia/en/Fortran" title="Fortran">Fortran</a></li>
+  <li><a href="/wikipedia/en/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a></li>
+  <li><a href="/wikipedia/en/Java_(programming_language)" title="Java (programming language)">Java</a></li>
+  <li><a>JavaScript</a></li>
+  <li><a href="/wikipedia/en/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+  <li><a href="/wikipedia/en/Lisp_(programming_language)" title="Lisp (programming language)">Lisp</a></li>
+  <li><a href="/wikipedia/en/ML_(programming_language)" title="ML (programming language)">ML</a></li>
+  <li><a href="/wikipedia/en/Objective-C" title="Objective-C">Objective-C</a></li>
+  <li><a href="/wikipedia/en/Pascal_(programming_language)" title="Pascal (programming language)">Pascal</a></li>
+  <li><a href="/wikipedia/en/Perl" title="Perl">Perl</a></li>
+  <li><a href="/wikipedia/en/PHP" title="PHP">PHP</a></li>
+  <li><a href="/wikipedia/en/Prolog" title="Prolog">Prolog</a></li>
+  <li><a href="/wikipedia/en/Python_(programming_language)" title="Python (programming language)">Python</a></li>
+  <li><a href="/wikipedia/en/R_(programming_language)" title="R (programming language)">R</a></li>
+  <li><a href="/wikipedia/en/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a></li>
+  <li><a href="/wikipedia/en/Rust_(programming_language)" title="Rust (programming language)">Rust</a></li>
+  <li><a href="/wikipedia/en/SQL" title="SQL">SQL</a></li>
+  <li><a href="/wikipedia/en/Shell_script" title="Shell script">Shell</a></li>
+  <li><a href="/wikipedia/en/Simula" title="Simula">Simula</a></li>
+  <li><a href="/wikipedia/en/Smalltalk" title="Smalltalk">Smalltalk</a></li>
+  <li><a href="/wikipedia/en/Swift_(programming_language)" title="Swift (programming language)">Swift</a></li>
+  <li><i><a href="/wikipedia/en/List_of_programming_languages" title="List of programming languages">more...</a></i></li></ul>
+  </div></td></tr><tr><td colspan="2"><div>
+  <ul><li><img alt="Category" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31"> <b><a href="/wiki/Category-Programming_languages" title="Category:Programming languages">Category</a></b></li>
+  <li><img alt="List-Class article" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/16px-Symbol_list_class.svg.png" decoding="async" title="List-Class article" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/23px-Symbol_list_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/31px-Symbol_list_class.svg.png 2x" data-file-width="180" data-file-height="185"> <b>Lists</b>
+  <ul><li><a href="/wikipedia/en/List_of_programming_languages" title="List of programming languages">Alphabetical</a></li>
+  <li><a href="/wikipedia/en/List_of_programming_languages_by_type" title="List of programming languages by type">Categorical</a></li>
+  <li><a href="/wikipedia/en/Generational_list_of_programming_languages" title="Generational list of programming languages">Generational</a></li>
+  <li><a href="/wikipedia/en/Non-English-based_programming_languages" title="Non-English-based programming languages">Non-English-based</a></li></ul></li></ul>
+  </div></td></tr></tbody></table></div>
+  <div aria-labelledby="ECMAScript" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="ECMAScript"><a href="/wikipedia/en/ECMAScript" title="ECMAScript">ECMAScript</a></div></th></tr><tr><th scope="row">Dialects</th><td><div>
+  <ul><li><a href="/wikipedia/en/ActionScript" title="ActionScript">ActionScript</a></li>
+  <li><a href="/wikipedia/en/Caja_project" title="Caja project">Caja</a></li>
+  <li><a>JavaScript</a>
+  <ul><li><a href="/wikipedia/en/JavaScript_engine" title="JavaScript engine">engines</a></li>
+  <li><a href="/wikipedia/en/Asm.js" title="Asm.js">asm.js</a></li></ul></li>
+  <li><a href="/wikipedia/en/JScript" title="JScript">JScript</a></li>
+  <li><a href="/wikipedia/en/JScript_.NET" title="JScript .NET">JScript .NET</a></li>
+  <li><a href="/wikipedia/en/QtScript" title="QtScript">QtScript</a></li>
+  <li><a href="/wikipedia/en/TypeScript" title="TypeScript">TypeScript</a></li>
+  <li><a href="/wikipedia/en/WMLScript" title="WMLScript">WMLScript</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/List_of_ECMAScript_engines" title="List of ECMAScript engines">Engines</a> (<a href="/wikipedia/en/Comparison_of_JavaScript_engines" title="Comparison of JavaScript engines">comparison</a>)</th><td><div>
+  <ul><li><a href="/wikipedia/en/Presto_(layout_engine)#JavaScript_engines" title="Presto (layout engine)">Carakan</a></li>
+  <li><a href="/wikipedia/en/Presto_(layout_engine)#JavaScript_engines" title="Presto (layout engine)">Futhark</a></li>
+  <li><a href="/wikipedia/en/InScript_(JavaScript_engine)" title="InScript (JavaScript engine)">InScript</a></li>
+  <li><a href="/wikipedia/en/WebKit#JavaScriptCore" title="WebKit">JavaScriptCore</a></li>
+  <li><a href="/wikipedia/en/JScript" title="JScript">JScript</a></li>
+  <li><a href="/wikipedia/en/KJS_(software)" title="KJS (software)">KJS</a></li>
+  <li><a href="/wikipedia/en/Presto_(layout_engine)#ECMAScript_engines" title="Presto (layout engine)">Linear B</a></li>
+  <li><a href="/wikipedia/en/Narcissus_(JavaScript_engine)" title="Narcissus (JavaScript engine)">Narcissus</a></li>
+  <li><a href="/wikipedia/en/QtScript" title="QtScript">QtScript</a></li>
+  <li><a href="/wikipedia/en/Rhino_(JavaScript_engine)" title="Rhino (JavaScript engine)">Rhino</a></li>
+  <li><a href="/wikipedia/en/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a>
+  <ul><li><a href="/wikipedia/en/SpiderMonkey#TraceMonkey" title="SpiderMonkey">TraceMonkey</a></li>
+  <li><a href="/wikipedia/en/SpiderMonkey#J%C3%A4gerMonkey" title="SpiderMonkey">JägerMonkey</a></li></ul></li>
+  <li><a href="/wikipedia/en/Tamarin_(software)" title="Tamarin (software)">Tamarin</a></li>
+  <li><a href="/wikipedia/en/V8_(JavaScript_engine)" title="V8 (JavaScript engine)">V8</a></li>
+  <li><a href="/wikipedia/en/Chakra_(JavaScript_engine)" title="Chakra (JavaScript engine)">ChakraCore</a>
+  <ul><li><a href="/wikipedia/en/Chakra_(JScript_engine)" title="Chakra (JScript engine)">Chakra</a></li></ul></li>
+  <li><a href="/wikipedia/en/JScript_.NET" title="JScript .NET">JScript .NET</a></li>
+  <li><a href="/wikipedia/en/Nashorn_(JavaScript_engine)" title="Nashorn (JavaScript engine)">Nashorn</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Software_framework" title="Software framework">Frameworks</a></th><td><table><tbody><tr><th scope="row"><a href="/wikipedia/en/Client-side_JavaScript" title="Client-side JavaScript">Client-side</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/Chaplin.js" title="Chaplin.js">Chaplin.js</a></li>
+  <li><a href="/wikipedia/en/Dojo_Toolkit" title="Dojo Toolkit">Dojo</a></li>
+  <li><a href="/wikipedia/en/Echo_(framework)" title="Echo (framework)">Echo</a></li>
+  <li><a href="/wikipedia/en/Ext_JS" title="Ext JS">Ext JS</a></li>
+  <li><a href="/wikipedia/en/Google_Web_Toolkit" title="Google Web Toolkit">Google Web Toolkit</a></li>
+  <li><a href="/wikipedia/en/JQuery" title="JQuery">jQuery</a></li>
+  <li><a href="/wikipedia/en/Lively_Kernel" title="Lively Kernel">Lively Kernel</a></li>
+  <li><a href="/wikipedia/en/Midori_JavaScript_Framework" title="Midori JavaScript Framework">midori</a></li>
+  <li><a href="/wikipedia/en/MochiKit" title="MochiKit">MochiKit</a></li>
+  <li><a href="/wikipedia/en/MooTools" title="MooTools">MooTools</a></li>
+  <li><a href="/wikipedia/en/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype</a></li>
+  <li><a href="/wikipedia/en/Pyjs" title="Pyjs">Pyjs</a></li>
+  <li><a href="/wikipedia/en/Qooxdoo" title="Qooxdoo">qooxdoo</a></li>
+  <li><a href="/wikipedia/en/Rialto_Toolkit" title="Rialto Toolkit">Rialto</a></li>
+  <li><a href="/wikipedia/en/Rico_(Ajax)" title="Rico (Ajax)">Rico</a></li>
+  <li><a href="/wikipedia/en/Script.aculo.us" title="Script.aculo.us">script.aculo.us</a></li>
+  <li><a href="/wikipedia/en/SmartClient" title="SmartClient">SmartClient</a></li>
+  <li><a href="/wikipedia/en/SproutCore" title="SproutCore">SproutCore</a></li>
+  <li><a href="/wikipedia/en/Spry_framework" title="Spry framework">Spry</a></li>
+  <li><a href="/wikipedia/en/Wakanda_(software)" title="Wakanda (software)">Wakanda Framework</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Server-side_JavaScript" title="Server-side JavaScript">Server-side</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/AppJet" title="AppJet">AppJet</a></li>
+  <li><a href="/wikipedia/en/Deno_(software)" title="Deno (software)">Deno</a></li>
+  <li><a href="/wikipedia/en/Jaxer#Aptana_Jaxer" title="Jaxer">Jaxer</a></li>
+  <li><a href="/wikipedia/en/Node.js" title="Node.js">Node.js</a></li>
+  <li><a href="/wikipedia/en/Wakanda_(software)" title="Wakanda (software)">WakandaDB</a></li></ul>
+  </div></td></tr><tr><th scope="row">Multiple</th><td><div>
+  <ul><li><a href="/wikipedia/en/Cappuccino_(application_development_framework)" title="Cappuccino (application development framework)">Cappuccino</a>
+  <ul><li><a href="/wikipedia/en/Objective-J" title="Objective-J">Objective-J</a></li></ul></li>
+  <li><a href="/wikipedia/en/PureMVC" title="PureMVC">PureMVC</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/JavaScript_library" title="JavaScript library">Libraries</a></th><td><div>
+  <ul><li><a href="/wikipedia/en/Backbone.js" title="Backbone.js">Backbone.js</a></li>
+  <li><a href="/wikipedia/en/SWFObject" title="SWFObject">SWFObject</a></li>
+  <li><a href="/wikipedia/en/SWFAddress" title="SWFAddress">SWFAddress</a></li>
+  <li><a href="/wikipedia/en/Underscore.js" title="Underscore.js">Underscore.js</a></li></ul>
+  </div></td></tr></tbody></table></td></tr><tr><th scope="row">People</th><td><div>
+  <ul><li><a href="/wikipedia/en/Brendan_Eich" title="Brendan Eich">Brendan Eich</a></li>
+  <li><a href="/wikipedia/en/Douglas_Crockford" title="Douglas Crockford">Douglas Crockford</a></li>
+  <li><a href="/wikipedia/en/John_Resig" title="John Resig">John Resig</a></li>
+  <li><a href="/wikipedia/en/Scott_Isaacs" title="Scott Isaacs">Scott Isaacs</a></li></ul>
+  </div></td></tr><tr><th scope="row">Other</th><td><div>
+  <ul><li><a href="/wikipedia/en/Dynamic_HTML" title="Dynamic HTML">DHTML</a></li>
+  <li><a href="/wikipedia/en/Ecma_International" title="Ecma International">Ecma International</a></li>
+  <li><a href="/wikipedia/en/JSDoc" title="JSDoc">JSDoc</a></li>
+  <li><a href="/wikipedia/en/JSGI" title="JSGI">JSGI</a></li>
+  <li><a href="/wikipedia/en/JSHint" title="JSHint">JSHint</a></li>
+  <li><a href="/wikipedia/en/JSLint" title="JSLint">JSLint</a></li>
+  <li><a href="/wikipedia/en/JSON" title="JSON">JSON</a></li>
+  <li><a href="/wikipedia/en/JavaScript_Style_Sheets" title="JavaScript Style Sheets">JSSS</a></li>
+  <li><a href="/wikipedia/en/Sputnik_(JavaScript_conformance_test)" title="Sputnik (JavaScript conformance test)">Sputnik</a></li>
+  <li><a href="/wikipedia/en/Browser_speed_test#SunSpider" title="Browser speed test">SunSpider</a></li>
+  <li><a href="/wikipedia/en/Asynchronous_module_definition" title="Asynchronous module definition">Asynchronous module definition</a></li>
+  <li><a href="/wikipedia/en/CommonJS" title="CommonJS">CommonJS</a></li></ul>
+  </div></td></tr><tr><td colspan="2"><div>
+  <dl><dt><img alt="List-Class article" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/16px-Symbol_list_class.svg.png" decoding="async" title="List-Class article" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/23px-Symbol_list_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/31px-Symbol_list_class.svg.png 2x" data-file-width="180" data-file-height="185"> Lists</dt>
+  <dd><a href="/wikipedia/en/List_of_JavaScript_libraries" title="List of JavaScript libraries">JavaScript libraries</a></dd>
+  <dd><a href="/wikipedia/en/List_of_Ajax_frameworks#JavaScript" title="List of Ajax frameworks">Ajax frameworks</a></dd>
+  <dt><img alt="List-Class article" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/16px-Symbol_list_class.svg.png" decoding="async" title="List-Class article" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/23px-Symbol_list_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/31px-Symbol_list_class.svg.png 2x" data-file-width="180" data-file-height="185"> Comparisons</dt>
+  <dd><a href="/wikipedia/en/Comparison_of_JavaScript_frameworks" title="Comparison of JavaScript frameworks">JavaScript frameworks</a></dd>
+  <dd><a href="/wikipedia/en/Comparison_of_server-side_JavaScript_solutions" title="Comparison of server-side JavaScript solutions">server-side JavaScript</a></dd></dl>
+  </div></td></tr></tbody></table></div>
+  <div aria-labelledby="Web_browsers" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="Web_browsers"><a href="/wikipedia/en/Web_browser" title="Web browser">Web browsers</a></div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="col" colspan="2"><div id="Features_·_standards_·_protocols">Features <b>·</b>  standards <b>·</b>  protocols</div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="row">Features</th><td><div>
+  <ul><li><a href="/wikipedia/en/Bookmark_(digital)" title="Bookmark (digital)">Bookmarks</a></li>
+  <li><a href="/wikipedia/en/Browser_extension" title="Browser extension">Extensions</a></li>
+  <li><a href="/wikipedia/en/Private_browsing" title="Private browsing">Privacy mode</a></li>
+  <li><a href="/wikipedia/en/Browser_synchronization" title="Browser synchronization">Sync</a></li></ul>
+  </div></td></tr><tr><th scope="row">Web standards</th><td><div>
+  <ul><li><a href="/wikipedia/en/HTML" title="HTML">HTML</a>
+  <ul><li><a href="/wikipedia/en/HTML5" title="HTML5">v5</a></li></ul></li>
+  <li><a href="/wikipedia/en/Cascading_Style_Sheets" title="Cascading Style Sheets">CSS</a></li>
+  <li><a href="/wikipedia/en/Document_Object_Model" title="Document Object Model">DOM</a></li>
+  <li><a>JavaScript</a>
+  <ul><li><a href="/wikipedia/en/Indexed_Database_API" title="Indexed Database API">IndexedDB</a></li>
+  <li><a href="/wikipedia/en/Web_storage" title="Web storage">Web storage</a></li>
+  <li><a href="/wikipedia/en/WebAssembly" title="WebAssembly">WebAssembly</a></li>
+  <li><a href="/wikipedia/en/WebGL" title="WebGL">WebGL</a></li></ul></li></ul>
+  </div></td></tr><tr><th scope="row">Protocols</th><td><div>
+  <ul><li><a href="/wikipedia/en/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a>
+  <ul><li><a href="/wikipedia/en/HTTP/2" title="HTTP/2">v2</a></li>
+  <li><a href="/wikipedia/en/HTTP/3" title="HTTP/3">v3</a></li>
+  <li><a href="/wikipedia/en/HTTP_cookie" title="HTTP cookie">Cookies</a></li>
+  <li><a href="/wikipedia/en/HTTPS" title="HTTPS">Encryption</a></li></ul></li>
+  <li><a href="/wikipedia/en/Online_Certificate_Status_Protocol" title="Online Certificate Status Protocol">OCSP</a></li>
+  <li><a href="/wikipedia/en/WebRTC" title="WebRTC">WebRTC</a></li>
+  <li><a href="/wikipedia/en/WebSocket" title="WebSocket">WebSocket</a></li></ul>
+  </div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="2"><table><tbody><tr><th scope="col" colspan="2"><div id="Active">Active</div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="row"><a href="/wikipedia/en/Blink_(browser_engine)" title="Blink (browser engine)">Blink</a>-based</th><td><div>
+  <ul><li><a href="/wikipedia/en/Avast_Secure_Browser" title="Avast Secure Browser">Avast Secure Browser</a></li>
+  <li><a href="/wikipedia/en/Beaker_(web_browser)" title="Beaker (web browser)">Beaker</a></li>
+  <li><a href="/wikipedia/en/Blisk_(browser)" title="Blisk (browser)">Blisk</a></li>
+  <li><a href="/wikipedia/en/Brave_(web_browser)" title="Brave (web browser)">Brave</a></li>
+  <li><a href="/wikipedia/en/Google_Chrome" title="Google Chrome">Chrome</a></li>
+  <li><a href="/wikipedia/en/Chromium_(web_browser)" title="Chromium (web browser)">Chromium</a></li>
+  <li><a href="/wikipedia/en/C%E1%BB%91c_C%E1%BB%91c" title="Cốc Cốc">Coc Coc</a></li>
+  <li><a href="/wikipedia/en/Comodo_Dragon" title="Comodo Dragon">Dragon</a></li>
+  <li><a href="/wikipedia/en/Microsoft_Edge" title="Microsoft Edge">Edge</a></li>
+  <li><a href="/wikipedia/en/Epic_(web_browser)" title="Epic (web browser)">Epic</a></li>
+  <li><a href="/wikipedia/en/Falkon" title="Falkon">Falkon</a></li>
+  <li><a href="/wikipedia/en/Kinza_browser" title="Kinza browser">Kinza</a></li>
+  <li><a href="/wikipedia/en/Maxthon" title="Maxthon">Maxthon</a></li>
+  <li><a href="/wikipedia/en/Opera_(web_browser)" title="Opera (web browser)">Opera</a></li>
+  <li><a href="/wikipedia/en/Otter_Browser" title="Otter Browser">Otter</a></li>
+  <li><a href="/wikipedia/en/Puffin_Browser" title="Puffin Browser">Puffin </a></li>
+  <li><a href="/wikipedia/en/SalamWeb" title="SalamWeb">SalamWeb</a></li>
+  <li><a href="/wikipedia/en/Samsung_Internet" title="Samsung Internet">Samsung Internet</a></li>
+  <li><a href="/wikipedia/en/Amazon_Silk" title="Amazon Silk">Silk</a></li>
+  <li><a href="/wikipedia/en/Sleipnir_(web_browser)" title="Sleipnir (web browser)">Sleipnir</a></li>
+  <li><a href="/wikipedia/en/Sputnik_(search_engine)" title="Sputnik (search engine)">Sputnik</a></li>
+  <li><a href="/wikipedia/en/SRWare_Iron" title="SRWare Iron">SRWare</a></li>
+  <li><a href="/wikipedia/en/Torch_(browser)" title="Torch (browser)">Torch</a></li>
+  <li><a href="/wikipedia/en/UC_Browser" title="UC Browser">UC</a></li>
+  <li><a href="/wikipedia/en/Vivaldi_(web_browser)" title="Vivaldi (web browser)">Vivaldi</a></li>
+  <li><a href="/wikipedia/en/Naver_Whale" title="Naver Whale">Whale</a></li>
+  <li><a href="/wikipedia/en/Yandex_Browser" title="Yandex Browser">Yandex</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Gecko_(software)" title="Gecko (software)">Gecko</a>-based</th><td><div>
+  <ul><li><a href="/wikipedia/en/Firefox" title="Firefox">Firefox</a></li>
+  <li><a href="/wikipedia/en/Conkeror" title="Conkeror">Conkeror</a></li>
+  <li><a href="/wikipedia/en/GNU_IceCat" title="GNU IceCat">GNU IceCat</a></li>
+  <li><a href="/wikipedia/en/Comodo_IceDragon" title="Comodo IceDragon">IceDragon</a></li>
+  <li><a href="/wikipedia/en/K-Meleon" title="K-Meleon">K-Meleon</a></li>
+  <li><a href="/wikipedia/en/PirateBrowser" title="PirateBrowser">PirateBrowser</a></li>
+  <li><a href="/wikipedia/en/SeaMonkey" title="SeaMonkey">SeaMonkey</a></li>
+  <li><a href="/wikipedia/en/TenFourFox" title="TenFourFox">TenFourFox</a></li>
+  <li><a href="/wikipedia/en/Tor_Browser" title="Tor Browser">Tor</a></li>
+  <li><a href="/wikipedia/en/Waterfox" title="Waterfox">Waterfox</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/WebKit" title="WebKit">WebKit</a>-based</th><td><div>
+  <ul><li><a href="/wikipedia/en/Dolphin_Browser" title="Dolphin Browser">Dolphin</a></li>
+  <li><a href="/wikipedia/en/Dooble" title="Dooble">Dooble</a></li>
+  <li><a href="/wikipedia/en/GNOME_Web" title="GNOME Web">GNOME Web</a></li>
+  <li><a href="/wikipedia/en/ICab" title="ICab">iCab</a></li>
+  <li><a href="/wikipedia/en/Konqueror" title="Konqueror">Konqueror</a></li>
+  <li><a href="/wikipedia/en/Midori_(web_browser)" title="Midori (web browser)">Midori</a></li>
+  <li><a href="/wikipedia/en/Safari_(web_browser)" title="Safari (web browser)">Safari</a></li>
+  <li><a href="/wikipedia/en/Surf_(web_browser)" title="Surf (web browser)">surf</a></li></ul>
+  </div></td></tr><tr><th scope="row">Other</th><td><div>
+  <ul><li><a href="/wikipedia/en/360_Secure_Browser" title="360 Secure Browser">360</a></li>
+  <li><a href="/wikipedia/en/Avant_Browser" title="Avant Browser">Avant</a></li>
+  <li><a href="/wikipedia/en/Basilisk_(web_browser)" title="Basilisk (web browser)">Basilisk</a></li>
+  <li><a href="/wikipedia/en/Cake_Browser" title="Cake Browser">Cake Browser</a></li>
+  <li><a href="/wikipedia/en/CM_Browser" title="CM Browser">CM Browser</a></li>
+  <li><a href="/wikipedia/en/Eww_(web_browser)" title="Eww (web browser)">eww</a></li>
+  <li><a href="/wikipedia/en/Internet_Explorer" title="Internet Explorer">Internet Explorer</a></li>
+  <li><a href="/wikipedia/en/Links_(web_browser)" title="Links (web browser)">Links</a></li>
+  <li><a href="/wikipedia/en/Lunascape" title="Lunascape">Lunascape</a></li>
+  <li><a href="/wikipedia/en/Lynx_(web_browser)" title="Lynx (web browser)">Lynx</a></li>
+  <li><a href="/wikipedia/en/NetFront" title="NetFront">NetFront</a></li>
+  <li><a href="/wikipedia/en/NetSurf" title="NetSurf">NetSurf</a></li>
+  <li><a href="/wikipedia/en/Pale_Moon_(web_browser)" title="Pale Moon (web browser)">Pale Moon</a></li>
+  <li><a href="/wikipedia/en/QQ_browser" title="QQ browser">QQ browser</a></li>
+  <li><a href="/wikipedia/en/Qutebrowser" title="Qutebrowser">qutebrowser</a></li>
+  <li><a href="/wikipedia/en/SlimBrowser" title="SlimBrowser">SlimBrowser</a></li>
+  <li><a href="/wikipedia/en/W3m" title="W3m">w3m</a></li></ul>
+  </div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="2"><table><tbody><tr><th scope="col" colspan="2"><div id="Discontinued">Discontinued</div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="row"><a href="/wikipedia/en/Gecko_(software)" title="Gecko (software)">Gecko</a>-based</th><td><div>
+  <ul><li><a href="/wikipedia/en/Beonex_Communicator" title="Beonex Communicator">Beonex Communicator</a></li>
+  <li><a href="/wikipedia/en/Camino_(web_browser)" title="Camino (web browser)">Camino</a></li>
+  <li><a href="/wikipedia/en/Classilla" title="Classilla">Classilla</a></li>
+  <li><a href="/wikipedia/en/Galeon" title="Galeon">Galeon</a></li>
+  <li><a href="/wikipedia/en/Ghostzilla" title="Ghostzilla">Ghostzilla</a></li>
+  <li><a href="/wikipedia/en/Kazehakase" title="Kazehakase">Kazehakase</a></li>
+  <li><a href="/wikipedia/en/Kylo_(web_browser)" title="Kylo (web browser)">Kylo</a></li>
+  <li><a href="/wikipedia/en/IBM_Lotus_Symphony" title="IBM Lotus Symphony">Lotus</a></li>
+  <li><a href="/wikipedia/en/MicroB" title="MicroB">MicroB</a></li>
+  <li><a href="/wikipedia/en/Minimo" title="Minimo">Minimo</a></li>
+  <li><a href="/wikipedia/en/Mozilla_Application_Suite" title="Mozilla Application Suite">Mozilla suite</a></li>
+  <li><a href="/wikipedia/en/AT%26T_Pogo" title="AT&amp;T Pogo">Pogo</a></li>
+  <li><a href="/wikipedia/en/Kirix_Strata" title="Kirix Strata">Strata</a></li>
+  <li><a href="/wikipedia/en/Swiftfox" title="Swiftfox">Swiftfox</a></li>
+  <li><a href="/wikipedia/en/Swiftweasel" title="Swiftweasel">Swiftweasel</a></li>
+  <li><a href="/wikipedia/en/Timberwolf_(web_browser)" title="Timberwolf (web browser)">Timberwolf</a></li>
+  <li><a href="/wikipedia/en/XB_Browser" title="XB Browser">xB</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Trident_(software)" title="Trident (software)">Trident</a>-based</th><td><div>
+  <ul><li><a href="/wikipedia/en/AOL_Explorer" title="AOL Explorer">AOL</a></li>
+  <li><a href="/wikipedia/en/Deepnet_Explorer" title="Deepnet Explorer">Deepnet</a></li>
+  <li><a href="/wikipedia/en/GreenBrowser" title="GreenBrowser">GreenBrowser</a></li>
+  <li><a href="/wikipedia/en/MediaBrowser" title="MediaBrowser">MediaBrowser</a></li>
+  <li><a href="/wikipedia/en/MenuBox" title="MenuBox">MenuBox</a></li>
+  <li><a href="/wikipedia/en/NeoPlanet" title="NeoPlanet">NeoPlanet</a></li>
+  <li><a href="/wikipedia/en/NetCaptor" title="NetCaptor">NetCaptor</a></li>
+  <li><a href="/wikipedia/en/SpaceTime_(software)#SpaceTime_Browser" title="SpaceTime (software)">SpaceTime</a></li>
+  <li><a href="/wikipedia/en/UltraBrowser" title="UltraBrowser">UltraBrowser</a></li>
+  <li><a href="/wikipedia/en/WebbIE" title="WebbIE">WebbIE</a></li>
+  <li><a href="/wikipedia/en/ZAC_Browser" title="ZAC Browser">ZAC</a></li></ul>
+  </div></td></tr><tr><th scope="row"><a href="/wikipedia/en/WebKit" title="WebKit">WebKit</a>-based</th><td><div>
+  <ul><li><a href="/wikipedia/en/Arora_(web_browser)" title="Arora (web browser)">Arora</a></li>
+  <li><a href="/wikipedia/en/Bolt_(web_browser)" title="Bolt (web browser)">BOLT</a></li>
+  <li><a href="/wikipedia/en/Opera_Coast" title="Opera Coast">Opera Coast</a></li>
+  <li><a href="/wikipedia/en/Flock_(web_browser)" title="Flock (web browser)">Flock</a></li>
+  <li><a href="/wikipedia/en/Fluid_(web_browser)" title="Fluid (web browser)">Fluid</a></li>
+  <li><a href="/wikipedia/en/Google_TV" title="Google TV">Google TV</a></li>
+  <li><a href="/wikipedia/en/Iris_Browser" title="Iris Browser">Iris</a></li>
+  <li><a href="/wikipedia/en/Mercury_Browser" title="Mercury Browser">Mercury</a></li>
+  <li><a href="/wikipedia/en/OmniWeb" title="OmniWeb">OmniWeb</a></li>
+  <li><a href="/wikipedia/en/Origyn_Web_Browser" title="Origyn Web Browser">Origyn</a></li>
+  <li><a href="/wikipedia/en/QtWeb" title="QtWeb">QtWeb</a></li>
+  <li><a href="/wikipedia/en/Rekonq" title="Rekonq">rekonq</a></li>
+  <li><a href="/wikipedia/en/Rockmelt" title="Rockmelt">Rockmelt</a></li>
+  <li><a href="/wikipedia/en/Shiira" title="Shiira">Shiira</a></li>
+  <li><a href="/wikipedia/en/Steel_(web_browser)" title="Steel (web browser)">Steel</a></li>
+  <li><a href="/wikipedia/en/Nokia_Browser_for_Symbian" title="Nokia Browser for Symbian">Browser for Symbian</a></li>
+  <li><a href="/wikipedia/en/Uzbl" title="Uzbl">Uzbl</a></li>
+  <li><a href="/wikipedia/en/WebPositive" title="WebPositive">WebPositive</a></li>
+  <li><a href="/wikipedia/en/Xombrero" title="Xombrero">xombrero</a></li></ul>
+  </div></td></tr><tr><th scope="row">Other</th><td><div>
+  <ul><li><a href="/wikipedia/en/Abaco_(web_browser)" title="Abaco (web browser)">abaco</a></li>
+  <li><a href="/wikipedia/en/Amaya_(web_editor)" title="Amaya (web editor)">Amaya</a></li>
+  <li><a href="/wikipedia/en/Arachne_(web_browser)" title="Arachne (web browser)">Arachne</a></li>
+  <li><a href="/wikipedia/en/Arena_(web_browser)" title="Arena (web browser)">Arena</a></li>
+  <li><a href="/wikipedia/en/Blazer_(web_browser)" title="Blazer (web browser)">Blazer</a></li>
+  <li><a href="/wikipedia/en/Charon_(web_browser)" title="Charon (web browser)">Charon</a></li>
+  <li><a href="/wikipedia/en/Microsoft_Live_Labs_Deepfish" title="Microsoft Live Labs Deepfish">Deepfish</a></li>
+  <li><a href="/wikipedia/en/Dillo" title="Dillo">Dillo</a></li>
+  <li><a href="/wikipedia/en/ELinks" title="ELinks">ELinks</a></li>
+  <li><a href="/wikipedia/en/Gazelle_(web_browser)" title="Gazelle (web browser)">Gazelle</a></li>
+  <li><a href="/wikipedia/en/HotJava" title="HotJava">HotJava</a></li>
+  <li><a href="/wikipedia/en/IBM_Home_Page_Reader" title="IBM Home Page Reader">IBM Home Page Reader</a></li>
+  <li><a href="/wikipedia/en/IBM_WebExplorer" title="IBM WebExplorer">IBM WebExplorer</a></li>
+  <li><a href="/wikipedia/en/IBrowse" title="IBrowse">IBrowse</a></li>
+  <li><a href="/wikipedia/en/KidZui" title="KidZui">KidZui</a></li>
+  <li><a href="/wikipedia/en/Line_Mode_Browser" title="Line Mode Browser">Line Mode</a></li>
+  <li><a href="/wikipedia/en/Mosaic_(web_browser)" title="Mosaic (web browser)">Mosaic</a></li>
+  <li><a href="/wikipedia/en/MSN_TV" title="MSN TV">MSN TV</a></li>
+  <li><a href="/wikipedia/en/NetPositive" title="NetPositive">NetPositive</a></li>
+  <li><a href="/wikipedia/en/Netscape_(web_browser)" title="Netscape (web browser)">Netscape</a></li>
+  <li><a href="/wikipedia/en/Skweezer" title="Skweezer">Skweezer</a></li>
+  <li><a href="/wikipedia/en/Skyfire_(company)" title="Skyfire (company)">Skyfire</a></li>
+  <li><a href="/wikipedia/en/Teashark" title="Teashark">Teashark</a></li>
+  <li><a href="/wikipedia/en/ThunderHawk" title="ThunderHawk">ThunderHawk</a></li>
+  <li><a href="/wikipedia/en/Vision_Mobile_Browser" title="Vision Mobile Browser">Vision</a></li>
+  <li><a href="/wikipedia/en/WinWAP" title="WinWAP">WinWAP</a></li>
+  <li><a href="/wikipedia/en/WorldWideWeb" title="WorldWideWeb">WorldWideWeb</a></li></ul>
+  </div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="2"><div>
+  <ul><li><a href="/wiki/Category-Web_browsers" title="Category:Web browsers">Category</a></li>
+  <li><a href="/wikipedia/en/Comparison_of_web_browsers" title="Comparison of web browsers">Comparisons</a></li>
+  <li><a href="/wikipedia/en/List_of_web_browsers" title="List of web browsers">List</a></li></ul>
+  </div></td></tr></tbody></table></div>
+  <div aria-labelledby="Node.js" class="navbox"><table><tbody><tr><th scope="col" colspan="3"><div id="Node.js"><a href="/wikipedia/en/Node.js" title="Node.js">Node.js</a></div></th></tr><tr><th scope="row">Platform</th><td><div>
+  <ul><li><a href="/wikipedia/en/Node.js" title="Node.js">Node.js</a></li>
+  <li><a href="/wikipedia/en/Npm_(software)" title="Npm (software)">NPM</a></li>
+  <li><a href="/wikipedia/en/V8_(JavaScript_engine)" title="V8 (JavaScript engine)">V8</a></li>
+  <li><a href="/wikipedia/en/CommonJS" title="CommonJS">CommonJS</a></li></ul>
+  </div></td><td rowspan="4"><div><a href="https://en.wikipedia.org/wiki/File:Node.js_logo.svg"><img alt="Node.js logo.svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/100px-Node.js_logo.svg.png" decoding="async" width="100" height="61" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/150px-Node.js_logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/200px-Node.js_logo.svg.png 2x" data-file-width="590" data-file-height="361"></a></div></td></tr><tr><th scope="row">Frameworks</th><td><div>
+  <ul><li><a href="/wikipedia/en/MEAN_(software_bundle)" title="MEAN (software bundle)">MEAN</a>
+  <ul><li><a href="/wikipedia/en/MongoDB" title="MongoDB">MongoDB</a></li>
+  <li><a href="/wikipedia/en/Express.js" title="Express.js">Express.js</a></li>
+  <li><a href="/wikipedia/en/AngularJS" title="AngularJS">AngularJS</a>/<a href="/wikipedia/en/Angular_(application_platform)" title="Angular (application platform)">Angular</a></li></ul></li>
+  <li>MEEN (substituted with <a href="/wikipedia/en/Ember.js" title="Ember.js">Ember.js</a>)</li>
+  <li><a href="/wikipedia/en/Backbone.js" title="Backbone.js">Backbone.js</a></li>
+  <li><a href="/wikipedia/en/Meteor_(web_framework)" title="Meteor (web framework)">Meteor</a></li>
+  <li><a href="/wikipedia/en/Sails.js" title="Sails.js">Sails.js</a></li></ul>
+  </div></td></tr><tr><th scope="row">Libraries</th><td><div>
+  <ul><li><a href="/wikipedia/en/Lodash" title="Lodash">Lodash</a></li>
+  <li><a href="/wikipedia/en/Underscore.js" title="Underscore.js">Underscore.js</a></li>
+  <li><a href="/wikipedia/en/React.js" title="React.js">React.js</a></li>
+  <li><a href="/wikipedia/en/Vue.js" title="Vue.js">Vue.js</a></li></ul>
+  </div></td></tr><tr><th scope="row">Languages</th><td><div>
+  <ul><li><a>JavaScript</a></li>
+  <li><a href="/wikipedia/en/CoffeeScript" title="CoffeeScript">CoffeeScript</a></li>
+  <li><a href="/wikipedia/en/TypeScript" title="TypeScript">TypeScript</a></li></ul>
+  </div></td></tr></tbody></table></div>
+  <div aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q2005&amp;#124;Edit_this_at_Wikidata" class="navbox"><table><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q2005&amp;#124;Edit_this_at_Wikidata" scope="row">Authority control <a href="https://www.wikidata.org/wiki/Q2005" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20"></a></th><td><div>
+  <ul><li><a href="/wikipedia/en/Biblioteca_Nacional_de_Espa%C3%B1a" title="Biblioteca Nacional de España">BNE</a>: <a rel="nofollow" href="http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&amp;authority_id=XX542465">XX542465</a></li>
+  <li><a href="/wikipedia/en/Biblioth%C3%A8que_nationale_de_France" title="Bibliothèque nationale de France">BNF</a>: <a rel="nofollow" href="https://catalogue.bnf.fr/ark:/12148/cb12549978q">cb12549978q</a> <a rel="nofollow" href="https://data.bnf.fr/ark:/12148/cb12549978q">(data)</a></li>
+  <li><a href="/wikipedia/en/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <a rel="nofollow" href="https://d-nb.info/gnd/4420180-1">4420180-1</a></li>
+  <li><a href="/wikipedia/en/Library_of_Congress_Control_Number" title="Library of Congress Control Number">LCCN</a>: <a rel="nofollow" href="https://id.loc.gov/authorities/subjects/sh96004880">sh96004880</a></li>
+  <li><a href="/wikipedia/en/Syst%C3%A8me_universitaire_de_documentation" title="Système universitaire de documentation">SUDOC</a>: <a rel="nofollow" href="https://www.idref.fr/034781870">034781870</a></li></ul>
+  </div></td></tr></tbody></table></div>
+</div>
+
+  </article>
+</main>
+
+<footer>
+  <button id="company-logo"><a href="https://zhiliaokeji.com/" target="_blank" title="Known LLC. (长沙知了信息科技有限公司)">
+    <p>Powered by</p>
+    <img src="/static/img/known.svg" alt="Known LLC. (长沙知了信息科技有限公司)">
+  </a></button>
+</footer>
+
+<script src="/static/libs/highlight/highlight.pack.js"></script>
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+<script src="/static/js/utils.js"></script>
+<script src="/static/js/toc.js"></script>
+<script src="/static/js/search-hint.js"></script>
+</body>
+</html>
