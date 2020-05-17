@@ -69,6 +69,31 @@ main dl dd ul {
   margin-top: 0.4rem;
 }
 
+.gallery {
+  display: inline-block;
+}
+
+.gallery li {
+  float: left;
+  list-style: none;
+  text-align: center;
+  padding-right: 20px;
+  max-width: 220px;
+  margin-top: 20px;
+  line-height: normal;
+}
+
+.gallery li p {
+  line-height: 24px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.gallery li img {
+  width: 100%;
+  margin: 0;
+}
+
 figure {
   max-width: 300px;
   text-align: center;
@@ -167,11 +192,6 @@ table tr th {
   line-height: 34px;
 }
 
-.navbox th[colspan="26"] {
-  display: inline-block;
-  width: 100%;
-}
-
 .navbox th {
   background: #444;
   line-height: 30px;
@@ -202,7 +222,10 @@ table tr th {
   border-bottom: none;
 }
 
-.navbox > table > tbody > tr > td[colspan="2"] > table > tbody > tr > th[scope="col"] {
+.navbox > table > tbody > tr > td[colspan="2"] > table > tbody > tr > th[scope="col"],
+.navbox > table > tbody > tr > td[colspan="2"],
+.navbox th[colspan="2"],
+.navbox th[colspan="26"] {
   width: 100%;
   display: inline-block;
 }
@@ -213,7 +236,7 @@ table tr th {
   display: block;
 }
 
-
+.navbox > table > tbody > tr > td[rowspan="3"],
 .navbox > table > tbody > tr > td[rowspan="4"],
 .navbox > table > tbody > tr > td[rowspan="5"],
 .navbox > table > tbody > tr > td[rowspan="6"],
@@ -222,15 +245,18 @@ table tr th {
   padding: 0 10px;
 }
 
-.navbox > table > tbody > tr > td[colspan="2"] {
-  width: 100%;
-  display: inline-block;
-}
-
 .navbox > table > tbody > tr > td[colspan="2"] > div {
   text-align: center;
   background: #444;
   line-height: 30px;
+}
+
+.navbox > table > tbody > tr > td[colspan="2"] div div.navbox {
+  background: #1d1e24;
+}
+
+#Geographic_locale {
+  background: #444;
 }
 
 .navbox table ul {
