@@ -15,6 +15,11 @@ main article {
   width: 100%;
 }
 
+blockquote {
+  float: left;
+  margin: 18px 0;
+}
+
 /*滚动条样式*/
 .toc ul::-webkit-scrollbar {
   width: 4px;
@@ -46,10 +51,15 @@ main article h3 {
 main article img {
   width: auto;
   margin-top: 2rem;
+  background: #fff;
 }
 
 main ul {
   margin-top: 1rem;
+}
+
+main ul li img {
+  margin-top: 0;
 }
 
 main dl {
@@ -108,10 +118,9 @@ figure div {
 }
 
 main figure img {
-  box-sizing: border-box;
-  padding: 0.7rem 1rem;
-  max-width: 300px;
-  margin: 0;
+  margin: 0.7rem 1rem;
+  max-width: 268px;
+  display: inline-block;
 }
 
 figcaption {
@@ -203,6 +212,7 @@ table tr th {
 
 .navbox img {
   margin: 0;
+  background: none;
 }
 
 .navbox th[scope="row"] {
@@ -283,10 +293,19 @@ table tr th {
   padding: 0 10px;
 }
 
+.navbox table dl dt {
+  margin: 0;
+  padding: 0;
+}
+
 #section_SpokenWikipedia {
   border: 1px solid #666;
   margin: 1.5rem 0;
   padding: 1rem;
+}
+
+#section_SpokenWikipedia img {
+  background: none;
 }
 
 #section_SpokenWikipedia > div:nth-child(1) {
