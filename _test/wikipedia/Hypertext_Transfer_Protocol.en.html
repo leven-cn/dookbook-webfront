@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Hypertext Transfer Protocol - Wikipedia for Computer Science, hosted by Dookbook&reg;</title>
+  <meta name="description" content="Hypertext Transfer Protocol (Application protocol for distributed, collaborative, hypermedia information systems) on Wikipedia for Computer Science, hosted by Dookbook®"/>
+  <meta name="keywords" content="Hypertext Transfer Protocol,Wikipedia,Computer Science,Dookbook"/>
+  <meta name="generator" content="Dookbook"/>
+  <link rel="stylesheet" href="/static/libs/highlight/styles/agate.css"/>
+  <link rel="stylesheet" href="/static/css/content.css"/>
+  <link rel="stylesheet" href="/static/css/content.toc.css"/>
+  <link rel="stylesheet" href="/static/css/content.search.css"/>
+  <link rel="stylesheet" href="/static/css/content.wikipedia.css"/>
+  <!-- <link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/> -->
+  <!-- <link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/> -->
+  <link rel="canonical" href="https://dookbook.info/wikipedia/en/HTML"/>
+  <link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+</head>
+<body>
+  <!-- htmlhint attr-value-double-quotes:false -->
+  <header>
+    <a href="/"><img src="/static/img/wikipedia-en.png" alt="Wikipedia for Computer Science" title="Wikipedia for Computer Science"></a>
+    <section id="search">
+      <img src="/static/img/search.svg" alt="Search">
+      <input type="text" placeholder="Search here">
+    </section>
+    <nav>
+      <a href="#" title="About Dookbook®">i</a>
+      <a href="/about/zh-hans/" title="切换至中文" lang="zh-Hans">中</a>
+      <a href="/en/help/readme/" title="Help">?</a>
+    </nav>
+  </header>
+
+<main>
+  <article>
+    <header>
+      <h1>Hypertext Transfer Protocol - Wikipedia</h1>
+      <p><span>Updated</span>:&nbsp;&nbsp;2020-03-01 10:24:00 (UTC)</p>
+    </header>
+    <div class="toc">
+      <ul>
+        <li><a href="#technical_overview">Technical overview</a></li>
+        <li><a href="#history">History</a></li>
+        <li>
+        <a href="#http_session">HTTP session</a>
+        <ul>
+        <li><a href="#persistent_connections">Persistent connections</a></li>
+        <li><a href="#http_session_state">HTTP session state</a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="#http_authentication">HTTP authentication</a>
+        <ul>
+        <li><a href="#authentication_realms">Authentication realms</a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="#message_format">Message format</a>
+        <ul>
+        <li>
+        <a href="#request_message">Request message</a>
+        <ul>
+        <li>
+        <a href="#request_methods">Request methods</a>
+        <ul>
+        <li><a href="#safe_methods">Safe methods</a></li>
+        <li><a href="#idempotent_methods_and_web_applications">Idempotent methods and web applications</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#summary_table">Summary table</a></li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        <li>
+        <a href="#response_message">Response message</a>
+        <ul>
+        <li><a href="#status_codes">Status codes</a></li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        <li><a href="#encrypted_connections">Encrypted connections</a></li>
+        <li>
+        <a href="#example_session">Example session</a>
+        <ul>
+        <li><a href="#client_request">Client request</a></li>
+        <li><a href="#server_response">Server response</a></li>
+        </ul>
+        </li>
+        <li><a href="#similar_protocols">Similar protocols</a></li>
+        <li><a href="#see_also">See also</a></li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#external_links">External links</a></li>
+      </ul>
+      <a class="copyright" href="https://zhiliaokeji.com" title="All Copyrights Reserved by Known LLC.">&copy;&nbsp;Known LLC.</a>
+    </div>
+
+<!-- Main content -->
+<div> 
+
+
+
+<p>The <b>Hypertext Transfer Protocol</b> (<b>HTTP</b>) is an <a href="/wikipedia/en/Application_protocol" title="Application protocol">application protocol</a> for distributed, collaborative, <a href="/wikipedia/en/Hypermedia" title="Hypermedia">hypermedia</a> information systems.<sup id="cite_ref-ietf2616_1-0"><a href="#cite_note-ietf2616-1">[1]</a></sup> HTTP is the foundation of data communication for the <a href="/wikipedia/en/World_Wide_Web" title="World Wide Web">World Wide Web</a>, where <a href="/wikipedia/en/Hypertext" title="Hypertext">hypertext</a> documents include <a href="/wikipedia/en/Hyperlink" title="Hyperlink">hyperlinks</a> to other resources that the user can easily access, for example by a <a href="/wikipedia/en/Computer_mouse" title="Computer mouse">mouse</a> click or by tapping the screen in a web browser.
+</p><p>Development of HTTP was initiated by <a href="/wikipedia/en/Tim_Berners-Lee" title="Tim Berners-Lee">Tim Berners-Lee</a> at <a href="/wikipedia/en/CERN" title="CERN">CERN</a> in 1989. Development of early HTTP <a href="/wikipedia/en/Requests_for_Comments" title="Requests for Comments">Requests for Comments</a> (RFCs) was a coordinated effort by the <a href="/wikipedia/en/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">Internet Engineering Task Force</a> (IETF) and the <a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a> (W3C), with work later moving to the IETF.
+</p><p>HTTP/1.1 was first documented in <a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc2068">2068</a> in 1997. That specification was obsoleted by <a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616">2616</a> in 1999, which was likewise replaced by the <a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7230">7230</a> family of RFCs in 2014.
+</p><p><a href="/wikipedia/en/HTTP/2" title="HTTP/2">HTTP/2</a> is a more efficient expression of HTTP's semantics "on the wire", and was published in 2015; it is now supported by major web servers and browsers over <a href="/wikipedia/en/Transport_Layer_Security" title="Transport Layer Security">Transport Layer Security</a> (TLS) using an <a href="/wikipedia/en/Application-Layer_Protocol_Negotiation" title="Application-Layer Protocol Negotiation">Application-Layer Protocol Negotiation</a> (ALPN) extension<sup id="cite_ref-rfc7301_2-0"><a href="#cite_note-rfc7301-2">[2]</a></sup> where <a href="/wikipedia/en/TLS_1.2" title="TLS 1.2">TLS 1.2</a> or newer is required.<sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p><p><a href="/wikipedia/en/HTTP/3" title="HTTP/3">HTTP/3</a> is the proposed successor to HTTP/2,<sup id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup><sup id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> which is already in use on the web, using <a href="/wikipedia/en/User_Datagram_Protocol" title="User Datagram Protocol">UDP</a> instead of <a href="/wikipedia/en/Transmission_Control_Protocol" title="Transmission Control Protocol">TCP</a> for the underlying transport protocol. Like HTTP/2, it does not obsolete previous major versions of the protocol. Support for HTTP/3 was added to <a href="/wikipedia/en/Cloudflare" title="Cloudflare">Cloudflare</a> and <a href="/wikipedia/en/Google_Chrome" title="Google Chrome">Google Chrome</a> (Canary build) in September 2019.<sup id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup><sup id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> Support in Firefox Nightly arrived in November 2019.
+</p>
+  
+<h2 id="technical_overview">Technical overview</h2>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Internet1.svg/220px-Internet1.svg.png" decoding="async" width="220" height="177" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Internet1.svg/330px-Internet1.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Internet1.svg/440px-Internet1.svg.png 2x" data-file-width="1600" data-file-height="1288"><figcaption><a href="/wikipedia/en/URL" title="URL">URL</a> beginning with the HTTP scheme and the <a href="/wikipedia/en/World_Wide_Web" title="World Wide Web">WWW</a> domain name label</figcaption></figure>
+<p>HTTP functions as a <a href="/wikipedia/en/Request%E2%80%93response" title="Request–response">request–response</a> protocol in the client–server computing model. A <a href="/wikipedia/en/Web_browser" title="Web browser">web browser</a>, for example, may be the <i>client</i> and an application running on a computer <a href="/wikipedia/en/Host_(network)" title="Host (network)">hosting</a> a <a href="/wikipedia/en/Website" title="Website">website</a> may be the <i>server</i>. The client submits an HTTP <i>request</i> message to the server. The server, which provides <i>resources</i> such as <a href="/wikipedia/en/HTML" title="HTML">HTML</a> files and other content, or performs other functions on behalf of the client, returns a <i>response</i> message to the client. The response contains completion status information about the request and may also contain requested content in its message body.
+</p><p>A web browser is an example of a <i><a href="/wikipedia/en/User_agent" title="User agent">user agent</a></i> (UA). Other types of user agent include the indexing software used by search providers (<a href="/wikipedia/en/Web_crawler" title="Web crawler">web crawlers</a>), <a href="/wikipedia/en/Voice_browser" title="Voice browser">voice browsers</a>, <a href="/wikipedia/en/Mobile_app" title="Mobile app">mobile app</a>s, and other <a href="/wikipedia/en/Software" title="Software">software</a> that accesses, consumes, or displays web content.
+</p><p>HTTP is designed to permit intermediate network elements to improve or enable communications between clients and servers. High-traffic websites often benefit from <a href="/wikipedia/en/Web_cache" title="Web cache">web cache</a> servers that deliver content on behalf of <a href="/wikipedia/en/Upstream_server" title="Upstream server">upstream servers</a> to improve response time. Web browsers cache previously accessed web resources and reuse them, when possible, to reduce network traffic. HTTP <a href="/wikipedia/en/Proxy_server" title="Proxy server">proxy servers</a> at <a href="/wikipedia/en/Private_network" title="Private network">private network</a> boundaries can facilitate communication for clients without a globally routable address, by relaying messages with external servers.
+</p><p>HTTP is an <a href="/wikipedia/en/Application_layer" title="Application layer">application layer</a> protocol designed within the framework of the <a href="/wikipedia/en/Internet_protocol_suite" title="Internet protocol suite">Internet protocol suite</a>. Its definition presumes an underlying and reliable <a href="/wikipedia/en/Transport_layer" title="Transport layer">transport layer</a> protocol,<sup id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> and <a href="/wikipedia/en/Transmission_Control_Protocol" title="Transmission Control Protocol">Transmission Control Protocol</a> (TCP) is commonly used. However, HTTP can be adapted to use unreliable protocols such as the <a href="/wikipedia/en/User_Datagram_Protocol" title="User Datagram Protocol">User Datagram Protocol</a> (UDP), for example in <a href="/wikipedia/en/HTTPU" title="HTTPU">HTTPU</a> and <a href="/wikipedia/en/Simple_Service_Discovery_Protocol" title="Simple Service Discovery Protocol">Simple Service Discovery Protocol</a> (SSDP).
+</p><p><a href="/wikipedia/en/Web_resource" title="Web resource">HTTP resources</a> are identified and located on the network by <a href="/wikipedia/en/Uniform_Resource_Locator" title="Uniform Resource Locator">Uniform Resource Locators</a> (URLs), using the <a href="/wikipedia/en/Uniform_Resource_Identifier" title="Uniform Resource Identifier">Uniform Resource Identifiers</a> (URI's) schemes <i>http</i> and <i><a href="/wikipedia/en/Https" title="Https">https</a></i>.  For example, including all optional components:
+</p><code><pre>            userinfo          <a href="/wikipedia/en/Hostname" title="Hostname">host</a>        <a href="/wikipedia/en/Port_(computer_networking)" title="Port (computer networking)">port</a>
+        ┌───────┴───────┐ ┌────┴────────┐ ┌┴┐
+  http://john.doe:password@www.example.com:123/forum/questions/?tag=networking&amp;order=newest#top
+  └─┬─┘ └───────────┬────────────────────────┘└─┬─────────────┘└────────┬──────────────────┘└┬─┘
+  <a href="/wikipedia/en/Uniform_Resource_Identifier#Definition" title="Uniform Resource Identifier">scheme</a>         authority                      path                  <a href="/wikipedia/en/Query_string" title="Query string">query</a>             <a href="/wikipedia/en/Fragment_identifier" title="Fragment identifier">fragment</a>
+</pre></code><p>
+As defined in <a rel="nofollow" href="https://tools.ietf.org/html/rfc3986">RFC 3986</a>, URIs are encoded as <a href="/wikipedia/en/Hyperlink" title="Hyperlink">hyperlinks</a> in <a href="/wikipedia/en/HTML" title="HTML">HTML</a> documents, so as to form interlinked <a href="/wikipedia/en/Hypertext" title="Hypertext">hypertext</a> documents.
+</p><p>HTTP/1.1 is a revision of the original HTTP (HTTP/1.0). In HTTP/1.0 a separate <a href="/wikipedia/en/Connection-oriented_communication" title="Connection-oriented communication">connection</a> to the same server is made for every resource request. HTTP/1.1 can reuse a connection multiple times to download images, <a href="/wikipedia/en/Client-side_scripting" title="Client-side scripting">scripts</a>, <a href="/wikipedia/en/Cascading_Style_Sheets" title="Cascading Style Sheets">stylesheets</a>, <i>etc</i> after the page has been delivered. HTTP/1.1 communications therefore experience less <a href="/wikipedia/en/Latency_(engineering)" title="Latency (engineering)">latency</a> as the establishment of TCP connections presents considerable overhead.
+</p>
+<h2 id="history">History</h2>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Tim_Berners-Lee_CP_2.jpg/220px-Tim_Berners-Lee_CP_2.jpg" decoding="async" width="220" height="146" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Tim_Berners-Lee_CP_2.jpg/330px-Tim_Berners-Lee_CP_2.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Tim_Berners-Lee_CP_2.jpg/440px-Tim_Berners-Lee_CP_2.jpg 2x" data-file-width="4288" data-file-height="2848"><figcaption><a href="/wikipedia/en/Tim_Berners-Lee" title="Tim Berners-Lee">Tim Berners-Lee</a></figcaption></figure>
+<p>The term <a href="/wikipedia/en/Hypertext" title="Hypertext">hypertext</a> was coined by <a href="/wikipedia/en/Ted_Nelson" title="Ted Nelson">Ted Nelson</a> in 1965 in the <a href="/wikipedia/en/Xanadu_Project" title="Xanadu Project">Xanadu Project</a>, which was in turn inspired by <a href="/wikipedia/en/Vannevar_Bush" title="Vannevar Bush">Vannevar Bush</a>'s 1930s vision of the microfilm-based information retrieval and management "<a href="/wikipedia/en/Memex" title="Memex">memex</a>" system described in his 1945 essay "<a href="/wikipedia/en/As_We_May_Think" title="As We May Think">As We May Think</a>". <a href="/wikipedia/en/Tim_Berners-Lee" title="Tim Berners-Lee">Tim Berners-Lee</a> and his team at <a href="/wikipedia/en/CERN" title="CERN">CERN</a> are credited with inventing the original HTTP, along with HTML and the associated technology for a web server and a text-based web browser. Berners-Lee first proposed the "WorldWideWeb" project in 1989—now known as the <a href="/wikipedia/en/World_Wide_Web" title="World Wide Web">World Wide Web</a>. The first version of the protocol had only one method, namely GET, which would request a page from a server.<sup id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> The response from the server was always an HTML page.<sup id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</p><p>The first documented version of HTTP was <b><a rel="nofollow" href="https://www.w3.org/pub/WWW/Protocols/HTTP/AsImplemented.html">HTTP V0.9</a></b> (1991). <a href="/wikipedia/en/Dave_Raggett" title="Dave Raggett">Dave Raggett</a> led the HTTP Working Group (HTTP WG) in 1995 and wanted to expand the protocol with extended operations, extended negotiation, richer meta-information, tied with a security protocol which became more efficient by adding additional methods and <a href="/wikipedia/en/List_of_HTTP_header_fields" title="List of HTTP header fields">header fields</a>.<sup id="cite_ref-raggettprofile_11-0"><a href="#cite_note-raggettprofile-11">[11]</a></sup><sup id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup> <a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc1945">1945</a> officially introduced and recognized HTTP V1.0 in 1996.
+</p><p>The HTTP WG planned to publish new standards in December 1995<sup id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> and the support for pre-standard HTTP/1.1 based on the then developing <a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc2068">2068</a> (called HTTP-NG) was rapidly adopted by the major browser developers in early 1996. By March that year, pre-standard HTTP/1.1 was supported in <a href="/wikipedia/en/Arena_(web_browser)" title="Arena (web browser)">Arena</a>,<sup id="cite_ref-simon_14-0"><a href="#cite_note-simon-14">[14]</a></sup> <a href="/wikipedia/en/Netscape_Navigator" title="Netscape Navigator">Netscape 2.0</a>,<sup id="cite_ref-simon_14-1"><a href="#cite_note-simon-14">[14]</a></sup> Netscape Navigator Gold 2.01,<sup id="cite_ref-simon_14-2"><a href="#cite_note-simon-14">[14]</a></sup> <a href="/wikipedia/en/Mosaic_(web_browser)" title="Mosaic (web browser)">Mosaic 2.7</a>,<sup>[<i>citation needed</i>]</sup> <a href="/wikipedia/en/Lynx_(web_browser)" title="Lynx (web browser)">Lynx 2.5</a>,<sup>[<i>citation needed</i>]</sup> and in <a href="/wikipedia/en/Internet_Explorer_2" title="Internet Explorer 2">Internet Explorer 2.0</a>.<sup>[<i>citation needed</i>]</sup> End-user adoption of the new browsers was rapid. In March 1996, one web hosting company reported that over 40% of browsers in use on the Internet were HTTP 1.1 compliant.<sup>[<i>citation needed</i>]</sup> That same web hosting company reported that by June 1996, 65% of all browsers accessing their servers were HTTP/1.1 compliant.<sup id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup> The HTTP/1.1 standard as defined in <a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc2068">2068</a> was officially released in January 1997. Improvements and updates to the HTTP/1.1 standard were released under <a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616">2616</a> in June 1999.
+</p><p>In 2007, the <b><a rel="nofollow" href="https://httpwg.org/">HTTP Working Group</a></b> was formed, in part, to revise and clarify the HTTP/1.1 specification. In June 2014, the WG released an updated six-part specification obsoleting <a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616">2616</a>:
+</p>
+<ul><li><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7230">7230</a>, <i>HTTP/1.1: Message Syntax and Routing</i></li>
+<li><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>, <i>HTTP/1.1: Semantics and Content</i></li>
+<li><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7232">7232</a>, <i>HTTP/1.1: Conditional Requests</i></li>
+<li><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7233">7233</a>, <i>HTTP/1.1: Range Requests</i></li>
+<li><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7234">7234</a>, <i>HTTP/1.1: Caching</i></li>
+<li><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7235">7235</a>, <i>HTTP/1.1: Authentication</i></li></ul>
+<p><a href="/wikipedia/en/HTTP/2" title="HTTP/2">HTTP/2</a> was published as <a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7540">7540</a> in May 2015.
+</p>
+<table>
+<tbody><tr>
+<th>Year
+</th>
+<th>HTTP Version
+</th></tr>
+<tr>
+<td>1991
+</td>
+<td>0.9
+</td></tr>
+<tr>
+<td>1996
+</td>
+<td>1.0
+</td></tr>
+<tr>
+<td>1997
+</td>
+<td>1.1
+</td></tr>
+<tr>
+<td>2015
+</td>
+<td><a href="/wikipedia/en/HTTP/2" title="HTTP/2">2.0</a>
+</td></tr>
+<tr>
+<td>2018
+</td>
+<td><a href="/wikipedia/en/HTTP/3" title="HTTP/3">3.0</a>
+</td></tr></tbody></table>
+<h2 id="http_session">HTTP session</h2>
+<p>An HTTP session is a sequence of network request-response transactions. An HTTP client initiates a request by establishing a <a href="/wikipedia/en/Transmission_Control_Protocol" title="Transmission Control Protocol">Transmission Control Protocol</a> (TCP) connection to a particular <a href="/wikipedia/en/TCP_and_UDP_port" title="TCP and UDP port">port</a> on a server (typically port 80, occasionally port 8080; see <a href="/wikipedia/en/List_of_TCP_and_UDP_port_numbers" title="List of TCP and UDP port numbers">List of TCP and UDP port numbers</a>). An HTTP server listening on that port waits for a client's request message. Upon receiving the request, the server sends back a status line, such as "HTTP/1.1 200 OK", and a message of its own. The body of this message is typically the requested resource, although an error message or other information may also be returned.<sup id="cite_ref-ietf2616_1-1"><a href="#cite_note-ietf2616-1">[1]</a></sup>
+</p>
+<h3 id="persistent_connections">Persistent connections</h3>
+  
+<p>In HTTP/0.9 and 1.0, the connection is closed after a single request/response pair. In HTTP/1.1 a keep-alive-mechanism was introduced, where a connection could be reused for more than one request. Such <i>persistent connections</i> reduce request <a href="/wikipedia/en/Latency_(engineering)" title="Latency (engineering)">latency</a> perceptibly, because the client does not need to re-negotiate the TCP 3-Way-Handshake connection after the first request has been sent. Another positive side effect is that, in general, the connection becomes faster with time due to TCP's <a href="/wikipedia/en/Slow-start" title="Slow-start">slow-start</a>-mechanism.
+</p><p>Version 1.1 of the protocol also made bandwidth optimization improvements to HTTP/1.0. For example, HTTP/1.1 introduced <a href="/wikipedia/en/Chunked_transfer_encoding" title="Chunked transfer encoding">chunked transfer encoding</a> to allow content on persistent connections to be streamed rather than buffered. <a href="/wikipedia/en/HTTP_pipelining" title="HTTP pipelining">HTTP pipelining</a> further reduces lag time, allowing clients to send multiple requests before waiting for each response. Another addition to the protocol was <a href="/wikipedia/en/Byte_serving" title="Byte serving">byte serving</a>, where a server transmits just the portion of a resource explicitly requested by a client.
+</p>
+<h3 id="http_session_state">HTTP session state</h3>
+<p>HTTP is a <a href="/wikipedia/en/Stateless_protocol" title="Stateless protocol">stateless protocol</a>. A stateless protocol does not require the <a href="/wikipedia/en/HTTP_server" title="HTTP server">HTTP server</a> to retain information or status about each user for the duration of multiple requests. However, some <a href="/wikipedia/en/Web_application" title="Web application">web applications</a> implement states or <a href="/wikipedia/en/Session_(computer_science)" title="Session (computer science)">server side sessions</a> using for instance <a href="/wikipedia/en/HTTP_cookie" title="HTTP cookie">HTTP cookies</a> or hidden <a href="/wikipedia/en/Variable_(computer_science)" title="Variable (computer science)">variables</a> within <a href="/wikipedia/en/Form_(web)" title="Form (web)">web forms</a>.
+</p>
+<h2 id="http_authentication">HTTP authentication</h2>
+<p>HTTP provides multiple authentication schemes such as <a href="/wikipedia/en/Basic_access_authentication" title="Basic access authentication">basic access authentication</a> and <a href="/wikipedia/en/Digest_access_authentication" title="Digest access authentication">digest access authentication</a> which operate via  a challenge-response mechanism whereby the server identifies and issues a challenge before serving the requested content.
+</p><p>HTTP provides a general framework for access control and authentication, via an extensible set of challenge-response authentication schemes, which can be used by a server to challenge a client request and by a client to provide authentication information.<sup id="cite_ref-ietf7235_16-0"><a href="#cite_note-ietf7235-16">[16]</a></sup>
+</p>
+<h3 id="authentication_realms">Authentication realms</h3>
+<p>The HTTP Authentication specification also provides an arbitrary, implementation-specific construct for further dividing resources common to a given root URI. The realm value string, if present, is combined with the canonical root URI to form the protection space component of the challenge. This in effect allows the server to define separate authentication scopes under one root URI.<sup id="cite_ref-ietf7235_16-1"><a href="#cite_note-ietf7235-16">[16]</a></sup>
+</p>
+<h2 id="message_format">Message format</h2>
+  
+<p>The client sends <b>requests</b> to the server and the server sends <b>responses</b>.
+</p>
+<h3 id="request_message">Request message</h3>
+<p>The request message consists of the following:
+</p>
+<ul><li>a request line (e.g., <i>GET /images/logo.png HTTP/1.1</i>, which requests a resource called <code>/images/logo.png</code> from the server.)</li>
+<li><a href="/wikipedia/en/HTTP_request_header_field" title="HTTP request header field">request header fields</a> (e.g., <i>Accept-Language: en</i>).</li>
+<li>an empty line</li>
+<li>an optional <a href="/wikipedia/en/HTTP_message_body" title="HTTP message body">message body</a></li></ul>
+<p>The request line and other header fields must each end with &lt;CR&gt;&lt;LF&gt; (that is, a <a href="/wikipedia/en/Carriage_return" title="Carriage return">carriage return</a> character followed by a <a href="/wikipedia/en/Line_feed" title="Line feed">line feed</a> character). The empty line must consist of only &lt;CR&gt;&lt;LF&gt; and no other <a href="/wikipedia/en/Whitespace_(computer_science)" title="Whitespace (computer science)">whitespace</a>.<sup id="cite_ref-ietf2616sec4_17-0"><a href="#cite_note-ietf2616sec4-17">[17]</a></sup> In the HTTP/1.1 protocol, all header fields except <i>Host</i> are optional.
+</p><p>A request line containing only the path name is accepted by servers to maintain compatibility with HTTP clients before the HTTP/1.0 specification in <a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc1945">1945</a>.<sup id="cite_ref-apacheweek_com-http11_18-0"><a href="#cite_note-apacheweek_com-http11-18">[18]</a></sup>
+</p>
+<h4 id="request_methods">Request methods</h4>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Http_request_telnet_ubuntu.png/220px-Http_request_telnet_ubuntu.png" decoding="async" width="220" height="157" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Http_request_telnet_ubuntu.png/330px-Http_request_telnet_ubuntu.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Http_request_telnet_ubuntu.png/440px-Http_request_telnet_ubuntu.png 2x" data-file-width="1194" data-file-height="852"><figcaption>An HTTP 1.1 request made using telnet. The <a href="/wikipedia/en/HTTP_request" title="HTTP request">request</a> message, <a href="/wikipedia/en/HTTP_response" title="HTTP response">response</a> header section, and response body are highlighted.</figcaption></figure>
+<p>HTTP defines methods (sometimes referred to as <i>verbs</i>, but nowhere in the specification does it mention <i>verb</i>, nor is OPTIONS or HEAD a verb) to indicate the desired action to be performed on the identified resource. What this resource represents, whether pre-existing data or data that is generated dynamically, depends on the implementation of the server. Often, the resource corresponds to a file or the output of an executable residing on the server. The HTTP/1.0 specification<sup id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> defined the GET, HEAD and POST methods and the HTTP/1.1 specification<sup id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup> added five new methods: OPTIONS, PUT, DELETE, TRACE and CONNECT. By being specified in these documents, their semantics are well-known and can be depended on. Any client can use any method and the server can be configured to support any combination of methods. If a method is unknown to an intermediate, it will be treated as an unsafe and <a href="/wikipedia/en/Idempotence" title="Idempotence">non-idempotent</a> method. There is no limit to the number of methods that can be defined and this allows for future methods to be specified without breaking existing infrastructure. For example, <a href="/wikipedia/en/WebDAV" title="WebDAV">WebDAV</a> defined 7 new methods and <a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc5789">5789</a> specified the <a href="/wikipedia/en/Patch_verb" title="Patch verb">PATCH</a> method.
+</p><p>Method names are case sensitive.<sup id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup><sup id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>  This is in contrast to HTTP header field names which are case-insensitive.<sup id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>
+</p>
+<dl><dt>GET</dt>
+<dd>The GET method requests a representation of the specified resource. Requests using GET should only <a href="/wikipedia/en/Data_retrieval" title="Data retrieval">retrieve data</a> and should have no other effect. (This is also true of some other HTTP methods.)<sup id="cite_ref-ietf2616_1-2"><a href="#cite_note-ietf2616-1">[1]</a></sup> The <a href="/wikipedia/en/W3C" title="W3C">W3C</a> has published guidance principles on this distinction, saying, "<a href="/wikipedia/en/Web_application" title="Web application">Web application</a> design should be informed by the above principles, but also by the relevant limitations."<sup id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup> See <a href="#Safe_methods">safe methods</a> below.</dd>
+<dt>HEAD</dt>
+<dd>The HEAD method asks for a response identical to that of a GET request, but without the response body. This is useful for retrieving meta-information written in response headers, without having to transport the entire content.</dd>
+<dt>POST</dt>
+<dd>The <a href="/wikipedia/en/POST_(HTTP)" title="POST (HTTP)">POST method</a> requests that the server accept the entity enclosed in the request as a new subordinate of the <a href="/wikipedia/en/Web_resource" title="Web resource">web resource</a> identified by the URI. The data POSTed might be, for example, an annotation for existing resources; a message for a bulletin board, newsgroup, mailing list, or comment thread; a block of data that is the result of submitting a <a href="/wikipedia/en/Form_(HTML)" title="Form (HTML)">web form</a> to a data-handling process; or an item to add to a database.<sup id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup></dd>
+<dt>PUT</dt>
+<dd>The PUT method requests that the enclosed entity be stored under the supplied <a href="/wikipedia/en/URI" title="URI">URI</a>. If the URI refers to an already existing resource, it is modified; if the URI does not point to an existing resource, then the server can create the resource with that URI.<sup id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup></dd>
+<dt>DELETE</dt>
+<dd>The DELETE method deletes the specified resource.</dd>
+<dt>TRACE</dt>
+<dd>The TRACE method echoes the received request so that a client can see what (if any) changes or additions have been made by intermediate servers.</dd>
+<dt>OPTIONS</dt>
+<dd>The OPTIONS method returns the HTTP methods that the server supports for the specified <a href="/wikipedia/en/URL" title="URL">URL</a>. This can be used to check the functionality of a web server by requesting '*' instead of a specific resource.</dd>
+<dt>CONNECT</dt>
+<dd><sup id="cite_ref-rfc2616.9.9_27-0"><a href="#cite_note-rfc2616.9.9-27">[27]</a></sup> The CONNECT method converts the request connection to a transparent <a href="/wikipedia/en/Tunneling_protocol" title="Tunneling protocol">TCP/IP tunnel</a>, usually to facilitate <a href="/wikipedia/en/Transport_Layer_Security" title="Transport Layer Security">SSL</a>-encrypted communication (HTTPS) through an unencrypted <a href="/wikipedia/en/HTTP_proxy" title="HTTP proxy">HTTP proxy</a>.<sup id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup><sup id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup> See <a href="/wikipedia/en/HTTP_tunnel#HTTP_CONNECT_method" title="HTTP tunnel">HTTP CONNECT method</a>.</dd>
+<dt>PATCH</dt>
+<dd>The PATCH method applies partial modifications to a resource.<sup id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup></dd></dl>
+<p>All general-purpose HTTP servers are required to implement at least the GET and HEAD methods, and all other methods are considered optional by the specification.<sup id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup>
+</p>
+<h5>Safe methods</h5>
+<p>Some of the  methods (for example, GET, HEAD, OPTIONS and TRACE) are, by convention, defined as <i>safe</i>, which means they are <a href="/wikipedia/en/Command%E2%80%93query_separation" title="Command–query separation">intended only for information retrieval</a> and should not change the state of the server. In other words, they should not have <a href="/wikipedia/en/Side_effect_(computer_science)" title="Side effect (computer science)">side effects</a>, beyond relatively harmless effects such as <a href="/wikipedia/en/Server_log" title="Server log">logging</a>, web caching, the serving of <a href="/wikipedia/en/Web_banner" title="Web banner">banner advertisements</a> or incrementing a <a href="/wikipedia/en/Web_counter" title="Web counter">web counter</a>. Making arbitrary GET requests without regard to the context of the application's state should therefore be considered safe. However, this is not mandated by the standard, and it is explicitly acknowledged that it cannot be guaranteed.
+</p><p>By contrast, methods such as POST, PUT, DELETE and PATCH are intended for actions that may cause side effects either on the server, or external side effects such as <a href="/wikipedia/en/ECommerce" title="ECommerce">financial transactions</a> or transmission of <a href="/wikipedia/en/Email" title="Email">email</a>. Such methods are therefore not usually used by conforming <a href="/wikipedia/en/Internet_bot" title="Internet bot">web robots</a> or web crawlers; some that do not conform tend to make requests without regard to context or consequences.
+</p><p>Despite the prescribed safety of <i>GET</i> requests, in practice their handling by the server is not technically limited in any way. Therefore, careless or deliberate programming can cause non-trivial changes on the server. This is discouraged, because it can cause problems for <a href="/wikipedia/en/Web_caching" title="Web caching">web caching</a>, <a href="/wikipedia/en/Search_engines" title="Search engines">search engines</a> and other automated agents, which can make unintended changes on the server. For example, a website might allow deletion of a resource through a URL such as <i>http://example.com/article/1234/delete</i>, which, if arbitrarily fetched, even using <i>GET</i>, would simply delete the article.<sup id="cite_ref-oreilly-get-rails_32-0"><a href="#cite_note-oreilly-get-rails-32">[32]</a></sup>
+</p><p>One example of this occurring in practice was during the short-lived <a href="/wikipedia/en/Google_Web_Accelerator" title="Google Web Accelerator">Google Web Accelerator</a> <a href="/wikipedia/en/Beta_test" title="Beta test">beta</a>, which prefetched arbitrary URLs on the page a user was viewing, causing records to be automatically altered or deleted <i>en masse</i>. The beta was suspended only weeks after its first release, following widespread criticism.<sup id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup><sup id="cite_ref-oreilly-get-rails_32-1"><a href="#cite_note-oreilly-get-rails-32">[32]</a></sup>
+</p>
+<h5>Idempotent methods and web applications</h5>
+<p>Methods PUT and DELETE are defined to be <a href="/wikipedia/en/Idempotent#Computer_science_meaning" title="Idempotent">idempotent</a>, meaning that multiple identical requests should have the same effect as a single request (note that idempotence refers to the state of the system after the request has completed, so while the action the server takes (e.g. deleting a record) or the response code it returns may be different on subsequent requests, the system state will be the same every time<sup>[<i>citation needed</i>]</sup>). Methods GET, HEAD, OPTIONS and TRACE, being prescribed as safe, should also be idempotent, as HTTP is a <a href="/wikipedia/en/Stateless_protocol" title="Stateless protocol">stateless protocol</a>.<sup id="cite_ref-ietf2616_1-3"><a href="#cite_note-ietf2616-1">[1]</a></sup>
+</p><p>In contrast, the POST method is not necessarily idempotent, and therefore sending an identical POST request multiple times may further affect state or cause further side effects (such as <a href="/wikipedia/en/Ecommerce" title="Ecommerce">financial transactions</a>). In some cases this may be desirable, but in other cases this could be due to an accident, such as when a user does not realize that their action will result in sending another request, or they did not receive adequate feedback that their first request was successful. While <a href="/wikipedia/en/Web_browser" title="Web browser">web browsers</a> may show <a href="/wikipedia/en/Alert_dialog_box" title="Alert dialog box">alert dialog boxes</a> to warn users in some cases where reloading a page may re-submit a POST request, it is generally up to the web application to handle cases where a POST request should not be submitted more than once.
+</p><p>Note that whether a method is idempotent is not enforced by the protocol or web server. It is perfectly possible to write a web application in which (for example) a database insert or other non-idempotent action is triggered by a GET or other request. Ignoring this recommendation, however, may result in undesirable consequences, if a <a href="/wikipedia/en/User_agent" title="User agent">user agent</a> assumes that repeating the same request is safe when it is not.
+</p>
+<h5>Security</h5>
+<p>The TRACE method can be used as part of a class of attacks known as <a href="/wikipedia/en/Cross-site_tracing" title="Cross-site tracing">cross-site tracing</a>; for that reason, common security advice is for it to be disabled in the server configuration.<sup id="cite_ref-OWASP-XST_34-0"><a href="#cite_note-OWASP-XST-34">[34]</a></sup> Microsoft <a href="/wikipedia/en/Internet_Information_Services" title="Internet Information Services">IIS</a> supports a proprietary "TRACK" method, which behaves similarly, and which is likewise recommended to be disabled.<sup id="cite_ref-OWASP-XST_34-1"><a href="#cite_note-OWASP-XST-34">[34]</a></sup>
+</p>
+<h5>Summary table</h5>
+<table>
+<tbody><tr>
+<th>HTTP method
+</th>
+<th>RFC
+</th>
+<th>Request has Body
+</th>
+<th>Response has Body
+</th>
+<th>Safe
+</th>
+<th>Idempotent
+</th>
+<th>Cacheable
+</th></tr>
+<tr>
+<td>GET
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>
+</td>
+<td>Optional
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td></tr>
+<tr>
+<td>HEAD
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>
+</td>
+<td>Optional
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td></tr>
+<tr>
+<td>POST
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>Yes
+</td></tr>
+<tr>
+<td>PUT
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>No
+</td></tr>
+<tr>
+<td>DELETE
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>
+</td>
+<td>Optional
+</td>
+<td>Yes
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>No
+</td></tr>
+<tr>
+<td>CONNECT
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>
+</td>
+<td>Optional
+</td>
+<td>Yes
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>No
+</td></tr>
+<tr>
+<td>OPTIONS
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>
+</td>
+<td>Optional
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>No
+</td></tr>
+<tr>
+<td>TRACE
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>
+</td>
+<td>No
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>No
+</td></tr>
+<tr>
+<td>PATCH
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments_(identifier)" title="Request for Comments (identifier)">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc5789">5789</a>
+</td>
+<td>Yes
+</td>
+<td>Yes
+</td>
+<td>No
+</td>
+<td>No
+</td>
+<td>No
+</td></tr></tbody></table>
+<h3 id="response_message">Response message</h3>
+<p>The response message consists of the following:
+</p>
+<ul><li>a status line which includes the <a href="/wikipedia/en/List_of_HTTP_status_codes" title="List of HTTP status codes">status code</a> and reason message (e.g., <i>HTTP/1.1 200 OK</i>, which indicates that the client's request succeeded.)</li>
+<li><a href="/wikipedia/en/HTTP_response_header_field" title="HTTP response header field">response header fields</a> (e.g., <i>Content-Type: text/html</i>)</li>
+<li>an empty line</li>
+<li>an optional <a href="/wikipedia/en/HTTP_message_body" title="HTTP message body">message body</a></li></ul>
+<p>The status line and other header fields must all end with &lt;CR&gt;&lt;LF&gt;. The empty line must consist of only &lt;CR&gt;&lt;LF&gt; and no other <a href="/wikipedia/en/Whitespace_(computer_science)" title="Whitespace (computer science)">whitespace</a>.<sup id="cite_ref-ietf2616sec4_17-1"><a href="#cite_note-ietf2616sec4-17">[17]</a></sup> This strict requirement for &lt;CR&gt;&lt;LF&gt; is relaxed somewhat within message bodies for consistent use of other system linebreaks such as &lt;CR&gt; or &lt;LF&gt; alone.<sup id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup>
+</p>
+<h4 id="status_codes">Status codes</h4>
+  
+<p>In HTTP/1.0 and since, the first line of the HTTP response is called the <i>status line</i> and includes a numeric <i>status code</i> (such as "<a href="/wikipedia/en/HTTP_404" title="HTTP 404">404</a>") and a textual <i>reason phrase</i> (such as "Not Found"). The way the <a href="/wikipedia/en/User_agent" title="User agent">user agent</a> handles the response depends primarily on the code, and secondarily on the other <a href="/wikipedia/en/HTTP_response_header_field" title="HTTP response header field">response header fields</a>. Custom status codes can be used, for if the user agent encounters a code it does not recognize, it can use the first digit of the code to determine the general class of the response.<sup id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup>
+</p><p>The standard <i>reason phrases</i> are only recommendations, and can be replaced with "local equivalents" at the <a href="/wikipedia/en/Web_developer" title="Web developer">web developer</a>'s discretion. If the status code indicated a problem, the user agent might display the <i>reason phrase</i> to the user to provide further information about the nature of the problem. The standard also allows the user agent to attempt to interpret the <i>reason phrase</i>, though this might be unwise since the standard explicitly specifies that status codes are machine-readable and <i>reason phrases</i> are human-readable. HTTP status code is primarily divided into five groups for better explanation of request and responses between client and server as named:
+</p>
+<ul><li>Informational <code>1XX</code></li>
+<li>Successful <code>2XX</code></li>
+<li>Redirection <code>3XX</code></li>
+<li>Client Error <code>4XX</code></li>
+<li>Server Error <code>5XX</code></li></ul>
+<h2 id="encrypted_connections">Encrypted connections</h2>
+<p>The most popular way of establishing an encrypted HTTP connection is HTTPS.<sup id="cite_ref-37"><a href="#cite_note-37">[37]</a></sup> Two other methods for establishing an encrypted HTTP connection also exist: <a href="/wikipedia/en/Secure_Hypertext_Transfer_Protocol" title="Secure Hypertext Transfer Protocol">Secure Hypertext Transfer Protocol</a>, and using the <a href="/wikipedia/en/HTTP/1.1_Upgrade_header" title="HTTP/1.1 Upgrade header">HTTP/1.1 Upgrade header</a> to specify an upgrade to TLS. Browser support for these two is, however, nearly non-existent.<sup id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup><sup id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup><sup id="cite_ref-40"><a href="#cite_note-40">[40]</a></sup>
+</p>
+<h2 id="example_session">Example session</h2>
+<p>Below is a sample conversation between an HTTP client and an HTTP server running on <a href="/wikipedia/en/Example.com" title="Example.com">www.example.com</a>, port 80.
+</p>
+<h3 id="client_request">Client request</h3>
+<div><pre><code>GET / HTTP/1.1
+Host: www.example.com
+</code></pre></div>
+<p>A client request (consisting in this case of the request line and only one header field) is followed by a blank line, so that the request ends with a double newline, each in the form of a <a href="/wikipedia/en/Carriage_return" title="Carriage return">carriage return</a> followed by a <a href="/wikipedia/en/Line_feed" title="Line feed">line feed</a>. The "Host" field distinguishes between various <a href="/wikipedia/en/Domain_Name_System" title="Domain Name System">DNS</a> names sharing a single <a href="/wikipedia/en/IP_address" title="IP address">IP address</a>, allowing name-based <a href="/wikipedia/en/Virtual_hosting" title="Virtual hosting">virtual hosting</a>. While optional in HTTP/1.0, it is mandatory in HTTP/1.1. (The "/" means /index.html if there is one.)
+</p>
+<h3 id="server_response">Server response</h3>
+<div><pre><code>HTTP/1.1 200 OK
+Date: Mon, 23 May 2005 22:38:34 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 138
+Last-Modified: Wed, 08 Jan 2003 23:11:55 GMT
+Server: Apache/1.3.3.7 (Unix) (Red-Hat/Linux)
+ETag: "3f80f-1b6-3e1cb03b"
+Accept-Ranges: bytes
+Connection: close
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;An Example Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Hello World, this is a very simple HTML document.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<p>The <a href="/wikipedia/en/HTTP_ETag" title="HTTP ETag">ETag</a> (entity tag) header field is used to determine if a cached version of the requested resource is identical to the current version of the resource on the server. <i>Content-Type</i> specifies the <a href="/wikipedia/en/Internet_media_type" title="Internet media type">Internet media type</a> of the data conveyed by the HTTP message, while <i>Content-Length</i> indicates its length in bytes. The HTTP/1.1 <a href="/wikipedia/en/Webserver" title="Webserver">webserver</a> publishes its ability to respond to requests for certain byte ranges of the document by setting the field <i>Accept-Ranges: bytes</i>. This is useful, if the client needs to have only certain portions<sup id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup> of a resource sent by the server, which is called <a href="/wikipedia/en/Byte_serving" title="Byte serving">byte serving</a>. When <i>Connection: close</i> is sent, it means that the <a href="/wikipedia/en/Web_server" title="Web server">web server</a> will close the <a href="/wikipedia/en/Transmission_Control_Protocol" title="Transmission Control Protocol">TCP</a> connection immediately after the transfer of this response.
+</p><p>Most of the header lines are optional. When <i>Content-Length</i> is missing the length is determined in other ways. Chunked transfer encoding uses a chunk size of 0 to mark the end of the content. <i>Identity</i> encoding without <i>Content-Length</i> reads content until the socket is closed.
+</p><p>A <i>Content-Encoding</i> like <i><a href="/wikipedia/en/Gzip" title="Gzip">gzip</a></i> can be used to compress the transmitted data.
+</p>
+<h2 id="similar_protocols">Similar protocols</h2>
+<p>The <a href="/wikipedia/en/Gopher_(protocol)" title="Gopher (protocol)">Gopher protocol</a> is a content delivery protocol that was displaced by HTTP in the early 1990s.
+The <a href="/wikipedia/en/SPDY" title="SPDY">SPDY</a> protocol is an alternative to HTTP developed at <a href="/wikipedia/en/Google" title="Google">Google</a>, it is superseded by the new HTTP protocol,  <a href="/wikipedia/en/HTTP/2" title="HTTP/2">HTTP/2</a>.
+</p>
+<h2 id="see_also">See also</h2>
+  
+<ul><li><a href="/wikipedia/en/Comparison_of_file_transfer_protocols" title="Comparison of file transfer protocols">Comparison of file transfer protocols</a></li>
+<li><a href="/wikipedia/en/Constrained_Application_Protocol" title="Constrained Application Protocol">Constrained Application Protocol</a> – a semantically similar protocol to HTTP but used UDP or UDP-like messages targeted for devices with limited processing capability; re-uses HTTP and other internet concepts like <a href="/wikipedia/en/Internet_media_type" title="Internet media type">Internet media type</a> and web linking (RFC 5988)<sup id="cite_ref-42"><a href="#cite_note-42">[42]</a></sup></li>
+<li><a href="/wikipedia/en/Content_negotiation" title="Content negotiation">Content negotiation</a></li>
+<li><a href="/wikipedia/en/Curl-loader" title="Curl-loader">Curl-loader</a> – HTTP/S loading and testing open-source software</li>
+<li><a href="/wikipedia/en/Digest_access_authentication" title="Digest access authentication">Digest access authentication</a></li>
+<li><a href="/wikipedia/en/Fiddler_(software)" title="Fiddler (software)">Fiddler (software)</a></li>
+<li><a href="/wikipedia/en/HTTP_compression" title="HTTP compression">HTTP compression</a></li>
+<li><a href="/wikipedia/en/HTTP/2" title="HTTP/2">HTTP/2</a> – developed by the IETF's Hypertext Transfer Protocol (httpbis) working group<sup id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup></li>
+<li>HTTP-MPLEX – A backwards compatible enhancement to HTTP to improve page and web object retrieval time in congested networks proposed by Robert Mattson</li>
+<li><a href="/wikipedia/en/List_of_HTTP_header_fields" title="List of HTTP header fields">List of HTTP header fields</a></li>
+<li><a href="/wikipedia/en/List_of_HTTP_status_codes" title="List of HTTP status codes">List of HTTP status codes</a></li>
+<li><a href="/wikipedia/en/Representational_state_transfer" title="Representational state transfer">Representational state transfer</a> (REST)</li>
+<li><a href="/wikipedia/en/Variant_object" title="Variant object">Variant object</a></li>
+<li><a href="/wikipedia/en/Web_cache" title="Web cache">Web cache</a></li>
+<li><a href="/wikipedia/en/WebSocket" title="WebSocket">WebSocket</a></li>
+<li><a href="/wikipedia/en/Wireshark" title="Wireshark">Wireshark</a></li></ul>
+<h2 id="references">References</h2>
+<div>
+<div><ol>
+<li id="cite_note-ietf2616-1">^ <a href="#cite_ref-ietf2616_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ietf2616_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-ietf2616_1-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-ietf2616_1-3"><sup><i><b>d</b></i></sup></a> <cite id="IETF_RFC_2616">Fielding, Roy T.; Gettys, James; Mogul, Jeffrey C.; Nielsen, Henrik Frystyk; Masinter, Larry; Leach, Paul J.; Berners-Lee, Tim (June 1999). <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616"><i>Hypertext Transfer Protocol – HTTP/1.1</i></a>. <a href="/wikipedia/en/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">IETF</a>. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC2616">10.17487/RFC2616</a>. RFC 2616.</cite>
+</li>
+<li id="cite_note-rfc7301-2"><b><a href="#cite_ref-rfc7301_2-0">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc7301">"Transport Layer Security (TLS) Application-Layer Protocol Negotiation Extension"</a>. IETF. July 2014. <a href="/wikipedia/en/Request_for_Comments" title="Request for Comments">RFC</a> <a rel="nofollow" href="//tools.ietf.org/html/rfc7301">7301</a>.</cite>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <cite>Belshe, M.; Peon, R.; Thomson, M. <a rel="nofollow" href="https://http2.github.io/http2-spec/#TLSUsage">"Hypertext Transfer Protocol Version 2, Use of TLS Features"</a>. Retrieved 2015-02-10.</cite>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <cite>Bishop, Mike (July 9, 2019). <a rel="nofollow" href="https://tools.ietf.org/html/draft-ietf-quic-http-22">draft-ietf-quic-http-22  Hypertext Transfer Protocol Version 3 (HTTP/3) "Hypertext Transfer Protocol Version 3 (HTTP/3)"</a> Check <code>|url=</code> value (help). <i>tools.ietf.org</i>. Retrieved 2019-08-16.</cite>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <cite>Cimpanu, Catalin. <a rel="nofollow" href="https://www.zdnet.com/article/http-over-quic-to-be-renamed-http3/">"HTTP-over-QUIC to be renamed HTTP/3 | ZDNet"</a>. <i>ZDNet</i>. Retrieved 2018-11-19.</cite>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <cite>Cimpanu, Catalin (26 September 2019). <a rel="nofollow" href="https://www.zdnet.com/article/cloudflare-google-chrome-and-firefox-add-http3-support/">"Cloudflare, Google Chrome, and Firefox add HTTP/3 support"</a>. <i>ZDNet</i>. Retrieved 27 September 2019.</cite>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <cite><a rel="nofollow" href="https://blog.cloudflare.com/http3-the-past-present-and-future/">"HTTP/3: the past, the present, and the future"</a>. <i>The Cloudflare Blog</i>. 2019-09-26. Retrieved 2019-10-30.</cite>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc2616#section-1.4">"Overall Operation"</a>. <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616"><i>RFC 2616</i></a>. p. 12. sec. 1.4. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC2616">10.17487/RFC2616</a>. <a href="#IETF_RFC_2616">RFC 2616</a>.</cite>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <cite>Berners-Lee, Tim. <a rel="nofollow" href="https://www.w3.org/History/19921103-hypertext/hypertext/WWW/Protocols/HTTP.html">"HyperText Transfer Protocol"</a>. <a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a>. Retrieved 31 August 2010.</cite>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <cite><a href="/wikipedia/en/Tim_Berners-Lee" title="Tim Berners-Lee">Tim Berners-Lee</a>. <a rel="nofollow" href="https://www.w3.org/Protocols/HTTP/AsImplemented.html">"The Original HTTP as defined in 1991"</a>. World Wide Web Consortium. Retrieved 24 July 2010.</cite>
+</li>
+<li id="cite_note-raggettprofile-11"><b><a href="#cite_ref-raggettprofile_11-0">^</a></b> <cite>Raggett, Dave. <a rel="nofollow" href="https://www.w3.org/People/Raggett/profile.html">"Dave Raggett's Bio"</a>. World Wide Web Consortium. Retrieved 11 June 2010.</cite>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <cite>Raggett, Dave; Berners-Lee, Tim. <a rel="nofollow" href="https://www.w3.org/Arena/webworld/httpwgcharter.html">"Hypertext Transfer Protocol Working Group"</a>. World Wide Web Consortium. Retrieved 29 September 2010.</cite>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <cite>Raggett, Dave. <a rel="nofollow" href="https://www.w3.org/Arena/webworld/httpwgplans.html">"HTTP WG Plans"</a>. World Wide Web Consortium. Retrieved 29 September 2010.</cite>
+</li>
+<li id="cite_note-simon-14">^ <a href="#cite_ref-simon_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-simon_14-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-simon_14-2"><sup><i><b>c</b></i></sup></a> <cite>Simon Spero. <a rel="nofollow" href="https://www.w3.org/Protocols/HTTP-NG/http-ng-status.html">"Progress on HTTP-NG"</a>. World Wide Web Consortium. Retrieved 11 June 2010.</cite>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <cite><a rel="nofollow" href="https://webarchive.loc.gov/all/20011121001051/https://www.webcom.com/glossary/http1.1.shtml">"HTTP/1.1"</a>. <i>Webcom.com Glossary entry</i>. Archived from <a rel="nofollow" href="https://www.webcom.com/glossary/http1.1.shtml">the original</a> on 2001-11-21. Retrieved 2009-05-29.</cite>
+</li>
+<li id="cite_note-ietf7235-16">^ <a href="#cite_ref-ietf7235_16-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ietf7235_16-1"><sup><i><b>b</b></i></sup></a> <cite id="IETF_RFC_7235">Fielding, Roy T.; Reschke, Julian F. (June 2014). <a rel="nofollow" href="https://tools.ietf.org/html/rfc7235"><i>Hypertext Transfer Protocol (HTTP/1.1): Authentication</i></a>. IETF. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC7235">10.17487/RFC7235</a>. RFC 7235.</cite>
+</li>
+<li id="cite_note-ietf2616sec4-17">^ <a href="#cite_ref-ietf2616sec4_17-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ietf2616sec4_17-1"><sup><i><b>b</b></i></sup></a> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc2616#section-4">"HTTP Message"</a>. <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616"><i>RFC 2616</i></a>. p. 31. sec. 4. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC2616">10.17487/RFC2616</a>. <a href="#IETF_RFC_2616">RFC 2616</a>.</cite>
+</li>
+<li id="cite_note-apacheweek_com-http11-18"><b><a href="#cite_ref-apacheweek_com-http11_18-0">^</a></b> <cite><a rel="nofollow" href="http://www.apacheweek.com/features/http11">"Apache Week. HTTP/1.1"</a>.</cite>  090502 apacheweek.com
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <cite>Berners-Lee, Tim; Fielding, Roy T.; Nielsen, Henrik Frystyk. <a rel="nofollow" href="https://tools.ietf.org/html/rfc1945#section-8">"Method Definitions"</a>. <a rel="nofollow" href="https://tools.ietf.org/html/rfc1945"><i>Hypertext Transfer Protocol – HTTP/1.0</i></a>. IETF. pp. 30–32. sec. 8. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC1945">10.17487/RFC1945</a>. RFC 1945.</cite>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc2616#section-9">"Method Definitions"</a>. <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616"><i>RFC 2616</i></a>. pp. 51–57. sec. 9. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC2616">10.17487/RFC2616</a>. <a href="#IETF_RFC_2616">RFC 2616</a>.</cite>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc7230#section-3.1.1">"RFC-7210 section 3.1.1"</a>. Tools.ietf.org. Retrieved 2019-06-26.</cite>
+</li>
+<li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc7231#section-4.1">"RFC-7231 section 4.1"</a>. Tools.ietf.org. Retrieved 2019-06-26.</cite>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc7230#section-3.2">"RFC-7230 section 3.2"</a>. Tools.ietf.org. Retrieved 2019-06-26.</cite>
+</li>
+<li id="cite_note-24"><b><a href="#cite_ref-24">^</a></b> <cite>Jacobs, Ian (2004). <a rel="nofollow" href="https://www.w3.org/2001/tag/doc/whenToUseGet.html#checklist">"URIs, Addressability, and the use of HTTP GET and POST"</a>. <i>Technical Architecture Group finding</i>. W3C. Retrieved 26 September 2010.</cite>
+</li>
+<li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc2616#section-9.5">"POST"</a>. <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616"><i>RFC 2616</i></a>. p. 54. sec. 9.5. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC2616">10.17487/RFC2616</a>. <a href="#IETF_RFC_2616">RFC 2616</a>.</cite>
+</li>
+<li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc2616#section-9.6">"PUT"</a>. <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616"><i>RFC 2616</i></a>. p. 55. sec. 9.6. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC2616">10.17487/RFC2616</a>. <a href="#IETF_RFC_2616">RFC 2616</a>.</cite>
+</li>
+<li id="cite_note-rfc2616.9.9-27"><b><a href="#cite_ref-rfc2616.9.9_27-0">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc2616#section-9.9">"CONNECT"</a>. <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616"><i>Hypertext Transfer Protocol – HTTP/1.1</i></a>. IETF. June 1999. p. 57. sec. 9.9. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC2616">10.17487/RFC2616</a>. RFC 2616. Retrieved 23 February 2014.</cite>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <cite>Khare, Rohit; Lawrence, Scott (May 2000). <a rel="nofollow" href="https://tools.ietf.org/html/rfc2817"><i>Upgrading to TLS Within HTTP/1.1</i></a>. IETF. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC2817">10.17487/RFC2817</a>. RFC 2817.</cite>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <cite><a rel="nofollow" href="https://www.kb.cert.org/vuls/id/150227">"Vulnerability Note VU#150227: HTTP proxy default configurations allow arbitrary TCP connections"</a>. <a href="/wikipedia/en/CERT_Coordination_Center" title="CERT Coordination Center">US-CERT</a>. 2002-05-17. Retrieved 2007-05-10.</cite>
+</li>
+<li id="cite_note-30"><b><a href="#cite_ref-30">^</a></b> <cite>Dusseault, Lisa; Snell, James M. (March 2010). <a rel="nofollow" href="https://tools.ietf.org/html/rfc5789"><i>PATCH Method for HTTP</i></a>. IETF. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC5789">10.17487/RFC5789</a>. RFC 5789.</cite>
+</li>
+<li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc2616#section-5.1.1">"Method"</a>. <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616"><i>RFC 2616</i></a>. p. 36. sec. 5.1.1. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC2616">10.17487/RFC2616</a>. <a href="#IETF_RFC_2616">RFC 2616</a>.</cite>
+</li>
+<li id="cite_note-oreilly-get-rails-32">^ <a href="#cite_ref-oreilly-get-rails_32-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-oreilly-get-rails_32-1"><sup><i><b>b</b></i></sup></a> <cite>Ediger, Brad (2007-12-21). <a rel="nofollow" href="https://shop.oreilly.com/product/9780596510329.do"><i>Advanced Rails: Building Industrial-Strength Web Apps in Record Time</i></a>. O'Reilly Media, Inc. p. 188. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> <bdi>978-0596519728</bdi>. <q>A common mistake is to use GET for an action that updates a resource. [...] This problem came into the Rails public eye in 2005, when the Google Web Accelerator was released.</q></cite>
+</li>
+<li id="cite_note-33"><b><a href="#cite_ref-33">^</a></b> <cite>Cantrell, Christian (2005-06-01). <a rel="nofollow" href="https://web.archive.org/web/20170819161233/http://blogs.adobe.com:80/cantrell/archives/2005/06/what_have_we_le.html">"What Have We Learned From the Google Web Accelerator?"</a>. <i>Adobe Blogs</i>. Adobe. Archived from <a rel="nofollow" href="https://blogs.adobe.com/cantrell/archives/2005/06/what_have_we_le.html">the original</a> on 2017-08-19.</cite>
+</li>
+<li id="cite_note-OWASP-XST-34">^ <a href="#cite_ref-OWASP-XST_34-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-OWASP-XST_34-1"><sup><i><b>b</b></i></sup></a> <cite><a rel="nofollow" href="https://www.owasp.org/index.php/Cross_Site_Tracing">"Cross Site Tracing"</a>. <a href="/wikipedia/en/OWASP" title="OWASP">OWASP</a>. Retrieved 2016-06-22.</cite>
+</li>
+<li id="cite_note-35"><b><a href="#cite_ref-35">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc2616#section-3.7.1">"Canonicalization and Text Defaults"</a>. <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616"><i>RFC 2616</i></a>. sec. 3.7.1. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC2616">10.17487/RFC2616</a>. <a href="#IETF_RFC_2616">RFC 2616</a>.</cite>
+</li>
+<li id="cite_note-36"><b><a href="#cite_ref-36">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc2616#section-6.1">"Status-Line"</a>. <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616"><i>RFC 2616</i></a>. p. 39. sec. 6.1. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC2616">10.17487/RFC2616</a>. <a href="#IETF_RFC_2616">RFC 2616</a>.</cite>
+</li>
+<li id="cite_note-37"><b><a href="#cite_ref-37">^</a></b> <cite>Canavan, John (2001). <i>Fundamentals of Networking Security</i>. Norwood, MA: Artech House. pp. 82–83. <a href="/wikipedia/en/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a> <bdi>9781580531764</bdi>.</cite>
+</li>
+<li id="cite_note-38"><b><a href="#cite_ref-38">^</a></b> <cite>Zalewski, Michal. <a rel="nofollow" href="https://code.google.com/p/browsersec/wiki/Part1#True_URL_schemes">"Browser Security Handbook"</a>. Retrieved 30 April 2015.</cite>
+</li>
+<li id="cite_note-39"><b><a href="#cite_ref-39">^</a></b> <cite><a rel="nofollow" href="https://code.google.com/p/chromium/issues/detail?id=4527">"Chromium Issue 4527: implement RFC 2817: Upgrading to TLS Within HTTP/1.1"</a>. Retrieved 30 April 2015.</cite>
+</li>
+<li id="cite_note-40"><b><a href="#cite_ref-40">^</a></b> <cite><a rel="nofollow" href="https://bugzilla.mozilla.org/show_bug.cgi?id=276813">"Mozilla Bug 276813 – [RFE] Support RFC 2817 / TLS Upgrade for HTTP 1.1"</a>. Retrieved 30 April 2015.</cite>
+</li>
+<li id="cite_note-41"><b><a href="#cite_ref-41">^</a></b> <cite>Luotonen, Ari; Franks, John (February 22, 1996). <a rel="nofollow" href="https://tools.ietf.org/html/draft-ietf-http-range-retrieval-00"><i>Byte Range Retrieval Extension to HTTP</i></a>. IETF. I-D draft-ietf-http-range-retrieval-00.</cite>
+</li>
+<li id="cite_note-42"><b><a href="#cite_ref-42">^</a></b> <cite>Nottingham, Mark (October 2010). <a rel="nofollow" href="https://tools.ietf.org/html/rfc5988"><i>Web Linking</i></a>. IETF. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="//doi.org/10.17487%2FRFC5988">10.17487/RFC5988</a>. RFC 5988.</cite>
+</li>
+<li id="cite_note-43"><b><a href="#cite_ref-43">^</a></b> <cite><a rel="nofollow" href="https://datatracker.ietf.org/wg/httpbis/charter/">"Hypertext Transfer Protocol Bis (httpbis) – Charter"</a>. IETF. 2012.</cite>
+</li>
+</ol></div></div>
+<p><br>
+</p>
+<h2 id="external_links">External links</h2>
+  
+<ul><li><cite><a rel="nofollow" href="https://www.w3.org/Protocols/History.html">"Change History for HTTP"</a>. W3.org. Retrieved 2010-08-01.</cite>  A detailed technical history of HTTP.</li>
+<li><cite><a rel="nofollow" href="https://www.w3.org/Protocols/DesignIssues.html">"Design Issues for HTTP"</a>. W3.org. Retrieved 2010-08-01.</cite>  Design Issues by Berners-Lee when he was designing the protocol.</li>
+<li><cite><a rel="nofollow" href="https://www.w3.org/Protocols/Classic.html">"Classic HTTP Documents"</a>. W3.org. 1998-05-14. Retrieved 2010-08-01.</cite>  list of other classic documents recounting the early protocol history</li>
+<li><a rel="nofollow" href="https://www.w3.org/Protocols/HTTP/AsImplemented.html">HTTP 0.9 – As Implemented in 1991</a></li>
+<li><a rel="nofollow" href="https://http2.co/">HTTP/2 Website Online Tester</a></li></ul>
+<div aria-labelledby="Web_browsers" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="Web_browsers"><a href="/wikipedia/en/Web_browser" title="Web browser">Web browsers</a></div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="col" colspan="2"><div id="Features_·_standards_·_protocols">Features <b>·</b>  standards <b>·</b>  protocols</div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="row">Features</th><td><div>
+<ul><li><a href="/wikipedia/en/Bookmark_(digital)" title="Bookmark (digital)">Bookmarks</a></li>
+<li><a href="/wikipedia/en/Browser_extension" title="Browser extension">Extensions</a></li>
+<li><a href="/wikipedia/en/Private_browsing" title="Private browsing">Privacy mode</a></li>
+<li><a href="/wikipedia/en/Browser_synchronization" title="Browser synchronization">Sync</a></li></ul>
+</div></td></tr><tr><th scope="row">Web standards</th><td><div>
+<ul><li><a href="/wikipedia/en/HTML" title="HTML">HTML</a>
+<ul><li><a href="/wikipedia/en/HTML5" title="HTML5">v5</a></li></ul></li>
+<li><a href="/wikipedia/en/Cascading_Style_Sheets" title="Cascading Style Sheets">CSS</a></li>
+<li><a href="/wikipedia/en/Document_Object_Model" title="Document Object Model">DOM</a></li>
+<li><a href="/wikipedia/en/JavaScript" title="JavaScript">JavaScript</a>
+<ul><li><a href="/wikipedia/en/Indexed_Database_API" title="Indexed Database API">IndexedDB</a></li>
+<li><a href="/wikipedia/en/Web_storage" title="Web storage">Web storage</a></li>
+<li><a href="/wikipedia/en/WebAssembly" title="WebAssembly">WebAssembly</a></li>
+<li><a href="/wikipedia/en/WebGL" title="WebGL">WebGL</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row">Protocols</th><td><div>
+<ul><li><a>HTTP</a>
+<ul><li><a href="/wikipedia/en/HTTP/2" title="HTTP/2">v2</a></li>
+<li><a href="/wikipedia/en/HTTP/3" title="HTTP/3">v3</a></li>
+<li><a href="/wikipedia/en/HTTP_cookie" title="HTTP cookie">Cookies</a></li>
+<li><a href="/wikipedia/en/HTTPS" title="HTTPS">Encryption</a></li></ul></li>
+<li><a href="/wikipedia/en/Online_Certificate_Status_Protocol" title="Online Certificate Status Protocol">OCSP</a></li>
+<li><a href="/wikipedia/en/WebRTC" title="WebRTC">WebRTC</a></li>
+<li><a href="/wikipedia/en/WebSocket" title="WebSocket">WebSocket</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="2"><table><tbody><tr><th scope="col" colspan="2"><div id="Active">Active</div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="row"><a href="/wikipedia/en/Blink_(browser_engine)" title="Blink (browser engine)">Blink</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/Avast_Secure_Browser" title="Avast Secure Browser">Avast Secure Browser</a></li>
+<li><a href="/wikipedia/en/Beaker_(web_browser)" title="Beaker (web browser)">Beaker</a></li>
+<li><a href="/wikipedia/en/Blisk_(browser)" title="Blisk (browser)">Blisk</a></li>
+<li><a href="/wikipedia/en/Brave_(web_browser)" title="Brave (web browser)">Brave</a></li>
+<li><a href="/wikipedia/en/Google_Chrome" title="Google Chrome">Chrome</a></li>
+<li><a href="/wikipedia/en/Chromium_(web_browser)" title="Chromium (web browser)">Chromium</a></li>
+<li><a href="/wikipedia/en/C%E1%BB%91c_C%E1%BB%91c" title="Cốc Cốc">Coc Coc</a></li>
+<li><a href="/wikipedia/en/Comodo_Dragon" title="Comodo Dragon">Dragon</a></li>
+<li><a href="/wikipedia/en/Epic_(web_browser)" title="Epic (web browser)">Epic</a></li>
+<li><a href="/wikipedia/en/Falkon" title="Falkon">Falkon</a></li>
+<li><a href="/wikipedia/en/Kinza_browser" title="Kinza browser">Kinza</a></li>
+<li><a href="/wikipedia/en/Maxthon" title="Maxthon">Maxthon</a></li>
+<li><a href="/wikipedia/en/Opera_(web_browser)" title="Opera (web browser)">Opera</a></li>
+<li><a href="/wikipedia/en/Otter_Browser" title="Otter Browser">Otter</a></li>
+<li><a href="/wikipedia/en/Puffin_Browser" title="Puffin Browser">Puffin </a></li>
+<li><a href="/wikipedia/en/SalamWeb" title="SalamWeb">SalamWeb</a></li>
+<li><a href="/wikipedia/en/Samsung_Internet" title="Samsung Internet">Samsung Internet</a></li>
+<li><a href="/wikipedia/en/Amazon_Silk" title="Amazon Silk">Silk</a></li>
+<li><a href="/wikipedia/en/Sleipnir_(web_browser)" title="Sleipnir (web browser)">Sleipnir</a></li>
+<li><a href="/wikipedia/en/Sputnik_(search_engine)" title="Sputnik (search engine)">Sputnik</a></li>
+<li><a href="/wikipedia/en/SRWare_Iron" title="SRWare Iron">SRWare</a></li>
+<li><a href="/wikipedia/en/Torch_(browser)" title="Torch (browser)">Torch</a></li>
+<li><a href="/wikipedia/en/UC_Browser" title="UC Browser">UC</a></li>
+<li><a href="/wikipedia/en/Vivaldi_(web_browser)" title="Vivaldi (web browser)">Vivaldi</a></li>
+<li><a href="/wikipedia/en/Naver_Whale" title="Naver Whale">Whale</a></li>
+<li><a href="/wikipedia/en/Yandex_Browser" title="Yandex Browser">Yandex</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Gecko_(software)" title="Gecko (software)">Gecko</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/Firefox" title="Firefox">Firefox</a></li>
+<li><a href="/wikipedia/en/GNU_IceCat" title="GNU IceCat">GNU IceCat</a></li>
+<li><a href="/wikipedia/en/Comodo_IceDragon" title="Comodo IceDragon">IceDragon</a></li>
+<li><a href="/wikipedia/en/K-Meleon" title="K-Meleon">K-Meleon</a></li>
+<li><a href="/wikipedia/en/PirateBrowser" title="PirateBrowser">PirateBrowser</a></li>
+<li><a href="/wikipedia/en/SeaMonkey" title="SeaMonkey">SeaMonkey</a></li>
+<li><a href="/wikipedia/en/TenFourFox" title="TenFourFox">TenFourFox</a></li>
+<li><a href="/wikipedia/en/Tor_Browser" title="Tor Browser">Tor</a></li>
+<li><a href="/wikipedia/en/Waterfox" title="Waterfox">Waterfox</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/WebKit" title="WebKit">WebKit</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/Dolphin_Browser" title="Dolphin Browser">Dolphin</a></li>
+<li><a href="/wikipedia/en/Dooble" title="Dooble">Dooble</a></li>
+<li><a href="/wikipedia/en/GNOME_Web" title="GNOME Web">GNOME Web</a></li>
+<li><a href="/wikipedia/en/ICab" title="ICab">iCab</a></li>
+<li><a href="/wikipedia/en/Konqueror" title="Konqueror">Konqueror</a></li>
+<li><a href="/wikipedia/en/Midori_(web_browser)" title="Midori (web browser)">Midori</a></li>
+<li><a href="/wikipedia/en/OmniWeb" title="OmniWeb">OmniWeb</a></li>
+<li><a href="/wikipedia/en/Safari_(web_browser)" title="Safari (web browser)">Safari</a></li>
+<li><a href="/wikipedia/en/Surf_(web_browser)" title="Surf (web browser)">surf</a></li></ul>
+</div></td></tr><tr><th scope="row">Other</th><td><div>
+<ul><li><a href="/wikipedia/en/360_Secure_Browser" title="360 Secure Browser">360</a></li>
+<li><a href="/wikipedia/en/Avant_Browser" title="Avant Browser">Avant</a></li>
+<li><a href="/wikipedia/en/Basilisk_(web_browser)" title="Basilisk (web browser)">Basilisk</a></li>
+<li><a href="/wikipedia/en/CM_Browser" title="CM Browser">CM Browser</a></li>
+<li><a href="/wikipedia/en/Microsoft_Edge" title="Microsoft Edge">Edge</a></li>
+<li><a href="/wikipedia/en/Eww_(web_browser)" title="Eww (web browser)">eww</a></li>
+<li><a href="/wikipedia/en/Internet_Explorer" title="Internet Explorer">Internet Explorer</a></li>
+<li><a href="/wikipedia/en/Links_(web_browser)" title="Links (web browser)">Links</a></li>
+<li><a href="/wikipedia/en/Lunascape" title="Lunascape">Lunascape</a></li>
+<li><a href="/wikipedia/en/Lynx_(web_browser)" title="Lynx (web browser)">Lynx</a></li>
+<li><a href="/wikipedia/en/NetFront" title="NetFront">NetFront</a></li>
+<li><a href="/wikipedia/en/NetSurf" title="NetSurf">NetSurf</a></li>
+<li><a href="/wikipedia/en/Pale_Moon_(web_browser)" title="Pale Moon (web browser)">Pale Moon</a></li>
+<li><a href="/wikipedia/en/QQ_browser" title="QQ browser">QQ browser</a></li>
+<li><a href="/wikipedia/en/Qutebrowser" title="Qutebrowser">qutebrowser</a></li>
+<li><a href="/wikipedia/en/SlimBrowser" title="SlimBrowser">SlimBrowser</a></li>
+<li><a href="/wikipedia/en/W3m" title="W3m">w3m</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="2"><table><tbody><tr><th scope="col" colspan="2"><div id="Discontinued">Discontinued</div></th></tr><tr><td colspan="2"><table><tbody><tr><th scope="row"><a href="/wikipedia/en/Gecko_(software)" title="Gecko (software)">Gecko</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/Beonex_Communicator" title="Beonex Communicator">Beonex Communicator</a></li>
+<li><a href="/wikipedia/en/Camino_(web_browser)" title="Camino (web browser)">Camino</a></li>
+<li><a href="/wikipedia/en/Classilla" title="Classilla">Classilla</a></li>
+<li><a href="/wikipedia/en/Conkeror" title="Conkeror">Conkeror</a></li>
+<li><a href="/wikipedia/en/Galeon" title="Galeon">Galeon</a></li>
+<li><a href="/wikipedia/en/Ghostzilla" title="Ghostzilla">Ghostzilla</a></li>
+<li><a href="/wikipedia/en/Kazehakase" title="Kazehakase">Kazehakase</a></li>
+<li><a href="/wikipedia/en/Kylo_(web_browser)" title="Kylo (web browser)">Kylo</a></li>
+<li><a href="/wikipedia/en/IBM_Lotus_Symphony" title="IBM Lotus Symphony">Lotus</a></li>
+<li><a href="/wikipedia/en/MicroB" title="MicroB">MicroB</a></li>
+<li><a href="/wikipedia/en/Minimo" title="Minimo">Minimo</a></li>
+<li><a href="/wikipedia/en/Mozilla_Application_Suite" title="Mozilla Application Suite">Mozilla suite</a></li>
+<li><a href="/wikipedia/en/AT%26T_Pogo" title="AT&amp;T Pogo">Pogo</a></li>
+<li><a href="/wikipedia/en/Kirix_Strata" title="Kirix Strata">Strata</a></li>
+<li><a href="/wikipedia/en/Swiftfox" title="Swiftfox">Swiftfox</a></li>
+<li><a href="/wikipedia/en/Swiftweasel" title="Swiftweasel">Swiftweasel</a></li>
+<li><a href="/wikipedia/en/Timberwolf_(web_browser)" title="Timberwolf (web browser)">Timberwolf</a></li>
+<li><a href="/wikipedia/en/XB_Browser" title="XB Browser">xB</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Trident_(software)" title="Trident (software)">Trident</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/AOL_Explorer" title="AOL Explorer">AOL</a></li>
+<li><a href="/wikipedia/en/Deepnet_Explorer" title="Deepnet Explorer">Deepnet</a></li>
+<li><a href="/wikipedia/en/GreenBrowser" title="GreenBrowser">GreenBrowser</a></li>
+<li><a href="/wikipedia/en/MediaBrowser" title="MediaBrowser">MediaBrowser</a></li>
+<li><a href="/wikipedia/en/MenuBox" title="MenuBox">MenuBox</a></li>
+<li><a href="/wikipedia/en/NeoPlanet" title="NeoPlanet">NeoPlanet</a></li>
+<li><a href="/wikipedia/en/NetCaptor" title="NetCaptor">NetCaptor</a></li>
+<li><a href="/wikipedia/en/SpaceTime_(software)#SpaceTime_Browser" title="SpaceTime (software)">SpaceTime</a></li>
+<li><a href="/wikipedia/en/UltraBrowser" title="UltraBrowser">UltraBrowser</a></li>
+<li><a href="/wikipedia/en/WebbIE" title="WebbIE">WebbIE</a></li>
+<li><a href="/wikipedia/en/ZAC_Browser" title="ZAC Browser">ZAC</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/WebKit" title="WebKit">WebKit</a>-based</th><td><div>
+<ul><li><a href="/wikipedia/en/Arora_(web_browser)" title="Arora (web browser)">Arora</a></li>
+<li><a href="/wikipedia/en/Bolt_(web_browser)" title="Bolt (web browser)">BOLT</a></li>
+<li><a href="/wikipedia/en/Opera_Coast" title="Opera Coast">Opera Coast</a></li>
+<li><a href="/wikipedia/en/Flock_(web_browser)" title="Flock (web browser)">Flock</a></li>
+<li><a href="/wikipedia/en/Fluid_(web_browser)" title="Fluid (web browser)">Fluid</a></li>
+<li><a href="/wikipedia/en/Google_TV" title="Google TV">Google TV</a></li>
+<li><a href="/wikipedia/en/Iris_Browser" title="Iris Browser">Iris</a></li>
+<li><a href="/wikipedia/en/Mercury_Browser" title="Mercury Browser">Mercury</a></li>
+<li><a href="/wikipedia/en/Origyn_Web_Browser" title="Origyn Web Browser">Origyn</a></li>
+<li><a href="/wikipedia/en/QtWeb" title="QtWeb">QtWeb</a></li>
+<li><a href="/wikipedia/en/Rekonq" title="Rekonq">rekonq</a></li>
+<li><a href="/wikipedia/en/Rockmelt" title="Rockmelt">Rockmelt</a></li>
+<li><a href="/wikipedia/en/Shiira" title="Shiira">Shiira</a></li>
+<li><a href="/wikipedia/en/Steel_(web_browser)" title="Steel (web browser)">Steel</a></li>
+<li><a href="/wikipedia/en/Nokia_Browser_for_Symbian" title="Nokia Browser for Symbian">Browser for Symbian</a></li>
+<li><a href="/wikipedia/en/Uzbl" title="Uzbl">Uzbl</a></li>
+<li><a href="/wikipedia/en/WebPositive" title="WebPositive">WebPositive</a></li>
+<li><a href="/wikipedia/en/Xombrero" title="Xombrero">xombrero</a></li></ul>
+</div></td></tr><tr><th scope="row">Other</th><td><div>
+<ul><li><a href="/wikipedia/en/Abaco_(web_browser)" title="Abaco (web browser)">abaco</a></li>
+<li><a href="/wikipedia/en/Amaya_(web_editor)" title="Amaya (web editor)">Amaya</a></li>
+<li><a href="/wikipedia/en/Arachne_(web_browser)" title="Arachne (web browser)">Arachne</a></li>
+<li><a href="/wikipedia/en/Arena_(web_browser)" title="Arena (web browser)">Arena</a></li>
+<li><a href="/wikipedia/en/Blazer_(web_browser)" title="Blazer (web browser)">Blazer</a></li>
+<li><a href="/wikipedia/en/Charon_(web_browser)" title="Charon (web browser)">Charon</a></li>
+<li><a href="/wikipedia/en/Microsoft_Live_Labs_Deepfish" title="Microsoft Live Labs Deepfish">Deepfish</a></li>
+<li><a href="/wikipedia/en/Dillo" title="Dillo">Dillo</a></li>
+<li><a href="/wikipedia/en/ELinks" title="ELinks">ELinks</a></li>
+<li><a href="/wikipedia/en/Gazelle_(web_browser)" title="Gazelle (web browser)">Gazelle</a></li>
+<li><a href="/wikipedia/en/HotJava" title="HotJava">HotJava</a></li>
+<li><a href="/wikipedia/en/IBM_Home_Page_Reader" title="IBM Home Page Reader">IBM Home Page Reader</a></li>
+<li><a href="/wikipedia/en/IBM_WebExplorer" title="IBM WebExplorer">IBM WebExplorer</a></li>
+<li><a href="/wikipedia/en/IBrowse" title="IBrowse">IBrowse</a></li>
+<li><a href="/wikipedia/en/KidZui" title="KidZui">KidZui</a></li>
+<li><a href="/wikipedia/en/Line_Mode_Browser" title="Line Mode Browser">Line Mode</a></li>
+<li><a href="/wikipedia/en/Mosaic_(web_browser)" title="Mosaic (web browser)">Mosaic</a></li>
+<li><a href="/wikipedia/en/MSN_TV" title="MSN TV">MSN TV</a></li>
+<li><a href="/wikipedia/en/NetPositive" title="NetPositive">NetPositive</a></li>
+<li><a href="/wikipedia/en/Netscape_(web_browser)" title="Netscape (web browser)">Netscape</a></li>
+<li><a href="/wikipedia/en/Skweezer" title="Skweezer">Skweezer</a></li>
+<li><a href="/wikipedia/en/Skyfire_(company)" title="Skyfire (company)">Skyfire</a></li>
+<li><a href="/wikipedia/en/Teashark" title="Teashark">Teashark</a></li>
+<li><a href="/wikipedia/en/ThunderHawk" title="ThunderHawk">ThunderHawk</a></li>
+<li><a href="/wikipedia/en/Vision_Mobile_Browser" title="Vision Mobile Browser">Vision</a></li>
+<li><a href="/wikipedia/en/WinWAP" title="WinWAP">WinWAP</a></li>
+<li><a href="/wikipedia/en/WorldWideWeb" title="WorldWideWeb">WorldWideWeb</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="2"><div>
+<ul><li><a href="/wiki/Category-Web_browsers" title="Category:Web browsers">Category</a></li>
+<li><a href="/wikipedia/en/Comparison_of_web_browsers" title="Comparison of web browsers">Comparisons</a></li>
+<li><a href="/wikipedia/en/List_of_web_browsers" title="List of web browsers">List</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div aria-labelledby="Semantic_Web" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="Semantic_Web"><a href="/wikipedia/en/Semantic_Web" title="Semantic Web">Semantic Web</a></div></th></tr><tr><th scope="row">Background</th><td><div>
+<ul><li><a href="/wikipedia/en/Database" title="Database">Databases</a></li>
+<li><a href="/wikipedia/en/Hypertext" title="Hypertext">Hypertext</a></li>
+<li><a href="/wikipedia/en/Internet" title="Internet">Internet</a></li>
+<li><a href="/wikipedia/en/Ontology_(information_science)" title="Ontology (information science)">Ontologies</a></li>
+<li><a href="/wikipedia/en/Semantics" title="Semantics">Semantics</a></li>
+<li><a href="/wikipedia/en/Semantic_network" title="Semantic network">Semantic networks</a></li>
+<li><a href="/wikipedia/en/World_Wide_Web" title="World Wide Web">World Wide Web</a></li></ul>
+</div></td></tr><tr><th scope="row">Sub-topics</th><td><div>
+<ul><li><a href="/wikipedia/en/Dataspaces" title="Dataspaces">Dataspaces</a></li>
+<li><a href="/wikipedia/en/Hyperdata" title="Hyperdata">Hyperdata</a></li>
+<li><a href="/wikipedia/en/Linked_data" title="Linked data">Linked data</a></li>
+<li><a href="/wikipedia/en/Rule-based_system" title="Rule-based system">Rule-based systems</a></li></ul>
+</div></td></tr><tr><th scope="row">Applications</th><td><div>
+<ul><li><a href="/wikipedia/en/Semantic_analytics" title="Semantic analytics">Semantic analytics</a></li>
+<li><a href="/wikipedia/en/Semantic_broker" title="Semantic broker">Semantic broker</a></li>
+<li><a href="/wikipedia/en/Semantic_computing" title="Semantic computing">Semantic computing</a></li>
+<li><a href="/wikipedia/en/Semantic_mapper" title="Semantic mapper">Semantic mapper</a></li>
+<li><a href="/wikipedia/en/Semantic_matching" title="Semantic matching">Semantic matching</a></li>
+<li><a href="/wikipedia/en/Semantic_publishing" title="Semantic publishing">Semantic publishing</a></li>
+<li><a href="/wikipedia/en/Semantic_reasoner" title="Semantic reasoner">Semantic reasoner</a></li>
+<li><a href="/wikipedia/en/Semantic_search" title="Semantic search">Semantic search</a></li>
+<li><a href="/wikipedia/en/Semantic_service-oriented_architecture" title="Semantic service-oriented architecture">Semantic service-oriented architecture</a></li>
+<li><a href="/wikipedia/en/Semantic_wiki" title="Semantic wiki">Semantic wiki</a></li></ul>
+</div></td></tr><tr><th scope="row">Related topics</th><td><div>
+<ul><li><a href="/wikipedia/en/Collective_intelligence" title="Collective intelligence">Collective intelligence</a></li>
+<li><a href="/wikipedia/en/Description_logic" title="Description logic">Description logic</a></li>
+<li><a href="/wikipedia/en/Folksonomy" title="Folksonomy">Folksonomy</a></li>
+<li><a href="/wikipedia/en/Geotagging" title="Geotagging">Geotagging</a></li>
+<li><a href="/wikipedia/en/Information_architecture" title="Information architecture">Information architecture</a></li>
+<li><a href="/wikipedia/en/Knowledge_extraction" title="Knowledge extraction">Knowledge extraction</a></li>
+<li><a href="/wikipedia/en/Knowledge_management" title="Knowledge management">Knowledge management</a></li>
+<li><a href="/wikipedia/en/Knowledge_representation_and_reasoning" title="Knowledge representation and reasoning">Knowledge representation and reasoning</a></li>
+<li><a href="/wikipedia/en/Library_2.0" title="Library 2.0">Library 2.0</a></li>
+<li><a href="/wikipedia/en/Digital_library" title="Digital library">Digital library</a></li>
+<li><a href="/wikipedia/en/Digital_humanities" title="Digital humanities">Digital humanities</a></li>
+<li><a href="/wikipedia/en/Metadata" title="Metadata">Metadata</a></li>
+<li><a href="/wikipedia/en/Reference_(computer_science)" title="Reference (computer science)">References</a></li>
+<li><a href="/wikipedia/en/Topic_map" title="Topic map">Topic map</a></li>
+<li><a href="/wikipedia/en/Web_2.0" title="Web 2.0">Web 2.0</a></li>
+<li><a href="/wikipedia/en/Web_engineering" title="Web engineering">Web engineering</a></li>
+<li><a href="/wikipedia/en/Web_Science_Trust" title="Web Science Trust">Web Science Trust</a></li></ul>
+</div></td></tr><tr><th scope="row">Standards</th><td><table><tbody><tr><th scope="row">Syntax and supporting technologies</th><td><div>
+<ul><li><a>HTTP</a></li>
+<li><a href="/wikipedia/en/Internationalized_Resource_Identifier" title="Internationalized Resource Identifier">IRI</a>
+<ul><li><small><a href="/wikipedia/en/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a></small></li></ul></li>
+<li><a href="/wikipedia/en/Resource_Description_Framework" title="Resource Description Framework">RDF</a>
+<ul><li><small><a href="/wikipedia/en/Semantic_triple" title="Semantic triple">triples</a></small></li>
+<li><small><a href="/wikipedia/en/RDF/XML" title="RDF/XML">RDF/XML</a></small></li>
+<li><small><a href="/wikipedia/en/JSON-LD" title="JSON-LD">JSON-LD</a></small></li>
+<li><small><a href="/wikipedia/en/Turtle_(syntax)" title="Turtle (syntax)">Turtle</a></small></li>
+<li><small><a href="/wikipedia/en/TriG_(syntax)" title="TriG (syntax)">TriG</a></small></li>
+<li><small><a href="/wikipedia/en/Notation3" title="Notation3">Notation3</a></small></li>
+<li><small><a href="/wikipedia/en/N-Triples" title="N-Triples">N-Triples</a></small></li>
+<li><small><a href="/wikipedia/en/TriX_(serialization_format)" title="TriX (serialization format)">TriX</a> (no W3C standard)</small></li></ul></li>
+<li><a href="/wikipedia/en/SciCrunch" title="SciCrunch">RRID</a></li>
+<li><a href="/wikipedia/en/SPARQL" title="SPARQL">SPARQL</a></li>
+<li><a href="/wikipedia/en/XML" title="XML">XML</a></li>
+<li><a href="/wikipedia/en/Semantic_HTML" title="Semantic HTML">Semantic HTML</a></li></ul>
+</div></td></tr><tr><th scope="row">Schemas, ontologies and rules</th><td><div>
+<ul><li><a href="/wikipedia/en/Common_Logic" title="Common Logic">Common Logic</a></li>
+<li><a href="/wikipedia/en/Web_Ontology_Language" title="Web Ontology Language">OWL</a></li>
+<li><a href="/wikipedia/en/RDF_Schema" title="RDF Schema">RDFS</a></li>
+<li><a href="/wikipedia/en/Rule_Interchange_Format" title="Rule Interchange Format">Rule Interchange Format</a></li>
+<li><a href="/wikipedia/en/Semantic_Web_Rule_Language" title="Semantic Web Rule Language">Semantic Web Rule Language</a></li>
+<li><a href="/wikipedia/en/Application-Level_Profile_Semantics_(ALPS)" title="Application-Level Profile Semantics (ALPS)">ALPS</a></li>
+<li><a href="/wikipedia/en/SHACL" title="SHACL">SHACL</a></li></ul>
+</div></td></tr><tr><th scope="row">Semantic annotation</th><td><div>
+<ul><li><a href="/wikipedia/en/Embedded_RDF" title="Embedded RDF">eRDF</a></li>
+<li><a href="/wikipedia/en/GRDDL" title="GRDDL">GRDDL</a></li>
+<li><a href="/wikipedia/en/Microdata_(HTML)" title="Microdata (HTML)">Microdata</a></li>
+<li><a href="/wikipedia/en/Microformat" title="Microformat">Microformats</a></li>
+<li><a href="/wikipedia/en/RDFa" title="RDFa">RDFa</a></li>
+<li><a href="/wikipedia/en/SAWSDL" title="SAWSDL">SAWSDL</a></li>
+<li><a href="/wikipedia/en/Facebook_Platform" title="Facebook Platform">Facebook Platform</a></li></ul>
+</div></td></tr><tr><th scope="row">Common vocabularies</th><td><div>
+<ul><li><a href="/wikipedia/en/DOAP" title="DOAP">DOAP</a></li>
+<li><a href="/wikipedia/en/Dublin_Core" title="Dublin Core">Dublin Core</a></li>
+<li><a href="/wikipedia/en/FOAF_(ontology)" title="FOAF (ontology)">FOAF</a></li>
+<li><a href="/wikipedia/en/Schema.org" title="Schema.org">Schema.org</a></li>
+<li><a href="/wikipedia/en/Semantically-Interlinked_Online_Communities" title="Semantically-Interlinked Online Communities">SIOC</a></li>
+<li><a href="/wikipedia/en/Simple_Knowledge_Organization_System" title="Simple Knowledge Organization System">SKOS</a></li></ul>
+</div></td></tr><tr><th scope="row">Microformat vocabularies</th><td><div>
+<ul><li><a href="/wikipedia/en/HAtom" title="HAtom">hAtom</a></li>
+<li><a href="/wikipedia/en/HCalendar" title="HCalendar">hCalendar</a></li>
+<li><a href="/wikipedia/en/HCard" title="HCard">hCard</a></li>
+<li><a href="/wikipedia/en/HProduct" title="HProduct">hProduct</a></li>
+<li><a href="/wikipedia/en/HRecipe" title="HRecipe">hRecipe</a></li>
+<li><a href="/wikipedia/en/HResume" title="HResume">hResume</a></li>
+<li><a href="/wikipedia/en/HReview" title="HReview">hReview</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></div>
+<div aria-labelledby="Uniform_Resource_Identifier_(URI)_schemes" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="Uniform_Resource_Identifier_(URI)_schemes"><a href="/wikipedia/en/Uniform_Resource_Identifier" title="Uniform Resource Identifier">Uniform Resource Identifier</a> (URI) schemes</div></th></tr><tr><th scope="row">Official</th><td><div>
+<ul><li><a href="/wikipedia/en/About_URI_scheme" title="About URI scheme">about</a></li>
+<li><a href="/wikipedia/en/Acct_(protocol)" title="Acct (protocol)">acct</a></li>
+<li><a href="/wikipedia/en/Content_reference_identifier" title="Content reference identifier">crid</a></li>
+<li><a href="/wikipedia/en/Data_URI_scheme" title="Data URI scheme">data</a></li>
+<li><a href="/wikipedia/en/File_URI_scheme" title="File URI scheme">file</a></li>
+<li><a href="/wikipedia/en/File_Transfer_Protocol" title="File Transfer Protocol">ftp</a></li>
+<li><a href="/wikipedia/en/Geo_URI_scheme" title="Geo URI scheme">geo</a></li>
+<li><a href="/wikipedia/en/Gopher_(protocol)" title="Gopher (protocol)">gopher</a></li>
+<li><a href="/wikipedia/en/Hypertext_Transfer_Protocol#Technical_overview" title="Hypertext Transfer Protocol">http</a></li>
+<li><a href="/wikipedia/en/HTTPS" title="HTTPS">https</a></li>
+<li><a href="/wikipedia/en/Info_URI_scheme" title="Info URI scheme">info</a></li>
+<li><a href="/wikipedia/en/Lightweight_Directory_Access_Protocol#URI_scheme" title="Lightweight Directory Access Protocol">ldap</a></li>
+<li><a href="/wikipedia/en/Mailto" title="Mailto">mailto</a></li>
+<li><a href="/wikipedia/en/Network_File_System" title="Network File System">nfs</a></li>
+<li><a href="/wikipedia/en/Network_News_Transfer_Protocol" title="Network News Transfer Protocol">nntp</a></li>
+<li><a href="/wikipedia/en/SIP_URI_scheme" title="SIP URI scheme">sip / sips</a></li>
+<li><a href="/wikipedia/en/Tag_URI" title="Tag URI">tag</a></li>
+<li><a href="/wikipedia/en/Telnet" title="Telnet">telnet</a></li>
+<li><a href="/wikipedia/en/Uniform_resource_name" title="Uniform resource name">urn</a></li>
+<li><a href="/wikipedia/en/View-source_URI_scheme" title="View-source URI scheme">view-source</a></li>
+<li><a href="/wikipedia/en/WebSocket#Overview" title="WebSocket">ws / wss</a></li>
+<li><a href="/wikipedia/en/XMPP" title="XMPP">xmpp</a></li></ul>
+</div></td></tr><tr><th scope="row">Unofficial</th><td><div>
+<ul><li><a href="/wikipedia/en/Hyper_Text_Coffee_Pot_Control_Protocol#Commands_and_replies" title="Hyper Text Coffee Pot Control Protocol">coffee</a></li>
+<li><a href="/wikipedia/en/Ed2k_URI_scheme" title="Ed2k URI scheme">ed2k</a></li>
+<li><a href="/wikipedia/en/Feed_URI_scheme" title="Feed URI scheme">feed</a></li>
+<li><a href="/wikipedia/en/Finger_protocol" title="Finger protocol">finger</a></li>
+<li><a href="/wikipedia/en/Internet_Relay_Chat#URI_scheme" title="Internet Relay Chat">irc / irc6 / ircs</a></li>
+<li><a href="/wikipedia/en/Lightweight_Directory_Access_Protocol#URI_scheme" title="Lightweight Directory Access Protocol">ldaps</a></li>
+<li><a href="/wikipedia/en/Magnet_URI_scheme" title="Magnet URI scheme">magnet</a></li>
+<li><a href="/wikipedia/en/Rsync" title="Rsync">rsync</a></li>
+<li><a href="/wikipedia/en/Yahoo!_Messenger#URI_scheme" title="Yahoo! Messenger">ymsgr</a></li></ul>
+</div></td></tr><tr><td colspan="2"><div><a href="/wikipedia/en/List_of_network_protocols_(OSI_model)" title="List of network protocols (OSI model)">Protocol list</a></div></td></tr></tbody></table></div>
+<div aria-labelledby="Web_interfaces" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="Web_interfaces"><a href="/wikipedia/en/Web_API" title="Web API">Web interfaces</a></div></th></tr><tr><th scope="row"><a href="/wikipedia/en/Server-side" title="Server-side">Server-side</a></th><td><table><tbody><tr><th scope="row"><a href="/wikipedia/en/Communication_protocol" title="Communication protocol">Protocols</a></th><td><div>
+<ul><li><a>HTTP</a></li>
+<li><a href="/wikipedia/en/Common_Gateway_Interface" title="Common Gateway Interface">CGI</a></li>
+<li><a href="/wikipedia/en/Simple_Common_Gateway_Interface" title="Simple Common Gateway Interface">SCGI</a></li>
+<li><a href="/wikipedia/en/FastCGI" title="FastCGI">FCGI</a></li>
+<li><a href="/wikipedia/en/Apache_JServ_Protocol" title="Apache JServ Protocol">AJP</a></li>
+<li><a href="/wikipedia/en/Web_Services_for_Remote_Portlets" title="Web Services for Remote Portlets">WSRP</a></li>
+<li><a href="/wikipedia/en/WebSocket" title="WebSocket">WebSocket</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Server_Application_Programming_Interface" title="Server Application Programming Interface">Server APIs</a></th><td><div>
+<ul><li><a href="/wikipedia/en/Netscape_Server_Application_Programming_Interface" title="Netscape Server Application Programming Interface">C NSAPI</a></li>
+<li><a href="/wikipedia/en/Apache_HTTP_Server#Feature_overview" title="Apache HTTP Server">C ASAPI</a></li>
+<li><a href="/wikipedia/en/Internet_Server_Application_Programming_Interface" title="Internet Server Application Programming Interface">C ISAPI</a></li>
+<li><a href="/wikipedia/en/Active_Server_Pages" title="Active Server Pages">COM ASP</a></li>
+<li><a href="/wikipedia/en/Java_servlet" title="Java servlet">Java servlet</a>
+<ul><li><a href="/wikipedia/en/Web_container" title="Web container">container</a></li></ul></li>
+<li><a href="/wikipedia/en/Open_Web_Interface_for_.NET" title="Open Web Interface for .NET">CLI OWIN</a></li>
+<li><a href="/wikipedia/en/HTTP_handler" title="HTTP handler">ASP.NET Handler</a></li>
+<li><a href="/wikipedia/en/Web_Server_Gateway_Interface" title="Web Server Gateway Interface">Python WSGI</a></li>
+<li><a href="/wikipedia/en/Rack_(web_server_interface)" title="Rack (web server interface)">Ruby Rack</a></li>
+<li><a href="/wikipedia/en/JSGI" title="JSGI">JavaScript JSGI</a></li>
+<li><a href="/wikipedia/en/Plack_(software)" title="Plack (software)">Perl PSGI</a></li>
+<li><a href="/wikipedia/en/Kepler_(software)#Frameworks" title="Kepler (software)">Lua WSAPI</a></li>
+<li><a href="/wikipedia/en/Java_Portlet_Specification" title="Java Portlet Specification">Portlet</a>
+<ul><li><a href="/wikipedia/en/Java_Portlet_Specification" title="Java Portlet Specification">container</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/List_of_Apache_modules" title="List of Apache modules">Apache modules</a></th><td><div>
+<ul><li><a href="/wikipedia/en/Server_Side_Includes" title="Server Side Includes">mod_include</a></li>
+<li><a href="/wikipedia/en/Mod_jk" title="Mod jk">mod_jk</a></li>
+<li><a href="/wikipedia/en/Mod_lisp" title="Mod lisp">mod_lisp</a></li>
+<li><a href="/wikipedia/en/Mod_mono" title="Mod mono">mod_mono</a></li>
+<li><a href="/wikipedia/en/Mod_parrot" title="Mod parrot">mod_parrot</a></li>
+<li><a href="/wikipedia/en/Mod_perl" title="Mod perl">mod_perl</a></li>
+<li><a href="/wikipedia/en/PHP" title="PHP">mod_php</a></li>
+<li><a href="/wikipedia/en/Mod_proxy" title="Mod proxy">mod_proxy</a></li>
+<li><a href="/wikipedia/en/Mod_python" title="Mod python">mod_python</a></li>
+<li><a href="/wikipedia/en/Mod_wsgi" title="Mod wsgi">mod_wsgi</a></li>
+<li><a href="/wikipedia/en/Mod_ruby" title="Mod ruby">mod_ruby</a></li>
+<li><a href="/wikipedia/en/Phusion_Passenger" title="Phusion Passenger">Phusion Passenger</a></li></ul>
+</div></td></tr><tr><th scope="row">Topics</th><td><div>
+<ul><li><a href="/wikipedia/en/Web_resource" title="Web resource">Web resource</a> vs. <a href="/wikipedia/en/Web_service" title="Web service">Web service</a></li>
+<li><a href="/wikipedia/en/Open_API" title="Open API">Open API</a></li>
+<li><a href="/wikipedia/en/Webhook" title="Webhook">Webhook</a></li>
+<li><a href="/wikipedia/en/Application_server" title="Application server">Application server</a>
+<ul><li><a href="/wikipedia/en/List_of_application_servers" title="List of application servers">comparison</a></li></ul></li>
+<li><a href="/wikipedia/en/Server-side_scripting" title="Server-side scripting">Scripting</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><th scope="row"><a href="/wikipedia/en/Client-side" title="Client-side">Client-side</a></th><td><table><tbody><tr><th scope="row"><a href="/wikipedia/en/Browser_extension" title="Browser extension">Browser APIs</a></th><td><div>
+<ul><li><a href="/wikipedia/en/NPAPI" title="NPAPI">C NPAPI</a>
+<ul><li><a href="/wikipedia/en/NPAPI#LiveConnect" title="NPAPI">LiveConnect</a></li>
+<li><a href="/wikipedia/en/NPAPI#XPConnect" title="NPAPI">XPConnect</a></li></ul></li>
+<li><a href="/wikipedia/en/NPAPI#NPRuntime" title="NPAPI">C NPRuntime</a></li>
+<li><a href="/wikipedia/en/Google_Native_Client#Pepper" title="Google Native Client">C PPAPI</a>
+<ul><li><a href="/wikipedia/en/Google_Native_Client" title="Google Native Client">NaCl</a></li></ul></li>
+<li><a href="/wikipedia/en/ActiveX" title="ActiveX">ActiveX</a></li>
+<li><a href="/wikipedia/en/Browser_Helper_Object" title="Browser Helper Object">BHO</a></li>
+<li><a href="/wikipedia/en/XAML_Browser_Applications" title="XAML Browser Applications">XBAP</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Web_API#Client_side" title="Web API">Web APIs</a></th><td><table><tbody><tr><th scope="row"><a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">W3C</a></th><td><div>
+<ul><li><a href="/wikipedia/en/HTML5_audio" title="HTML5 audio">Audio</a></li>
+<li><a href="/wikipedia/en/Canvas_element" title="Canvas element">Canvas</a></li>
+<li><a href="/wikipedia/en/Cross-origin_resource_sharing" title="Cross-origin resource sharing">CORS</a></li>
+<li><a href="/wikipedia/en/Document_Object_Model" title="Document Object Model">DOM</a></li>
+<li><a href="/wikipedia/en/DOM_events" title="DOM events">DOM events</a></li>
+<li><a href="/wikipedia/en/Encrypted_Media_Extensions" title="Encrypted Media Extensions">EME</a></li>
+<li><a href="/wikipedia/en/HTML5_File_API" title="HTML5 File API">File</a></li>
+<li><a href="/wikipedia/en/W3C_Geolocation_API" title="W3C Geolocation API">Geolocation</a></li>
+<li><a href="/wikipedia/en/Indexed_Database_API" title="Indexed Database API">IndexedDB</a></li>
+<li><a href="/wikipedia/en/Media_Source_Extensions" title="Media Source Extensions">MSE</a></li>
+<li><a href="/wikipedia/en/Server-sent_events" title="Server-sent events">SSE</a></li>
+<li><a href="/wikipedia/en/Scalable_Vector_Graphics" title="Scalable Vector Graphics">SVG</a></li>
+<li><a href="/wikipedia/en/HTML5_video" title="HTML5 video">Video</a></li>
+<li><a href="/wikipedia/en/WebAuthn" title="WebAuthn">WebAuthn</a></li>
+<li><a href="/wikipedia/en/WebRTC" title="WebRTC">WebRTC</a></li>
+<li><a href="/wikipedia/en/WebSocket" title="WebSocket">WebSocket</a></li>
+<li><a href="/wikipedia/en/Web_Messaging" title="Web Messaging">Web messaging</a></li>
+<li><a href="/wikipedia/en/Web_storage" title="Web storage">Web storage</a></li>
+<li><a href="/wikipedia/en/Web_worker" title="Web worker">Web worker</a></li>
+<li><a href="/wikipedia/en/XMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a></li>
+<li><a href="/wikipedia/en/WebAssembly" title="WebAssembly">WebAssembly</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Khronos_Group" title="Khronos Group">Khronos</a></th><td><div>
+<ul><li><a href="/wikipedia/en/WebCL" title="WebCL">WebCL</a></li>
+<li><a href="/wikipedia/en/WebGL" title="WebGL">WebGL</a></li></ul>
+</div></td></tr><tr><th scope="row">Others</th><td><div>
+<ul><li><a href="/wikipedia/en/Gears_(software)" title="Gears (software)">Gears</a></li>
+<li><a href="/wikipedia/en/Web_SQL_Database" title="Web SQL Database">Web SQL Database</a> (formerly W3C)</li>
+<li><a href="/wikipedia/en/WebUSB" title="WebUSB">WebUSB</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><th scope="row">Topics</th><td><div>
+<ul><li><a href="/wikipedia/en/Ajax_(programming)" title="Ajax (programming)">Ajax</a> and <a href="/wikipedia/en/Remote_scripting" title="Remote scripting">Remote scripting</a> vs. <a href="/wikipedia/en/Dynamic_HTML" title="Dynamic HTML">DHTML</a></li>
+<li><a href="/wikipedia/en/Mashup_(web_application_hybrid)" title="Mashup (web application hybrid)">Mashup</a></li>
+<li><a href="/wikipedia/en/Web_IDL" title="Web IDL">Web IDL</a></li>
+<li><a href="/wikipedia/en/Client-side_scripting" title="Client-side scripting">Scripting</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><th scope="row">Topics</th><td><div>
+<ul><li><a href="/wikipedia/en/Dynamic_web_page" title="Dynamic web page">Dynamic web page</a></li>
+<li><a href="/wikipedia/en/Web_standards" title="Web standards">Web standards</a></li>
+<li><a href="/wikipedia/en/Rich_web_application" title="Rich web application">Rich web application</a></li>
+<li><a href="/wikipedia/en/Web_API_security" title="Web API security">Web API security</a></li>
+<li><a href="/wikipedia/en/Web_application" title="Web application">Web application</a></li>
+<li><a href="/wikipedia/en/Web_framework" title="Web framework">Web framework</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q8777&amp;#124;Edit_this_at_Wikidata" class="navbox"><table><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q8777&amp;#124;Edit_this_at_Wikidata" scope="row">Authority control <a href="https://www.wikidata.org/wiki/Q8777" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20"></a></th><td><div>
+<ul><li><a href="/wikipedia/en/Biblioth%C3%A8que_nationale_de_France" title="Bibliothèque nationale de France">BNF</a>: <a rel="nofollow" href="https://catalogue.bnf.fr/ark:/12148/cb12556450f">cb12556450f</a> <a rel="nofollow" href="https://data.bnf.fr/ark:/12148/cb12556450f">(data)</a></li>
+<li><a href="/wikipedia/en/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <a rel="nofollow" href="https://d-nb.info/gnd/4479982-2">4479982-2</a></li>
+<li><a href="/wikipedia/en/Library_of_Congress_Control_Number" title="Library of Congress Control Number">LCCN</a>: <a rel="nofollow" href="https://id.loc.gov/authorities/subjects/sh97000529">sh97000529</a></li></ul>
+</div></td></tr></tbody></table></div>
+</div>
+
+  </article>
+</main>
+
+<footer>
+  <button id="company-logo"><a href="https://zhiliaokeji.com/" target="_blank" title="Known LLC. (长沙知了信息科技有限公司)">
+    <p>Powered by</p>
+    <img src="/static/img/known.svg" alt="Known LLC. (长沙知了信息科技有限公司)">
+  </a></button>
+</footer>
+
+<script src="/static/libs/highlight/highlight.pack.js"></script>
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+<script src="/static/js/utils.js"></script>
+<script src="/static/js/toc.js"></script>
+<script src="/static/js/search-hint.js"></script>
+</body>
+</html>
