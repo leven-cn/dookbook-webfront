@@ -53,7 +53,7 @@
 .toc ul li li {
   width: 220px;
   border-left: 0.06rem solid #333;
-  font-size: 12px;
+  font-size: 13px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -89,7 +89,7 @@
   color: #fff;
 }
 
-.toc ul li.active li:hover a {
+.toc ul li.active li a:hover {
   color: #fff;
 }
 
@@ -110,4 +110,27 @@
   background: url("/static/img/down.svg") no-repeat 237px 20px #353740;
   background-size: 0.8rem;
   border-left: 3px solid #454855;
+}
+
+
+.toc ul li ul li ul {
+  padding: 0.19rem 0 0.19rem 1.1rem;
+}
+
+.toc ul li ul li ul li {
+  width: 200px;
+  border: none;
+  font-size: 12px;
+}
+
+.toc ul li.active ul li ul li a{
+  color: #777;
+}
+
+.toc ul li.active ul li ul li a:hover {
+  color: #fff;
+}
+
+.toc li ul li ul li.selected {
+  border: none;
 }
