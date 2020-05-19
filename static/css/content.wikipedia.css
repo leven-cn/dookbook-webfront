@@ -107,7 +107,6 @@ main dl dd ul {
 figure {
   max-width: 300px;
   text-align: center;
-  float: left;
   border: 1px solid #666;
   margin: 1.9rem 1rem 0 0;
   background: rgb(42, 44, 53);
@@ -115,6 +114,17 @@ figure {
 
 figure div {
   width: auto;
+}
+
+figure.right {
+  clear: right;
+  float: right;
+  margin-left: 1rem;
+}
+
+figure.left {
+  clear: left;
+  float: left;
 }
 
 main figure img {
@@ -140,6 +150,12 @@ figcaption {
   color: #999;
 }
 
+code pre {
+  overflow-x: auto;
+  background: rgb(42, 44, 53);
+  padding: 0.8em 1rem;
+}
+
 table {
   border-spacing: 0;
   margin-top: 2rem;
@@ -147,6 +163,12 @@ table {
   background: rgb(42, 44, 53);
   border-left: none;
   border-bottom: none;
+}
+
+table tbody {
+  width: 1000px;
+  display: block;
+  overflow-x: auto;
 }
 
 table caption {
@@ -159,6 +181,12 @@ table tr th {
   border-left: 1px solid #666;
   line-height: 1.8rem;
   padding: 0.5rem 0.8em;
+  width: 100%;
+}
+
+table tr td:first-child,
+table tr th:first-child{
+  width: 20%;
 }
 
 table tr th {
@@ -175,6 +203,10 @@ table tr th {
   margin-top: 0;
 }
 
+.navbox table tbody {
+  width: 100%;
+}
+
 .navbox table table {
   border: none;
   padding: 0;
@@ -188,6 +220,7 @@ table tr th {
   line-height: 30px;
   border-left: none;
   flex: 1;
+  width: auto;
 }
 
 .navbox table table {
