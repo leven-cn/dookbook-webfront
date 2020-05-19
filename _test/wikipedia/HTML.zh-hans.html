@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+  <meta charset="utf-8"/>
+  <title>HTML - Wikipedia for Computer Science, hosted by Dookbook&reg;</title>
+  <meta name="description" content="HTML () on Wikipedia for Computer Science, hosted by Dookbook®"/>
+  <meta name="keywords" content="HTML,Wikipedia,Computer Science,Dookbook"/>
+  <meta name="generator" content="Dookbook"/>
+  <link rel="stylesheet" href="/static/libs/highlight/styles/agate.css"/>
+  <link rel="stylesheet" href="/static/css/content.css"/>
+  <link rel="stylesheet" href="/static/css/content.toc.css"/>
+  <link rel="stylesheet" href="/static/css/content.search.css"/>
+  <link rel="stylesheet" href="/static/css/content.wikipedia.css"/>
+  <!-- <link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/> -->
+  <!-- <link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/> -->
+  <link rel="canonical" href="https://dookbook.info/wikipedia/en/HTML"/>
+  <link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+</head>
+<body>
+  <!-- htmlhint attr-value-double-quotes:false -->
+  <header>
+    <a href="/"><img src="/static/img/wikipedia-en.png" alt="Wikipedia for Computer Science" title="Wikipedia for Computer Science"></a>
+    <section id="search">
+      <img src="/static/img/search.svg" alt="Search">
+      <input type="text" placeholder="Search here">
+    </section>
+    <nav>
+      <a href="#" title="About Dookbook®">i</a>
+      <a href="/about/zh-hans/" title="切换至中文" lang="zh-Hans">中</a>
+      <a href="/en/help/readme/" title="Help">?</a>
+    </nav>
+  </header>
+
+<main>
+  <article>
+    <header>
+      <h1>HTML - 维基百科</h1>
+      <p><span>更新时间</span>:&nbsp;&nbsp;2020-03-01 10:24:00 (UTC)</p>
+    </header>
+    <div class="toc">
+      <ul>
+        <li>
+        <a href="#%E5%8E%86%E5%8F%B2">历史</a>
+        <ul>
+        <li><a href="#%E5%8F%91%E5%B1%95">发展</a></li>
+        <li>
+        <a href="#%E7%89%88%E6%9C%AC%E6%97%B6%E9%97%B4%E7%BA%BF">版本时间线</a>
+        <ul>
+        <li><a href="#html_2">HTML 2</a></li>
+        <li><a href="#html_3">HTML 3</a></li>
+        <li><a href="#html_4">HTML 4</a></li>
+        <li><a href="#html_5">HTML 5</a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="#%E8%8D%89%E6%A1%88%E6%97%B6%E9%97%B4%E7%BA%BF">草案时间线</a>
+        <ul>
+        <li><a href="#xhtml%E7%89%88%E6%9C%AC">XHTML版本</a></li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        <li>
+        <a href="#%E6%A0%87%E8%AE%B0">标记</a>
+        <ul>
+        <li>
+        <a href="#%E5%85%83%E7%B4%A0">元素</a>
+        <ul>
+        <li><a href="#%E4%BE%8B%E5%AD%90">例子</a></li>
+        <li><a href="#%E5%B1%9E%E6%80%A7">属性</a></li>
+        </ul>
+        </li>
+        <li><a href="#%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8">字符与实体引用</a></li>
+        <li><a href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">数据类型</a></li>
+        <li><a href="#%E6%96%87%E6%A1%A3%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E">文档类型声明</a></li>
+        </ul>
+        </li>
+        <li><a href="#%E8%AF%AD%E4%B9%89%E5%8C%96html">语义化HTML</a></li>
+        <li>
+        <a href="#%E5%88%86%E5%8F%91">分发</a>
+        <ul>
+        <li><a href="#http">HTTP</a></li>
+        <li><a href="#html%E9%82%AE%E4%BB%B6">HTML邮件</a></li>
+        <li><a href="#%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99">命名规则</a></li>
+        <li><a href="#html%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F">HTML应用程序</a></li>
+        </ul>
+        </li>
+        <li><a href="#%E6%89%80%E8%A7%81%E5%8D%B3%E6%89%80%E5%BE%97%E7%BC%96%E8%BE%91%E5%99%A8">所见即所得编辑器</a></li>
+        <li><a href="#%E5%8F%82%E8%A7%81">参见</a></li>
+        <li><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">参考资料</a></li>
+        <li><a href="#%E5%A4%96%E9%83%A8%E9%93%BE%E6%8E%A5">外部链接</a></li>
+      </ul>
+      <a class="copyright" href="https://zhiliaokeji.com" title="All Copyrights Reserved by Known LLC.">&copy;&nbsp;Known LLC.</a>
+    </div>
+
+<!-- Main content -->
+<div>
+
+
+
+<p><b>超文本标记语言</b>（英语：<b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage，简称：<b>HTML</b>）是一种用于创建<a href="/wikipedia/zh-hans/%E7%BD%91%E9%A1%B5" title="网页">网页</a>的标准<a href="/wikipedia/zh-hans/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80" title="标记语言">标记语言</a>。HTML是一种基础技术，常与<a href="/wikipedia/zh-hans/CSS" title="CSS">CSS</a>、<a href="/wikipedia/zh-hans/JavaScript" title="JavaScript">JavaScript</a>一起被众多网站用于设计网页、网页应用程序以及移动应用程序的用户界面<sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。<a href="/wikipedia/zh-hans/%E7%BD%91%E9%A1%B5%E6%B5%8F%E8%A7%88%E5%99%A8" title="网页浏览器">网页浏览器</a>可以读取HTML文件，并将其渲染成可视化网页。HTML描述了一个网站的结构语义随着线索的呈现，使之成为一种标记语言而非<a href="/wikipedia/zh-hans/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80" title="编程语言">编程语言</a>。
+</p><p><a href="/wikipedia/zh-hans/HTML%E5%85%83%E7%B4%A0" title="HTML元素">HTML元素</a>是构建网站的基石。HTML允许嵌入图像与对象，并且可以用于创建交互式表单，它被用来结构化信息——例如标题、段落和列表等等，也可用来在一定程度上描述文档的外观和<a href="/wikipedia/zh-hans/%E8%AF%AD%E4%B9%89" title="语义">语义</a>。HTML的语言形式为<a href="/wikipedia/zh-hans/%E6%8B%AC%E5%8F%B7" title="括号">尖括号</a>包围的HTML元素（如<code>&lt;html&gt;</code>），浏览器使用HTML标签和脚本来诠释网页内容，但不会将它们显示在页面上。
+</p><p>HTML可以嵌入如<a href="/wikipedia/zh-hans/JavaScript" title="JavaScript">JavaScript</a>的<a href="/wikipedia/zh-hans/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80" title="脚本语言">脚本语言</a>，它们会影响HTML网页的行为。网页浏览器也可以引用<a href="/wikipedia/zh-hans/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8" title="层叠样式表">层叠样式表</a>（CSS）来定义文本和其它元素的外观与布局。维护HTML和CSS标准的组织<a href="/wikipedia/zh-hans/%E4%B8%87%E7%BB%B4%E7%BD%91%E8%81%94%E7%9B%9F" title="万维网联盟">万维网联盟</a>（W3C）鼓励人们使用CSS替代一些用于表现的HTML元素<sup id="cite_ref-deprecated_4-0"><a href="#cite_note-deprecated-4">[4]</a></sup>。
+</p>
+  
+<h2 id="历史">历史</h2>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Old_HTML_Logo.svg/100px-Old_HTML_Logo.svg.png" decoding="async" width="100" height="100" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/12/Old_HTML_Logo.svg/150px-Old_HTML_Logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/12/Old_HTML_Logo.svg/200px-Old_HTML_Logo.svg.png 2x" data-file-width="113" data-file-height="113"><figcaption>W3C制作的早期HTML标志</figcaption></figure>
+<h3 id="发展">发展</h3>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Tim_Berners-Lee_April_2009.jpg/170px-Tim_Berners-Lee_April_2009.jpg" decoding="async" width="170" height="234" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Tim_Berners-Lee_April_2009.jpg/255px-Tim_Berners-Lee_April_2009.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Tim_Berners-Lee_April_2009.jpg/340px-Tim_Berners-Lee_April_2009.jpg 2x" data-file-width="1195" data-file-height="1648"><figcaption><a href="/wikipedia/zh-hans/%E8%92%82%E5%A7%86%C2%B7%E4%BC%AF%E7%BA%B3%E6%96%AF-%E6%9D%8E" title="蒂姆·伯纳斯-李">蒂姆·伯纳斯-李</a></figcaption></figure>
+<p>1980年，物理学家<a href="/wikipedia/zh-hans/%E8%92%82%E5%A7%86%C2%B7%E4%BC%AF%E7%BA%B3%E6%96%AF-%E6%9D%8E" title="蒂姆·伯纳斯-李">蒂姆·伯纳斯-李</a>在<a href="/wikipedia/zh-hans/%E6%AD%90%E6%B4%B2%E6%A0%B8%E5%AD%90%E7%A0%94%E7%A9%B6%E7%B5%84%E7%B9%94" title="欧洲核子研究组织">欧洲核子研究中心</a>（CERN）在承包工程期间，为使CERN的研究人员使用并共享文档，他提出并创建原型系统<a href="/wikipedia/zh-hans/ENQUIRE" title="ENQUIRE">ENQUIRE</a>。1989年，伯纳斯-李在一份备忘录中提出一个基于<a href="/wikipedia/zh-hans/%E4%BA%92%E8%81%94%E7%BD%91" title="互联网">互联网</a>的<a href="/wikipedia/zh-hans/%E8%B6%85%E6%96%87%E6%9C%AC" title="超文本">超文本</a>系统<sup id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。他规定HTML并在1990年底写出浏览器和服务器软件。同年，伯纳斯-李与CERN的数据系统工程师<a href="/wikipedia/zh-hans/%E7%BD%97%E4%BC%AF%E7%89%B9%C2%B7%E5%8D%A1%E9%87%8C%E5%A5%A5" title="罗伯特·卡里奥">罗伯特·卡里奥</a>联合为项目申请资助，但未被CERN正式批准。在他的个人笔记中<sup id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>伯纳斯-李列举“一些使用超文本的领域”，并把百科全书列为首位<sup id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。
+</p><p>HTML的首个公开描述出现于一个名为<a rel="nofollow" href="http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html">HTML Tags</a>的文件中，由蒂姆·伯纳斯-李于1991年底提及<sup id="cite_ref-tagshtml_8-0"><a href="#cite_note-tagshtml-8">[8]</a></sup><sup id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>。它描述18个元素，包括HTML初始的、相对简单的设计。除了超链接标签外，其他设计都深受CERN内部一个以<a href="/wikipedia/zh-hans/SGML" title="SGML">标准通用标记语言</a>（SGML）为基础的文件格式SGMLguid的影响。这些元素仍有11个存在于HTML 4中<sup id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>。
+</p><p>伯纳斯-李认为HTML是SGML的一个应用程序。1993年中期<a href="/wikipedia/zh-hans/%E4%BA%92%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B%E4%BB%BB%E5%8A%A1%E7%BB%84" title="互联网工程任务组">互联网工程任务组</a>（IETF）发布首个HTML规范的提案：<a rel="nofollow" href="http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt">“超文本标记语言（HTML）”互联网草案</a>，由伯纳斯-李与丹·康纳利（英语：<a href="https://en.wikipedia.org/wiki/Dan_Connolly_(computer_scientist)" title="en:Dan Connolly (computer scientist)">Dan Connolly (computer scientist)</a>）撰写。其中包括一个SGML<a href="/wikipedia/zh-hans/%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E6%8F%8F%E8%BF%B0" title="文件类型描述">文档类型定义</a>来定义语法<sup id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>。草案于6个月后过期，不过值得注意的是其对<a href="/wikipedia/zh-hans/NCSA_Mosaic" title="NCSA Mosaic">NCSA Mosaic</a>浏览器嵌入在线图像的自定义标签的认可，这反映IETF把标准立足于成功原型的理念<sup id="cite_ref-raymond_12-0"><a href="#cite_note-raymond-12">[12]</a></sup>。同样，戴夫·拉格特（英语：<a href="https://en.wikipedia.org/wiki/Dave_Raggett" title="en:Dave Raggett">Dave Raggett</a>）在1993年末提出的与之竞争的互联网草案“HTML+（超文本标记格式）”建议规范已经实现的功能，如表格与填写表单<sup id="cite_ref-html+_13-0"><a href="#cite_note-html+-13">[13]</a></sup>。
+</p><p>在HTML和HTML+的草案于1994年初到期后，IETF创建一个HTML工作组，并在1995年完成"HTML 2.0"，这是第一个旨在成为对其后续实现标准的依据的HTML规范<sup id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>。
+</p><p>在IETF的主持下，HTML标准的进一步发展因竞争利益而遭受停滞。自1996年起，HTML规范一直由<a href="/wikipedia/zh-hans/%E4%B8%87%E7%BB%B4%E7%BD%91%E8%81%94%E7%9B%9F" title="万维网联盟">万维网联盟</a>（W3C）维护，并由商业软件厂商出资<sup id="cite_ref-raggett_15-0"><a href="#cite_note-raggett-15">[15]</a></sup>。不过在2000年，HTML也成为国际标准（<a href="/wikipedia/zh-hans/%E5%9C%8B%E9%9A%9B%E6%A8%99%E6%BA%96%E5%8C%96%E7%B5%84%E7%B9%94" title="国际标准化组织">ISO</a>/ <a href="/wikipedia/zh-hans/IEC" title="IEC">IEC</a>15445：2000）。HTML 4.01于1999年末发布，进一步的勘误版本于2001年发布。2004年，<a href="/wikipedia/zh-hans/%E7%B6%B2%E9%A0%81%E8%B6%85%E6%96%87%E6%9C%AC%E6%8A%80%E8%A1%93%E5%B7%A5%E4%BD%9C%E5%B0%8F%E7%B5%84" title="网页超文本技术工作小组">网页超文本应用技术工作小组</a>（WHATWG）开始开发HTML5，并在2008年与W3C共同交付，2014年10月28日完成标准化<sup id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>。
+</p>
+<h3 id="版本时间线">版本时间线</h3>
+<h4 id="html_2">HTML 2</h4>
+<dl><dd><dl><dt>1995年11月24日</dt>
+<dd>HTML 2.0作为IETF RFC 1866发布。追加<a href="/wikipedia/zh-hans/RFC" title="RFC">RFC</a>的附加功能：</dd></dl>
+<ul><li>1995年11月25日：<a rel="nofollow" href="https://tools.ietf.org/html/rfc1867">RFC 1867</a>（基于表单的文件上传）</li>
+<li>1996年5月：<a rel="nofollow" href="https://tools.ietf.org/html/rfc1942">RFC 1942</a>（表格）</li>
+<li>1996年8月：<a rel="nofollow" href="https://tools.ietf.org/html/rfc1980">RFC 1980</a>（客户端图像映射）</li>
+<li>1997年1月：<a rel="nofollow" href="https://tools.ietf.org/html/rfc2070">RFC 2070</a>（<a href="/wikipedia/zh-hans/%E5%9B%BD%E9%99%85%E5%8C%96%E4%B8%8E%E6%9C%AC%E5%9C%B0%E5%8C%96" title="国际化与本地化">国际化</a>）</li></ul></dd></dl>
+<h4 id="html_3">HTML 3</h4>
+<dl><dd><dl><dt>1997年1月14日</dt>
+<dd>HTML 3.2<sup id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>作为<a href="/wikipedia/zh-hans/W3C" title="W3C">W3C</a>推荐标准发布。这是首个完全由W3C开发并标准化的版本，因IETF于1996年9月12日关闭它的HTML工作组<sup id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>。最初代号为“威尔伯”（Wilbur）<sup id="cite_ref-engelfriet_19-0"><a href="#cite_note-engelfriet-19">[19]</a></sup>，HTML 3.2完全去除数学公式，协调各种专有扩展，并采用<a href="/wikipedia/zh-hans/%E7%BD%91%E6%99%AF" title="网景">网景</a>设计的大多数视觉标记标签。由于两家公司达成了协议，网景的<a href="/wikipedia/zh-hans/HTML%E5%85%83%E7%B4%A0#%E9%9D%9E%E6%A8%99%E6%BA%96%E5%85%83%E7%B4%A0" title="HTML元素">Blink</a>元素和<a href="/wikipedia/zh-hans/%E5%BE%AE%E8%BD%AF" title="微软">微软</a>的<a href="/wikipedia/zh-hans/HTML%E5%85%83%E7%B4%A0#%E9%9D%9E%E6%A8%99%E6%BA%96%E5%85%83%E7%B4%A0" title="HTML元素">Marquee</a>元素被移除<sup id="cite_ref-raggett_15-1"><a href="#cite_note-raggett-15">[15]</a></sup>。HTML对数学公式的支持最后成为另外一种被称为<a href="/wikipedia/zh-hans/MathML" title="MathML">MathML</a>的标准。</dd></dl></dd></dl>
+<h4 id="html_4">HTML 4</h4>
+<dl><dd><dl><dt>1997年12月18日</dt>
+<dd>HTML 4.0<sup id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>作为W3C推荐标准发布。它提供三种变化：
+<ul><li>严格，过时的元素被禁止。</li>
+<li>过渡，过时的元素被允许。</li>
+<li>框架集，大多只与框架相关的元素被允许。</li></ul></dd>
+<dd>最初代号“美洲狮”（Cougar）<sup id="cite_ref-engelfriet_19-1"><a href="#cite_note-engelfriet-19">[19]</a></sup>， HTML 4.0采用许多特定浏览器的元素类型和属性，并试图淘汰网景的视觉标记功能，将其标记为不赞成使用。HTML 4是遵循ISO 8879 -  SGML的SGML应用程序<sup id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>。</dd></dl></dd></dl>
+<dl><dt>1998年4月24日</dt>
+<dd>HTML 4.0<sup id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>进行微调，不增加版本号。</dd>
+<dt>1999年12月24日</dt>
+<dd>HTML 4.01<sup id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>作为<a href="/wikipedia/zh-hans/W3C" title="W3C">W3C</a>推荐标准发布。它同样提供三种变化，最终<a rel="nofollow" href="http://www.w3.org/MarkUp/html4-updates/errata">勘误版</a>于2001年5月12日发布。</dd>
+<dt>2000年5月</dt>
+<dd>ISO/IEC 15445:2000<sup id="cite_ref-iso-html_24-0"><a href="#cite_note-iso-html-24">[24]</a></sup><sup id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup>（"<a href="/wikipedia/zh-hans/International_Organization_for_Standardization" title="International Organization for Standardization">ISO</a> HTML"，基于HTML 4.01严格版）作为ISO/IEC国际标准发布。在ISO中这一标准位于ISO/IEC JTC 1/SC 34（英语：<a href="https://en.wikipedia.org/wiki/ISO/IEC_JTC_1/SC_34" title="en:ISO/IEC JTC 1/SC 34">ISO/IEC JTC 1/SC 34</a>）域（ISO/IEC联合技术委员会1、小组委员会34 – 文档描述与处理语言）<sup id="cite_ref-iso-html_24-1"><a href="#cite_note-iso-html-24">[24]</a></sup>。</dd></dl>
+<h4 id="html_5">HTML 5</h4>
+  
+<dl><dd><dl><dt>2014年10月28日</dt>
+<dd>HTML 5<sup id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup>作为W3C推荐标准发布<sup id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup>。</dd></dl></dd></dl>
+<h3 id="草案时间线">草案时间线</h3>
+<dl><dt>1991年10月</dt>
+<dd>HTML标签<sup id="cite_ref-tagshtml_8-1"><a href="#cite_note-tagshtml-8">[8]</a></sup>，一个非正式CERN文件首次公开18个HTML标签。</dd>
+<dt>1992年6月</dt>
+<dd>HTML DTD的首个非正式草案<sup id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup>， 后续有七个修订版<sup id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup><sup id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup><sup id="cite_ref-html11_31-0"><a href="#cite_note-html11-31">[31]</a></sup>（7月15日，8月6日，8月18日，11月17日，11月19日，11月20日，11月22日）。</dd>
+<dt>1992年11月</dt>
+<dd>HTML DTD 1.1（首个版本号，基于RCS修订版，版本号从1.1开始而非1.0），非正式草案。<sup id="cite_ref-html11_31-1"><a href="#cite_note-html11-31">[31]</a></sup></dd>
+<dt>1993年6月</dt>
+<dd>超文本标记语言<sup id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup>由<a href="/wikipedia/zh-hans/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">IETF</a> IIIR工作小组作为互联网草案（一个粗略的建议标准）。在被第二版<sup id="cite_ref-ietfiiir_33-0"><a href="#cite_note-ietfiiir-33">[33]</a></sup>取代一个月后，IETF又发布6个草案<sup id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup>，最终在RFC1866中发布HTML 2.0。</dd>
+<dt>1993年11月</dt>
+<dd>HTML+由IETF作为互联网草案发布，是超文本标记语言草案的一个竞争性提案。它于1994年5月到期。</dd>
+<dt>1995年4月 （1995年3月编写）</dt>
+<dd>HTML 3.0<sup id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup>被提议作为IETF的标准，但直到提案在五个月过期后（1995年9月28日）<sup id="cite_ref-html30cover_36-0"><a href="#cite_note-html30cover-36">[36]</a></sup>仍没有进一步的行动。它包含许多拉格特HTML+提案的功能，如对表格的支持、围绕数据的文本流和复杂的数学公式的显示<sup id="cite_ref-html30cover_36-1"><a href="#cite_note-html30cover-36">[36]</a></sup>。W3C开始开发自己的<a href="/wikipedia/zh-hans/Arena_(%E7%80%8F%E8%A6%BD%E5%99%A8)" title="Arena (浏览器)">Arena浏览器</a>作为HTML 3和层叠样式表的试验台（英语：<a href="https://en.wikipedia.org/wiki/Test_bed" title="en:Test bed">Test bed</a>）<sup id="cite_ref-37"><a href="#cite_note-37">[37]</a></sup><sup id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup><sup id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup>，但HTML 3.0并没有获得成功。浏览器厂商，包括微软和网景，选择实现HTML3草案功能的不同子集并引入它们自己的插件（见<a href="/wikipedia/zh-hans/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A4%A7%E6%88%98" title="浏览器大战">浏览器大战</a>）<sup id="cite_ref-raggett_15-2"><a href="#cite_note-raggett-15">[15]</a></sup>。</dd></dl>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/200px-HTML5_logo_and_wordmark.svg.png" decoding="async" width="200" height="200" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/300px-HTML5_logo_and_wordmark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/400px-HTML5_logo_and_wordmark.svg.png 2x" data-file-width="512" data-file-height="512"><figcaption>HTML5的Logo</figcaption></figure>
+<dl><dt>2008年1月</dt>
+<dd><a href="/wikipedia/zh-hans/HTML5" title="HTML5">HTML5</a>由W3C作为工作草案（<a rel="nofollow" href="http://www.w3.org/TR/html5/">链接</a>）发布<sup id="cite_ref-40"><a href="#cite_note-40">[40]</a></sup>。虽然HTML5的语法非常类似于<a href="/wikipedia/zh-hans/SGML" title="SGML">SGML</a>，但它已经放弃任何成为SGML应用程序的尝试，除了一种替代的基于XML的HTML5序列，它已明确定义自己的“HTML”序列<sup id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup>。</dd>
+<dt>2011年 HTML5 – 最终征求</dt>
+<dd>2011年5月，工作小组将HTML5推进至“最终征求”（Last Call）阶段，邀请W3C社区内外人士以确认本规范的技术可靠性。W3C开发一套综合性测试包来实现完整规范的广泛交互操作性，完整规范的目标日期为2014年<sup id="cite_ref-w3c2014_42-0"><a href="#cite_note-w3c2014-42">[42]</a></sup>。2011年1月，WHATWG将其“HTML5”活动标准重命名为“HTML”。W3C仍然继续其发布HTML5的项目<sup id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup>。</dd></dl>
+<dl><dt>2012年 HTML5 – 候选推荐</dt>
+<dd>2012年7月，WHATWG和W3C的工作产生一定程度的分离。W3C继续HTML5规范工作，重点放在单一明确的标准上，这被WHATWG称为“快照”。WHATWG组织则将HTML5作为一个“活动标准”（Living Standard）。活动标准的概念是从未完成但永远保持更新与改进，可以蒂姆加新特性，但功能点不会被删除。<sup id="cite_ref-44"><a href="#cite_note-44">[44]</a></sup></dd></dl>
+<dl><dd>2012年12月，W3C指定HTML5作为候选推荐<sup id="cite_ref-45"><a href="#cite_note-45">[45]</a></sup>阶段。该阶段的标准为“两个100％完成，完全实现交互操作”。</dd></dl>
+<dl><dt>2014年 HTML5 – 提案推荐与推荐</dt>
+<dd>2014年9月，HTML5进入提案推荐阶段。<sup id="cite_ref-46"><a href="#cite_note-46">[46]</a></sup></dd>
+<dd>2014年10月28日，HTML5作为稳定W3C推荐标准发布<sup id="cite_ref-47"><a href="#cite_note-47">[47]</a></sup>，这意味着HTML5的标准化已经完成<sup id="cite_ref-finalars_48-0"><a href="#cite_note-finalars-48">[48]</a></sup>。</dd></dl>
+<h4 id="xhtml版本">XHTML版本</h4>
+  
+<p>XHTML是使用<a href="/wikipedia/zh-hans/XML" title="XML">XML</a> 1.0改写自HTML 4.01的独立语言。它不再被作为单独标准开发。
+</p>
+<ul><li>XHTML 1.0<sup id="cite_ref-49"><a href="#cite_note-49">[49]</a></sup>， 2000年1月26日作为W3C推荐标准发布。修订版于2002年8月1日发布，它提供与HTML 4.0和4.01相同的三个变化，这些变化被重新在XML中制定。</li>
+<li>XHTML 1.1<sup id="cite_ref-50"><a href="#cite_note-50">[50]</a></sup>，基于XHTML 1.0 严格版，2001年5月31日 作为W3C推荐标准发布。修订版可使用<a rel="nofollow" href="http://www.w3.org/TR/xhtml-modularization/">模块化XHTML</a>的模块，2001年4月10日作为W3C推荐标准发布。</li>
+<li>XHTML 2.0为工作草案，但为支持<a href="/wikipedia/zh-hans/HTML5" title="HTML5">HTML5</a>与<a href="/wikipedia/zh-hans/XHTML#XHTML5" title="XHTML">XHTML5</a>的工作，此草案被放弃<sup id="cite_ref-51"><a href="#cite_note-51">[51]</a></sup><sup id="cite_ref-52"><a href="#cite_note-52">[52]</a></sup><sup id="cite_ref-53"><a href="#cite_note-53">[53]</a></sup>。 XHTML 2.0与XHTML 1.x不兼容，因此更确切的说这是一个XHTML风格的新语言而不是XHTML 1.x的更新。</li>
+<li>在HTML5草案中规定一个XHTML语法，称为“XHTML5.1”<sup id="cite_ref-54"><a href="#cite_note-54">[54]</a></sup>。</li></ul>
+<h2 id="标记">标记</h2>
+<p>HTML标记包含标签（及其属性）、基于字符的数据类型、字符引用和实体引用等几个关键部分。HTML标签是最常见的，通常成对出现，比如<code>&lt;h1&gt;</code>与<code>&lt;/h1&gt;</code>。这些成对出现的标签中，第一个标签是开始标签，第二个标签是结束标签。两个标签之间为元素的内容，有些标签没有内容，为空元素，如<code>&lt;img&gt;</code>。
+</p><p>HTML另一个重要组成部分为文档类型声明（英语：<a href="https://en.wikipedia.org/wiki/document_type_declaration" title="en:document type declaration">document type declaration</a>），这会触发<a href="/wikipedia/zh-hans/%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F" title="怪异模式">标准模式</a>渲染。
+</p><p>以下是一个经典的<a href="/wikipedia/zh-hans/Hello_World" title="Hello World">Hello World</a>程序的例子：
+</p>
+<div><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;This is a title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;p&gt;Hello world!&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<p><code>&lt;html&gt;</code>和<code>&lt;/html&gt;</code>之间的文本描述网页，<code>&lt;body&gt;</code>和<code>&lt;/body&gt;</code>之间的文本为可视页面内容。标记文本<code>&lt;title&gt;This is a title&lt;/title&gt;</code>定义了浏览器的页面标题。
+</p><p>文档标记类型<code>&lt;!DOCTYPE html&gt;</code>用于HTML5。 如果未进行声明，浏览器会使用“<a href="/wikipedia/zh-hans/%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F" title="怪异模式">怪异模式</a>”进行渲染。<sup id="cite_ref-hsivonen_55-0"><a href="#cite_note-hsivonen-55">[55]</a></sup>
+</p>
+<h3 id="元素">元素</h3>
+  
+<p>HTML文档由嵌套的HTML元素构成。它们用HTML标签表示，包含于尖括号中，如<code>&lt;p&gt;</code><sup id="cite_ref-56"><a href="#cite_note-56">[56]</a></sup>
+</p><p>在一般情况下，一个元素由一对标签表示：“开始标签”<code>&lt;p&gt;</code>与“结束标签”<code>&lt;/p&gt;</code>。元素如果含有文本内容，就被放置在这些标签之间。
+</p><p>在开始与结束标签之间也可以封装另外的标签，包括标签与文本的混合。这些嵌套元素是父元素的子元素。
+</p><p>开始标签也可包含标签属性。这些属性有诸如标识文档区块、将样式信息绑定到文档演示和为一些如<code>&lt;img&gt;</code>等的标签嵌入图像、引用图像来源等作用。
+</p><p>一些元素如<a href="/wikipedia/zh-hans/%E6%8F%9B%E8%A1%8C" title="换行">换行</a>符<code>&lt;br&gt;</code>，不允许嵌入任何内容，无论是文字或其他标签。这些元素只需一个单一的空标签（类似于一个开始标签），无需结束标签。
+</p><p>许多标签是可选的，尤其是那些很常用的段落元素<code>&lt;p&gt;</code>的闭合端标签。HTML浏览器或其他介质可以从上下文识别出元素的闭合端以及由HTML标准所定义的结构规则。这些规则非常复杂，不是大多数HTML编码人员可以完全理解的。
+</p><p>因此，一个HTML元素的一般形式为：<code>&lt;tag attribute1="value1" attribute2="value2"&gt;''content''&lt;/tag&gt;</code>。一些HTML元素被定义为空元素，其形式为<code>&lt;tag attribute1="value1" attribute2="value2"&gt;</code>。空元素不能封装任何内容。例如<code>&lt;br&gt;</code>标签或内联标签<code>&lt;img&gt;</code>。一个HTML元素的名称即为标签使用的名称。注意，结束标签的名称前面有一个斜杠“/”，空元素不需要也不允许结束标签。如果元素属性未标明，则使用其默认值。
+</p>
+<h4 id="例子">例子</h4>
+<p>HTML文档的页眉：<code>&lt;head&gt;...&lt;/head&gt;</code>。标题被包含在头部，例如：
+</p>
+<div><pre><code>&lt;head&gt;
+  &lt;title&gt;The Title&lt;/title&gt;
+&lt;/head&gt;
+</code></pre></div>
+<p>标题：HTML标题由<code>&lt;h1&gt;</code>到<code>&lt;h6&gt;</code>六个标签构成，字体由大到小递减：
+</p>
+<div><pre><code>&lt;h1&gt;Heading level 1&lt;/h1&gt;
+&lt;h2&gt;Heading level 2&lt;/h2&gt;
+&lt;h3&gt;Heading level 3&lt;/h3&gt;
+&lt;h4&gt;Heading level 4&lt;/h4&gt;
+&lt;h5&gt;Heading level 5&lt;/h5&gt;
+&lt;h6&gt;Heading level 6&lt;/h6&gt;
+</code></pre></div><p>
+段落：</p><div><pre><code>&lt;p&gt;第一段&lt;/p&gt;  &lt;p&gt;第二段&lt;/p&gt;
+</code></pre></div>
+<p>换行：<code>&lt;br&gt;</code>。<code>&lt;br&gt;</code>与<code>&lt;p&gt;</code>之间的差异是<code>br</code>换行但不改变页面的语义结构，而<code>p</code>部分的页面成段。
+</p>
+<div><pre><code>&lt;p&gt;這是&lt;br&gt;一個&lt;br&gt;使用換行&lt;br&gt;段落&lt;/p&gt;
+</code></pre></div>
+<p>链接：使用<code>&lt;a&gt;</code>标签来创建链接。<code>href</code>属性包含链接的URL地址。
+</p>
+<div><pre><code>&lt;a href="https://zh.wikipedia.org/"&gt;中文維基百科的連結！&lt;/a&gt;
+</code></pre></div>
+<p>注释：
+</p>
+<div><pre><code>&lt;!-- This is a comment --&gt;
+</code></pre></div><p> 注释有助于理解标记，但它不会在网页上显示。
+</p><p>HTML中存在以下几种类型的标记元素：
+</p>
+<dl><dt>用于文本的结构式标记</dt>
+<dd>例如，<code>&lt;h2&gt;羽毛球&lt;/h2&gt;</code>将“羽毛球”定义为二级标题。结构式标记不指示任何特定的渲染，但大多数网页浏览器都会采用元素格式的默认样式。要在内容上实现进一步的风格可以使用<a href="/wikipedia/zh-hans/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8" title="层叠样式表">层叠样式表</a>（CSS）<sup id="cite_ref-57"><a href="#cite_note-57">[57]</a></sup>。</dd>
+<dt>用于文本外观的表现式<b>标记</b>，不论其目的</dt>
+<dd>例如，<code>'''粗体'''</code>表示视觉输出设备应将文本“<b>粗体</b>”加粗，但如果设备无法做到这一点（如朗读文本的听觉设备），就不会发生什么现象。在这种情况下，<code>'''粗体'''</code>与<code>''斜体''</code>也可能有相同的视觉效果，但在本质上它们更加语义化。如同<code>'''加强文字'''</code>与<code>''强调文字''</code>的区别。为支持CSS的使用，大多数表现式标记在HTML 4.0规范中不再被推荐使用。</dd></dl>
+<dl><dt>超文本标记使文档的一部分链接到其他文档</dt>
+<dd>锚元素在文档中创建<a href="/wikipedia/zh-hans/%E8%B6%85%E9%93%BE%E6%8E%A5" title="超链接">超链接</a>，其<code>href</code>属性设置链接的目标<a href="/wikipedia/zh-hans/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6" title="统一资源定位符">URL</a>。例如：HTML标记<code>&lt;a href="https://zh.wikipedia.org/"&gt;万维百科&lt;/a&gt;</code>会将文字"<a href="javascript:">万维百科</a>"渲染为超链接。要将图片渲染为超链接，<code>img</code>元素要作为内容插入到<code>a</code>元素中：<code>&lt;a href="https://example.org"&gt;&lt;img src="image.gif" alt="说明文字" width="50" height="50" border="0"&gt;&lt;/a&gt;</code>。</dd></dl>
+<h4 id="属性">属性</h4>
+  
+<p>大多数元素的属性以“名称-值”的形式成对出现，由“=”分离并写在开始标签元素名之后。值一般由单引号或双引号包围，有些值的内容包含特定字符，在HTML中可以去掉引号（XHTML不行）<sup id="cite_ref-58"><a href="#cite_note-58">[58]</a></sup><sup id="cite_ref-59"><a href="#cite_note-59">[59]</a></sup>。不加引号的属性值被认为是不安全的<sup id="cite_ref-60"><a href="#cite_note-60">[60]</a></sup>。有些属性无需成对出现，仅存在于开始标签中即可影响元素<sup id="cite_ref-tagshtml_8-2"><a href="#cite_note-tagshtml-8">[8]</a></sup>，如<code>img</code> 元素的<code>ismap</code> 属性<sup id="cite_ref-61"><a href="#cite_note-61">[61]</a></sup>。
+</p><p>许多元素存在一些共通的属性：
+</p>
+<ul><li><code>id</code>属性为元素提供了在全文档内的唯一标识。它用于识别元素，以便样式表可以改变其表现属性，脚本可以改变、显示或删除其内容或格式化。对于蒂姆加到页面的URL，它为元素提供了一个全局唯一标识，通常为页面的子章节。例如，ID "属性"对于<code>https://zh.wikipedia.org/wiki/HTML#属性</code></li>
+<li><code>class</code>属性提供一种将类似元素分类的方式。常被用于语义化或格式化。例如，一个HTML文档可指定类<code>&lt;class="标记"&gt;</code>来表明所有具有这一类值的元素都从属于文档的主文本。格式化后，这样的元素可能会聚集在一起，并作为页面脚注而不会出现在HTML代码中。类属性也被用于<a href="/wikipedia/zh-hans/%E5%BE%AE%E6%A0%BC%E5%BC%8F" title="微格式">微格式</a>的语义化。类值也可进行多声明。如<code>&lt;class="标记 重要"&gt;</code>将元素同时放入<code>標記</code>与<code>重要</code>两类中。</li>
+<li><code>style</code>属性可以将表现性质赋予一个特定元素。比起使用<code>id</code>或<code>class</code> 属性从样式表中选择元素，“style”被认为是一个更好的做法，尽管有时这对一个简单、专用或特别的样式显得太繁琐。</li>
+<li><code>title</code>属性用于给元素一个附加的说明。 大多数浏览器中这一属性显示为工具提示（英语：<a href="https://en.wikipedia.org/wiki/Tooltip" title="en:Tooltip">Tooltip</a>）。</li>
+<li><code>lang</code>属性用于识别元素内容的语言，它可能与文档的主要语言不同。例如，在中文文档中：  <div><pre><code>&lt;p&gt;法语&lt;span lang="fr"&gt;c'est la vie&lt;/span&gt;在法国的应用很普遍，意为“这就是生活” 。&lt;p&gt;
+</code></pre></div></li></ul>
+<p>缩写元素<code>abbr</code>可用于说明一些属性：
+</p>
+<div><pre><code>&lt;abbr id="ID" class="术语" style="color:purple;" title="超文本标记语言"&gt;HTML&lt;/abbr&gt;
+</code></pre></div>
+<p>这个例子显示为<abbr id="anId" title="超文本标记语言">HTML</abbr>； 在大多数浏览器中，光标指向缩写时会显示标题文字“超文本标记语言”。
+</p><p>大多数元素采用与语言相关的属性<code>dir</code> 来指定文字方向，如 "rtl"采用从右到左的文本，比如<a href="/wikipedia/zh-hans/%E9%98%BF%E6%8B%89%E4%BC%AF%E8%AF%AD" title="阿拉伯语">阿拉伯语</a>、<a href="/wikipedia/zh-hans/%E6%B3%A2%E6%96%AF%E8%AF%AD" title="波斯语">波斯语</a>以及<a href="/wikipedia/zh-hans/%E5%B8%8C%E4%BC%AF%E6%9D%A5%E8%AF%AD" title="希伯来语">希伯来语</a><sup id="cite_ref-62"><a href="#cite_note-62">[62]</a></sup>。
+</p>
+<h3 id="字符与实体引用">字符与实体引用</h3>
+  
+<p>在4.0版本中，HTML定义了一系列共252个字符实体引用和1,114,050个<a href="/wikipedia/zh-hans/%E5%AD%97%E5%85%83%E5%80%BC%E5%8F%83%E8%80%83" title="字符值参考">字符值参考</a>。二者都支持单个字符通过简单的标记写入。文字字符与其对应的标记渲染的效果相同。
+</p><p>用这种方式“转义”字符的能力允许字符<code>&lt;</code>与<code>&amp;</code>（当分别被写作<code>&lt;</code>和<code>&amp;</code>时）被理解为字符数据而不是标记。例如<code>&lt;</code>通常为标签的开头，<code>&amp;</code>通常为字符实体引用与数字字符引用的开头；<code>&amp;</code>或<code>&amp;#x26;</code>或<code>&amp;#38;</code>将<code>&amp;</code>作为元素的内容或属性的值。双引号字符<code>"</code>在不被用于属性值的标示时必须转义为<code>"</code>或<code>&amp;#x22;</code>或<code>&amp;#34;</code>；相等地，当于单引号字符<code>'</code>不被用于属性值的标示时，也必须转义为<code>&amp;#x27;</code>或<code>&amp;#39;</code>（或HTML5与XHTML文档中的<code>&amp;apos;</code><sup id="cite_ref-63"><a href="#cite_note-63">[63]</a></sup><sup id="cite_ref-aposhtml_64-0"><a href="#cite_note-aposhtml-64">[64]</a></sup>）。
+</p><p>如果文档作者忽略了转义这样的字符，一些浏览器会尝试通过上下文猜测他们的意图。如果结果仍为无效标记，这会使其他浏览器或<a href="/wikipedia/zh-hans/%E7%94%A8%E6%88%B7%E4%BB%A3%E7%90%86" title="用户代理">用户代理</a>难以访问到该文档，并使它们尝试使用<a href="/wikipedia/zh-hans/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB" title="网络爬虫">搜索和索引</a>来解析该文档。
+</p><p>那些难以输入或不在该文档<a href="/wikipedia/zh-hans/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81" title="字符编码">字符编码</a>中的字符也可通过转义来实现。例如通常只在西欧或南美的键盘出现的重音符<code>e</code>（<code>é</code>），可以在HTML文档中用作实体引用<code>é</code> 或数字引用<code>&amp;#xE9;</code>或<code>&amp;#233;</code>。 诸如<a href="/wikipedia/zh-hans/UTF-8" title="UTF-8">UTF-8</a>的<a href="/wikipedia/zh-hans/Unicode" title="Unicode">Unicode</a>字符编码与所有的现代浏览器兼容并允许直接访问全球书写系统几乎所有的字符 <sup id="cite_ref-65"><a href="#cite_note-65">[65]</a></sup>。
+</p>
+<h3 id="数据类型">数据类型</h3>
+<p>HTML为元素内容定义了多种<a href="/wikipedia/zh-hans/%E6%95%B8%E6%93%9A%E9%A1%9E%E5%9E%8B" title="数据类型">数据类型</a>，如脚本数据、样式表数据以及许多属性值的类型，包括ID、名称、URI、数字长度单位、语言、媒体描述符颜色、字符编码、日期和时间等等。所有这些数据类型都是字符数据的特殊化。
+</p>
+<h3 id="文档类型声明">文档类型声明</h3>
+<p>HTML文档需要以文档类型声明（英语：<a href="https://en.wikipedia.org/wiki/document_type_declaration" title="en:document type declaration">document type declaration</a>）（英语非正式说法“doctype”）开头。在浏览器中，文档类型声明有助于确定渲染模式——特别是是否使用<a href="/wikipedia/zh-hans/%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F" title="怪异模式">怪异模式</a>。
+</p><p>文档类型声明的初衷是通过基于<a href="/wikipedia/zh-hans/%E6%96%87%E6%A1%A3%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89" title="文档类型定义">文档类型定义</a>（DTD）的SGML工具来解析并验证HTML文档。
+</p><p><a href="/wikipedia/zh-hans/HTML5" title="HTML5">HTML5</a>未定义DTD，所以在HTML5中文档类型声明更为简短：<sup id="cite_ref-66"><a href="#cite_note-66">[66]</a></sup>
+</p>
+<div><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></div>
+<p>HTML 4文档类型声明举例：
+</p>
+<div><pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+</code></pre></div>
+<p>该声明引用HTML 4.01“严格”版的DTD。基于SGML的验证器可读取DTD，正确解析这些文档并执行验证。在现代浏览器中，一个有效的文档类型激活标准模式有别于<a href="/wikipedia/zh-hans/%E6%80%AA%E5%BC%82%E6%A8%A1%E5%BC%8F" title="怪异模式">怪异模式</a>。
+</p><p>另外，HTML 4.01提供过渡型与框架集型的DTD。过渡型涵盖最广，它可集成当前以及老旧或“过时”的标签，而严格型DTD排除了过时的标签。框架集拥有所有构建框架所需的标签以及过渡型的标签。<sup id="cite_ref-67"><a href="#cite_note-67">[67]</a></sup>
+</p>
+<h2 id="语义化html">语义化HTML</h2>
+  
+<p>语义化HTML是一种编写HTML的方式，它强调编码信息的含义在其格式（样子）之上。HTML从创立之初就包括语义化标记<sup id="cite_ref-68"><a href="#cite_note-68">[68]</a></sup>，但也包括标识性标记如<code>&lt;font&gt;</code>、<code>&lt;i&gt;</code>和<code>&lt;center&gt;</code>标签。也存在一些语义上中立的<a href="/wikipedia/zh-hans/Span_and_div" title="Span and div">span与div</a>标签。自1990年代末<a href="/wikipedia/zh-hans/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8" title="层叠样式表">CSS</a>开始应用于大多数浏览器，网页制作者就被鼓励使用CSS以便<a href="/wikipedia/zh-hans/%E5%91%88%E7%8E%B0%E4%B8%8E%E5%86%85%E5%AE%B9%E5%88%86%E7%A6%BB" title="呈现与内容分离">呈现与内容分离</a><sup id="cite_ref-69"><a href="#cite_note-69">[69]</a></sup>。
+</p><p>在2001年一次对<a href="/wikipedia/zh-hans/%E8%AF%AD%E4%B9%89%E7%BD%91" title="语义网">语义网</a>的讨论中，<a href="/wikipedia/zh-hans/%E8%92%82%E5%A7%86%C2%B7%E4%BC%AF%E7%BA%B3%E6%96%AF-%E6%9D%8E" title="蒂姆·伯纳斯-李">蒂姆·伯纳斯-李</a>等人给出了一种的方法，使智能软件“代理人”可能有一天会自动抓取网页进行查找、过滤并将之前不相关的联系起来<sup id="cite_ref-70"><a href="#cite_note-70">[70]</a></sup>。这种代理甚至在现在也不普遍，但一些<a href="/wikipedia/zh-hans/Web_2.0" title="Web 2.0">Web 2.0</a>、<a href="/wikipedia/zh-hans/%E6%B7%B7%E6%90%AD_(%E4%BA%92%E8%81%AF%E7%B6%B2)" title="混搭 (互联网)">混搭</a>和<a href="/wikipedia/zh-hans/%E6%A0%BC%E5%83%B9" title="格价">价格比较网站</a>的想法可能会结束。这些网页应用程序的混合与伯纳斯-李的语义代理人的之间主要区别基于以下事实：当前的<a href="/wikipedia/zh-hans/%E8%81%9A%E5%90%88%E5%99%A8" title="聚合器">聚合</a>与信息混合通常由<a href="/wikipedia/zh-hans/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC%E8%80%85" title="网页开发者">网页开发者</a>设计，他们早已知道网络位置和他们希望混搭、比较与结合的特定数据的<a href="/wikipedia/zh-hans/API" title="API">API</a>语义。
+</p><p>网页代理的一个重要类型是<a href="/wikipedia/zh-hans/%E7%B6%B2%E8%B7%AF%E8%9C%98%E8%9B%9B" title="网络蜘蛛">网络爬虫</a>或搜索引擎蜘蛛。这些软件代理依赖于它们发现的网页的语义清晰度，因为它们一天要使用各种技术与<a href="/wikipedia/zh-hans/%E7%AE%97%E6%B3%95" title="算法">算法</a>来读取和索引数百万个网页并给网页用户提供<a href="/wikipedia/zh-hans/%E7%BD%91%E7%BB%9C%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E" title="网络搜索引擎">搜索工具</a>，没有这些万维网的有效性就会大大降低。
+</p><p>为使搜索引擎蜘蛛评估它们在HTML文档中发现的文本片段的重要性，也为那些创建标记等混合的人与更多的自动化代理工具，HTML中的语义结构需要广泛一致地应用从而将文本的含义呈现给浏览者。<sup id="cite_ref-Semantic_Web_Revisted_71-0"><a href="#cite_note-Semantic_Web_Revisted-71">[71]</a></sup>
+</p><p>表示性标记在当前的HTML和XHTML推荐中不被鼓励使用。旧版本HTML中的大多数表示功能不再被允许使用，因为它们导致可访问性变差、站点维护成本变高和文档大小变大。<sup id="cite_ref-72"><a href="#cite_note-72">[72]</a></sup>
+</p><p>好的语义化HTML也改善了网页文档的可访问性（参见网页内容无障碍指南（英语：<a href="https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines" title="en:Web Content Accessibility Guidelines">Web Content Accessibility Guidelines</a>））。例如，当屏幕阅读器或音频浏览器可以正确判定一个文档的结构时，视觉障碍用户不会再因阅读重复或无关的信息而浪费时间。
+</p>
+<h2 id="分发">分发</h2>
+<p>HTML文档分发的方法和其他计算机文件相同。不过，它们最常通过<a href="/wikipedia/zh-hans/%E7%B6%B2%E9%A0%81%E4%BC%BA%E6%9C%8D%E5%99%A8" title="网页服务器">网页服务器</a>的<a href="/wikipedia/zh-hans/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" title="超文本传输协议">超文本传输协议</a>或<a href="/wikipedia/zh-hans/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6" title="电子邮件">电子邮件</a>传输。
+</p>
+<h3 id="http">HTTP</h3>
+  
+<p><a href="/wikipedia/zh-hans/%E4%B8%87%E7%BB%B4%E7%BD%91" title="万维网">万维网</a>主要由从服务器通过<a href="/wikipedia/zh-hans/HTTP" title="HTTP">HTTP</a>协议向浏览器发送的HTML文档组成。但是，HTTP也可以被用于传输HTML之外的数据，例如图像、声音和其他内容。为使浏览器了解如何处理接收到的文档，在传输文档时必须同时传递<a href="/wikipedia/zh-hans/%E6%96%87%E4%BB%B6%E9%A1%9E%E5%9E%8B" title="文件类型">文件类型</a>。这种<a href="/wikipedia/zh-hans/%E5%85%83%E6%95%B0%E6%8D%AE" title="元数据">元数据</a>包含<a href="/wikipedia/zh-hans/MIME" title="MIME">MIME</a>类型（对于HTML 4.01或更早版本是<tt>text/html</tt>，而对于XHTML 1.0或之后的版本是<tt>application/xhtml+xml</tt>），以及字符编码（参见<a href="/wikipedia/zh-hans/HTML%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81" title="HTML字符编码">HTML字符编码</a>方式）。
+</p><p>在现在的浏览器中，和HTML文档一起发送的MIME类型影响文档的解读方式。和XHTML MIME类型一起发送的文档被认为是良构的<a href="/wikipedia/zh-hans/XML" title="XML">XML</a>，而<a href="/wikipedia/zh-hans/%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF" title="语法错误">语法错误</a>会导致浏览器无法呈现文档。完全相同的文档如果和HTML MIME类型一起发送，则可能被正常显示，因为浏览器对HTML的语法检查更加松懈些。
+</p><p>W3C的推荐指出，遵循规定的推荐指引的XHTML 1.0文档可标记二者任一的MIME类型<sup id="cite_ref-73"><a href="#cite_note-73">[73]</a></sup>。XHTML 1.1还指出，XHTML 1.1文档应<sup id="cite_ref-74"><a href="#cite_note-74">[74]</a></sup>标有两种MIME类型<sup id="cite_ref-75"><a href="#cite_note-75">[75]</a></sup>。
+</p>
+<h3 id="html邮件">HTML邮件</h3>
+  
+<p>大多数图形电子邮件客户端允许使用HTML的子集（经常界限不清）提供格式化和无法使用<a href="/wikipedia/zh-hans/%E7%BA%AF%E6%96%87%E6%9C%AC" title="纯文本">纯文本</a>的<a href="/wikipedia/zh-hans/%E8%AF%AD%E4%B9%89%E7%BD%91" title="语义网">语义</a>标记。这可能包括印刷信息，如彩色标题、强调和引用文本、内嵌图片和图表等。许多这样的客户包含一个编写HTML电子邮件消息的<a href="/wikipedia/zh-hans/%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2" title="图形用户界面">图形用户界面</a>编辑器和一个用于显示的渲染引擎。在邮件中使用HTML受到了一些兼容性的批评，由于一些盲人或具有视觉障碍的人的访问问题，这种方式有利于伪装的<a href="/wikipedia/zh-hans/%E9%92%93%E9%B1%BC%E5%BC%8F%E6%94%BB%E5%87%BB" title="钓鱼式攻击">钓鱼攻击</a>。因其消息大小超过明文，所以它可混淆<a href="/wikipedia/zh-hans/%E5%9E%83%E5%9C%BE%E9%9B%BB%E9%83%B5" title="垃圾电邮">垃圾邮件</a>过滤器。
+</p>
+<h3 id="命名规则">命名规则</h3>
+<p>最常用的计算机<a href="/wikipedia/zh-hans/%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D" title="文件扩展名">文件扩展名</a>为<tt>.html</tt>，通用缩写为<tt>.htm</tt>。它起源于某些早期操作系统与文件系统，如<a href="/wikipedia/zh-hans/DOS" title="DOS">DOS</a>以及<a href="/wikipedia/zh-hans/FAT" title="FAT">FAT</a>数据结构的局限性，它将文件扩展名限制为<a href="/wikipedia/zh-hans/8.3" title="8.3">3个字母</a><sup id="cite_ref-76"><a href="#cite_note-76">[76]</a></sup>。
+</p>
+<h3 id="html应用程序">HTML应用程序</h3>
+  
+<p>HTML应用程序（HTA；文件扩展名".hta"）是一个<a href="/wikipedia/zh-hans/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a>应用程序，它在浏览器中使用HTML和动态HTML提供应用程序图形界面。正规HTML文件被限制在浏览器的安全模型中，只能分别通过网页服务器和网页对象与站点<a href="/wikipedia/zh-hans/Cookie" title="Cookie">Cookie</a>进行通信和操作。HTA作为完全受信任的应用程序运行，因此拥有更多的权限，如创建/编辑/删除文件与<a href="/wikipedia/zh-hans/%E6%B3%A8%E5%86%8C%E8%A1%A8" title="注册表">注册表</a>项。因为它们在浏览器安全模式之外操作，所以HTA不能通过HTTP执行，必须下载（就像<a href="/wikipedia/zh-hans/EXE%E6%A0%BC%E5%BC%8F" title="EXE格式">EXE文件</a>）并在本地文件系统执行。
+</p>
+<h2 id="所见即所得编辑器">所见即所得编辑器</h2>
+<p><a href="/wikipedia/zh-hans/%E6%89%80%E8%A6%8B%E5%8D%B3%E6%89%80%E5%BE%97" title="所见即所得">所见即所得</a>编辑器使用<a href="/wikipedia/zh-hans/%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2" title="图形用户界面">图形用户界面</a>（GUI）显示HTML文档，常常类似于<a href="/wikipedia/zh-hans/%E6%96%87%E5%AD%97%E5%A4%84%E7%90%86%E5%99%A8" title="文字处理器">文字处理器</a>，所以用户可以设计一切。编者面对的是文档，而不是代码，所以作者并不需要太多的HTML知识。这种所见即所得的编辑模式一直受到诟病<sup id="cite_ref-77"><a href="#cite_note-77">[77]</a></sup><sup id="cite_ref-78"><a href="#cite_note-78">[78]</a></sup>，主要因为它生成的代码质量不高；也有人主张将其改变至<a href="/wikipedia/zh-hans/WYSIWYM" title="WYSIWYM">WYSIWYM</a>模型（所见即所指）。
+</p>
+<h2 id="参见">参见</h2>
+<div>
+<ul><li><a href="/wikipedia/zh-hans/%E9%9D%A2%E5%8C%85%E5%B1%91%E5%AF%BC%E8%88%AA" title="面包屑导航">面包屑导航</a></li>
+<li><a href="/wikipedia/zh-hans/HTML_%E8%A7%A3%E6%9E%90%E5%99%A8%E5%AF%B9%E6%AF%94" title="HTML 解析器对比">HTML 解析器对比</a></li>
+<li><a href="/wikipedia/zh-hans/CSS" title="CSS">CSS</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%8B%95%E6%85%8B%E7%B6%B2%E9%A0%81" title="动态网页">动态网页</a></li>
+<li><a href="/wikipedia/zh-hans/HTML5" title="HTML5">HTML5</a></li>
+<li><a href="/wikipedia/zh-hans/HTTP" title="HTTP">HTTP</a></li>
+<li><a href="/wikipedia/zh-hans/JavaScript" title="JavaScript">JavaScript</a></li>
+<li>文档标记语言列表</li>
+<li><a href="/wikipedia/zh-hans/%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8" title="字符实体引用">字符实体引用</a></li>
+<li>微数据</li>
+<li><a href="/wikipedia/zh-hans/%E5%BE%AE%E6%A0%BC%E5%BC%8F" title="微格式">微格式</a></li>
+<li>多语言标记（英语：<a href="https://en.wikipedia.org/wiki/Polyglot_HTML" title="en:Polyglot HTML">Polyglot HTML</a>）</li>
+<li>语义化HTML</li>
+<li><a href="/wikipedia/zh-hans/SGML" title="SGML">SGML</a></li>
+<li><a href="/wikipedia/zh-hans/W3C%E9%AA%8C%E8%AF%81%E6%9C%8D%E5%8A%A1" title="W3C验证服务">W3C验证服务</a></li>
+<li><a href="/wikipedia/zh-hans/XML" title="XML">XML</a></li></ul>
+</div>
+<h2 id="参考资料">参考资料</h2>
+<div>
+<ol>
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <cite><a rel="nofollow" href="https://www.w3.org/TR/html/">HTML 5.2</a>. <a href="/wikipedia/zh-hans/World_Wide_Web_Consortium" title="World Wide Web Consortium">W3C</a>. 2017-12-14  [2018-03-02].</cite>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <cite><a rel="nofollow" href="https://w3c.github.io/html/">HTML 5.3 Editor’s Draft</a>. <a href="/wikipedia/zh-hans/World_Wide_Web_Consortium" title="World Wide Web Consortium">W3C</a>. 2017-03-01  [2018-03-02].</cite>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <cite>Flanagan, David. JavaScript - The definitive guide 6. : 1. <q>JavaScript is part of the triad of technologies that all Web developers must learn: HTML to specify the content of web pages, CSS to specify the presentation of web pages, and JavaScript to specify the behaviour of web pages.</q></cite>
+</li>
+<li id="cite_note-deprecated-4"><b><a href="#cite_ref-deprecated_4-0">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/REC-html40-971218/conform.html#deprecated">HTML 4.0 Specification — W3C Recommendation — Conformance: requirements and recommendations</a>. World Wide Web Consortium. 1997-12-18  [2015-07-06]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20150515075738/http://www.w3.org/TR/REC-html40-971218/conform.html#deprecated">存档</a>于2015-05-15）.</cite>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> Tim Berners-Lee, "Information Management: A Proposal." CERN (March 1989, May 1990). <a rel="nofollow" href="http://www.w3.org/History/1989/proposal.html">W3.org</a> <a href="/wikipedia/zh-hans/Wayback_Machine" title="Wayback Machine">互联网档案馆</a>的<a rel="nofollow" href="https://web.archive.org/web/20100401051011/http://www.w3.org/History/1989/proposal.html">存档</a>，存档日期2010-04-01.
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> Tim Berners-Lee, <a rel="nofollow" href="http://www.w3.org/DesignIssues/">"Design Issues"</a> <a href="/wikipedia/zh-hans/Wayback_Machine" title="Wayback Machine">互联网档案馆</a>的<a rel="nofollow" href="https://web.archive.org/web/20090503080104/http://www.w3.org/DesignIssues/">存档</a>，存档日期2009-05-03.
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> Tim Berners-Lee,  <a rel="nofollow" href="http://www.w3.org/DesignIssues/Uses.html">"Design Issues"</a> <a href="/wikipedia/zh-hans/Wayback_Machine" title="Wayback Machine">互联网档案馆</a>的<a rel="nofollow" href="https://web.archive.org/web/20090625041233/http://www.w3.org/DesignIssues/Uses.html">存档</a>，存档日期2009-06-25.
+</li>
+<li id="cite_note-tagshtml-8">^ <a href="#cite_ref-tagshtml_8-0"><sup><b>8.0</b></sup></a> <a href="#cite_ref-tagshtml_8-1"><sup><b>8.1</b></sup></a> <a href="#cite_ref-tagshtml_8-2"><sup><b>8.2</b></sup></a> <cite><a rel="nofollow" href="http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html">Tags used in HTML</a>. World Wide Web Consortium. 1992-11-03  [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20100131184344/http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html">存档</a>于2010-01-31）.</cite>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <cite><a rel="nofollow" href="http://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html">First mention of HTML Tags on the www-talk mailing list</a>. World Wide Web Consortium. 1991-10-29  [2007-04-08]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20070224040625/http://lists.w3.org/Archives/Public/www-talk/1991SepOct/0003.html">存档</a>于2007-02-24）.</cite>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/1999/REC-html401-19991224/index/elements">Index of elements in HTML 4</a>. World Wide Web Consortium. 1999-12-24  [2007-04-08]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20070505172415/http://www.w3.org/TR/1999/REC-html401-19991224/index/elements">存档</a>于2007-05-05）.</cite>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <cite>Tim Berners-Lee. <a rel="nofollow" href="http://lists.w3.org/Archives/Public/www-talk/1991NovDec/0020.html">Re: SGML/HTML docs, X Browser (archived www-talk mailing list post)</a>. 1991-12-09  [2007-06-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20071222060359/http://lists.w3.org/Archives/Public/www-talk/1991NovDec/0020.html">存档</a>于2007-12-22）. <q>SGML is very general. HTML is a specific application of the SGML basic syntax applied to hypertext documents with simple structure.</q></cite>
+</li>
+<li id="cite_note-raymond-12"><b><a href="#cite_ref-raymond_12-0">^</a></b> <cite>Raymond, Eric. <a rel="nofollow" href="http://www.faqs.org/docs/artu/ietf_process.html">IETF and the RFC Standards Process</a>. <a rel="nofollow" href="https://web.archive.org/web/20050317014053/http://www.faqs.org/docs/artu/">The Art of Unix Programming</a>. （<a rel="nofollow" href="http://www.faqs.org/docs/artu/">原始内容</a>存档于2005-03-17）. <q>In IETF tradition, standards have to arise from experience with a working prototype implementation — but once they become standards, code that does not conform to them is considered broken and mercilessly scrapped. ...Internet-Drafts are not specifications; software implementers and vendors are specifically barred from claiming compliance with them as if they were specifications. Internet-Drafts are focal points for discussion, usually in a working group... Once an Internet-Draft has been published with an RFC number, it is a specification to which implementers may claim conformance. It is expected that the authors of the RFC and the community at large will begin correcting the specification with field experience.</q></cite>
+</li>
+<li id="cite_note-html+-13"><b><a href="#cite_ref-html+_13-0">^</a></b> <cite><a rel="nofollow" href="https://web.archive.org/web/20121221062856/https://datatracker.ietf.org/public/idindex.cgi?command=id_detail&amp;id=789">HTML+ Internet-Draft — Abstract</a>. （<a rel="nofollow" href="https://datatracker.ietf.org/public/idindex.cgi?command=id_detail&amp;id=789">原始内容</a>存档于2012-12-21）. <q>Browser writers are experimenting with extensions to HTML and it is now appropriate to draw these ideas together into a revised document format. The new format is designed to allow a gradual roll over from HTML, adding features like tables, captioned figures and fill-out forms for querying remote databases or mailing questionnaires.</q></cite>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <cite>Berners-Lee, Tim; Connelly, Daniel. <a rel="nofollow" href="http://tools.ietf.org/html/rfc1866">RFC 1866 – Hypertext Markup Language – 2.0</a>. Internet Engineering Task Force. November 1995  [2010-12-01]. （原始内容<a rel="nofollow" href="http://archive.wikiwix.com/cache/20110224093231/http://tools.ietf.org/html/rfc1866">存档</a>于2011-02-24）. <q>This document thus defines an HTML 2.0 (to distinguish it from the previous informal specifications). Future (generally upwardly compatible) versions of HTML with new features will be released with higher version numbers.</q></cite>
+</li>
+<li id="cite_note-raggett-15">^ <a href="#cite_ref-raggett_15-0"><sup><b>15.0</b></sup></a> <a href="#cite_ref-raggett_15-1"><sup><b>15.1</b></sup></a> <a href="#cite_ref-raggett_15-2"><sup><b>15.2</b></sup></a> <cite>Raggett, Dave. <a rel="nofollow" href="http://www.w3.org/People/Raggett/book4/ch02.html">Raggett on HTML 4</a>. 1998  [2007-07-09]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20070625011525/http://www.w3.org/People/Raggett/book4/ch02.html">存档</a>于2007-06-25）.</cite>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/2014/10/html5-rec.html.en">HTML5 – Hypertext Markup Language – 5.0</a>. Internet Engineering Task Force. 2014-10-28  [2014-11-25]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20141102002517/http://www.w3.org/2014/10/html5-rec.html.en">存档</a>于2014-11-02）. <q>This document recommends HTML 5.0 after completion.</q></cite>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/REC-html32">HTML 3.2 Reference Specification</a>. World Wide Web Consortium. 1997-01-14  [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20100619054311/http://www.w3.org/TR/REC-html32">存档</a>于2010-06-19）.</cite>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/MarkUp/HTML-WG/">IETF HTML WG</a>.   [2007-06-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20070607081027/http://www.w3.org/MarkUp/HTML-WG/">存档</a>于2007-06-07）. <q>Note: This working group is closed</q></cite>
+</li>
+<li id="cite_note-engelfriet-19">^ <a href="#cite_ref-engelfriet_19-0"><sup><b>19.0</b></sup></a> <a href="#cite_ref-engelfriet_19-1"><sup><b>19.1</b></sup></a> <cite>Arnoud Engelfriet. <a rel="nofollow" href="http://htmlhelp.com/reference/wilbur/intro.html">Introduction to Wilbur</a>. Web Design Group.   [2007-06-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20070705143719/http://www.htmlhelp.com/reference/wilbur/intro.html">存档</a>于2007-07-05）.</cite>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/REC-html40-971218/">HTML 4.0 Specification</a>. World Wide Web Consortium. 1997-12-18  [2008-11-16]. （原始内容<a rel="nofollow" href="http://archive.wikiwix.com/cache/20110608050125/http://www.w3.org/TR/REC-html40-971218/">存档</a>于2011-06-08）.</cite>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/html4/conform.html#h-4.2">HTML 4 – 4 Conformance: requirements and recommendations</a>.   [2009-12-30]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20100106145558/http://www.w3.org/TR/html4/conform.html#h-4.2">存档</a>于2010-01-06）.</cite>
+</li>
+<li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/1998/REC-html40-19980424/">HTML 4.0 Specification</a>. World Wide Web Consortium. 1998-04-24  [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20080727143129/http://www.w3.org/TR/1998/REC-html40-19980424/">存档</a>于2008-07-27）.</cite>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/html401/">HTML 4.01 Specification</a>. World Wide Web Consortium. 1999-12-24  [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20081115204127/http://www.w3.org/TR/html401/">存档</a>于2008-11-15）.</cite>
+</li>
+<li id="cite_note-iso-html-24">^ <a href="#cite_ref-iso-html_24-0"><sup><b>24.0</b></sup></a> <a href="#cite_ref-iso-html_24-1"><sup><b>24.1</b></sup></a> <cite>ISO. <a rel="nofollow" href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=27688">ISO/IEC 15445:2000 – Information technology – Document description and processing languages – HyperText Markup Language (HTML)</a>. 2000  [2009-12-26]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20090707065708/http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=27688">存档</a>于2009-07-07）.</cite>
+</li>
+<li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <a rel="nofollow" href="https://www.cs.tcd.ie/15445/15445.HTML">Cs.Tcd.Ie</a> <a href="/wikipedia/zh-hans/Wayback_Machine" title="Wayback Machine">互联网档案馆</a>的<a rel="nofollow" href="https://web.archive.org/web/20071202175102/https://www.cs.tcd.ie/15445/15445.HTML">存档</a>，存档日期2007-12-02.. Cs.Tcd.Ie (2000-05-15). Retrieved on 2012-02-16.
+</li>
+<li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/2014/REC-html5-20141028/">HTML5: A vocabulary and associated APIs for HTML and XHTML</a>. World Wide Web Consortium. 2014-10-28  [2014-10-31]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20141030162242/http://www.w3.org/TR/2014/REC-html5-20141028/">存档</a>于2014-10-30）.</cite>
+</li>
+<li id="cite_note-27"><b><a href="#cite_ref-27">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/2014/10/html5-rec.html.en">Open Web Platform Milestone Achieved with HTML5 Recommendation</a> (新闻稿). World Wide Web Consortium. 2014-10-28  [2014-10-31]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20141030165738/http://www.w3.org/2014/10/html5-rec.html.en">存档</a>于2014-10-30）.</cite>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <cite>Connolly, Daniel. <a rel="nofollow" href="http://lists.w3.org/Archives/Public/www-talk/1992MayJun/0020.html">MIME as a hypertext architecture</a>. CERN. 1992-06-06  [2010-10-24]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20101226014254/http://lists.w3.org/Archives/Public/www-talk/1992MayJun/0020.html">存档</a>于2010-12-26）.</cite>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <cite>Connolly, Daniel. <a rel="nofollow" href="http://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html">HTML DTD enclosed</a>. CERN. 1992-07-15  [2010-10-24]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20101120101957/http://lists.w3.org/Archives/Public/www-talk/1992JulAug/0020.html">存档</a>于2010-11-20）.</cite>
+</li>
+<li id="cite_note-30"><b><a href="#cite_ref-30">^</a></b> <cite>Connolly, Daniel. <a rel="nofollow" href="https://web.archive.org/web/20120314055308/http://lost-contact.mit.edu/afs/cern.ch/w3.org/www/Frame/fminit2.0/html.dtd">document type declaration subset for Hyper Text Markup Language as defined by the World Wide Web project</a>. CERN. 1992-08-18  [2010-10-24]. （<a rel="nofollow" href="http://lost-contact.mit.edu/afs/cern.ch/w3.org/www/Frame/fminit2.0/html.dtd">原始内容</a>存档于2012-03-14）.</cite>
+</li>
+<li id="cite_note-html11-31">^ <a href="#cite_ref-html11_31-0"><sup><b>31.0</b></sup></a> <a href="#cite_ref-html11_31-1"><sup><b>31.1</b></sup></a> <cite>Connolly, Daniel. <a rel="nofollow" href="https://web.archive.org/web/20120118155040/http://lost-contact.mit.edu/afs/cern.ch/w3.org/www/MarkUp/Connolly/921125/archive.sh#html.dtd">Document Type Definition for the Hyper Text Markup Language as used by the World Wide Web application</a>. CERN. 1992-11-24  [2010-10-24]. （<a rel="nofollow" href="http://lost-contact.mit.edu/afs/cern.ch/w3.org/www/MarkUp/Connolly/921125/archive.sh#html.dtd">原始内容</a>存档于2012-01-18）.</cite> See section "Revision History"
+</li>
+<li id="cite_note-32"><b><a href="#cite_ref-32">^</a></b> <cite><a href="/wikipedia/zh-hans/Tim_Berners-Lee" title="Tim Berners-Lee">Berners-Lee, Tim</a>; Connolly, Daniel. <a rel="nofollow" href="http://tools.ietf.org/html/draft-ietf-iiir-html-00">Hyper Text Markup Language (HTML) Internet Draft version 1.1</a>. IETF IIIR Working Group. June 1993  [2010-09-18]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20101116041530/http://tools.ietf.org/html/draft-ietf-iiir-html-00">存档</a>于2010-11-16）.</cite>
+</li>
+<li id="cite_note-ietfiiir-33"><b><a href="#cite_ref-ietfiiir_33-0">^</a></b> <cite><a href="/wikipedia/zh-hans/Tim_Berners-Lee" title="Tim Berners-Lee">Berners-Lee, Tim</a>; Connolly, Daniel. <a rel="nofollow" href="http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt">Hypertext Markup Language (HTML) Internet Draft version 1.2</a>. IETF IIIR Working Group. June 1993  [2010-09-18]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20090415045944/http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt">存档</a>于2009-04-15）.</cite>
+</li>
+<li id="cite_note-34"><b><a href="#cite_ref-34">^</a></b> <cite><a href="/wikipedia/zh-hans/Tim_Berners-Lee" title="Tim Berners-Lee">Berners-Lee, Tim</a>; Connolly, Daniel. <a rel="nofollow" href="http://tools.ietf.org/html/draft-ietf-html-spec-00">HyperText Markup Language Specification – 2.0 INTERNET DRAFT</a>. IETF. 1994-11-28  [2010-10-24]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20100819085023/http://tools.ietf.org/html/draft-ietf-html-spec-00">存档</a>于2010-08-19）.</cite>
+</li>
+<li id="cite_note-35"><b><a href="#cite_ref-35">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/MarkUp/html3/">HTML 3.0 Draft (Expired!) Materials</a>. World Wide Web Consortium. 1995-12-21  [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20081025145023/http://www.w3.org/MarkUp/html3/">存档</a>于2008-10-25）.</cite>
+</li>
+<li id="cite_note-html30cover-36">^ <a href="#cite_ref-html30cover_36-0"><sup><b>36.0</b></sup></a> <a href="#cite_ref-html30cover_36-1"><sup><b>36.1</b></sup></a> <cite><a rel="nofollow" href="http://www.w3.org/MarkUp/html3/CoverPage">HyperText Markup Language Specification Version 3.0</a>.   [2007-06-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20070706204926/http://www.w3.org/MarkUp/html3/CoverPage">存档</a>于2007-07-06）.</cite>
+</li>
+<li id="cite_note-37"><b><a href="#cite_ref-37">^</a></b> <cite>Raggett, Dave. <a rel="nofollow" href="http://www.w3.org/People/Raggett/html3/html3.txt">HyperText Markup Language Specification Version 3.0</a>. HTML 3.0 Internet Draft Expires in six months. <a href="/wikipedia/zh-hans/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a>. 1995-03-28  [2010-06-17]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20100314093738/http://www.w3.org/People/Raggett/html3/html3.txt">存档</a>于2010-03-14）.</cite>
+</li>
+<li id="cite_note-38"><b><a href="#cite_ref-38">^</a></b> <cite>Bowers, Neil. <a rel="nofollow" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.54.7191">Weblint: Just Another Perl Hack</a>. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20110511203308/http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.54.7191">存档</a>于2011-05-11）.</cite>
+</li>
+<li id="cite_note-39"><b><a href="#cite_ref-39">^</a></b> <cite><a href="/wikipedia/zh-hans/%E5%93%88%E8%82%AF%C2%B7%E7%BB%B4%E5%A7%86%C2%B7%E8%8E%B1" title="哈肯·维姆·莱">Lie, Håkon Wium</a>; Bos, Bert. <a rel="nofollow" href="https://books.google.com/books?id=q0jbAAAAMAAJ">Cascading style sheets: designing for the Web</a>. Addison Wesley Longman. April 1997: 263  [2010-06-09].</cite>
+</li>
+<li id="cite_note-40"><b><a href="#cite_ref-40">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/html5/">HTML5</a>. World Wide Web Consortium. 2008-06-10  [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20150603032427/http://www.w3.org/TR/html5/">存档</a>于2015-06-03）.</cite>
+</li>
+<li id="cite_note-41"><b><a href="#cite_ref-41">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/QA/2008/01/html5-is-html-and-xml.html">HTML5, one vocabulary, two serializations</a>.   [2009-02-25]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20081217172823/http://www.w3.org/QA/2008/01/html5-is-html-and-xml.html">存档</a>于2008-12-17）.</cite>
+</li>
+<li id="cite_note-w3c2014-42"><b><a href="#cite_ref-w3c2014_42-0">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/2011/02/htmlwg-pr.html">W3C Confirms May 2011 for HTML5 Last Call, Targets 2014 for HTML5 Standard</a>. <a href="/wikipedia/zh-hans/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a>. 2011-02-14  [2011-02-18]. （原始内容<a rel="nofollow" href="https://www.webcitation.org/68FQSPUoV?url=http://www.w3.org/2011/02/htmlwg-pr.html">存档</a>于2012-06-07）.</cite>
+</li>
+<li id="cite_note-43"><b><a href="#cite_ref-43">^</a></b> <cite>Hickson, Ian. <a rel="nofollow" href="https://blog.whatwg.org/html-is-the-new-html5">HTML Is the New HTML5</a>.   [2011-01-21]. （原始内容<a rel="nofollow" href="https://www.webcitation.org/68FQPxRuo?url=http://blog.whatwg.org/html-is-the-new-html5">存档</a>于2012-06-07）.</cite>
+</li>
+<li id="cite_note-44"><b><a href="#cite_ref-44">^</a></b> <cite><a rel="nofollow" href="http://www.netmagazine.com/news/html5-gets-splits-122102">HTML5 gets the splits.</a>. netmagazine.com.   [2012-07-23]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20120725214739/http://www.netmagazine.com/news/html5-gets-splits-122102">存档</a>于2012-07-25）.</cite>
+</li>
+<li id="cite_note-45"><b><a href="#cite_ref-45">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/2012/CR-html5-20121217/">HTML5</a>. W3.org. 2012-12-17  [2013-06-15]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20130620165943/http://www.w3.org/TR/2012/CR-html5-20121217/">存档</a>于2013-06-20）.</cite>
+</li>
+<li id="cite_note-46"><b><a href="#cite_ref-46">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/blog/news/archives/4074">Call for Review: HTML5 Proposed Recommendation Published W3C News</a>. W3.org. 2014-09-16  [2014-09-27]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20140926121538/http://www.w3.org/blog/news/archives/4074">存档</a>于2014-09-26）.</cite>
+</li>
+<li id="cite_note-47"><b><a href="#cite_ref-47">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/2014/10/html5-rec.html.en">Open Web Platform Milestone Achieved with HTML5 Recommendation</a>. W3C. 2014-10-28  [2014-10-29]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20141028233921/http://www.w3.org/2014/10/html5-rec.html.en">存档</a>于2014-10-28）.</cite>
+</li>
+<li id="cite_note-finalars-48"><b><a href="#cite_ref-finalars_48-0">^</a></b> <cite><a rel="nofollow" href="http://arstechnica.com/information-technology/2014/10/html5-specification-finalized-squabbling-over-who-writes-the-specs-continues/">HTML5 specification finalized, squabbling over specs continues</a>. Ars Technica. 2014-10-29  [2014-10-29]. （原始内容<a rel="nofollow" href="http://archive.wikiwix.com/cache/20141029225305/http://arstechnica.com/information-technology/2014/10/html5-specification-finalized-squabbling-over-who-writes-the-specs-continues/">存档</a>于2014-10-29）.</cite>
+</li>
+<li id="cite_note-49"><b><a href="#cite_ref-49">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/xhtml1/">XHTML 1.0: The Extensible HyperText Markup Language (Second Edition)</a>. World Wide Web Consortium. 2000-01-26  [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20081114183154/http://www.w3.org/TR/xhtml1/">存档</a>于2008-11-14）.</cite>
+</li>
+<li id="cite_note-50"><b><a href="#cite_ref-50">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/xhtml11/">XHTML 1.1 – Module-based XHTML — Second Edition</a>. World Wide Web Consortium. 2007-02-16  [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20081114232914/http://www.w3.org/TR/xhtml11/">存档</a>于2008-11-14）.</cite>
+</li>
+<li id="cite_note-51"><b><a href="#cite_ref-51">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/xhtml2/">XHTM 2.0</a>. World Wide Web Consortium. 2006-07-26  [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20081115225713/http://www.w3.org/TR/xhtml2/">存档</a>于2008-11-15）.</cite>
+</li>
+<li id="cite_note-52"><b><a href="#cite_ref-52">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/News/2009#item119">XHTML 2 Working Group Expected to Stop Work End of 2009, W3C to Increase Resources on HTML5</a>. World Wide Web Consortium. 2009-07-17  [2008-11-16]. （原始内容<a rel="nofollow" href="http://archive.wikiwix.com/cache/20110115165508/http://www.w3.org/News/2009#item119">存档</a>于2011-01-15）.</cite>
+</li>
+<li id="cite_note-53"><b><a href="#cite_ref-53">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/2009/06/xhtml-faq.html">W3C XHTML FAQ</a>. （原始内容<a rel="nofollow" href="https://www.webcitation.org/68FLl4ue9?url=http://www.w3.org/2009/06/xhtml-faq.html">存档</a>于2012-06-07）.</cite>
+</li>
+<li id="cite_note-54"><b><a href="#cite_ref-54">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/html/wg/drafts/html/master/introduction.html#html-vs-xhtml">HTML5</a>. <a href="/wikipedia/zh-hans/W3C" title="W3C">W3C</a>. 2013-10-19. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20131020093123/http://www.w3.org/html/wg/drafts/html/master/introduction.html#html-vs-xhtml">存档</a>于2013-10-20）.</cite>
+</li>
+<li id="cite_note-hsivonen-55"><b><a href="#cite_ref-hsivonen_55-0">^</a></b> <a rel="nofollow" href="https://hsivonen.iki.fi/doctype/">Activating Browser Modes with Doctype</a> <a href="/wikipedia/zh-hans/Wayback_Machine" title="Wayback Machine">互联网档案馆</a>的<a rel="nofollow" href="https://web.archive.org/web/20110314043705/http://hsivonen.iki.fi/doctype/">存档</a>，存档日期2011-03-14.. Hsivonen.iki.fi. Retrieved on 2012-02-16.
+</li>
+<li id="cite_note-56"><b><a href="#cite_ref-56">^</a></b> <cite><a rel="nofollow" href="http://www.w3schools.com/html/html_elements.asp">HTML Elements</a>. w3schools.   [2015-03-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20150315220155/http://www.w3schools.com/html/html_elements.asp">存档</a>于2015-03-15）.</cite>
+</li>
+<li id="cite_note-57"><b><a href="#cite_ref-57">^</a></b> <cite><a rel="nofollow" href="http://www.w3schools.com/css/css_intro.asp">CSS Introduction</a>. W3schools.   [2015-03-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20150317075506/http://www.w3schools.com/css/css_intro.asp">存档</a>于2015-03-17）.</cite>
+</li>
+<li id="cite_note-58"><b><a href="#cite_ref-58">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/html401/intro/sgmltut.html#h-3.2.2">On SGML and HTML</a>. World Wide Web Consortium.   [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20081117020326/http://www.w3.org/TR/html401/intro/sgmltut.html#h-3.2.2">存档</a>于2008-11-17）.</cite>
+</li>
+<li id="cite_note-59"><b><a href="#cite_ref-59">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/xhtml1/diffs.html#h-4.4">XHTML 1.0 – Differences with HTML 4</a>. World Wide Web Consortium.   [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20081221215736/http://www.w3.org/TR/xhtml1/diffs.html#h-4.4">存档</a>于2008-12-21）.</cite>
+</li>
+<li id="cite_note-60"><b><a href="#cite_ref-60">^</a></b> <cite>Korpela, Jukka. <a rel="nofollow" href="http://www.cs.tut.fi/~jkorpela/qattr.html">Why attribute values should always be quoted in HTML</a>. Cs.tut.fi. 1998-07-06  [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20081121032139/http://www.cs.tut.fi/~jkorpela/qattr.html">存档</a>于2008-11-21）.</cite>
+</li>
+<li id="cite_note-61"><b><a href="#cite_ref-61">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/objects.html#adef-ismap">Objects, Images, and Applets in HTML documents</a>. World Wide Web Consortium. 1999-12-24  [2008-11-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20080312073553/http://www.w3.org/TR/1999/REC-html401-19991224/struct/objects.html#adef-ismap">存档</a>于2008-03-12）.</cite>
+</li>
+<li id="cite_note-62"><b><a href="#cite_ref-62">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/WCAG-TECHS/H56.html">H56: Using the dir attribute on an inline element to resolve problems with nested directional runs</a>. Techniques for WCAG 2.0. W3C.   [2010-09-18]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20101109092251/http://www.w3.org/TR/WCAG-TECHS/H56.html">存档</a>于2010-11-09）.</cite>
+</li>
+<li id="cite_note-63"><b><a href="#cite_ref-63">^</a></b> <cite><a rel="nofollow" href="http://dev.w3.org/html5/html-author/charref">Character Entity Reference Chart</a>. World Wide Web Consortium. 2012-10-24. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20130814235949/http://dev.w3.org/html5/html-author/charref">存档</a>于2013-08-14）.</cite>
+</li>
+<li id="cite_note-aposhtml-64"><b><a href="#cite_ref-aposhtml_64-0">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/xhtml1/#C_16">The Named Character Reference &amp;apos;</a>. World Wide Web Consortium. 2000-01-26. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20090212172918/http://www.w3.org/TR/xhtml1/#C_16">存档</a>于2009-02-12）.</cite>
+</li>
+<li id="cite_note-65"><b><a href="#cite_ref-65">^</a></b> <cite><a rel="nofollow" href="http://www.unicode.org/standard/principles.html#">The Unicode Standard: A Technical Introduction</a>.   [2010-03-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20100310120125/http://www.unicode.org/standard/principles.html">存档</a>于2010-03-10）.</cite>
+</li>
+<li id="cite_note-66"><b><a href="#cite_ref-66">^</a></b> <a rel="nofollow" href="http://www.w3.org/TR/html-markup/syntax.html#doctype-syntax">"HTML: The Markup Language (an HTML language reference)"</a> <a href="/wikipedia/zh-hans/Wayback_Machine" title="Wayback Machine">互联网档案馆</a>的<a rel="nofollow" href="https://web.archive.org/web/20151017064310/http://www.w3.org/TR/html-markup/syntax.html">存档</a>，存档日期2015-10-17.. Retrieved 2013-08-19.
+</li>
+<li id="cite_note-67"><b><a href="#cite_ref-67">^</a></b> SAMS teach yourself html and css 8th edition
+</li>
+<li id="cite_note-68"><b><a href="#cite_ref-68">^</a></b> <cite>Berners-Lee, Tim; Fischetti, Mark. Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web by Its Inventor. San Francisco: Harper. 2000. ISBN 978-0-06-251587-2.</cite>
+</li>
+<li id="cite_note-69"><b><a href="#cite_ref-69">^</a></b> <cite>Raggett, Dave. <a rel="nofollow" href="http://www.w3.org/MarkUp/Guide/Style.html">Adding a touch of style</a>. W3C. 2002  [2009-10-02]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20091006204250/http://www.w3.org/MarkUp/Guide/Style.html">存档</a>于2009-10-06）.</cite> This article notes that presentational HTML markup may be useful when targeting browsers "before Netscape 4.0 and Internet Explorer 4.0". See the list of web browsers to confirm that these were both released in 1997.
+</li>
+<li id="cite_note-70"><b><a href="#cite_ref-70">^</a></b> <cite>Tim Berners-Lee, James Hendler and Ora Lassila. <a rel="nofollow" href="http://www.scientificamerican.com/article.cfm?id=the-semantic-web">The Semantic Web</a>. Scientific American. 2001  [2009-10-02]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20091001181511/http://www.scientificamerican.com/article.cfm?id=the-semantic-web">存档</a>于2009-10-01）.</cite>
+</li>
+<li id="cite_note-Semantic_Web_Revisted-71"><b><a href="#cite_ref-Semantic_Web_Revisted_71-0">^</a></b> <cite>Nigel Shadbolt, Wendy Hall and Tim Berners-Lee. <a rel="nofollow" href="http://eprints.ecs.soton.ac.uk/12614/1/Semantic_Web_Revisted.pdf">The Semantic Web Revisited</a> (PDF). IEEE Intelligent Systems. 2006  [2009-10-02]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20090918055350/http://eprints.ecs.soton.ac.uk/12614/1/Semantic_Web_Revisted.pdf">存档</a> (PDF)于2009-09-18）.</cite>
+</li>
+<li id="cite_note-72"><b><a href="#cite_ref-72">^</a></b> <cite><a rel="nofollow" href="https://html.spec.whatwg.org/dev/introduction.html#restrictions-on-content-models-and-on-attribute-values">HTML: The Living Standard</a>. WHATWG.   [2018-09-27].</cite>
+</li>
+<li id="cite_note-73"><b><a href="#cite_ref-73">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/xhtml1/#media">XHTML 1.0 The Extensible HyperText Markup Language (Second Edition)</a>. World Wide Web Consortium. 2002 [2000]  [2008-12-07]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20081204052042/http://www.w3.org/TR/xhtml1/#media">存档</a>于2008-12-04）. <q>XHTML Documents which follow the guidelines set forth in Appendix C, "HTML Compatibility Guidelines" may be labeled with the Internet Media Type "text/html" [RFC2854], as they are compatible with most HTML browsers. Those documents, and any other document conforming to this specification, may also be labeled with the Internet Media Type "application/xhtml+xml" as defined in [RFC3236].</q></cite>
+</li>
+<li id="cite_note-74"><b><a href="#cite_ref-74">^</a></b> <cite><a rel="nofollow" href="https://web.archive.org/web/20081206203611/http://www.ietf.org/rfc/rfc2119.txt">RFC 2119: Key words for use in RFCs to Indicate Requirement Levels</a>. Harvard University. 1997  [2008-12-07]. （<a rel="nofollow" href="http://www.ietf.org/rfc/rfc2119.txt">原始内容</a>存档于2008-12-06）. <q>3. SHOULD This word, or the adjective "RECOMMENDED", mean that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.</q></cite>
+</li>
+<li id="cite_note-75"><b><a href="#cite_ref-75">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/xhtml11/conformance.html#strict">XHTML 1.1 – Module-based XHTML — Second Edition</a>. World Wide Web Consortium. 2007  [2008-12-07]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20081217170011/http://www.w3.org/TR/xhtml11/conformance.html#strict">存档</a>于2008-12-17）. <q>XHTML 1.1 documents SHOULD be labeled with the Internet Media Type text/html as defined in [RFC2854] or application/xhtml+xml as defined in [RFC3236].</q></cite>
+</li>
+<li id="cite_note-76"><b><a href="#cite_ref-76">^</a></b> <cite><a rel="nofollow" href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247%28v=vs.85%29.aspx?f=255&amp;MSPPError=-2147217396">Naming Files, Paths, and Namespaces</a>. Microsoft.   [2015-03-16]. （原始内容<a rel="nofollow" href="https://web.archive.org/web/20150402155855/https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247%28v=vs.85%29.aspx?f=255&amp;MSPPError=-2147217396">存档</a>于2015-04-02）.</cite>
+</li>
+<li id="cite_note-77"><b><a href="#cite_ref-77">^</a></b> Sauer, C.: WYSIWIKI – Questioning WYSIWYG in the Internet Age. In: Wikimania (2006)
+</li>
+<li id="cite_note-78"><b><a href="#cite_ref-78">^</a></b> Spiesser, J., Kitchen, L.: Optimization of HTML automatically generated by WYSIWYG programs. In: 13th International Conference on World Wide Web, pp. 355—364. WWW '04. ACM, New York, NY (New York, NY, U.S., May 17–20, 2004)
+</li>
+</ol></div>
+<h2 id="外部链接">外部链接</h2>
+  
+  
+  
+<ul><li>（英文）<a href="/wikipedia/zh-hans/WHATWG" title="WHATWG">WHATWG</a>当前的<a rel="nofollow" href="https://whatwg.org/html">HTML标准</a></li>
+<li>（英文）<a href="/wikipedia/zh-hans/W3C" title="W3C">W3C</a>制定的<a rel="nofollow" href="http://www.w3.org/html/wg/drafts/html/master/">HTML 5.2，HTML的未来版本</a></li>
+<li>（英文）<a href="/wikipedia/zh-hans/W3C" title="W3C">W3C</a>制定的<a rel="nofollow" href="http://www.w3.org/TR/2014/REC-html5-20141028/">HTML 5.1，最近完成的规范（2016年11月1日）</a></li>
+<li>（英文）<a rel="nofollow" href="http://www.w3.org/MarkUp/Guide/">戴夫·拉格特介绍HTML</a></li>
+<li>（英文）<a rel="nofollow" href="https://web.archive.org/web/20110412130543/http://computemagazine.com/man-who-invented-world-wide-web-gives-new-definition">蒂姆·伯纳斯-李对网页的新定义</a></li>
+<li>（英文）<a rel="nofollow" href="https://codebeautify.org/htmlviewer/">HTML查看器 </a></li>
+<li>（英文）<a rel="nofollow" href="https://jsonformatter.pro/cn/html-beautifier">HTML在线格式化 </a><sup>[<i>永久失效链接</i>]</sup></li></ul>
+<table cellspacing="0" data-style="navbox"><tbody><tr><td><table cellspacing="0"><tbody><tr><th scope="col" colspan="2"><div><a href="/wikipedia/zh-hans/%E4%B8%87%E7%BB%B4%E7%BD%91%E8%81%94%E7%9B%9F" title="万维网联盟">万维网联盟（W3C）</a></div></th></tr><tr><td colspan="3"></td></tr><tr><th scope="row">产品及<br>标准</th><td><table cellspacing="0"><tbody><tr><th scope="row"><a href="/wikipedia/zh-hans/W3C%E6%8E%A8%E8%8D%90%E6%A0%87%E5%87%86" title="W3C推荐标准">推荐</a></th><td><div>
+<ul><li>ARIA（英语：<a href="https://en.wikipedia.org/wiki/WAI-ARIA" title="en:WAI-ARIA">WAI-ARIA</a>）</li>
+<li><a href="/wikipedia/zh-hans/Canonical_XML" title="Canonical XML">Canonical XML</a></li>
+<li>CDF（英语：<a href="https://en.wikipedia.org/wiki/Compound_Document_Format" title="en:Compound Document Format">Compound Document Format</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8" title="层叠样式表">CSS</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B" title="文档对象模型">DOM</a></li>
+<li>地理位置API（英语：<a href="https://en.wikipedia.org/wiki/W3C_Geolocation_API" title="en:W3C Geolocation API">W3C Geolocation API</a>）</li>
+<li><a>HTML</a>（<a href="/wikipedia/zh-hans/HTML5" title="HTML5">HTML5</a>）</li>
+<li>ITS（英语：<a href="https://en.wikipedia.org/wiki/Internationalization_Tag_Set" title="en:Internationalization Tag Set">Internationalization Tag Set</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E6%95%B0%E5%AD%A6%E7%BD%AE%E6%A0%87%E8%AF%AD%E8%A8%80" title="数学置标语言">MathML</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%BD%91%E7%BB%9C%E6%9C%AC%E4%BD%93%E8%AF%AD%E8%A8%80" title="网络本体语言">OWL</a></li>
+<li><a href="/wikipedia/zh-hans/%E9%9A%B1%E7%A7%81%E6%AC%8A%E5%81%8F%E5%A5%BD%E5%B9%B3%E5%8F%B0" title="隐私权偏好平台">P3P</a></li>
+<li>PLS（英语：<a href="https://en.wikipedia.org/wiki/Pronunciation_Lexicon_Specification" title="en:Pronunciation Lexicon Specification">Pronunciation Lexicon Specification</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E8%B3%87%E6%BA%90%E6%8F%8F%E8%BF%B0%E6%A1%86%E6%9E%B6" title="资源描述框架">RDF</a></li>
+<li>RDF Schema（英语：<a href="https://en.wikipedia.org/wiki/RDF_Schema" title="en:RDF Schema">RDF Schema</a>）</li>
+<li>SISR（英语：<a href="https://en.wikipedia.org/wiki/Semantic_Interpretation_for_Speech_Recognition" title="en:Semantic Interpretation for Speech Recognition">Semantic Interpretation for Speech Recognition</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E7%B0%A1%E5%96%AE%E7%9F%A5%E8%AD%98%E7%B5%84%E7%B9%94%E7%B3%BB%E7%B5%B1" title="简单知识组织系统">SKOS</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%90%8C%E6%AD%A5%E5%A4%9A%E5%AA%92%E4%BD%93%E9%9B%86%E6%88%90%E8%AF%AD%E8%A8%80" title="同步多媒体集成语言">SMIL</a></li>
+<li><a href="/wikipedia/zh-hans/SOAP" title="SOAP">SOAP</a></li>
+<li>SRGS（英语：<a href="https://en.wikipedia.org/wiki/Speech_Recognition_Grammar_Specification" title="en:Speech Recognition Grammar Specification">Speech Recognition Grammar Specification</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E8%AA%9E%E9%9F%B3%E5%90%88%E6%88%90%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80" title="语音合成标记语言">SSML</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%8F%AF%E7%B8%AE%E6%94%BE%E5%90%91%E9%87%8F%E5%9C%96%E5%BD%A2" title="可缩放矢量图形">SVG</a></li>
+<li><a href="/wikipedia/zh-hans/SPARQL" title="SPARQL">SPARQL</a></li>
+<li>Timed Text（英语：<a href="https://en.wikipedia.org/wiki/Timed_Text" title="en:Timed Text">Timed Text</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E8%AA%9E%E9%9F%B3%E5%8F%AF%E5%BB%B6%E4%BC%B8%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80" title="语音可扩展标记语言">VoiceXML</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%BD%91%E9%A1%B5%E5%AD%98%E5%82%A8" title="网页存储">网页存储</a></li>
+<li><a href="/wikipedia/zh-hans/WSDL" title="WSDL">WSDL</a></li>
+<li><a href="/wikipedia/zh-hans/XForms" title="XForms">XForms</a></li>
+<li><a href="/wikipedia/zh-hans/XHTML" title="XHTML">XHTML</a></li>
+<li>XHTML+RDFa（英语：<a href="https://en.wikipedia.org/wiki/XHTML%2BRDFa" title="en:XHTML+RDFa">XHTML+RDFa</a>）</li>
+<li>XInclude（英语：<a href="https://en.wikipedia.org/wiki/XInclude" title="en:XInclude">XInclude</a>）</li>
+<li><a href="/wikipedia/zh-hans/XLink" title="XLink">XLink</a></li>
+<li><a href="/wikipedia/zh-hans/XML" title="XML">XML</a></li>
+<li><a href="/wikipedia/zh-hans/XML_Base" title="XML Base">XML Base</a></li>
+<li><a href="/wikipedia/zh-hans/XML_Encryption" title="XML Encryption">XML Encryption</a></li>
+<li>XML Events（英语：<a href="https://en.wikipedia.org/wiki/XML_Events" title="en:XML Events">XML Events</a>）</li>
+<li><a href="/wikipedia/zh-hans/XML%E4%BF%A1%E6%81%AF%E9%9B%86" title="XML信息集">XML信息集</a></li>
+<li><a href="/wikipedia/zh-hans/XML%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4" title="XML名字空间">XML名字空间</a></li>
+<li><a href="/wikipedia/zh-hans/XML_Schema" title="XML Schema">XML Schema</a></li>
+<li><a href="/wikipedia/zh-hans/XML_Signature" title="XML Signature">XML Signature</a></li>
+<li>XOP（英语：<a href="https://en.wikipedia.org/wiki/XML-binary_Optimized_Packaging" title="en:XML-binary Optimized Packaging">XML-binary Optimized Packaging</a>）</li>
+<li><a href="/wikipedia/zh-hans/XPath" title="XPath">XPath</a></li>
+<li>XPath 2.0（英语：<a href="https://en.wikipedia.org/wiki/XPath_2.0" title="en:XPath 2.0">XPath 2.0</a>）</li>
+<li>XPointer（英语：<a href="https://en.wikipedia.org/wiki/XPointer" title="en:XPointer">XPointer</a>）</li>
+<li>XProc（英语：<a href="https://en.wikipedia.org/wiki/XProc" title="en:XProc">XProc</a>）</li>
+<li>XQuery（英语：<a href="https://en.wikipedia.org/wiki/XQuery" title="en:XQuery">XQuery</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E5%8F%AF%E6%89%A9%E5%B1%95%E6%A0%B7%E5%BC%8F%E8%AF%AD%E8%A8%80" title="可扩展样式语言">XSL</a></li>
+<li><a href="/wikipedia/zh-hans/XSL-FO" title="XSL-FO">XSL-FO</a></li>
+<li><a href="/wikipedia/zh-hans/XSLT" title="XSLT">XSLT</a>（元素（英语：<a href="https://en.wikipedia.org/wiki/XSLT_elements" title="en:XSLT elements">XSLT elements</a>））</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">记录</th><td><div>
+<ul><li>XAdES（英语：<a href="https://en.wikipedia.org/wiki/XAdES" title="en:XAdES">XAdES</a>）</li>
+<li>XHTML+SMIL（英语：<a href="https://en.wikipedia.org/wiki/XHTML%2BSMIL" title="en:XHTML+SMIL">XHTML+SMIL</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E5%8F%AF%E6%89%A9%E5%B1%95%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%8D%8F%E8%AE%AE" title="可扩展用户界面协议">XUP</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">工作草案</th><td><div>
+<ul><li>CCXML（英语：<a href="https://en.wikipedia.org/wiki/Call_Control_eXtensible_Markup_Language" title="en:Call Control eXtensible Markup Language">Call Control eXtensible Markup Language</a>）</li>
+<li>CURIE（英语：<a href="https://en.wikipedia.org/wiki/CURIE" title="en:CURIE">CURIE</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E5%8A%A0%E5%AF%86%E7%9A%84%E5%AA%92%E9%AB%94%E6%93%B4%E5%B1%95" title="加密的媒体扩展">EME</a></li>
+<li><a href="/wikipedia/zh-hans/InkML" title="InkML">InkML</a></li>
+<li>JSON-LD</li>
+<li><a href="/wikipedia/zh-hans/%E5%AA%92%E4%BD%93%E6%BA%90%E6%89%A9%E5%B1%95" title="媒体源扩展">MSE</a></li>
+<li><a href="/wikipedia/zh-hans/%E8%A7%84%E5%88%99%E4%BA%A4%E6%8D%A2%E6%A0%BC%E5%BC%8F" title="规则交换格式">RIF</a></li>
+<li>SCXML（英语：<a href="https://en.wikipedia.org/wiki/SCXML" title="en:SCXML">SCXML</a>）</li>
+<li>SMIL时间表（英语：<a href="https://en.wikipedia.org/wiki/SMIL_Timesheets" title="en:SMIL Timesheets">SMIL Timesheets</a>）</li>
+<li>sXBL（英语：<a href="https://en.wikipedia.org/wiki/sXBL" title="en:sXBL">sXBL</a>）</li>
+<li>WICD（英语：<a href="https://en.wikipedia.org/wiki/Web_Integration_Compound_Document" title="en:Web Integration Compound Document">Web Integration Compound Document</a>）</li>
+<li>XFDL（英语：<a href="https://en.wikipedia.org/wiki/Extensible_Forms_Description_Language" title="en:Extensible Forms Description Language">Extensible Forms Description Language</a>）</li>
+<li>XFrames（英语：<a href="https://en.wikipedia.org/wiki/XFrames" title="en:XFrames">XFrames</a>）</li>
+<li><a href="/wikipedia/zh-hans/XBL" title="XBL">XBL</a></li>
+<li><a href="/wikipedia/zh-hans/XMLHTTP" title="XMLHTTP">XMLHttpRequest</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">检测</th><td><div>
+<ul><li>无障碍网页检测（英语：<a href="https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines" title="en:Web Content Accessibility Guidelines">Web Content Accessibility Guidelines</a>）</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">倡议</th><td><div>
+<ul><li>多通道交互活动（MMI）（英语：<a href="https://en.wikipedia.org/wiki/W3C_MMI" title="en:W3C MMI">W3C MMI</a>）</li>
+<li><a href="/wikipedia/zh-hans/W3C%E9%A9%97%E8%A8%BC%E6%9C%8D%E5%8B%99" title="W3C验证服务">验证服务</a></li>
+<li>无障碍网页倡议（英语：<a href="https://en.wikipedia.org/wiki/Web_Accessibility_Initiative" title="en:Web Accessibility Initiative">Web Accessibility Initiative</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E7%BD%91%E7%BB%9C%E5%B9%B3%E5%8F%B0" title="网络平台">网络平台</a>（英语：<a href="https://en.wikipedia.org/wiki/WebPlatform" title="en:WebPlatform">WebPlatform</a>）</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">弃用</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/C-HTML" title="C-HTML">C-HTML</a></li>
+<li>HDML（英语：<a href="https://en.wikipedia.org/wiki/Handheld_Device_Markup_Language" title="en:Handheld Device Markup Language">Handheld Device Markup Language</a>）</li>
+<li>JSSS（英语：<a href="https://en.wikipedia.org/wiki/JavaScript_Style_Sheets" title="en:JavaScript Style Sheets">JavaScript Style Sheets</a>）</li>
+<li>PGML（英语：<a href="https://en.wikipedia.org/wiki/Precision_Graphics_Markup_Language" title="en:Precision Graphics Markup Language">Precision Graphics Markup Language</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E5%90%91%E9%87%8F%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80" title="向量标记语言">VML</a></li>
+<li>XHTML+MathML+SVG（英语：<a href="https://en.wikipedia.org/wiki/XHTML%2BMathML%2BSVG" title="en:XHTML+MathML+SVG">XHTML+MathML+SVG</a>）</li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">机构</th><td><table cellspacing="0"><tbody><tr><td colspan="2"><div>
+<ul><li>万维网基金会（英语：<a href="https://en.wikipedia.org/wiki/World_Wide_Web_Foundation" title="en:World Wide Web Foundation">World Wide Web Foundation</a>）</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">工作小组</th><td><div>
+<ul><li>SVG（英语：<a href="https://en.wikipedia.org/wiki/SVG_Working_Group" title="en:SVG Working Group">SVG Working Group</a>）</li>
+<li>CSS（英语：<a href="https://en.wikipedia.org/wiki/CSS_Working_Group" title="en:CSS Working Group">CSS Working Group</a>）</li>
+<li>HTML（英语：<a href="https://en.wikipedia.org/wiki/HTML_Working_Group" title="en:HTML Working Group">HTML Working Group</a>）</li>
+<li>WebOnt（语义网活动）（英语：<a href="https://en.wikipedia.org/wiki/WebOnt" title="en:WebOnt">WebOnt</a>）</li>
+<li>设备描述（DDWG）（英语：<a href="https://en.wikipedia.org/wiki/W3C_Device_Description_Working_Group" title="en:W3C Device Description Working Group">W3C Device Description Working Group</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E7%B6%B2%E9%A0%81%E8%B6%85%E6%96%87%E6%9C%AC%E6%8A%80%E8%A1%93%E5%B7%A5%E4%BD%9C%E5%B0%8F%E7%B5%84" title="网页超文本技术工作小组">网页超文本技术工作小组（WHATWG）</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">软件</th><td><table cellspacing="0"><tbody><tr><td colspan="2"><div>
+<ul><li><a href="/wikipedia/zh-hans/CERN_httpd" title="CERN httpd">CERN httpd</a></li>
+<li><a href="/wikipedia/zh-hans/Libwww" title="Libwww">Libwww</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/%E7%BD%91%E9%A1%B5%E6%B5%8F%E8%A7%88%E5%99%A8" title="网页浏览器">浏览器</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Line_Mode_Browser" title="Line Mode Browser">Line Mode （1990年－）</a></li>
+<li><a href="/wikipedia/zh-hans/Arena_(%E7%80%8F%E8%A6%BD%E5%99%A8)" title="Arena (浏览器)">Arena （1993年－1998年）</a></li>
+<li>Agora （1994年－1997年）（英语：<a href="https://en.wikipedia.org/wiki/Agora_(web_browser)" title="en:Agora (web browser)">Agora (web browser)</a>）</li>
+<li>Argo （1994年－1997年）（英语：<a href="https://en.wikipedia.org/wiki/Argo_(web_browser)" title="en:Argo (web browser)">Argo (web browser)</a>）</li>
+<li><a href="/wikipedia/zh-hans/Amaya" title="Amaya">Amaya （浏览器及编辑器，1996年－2012年）</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">会议</th><td><div>
+<ul><li>国际万维网大会（WWW大会）（英语：<a href="https://en.wikipedia.org/wiki/International_World_Wide_Web_Conference" title="en:International World Wide Web Conference">International World Wide Web Conference</a>）
+<ul><li>督导委员会（IW3C2）（英语：<a href="https://en.wikipedia.org/wiki/International_World_Wide_Web_Conferences_Steering_Committee" title="en:International World Wide Web Conferences Steering Committee">International World Wide Web Conferences Steering Committee</a>）</li>
+<li>第一届（WWW1，1994年）（英语：<a href="https://en.wikipedia.org/wiki/First_International_Conference_on_the_World-Wide_Web" title="en:First International Conference on the World-Wide Web">First International Conference on the World-Wide Web</a>）</li></ul></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table>
+<table cellspacing="0" data-style="navbox"><tbody><tr><td><table cellspacing="0"><tbody><tr><th scope="col" colspan="2"><div><a href="/wikipedia/zh-hans/%E7%BD%91%E9%A1%B5%E6%B5%8F%E8%A7%88%E5%99%A8" title="网页浏览器">网页浏览器</a></div></th></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><div>
+<ul><li><a href="/wikipedia/zh-hans/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8%E6%AF%94%E8%BC%83" title="网页浏览器比较">比较</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8%E5%88%97%E8%A1%A8" title="网页浏览器列表">列表</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%BD%91%E9%A1%B5%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%B6%E9%97%B4%E7%BA%BF" title="网页浏览器时间线">时间线</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E5%88%86%E4%BD%88" title="网页浏览器的使用分布">使用率</a></li>
+<li><a href="/wiki/Category-%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8" title="Category:网页浏览器">分类</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><table cellspacing="0"><tbody><tr><th scope="row"><div>特点</div></th><td><div>
+<ul><li>广告拦截（英语：<a href="https://en.wikipedia.org/wiki/Ad_filtering" title="en:Ad filtering">Ad filtering</a>）</li>
+<li>增强浏览（英语：<a href="https://en.wikipedia.org/wiki/Augmented_browsing" title="en:Augmented browsing">Augmented browsing</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E6%9B%B8%E7%B1%A4_(%E7%80%8F%E8%A6%BD%E5%99%A8)" title="书签 (浏览器)">书签</a>
+<ul><li><a href="/wikipedia/zh-hans/%E5%B0%8F%E4%B9%A6%E7%AD%BE" title="小书签">小书签</a></li>
+<li>即时书签（英语：<a href="https://en.wikipedia.org/wiki/Features_of_Firefox#Live_bookmarks" title="en:Features of Firefox">Features of Firefox#Live bookmarks</a>）</li>
+<li>智能书签（英语：<a href="https://en.wikipedia.org/wiki/Smart_Bookmarks" title="en:Smart Bookmarks">Smart Bookmarks</a>）</li></ul></li>
+<li><a href="/wikipedia/zh-hans/%E7%80%8F%E8%A6%BD%E5%99%A8%E6%93%B4%E5%85%85%E5%8A%9F%E8%83%BD" title="浏览器扩展">浏览器扩展</a></li>
+<li>浏览器安全（英语：<a href="https://en.wikipedia.org/wiki/Browser_security" title="en:Browser security">Browser security</a>）</li>
+<li>浏览器同步器（英语：<a href="https://en.wikipedia.org/wiki/Browser_synchronizer" title="en:Browser synchronizer">Browser synchronizer</a>）
+<ul><li>比较（英语：<a href="https://en.wikipedia.org/wiki/Comparison_of_browser_synchronizers" title="en:Comparison of browser synchronizers">Comparison of browser synchronizers</a>）</li></ul></li>
+<li><a href="/wikipedia/zh-hans/Cookie" title="Cookie">Cookie</a></li>
+<li><a href="/wikipedia/zh-hans/%E4%B8%8B%E8%BD%BD%E7%AE%A1%E7%90%86%E5%99%A8" title="下载管理器">下载管理器</a></li>
+<li><a href="/wikipedia/zh-hans/Favicon" title="Favicon">Favicon</a></li>
+<li>增量查找（英语：<a href="https://en.wikipedia.org/wiki/Incremental_search" title="en:Incremental search">Incremental search</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E6%8F%92%E4%BB%B6" title="插件">插件</a></li>
+<li>隐私模式（英语：<a href="https://en.wikipedia.org/wiki/Privacy_mode" title="en:Privacy mode">Privacy mode</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E5%88%86%E9%A0%81_(GUI)" title="标签页 (GUI)">标签页</a></li>
+<li>通用编辑按钮（英语：<a href="https://en.wikipedia.org/wiki/Universal_Edit_Button" title="en:Universal Edit Button">Universal Edit Button</a>）</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div>网页标准</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E7%B6%B2%E9%A0%81%E6%A8%99%E6%BA%96%E8%A8%88%E5%8A%83" title="网页标准计划">Acid测试</a></li>
+<li><a>HTML</a>
+<ul><li><a href="/wikipedia/zh-hans/HTML5" title="HTML5">HTML5</a></li></ul></li>
+<li><a href="/wikipedia/zh-hans/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8" title="层叠样式表">CSS</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%8F%AF%E7%B8%AE%E6%94%BE%E5%90%91%E9%87%8F%E5%9C%96%E5%BD%A2" title="可缩放矢量图形">SVG</a></li>
+<li><a href="/wikipedia/zh-hans/XHTML" title="XHTML">XHTML</a></li>
+<li><a href="/wikipedia/zh-hans/WebGL" title="WebGL">WebGL</a></li>
+<li><a href="/wikipedia/zh-hans/JavaScript" title="JavaScript">JavaScript</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%95%B0%E5%AD%A6%E7%BD%AE%E6%A0%87%E8%AF%AD%E8%A8%80" title="数学置标语言">数学置标语言</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div>协议</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" title="超文本传输协议">超文本传输协议</a></li>
+<li><a href="/wikipedia/zh-hans/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE" title="超文本传输安全协议">超文本传输安全协议</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%9C%A8%E7%BA%BF%E8%AF%81%E4%B9%A6%E7%8A%B6%E6%80%81%E5%8D%8F%E8%AE%AE" title="在线证书状态协议">在线证书状态协议</a></li>
+<li><a href="/wikipedia/zh-hans/SPDY" title="SPDY">SPDY</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%82%B3%E8%BC%B8%E5%B1%A4%E5%AE%89%E5%85%A8%E6%80%A7%E5%8D%94%E5%AE%9A" title="传输层安全性协议">传输层安全性协议</a></li>
+<li><a href="/wikipedia/zh-hans/WebSocket" title="WebSocket">WebSocket</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86%E8%87%AA%E5%8A%A8%E5%8F%91%E7%8E%B0%E5%8D%8F%E8%AE%AE" title="网络代理自动发现协议">网络代理自动发现协议</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div>相关主题</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/BrowserChoice.eu" title="BrowserChoice.eu">BrowserChoice.eu</a></li>
+<li><a href="/wikipedia/zh-hans/%E8%AF%81%E4%B9%A6%E5%90%8A%E9%94%80%E5%88%97%E8%A1%A8" title="证书吊销列表">证书吊销列表</a></li>
+<li>iLoo（英语：<a href="https://en.wikipedia.org/wiki/iLoo" title="en:iLoo">iLoo</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E7%BD%91%E7%BB%9C%E5%A5%97%E4%BB%B6" title="网络包">网络包</a></li>
+<li>浏览器中间人攻击（英语：<a href="https://en.wikipedia.org/wiki/Man-in-the-browser" title="en:Man-in-the-browser">Man-in-the-browser</a>）</li>
+<li>移动端网页（英语：<a href="https://en.wikipedia.org/wiki/Mobile_Web" title="en:Mobile Web">Mobile Web</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E7%A6%BB%E7%BA%BF%E6%B5%8F%E8%A7%88" title="离线浏览">离线浏览</a></li>
+<li><a href="/wikipedia/zh-hans/%E4%BB%A3%E7%90%86%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE" title="代理自动配置">代理自动配置</a></li>
+<li><a href="/wikipedia/zh-hans/Pwn2Own" title="Pwn2Own">Pwn2Own</a></li>
+<li><a href="/wikipedia/zh-hans/%E4%B8%B0%E5%AF%8C%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F" title="丰富互联网应用程序">丰富互联网应用程序</a></li>
+<li>指定网站浏览器（英语：<a href="https://en.wikipedia.org/wiki/Site-specific_browser" title="en:Site-specific browser">Site-specific browser</a>）</li>
+<li><a href="/wikipedia/zh-hans/%E6%8E%A7%E4%BB%B6" title="控件">控件</a></li>
+<li><a href="/wikipedia/zh-hans/%E4%B8%87%E7%BB%B4%E7%BD%91" title="万维网">万维网</a></li>
+<li><a href="/wikipedia/zh-hans/XML" title="XML">XML</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><table cellspacing="0"><tbody><tr><th scope="col" colspan="2"><div><a href="/wikipedia/zh-hans/%E8%AE%A1%E7%AE%97%E6%9C%BA" title="计算机">计算机</a>平台</div></th></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><table cellspacing="0"><tbody><tr><th scope="row"><div><a href="/wikipedia/zh-hans/Gecko" title="Gecko">Gecko</a>排版引擎</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Firefox" title="Firefox">Firefox</a>
+<ul><li>Cyberfox</li>
+<li><a href="/wikipedia/zh-hans/Waterfox" title="Waterfox">Waterfox</a></li>
+<li><a href="/wikipedia/zh-hans/IceWeasel" title="IceWeasel">IceWeasel</a></li>
+<li>Comodo IceDragon</li></ul></li>
+<li><a href="/wikipedia/zh-hans/Galeon" title="Galeon">Galeon</a></li>
+<li><a href="/wikipedia/zh-hans/K-Meleon" title="K-Meleon">K-Meleon</a></li>
+<li><a href="/wikipedia/zh-hans/GNU_IceCat" title="GNU IceCat">GNU IceCat</a></li>
+<li>SwiftWeasel</li>
+<li><a href="/wikipedia/zh-hans/XB_Browser" title="XB Browser">XB Browser</a></li>
+<li><del><a href="/wikipedia/zh-hans/Camino" title="Camino">Camino</a></del>
+<ul><li><del><a href="/wikipedia/zh-hans/Beonex_Communicator" title="Beonex Communicator">Beonex Communicator</a></del></li>
+<li><a href="/wikipedia/zh-hans/SeaMonkey" title="SeaMonkey">SeaMonkey</a></li>
+<li><del><a href="/wikipedia/zh-hans/%E7%B6%B2%E6%99%AF_(%E7%80%8F%E8%A6%BD%E5%99%A8)" title="网景 (浏览器)">Netscape</a></del></li></ul></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div><a href="/wikipedia/zh-hans/Trident_(%E6%8E%92%E7%89%88%E5%BC%95%E6%93%8E)" title="Trident (排版引擎)">Trident</a>排版引擎</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Internet_Explorer" title="Internet Explorer">Internet Explorer</a></li>
+<li><a href="/wikipedia/zh-hans/GreenBrowser" title="GreenBrowser">GreenBrowser</a></li>
+<li>SlimBrowser</li>
+<li><a href="/wikipedia/zh-hans/2345%E7%8E%8B%E7%89%8C%E7%80%8F%E8%A6%BD%E5%99%A8" title="2345王牌浏览器">2345王牌浏览器</a></li>
+<li><a href="/wikipedia/zh-hans/MyIE" title="MyIE">MyIE</a></li>
+<li><a href="/wikipedia/zh-hans/KKman" title="KKman">KKman</a></li>
+<li><a href="/wikipedia/zh-hans/PCMan" title="PCMan">PCMan Combo</a></li>
+<li>MSN Explorer</li>
+<li>WebbIE</li>
+<li>MenuBox</li>
+<li>Crazy Browser</li>
+<li>Deepnet Explorer</li>
+<li><a href="/wikipedia/zh-hans/GOSURF" title="GOSURF">GOSURF</a></li>
+<li>iRider</li>
+<li>mxie</li>
+<li>NeoPlanet</li>
+<li><del>AOL Explorer</del></li>
+<li><del>Deepnet Explorer</del></li>
+<li><del>NeoPlanet</del></li>
+<li><del><a href="/wikipedia/zh-hans/NetCaptor" title="NetCaptor">NetCaptor</a></del></li>
+<li><del>MediaBrowser</del></li>
+<li><del>SpaceTime</del></li>
+<li><del>UltraBrowser</del></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div><a href="/wikipedia/zh-hans/WebKit" title="WebKit">WebKit</a>排版引擎</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Safari" title="Safari">Safari</a></li>
+<li><a href="/wikipedia/zh-hans/Konqueror" title="Konqueror">Konqueror</a></li>
+<li><a href="/wikipedia/zh-hans/Epiphany" title="Epiphany">Epiphany</a><small>（2.28～）</small></li>
+<li><a href="/wikipedia/zh-hans/ICab" title="ICab">ICab</a><small>（4.0～）</small></li>
+<li><a href="/wikipedia/zh-hans/OmniWeb" title="OmniWeb">OmniWeb</a><small>（4.0～）</small></li>
+<li>ABrowse</li>
+<li><a href="/wikipedia/zh-hans/Uzbl" title="Uzbl">Uzbl</a></li>
+<li><a href="/wikipedia/zh-hans/Dooble" title="Dooble">Dooble</a></li>
+<li><a href="/wikipedia/zh-hans/Midori" title="Midori">Midori</a></li>
+<li><a href="/wikipedia/zh-hans/Rekonq" title="Rekonq">Rekonq</a></li>
+<li>SkyKruzer</li>
+<li><del><a href="/wikipedia/zh-hans/Arora" title="Arora">Arora</a></del></li>
+<li><del><a href="/wikipedia/zh-hans/Flock" title="Flock">Flock</a></del></li>
+<li><del><a href="/wikipedia/zh-hans/Shiira" title="Shiira">Shiira</a></del></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div><a href="/wikipedia/zh-hans/Blink" title="Blink">Blink</a>排版引擎</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Chromium" title="Chromium">Chromium</a>
+<ul><li><a href="/wikipedia/zh-hans/Brave_(%E7%BD%91%E9%A1%B5%E6%B5%8F%E8%A7%88%E5%99%A8)" title="Brave (网页浏览器)">Brave</a></li>
+<li><a href="/wikipedia/zh-hans/Google_Chrome" title="Google Chrome">Google Chrome</a></li>
+<li><a href="/wikipedia/zh-hans/Naver_Whale" title="Naver Whale">Naver Whale</a></li>
+<li><a href="/wikipedia/zh-hans/Microsoft_Edge" title="Microsoft Edge">Microsoft Edge</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%A7%91%E6%91%A9%E5%A4%9A%E9%BE%99%E5%AE%89%E5%85%A8%E6%B5%8F%E8%A7%88%E5%99%A8" title="科摩多龙安全浏览器">科摩多龙安全浏览器</a></li>
+<li><a href="/wikipedia/zh-hans/SRWare_Iron" title="SRWare Iron">SRWare Iron</a></li>
+<li>SuperBird</li>
+<li>Catalina Citrio</li>
+<li>CocCoc Corom</li></ul></li>
+<li><a href="/wikipedia/zh-hans/Opera%E9%9B%BB%E8%85%A6%E7%80%8F%E8%A6%BD%E5%99%A8" title="Opera电脑浏览器">Opera</a><small>（15～）</small></li>
+<li>七星浏览器</li>
+<li><a href="/wikipedia/zh-hans/Vivaldi_(%E7%80%8F%E8%A6%BD%E5%99%A8)" title="Vivaldi (浏览器)">Vivaldi</a></li>
+<li>Coowon</li>
+<li>Orbitum</li>
+<li>PlayFree</li>
+<li>Beamrise</li>
+<li>BlackHawk</li>
+<li>uCoz  Uran</li>
+<li>Baidu Spark </li>
+<li><del>Jutao Caimao</del></li>
+<li><a href="/wikipedia/zh-hans/Torch" title="Torch">Torch</a></li>
+<li><a href="/wikipedia/zh-hans/Yandex_Browser" title="Yandex Browser">Yandex Browser</a></li>
+<li>Ortigra Titanium</li>
+<li><a href="/wikipedia/zh-hans/Falkon" title="Falkon">Falkon</a></li>
+<li><del><a href="/wikipedia/zh-hans/%E7%BA%A2%E8%8A%AF" title="红芯">红芯</a></del></li>
+<li><del>Rambler Nichrome</del></li>
+<li><del>Ishenyou 265gChrome</del></li>
+<li>HiddenReflex EpicPrivacy</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div>混合排版引擎</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Sleipnir" title="Sleipnir">Sleipnir</a></li>
+<li><a href="/wikipedia/zh-hans/Lunascape" title="Lunascape">Lunascape</a></li>
+<li><del><a href="/wikipedia/zh-hans/Netscape_Browser" title="Netscape Browser">Netscape Browser</a></del></li>
+<li><a href="/wikipedia/zh-hans/%E7%8C%8E%E8%B1%B9%E6%B5%8F%E8%A7%88%E5%99%A8" title="猎豹浏览器">猎豹浏览器</a></li>
+<li>淘宝浏览器</li>
+<li><s><a href="/wikipedia/zh-hans/%E7%99%BE%E5%BA%A6%E6%B5%8F%E8%A7%88%E5%99%A8" title="百度浏览器">百度浏览器</a></s></li>
+<li><a href="/wikipedia/zh-hans/%E7%88%B1%E5%B8%86%E6%B5%8F%E8%A7%88%E5%99%A8" title="爱帆浏览器">爱帆浏览器</a></li>
+<li>枫树浏览器</li>
+<li>太阳花浏览器</li>
+<li><a href="/wikipedia/zh-hans/%E4%B8%96%E7%95%8C%E4%B9%8B%E7%AA%97%E6%B5%8F%E8%A7%88%E5%99%A8" title="世界之窗浏览器">世界之窗浏览器</a></li>
+<li><a href="/wikipedia/zh-hans/360%E6%9E%81%E9%80%9F%E6%B5%8F%E8%A7%88%E5%99%A8" title="360极速浏览器">360极速浏览器</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%90%9C%E7%8B%97%E6%B5%8F%E8%A7%88%E5%99%A8" title="搜狗浏览器">搜狗浏览器</a><small>（2.0～）</small></li>
+<li><a href="/wikipedia/zh-hans/%E5%82%B2%E6%B8%B8%E6%B5%8F%E8%A7%88%E5%99%A8" title="傲游浏览器">傲游浏览器</a><small>（3.0～）</small></li>
+<li><a href="/wikipedia/zh-hans/QQ%E6%B5%8F%E8%A7%88%E5%99%A8" title="QQ浏览器">QQ浏览器</a><small>（5.0～）</small></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div>其他排版引擎</div></th><td><div>
+<ul><li>abaco</li>
+<li><a href="/wikipedia/zh-hans/Amaya" title="Amaya">Amaya</a></li>
+<li>KidZui</li>
+<li>Charon</li>
+<li><a href="/wikipedia/zh-hans/Dillo" title="Dillo">Dillo</a></li>
+<li>Gazelle</li>
+<li><a href="/wikipedia/zh-hans/IBM_Watson_Explorer" title="IBM Watson Explorer">IBM Watson Explorer</a></li>
+<li>NetSurf</li>
+<li><del>Arachne（英语：<a href="https://en.wikipedia.org/wiki/Arachne_(web_browser)" title="en:Arachne (web browser)">Arachne (web browser)</a>）</del></li>
+<li><del><a href="/wikipedia/zh-hans/Arena_(%E7%80%8F%E8%A6%BD%E5%99%A8)" title="Arena (浏览器)">Arena</a></del></li>
+<li><del>IBM Home Page Reader</del></li>
+<li><del>IBrowse</del></li>
+<li><del><a href="/wikipedia/zh-hans/Mosaic" title="Mosaic">Mosaic</a></del></li>
+<li><del>Mothra（英语：<a href="https://en.wikipedia.org/wiki/Mothra_(web_browser)" title="en:Mothra (web browser)">Mothra (web browser)</a>）</del></li>
+<li><del>NetPositive</del></li>
+<li><a href="/wikipedia/zh-hans/%E8%8B%8D%E6%9C%88%E6%B5%8F%E8%A7%88%E5%99%A8" title="苍月浏览器">PaleMoon</a><small>（26～）</small></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div>纯文字排版引擎</div></th><td><div>
+<ul><li>ELinks</li>
+<li><a href="/wikipedia/zh-hans/Links" title="Links">Links</a></li>
+<li><a href="/wikipedia/zh-hans/Lynx" title="Lynx">Lynx</a></li>
+<li><a href="/wikipedia/zh-hans/W3m" title="W3m">W3m</a></li>
+<li><del>Emacs/W3</del></li>
+<li><del><a href="/wikipedia/zh-hans/Line_Mode_Browser" title="Line Mode Browser">Line Mode Browser</a></del></li>
+<li><del>Net-Tamer</del></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><table cellspacing="0"><tbody><tr><th scope="col" colspan="2"><div><a href="/wikipedia/zh-hans/%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87" title="移动设备">移动</a>平台</div></th></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><table cellspacing="0"><tbody><tr><th scope="row"><div><a href="/wikipedia/zh-hans/Blink" title="Blink">Blink</a>排版引擎</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Google_Chrome" title="Google Chrome">Google Chrome</a></li>
+<li><a href="/wikipedia/zh-hans/Android" title="Android">Android浏览器</a></li>
+<li><a href="/wikipedia/zh-hans/Opera%E6%89%8B%E6%A9%9F%E7%80%8F%E8%A6%BD%E5%99%A8" title="Opera手机浏览器">Opera手机浏览器</a></li>
+<li>Amazon Silk（英语：<a href="https://en.wikipedia.org/wiki/Amazon_Silk" title="en:Amazon Silk">Amazon Silk</a>）</li>
+<li><a href="/wikipedia/zh-hans/Brave%E6%B5%8F%E8%A7%88%E5%99%A8" title="Brave浏览器">Brave</a></li>
+<li><a href="/wikipedia/zh-hans/Naver_Whale" title="Naver Whale">Naver Whale</a></li>
+<li><a href="/wikipedia/zh-hans/Vivaldi_(%E7%80%8F%E8%A6%BD%E5%99%A8)" title="Vivaldi (浏览器)">Vivaldi</a></li>
+<li><a href="/wikipedia/zh-hans/Yandex_Browser" title="Yandex Browser">Yandex Browser</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div><a href="/wikipedia/zh-hans/Gecko" title="Gecko">Gecko</a>排版引擎</div></th><td><div>
+<ul><li>Firefox for Android</li>
+<li><a href="/wikipedia/zh-hans/Waterfox" title="Waterfox">Waterfox</a></li>
+<li><del>MicroB</del></li>
+<li><del><a href="/wikipedia/zh-hans/Minimo" title="Minimo">Minimo</a></del></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div><a href="/wikipedia/zh-hans/WebKit" title="WebKit">WebKit</a>排版引擎</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Safari" title="Safari">Safari</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%B5%B7%E8%B1%9A%E6%B5%8F%E8%A7%88%E5%99%A8" title="海豚浏览器">海豚浏览器</a></li>
+<li>S60 web browser</li>
+<li><a href="https://en.wikipedia.org/wiki/Steel_(web_browser)" title="en:Steel (web browser)">Steel</a></li>
+<li>BOLT</li>
+<li>Firefox for iOS</li>
+<li><a href="/wikipedia/zh-hans/Naver_Whale" title="Naver Whale">Naver Whale for iOS</a></li>
+<li><a href="/wikipedia/zh-hans/Via%E6%B5%8F%E8%A7%88%E5%99%A8" title="Via浏览器">Via浏览器</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div><a href="/wikipedia/zh-hans/Presto" title="Presto">Presto</a>排版引擎</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Opera_Mini" title="Opera Mini">Opera Mini</a> (on Extreme/Mini modes)</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div><a href="/wikipedia/zh-hans/Trident_(%E6%8E%92%E7%89%88%E5%BC%95%E6%93%8E)" title="Trident (排版引擎)">Trident</a>排版引擎</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E5%82%B2%E6%B8%B8%E4%BA%91%E6%B5%8F%E8%A7%88%E5%99%A8" title="傲游云浏览器">傲游云浏览器</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div>其他</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Internet_Explorer_Mobile" title="Internet Explorer Mobile">Internet Explorer Mobile</a></li>
+<li><a href="/wikipedia/zh-hans/Konqueror" title="Konqueror">Konqueror</a></li>
+<li>Blazer</li>
+<li>ibisBrowser</li>
+<li>Iris Browser</li>
+<li><a href="/wikipedia/zh-hans/NetFront" title="NetFront">NetFront</a></li>
+<li>Obigo Browser</li>
+<li>Skweezer</li>
+<li>Skyfire</li>
+<li>Teashark</li>
+<li>ThunderHawk</li>
+<li><a href="/wikipedia/zh-hans/UC%E6%B5%8F%E8%A7%88%E5%99%A8" title="UC浏览器">UC浏览器</a></li>
+<li>uZard Web</li>
+<li>Vision</li>
+<li>WinWAP</li>
+<li>Smooz(<a href="https://ja.wikipedia.org/wiki/Smooz" title="ja:Smooz">ja</a>)</li>
+<li><del>Deepfish</del></li>
+<li><del>Galio</del></li>
+<li><a href="/wikipedia/zh-hans/Microsoft_Edge" title="Microsoft Edge">Microsoft Edge</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><table cellspacing="0"><tbody><tr><th scope="col" colspan="2"><div><a href="/wikipedia/zh-hans/%E9%9B%BB%E8%A6%96%E6%A9%9F" title="电视机">电视机</a>和<a href="/wikipedia/zh-hans/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E6%9C%BA" title="电子游戏机">电子游戏机</a></div></th></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><table cellspacing="0"><tbody><tr><th scope="row"><div><a href="/wikipedia/zh-hans/Gecko" title="Gecko">Gecko</a>排版引擎</div></th><td><div>
+<ul><li>Kylo</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div><a href="/wikipedia/zh-hans/Presto" title="Presto">Presto</a>排版引擎</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Internet_Channel" title="Internet Channel">Internet Channel</a></li>
+<li><a href="/wikipedia/zh-hans/Opera%E8%A8%AD%E5%82%99%E7%80%8F%E8%A6%BD%E5%99%A8" title="Opera设备浏览器">Opera设备浏览器</a></li>
+<li>Nintendo 3DS Internet Browser</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div><a href="/wikipedia/zh-hans/WebKit" title="WebKit">WebKit</a>排版引擎</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Google_TV" title="Google TV">Google TV</a></li>
+<li><a href="/wikipedia/zh-hans/NetFront" title="NetFront">NetFront</a></li>
+<li><a href="/wikipedia/zh-hans/Steam" title="Steam">Steam</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><div>其他</div></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/MSN_TV" title="MSN TV">MSN TV</a></li>
+<li><del>Galio</del></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><div><s>删除线格式</s>为停止开发的项目</div></td></tr></tbody></table></td></tr></tbody></table>
+<table cellspacing="0" data-style="navbox"><tbody><tr><td><table cellspacing="0"><tbody><tr><th scope="col" colspan="2"><div>网页技术与标准</div></th></tr><tr><td colspan="3"></td></tr><tr><th scope="row">文档呈现语言</th><td><div>
+<ul><li><a>HTML</a>*（<a href="/wikipedia/zh-hans/HTML5" title="HTML5">HTML5</a>*）</li>
+<li><a href="/wikipedia/zh-hans/XHTML" title="XHTML">XHTML</a>*</li>
+<li><a href="/wikipedia/zh-hans/XML" title="XML">XML</a>*</li>
+<li><a href="/wikipedia/zh-hans/XForms" title="XForms">XForms</a>*</li>
+<li><a href="/wikipedia/zh-hans/%E5%8B%95%E6%85%8BHTML" title="动态HTML">DHTML</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">样式格式描述语言</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8" title="层叠样式表">CSS</a>*</li>
+<li><a href="/wikipedia/zh-hans/XSL" title="XSL">XSL</a>*</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">动态网页技术</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E9%80%9A%E7%94%A8%E7%BD%91%E5%85%B3%E6%8E%A5%E5%8F%A3" title="通用网关接口">CGI</a></li>
+<li><a href="/wikipedia/zh-hans/FastCGI" title="FastCGI">FastCGI</a></li>
+<li><a href="/wikipedia/zh-hans/Active_Server_Pages" title="Active Server Pages">ASP</a></li>
+<li><a href="/wikipedia/zh-hans/ASP.NET" title="ASP.NET">ASP.NET</a></li>
+<li><a href="/wikipedia/zh-hans/ColdFusion" title="ColdFusion">ColdFusion</a></li>
+<li><a href="/wikipedia/zh-hans/JSP" title="JSP">JSP</a></li>
+<li><a href="/wikipedia/zh-hans/Perl" title="Perl">Perl</a>（PSGI）</li>
+<li><a href="/wikipedia/zh-hans/Python" title="Python">Python</a>（<a href="/wikipedia/zh-hans/Web%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BD%91%E5%85%B3%E6%8E%A5%E5%8F%A3" title="Web服务器网关接口">WSGI</a>）</li>
+<li><a href="/wikipedia/zh-hans/Ruby" title="Ruby">Ruby</a></li>
+<li><a href="/wikipedia/zh-hans/Smalltalk" title="Smalltalk">Smalltalk</a></li>
+<li><a href="/wikipedia/zh-hans/PHP" title="PHP">PHP</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">客户端交互技术</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/ActiveX" title="ActiveX">ActiveX</a></li>
+<li><a href="/wikipedia/zh-hans/Java_Applet" title="Java Applet">Java Applet</a></li>
+<li><a href="/wikipedia/zh-hans/JavaFX" title="JavaFX">JavaFX</a></li>
+<li><a href="/wikipedia/zh-hans/AJAX" title="AJAX">AJAX</a>（<a href="/wikipedia/zh-hans/XMLHTTP" title="XMLHTTP">XMLHTTP</a>*）</li>
+<li><a href="/wikipedia/zh-hans/WebSocket" title="WebSocket">WebSocket</a>*</li>
+<li><a href="/wikipedia/zh-hans/Microsoft_Silverlight" title="Microsoft Silverlight">Silverlight</a></li>
+<li><a href="/wikipedia/zh-hans/ActionScript" title="ActionScript">ActionScript</a>（<a href="/wikipedia/zh-hans/Adobe_Flash" title="Adobe Flash">Flash</a></li>
+<li><a href="/wikipedia/zh-hans/Adobe_Flex" title="Adobe Flex">Flex</a></li>
+<li><a href="/wikipedia/zh-hans/Adobe_Integrated_Runtime" title="Adobe Integrated Runtime">AIR</a>）</li>
+<li><a href="/wikipedia/zh-hans/Asm.js" title="Asm.js">Asm.js</a></li>
+<li><a href="/wikipedia/zh-hans/Native_Client" title="Native Client">NaCl</a></li>
+<li><a href="/wikipedia/zh-hans/WebAssembly" title="WebAssembly">WebAssembly</a>*</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">客户端脚本语言</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/ECMAScript" title="ECMAScript">ECMAScript</a>（<a href="/wikipedia/zh-hans/JavaScript" title="JavaScript">JavaScript</a>，<a href="/wikipedia/zh-hans/JScript" title="JScript">JScript</a>）</li>
+<li><a href="/wikipedia/zh-hans/VBScript" title="VBScript">VBScript</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">标识定位语言</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6" title="统一资源定位符">URL</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E6%A0%87%E5%BF%97%E7%AC%A6" title="统一资源标志符">URI</a></li>
+<li><a href="/wikipedia/zh-hans/XPath" title="XPath">XPath</a></li>
+<li><a href="/wikipedia/zh-hans/URL%E9%87%8D%E5%AF%AB" title="URL重写">URL重写</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">文档纲要语言</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E6%8F%8F%E8%BF%B0" title="文件类型描述">DTD</a>*</li>
+<li><a href="/wikipedia/zh-hans/XML_Schema" title="XML Schema">XML Schema</a>*</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><div>* 代表由<a href="/wikipedia/zh-hans/W3C" title="W3C">W3C</a>制定和维护的标准与规范</div></td></tr></tbody></table></td></tr></tbody></table>
+<table cellspacing="0" data-style="navbox"><tbody><tr><td><table cellspacing="0"><tbody><tr><th scope="col" colspan="2"><div><a href="/wikipedia/zh-hans/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80" title="编程语言">编程语言</a>分类</div></th></tr><tr><td colspan="3"></td></tr><tr><th scope="row">按平台</th><td><table cellspacing="0"><tbody><tr><th scope="row"><a href="/wikipedia/zh-hans/.NET_Framework" title=".NET Framework">.NET</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/C%2B%2B/CLI" title="C++/CLI">C++/CLI</a></li>
+<li><a href="/wikipedia/zh-hans/C%E2%99%AF" title="C♯">C#</a></li>
+<li><a href="/wikipedia/zh-hans/F%E2%99%AF" title="F♯">F#</a></li>
+<li><a href="/wikipedia/zh-hans/IronPython" title="IronPython">IronPython</a></li>
+<li><a href="/wikipedia/zh-hans/IronRuby" title="IronRuby">IronRuby</a></li>
+<li><a href="/wikipedia/zh-hans/J%E2%99%AF" title="J♯">J#</a></li>
+<li><a href="/wikipedia/zh-hans/Microsoft_Visual_C%E2%99%AF" title="Microsoft Visual C♯">Visual C#</a></li>
+<li><a href="/wikipedia/zh-hans/Visual_Basic_.NET" title="Visual Basic .NET">VB.NET</a></li>
+<li><a href="/wikipedia/zh-hans/Microsoft_Small_Basic" title="Microsoft Small Basic">Small Basic</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/Java%E5%B9%B3%E8%87%BA" title="Java平台">JVM</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Clojure" title="Clojure">Clojure</a></li>
+<li><a href="/wikipedia/zh-hans/Groovy" title="Groovy">Groovy</a></li>
+<li><a href="/wikipedia/zh-hans/Java" title="Java">Java</a></li>
+<li><a href="/wikipedia/zh-hans/JRuby" title="JRuby">JRuby</a></li>
+<li><a href="/wikipedia/zh-hans/JScheme" title="JScheme">JScheme</a></li>
+<li><a href="/wikipedia/zh-hans/Jython" title="Jython">Jython</a></li>
+<li>Kawa（英语：<a href="https://en.wikipedia.org/wiki/Kawa" title="en:Kawa">Kawa</a>）</li>
+<li><a href="/wikipedia/zh-hans/Kotlin" title="Kotlin">Kotlin</a></li>
+<li><a href="/wikipedia/zh-hans/Scala" title="Scala">Scala</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/IOS" title="IOS">iOS</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Swift%E8%AA%9E%E8%A8%80" title="Swift语言">Swift</a></li>
+<li><a href="/wikipedia/zh-hans/Objective-C" title="Objective-C">Objective-C</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/Android" title="Android">Android</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Java" title="Java">Java</a></li>
+<li><a href="/wikipedia/zh-hans/Kotlin" title="Kotlin">Kotlin</a></li>
+<li><a href="/wikipedia/zh-hans/C%2B%2B" title="C++">C++</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/Fire_OS" title="Fire OS">Fire OS</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Java" title="Java">Java</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/Windows_Phone" title="Windows Phone">Windows Phone</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/C%E2%99%AF" title="C♯">C#</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">按家族</th><td><table cellspacing="0"><tbody><tr><th scope="row"><a href="/wikipedia/zh-hans/C%E8%AF%AD%E8%A8%80" title="C语言">C</a>/<a href="/wikipedia/zh-hans/C%2B%2B" title="C++">C++</a>语言</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/C%E8%AF%AD%E8%A8%80" title="C语言">C</a></li>
+<li><a href="/wikipedia/zh-hans/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wikipedia/zh-hans/Turbo_C%2B%2B" title="Turbo C++">Turbo C++</a></li>
+<li><a href="/wikipedia/zh-hans/Borland_C%2B%2B" title="Borland C++">Borland C++</a></li>
+<li><a href="/wikipedia/zh-hans/C%2B%2BBuilder" title="C++Builder">C++ Builder</a> - <a href="/wikipedia/zh-hans/C%2B%2B/CLI" title="C++/CLI">C++/CLI</a></li>
+<li><a href="/wikipedia/zh-hans/C%2B%2B/CX" title="C++/CX">Visual C++组件扩展</a></li>
+<li><a href="/wikipedia/zh-hans/Objective-C" title="Objective-C">Objective-C</a></li>
+<li><a href="/wikipedia/zh-hans/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">Visual C++</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/BASIC" title="BASIC">BASIC</a>语言</th><td><table cellspacing="0"><tbody><tr><th scope="row">有行号</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/BASIC" title="BASIC">BASIC</a></li>
+<li><a href="/wikipedia/zh-hans/BASICA" title="BASICA">BASICA</a></li>
+<li><a href="/wikipedia/zh-hans/GW-BASIC" title="GW-BASIC">GW-BASIC</a></li>
+<li><a href="/wikipedia/zh-hans/ETBASIC" title="ETBASIC">ETBASIC</a></li>
+<li><a href="/wikipedia/zh-hans/GVBASIC" title="GVBASIC">GVBASIC</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">无行号</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/QBASIC" title="QBASIC">QBASIC</a></li>
+<li><a href="/wikipedia/zh-hans/QuickBASIC" title="QuickBASIC">QuickBASIC</a></li>
+<li><a href="/wikipedia/zh-hans/True_BASIC" title="True BASIC">True BASIC</a></li>
+<li><a href="/wikipedia/zh-hans/Turbo_BASIC" title="Turbo BASIC">Turbo BASIC</a></li>
+<li><a href="/wikipedia/zh-hans/PowerBASIC" title="PowerBASIC">PowerBASIC</a></li>
+<li><a href="/wikipedia/zh-hans/FreeBasic" title="FreeBasic">FreeBasic</a></li>
+<li><a href="/wikipedia/zh-hans/DarkBASIC" title="DarkBASIC">DarkBASIC</a></li>
+<li><a href="/wikipedia/zh-hans/Visual_Basic" title="Visual Basic">Visual Basic</a></li>
+<li><a href="/wikipedia/zh-hans/Gambas" title="Gambas">Gambas</a></li>
+<li><a href="/wikipedia/zh-hans/Visual_Basic_.NET" title="Visual Basic .NET">VB.NET</a></li>
+<li><a href="/wikipedia/zh-hans/VBScript" title="VBScript">VBScript</a></li>
+<li><a href="/wikipedia/zh-hans/Visual_Basic_for_Applications" title="Visual Basic for Applications">VBA</a></li>
+<li><a href="/wikipedia/zh-hans/REALbasic" title="REALbasic">REALbasic</a></li>
+<li><a href="/wikipedia/zh-hans/Microsoft_Small_Basic" title="Microsoft Small Basic">Small Basic</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/Pascal_(%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80)" title="Pascal (编程语言)">Pascal</a>/<a href="/wikipedia/zh-hans/Delphi" title="Delphi">Delphi</a>语言</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Pascal_(%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80)" title="Pascal (编程语言)">Pascal</a></li>
+<li><a href="/wikipedia/zh-hans/Turbo_Pascal" title="Turbo Pascal">Turbo Pascal</a></li>
+<li><a href="/wikipedia/zh-hans/Object_Pascal" title="Object Pascal">Object Pascal</a></li>
+<li><a href="/wikipedia/zh-hans/Free_Pascal" title="Free Pascal">Free Pascal</a></li>
+<li><a href="/wikipedia/zh-hans/Delphi" title="Delphi">Delphi</a></li>
+<li><a href="/wikipedia/zh-hans/Lazarus" title="Lazarus">Lazarus</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">按<a href="/wikipedia/zh-hans/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F" title="编程范式">范式</a></th><td><table cellspacing="0"><tbody><tr><th scope="row"><a href="/wikipedia/zh-hans/%E5%A3%B0%E6%98%8E%E5%BC%8F%E7%BC%96%E7%A8%8B" title="声明式编程">声明式</a></th><td><table cellspacing="0"><tbody><tr><th scope="row"><a href="/wikipedia/zh-hans/%E5%87%BD%E6%95%B8%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80" title="函数编程语言">函数式</a></th><td><table cellspacing="0"><tbody><tr><th scope="row">Lisp家族</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Clojure" title="Clojure">Clojure</a></li>
+<li><a href="/wikipedia/zh-hans/Common_Lisp" title="Common Lisp">Common Lisp</a></li>
+<li><a href="/wikipedia/zh-hans/Lisp" title="Lisp">Lisp</a></li>
+<li><a href="/wikipedia/zh-hans/Racket" title="Racket">Racket</a></li>
+<li><a href="/wikipedia/zh-hans/Scheme" title="Scheme">Scheme</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">ML家族</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/ML%E8%AF%AD%E8%A8%80" title="ML语言">ML</a></li>
+<li><a href="/wikipedia/zh-hans/Standard_ML" title="Standard ML">Standard ML</a></li>
+<li><a href="/wikipedia/zh-hans/OCaml" title="OCaml">OCaml</a></li>
+<li><a href="/wikipedia/zh-hans/F%E2%99%AF" title="F♯">F#</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><div>
+<ul><li><a href="/wikipedia/zh-hans/FP_(%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80)" title="FP (编程语言)">FP</a></li>
+<li><a href="/wikipedia/zh-hans/Haskell" title="Haskell">Haskell</a></li>
+<li><a href="/wikipedia/zh-hans/Scala" title="Scala">Scala</a></li>
+<li><a href="/wikipedia/zh-hans/Erlang" title="Erlang">Erlang</a></li>
+<li><a href="/wikipedia/zh-hans/Elixir" title="Elixir">Elixir</a></li>
+<li><a href="/wikipedia/zh-hans/Concurrent_Clean" title="Concurrent Clean">Clean</a></li>
+<li><a href="/wikipedia/zh-hans/Miranda_(%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80)" title="Miranda (编程语言)">Miranda</a></li>
+<li><a href="/wikipedia/zh-hans/Logo%E8%AF%AD%E8%A8%80" title="Logo语言">Logo</a></li>
+<li><a href="/wikipedia/zh-hans/Wolfram%E8%AF%AD%E8%A8%80" title="Wolfram语言">Wolfram语言</a>(<a href="/wikipedia/zh-hans/Mathematica" title="Mathematica">Mathematica</a>)</li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/%E9%80%BB%E8%BE%91%E7%BC%96%E7%A8%8B" title="逻辑编程">逻辑式</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Prolog" title="Prolog">Prolog</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/%E6%8C%87%E4%BB%A4%E5%BC%8F%E7%BC%96%E7%A8%8B" title="指令式编程">指令式</a></th><td><table cellspacing="0"><tbody><tr><th scope="row"><a href="/wikipedia/zh-hans/%E7%BB%93%E6%9E%84%E5%8C%96%E7%BC%96%E7%A8%8B" title="结构化编程">结构化</a></th><td><table cellspacing="0"><tbody><tr><th scope="row"><a href="/wikipedia/zh-hans/%E8%BF%87%E7%A8%8B%E5%BC%8F%E7%BC%96%E7%A8%8B" title="过程式编程">过程式</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/BASIC" title="BASIC">BASIC</a></li>
+<li><a href="/wikipedia/zh-hans/Fortran" title="Fortran">Fortran</a></li>
+<li><a href="/wikipedia/zh-hans/C%E8%AF%AD%E8%A8%80" title="C语言">C</a></li>
+<li><a href="/wikipedia/zh-hans/Pascal_(%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80)" title="Pascal (编程语言)">Pascal</a></li>
+<li><a href="/wikipedia/zh-hans/Go" title="Go">Go</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1" title="面向对象程序设计">面向对象</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Smalltalk" title="Smalltalk">Smalltalk</a></li>
+<li><a href="/wikipedia/zh-hans/Java" title="Java">Java</a></li>
+<li><a href="/wikipedia/zh-hans/C%E2%99%AF" title="C♯">C#</a></li>
+<li><a href="/wikipedia/zh-hans/Objective-C" title="Objective-C">Objective-C</a></li>
+<li><a href="/wikipedia/zh-hans/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wikipedia/zh-hans/Eiffel" title="Eiffel">Eiffel</a></li>
+<li><a href="/wikipedia/zh-hans/Python" title="Python">Python</a></li>
+<li><a href="/wikipedia/zh-hans/Ruby" title="Ruby">Ruby</a></li>
+<li><a href="/wikipedia/zh-hans/Rust" title="Rust">Rust</a></li>
+<li><a href="/wikipedia/zh-hans/Swift_(%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80)" title="Swift (编程语言)">Swift</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/%E9%9D%9E%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1" title="非结构化程序设计">非结构化</a></th><td><table cellspacing="0"><tbody><tr><td colspan="2"><div>
+<ul><li><a href="/wikipedia/zh-hans/COBOL" title="COBOL">COBOL</a></li>
+<li><a href="/wikipedia/zh-hans/SNOBOL" title="SNOBOL">SNOBOL</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/%E5%85%83%E7%BC%96%E7%A8%8B" title="元编程">元编程</a></th><td><table cellspacing="0"><tbody><tr><th scope="row"><a href="/wikipedia/zh-hans/%E6%B3%9B%E5%9E%8B" title="泛型">泛型</a></th><td><table cellspacing="0"><tbody><tr><th scope="row"><a href="/wikipedia/zh-hans/%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B" title="模板元编程">模板</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wikipedia/zh-hans/D%E8%AF%AD%E8%A8%80" title="D语言">D</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><div>
+<ul><li><a href="/wikipedia/zh-hans/Ada" title="Ada">Ada</a></li>
+<li><a href="/wikipedia/zh-hans/C%E2%99%AF" title="C♯">C#</a></li>
+<li><a href="/wikipedia/zh-hans/Delphi" title="Delphi">Delphi</a></li>
+<li><a href="/wikipedia/zh-hans/Eiffel" title="Eiffel">Eiffel</a></li>
+<li><a href="/wikipedia/zh-hans/Java" title="Java">Java</a></li>
+<li><a href="/wikipedia/zh-hans/Swift_(%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80)" title="Swift (编程语言)">Swift</a></li>
+<li><a href="/wikipedia/zh-hans/Visual_Basic_.NET" title="Visual Basic .NET">Visual Basic .NET</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/%E5%8F%8D%E5%B0%84_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)" title="反射 (计算机科学)">反射化</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/C%E2%99%AF" title="C♯">C#</a></li>
+<li><a href="/wikipedia/zh-hans/ECMAScript" title="ECMAScript">ECMAScript</a></li>
+<li><a href="/wikipedia/zh-hans/Java" title="Java">Java</a></li>
+<li><a href="/wikipedia/zh-hans/Perl" title="Perl">Perl</a></li>
+<li><a href="/wikipedia/zh-hans/PHP" title="PHP">PHP</a></li>
+<li><a href="/wikipedia/zh-hans/Python" title="Python">Python</a></li>
+<li><a href="/wikipedia/zh-hans/R%E8%AF%AD%E8%A8%80" title="R语言">R</a></li>
+<li><a href="/wikipedia/zh-hans/Ruby" title="Ruby">Ruby</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80" title="脚本语言">脚本语言</a></th><td><table cellspacing="0"><tbody><tr><td colspan="2"><div>
+<ul><li><a href="/wikipedia/zh-hans/Lua" title="Lua">Lua</a></li>
+<li><a href="/wikipedia/zh-hans/Perl" title="Perl">Perl</a></li>
+<li><a href="/wikipedia/zh-hans/PHP" title="PHP">PHP</a></li>
+<li><a href="/wikipedia/zh-hans/Python" title="Python">Python</a></li>
+<li><a href="/wikipedia/zh-hans/Ruby" title="Ruby">Ruby</a></li>
+<li><a href="/wikipedia/zh-hans/Active_Server_Pages" title="Active Server Pages">ASP</a></li>
+<li><a href="/wikipedia/zh-hans/JSP" title="JSP">JSP</a></li>
+<li><a href="/wikipedia/zh-hans/Tcl" title="Tcl">Tcl/Tk</a></li>
+<li><a href="/wikipedia/zh-hans/VBScript" title="VBScript">VBScript</a></li>
+<li><a href="/wikipedia/zh-hans/AppleScript" title="AppleScript">AppleScript</a></li>
+<li><a href="/wikipedia/zh-hans/AAuto" title="AAuto">AAuto</a>（基于Lua）</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/ECMAScript" title="ECMAScript">ECMAScript</a>派生语言</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/ActionScript" title="ActionScript">ActionScript</a></li>
+<li><a href="/wikipedia/zh-hans/CoffeeScript" title="CoffeeScript">CoffeeScript</a></li>
+<li><a href="/wikipedia/zh-hans/Dart" title="Dart">Dart</a></li>
+<li><a href="/wikipedia/zh-hans/DMDScript" title="DMDScript">DMDScript</a></li>
+<li><a href="/wikipedia/zh-hans/ECMAScript" title="ECMAScript">ECMAScript</a></li>
+<li><a href="/wikipedia/zh-hans/JavaScript" title="JavaScript">JavaScript</a></li>
+<li><a href="/wikipedia/zh-hans/JScript" title="JScript">JScript</a></li>
+<li><a href="/wikipedia/zh-hans/TypeScript" title="TypeScript">TypeScript</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/Unix_shell" title="Unix shell">Shell语言</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Bourne_shell" title="Bourne shell">sh</a></li>
+<li><a href="/wikipedia/zh-hans/Bash" title="Bash">bash</a></li>
+<li><a href="/wikipedia/zh-hans/Sed" title="Sed">sed</a></li>
+<li><a href="/wikipedia/zh-hans/Awk" title="Awk">awk</a></li>
+<li><a href="/wikipedia/zh-hans/PowerShell" title="PowerShell">PowerShell</a></li>
+<li><a href="/wikipedia/zh-hans/C_Shell" title="C Shell">csh</a></li>
+<li><a href="/wikipedia/zh-hans/Tcsh" title="Tcsh">tcsh</a></li>
+<li><a href="/wikipedia/zh-hans/Korn_shell" title="Korn shell">ksh</a></li>
+<li><a href="/wikipedia/zh-hans/Zsh" title="Zsh">zsh</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">专业工具语言</th><td><table cellspacing="0"><tbody><tr><th scope="row">科学与统计计算</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/FORTRAN" title="FORTRAN">FORTRAN</a></li>
+<li><a href="/wikipedia/zh-hans/%E4%BA%92%E5%8B%95%E5%BC%8F%E6%95%B8%E6%93%9A%E8%AA%9E%E8%A8%80" title="交互式数据语言">IDL</a></li>
+<li><a href="/wikipedia/zh-hans/SAS%E8%AF%AD%E8%A8%80" title="SAS语言">SAS</a></li>
+<li><a href="/wikipedia/zh-hans/SPSS" title="SPSS">SPSS</a></li>
+<li><a href="/wikipedia/zh-hans/MATLAB" title="MATLAB">MATLAB</a></li>
+<li><a href="/wikipedia/zh-hans/Maxima" title="Maxima">Maxima</a></li>
+<li><a href="/wikipedia/zh-hans/Wolfram_%E8%AF%AD%E8%A8%80" title="Wolfram 语言">Wolfram 语言</a>(<a href="/wikipedia/zh-hans/Mathematica" title="Mathematica">Mathematica</a>)</li>
+<li><a href="/wikipedia/zh-hans/Maple" title="Maple">Maple</a></li>
+<li><a href="/wikipedia/zh-hans/MathCad" title="MathCad">MathCad</a></li>
+<li><a href="/wikipedia/zh-hans/Scilab" title="Scilab">Scilab</a></li>
+<li><a href="/wikipedia/zh-hans/GNU_Octave" title="GNU Octave">GNU Octave</a></li>
+<li><a href="/wikipedia/zh-hans/R%E8%AF%AD%E8%A8%80" title="R语言">R</a></li>
+<li>S-Plus（英语：<a href="https://en.wikipedia.org/wiki/S-Plus" title="en:S-Plus">S-Plus</a>）</li>
+<li><a href="/wikipedia/zh-hans/Visual_Basic_for_Applications" title="Visual Basic for Applications">Visual Basic for Applications</a></li>
+<li><a href="/wikipedia/zh-hans/Julia_(%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80)" title="Julia (编程语言)">Julia</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/GPU" title="GPU">GPU</a>用着色器语言</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Cg%E8%AA%9E%E8%A8%80" title="Cg语言">Cg</a></li>
+<li><a href="/wikipedia/zh-hans/GLSL" title="GLSL">GLSL</a></li>
+<li><a href="/wikipedia/zh-hans/HLSL" title="HLSL">HLSL</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/%E6%95%B0%E6%8D%AE%E5%BA%93" title="数据库">数据库</a>相关编程语言</th><td><div>
+<ul><li>xBase（英语：<a href="https://en.wikipedia.org/wiki/xBase" title="en:xBase">xBase</a>）
+<ul><li><a href="/wikipedia/zh-hans/Clipper" title="Clipper">Clipper</a></li>
+<li><a href="/wikipedia/zh-hans/Visual_FoxPro" title="Visual FoxPro">Visual FoxPro</a></li></ul></li>
+<li><a href="/wikipedia/zh-hans/SQL" title="SQL">SQL</a>
+<ul><li><a href="/wikipedia/zh-hans/PL-SQL" title="PL-SQL">PL/SQL</a></li>
+<li><a href="/wikipedia/zh-hans/Transact-SQL" title="Transact-SQL">T-SQL</a></li>
+<li>SQL/PSM（英语：<a href="https://en.wikipedia.org/wiki/SQL/PSM" title="en:SQL/PSM">SQL/PSM</a>）</li></ul></li>
+<li><a href="/wikipedia/zh-hans/%E8%AF%AD%E8%A8%80%E9%9B%86%E6%88%90%E6%9F%A5%E8%AF%A2" title="语言集成查询">LINQ</a></li>
+<li>XQuery（英语：<a href="https://en.wikipedia.org/wiki/XQuery" title="en:XQuery">XQuery</a>）</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">工业与辅助设计</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/AutoCAD" title="AutoCAD">AutoCAD</a></li>
+<li><a href="/wikipedia/zh-hans/AutoLISP" title="AutoLISP">AutoLISP</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">电子艺术和视觉交互设计</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Processing" title="Processing">Processing</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/%E8%A6%96%E8%A6%BA%E5%8C%96%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88%E8%AA%9E%E8%A8%80" title="可视化程序设计语言">可视化程序设计语言</a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Scratch" title="Scratch">Scratch</a></li>
+<li><a href="/wikipedia/zh-hans/Blockly" title="Blockly">Blockly</a></li>
+<li><a href="/wikipedia/zh-hans/LabVIEW" title="LabVIEW">LabVIEW</a></li>
+<li><a href="/wikipedia/zh-hans/Tynker" title="Tynker">Tynker</a></li>
+<li><a href="/wikipedia/zh-hans/Snap!" title="Snap!">Snap!</a></li>
+<li><a href="/wikipedia/zh-hans/Simulink" title="Simulink">Simulink</a></li>
+<li><a href="/wikipedia/zh-hans/Automator" title="Automator">Automator</a></li>
+<li><a href="/wikipedia/zh-hans/Stateflow" title="Stateflow">Stateflow</a></li>
+<li><a href="/wikipedia/zh-hans/Squeak" title="Squeak">Squeak</a></li>
+<li><a href="/wikipedia/zh-hans/MIT%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC%E8%80%85" title="MIT应用开发者">MIT应用开发者</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">其它</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80" title="汇编语言">汇编语言</a></li>
+<li><a href="/wikipedia/zh-hans/ALGOL" title="ALGOL">ALGOL</a></li>
+<li><a href="/wikipedia/zh-hans/APL%E8%AF%AD%E8%A8%80" title="APL语言">APL</a>/<a href="/wikipedia/zh-hans/J%E8%AF%AD%E8%A8%80" title="J语言">J</a></li>
+<li><a href="/wikipedia/zh-hans/Falcon" title="Falcon">Falcon</a></li>
+<li><a href="/wikipedia/zh-hans/Forth" title="Forth">Forth</a></li>
+<li><a href="/wikipedia/zh-hans/Io_(%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80)" title="Io (编程语言)">Io</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%9C%A8%E8%98%AD_(%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80)" title="木兰 (编程语言)">Mulan</a></li>
+<li>MUMPS（英语：<a href="https://en.wikipedia.org/wiki/MUMPS" title="en:MUMPS">MUMPS</a>）</li>
+<li><a href="/wikipedia/zh-hans/PL/I" title="PL/I">PL/I</a></li>
+<li><a href="/wikipedia/zh-hans/PostScript" title="PostScript">PostScript</a></li>
+<li><a href="/wikipedia/zh-hans/REXX" title="REXX">REXX</a></li>
+<li><a href="/wikipedia/zh-hans/SAC%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80" title="SAC编程语言">SAC</a></li>
+<li><a href="/wikipedia/zh-hans/Self" title="Self">Self</a></li>
+<li><a href="/wikipedia/zh-hans/Simula" title="Simula">Simula</a></li></ul></div></td></tr></tbody></table></td></tr></tbody></table>
+<table cellspacing="0" data-style="navbox"><tbody><tr><td><table cellspacing="0"><tbody><tr><th scope="col" colspan="2"><div><a href="/wikipedia/zh-hans/%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88" title="网页设计">网页设计</a></div></th></tr><tr><td colspan="3"></td></tr><tr><th scope="row">客户端</th><td><table cellspacing="0"><tbody><tr><th scope="row">语言</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E5%8B%95%E6%85%8BHTML" title="动态HTML">DHTML</a>（<a>HTML</a>、<a href="/wikipedia/zh-hans/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8" title="层叠样式表">CSS</a>、<a href="/wikipedia/zh-hans/JavaScript" title="JavaScript">JavaScript</a>）</li>
+<li><a href="/wikipedia/zh-hans/HTML5" title="HTML5">HTML5</a></li>
+<li><s><a href="/wikipedia/zh-hans/VBScript" title="VBScript">VBScript</a>（<a href="/wikipedia/zh-hans/Internet_Explorer" title="Internet Explorer">IE</a>专用）</s></li>
+<li><a href="/wikipedia/zh-hans/Java_applet" title="Java applet">Java applet</a></li>
+<li><a href="/wikipedia/zh-hans/ActionScript" title="ActionScript">ActionScript</a>（用于<a href="/wikipedia/zh-hans/Swf" title="Swf">Flash</a>）</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">技术</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E7%B6%B2%E9%A0%81%E8%A6%AA%E5%92%8C%E5%8A%9B" title="网页亲和力">网页亲和力</a>（无障碍网页检测（英语：<a href="https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines" title="en:Web Content Accessibility Guidelines">Web Content Accessibility Guidelines</a>））</li>
+<li><a href="/wikipedia/zh-hans/%E7%84%A1%E8%A1%A8%E6%A0%BC%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88" title="无表格网页设计">无表格网页设计</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1" title="响应式网页设计">响应式网页设计</a></li>
+<li><a href="/wikipedia/zh-hans/MVVM" title="MVVM">MVVM</a></li>
+<li><a href="/wikipedia/zh-hans/WYSIWYG" title="WYSIWYG">WYSIWYG</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%AE%B9%E9%8C%AF" title="容错">容错</a>（优雅降级）</li>
+<li><a href="/wikipedia/zh-hans/%E7%B2%BE%E7%81%B5_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6)" title="精灵 (计算机图形学)">CSS Sprite</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B" title="文档对象模型">DOM</a></li>
+<li><a href="/wikipedia/zh-hans/WebGL" title="WebGL">WebGL</a></li>
+<li><a href="/wikipedia/zh-hans/MathML" title="MathML">MathML</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">服务端</th><td><table cellspacing="0"><tbody><tr><th scope="row">语言</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Active_Server_Pages" title="Active Server Pages">Active Server Pages</a></li>
+<li><a href="/wikipedia/zh-hans/ASP.NET" title="ASP.NET">ASP.NET</a>（<a href="/wikipedia/zh-hans/C%E2%99%AF" title="C♯">C♯</a>、<a href="/wikipedia/zh-hans/Visual_Basic_.NET" title="Visual Basic .NET">VB.NET</a>）</li>
+<li><a href="/wikipedia/zh-hans/JSP" title="JSP">JSP</a>（<a href="/wikipedia/zh-hans/Java" title="Java">Java</a>）</li>
+<li><a href="/wikipedia/zh-hans/PHP" title="PHP">PHP</a></li>
+<li><a href="/wikipedia/zh-hans/%E9%80%9A%E7%94%A8%E7%BD%91%E5%85%B3%E6%8E%A5%E5%8F%A3" title="通用网关接口">CGI</a></li>
+<li><a href="/wikipedia/zh-hans/ColdFusion" title="ColdFusion">ColdFusion</a></li>
+<li><a href="/wikipedia/zh-hans/Perl" title="Perl">Perl</a></li>
+<li><a href="/wikipedia/zh-hans/Python" title="Python">Python</a></li>
+<li><a href="/wikipedia/zh-hans/Ruby" title="Ruby">Ruby</a></li>
+<li><a href="/wikipedia/zh-hans/Smalltalk" title="Smalltalk">Smalltalk</a></li>
+<li><a href="/wikipedia/zh-hans/Node.js" title="Node.js">Node.js</a>（<a href="/wikipedia/zh-hans/JavaScript" title="JavaScript">JavaScript</a>）</li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">技术</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Web%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6" title="Web应用框架">Web应用框架</a></li>
+<li><a href="/wikipedia/zh-hans/AJAX" title="AJAX">AJAX</a></li>
+<li><a href="/wikipedia/zh-hans/MVC" title="MVC">MVC</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8" title="单页应用">单页应用</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%BB%BA%E7%AB%8B%E3%80%81%E8%AE%80%E5%8F%96%E3%80%81%E6%9B%B4%E6%96%B0%E3%80%81%E5%88%AA%E9%99%A4" title="创建、读取、更新、删除">CRUD</a></li>
+<li><a href="/wikipedia/zh-hans/REST" title="REST">REST</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">应用</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E7%B6%B2%E8%AA%8C" title="博客">博客</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%BD%91%E7%BB%9C%E8%AE%BA%E5%9D%9B" title="网络论坛">网络论坛</a></li>
+<li><a href="/wikipedia/zh-hans/%E4%BC%81%E6%A5%AD%E5%85%A5%E5%8F%A3%E7%B6%B2%E7%AB%99" title="企业门户网站">企业门户网站</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1" title="电子商务">电子商务</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F" title="内容管理系统">内容管理系统</a></li>
+<li><a href="/wikipedia/zh-hans/%E9%9B%BB%E5%AD%90%E5%87%BA%E7%89%88" title="电子出版">电子出版</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%95%B8%E4%BD%8D%E4%B8%8B%E8%BC%89" title="数字下载">数字下载</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%BD%91%E9%A1%B5%E6%B8%B8%E6%88%8F" title="网页游戏">网页游戏</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">其他</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E7%B6%B2%E9%A0%81%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88" title="网页程序设计">网页程序设计</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F" title="网络应用程序">网络应用程序</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%BD%91%E9%A1%B5%E6%B5%8F%E8%A7%88%E5%99%A8%E6%AF%94%E8%BE%83" title="网页浏览器比较">网页浏览器比较</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%8E%92%E7%89%88%E5%BC%95%E6%93%8E" title="排版引擎">排版引擎</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%90%9C%E5%B0%8B%E5%BC%95%E6%93%8E%E6%9C%80%E4%BD%B3%E5%8C%96" title="搜索引擎最优化">搜索引擎最优化</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table>
+<table cellspacing="0" data-style="navbox"><tbody><tr><td><table cellspacing="0"><tbody><tr><th scope="col" colspan="2"><div><a href="/wikipedia/zh-hans/%E7%BD%AE%E6%A0%87%E8%AF%AD%E8%A8%80" title="置标语言">文档标记语言</a></div></th></tr><tr><td colspan="3"></td></tr><tr><th scope="row"><a href="/wikipedia/zh-hans/%E8%BE%A6%E5%85%AC%E5%AE%A4%E5%A5%97%E4%BB%B6" title="办公室套件">办公室套件</a></th><td><div>
+<ul><li>Compound Document Format（英语：<a href="https://en.wikipedia.org/wiki/Compound_Document_Format" title="en:Compound Document Format">Compound Document Format</a>）</li>
+<li><a href="/wikipedia/zh-hans/Office_Open_XML" title="Office Open XML">OOXML</a>
+<ul><li>SpreadsheetML（英语：<a href="https://en.wikipedia.org/wiki/SpreadsheetML" title="en:SpreadsheetML">SpreadsheetML</a>）</li>
+<li><a href="/wikipedia/zh-hans/Office_Open_XML" title="Office Open XML">Office Open XML</a></li>
+<li>WordprocessingML（英语：<a href="https://en.wikipedia.org/wiki/WordprocessingML" title="en:WordprocessingML">WordprocessingML</a>）</li></ul></li>
+<li><a href="/wikipedia/zh-hans/%E5%BC%80%E6%94%BE%E6%96%87%E6%A1%A3%E6%A0%BC%E5%BC%8F" title="开放文档格式">ODF</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%BB%9F%E4%B8%80%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E6%A0%BC%E5%BC%8F" title="统一办公文档格式">UOF</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">知名</th><td><div>
+<ul><li><a>HTML</a></li>
+<li><a href="/wikipedia/zh-hans/XHTML" title="XHTML">XHTML</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%95%B0%E5%AD%A6%E7%BD%AE%E6%A0%87%E8%AF%AD%E8%A8%80" title="数学置标语言">MathML</a></li>
+<li><a href="/wikipedia/zh-hans/RTF" title="RTF">RTF</a></li>
+<li><a href="/wikipedia/zh-hans/TeX" title="TeX">TeX</a></li>
+<li><a href="/wikipedia/zh-hans/LaTeX" title="LaTeX">LaTeX</a></li>
+<li><a href="/wikipedia/zh-hans/Markdown" title="Markdown">Markdown</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><th scope="row">不太知名</th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/Amigaguide" title="Amigaguide">Amigaguide</a></li>
+<li><a href="/wikipedia/zh-hans/%E5%8C%96%E5%AD%A6%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80" title="化学标记语言">CML</a></li>
+<li><a href="/wikipedia/zh-hans/C-HTML" title="C-HTML">C-HTML</a></li>
+<li>ConTeXt（英语：<a href="https://en.wikipedia.org/wiki/ConTeXt" title="en:ConTeXt">ConTeXt</a>）</li>
+<li>Crossmark（英语：<a href="https://en.wikipedia.org/wiki/Crossmark" title="en:Crossmark">Crossmark</a>）</li>
+<li>DITA（英语：<a href="https://en.wikipedia.org/wiki/Darwin_Information_Typing_Architecture" title="en:Darwin Information Typing Architecture">Darwin Information Typing Architecture</a>）</li>
+<li><a href="/wikipedia/zh-hans/DocBook" title="DocBook">DocBook</a></li>
+<li>eLML（英语：<a href="https://en.wikipedia.org/wiki/eLML" title="en:eLML">eLML</a>）</li>
+<li>EAD（英语：<a href="https://en.wikipedia.org/wiki/Encoded_Archival_Description" title="en:Encoded Archival Description">Encoded Archival Description</a>）</li>
+<li>Enriched text（英语：<a href="https://en.wikipedia.org/wiki/Enriched_text" title="en:Enriched text">Enriched text</a>）</li>
+<li>FHTML（英语：<a href="https://en.wikipedia.org/wiki/FHTML" title="en:FHTML">FHTML</a>）</li>
+<li>GML（英语：<a href="https://en.wikipedia.org/wiki/List_of_document_markup_languages#GML_Disambiguation" title="en:List of document markup languages">List of document markup languages#GML Disambiguation</a>）</li>
+<li>GuideML（英语：<a href="https://en.wikipedia.org/wiki/GuideML" title="en:GuideML">GuideML</a>）</li>
+<li>HDML（英语：<a href="https://en.wikipedia.org/wiki/Handheld_Device_Markup_Language" title="en:Handheld Device Markup Language">Handheld Device Markup Language</a>）</li>
+<li><a href="/wikipedia/zh-hans/HyTime" title="HyTime">HyTime</a></li>
+<li>HyperTeX（英语：<a href="https://en.wikipedia.org/wiki/HyperTeX" title="en:HyperTeX">HyperTeX</a>）</li>
+<li>IPF（英语：<a href="https://en.wikipedia.org/wiki/Information_Presentation_Facility" title="en:Information Presentation Facility">Information Presentation Facility</a>）</li>
+<li>LilyPond（英语：<a href="https://en.wikipedia.org/wiki/LilyPond" title="en:LilyPond">LilyPond</a>）</li>
+<li>LinuxDoc（英语：<a href="https://en.wikipedia.org/wiki/LinuxDoc" title="en:LinuxDoc">LinuxDoc</a>）</li>
+<li>Lout（英语：<a href="https://en.wikipedia.org/wiki/Lout_(software)" title="en:Lout (software)">Lout (software)</a>）</li>
+<li>MIF（英语：<a href="https://en.wikipedia.org/wiki/Maker_Interchange_Format" title="en:Maker Interchange Format">Maker Interchange Format</a>）</li>
+<li>MAML（英语：<a href="https://en.wikipedia.org/wiki/Microsoft_Assistance_Markup_Language" title="en:Microsoft Assistance Markup Language">Microsoft Assistance Markup Language</a>）</li>
+<li>MEI（英语：<a href="https://en.wikipedia.org/wiki/Music_Encoding_Initiative" title="en:Music Encoding Initiative">Music Encoding Initiative</a>）</li>
+<li><a href="/wikipedia/zh-hans/MusicXML" title="MusicXML">MusicXML</a></li>
+<li>OMDoc（英语：<a href="https://en.wikipedia.org/wiki/OMDoc" title="en:OMDoc">OMDoc</a>）</li>
+<li>OpenMath（英语：<a href="https://en.wikipedia.org/wiki/OpenMath" title="en:OpenMath">OpenMath</a>）</li>
+<li>POD（英语：<a href="https://en.wikipedia.org/wiki/Plain_Old_Documentation" title="en:Plain Old Documentation">Plain Old Documentation</a>）</li>
+<li>RTML（英语：<a href="https://en.wikipedia.org/wiki/Remote_Telescope_Markup_Language" title="en:Remote Telescope Markup Language">Remote Telescope Markup Language</a>）</li>
+<li>RTML（英语：<a href="https://en.wikipedia.org/wiki/RTML" title="en:RTML">RTML</a>）</li>
+<li>RFT（英语：<a href="https://en.wikipedia.org/wiki/Revisable-Form_Text" title="en:Revisable-Form Text">Revisable-Form Text</a>）</li>
+<li>S1000D（英语：<a href="https://en.wikipedia.org/wiki/S1000D" title="en:S1000D">S1000D</a>）</li>
+<li><a href="/wikipedia/zh-hans/TEI" title="TEI">TEI</a></li>
+<li>Texinfo（英语：<a href="https://en.wikipedia.org/wiki/Texinfo" title="en:Texinfo">Texinfo</a>）</li>
+<li><a href="/wikipedia/zh-hans/Troff" title="Troff">Troff</a></li>
+<li><a href="/wikipedia/zh-hans/Wiki" title="Wiki">Wiki</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%84%A1%E7%B7%9A%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80" title="无线标记语言">WML</a></li>
+<li>WapTV（英语：<a href="https://en.wikipedia.org/wiki/WapTV" title="en:WapTV">WapTV</a>）</li>
+<li><a href="/wikipedia/zh-hans/XAML" title="XAML">XAML</a></li>
+<li><a href="/wikipedia/zh-hans/YAML" title="YAML">YAML</a></li></ul>
+</div></td></tr><tr><td colspan="3"></td></tr><tr><td colspan="2"><div>文档标记语言列表（英语：<a href="https://en.wikipedia.org/wiki/List_of_document_markup_languages" title="en:List of document markup languages">List of document markup languages</a>）</div></td></tr></tbody></table></td></tr></tbody></table>
+<table cellspacing="0" data-style="navbox"><tbody><tr><td><table cellspacing="0"><tbody><tr><th scope="row">规范控制 <a href="https://www.wikidata.org/wiki/Q8811" title="编辑维基数据链接"><img alt="编辑维基数据链接" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20"></a></th><td><div>
+<ul><li><a href="/wikipedia/zh-hans/%E8%97%9D%E8%A1%93%E8%88%87%E5%BB%BA%E7%AF%89%E7%B4%A2%E5%BC%95%E5%85%B8" title="艺术与建筑索引典">AAT</a>: <a rel="nofollow" href="http://vocab.getty.edu/page/aat/300266021">300266021</a></li>
+<li><a href="/wikipedia/zh-hans/%E8%A5%BF%E7%8F%AD%E7%89%99%E5%9B%BD%E5%AE%B6%E5%9B%BE%E4%B9%A6%E9%A6%86" title="西班牙国家图书馆">BNE</a>: <a rel="nofollow" href="http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&amp;authority_id=XX539726">XX539726</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%B3%95%E5%9B%BD%E5%9B%BD%E5%AE%B6%E5%9B%BE%E4%B9%A6%E9%A6%86" title="法国国家图书馆">BNF</a>: <a rel="nofollow" href="http://catalogue.bnf.fr/ark:/12148/cb12493600c">cb12493600c</a> <a rel="nofollow" href="http://data.bnf.fr/ark:/12148/cb12493600c">(data)</a></li>
+<li><a href="/wikipedia/zh-hans/%E6%95%B4%E5%90%88%E8%A7%84%E8%8C%83%E6%96%87%E6%A1%A3" title="集成规范文档">GND</a>: <a rel="nofollow" href="https://d-nb.info/gnd/4373477-7">4373477-7</a></li>
+<li><a href="/wikipedia/zh-hans/%E7%BE%8E%E5%9B%BD%E5%9B%BD%E4%BC%9A%E5%9B%BE%E4%B9%A6%E9%A6%86%E6%8E%A7%E5%88%B6%E5%8F%B7" title="美国国会图书馆控制号">LCCN</a>: <a rel="nofollow" href="http://id.loc.gov/authorities/subjects/sh95002791">sh95002791</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table>
+</div>
+
+  </article>
+</main>
+
+<footer>
+  <button id="company-logo"><a href="https://zhiliaokeji.com/" target="_blank" title="Known LLC. (长沙知了信息科技有限公司)">
+    <p>Powered by</p>
+    <img src="/static/img/known.svg" alt="Known LLC. (长沙知了信息科技有限公司)">
+  </a></button>
+</footer>
+
+<script src="/static/libs/highlight/highlight.pack.js"></script>
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+<script src="/static/js/utils.js"></script>
+<script src="/static/js/toc.js"></script>
+<script src="/static/js/search-hint.js"></script>
+</body>
+</html>
