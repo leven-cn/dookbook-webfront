@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>List of HTTP header fields - Wikipedia for Computer Science, hosted by Dookbook&reg;</title>
+  <meta name="description" content="List of HTTP header fields () on Wikipedia for Computer Science, hosted by Dookbook®"/>
+  <meta name="keywords" content="List of HTTP header fields,Wikipedia,Computer Science,Dookbook"/>
+  <meta name="generator" content="Dookbook"/>
+  <link rel="stylesheet" href="/static/libs/highlight/styles/agate.css"/>
+  <link rel="stylesheet" href="/static/css/content.css"/>
+  <link rel="stylesheet" href="/static/css/content.toc.css"/>
+  <link rel="stylesheet" href="/static/css/content.search.css"/>
+  <link rel="stylesheet" href="/static/css/content.wikipedia.css"/>
+  <!-- <link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/> -->
+  <!-- <link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/> -->
+  <link rel="canonical" href="https://dookbook.info/wikipedia/en/HTML"/>
+  <link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+</head>
+<body>
+  <!-- htmlhint attr-value-double-quotes:false -->
+  <header>
+    <a href="/"><img src="/static/img/wikipedia-en.png" alt="Wikipedia for Computer Science" title="Wikipedia for Computer Science"></a>
+    <section id="search">
+      <img src="/static/img/search.svg" alt="Search">
+      <input type="text" placeholder="Search here">
+    </section>
+    <nav>
+      <a href="#" title="About Dookbook®">i</a>
+      <a href="/about/zh-hans/" title="切换至中文" lang="zh-Hans">中</a>
+      <a href="/en/help/readme/" title="Help">?</a>
+    </nav>
+  </header>
+
+<main>
+  <article>
+    <header>
+      <h1>List of HTTP header fields - Wikipedia</h1>
+      <p><span>Updated</span>:&nbsp;&nbsp;2020-03-01 10:24:00 (UTC)</p>
+    </header>
+    <div class="toc">
+      <ul>
+        <li><a href="#general_format">General format</a></li>
+        <li><a href="#field_names">Field names</a></li>
+        <li><a href="#field_values">Field values</a></li>
+        <li><a href="#size_limits">Size limits</a></li>
+        <li>
+        <a href="#request_fields">Request fields</a>
+        <ul>
+        <li><a href="#standard_request_fields">Standard request fields</a></li>
+        <li><a href="#common_non-standard_request_fields">Common non-standard request fields</a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="#response_fields">Response fields</a>
+        <ul>
+        <li><a href="#standard_response_fields">Standard response fields</a></li>
+        <li><a href="#common_non-standard_response_fields">Common non-standard response fields</a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="#effects_of_selected_fields">Effects of selected fields</a>
+        <ul>
+        <li><a href="#avoiding_caching">Avoiding caching</a></li>
+        </ul>
+        </li>
+        <li><a href="#see_also">See also</a></li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#external_links">External links</a></li>
+      </ul>
+      <a class="copyright" href="https://zhiliaokeji.com" title="All Copyrights Reserved by Known LLC.">&copy;&nbsp;Known LLC.</a>
+    </div>
+
+<!-- Main content -->
+<div>
+
+<p><b>HTTP header fields</b> are components of the header section of <a href="/wikipedia/en/Hypertext_Transfer_Protocol#Request_message" title="Hypertext Transfer Protocol">request</a> and <a href="/wikipedia/en/Hypertext_Transfer_Protocol#Response_message" title="Hypertext Transfer Protocol">response</a> messages in the <a href="/wikipedia/en/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">Hypertext Transfer Protocol</a> (HTTP). They define the operating parameters of an HTTP transaction.
+</p>
+<h2 id="general_format">General format</h2>
+<p>The header fields are transmitted after the request line (in case of a request HTTP message) or the response line (in case of a response HTTP message), which is the first line of a message. Header fields are colon-separated key-value pairs in clear-text <a href="/wikipedia/en/String_(computer_science)" title="String (computer science)">string</a> format, terminated by a <a href="/wikipedia/en/Carriage_return" title="Carriage return">carriage return</a> (CR) and <a href="/wikipedia/en/Line_feed" title="Line feed">line feed</a> (LF) character sequence. The end of the header section is indicated by an empty field(line), resulting in the transmission of two consecutive CR-LF pairs. In the past, long lines could be folded into multiple lines; continuation lines are indicated by the presence of a space (SP) or horizontal tab (HT) as the first character on the next line. This folding is now deprecated.<sup id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p>
+<h2 id="field_names">Field names</h2>
+<p>A core set of fields is standardized by the <a href="/wikipedia/en/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">Internet Engineering Task Force</a> (IETF) in RFCs 7230, 7231, 7232, 7233, 7234, and 7235. The <a rel="nofollow" href="http://www.iana.org/assignments/message-headers/message-headers.xml#perm-headers">permanent registry of header fields</a> and <a rel="nofollow" href="http://www.iana.org/assignments/message-headers/message-headers.xml#prov-headers">repository of provisional registrations</a> are maintained by the <a href="/wikipedia/en/Internet_Assigned_Numbers_Authority" title="Internet Assigned Numbers Authority">IANA</a>. Additional field names and permissible values may be defined by each application.
+</p><p>Header field names are case-insensitive<sup id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>.  This is in contrast to HTTP method names (GET, POST, etc.), which are case-sensitive<sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup><sup id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>.
+</p><p><a href="/wikipedia/en/HTTP/2" title="HTTP/2">HTTP/2</a> makes some restrictions on specific header fields (see below).
+</p><p>Non-standard header fields were conventionally marked by prefixing the field name with <code>X-</code> but this convention was deprecated in June 2012 because of the inconveniences it caused when non-standard fields became standard.<sup id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> An earlier restriction on use of <code>Downgraded-</code> was  lifted in March 2013.<sup id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+</p>
+<h2 id="field_values">Field values</h2>
+<p>A few fields can contain comments (i.e. in User-Agent, Server, Via fields), which can be ignored by software.<sup id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+</p><p>Many field values may contain a quality (<i>q</i>) key-value pair separated by <a href="/wikipedia/en/Equals_sign" title="Equals sign">equals sign</a>, specifying a weight to use in <a href="/wikipedia/en/Content_negotiation" title="Content negotiation">content negotiation</a>.<sup id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
+</p>
+<h2 id="size_limits">Size limits</h2>
+<p>The standard imposes no limits to the size of each header field name or value, or to the number of fields. However, most servers, clients, and proxy software impose some limits for practical and security reasons. For example, the Apache 2.3 server by default limits the size of each field to 8,190 bytes, and there can be at most 100 header fields in a single request.<sup id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+</p>
+<h2 id="request_fields">Request fields</h2>
+<h3 id="standard_request_fields">Standard request fields</h3>
+<table>
+<tbody><tr>
+<th>Name
+</th>
+<th>Description
+</th>
+<th>Example
+</th>
+<th>Status
+</th>
+<th>Standard
+</th></tr>
+<tr>
+<td>A-IM</td>
+<td>Acceptable instance-manipulations for the request.<sup id="cite_ref-rfc3229_10-0"><a href="#cite_note-rfc3229-10">[10]</a></sup></td>
+<td><code>A-IM: feed</code></td>
+<td>Permanent
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments" title="Request for Comments">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc3229">3229</a>
+</td></tr>
+<tr>
+<td>Accept</td>
+<td><a href="/wikipedia/en/Media_type" title="Media type">Media type(s)</a> that is/are acceptable for the response. See <a href="/wikipedia/en/Content_negotiation" title="Content negotiation">Content negotiation</a>.</td>
+<td><code>Accept: text/html</code></td>
+<td>Permanent
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments" title="Request for Comments">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616">2616</a>, <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>
+</td></tr>
+<tr>
+<td>Accept-Charset</td>
+<td>Character sets that are acceptable.</td>
+<td><code>Accept-Charset: utf-8</code></td>
+<td>Permanent
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments" title="Request for Comments">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616">2616</a>
+</td></tr>
+<tr id="Accept-Datetime">
+<td>Accept-Datetime</td>
+<td>Acceptable version in time.</td>
+<td><code>Accept-Datetime: Thu, 31 May 2007 20:35:00 GMT</code></td>
+<td>Provisional
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments" title="Request for Comments">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7089">7089</a>
+</td></tr>
+<tr id="Accept-Encoding">
+<td>Accept-Encoding</td>
+<td>List of acceptable encodings. See <a href="/wikipedia/en/HTTP_compression" title="HTTP compression">HTTP compression</a>.</td>
+<td><code>Accept-Encoding: gzip, deflate</code></td>
+<td>Permanent
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments" title="Request for Comments">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616">2616</a>, <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>
+</td></tr>
+<tr id="Accept-Language">
+<td>Accept-Language</td>
+<td>List of acceptable human languages for response. See <a href="/wikipedia/en/Content_negotiation" title="Content negotiation">Content negotiation</a>.</td>
+<td><code>Accept-Language: en-US</code></td>
+<td>Permanent
+</td>
+<td><a href="/wikipedia/en/Request_for_Comments" title="Request for Comments">RFC</a> <a rel="nofollow" href="https://tools.ietf.org/html/rfc2616">2616</a>, <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">7231</a>
+</td></tr>
+<tr id="access-control-request-header">
+<td>Access-Control-Request-Method,<br>Access-Control-Request-Headers<sup id="cite_ref-CORS_11-0"><a href="#cite_note-CORS-11">[11]</a></sup></td>
+<td>Initiates a request for <a href="/wikipedia/en/Cross-origin_resource_sharing" title="Cross-origin resource sharing">cross-origin resource sharing</a> with <a href="#origin-request-header">Origin</a> (below).</td>
+<td><code>Access-Control-Request-Method: GET</code></td>
+<td>Permanent: standard
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Authorization</td>
+<td>Authentication credentials for <a href="/wikipedia/en/Basic_access_authentication" title="Basic access authentication">HTTP authentication</a>.</td>
+<td><code>Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Cache-Control" title="Cache-Control">Cache-Control</a></td>
+<td>Used to specify directives that <i>must</i> be obeyed by all caching mechanisms along the request-response chain.</td>
+<td><code>Cache-Control: no-cache</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Connection</td>
+<td>Control options for the current connection and list of hop-by-hop request fields.<sup id="cite_ref-rfc7230_connection_12-0"><a href="#cite_note-rfc7230_connection-12">[12]</a></sup>
+<p>Must not be used with HTTP/2.<sup id="cite_ref-rfc7540_connection_13-0"><a href="#cite_note-rfc7540_connection-13">[13]</a></sup>
+</p>
+</td>
+<td><code>Connection: keep-alive</code>
+<p><code><a href="/wikipedia/en/HTTP/1.1_Upgrade_header" title="HTTP/1.1 Upgrade header">Connection: Upgrade</a></code>
+</p>
+</td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Content-Encoding</td>
+<td>The type of encoding used on the data. See <a href="/wikipedia/en/HTTP_compression" title="HTTP compression">HTTP compression</a>.</td>
+<td><code>Content-Encoding: gzip</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Content-Length</td>
+<td>The length of the request body in <a href="/wikipedia/en/Octet_(computing)" title="Octet (computing)">octets</a> (8-bit bytes).</td>
+<td><code>Content-Length: 348</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Content-MD5</td>
+<td>A <a href="/wikipedia/en/Base64" title="Base64">Base64</a>-encoded binary <a href="/wikipedia/en/MD5" title="MD5">MD5</a> sum of the content of the request body.</td>
+<td><code>Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==</code></td>
+<td>Obsolete<sup id="cite_ref-tools.ietf.org_14-0"><a href="#cite_note-tools.ietf.org-14">[14]</a></sup>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Content-Type</td>
+<td>The <a href="/wikipedia/en/Media_type" title="Media type">Media type</a> of the body of the request (used with POST and PUT requests).</td>
+<td><code>Content-Type: application/x-www-form-urlencoded</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Cookie</td>
+<td>An <a href="/wikipedia/en/HTTP_cookie" title="HTTP cookie">HTTP cookie</a> previously sent by the server with <tt><a href="#innerlink_set-cookie">Set-Cookie</a></tt> (below).</td>
+<td><code>Cookie: $Version=1; Skin=new;</code></td>
+<td>Permanent: standard
+</td>
+<td>
+</td></tr><tr>
+<td>Date</td>
+<td>The date and time at which the message was originated (in "HTTP-date" format as defined by <a rel="nofollow" href="http://tools.ietf.org/html/rfc7231#section-7.1.1.1">RFC 7231 Date/Time Formats</a>).</td>
+<td><code>Date: Tue, 15 Nov 1994 08:12:31 GMT</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Expect</td>
+<td>Indicates that particular server behaviors are required by the client.</td>
+<td><code>Expect: 100-continue</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Forwarded</td>
+<td>Disclose original information of a client connecting to a web server through an HTTP proxy.<sup id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>
+</td>
+<td><code>Forwarded: for=192.0.2.60;proto=http;by=203.0.113.43</code> <code>Forwarded: for=192.0.2.43, for=198.51.100.17</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>From</td>
+<td>The email address of the user making the request.</td>
+<td><code>From: user@example.com</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Host</td>
+<td>The domain name of the server (for <a href="/wikipedia/en/Virtual_hosting" title="Virtual hosting">virtual hosting</a>), and the <a href="/wikipedia/en/List_of_TCP_and_UDP_port_numbers" title="List of TCP and UDP port numbers">TCP port</a> number on which the server is listening. The <a href="/wikipedia/en/Port_(computer_networking)" title="Port (computer networking)">port</a> number may be omitted if the port is the standard port for the service requested.
+<p>Mandatory since HTTP/1.1.<sup id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+If the request is generated directly in HTTP/2, it should not be used.<sup id="cite_ref-rfc7540_Request_Pseudo_Header_Fields_17-0"><a href="#cite_note-rfc7540_Request_Pseudo_Header_Fields-17">[17]</a></sup>
+</p>
+</td>
+<td><code>Host: en.wikipedia.org:8080</code>
+<p><code>Host: en.wikipedia.org</code>
+</p>
+</td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>HTTP2-Settings
+</td>
+<td>A request that upgrades from HTTP/1.1 to HTTP/2 MUST include exactly one <code>HTTP2-Setting</code> header field. The <code>HTTP2-Settings</code> header field is a connection-specific header field that includes parameters that govern the HTTP/2 connection, provided in anticipation of the server accepting the request to upgrade.<sup id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup><sup id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>
+</td>
+<td><code>HTTP2-Settings: token64</code>
+</td>
+<td>Permanent: standard
+</td>
+<td>
+</td></tr>
+<tr>
+<td>If-Match</td>
+<td>Only perform the action if the client supplied entity matches the same entity on the server. This is mainly for methods like PUT to only update a resource if it has not been modified since the user last updated it.</td>
+<td><code>If-Match: "737060cd8c284d8af7ad3082f209582d"</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>If-Modified-Since</td>
+<td>Allows a <i>304 Not Modified</i> to be returned if content is unchanged.</td>
+<td><code>If-Modified-Since: Sat, 29 Oct 1994 19:43:31 GMT</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>If-None-Match</td>
+<td>Allows a <i>304 Not Modified</i> to be returned if content is unchanged, see <a href="/wikipedia/en/HTTP_ETag" title="HTTP ETag">HTTP ETag</a>.</td>
+<td><code>If-None-Match: "737060cd8c284d8af7ad3082f209582d"</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>If-Range</td>
+<td>If the entity is unchanged, send me the part(s) that I am missing; otherwise, send me the entire new entity.</td>
+<td><code>If-Range: "737060cd8c284d8af7ad3082f209582d"</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>If-Unmodified-Since</td>
+<td>Only send the response if the entity has not been modified since a specific time.</td>
+<td><code>If-Unmodified-Since: Sat, 29 Oct 1994 19:43:31 GMT</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Max-Forwards</td>
+<td>Limit the number of times the message can be forwarded through proxies or gateways.</td>
+<td><code>Max-Forwards: 10</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr id="origin-request-header">
+<td>Origin<sup id="cite_ref-CORS_11-1"><a href="#cite_note-CORS-11">[11]</a></sup></td>
+<td>Initiates a request for <a href="/wikipedia/en/Cross-origin_resource_sharing" title="Cross-origin resource sharing">cross-origin resource sharing</a> (asks server for <a href="#access-control-response-headers">Access-Control-*</a> response fields).</td>
+<td><code>Origin: http://www.example-social-network.com</code></td>
+<td>Permanent: standard
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Pragma</td>
+<td>Implementation-specific fields that may have various effects anywhere along the request-response chain.</td>
+<td><code><a href="#Avoiding_caching">Pragma: no-cache</a></code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Proxy-Authorization</td>
+<td>Authorization credentials for connecting to a proxy.</td>
+<td><code>Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr id="range-request-header">
+<td> Range</td>
+<td>Request only part of an entity.  Bytes are numbered from 0.  See <a href="/wikipedia/en/Byte_serving" title="Byte serving">Byte serving</a>.</td>
+<td><code>Range: bytes=500-999</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/HTTP_referer" title="HTTP referer">Referer</a> [<i><a href="/wikipedia/en/Sic" title="Sic">sic</a></i>]</td>
+<td>This is the address of the previous web page from which a link to the currently requested page was followed. (The word "referrer" has been misspelled in the RFC as well as in most implementations to the point that it has become standard usage and is considered correct terminology)</td>
+<td><code>Referer: http://en.wikipedia.org/wiki/Main_Page</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr id="te-request-header">
+<td>TE</td>
+<td>The transfer encodings the user agent is willing to accept: the same values as for the response header field Transfer-Encoding can be used, plus the "trailers" value (related to the "<a href="/wikipedia/en/Chunked_transfer_encoding" title="Chunked transfer encoding">chunked</a>" transfer method) to notify the server it expects to receive additional fields in the trailer after the last, zero-sized, chunk.
+<p>Only <code>trailers</code> is supported in HTTP/2.<sup id="cite_ref-rfc7540_connection_13-1"><a href="#cite_note-rfc7540_connection-13">[13]</a></sup>
+</p>
+</td>
+<td><code>TE: trailers, <a href="/wikipedia/en/Deflate" title="Deflate">deflate</a></code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Trailer
+</td>
+<td>The Trailer general field value indicates that the given set of header fields is present in the trailer of a message encoded with <a href="/wikipedia/en/Chunked_transfer_coding" title="Chunked transfer coding">chunked transfer coding</a>.
+</td>
+<td><code>Trailer: Max-Forwards</code>
+</td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Transfer-Encoding
+</td>
+<td>The form of encoding used to safely transfer the entity to the user. <a rel="nofollow" href="http://www.iana.org/assignments/http-parameters">Currently defined methods</a> are: <a href="/wikipedia/en/Chunked_transfer_encoding" title="Chunked transfer encoding">chunked</a>, compress, deflate, gzip, identity.
+<p>Must not be used with HTTP/2.<sup id="cite_ref-rfc7540_connection_13-2"><a href="#cite_note-rfc7540_connection-13">[13]</a></sup>
+</p>
+</td>
+<td><code>Transfer-Encoding: chunked</code>
+</td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>User-Agent</td>
+<td>The <a href="/wikipedia/en/User_agent_string" title="User agent string">user agent string</a> of the user agent.</td>
+<td><code>User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/12.0</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Upgrade_header" title="Upgrade header">Upgrade</a></td>
+<td>Ask the server to upgrade to another protocol.
+<p>Must not be used in HTTP/2.<sup id="cite_ref-rfc7540_connection_13-3"><a href="#cite_note-rfc7540_connection-13">[13]</a></sup>
+</p>
+</td>
+<td><code>Upgrade: h2c, HTTPS/1.3, IRC/6.9, RTA/x11, websocket</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Via</td>
+<td>Informs the server of proxies through which the request was sent.</td>
+<td><code>Via: 1.0 fred, 1.1 example.com (Apache/1.1)</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Warning</td>
+<td>A general warning about possible problems with the entity body.</td>
+<td><code>Warning: 199 Miscellaneous warning</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr></tbody></table>
+<h3 id="common_non-standard_request_fields">Common non-standard request fields</h3>
+<table><tbody><tr>
+<th>Field name
+</th>
+<th>Description
+</th>
+<th>Example
+</th></tr>
+<tr>
+<td>Upgrade-Insecure-Requests<sup id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup></td>
+<td>Tells a server which (presumably in the middle of a HTTP -&gt; HTTPS migration) hosts mixed content that the client would prefer redirection to HTTPS and can handle <code>Content-Security-Policy: upgrade-insecure-requests</code>
+<p>Must not be used with HTTP/2<sup id="cite_ref-rfc7540_connection_13-4"><a href="#cite_note-rfc7540_connection-13">[13]</a></sup>
+</p>
+</td>
+<td><code>Upgrade-Insecure-Requests: 1</code>
+</td></tr>
+<tr id="Requested-With">
+<td>X-Requested-With</td>
+<td>Mainly used to identify <a href="/wikipedia/en/Ajax_(programming)" title="Ajax (programming)">Ajax</a> requests. Most <a href="/wikipedia/en/JavaScript_framework" title="JavaScript framework">JavaScript frameworks</a> send this field with value of <code>XMLHttpRequest</code></td>
+<td><code> X-Requested-With: XMLHttpRequest</code>
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Do_Not_Track" title="Do Not Track">DNT</a><sup id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup></td>
+<td>Requests a web application to disable their tracking of a user. This is Mozilla's version of the X-Do-Not-Track header field (since <a href="/wikipedia/en/Mozilla_Firefox_4" title="Mozilla Firefox 4">Firefox 4.0</a> Beta 11).  <a href="/wikipedia/en/Safari_(web_browser)" title="Safari (web browser)">Safari</a> and <a href="/wikipedia/en/Internet_Explorer_9" title="Internet Explorer 9">IE9</a> also have support for this field.<sup id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>  On March 7, 2011, a draft proposal was submitted to IETF.<sup id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup> The <a href="/wikipedia/en/World_Wide_Web_Consortium" title="World Wide Web Consortium">W3C</a> Tracking Protection Working Group is producing a specification.<sup id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup></td>
+<td><code>DNT: 1</code> (Do Not Track Enabled)
+<p><code>DNT: 0</code> (Do Not Track Disabled)
+</p>
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/X-Forwarded-For" title="X-Forwarded-For">X-Forwarded-For</a><sup id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup></td>
+<td>A <a href="/wikipedia/en/De_facto_standard" title="De facto standard"><i>de facto</i> standard</a> for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer. Superseded by <i>Forwarded</i> header.</td>
+<td><code> X-Forwarded-For: client1, proxy1, proxy2
+</code><p><code>X-Forwarded-For: 129.78.138.66, 129.78.64.103</code>
+</p>
+</td></tr>
+<tr>
+<td>X-Forwarded-Host<sup id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup></td>
+<td>A <a href="/wikipedia/en/De_facto_standard" title="De facto standard"><i>de facto</i> standard</a> for identifying the original host requested by the client in the <code>Host</code> HTTP request header, since the host name and/or port of the reverse proxy (load balancer) may differ from the origin server handling the request. Superseded by <i>Forwarded</i> header.</td>
+<td><code>X-Forwarded-Host: en.wikipedia.org:8080</code>
+<p><code>X-Forwarded-Host: en.wikipedia.org</code>
+</p>
+</td></tr>
+<tr>
+<td>X-Forwarded-Proto<sup id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup></td>
+<td>A <a href="/wikipedia/en/De_facto_standard" title="De facto standard"><i>de facto</i> standard</a> for identifying the originating protocol of an HTTP request, since a reverse proxy (or a load balancer) may communicate with a web server using HTTP even if the request to the reverse proxy is HTTPS.  An alternative form of the header (X-ProxyUser-Ip) is used by Google clients talking to Google servers. Superseded by <i>Forwarded</i> header.</td>
+<td><code>X-Forwarded-Proto: https</code>
+</td></tr>
+<tr>
+<td>Front-End-Https<sup id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup></td>
+<td>Non-standard header field used by Microsoft applications and load-balancers</td>
+<td><code>Front-End-Https: on</code>
+</td></tr>
+<tr>
+<td>X-Http-Method-Override<sup id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup></td>
+<td>Requests a web application to override the method specified in the request (typically POST) with the method given in the header field (typically PUT or DELETE). This can be used when a user agent or firewall prevents PUT or DELETE methods from being sent directly (note that this is either a bug in the software component, which ought to be fixed, or an intentional configuration, in which case bypassing it may be the wrong thing to do).</td>
+<td><code>X-HTTP-Method-Override: DELETE</code>
+</td></tr>
+<tr>
+<td>X-ATT-DeviceId<sup id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup></td>
+<td>Allows easier parsing of the MakeModel/Firmware that is usually found in the User-Agent String of AT&amp;T Devices</td>
+<td><code>X-Att-Deviceid: GT-P7320/P7320XXLPG</code>
+</td></tr>
+<tr>
+<td>X-Wap-Profile<sup id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup></td>
+<td>Links to an XML file on the Internet with a full description and details about the device currently connecting. In the example to the right is an XML file for an AT&amp;T Samsung Galaxy S2.</td>
+<td><code>x-wap-profile: <a rel="nofollow" href="http://wap.samsungmobile.com/uaprof/SGH-I777.xml">http://wap.samsungmobile.com/uaprof/SGH-I777.xml</a></code>
+</td></tr>
+<tr>
+<td>Proxy-Connection<sup id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup></td>
+<td>Implemented as a misunderstanding of the HTTP specifications. Common because of mistakes in implementations of early HTTP versions. Has exactly the same functionality as standard Connection field.
+<p>Must not be used with HTTP/2.<sup id="cite_ref-rfc7540_connection_13-5"><a href="#cite_note-rfc7540_connection-13">[13]</a></sup>
+</p>
+</td>
+<td><code>Proxy-Connection: keep-alive</code>
+</td></tr>
+<tr>
+<td>X-UIDH<sup id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup><sup id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup><sup id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup></td>
+<td>Server-side <a href="/wikipedia/en/Deep_packet_inspection" title="Deep packet inspection">deep packet insertion</a> of a unique ID identifying customers of <a href="/wikipedia/en/Verizon_Wireless" title="Verizon Wireless">Verizon Wireless</a>; also known as "perma-cookie" or "supercookie"</td>
+<td><code>X-UIDH: ...</code>
+</td></tr>
+<tr>
+<td>X-Csrf-Token<sup id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup></td>
+<td>Used to prevent <a href="/wikipedia/en/Cross-site_request_forgery" title="Cross-site request forgery">cross-site request forgery</a>. Alternative header names are: <code>X-CSRFToken</code><sup id="cite_ref-37"><a href="#cite_note-37">[37]</a></sup> and <code>X-XSRF-TOKEN</code><sup id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup></td>
+<td><code>X-Csrf-Token: i8XNjC4b8KVok4uw5RftR38Wgp2BFwql</code>
+</td></tr>
+<tr>
+<td>X-Request-ID<sup id="cite_ref-stackoverflow1_39-0"><a href="#cite_note-stackoverflow1-39">[39]</a></sup><sup id="cite_ref-40"><a href="#cite_note-40">[40]</a></sup>,
+<p>X-Correlation-ID<sup id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup><sup id="cite_ref-42"><a href="#cite_note-42">[42]</a></sup>
+</p>
+</td>
+<td>Correlates HTTP requests between a client and server.
+</td>
+<td><code>X-Request-ID: f058ebd6-02f7-4d3f-942e-904344e8cde5</code>
+</td></tr>
+<tr>
+<td>Save-Data
+</td>
+<td>The Save-Data client hint request header available in Chrome, Opera, and Yandex browsers lets developers deliver lighter, faster applications to users who opt-in to data saving mode in their browser.
+</td>
+<td><code>Save-Data: on</code>
+</td></tr></tbody></table>
+<h2 id="response_fields">Response fields</h2>
+<h3 id="standard_response_fields">Standard response fields</h3>
+<table><tbody><tr>
+<th>Field name
+</th>
+<th>Description
+</th>
+<th>Example
+</th>
+<th>Status
+</th>
+<th>Standard
+</th></tr>
+<tr id="access-Control-response-headers">
+<td>Access-Control-Allow-Origin,<br>Access-Control-Allow-Credentials,<br>Access-Control-Expose-Headers,<br>Access-Control-Max-Age,<br>Access-Control-Allow-Methods,<br>Access-Control-Allow-Headers<sup id="cite_ref-CORS_11-2"><a href="#cite_note-CORS-11">[11]</a></sup>
+</td>
+<td>Specifying which web sites can participate in <a href="/wikipedia/en/Cross-origin_resource_sharing" title="Cross-origin resource sharing">cross-origin resource sharing</a></td>
+<td><code>Access-Control-Allow-Origin: *</code></td>
+<td>Permanent: standard
+</td>
+<td>
+</td></tr>
+<tr id="accept-patch-response-header">
+<td>Accept-Patch<sup id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup></td>
+<td>Specifies which patch document formats this server supports</td>
+<td><code>Accept-Patch: text/example;charset=utf-8</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr id="accept-ranges-response-header">
+<td>Accept-Ranges</td>
+<td>What partial content range types this server supports via <a href="/wikipedia/en/Byte_serving" title="Byte serving">byte serving</a></td>
+<td><code>Accept-Ranges: bytes</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Age</td>
+<td>The age the object has been in a <a href="/wikipedia/en/Proxy_cache" title="Proxy cache">proxy cache</a> in seconds</td>
+<td><code>Age: 12</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Allow</td>
+<td>Valid methods for a specified resource. To be used for a <i>405 Method not allowed</i></td>
+<td><code>Allow: GET, HEAD</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Alt-Svc<sup id="cite_ref-44"><a href="#cite_note-44">[44]</a></sup></td>
+<td>A server uses "Alt-Svc" header (meaning Alternative Services) to indicate that its resources can also be accessed at a different network location (host or port) or using a different protocol
+<p>When using HTTP/2, servers should instead send an ALTSVC frame. <sup id="cite_ref-45"><a href="#cite_note-45">[45]</a></sup>
+</p>
+</td>
+<td><code>Alt-Svc: http/1.1="http2.example.com:8001"; ma=7200</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Cache-Control" title="Cache-Control">Cache-Control</a></td>
+<td>Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds</td>
+<td><code>Cache-Control: max-age=3600</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Connection</td>
+<td>Control options for the current connection and list of hop-by-hop response fields.<sup id="cite_ref-rfc7230_connection_12-1"><a href="#cite_note-rfc7230_connection-12">[12]</a></sup>
+<p>Must not be used with HTTP/2.<sup id="cite_ref-rfc7540_connection_13-6"><a href="#cite_note-rfc7540_connection-13">[13]</a></sup>
+</p>
+</td>
+<td><code>Connection: close</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Content-Disposition<sup id="cite_ref-46"><a href="#cite_note-46">[46]</a></sup></td>
+<td>An opportunity to raise a "File Download" dialogue box for a known MIME type with binary format or suggest a filename for dynamic content. Quotes are necessary with special characters.</td>
+<td><code>Content-Disposition: attachment; filename="fname.ext"</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Content-Encoding</td>
+<td>The type of encoding used on the data. See <a href="/wikipedia/en/HTTP_compression" title="HTTP compression">HTTP compression</a>.</td>
+<td><code>Content-Encoding: gzip</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Content-Language</td>
+<td>The natural language or languages of the intended audience for the enclosed content<sup id="cite_ref-47"><a href="#cite_note-47">[47]</a></sup></td>
+<td><code>Content-Language: da</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr id="content-length-response-header">
+<td>Content-Length</td>
+<td>The length of the response body in <a href="/wikipedia/en/Octet_(computing)" title="Octet (computing)">octets</a> (8-bit bytes)</td>
+<td><code>Content-Length: 348</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Content-Location</td>
+<td>An alternate location for the returned data</td>
+<td><code>Content-Location: /index.htm</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Content-MD5</td>
+<td>A <a href="/wikipedia/en/Base64" title="Base64">Base64</a>-encoded binary <a href="/wikipedia/en/MD5" title="MD5">MD5</a> sum of the content of the response</td>
+<td><code>Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==</code></td>
+<td>Obsolete<sup id="cite_ref-tools.ietf.org_14-1"><a href="#cite_note-tools.ietf.org-14">[14]</a></sup>
+</td>
+<td>
+</td></tr>
+<tr id="content-range-response-header">
+<td>Content-Range</td>
+<td>Where in a full body message this partial message belongs</td>
+<td><code>Content-Range: bytes 21010-47021/47022</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Content-Type</td>
+<td>The <a href="/wikipedia/en/MIME_type" title="MIME type">MIME type</a> of this content</td>
+<td><code>Content-Type: text/html; charset=utf-8</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Date</td>
+<td>The date and time that the message was sent (in "HTTP-date" format as defined by <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>) <sup id="cite_ref-48"><a href="#cite_note-48">[48]</a></sup></td>
+<td><code>Date: Tue, 15 Nov 1994 08:12:31 GMT</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Delta-Base</td>
+<td>Specifies the delta-encoding entity tag of the response<sup id="cite_ref-rfc3229_10-1"><a href="#cite_note-rfc3229-10">[10]</a></sup>.</td>
+<td><code>Delta-Base: "abc"</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/HTTP_ETag" title="HTTP ETag">ETag</a></td>
+<td>An identifier for a specific version of a resource, often a <a href="/wikipedia/en/Message_digest" title="Message digest">message digest</a></td>
+<td><code>ETag: "737060cd8c284d8af7ad3082f209582d"</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr id="Expires">
+<td>Expires</td>
+<td>Gives the date/time after which the response is considered stale (in "HTTP-date" format as defined by <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>)</td>
+<td><code>Expires: Thu, 01 Dec 1994 16:00:00 GMT</code></td>
+<td>Permanent: standard
+</td>
+<td>
+</td></tr>
+<tr>
+<td>IM</td>
+<td>Instance-manipulations applied to the response<sup id="cite_ref-rfc3229_10-2"><a href="#cite_note-rfc3229-10">[10]</a></sup>.</td>
+<td><code>IM: feed</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Last-Modified</td>
+<td>The last modified date for the requested object (in "HTTP-date" format as defined by <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>)</td>
+<td><code>Last-Modified: Tue, 15 Nov 1994 12:45:26 GMT</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Link</td>
+<td>Used to express a typed relationship with another resource, where the relation type is defined by <a rel="nofollow" href="https://tools.ietf.org/html/rfc5988">RFC 5988</a></td>
+<td><code>Link: &lt;/feed&gt;; rel="alternate"</code><sup id="cite_ref-google_canonical_49-0"><a href="#cite_note-google_canonical-49">[49]</a></sup></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/HTTP_location" title="HTTP location">Location</a></td>
+<td>Used in <a href="/wikipedia/en/URL_redirection" title="URL redirection">redirection</a>, or when a new resource has been created.
+</td>
+<td>
+<ul><li>Example 1: <code>Location: http://www.w3.org/pub/WWW/People.html</code></li>
+<li>Example 2: <code>Location: /pub/WWW/People.html</code></li></ul>
+</td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/P3P" title="P3P">P3P</a></td>
+<td>This field is supposed to set <a href="/wikipedia/en/P3P" title="P3P">P3P</a> policy, in the form of <code>P3P:CP="your_compact_policy"</code>. However, P3P did not take off,<sup id="cite_ref-50"><a href="#cite_note-50">[50]</a></sup> most browsers have never fully implemented it, a lot of websites set this field with fake policy text, that was enough to fool browsers the existence of P3P policy and grant permissions for <a href="/wikipedia/en/Third_party_cookie" title="Third party cookie">third party cookies</a>.</td>
+<td><code>P3P: CP="This is not a P3P policy! See https://en.wikipedia.org/wiki/Special:CentralAutoLogin/P3P for more info."</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Pragma</td>
+<td>Implementation-specific fields that may have various effects anywhere along the request-response chain.</td>
+<td><code>Pragma: no-cache</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Proxy-Authenticate</td>
+<td>Request authentication to access the proxy.</td>
+<td><code>Proxy-Authenticate: Basic</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr id="PKP">
+<td>Public-Key-Pins<sup id="cite_ref-51"><a href="#cite_note-51">[51]</a></sup></td>
+<td><a href="/wikipedia/en/HTTP_Public_Key_Pinning" title="HTTP Public Key Pinning">HTTP Public Key Pinning</a>, announces hash of website's authentic <a href="/wikipedia/en/Transport_Layer_Security" title="Transport Layer Security">TLS</a> certificate</td>
+<td><code>Public-Key-Pins: max-age=2592000; pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g=";</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Retry-After</td>
+<td>If an entity is temporarily unavailable, this instructs the client to try again later. Value could be a specified period of time (in seconds) or a HTTP-date.<sup id="cite_ref-52"><a href="#cite_note-52">[52]</a></sup>
+</td>
+<td>
+<ul><li>Example 1: <code>Retry-After: 120</code></li>
+<li>Example 2: <code>Retry-After: Fri, 07 Nov 2014 23:59:59 GMT</code></li></ul>
+</td>
+<td>
+<p>Permanent
+</p>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Server</td>
+<td>A name for the server</td>
+<td><code>Server: Apache/2.4.1 (Unix)</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td id="innerlink_set-cookie">Set-Cookie</td>
+<td>An <a href="/wikipedia/en/HTTP_cookie" title="HTTP cookie">HTTP cookie</a></td>
+<td><code>Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1</code></td>
+<td>Permanent: standard
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/HTTP_Strict_Transport_Security" title="HTTP Strict Transport Security">Strict-Transport-Security</a></td>
+<td>A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains.</td>
+<td><code>Strict-Transport-Security: max-age=16070400; includeSubDomains</code></td>
+<td>Permanent: standard
+</td>
+<td>
+</td></tr>
+<tr id="trailer-response-header">
+<td>Trailer</td>
+<td>The Trailer general field value indicates that the given set of header fields is present in the trailer of a message encoded with <a href="/wikipedia/en/Chunked_transfer_coding" title="Chunked transfer coding">chunked transfer coding</a>.</td>
+<td><code>Trailer: Max-Forwards</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr id="transfer-encoding-response-header">
+<td>Transfer-Encoding</td>
+<td>The form of encoding used to safely transfer the entity to the user. <a rel="nofollow" href="http://www.iana.org/assignments/http-parameters">Currently defined methods</a> are: <a href="/wikipedia/en/Chunked_transfer_encoding" title="Chunked transfer encoding">chunked</a>, compress, deflate, gzip, identity.
+<p>Must not be used with HTTP/2.<sup id="cite_ref-rfc7540_connection_13-7"><a href="#cite_note-rfc7540_connection-13">[13]</a></sup>
+</p>
+</td>
+<td><code>Transfer-Encoding: chunked</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Tk
+</td>
+<td>Tracking Status header, value suggested to be sent in response to a DNT(do-not-track), possible values:
+<pre>"!" — under construction
+"?" — dynamic
+"G" — gateway to multiple parties
+"N" — not tracking
+"T" — tracking
+"C" — tracking with consent
+"P" — tracking only if consented
+"D" — disregarding DNT
+"U" — updated
+</pre>
+</td>
+<td><code>Tk: ?</code>
+</td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wikipedia/en/Upgrade_header" title="Upgrade header">Upgrade</a></td>
+<td>Ask the client to upgrade to another protocol.
+<p>Must not be used in HTTP/2<sup id="cite_ref-rfc7540_connection_13-8"><a href="#cite_note-rfc7540_connection-13">[13]</a></sup>
+</p>
+</td>
+<td><code>Upgrade: h2c, HTTPS/1.3, IRC/6.9, RTA/x11, websocket</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Vary</td>
+<td>Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server.</td>
+<td>
+<ul><li>Example 1: <code>Vary: *</code></li>
+<li>Example 2: <code>Vary: Accept-Language</code></li></ul>
+</td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Via</td>
+<td>Informs the client of proxies through which the response was sent.</td>
+<td><code>Via: 1.0 fred, 1.1 example.com (Apache/1.1)</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Warning</td>
+<td>A general warning about possible problems with the entity body.</td>
+<td><code>Warning: 199 Miscellaneous warning</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr id="www-authenticate-response-header">
+<td>WWW-Authenticate</td>
+<td>Indicates the authentication scheme that should be used to access the requested entity.</td>
+<td><code>WWW-Authenticate: Basic</code></td>
+<td>Permanent
+</td>
+<td>
+</td></tr>
+<tr id="Frame-Options">
+<td>X-Frame-Options<sup id="cite_ref-53"><a href="#cite_note-53">[53]</a></sup></td>
+<td><a href="/wikipedia/en/Clickjacking" title="Clickjacking">Clickjacking</a> protection: <tt>deny</tt> - no rendering within a frame, <tt>sameorigin</tt> - no rendering if origin mismatch, <tt>allow-from</tt> - allow from specified location, <tt>allowall</tt> - non-standard, allow from any location</td>
+<td><code> X-Frame-Options: deny</code></td>
+<td>Obsolete<sup id="cite_ref-54"><a href="#cite_note-54">[54]</a></sup>
+</td>
+<td>
+</td></tr></tbody></table>
+<h3 id="common_non-standard_response_fields">Common non-standard response fields</h3>
+<table><tbody><tr>
+<th>Field name
+</th>
+<th>Description
+</th>
+<th>Example
+</th></tr>
+<tr>
+<td>Content-Security-Policy,<br>X-Content-Security-Policy,<br>X-WebKit-CSP<sup id="cite_ref-55"><a href="#cite_note-55">[55]</a></sup>
+</td>
+<td><a href="/wikipedia/en/Content_Security_Policy" title="Content Security Policy">Content Security Policy</a> definition.
+</td>
+<td><code>X-WebKit-CSP: default-src 'self'</code>
+</td></tr>
+<tr id="Refresh">
+<td><a href="/wikipedia/en/HTTP_refresh" title="HTTP refresh">Refresh</a></td>
+<td>Used in redirection, or when a new resource has been created.  This refresh redirects after 5 seconds. Header extension introduced by Netscape and supported by most web browsers.</td>
+<td><code>Refresh: 5; url=http://www.w3.org/pub/WWW/People.html</code>
+</td></tr>
+<tr>
+<td>Status</td>
+<td><a href="/wikipedia/en/Common_Gateway_Interface" title="Common Gateway Interface">CGI</a> header field specifying the <a href="/wikipedia/en/HTTP_status" title="HTTP status">status</a> of the HTTP response. Normal HTTP responses use a separate "Status-Line" instead, defined by <a rel="nofollow" href="https://tools.ietf.org/html/rfc7230">RFC 7230</a>.<sup id="cite_ref-56"><a href="#cite_note-56">[56]</a></sup></td>
+<td><code>Status: 200 OK </code>
+</td></tr>
+<tr>
+<td>Timing-Allow-Origin
+</td>
+<td>The <code>Timing-Allow-Origin</code> response header specifies origins that are allowed to see values of attributes retrieved via features of the <a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>, which would otherwise be reported as zero due to cross-origin restrictions.<sup id="cite_ref-57"><a href="#cite_note-57">[57]</a></sup>
+</td>
+<td><code>Timing-Allow-Origin: *</code>
+<p><code>Timing-Allow-Origin: &lt;origin&gt;[, &lt;origin&gt;]*</code>
+</p>
+</td></tr>
+<tr>
+<td>X-Content-Duration<sup id="cite_ref-58"><a href="#cite_note-58">[58]</a></sup></td>
+<td>Provide the duration of the audio or video in seconds; only supported by Gecko browsers</td>
+<td><code>X-Content-Duration: 42.666</code>
+</td></tr>
+<tr>
+<td>X-Content-Type-Options<sup id="cite_ref-59"><a href="#cite_note-59">[59]</a></sup></td>
+<td>The only defined value, "nosniff", prevents <a href="/wikipedia/en/Internet_Explorer" title="Internet Explorer">Internet Explorer</a> from MIME-sniffing a response away from the declared content-type. This also applies to <a href="/wikipedia/en/Google_Chrome" title="Google Chrome">Google Chrome</a>, when downloading extensions.<sup id="cite_ref-60"><a href="#cite_note-60">[60]</a></sup></td>
+<td><code>X-Content-Type-Options: nosniff</code><sup id="cite_ref-whatwg-fetch-xcto_61-0"><a href="#cite_note-whatwg-fetch-xcto-61">[61]</a></sup>
+</td></tr>
+<tr id="Powered-By">
+<td>X-Powered-By<sup id="cite_ref-62"><a href="#cite_note-62">[62]</a></sup></td>
+<td>Specifies the technology (e.g. ASP.NET, PHP, JBoss) supporting the web application (version details are often in <code>X-Runtime</code>, <code>X-Version</code>, or <code>X-AspNet-Version</code>)</td>
+<td><code>X-Powered-By: PHP/5.4.0</code>
+</td></tr>
+<tr>
+<td>X-Request-ID,<br>X-Correlation-ID<sup id="cite_ref-stackoverflow1_39-1"><a href="#cite_note-stackoverflow1-39">[39]</a></sup>
+</td>
+<td>Correlates HTTP requests between a client and server.
+</td>
+<td><code>X-Request-ID: f058ebd6-02f7-4d3f-942e-904344e8cde5</code>
+</td></tr>
+<tr>
+<td>X-UA-Compatible<sup id="cite_ref-63"><a href="#cite_note-63">[63]</a></sup></td>
+<td>Recommends the preferred rendering engine (often a backward-compatibility mode) to use to display the content. Also used to activate <a href="/wikipedia/en/Chrome_Frame" title="Chrome Frame">Chrome Frame</a> in Internet Explorer.</td>
+<td><code>X-UA-Compatible: IE=EmulateIE7</code><br><code>X-UA-Compatible: IE=edge</code><br><code>X-UA-Compatible: Chrome=1</code>
+</td></tr>
+<tr>
+<td>X-XSS-Protection<sup id="cite_ref-64"><a href="#cite_note-64">[64]</a></sup></td>
+<td><a href="/wikipedia/en/Cross-site_scripting" title="Cross-site scripting">Cross-site scripting</a> (XSS) filter</td>
+<td><code>X-XSS-Protection: 1; mode=block</code>
+</td></tr></tbody></table>
+<h2 id="effects_of_selected_fields">Effects of selected fields</h2>
+<h3 id="avoiding_caching">Avoiding caching</h3>
+<p>If a web server responds with <code>Cache-Control: no-cache</code> then a web browser or other <a href="/wikipedia/en/HTTP_cache" title="HTTP cache">caching system</a> (intermediate proxies) must not use the response to satisfy subsequent requests without first checking with the originating server (this process is called validation).  This header field is part of HTTP version 1.1, and is ignored by some caches and browsers.  It may be simulated by setting the <code>Expires</code> HTTP version 1.0 header field value to a time earlier than the response time. Notice that no-cache is not instructing the browser or proxies about whether or not to cache the content. It just tells the browser and proxies to validate the cache content with the server before using it (this is done by using If-Modified-Since, If-Unmodified-Since, If-Match, If-None-Match attributes mentioned above). Sending a no-cache value thus instructs a browser or proxy to not use the cache contents merely based on "freshness criteria" of the cache content. Another common way to prevent old content from being shown to the user without validation is <code>Cache-Control: max-age=0</code>. This instructs the user agent that the content is stale and should be validated before use.
+</p><p>The header field <code>Cache-Control: no-store</code> is intended to instruct a browser application to make a best effort not to write it to disk (i.e not to cache it).
+</p><p>The request that a resource should not be cached is no guarantee that it will not be written to disk.  In particular, the HTTP/1.1 definition draws a distinction between history stores and caches.  If the user navigates back to a previous page a browser may still show you a page that has been stored on disk in the history store. This is correct behavior according to the specification.  Many user agents show different behavior in loading pages from the history store or cache depending on whether the protocol is HTTP or HTTPS.
+</p><p>The <code>Cache-Control: no-cache</code> HTTP/1.1 header field is also intended for use in requests made by the client. It is a means for the browser to tell the server and any intermediate caches that it wants a fresh version of the resource.  The <code>Pragma: no-cache</code> header field, defined in the HTTP/1.0 spec, has the same purpose.  It, however, is only defined for the request header. Its meaning in a response header is not specified.<sup id="cite_ref-65"><a href="#cite_note-65">[65]</a></sup> The behavior of <code>Pragma: no-cache</code> in a response is implementation specific. While some user agents do pay attention to this field in responses,<sup id="cite_ref-Q234067_66-0"><a href="#cite_note-Q234067-66">[66]</a></sup> the HTTP/1.1 RFC specifically warns against relying on this behavior.
+</p>
+<h2 id="see_also">See also</h2>
+<ul><li><a href="/wikipedia/en/HTTP_header_injection" title="HTTP header injection">HTTP header injection</a></li>
+<li><a href="/wikipedia/en/HTTP_ETag" title="HTTP ETag">HTTP ETag</a></li>
+<li><a href="/wikipedia/en/List_of_HTTP_status_codes" title="List of HTTP status codes">List of HTTP status codes</a></li></ul>
+<h2 id="references">References</h2>
+<div>
+<ol>
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc7230#section-3.2.4">"Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing"</a>. ietf.org. Retrieved July 23, 2014.</cite>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7230#section-3.2">RFC-7230 section 3.2</a>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7230#section-3.1.1">RFC-7210 section 3.1.1</a>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <a rel="nofollow" href="https://tools.ietf.org/html/rfc7231#section-4.1">RFC-7231 section 4.1</a>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <cite>Internet Engineering Task Force (June 1, 2012). <a rel="nofollow" href="http://tools.ietf.org/html/rfc6648">"RFC 6648"</a>. Retrieved November 12, 2012.</cite>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <cite><a rel="nofollow" href="http://www.iana.org/assignments/message-headers/message-headers.xml">"Message Headers"</a>. Iana.org. June 11, 2014. Retrieved June 12, 2014.</cite>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc7230#section-3.2.6">"Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing"</a>. itef.org. Retrieved July 24, 2014.</cite>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc7231#section-5.3.1">"Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content"</a>. ietf.org. Retrieved July 24, 2014.</cite>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <cite><a rel="nofollow" href="https://web.archive.org/web/20120509104709/https://httpd.apache.org/docs/2.3/mod/core.html#limitrequestfieldsize">"core - Apache HTTP Server"</a>. Httpd.apache.org. Archived from <a rel="nofollow" href="http://httpd.apache.org/docs/2.3/mod/core.html#limitrequestfieldsize">the original</a> on May 9, 2012. Retrieved March 13, 2012.</cite>
+</li>
+<li id="cite_note-rfc3229-10">^ <a href="#cite_ref-rfc3229_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-rfc3229_10-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-rfc3229_10-2"><sup><i><b>c</b></i></sup></a> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc3229"><i>RFC 3229</i></a>. <a href="/wikipedia/en/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" href="https://doi.org/10.17487%2FRFC3229">10.17487/RFC3229</a>.</cite>
+</li>
+<li id="cite_note-CORS-11">^ <a href="#cite_ref-CORS_11-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-CORS_11-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-CORS_11-2"><sup><i><b>c</b></i></sup></a> <cite><a rel="nofollow" href="https://www.w3.org/TR/cors/">"Cross-Origin Resource Sharing"</a>. Retrieved July 24, 2017.</cite>
+</li>
+<li id="cite_note-rfc7230_connection-12">^ <a href="#cite_ref-rfc7230_connection_12-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-rfc7230_connection_12-1"><sup><i><b>b</b></i></sup></a> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc7230#section-6.1">"Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing"</a>. <a href="/wikipedia/en/IETF" title="IETF">IETF</a>. June 2014. Retrieved December 19, 2014.</cite>
+</li>
+<li id="cite_note-rfc7540_connection-13">^ <a href="#cite_ref-rfc7540_connection_13-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-rfc7540_connection_13-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-rfc7540_connection_13-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-rfc7540_connection_13-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-rfc7540_connection_13-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-rfc7540_connection_13-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-rfc7540_connection_13-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-rfc7540_connection_13-7"><sup><i><b>h</b></i></sup></a> <a href="#cite_ref-rfc7540_connection_13-8"><sup><i><b>i</b></i></sup></a> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc7540#section-8.1.2.2">"Hypertext Transfer Protocol Version 2 (HTTP/2)"</a>. <a href="/wikipedia/en/IETF" title="IETF">IETF</a>. May 2015. Retrieved June 6, 2017.</cite>
+</li>
+<li id="cite_note-tools.ietf.org-14">^ <a href="#cite_ref-tools.ietf.org_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-tools.ietf.org_14-1"><sup><i><b>b</b></i></sup></a> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc7231#appendix-B">"Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content"</a>. Retrieved June 3, 2015.</cite>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc7239#section-1">"Forwarded HTTP Extension: Introduction"</a>. <a href="/wikipedia/en/IETF" title="IETF">IETF</a>. June 2014. Retrieved January 7, 2016.</cite>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc7230#section-5.4">"Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing"</a>. <a href="/wikipedia/en/IETF" title="IETF">IETF</a>. June 2014. Retrieved July 24, 2014.</cite>
+</li>
+<li id="cite_note-rfc7540_Request_Pseudo_Header_Fields-17"><b><a href="#cite_ref-rfc7540_Request_Pseudo_Header_Fields_17-0">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc7540#section-8.1.2.3">"Hypertext Transfer Protocol Version 2 (HTTP/2)"</a>. <a href="/wikipedia/en/IETF" title="IETF">IETF</a>. May 2015. Retrieved June 6, 2017.</cite>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <cite><a rel="nofollow" href="https://www.iana.org/assignments/message-headers/message-headers.xml">"Message Headers"</a>. <i>www.iana.org</i>. Retrieved November 26, 2018.</cite>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <cite><a rel="nofollow" href="https://httpwg.org/specs/rfc7540.html#Http2SettingsHeader">"Hypertext Transfer Protocol Version 2 (HTTP/2)"</a>. <i>httpwg.org</i>. May 30, 2015. Retrieved February 22, 2019.</cite>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <cite><a rel="nofollow" href="https://www.w3.org/TR/upgrade-insecure-requests/#preference">"Upgrade Insecure Requests - W3C Candidate Recommendation"</a>. <i>W3C</i>. October 8, 2015. Retrieved January 14, 2016.</cite>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <cite><a rel="nofollow" href="http://blog.sidstamm.com/2011/01/try-out-do-not-track-http-header.html">"Try out the "Do Not Track" HTTP header"</a>. Retrieved January 31, 2011.</cite>
+</li>
+<li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <cite><a rel="nofollow" href="http://blogs.msdn.com/b/ie/archive/2011/03/14/web-tracking-protection-minimum-standards-and-opportunities-to-innovate.aspx">"Web Tracking Protection: Minimum Standards and Opportunities to Innovate"</a>. Retrieved March 24, 2011.</cite>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> IETF <a rel="nofollow" href="http://tools.ietf.org/html/draft-mayer-do-not-track-00">Do Not Track: A Universal Third-Party Web Tracking Opt Out</a> March 7, 2011
+</li>
+<li id="cite_note-24"><b><a href="#cite_ref-24">^</a></b> W3C <a rel="nofollow" href="http://www.w3.org/2011/tracking-protection/drafts/tracking-dnt.html">Tracking Preference Expression (DNT)</a>, January 26, 2012
+</li>
+<li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <cite>Amos Jeffries (July 2, 2010). <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq/ConfiguringSquid#head-3518b69c63e221cc3cd7885415e365ffaf3dd27f">"SquidFaq/ConfiguringSquid - Squid Web Proxy Wiki"</a>. Retrieved September 10, 2009.</cite>
+</li>
+<li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <cite>The Apache Software Foundation. <a rel="nofollow" href="http://httpd.apache.org/docs/2.2/mod/mod_proxy.html#x-headers">"mod_proxy - Apache HTTP Server Version 2.2"</a>. Retrieved November 12, 2014.</cite>
+</li>
+<li id="cite_note-27"><b><a href="#cite_ref-27">^</a></b> <cite>Dave Steinberg (April 10, 2007). <a rel="nofollow" href="http://www.geekisp.com/faq/6_65_en.html">"How do I adjust my SSL site to work with GeekISP's loadbalancer?"</a>. Retrieved September 30, 2010.</cite>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <cite><a rel="nofollow" href="https://technet.microsoft.com/en-us/library/aa997519(v=exchg.65).aspx">"Helping to Secure Communication: Client to Front-End Server"</a>. July 27, 2006. Retrieved April 23, 2012.</cite>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <cite><a rel="nofollow" href="https://opensocial.github.io/spec/2.5.1/Core-API-Server.xml#rfc.section.2.1.1.1">"OpenSocial Core API Server Specification 2.5.1"</a>. Retrieved October 8, 2014.</cite>
+</li>
+<li id="cite_note-30"><b><a href="#cite_ref-30">^</a></b> <cite><a rel="nofollow" href="http://developer.att.com/developer/forward.jsp?passedItemId=5300270">"ATT Device ID"</a>. Retrieved January 14, 2012.</cite>
+</li>
+<li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <cite><a rel="nofollow" href="http://www.developershome.com/wap/detection/detection.asp?page=profileHeader">"WAP Profile"</a>. Retrieved January 14, 2012.</cite>
+</li>
+<li id="cite_note-32"><b><a href="#cite_ref-32">^</a></b> <cite>de Boyne Pollard, Jonathan (2007). <a rel="nofollow" href="https://jdebp.eu/FGA/web-proxy-connection-header.html">"The Proxy-Connection: header is a mistake in how some web browsers use HTTP"</a>. Retrieved January 16, 2018.</cite>
+</li>
+<li id="cite_note-33"><b><a href="#cite_ref-33">^</a></b> <cite><a rel="nofollow" href="https://www.eff.org/deeplinks/2014/11/verizon-x-uidh">"Verizon Injecting Perma-Cookies to Track Mobile Customers, Bypassing Privacy Controls"</a>. <a href="/wikipedia/en/Electronic_Frontier_Foundation" title="Electronic Frontier Foundation">Electronic Frontier Foundation</a>. Retrieved January 19, 2014.</cite>
+</li>
+<li id="cite_note-34"><b><a href="#cite_ref-34">^</a></b> <cite><a rel="nofollow" href="http://lessonslearned.org/sniff">"Checking known AT&amp;T, Verizon, Sprint, Bell Canada &amp; Vodacom Unique Identifier beacons"</a>. Retrieved January 19, 2014.</cite>
+</li>
+<li id="cite_note-35"><b><a href="#cite_ref-35">^</a></b> <cite>Craig Timberg. <a rel="nofollow" href="https://www.washingtonpost.com/business/technology/verizon-atandt-tracking-their-users-with-super-cookies/2014/11/03/7bbbf382-6395-11e4-bb14-4cfea1e742d5_story.html">"Verizon, AT&amp;T tracking their users with 'supercookies'"</a>. The Washington Post. Retrieved January 19, 2014.</cite>
+</li>
+<li id="cite_note-36"><b><a href="#cite_ref-36">^</a></b> <cite><a rel="nofollow" href="https://help.sap.com/saphelp_nw74/helpdata/en/b3/5c22518bc72214e10000000a44176d/content.htm">"SAP Cross-Site Request Forgery Protection"</a>. <a href="/wikipedia/en/SAP_SE" title="SAP SE">SAP SE</a>. Retrieved January 20, 2015.</cite>
+</li>
+<li id="cite_note-37"><b><a href="#cite_ref-37">^</a></b> <cite><a rel="nofollow" href="https://docs.djangoproject.com/en/1.7/ref/contrib/csrf/">"Django Cross Site Request Forgery protection"</a>. <a href="/wikipedia/en/Django_(web_framework)" title="Django (web framework)">Django (web framework)</a>. Retrieved January 20, 2015.</cite>
+</li>
+<li id="cite_note-38"><b><a href="#cite_ref-38">^</a></b> <cite><a rel="nofollow" href="https://docs.angularjs.org/api/ng/service/%24http#cross-site-request-forgery-xsrf-protection">"Angular Cross Site Request Forgery (XSRF) Protection"</a>. <a href="/wikipedia/en/AngularJS" title="AngularJS">AngularJS</a>. Retrieved January 20, 2015.</cite>
+</li>
+<li id="cite_note-stackoverflow1-39">^ <a href="#cite_ref-stackoverflow1_39-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-stackoverflow1_39-1"><sup><i><b>b</b></i></sup></a> <cite><a rel="nofollow" href="https://stackoverflow.com/questions/25433258/what-is-the-x-request-id-http-header">"What is the X-REQUEST-ID http header?"</a>. <i>stackoverflow.com</i>. Retrieved May 19, 2016.</cite>
+</li>
+<li id="cite_note-40"><b><a href="#cite_ref-40">^</a></b> <cite><a rel="nofollow" href="https://devcenter.heroku.com/articles/http-request-id">"HTTP Request IDs"</a>. <i>devcenter.heroku.com</i>. Retrieved February 6, 2018.</cite>
+</li>
+<li id="cite_note-41"><b><a href="#cite_ref-41">^</a></b> <cite><a rel="nofollow" href="https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/">"The Value of Correlation IDs"</a>. <i>Rapid7 Blog</i>. December 23, 2016. Retrieved April 13, 2018.</cite>
+</li>
+<li id="cite_note-42"><b><a href="#cite_ref-42">^</a></b> <cite>Hilton, Peter. <a rel="nofollow" href="http://hilton.org.uk/blog/microservices-correlation-id">"Correlation IDs for microservices architectures - Peter Hilton"</a>. <i>hilton.org.uk</i>. Retrieved April 13, 2018.</cite>
+</li>
+<li id="cite_note-43"><b><a href="#cite_ref-43">^</a></b> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc5789#section-3.1">"RFC 5789"</a>. Retrieved December 24, 2014.</cite>
+</li>
+<li id="cite_note-44"><b><a href="#cite_ref-44">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc7838">"HTTP Alternative Services"</a>. IETF. April 2016. Retrieved April 19, 2016.</cite>
+</li>
+<li id="cite_note-45"><b><a href="#cite_ref-45">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc7838#section-3">"HTTP Alternative Services, section 3"</a>. IETF. April 2016. Retrieved June 8, 2017.</cite>
+</li>
+<li id="cite_note-46"><b><a href="#cite_ref-46">^</a></b> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc6266">"RFC 6266"</a>. Retrieved March 13, 2015.</cite>
+</li>
+<li id="cite_note-47"><b><a href="#cite_ref-47">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc7231#section-3.1.3.2">"RFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content"</a>. Tools.ietf.org. Retrieved December 11, 2017.</cite>
+</li>
+<li id="cite_note-48"><b><a href="#cite_ref-48">^</a></b> <cite><a rel="nofollow" href="http://ronwilliams.io/blog/post/rfc7231-compliant-http-date-headers">"RFC7231 Compliant HTTP Date Headers"</a>.</cite>
+</li>
+<li id="cite_note-google_canonical-49"><b><a href="#cite_ref-google_canonical_49-0">^</a></b> <a rel="nofollow" href="https://support.google.com/webmasters/bin/answer.py?hl=en&amp;answer=139394">Indicate the canonical version of a URL by responding with the Link rel="canonical" HTTP header</a> Retrieved: 2012-02-09
+</li>
+<li id="cite_note-50"><b><a href="#cite_ref-50">^</a></b> W3C <a rel="nofollow" href="http://www.w3.org/P3P">P3P Work Suspended</a>
+</li>
+<li id="cite_note-51"><b><a href="#cite_ref-51">^</a></b> <cite><a rel="nofollow" href="http://www.rfc-editor.org/rfc/rfc7469.txt">"Public Key Pinning Extension for HTTP"</a>. IETF. Retrieved April 17, 2015.</cite>
+</li>
+<li id="cite_note-52"><b><a href="#cite_ref-52">^</a></b> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc7231#section-7.1.3">"Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content"</a>. Retrieved July 24, 2014.</cite>
+</li>
+<li id="cite_note-53"><b><a href="#cite_ref-53">^</a></b> <cite><a rel="nofollow" href="https://tools.ietf.org/html/rfc7034">"HTTP Header Field X-Frame-Options"</a>. IETF. 2013. Retrieved June 12, 2014.</cite>
+</li>
+<li id="cite_note-54"><b><a href="#cite_ref-54">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/CSP11/#frame-ancestors-and-frame-options">"Content Security Policy Level 2"</a>. Retrieved August 2, 2014.</cite>
+</li>
+<li id="cite_note-55"><b><a href="#cite_ref-55">^</a></b> <cite><a rel="nofollow" href="http://www.w3.org/TR/CSP/">"Content Security Policy"</a>. W3C. 2012. Retrieved April 28, 2017.</cite>
+</li>
+<li id="cite_note-56"><b><a href="#cite_ref-56">^</a></b> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc7230#section-3.1.2">"Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing"</a>. Retrieved July 24, 2014.</cite>
+</li>
+<li id="cite_note-57"><b><a href="#cite_ref-57">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">"Timing-Allow-Origin"</a>. <i>Mozilla Developer Network</i>. Retrieved January 25, 2018.</cite>
+</li>
+<li id="cite_note-58"><b><a href="#cite_ref-58">^</a></b> <cite><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media#Serve_X-Content-Duration_headers">"Configuring servers for Ogg media"</a>. May 26, 2014. Retrieved January 3, 2015.</cite>
+</li>
+<li id="cite_note-59"><b><a href="#cite_ref-59">^</a></b> <cite>Eric Lawrence (September 3, 2008). <a rel="nofollow" href="http://blogs.msdn.com/b/ie/archive/2008/09/02/ie8-security-part-vi-beta-2-update.aspx">"IE8 Security Part VI: Beta 2 Update"</a>. Retrieved September 28, 2010.</cite>
+</li>
+<li id="cite_note-60"><b><a href="#cite_ref-60">^</a></b> <cite><a rel="nofollow" href="https://code.google.com/chrome/extensions/hosting.html">"Hosting - Google Chrome Extensions - Google Code"</a>. Retrieved June 14, 2012.</cite>
+</li>
+<li id="cite_note-whatwg-fetch-xcto-61"><b><a href="#cite_ref-whatwg-fetch-xcto_61-0">^</a></b> <cite>van Kesteren, Anne (August 26, 2016). <a rel="nofollow" href="https://fetch.spec.whatwg.org/#x-content-type-options-header">"Fetch standard"</a>. <i>WHATWG</i>. <a rel="nofollow" href="https://web.archive.org/web/20160826132911/https://fetch.spec.whatwg.org/#x-content-type-options-header">Archived</a> from the original on August 26, 2016. Retrieved August 26, 2016.</cite>
+</li>
+<li id="cite_note-62"><b><a href="#cite_ref-62">^</a></b> <cite><a rel="nofollow" href="https://stackoverflow.com/questions/1288338/why-does-asp-net-framework-add-the-x-powered-byasp-net-http-header-in-response">"Why does ASP.NET framework add the 'X-Powered-By:ASP.NET' HTTP Header in responses? - Stack Overflow"</a>. Retrieved September 30, 2010.</cite>
+</li>
+<li id="cite_note-63"><b><a href="#cite_ref-63">^</a></b> <cite><a rel="nofollow" href="http://msdn.microsoft.com/en-us/library/ie/cc288325%28v=vs.85%29.aspx#SetMode">"Defining Document Compatibility: Specifying Document Compatibility Modes"</a>. April 1, 2011. Retrieved January 24, 2012.</cite>
+</li>
+<li id="cite_note-64"><b><a href="#cite_ref-64">^</a></b> <cite>Eric Lawrence (July 2, 2008). <a rel="nofollow" href="http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-iv-the-xss-filter.aspx">"IE8 Security Part IV: The XSS Filter"</a>. Retrieved September 30, 2010.</cite>
+</li>
+<li id="cite_note-65"><b><a href="#cite_ref-65">^</a></b> <cite><a rel="nofollow" href="http://tools.ietf.org/html/rfc7234#section-5.4">"Hypertext Transfer Protocol (HTTP/1.1): Caching"</a>. ietf.org. Retrieved July 24, 2014.</cite>
+</li>
+<li id="cite_note-Q234067-66"><b><a href="#cite_ref-Q234067_66-0">^</a></b> <cite><a rel="nofollow" href="https://support.microsoft.com/en-us/kb/234067/">"How to prevent caching in Internet Explorer"</a>. <a href="/wikipedia/en/Microsoft" title="Microsoft">Microsoft</a>. September 22, 2011. Retrieved April 15, 2015.</cite>
+</li>
+</ol></div>
+<h2 id="external_links">External links</h2>
+<ul><li><a rel="nofollow" href="http://www.iana.org/assignments/message-headers/message-headers.xml#perm-headers%7CMessage">Headers: Permanent Message Header Field Names</a></li>
+<li><a rel="nofollow" href="https://tools.ietf.org/html/rfc6265">RFC 6265</a>: IETF HTTP State Management Mechanism</li>
+<li><a rel="nofollow" href="https://tools.ietf.org/html/rfc7230">RFC 7230</a>: Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</li>
+<li><a rel="nofollow" href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>: Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</li>
+<li><a rel="nofollow" href="https://tools.ietf.org/html/rfc7232">RFC 7232</a>: Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</li>
+<li><a rel="nofollow" href="https://tools.ietf.org/html/rfc7233">RFC 7233</a>: Hypertext Transfer Protocol (HTTP/1.1): Range Requests</li>
+<li><a rel="nofollow" href="https://tools.ietf.org/html/rfc7234">RFC 7234</a>: Hypertext Transfer Protocol (HTTP/1.1): Caching</li>
+<li><a rel="nofollow" href="https://tools.ietf.org/html/rfc7235">RFC 7235</a>: Hypertext Transfer Protocol (HTTP/1.1): Authentication</li>
+<li><a rel="nofollow" href="https://tools.ietf.org/html/rfc7239">RFC 7239</a>: Forwarded HTTP Extension</li>
+<li><a rel="nofollow" href="http://www.and.org/texts/server-http">HTTP/1.1 headers from a web server point of view</a></li>
+<li><a rel="nofollow" href="http://blogs.msdn.com/b/ieinternals/archive/2009/06/30/internet-explorer-custom-http-headers.aspx">Internet Explorer and Custom HTTP Headers - EricLaw's IEInternals - Site Home - MSDN Blogs</a></li></ul>
+</div>
+
+  </article>
+</main>
+
+<footer>
+  <button id="company-logo"><a href="https://zhiliaokeji.com/" target="_blank" title="Known LLC. (长沙知了信息科技有限公司)">
+    <p>Powered by</p>
+    <img src="/static/img/known.svg" alt="Known LLC. (长沙知了信息科技有限公司)">
+  </a></button>
+</footer>
+
+<script src="/static/libs/highlight/highlight.pack.js"></script>
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+<script src="/static/js/utils.js"></script>
+<script src="/static/js/toc.js"></script>
+<script src="/static/js/search-hint.js"></script>
+</body>
+</html>

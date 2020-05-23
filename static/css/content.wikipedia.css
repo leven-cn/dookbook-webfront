@@ -18,6 +18,7 @@ main article {
 blockquote {
   float: left;
   margin: 18px 0;
+  width: 100%;
 }
 
 /*滚动条样式*/
@@ -28,14 +29,14 @@ blockquote {
 
 .toc ul::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
-  background: rgba(0,0,0,0.2);
+  box-shadow: inset 0 0 5px rgba(225,225,225,0.1);
+  background: rgba(200,200,200,0.1);
 }
 
 .toc ul::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: inset 0 0 5px rgba(20,20,20,0.1);
   border-radius: 0;
-  background: rgba(0,0,0,0.1);
+  background: rgba(20,20,20,0.2);
 }
 
 main article h2 {
@@ -107,7 +108,6 @@ main dl dd ul {
 figure {
   max-width: 300px;
   text-align: center;
-  float: left;
   border: 1px solid #666;
   margin: 1.9rem 1rem 0 0;
   background: rgb(42, 44, 53);
@@ -115,6 +115,21 @@ figure {
 
 figure div {
   width: auto;
+}
+
+figure a {
+  display: inline-block;
+}
+
+figure.right {
+  clear: right;
+  float: right;
+  margin-left: 1rem;
+}
+
+figure.left {
+  clear: left;
+  float: left;
 }
 
 main figure img {
@@ -140,6 +155,12 @@ figcaption {
   color: #999;
 }
 
+code pre {
+  overflow-x: auto;
+  background: rgb(42, 44, 53);
+  padding: 0.8em 1rem;
+}
+
 table {
   border-spacing: 0;
   margin-top: 2rem;
@@ -149,8 +170,19 @@ table {
   border-bottom: none;
 }
 
+table tbody {
+  width: 1050px;
+  display: block;
+  overflow-x: auto;
+}
+
 table caption {
   padding-bottom: 20px;
+}
+
+table tr td:first-child,
+table tr th:first-child{
+  width: 20%;
 }
 
 table tr td,
@@ -159,6 +191,7 @@ table tr th {
   border-left: 1px solid #666;
   line-height: 1.8rem;
   padding: 0.5rem 0.8em;
+  width: 100%;
 }
 
 table tr th {
@@ -175,6 +208,10 @@ table tr th {
   margin-top: 0;
 }
 
+.navbox table tbody {
+  width: 100%;
+}
+
 .navbox table table {
   border: none;
   padding: 0;
@@ -188,6 +225,7 @@ table tr th {
   line-height: 30px;
   border-left: none;
   flex: 1;
+  width: auto;
 }
 
 .navbox table table {
@@ -318,4 +356,15 @@ table tr th {
 
 #section_SpokenWikipedia div:nth-child(2) {
   display: inline-block;
+}
+
+table.navbox {
+  background: none;
+  border: none;
+  margin-top: 0;
+}
+
+table.navbox > tbody > tr > td {
+  padding: 0;
+  border: none;
 }

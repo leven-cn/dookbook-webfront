@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Input method - Wikipedia for Computer Science, hosted by Dookbook&reg;</title>
+  <meta name="description" content="Input method () on Wikipedia for Computer Science, hosted by Dookbook®"/>
+  <meta name="keywords" content="Input method,Wikipedia,Computer Science,Dookbook"/>
+  <meta name="generator" content="Dookbook"/>
+  <link rel="stylesheet" href="/static/libs/highlight/styles/agate.css"/>
+  <link rel="stylesheet" href="/static/css/content.css"/>
+  <link rel="stylesheet" href="/static/css/content.toc.css"/>
+  <link rel="stylesheet" href="/static/css/content.search.css"/>
+  <link rel="stylesheet" href="/static/css/content.wikipedia.css"/>
+  <!-- <link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/> -->
+  <!-- <link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/> -->
+  <link rel="canonical" href="https://dookbook.info/wikipedia/en/HTML"/>
+  <link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+</head>
+<body>
+  <!-- htmlhint attr-value-double-quotes:false -->
+  <header>
+    <a href="/"><img src="/static/img/wikipedia-en.png" alt="Wikipedia for Computer Science" title="Wikipedia for Computer Science"></a>
+    <section id="search">
+      <img src="/static/img/search.svg" alt="Search">
+      <input type="text" placeholder="Search here">
+    </section>
+    <nav>
+      <a href="#" title="About Dookbook®">i</a>
+      <a href="/about/zh-hans/" title="切换至中文" lang="zh-Hans">中</a>
+      <a href="/en/help/readme/" title="Help">?</a>
+    </nav>
+  </header>
+
+<main>
+  <article>
+    <header>
+      <h1>Input method - Wikipedia</h1>
+      <p><span>Updated</span>:&nbsp;&nbsp;2020-03-01 10:24:00 (UTC)</p>
+    </header>
+    <div class="toc">
+      <ul>
+        <li><a href="#implementations">Implementations</a></li>
+        <li><a href="#relationship_between_the_methodology_and_implementation">Relationship between the methodology and implementation</a></li>
+        <li>
+        <a href="#see_also">See also</a>
+        <ul>
+        <li><a href="#related_techniques">Related techniques</a></li>
+        <li><a href="#input_methods_versus_language">Input methods versus language</a></li>
+        <li><a href="#specific_input_methods">Specific input methods</a></li>
+        <li><a href="#input_methods_for_handheld_devices">Input methods for handheld devices</a></li>
+        </ul>
+        </li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#external_links">External links</a></li>
+      </ul>
+      <a class="copyright" href="https://zhiliaokeji.com" title="All Copyrights Reserved by Known LLC.">&copy;&nbsp;Known LLC.</a>
+    </div>
+
+<!-- Main content -->
+<div><figure class="right"><div id="mwe_player_0" videopayload='&lt;div class="mediaContainer" style="width:854px"&gt;&lt;video id="mwe_player_1" poster="//upload.wikimedia.org/wikipedia/commons/thumb/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/854px--TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.jpg" controls="" preload="none" autoplay="" style="width:854px;height:480px" class="kskin" data-durationhint="278.8" data-startoffset="0" data-mwtitle="TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm" data-mwprovider="wikimediacommons"&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.480p.vp9.webm" type="video/webm; codecs="vp9, opus"" data-title="SD VP9 (480P)" data-shorttitle="VP9 480P" data-transcodekey="480p.vp9.webm" data-width="854" data-height="480" data-bandwidth="29736" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.720p.vp9.webm" type="video/webm; codecs="vp9, opus"" data-title="HD VP9 (720P)" data-shorttitle="VP9 720P" data-transcodekey="720p.vp9.webm" data-width="1280" data-height="720" data-bandwidth="48776" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.480p.webm" type="video/webm; codecs="vp8, vorbis"" data-title="SD WebM (480P)" data-shorttitle="WebM 480P" data-transcodekey="480p.webm" data-width="854" data-height="480" data-bandwidth="84104" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.1080p.vp9.webm" type="video/webm; codecs="vp9, opus"" data-title="Full HD VP9 (1080P)" data-shorttitle="VP9 1080P" data-transcodekey="1080p.vp9.webm" data-width="1920" data-height="1080" data-bandwidth="105752" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.720p.webm" type="video/webm; codecs="vp8, vorbis"" data-title="HD WebM (720P)" data-shorttitle="WebM 720P" data-transcodekey="720p.webm" data-width="1280" data-height="720" data-bandwidth="165784" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm" type="video/webm; codecs="vp8"" data-title="Original WebM file, 1,920 × 1,080 (325 kbps)" data-shorttitle="WebM source" data-width="1920" data-height="1080" data-bandwidth="324752" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.1080p.webm" type="video/webm; codecs="vp8, vorbis"" data-title="Full HD WebM (1080P)" data-shorttitle="WebM 1080P" data-transcodekey="1080p.webm" data-width="1920" data-height="1080" data-bandwidth="351424" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.120p.vp9.webm" type="video/webm; codecs="vp9, opus"" data-title="Lowest bandwidth VP9 (120P)" data-shorttitle="VP9 120P" data-transcodekey="120p.vp9.webm" data-width="214" data-height="120" data-bandwidth="7544" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.160p.webm" type="video/webm; codecs="vp8, vorbis"" data-title="Low bandwidth WebM (160P)" data-shorttitle="WebM 160P" data-transcodekey="160p.webm" data-width="284" data-height="160" data-bandwidth="17328" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.180p.vp9.webm" type="video/webm; codecs="vp9, opus"" data-title="Low bandwidth VP9 (180P)" data-shorttitle="VP9 180P" data-transcodekey="180p.vp9.webm" data-width="320" data-height="180" data-bandwidth="10152" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.240p.vp9.webm" type="video/webm; codecs="vp9, opus"" data-title="Small VP9 (240P)" data-shorttitle="VP9 240P" data-transcodekey="240p.vp9.webm" data-width="426" data-height="240" data-bandwidth="13264" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.240p.webm" type="video/webm; codecs="vp8, vorbis"" data-title="Small WebM (240P)" data-shorttitle="WebM 240P" data-transcodekey="240p.webm" data-width="426" data-height="240" data-bandwidth="29816" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.360p.vp9.webm" type="video/webm; codecs="vp9, opus"" data-title="VP9 (360P)" data-shorttitle="VP9 360P" data-transcodekey="360p.vp9.webm" data-width="640" data-height="360" data-bandwidth="19944" data-framerate="15"/&gt;&lt;source src="//upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.360p.webm" type="video/webm; codecs="vp8, vorbis"" data-title="WebM (360P)" data-shorttitle="WebM 360P" data-transcodekey="360p.webm" data-width="640" data-height="360" data-bandwidth="52352" data-framerate="15"/&gt;&lt;/video&gt;&lt;/div&gt;'><img alt="File:TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm/220px--TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm.jpg"><a href="//upload.wikimedia.org/wikipedia/commons/6/6b/TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm" title="Play media" target="new">Play media</a></div><figcaption>Typing <a href="/wikipedia/en/Standard_Chinese" title="Standard Chinese">Chinese</a> with <a href="/wikipedia/en/Cangjie_input_method" title="Cangjie input method">Cangjie</a></figcaption></figure>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/IME_demonstratie_-_Matsuo_Bashou_-_Furu_ikeya_kawazu_tobikomu_mizuno_oto.png/220px-IME_demonstratie_-_Matsuo_Bashou_-_Furu_ikeya_kawazu_tobikomu_mizuno_oto.png" decoding="async" width="220" height="304" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/IME_demonstratie_-_Matsuo_Bashou_-_Furu_ikeya_kawazu_tobikomu_mizuno_oto.png/330px-IME_demonstratie_-_Matsuo_Bashou_-_Furu_ikeya_kawazu_tobikomu_mizuno_oto.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/IME_demonstratie_-_Matsuo_Bashou_-_Furu_ikeya_kawazu_tobikomu_mizuno_oto.png/440px-IME_demonstratie_-_Matsuo_Bashou_-_Furu_ikeya_kawazu_tobikomu_mizuno_oto.png 2x" data-file-width="562" data-file-height="776"><figcaption>Operation of a typical Japanese <a href="/wikipedia/en/Romaji" title="Romaji">romaji</a>-based IME</figcaption></figure>
+<figure class="right"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Interface_of_Weasel_Input_Method.png" decoding="async" width="197" height="242" data-file-width="197" data-file-height="242"><figcaption>Operation of a Chinese <a href="/wikipedia/en/Pinyin" title="Pinyin">Pinyin</a>-based IME</figcaption></figure>
+<p>An <b>input method</b> (or <b>input method editor</b>, commonly abbreviated <b>IME</b>) is an <a href="/wikipedia/en/Operating_system" title="Operating system">operating system</a> component or program that allows any data, such as keyboard strokes or mouse movements, to be received as input. In this way users can enter characters and symbols not found on their <a href="/wikipedia/en/Input_device" title="Input device">input devices</a>. Using an input method is obligatory for any language that has more <a href="/wikipedia/en/Grapheme" title="Grapheme">graphemes</a> than there are keys on the keyboard.
+</p><p>For instance, on the computer, this allows the user of <a href="/wikipedia/en/Latin_alphabet" title="Latin alphabet">Latin</a> <a href="/wikipedia/en/Keyboard_layout" title="Keyboard layout">keyboards</a> to input <a href="/wikipedia/en/Chinese_character" title="Chinese character">Chinese</a>, <a href="/wikipedia/en/Japanese_writing_system" title="Japanese writing system">Japanese</a>, <a href="/wikipedia/en/Hangul" title="Hangul">Korean</a> and <a href="/wikipedia/en/Indic_script" title="Indic script">Indic</a> characters; on many hand-held devices, such as mobile phones, it enables using the <a href="/wikipedia/en/Telephone_keypad" title="Telephone keypad">numeric keypad</a> to enter <a href="/wikipedia/en/Latin_alphabet" title="Latin alphabet">Latin alphabet characters</a> (or any other alphabet characters) or a screen display to be touched to do so. On some operating systems, an input method is also used to define the behaviour of the <a href="/wikipedia/en/Dead_key" title="Dead key">dead keys</a>.
+</p>
+<h2 id="implementations">Implementations</h2>
+<table><tbody><tr><td><div>This section <b>needs expansion</b>. <small>You can help by <a href="javascript:">adding to it</a>.</small> <small><i>(January 2011)</i></small></div></td></tr></tbody></table>
+<p>Although originally coined for <a href="/wikipedia/en/CJK" title="CJK">CJK</a> (Chinese, Japanese and Korean) computing, the term is now sometimes used generically to refer to a program to support the input of any language. To illustrate, in the <a href="/wikipedia/en/X_Window_System" title="X Window System">X Window System</a>, the facility to allow the input of <a href="/wikipedia/en/Latin_character" title="Latin character">Latin characters</a> with <a href="/wikipedia/en/Diacritic" title="Diacritic">diacritics</a> is also called an input method.
+</p><p>On <a href="/wikipedia/en/Windows_XP" title="Windows XP">Windows XP</a> or later <a href="/wikipedia/en/Microsoft_Windows" title="Microsoft Windows">Windows</a>, Input method, or IME, are also called <i>Text Input Processor</i>, which are implemented by the <a href="/wikipedia/en/Text_Services_Framework" title="Text Services Framework">Text Services Framework</a> API.
+</p>
+<h2 id="relationship_between_the_methodology_and_implementation">Relationship between the methodology and implementation</h2>
+<p>While the term <i>input method editor</i> was originally used for <a href="/wikipedia/en/Microsoft_Windows#Multilingual_support:_IMEs_and_LIPs" title="Microsoft Windows">Microsoft Windows</a>, its use has now gained acceptance in other operating systems<sup>[<i><a href="/wiki/Wikipedia-Citation_needed" title="Wikipedia:Citation needed">citation needed</a></i>]</sup>, especially when it is important to distinguish between the <a href="/wikipedia/en/Interface_(computer_science)" title="Interface (computer science)">computer interface</a> and implementation of input methods, or among the input methods themselves, the editing functionality of the program or operating system component providing the input method, and the general support of input methods in an operating system. This term has, for example, gained general acceptance on the GNU/Linux operating system; it is also used on the Mac OS.
+</p>
+<ul><li>The term <i>input method</i> generally refers to a particular way to use the keyboard to input a particular language, for example the <a href="/wikipedia/en/Cangjie_method" title="Cangjie method">Cangjie method</a>, the <a href="/wikipedia/en/Pinyin_method" title="Pinyin method">pinyin method</a>, or the use of <a href="/wikipedia/en/Dead_key" title="Dead key">dead keys</a>.</li>
+<li>On the other hand, the term <i>input method editor</i> on Microsoft products refers to the actual program that allows an input method to be used (for example MS New Pinyin). PRIME,<sup>[<i><a href="/wiki/Wikipedia-Citation_needed" title="Wikipedia:Citation needed">citation needed</a></i>]</sup> or <a href="/wikipedia/en/Smart_Common_Input_Method" title="Smart Common Input Method">SCIM</a> prefer the term of <i>Input Method Engine</i>, <i>Input Method platform</i> or <i>Input Method environment</i>,<sup>[<i><a href="/wiki/Wikipedia-Citation_needed" title="Wikipedia:Citation needed">citation needed</a></i>]</sup> or the actual <i>editing area</i> that allows the user to do the input. It can also  refer to a character palette, which allows any Unicode character to be input individually. One might also interpret IME to refer to the editor used for creating or modifying the data files upon which an input method relies.</li></ul>
+<h2 id="see_also">See also</h2>
+<ul><li><a href="/wikipedia/en/Internationalization_and_localization" title="Internationalization and localization">Internationalization and localization</a></li>
+<li><a href="/wikipedia/en/CJK_characters" title="CJK characters">CJK characters</a></li></ul>
+<h3 id="related_techniques">Related techniques</h3>
+<ul><li><a href="/wikipedia/en/Alt_codes" title="Alt codes">Alt codes</a></li>
+<li><a href="/wikipedia/en/Keyboard_layout" title="Keyboard layout">Keyboard layout</a>, in particular <i>dead keys</i></li></ul>
+<h3 id="input_methods_versus_language">Input methods versus language</h3>
+<ul><li><a href="/wikipedia/en/Chinese_input_methods_for_computers" title="Chinese input methods for computers">Chinese input methods for computers</a></li>
+<li><a href="/wikipedia/en/Japanese_language_and_computers" title="Japanese language and computers">Japanese language and computers</a> and <a href="/wikipedia/en/Japanese_input_method" title="Japanese input method">Japanese input methods</a></li>
+<li><a href="/wikipedia/en/Korean_language_and_computers" title="Korean language and computers">Korean language and computers</a></li>
+<li><a href="/wikipedia/en/Vietnamese_language_and_computers" title="Vietnamese language and computers">Vietnamese language and computers</a></li>
+<li>Indic scripts input methods for languages used in South Asia, Southeast Asia, and parts of Central Asia and East Asia.</li></ul>
+<h3 id="specific_input_methods">Specific input methods</h3>
+<ul><li><a href="/wikipedia/en/List_of_input_methods_for_UNIX_platforms" title="List of input methods for UNIX platforms">List of input methods for UNIX platforms</a></li>
+<li><a href="/wikipedia/en/ATOK" title="ATOK">ATOK</a>, and <a href="/wikipedia/en/Microsoft_Windows#Multilingual_support" title="Microsoft Windows">MS IME for Windows</a></li>
+<li><a href="/wikipedia/en/Tise" title="Tise">Tise</a>—Tibetan IM for Windows</li>
+<li><a href="/wikipedia/en/Wnn" title="Wnn">Wnn</a></li></ul>
+<h3 id="input_methods_for_handheld_devices">Input methods for handheld devices</h3>
+<ul><li><a href="/wikipedia/en/Multi-tap" title="Multi-tap">Multi-tap</a>—Used on many mobile telephones—hit the (combined alphanumeric) key for the letter you want until it comes up, then wait or proceed with a different key.</li>
+<li><a href="/wikipedia/en/T9_(predictive_text)" title="T9 (predictive text)">T9</a>/<a href="/wikipedia/en/XT9" title="XT9">XT9</a>—Type the key for every letter once, then, if needed, type Next until the right word comes up. May also correct misspellings and regional typos (if an adjacent key is pressed incorrectly).</li>
+<li><a href="/wikipedia/en/ITap" title="ITap">iTap</a>—Similar to first-generation T9, with word <a href="/wikipedia/en/Autocomplete" title="Autocomplete">autocomplete</a>.</li>
+<li><a href="/wikipedia/en/LetterWise" title="LetterWise">LetterWise</a>—"Hit the key with the letter you want, if it doesn't come up, hit Next until it does."</li>
+<li><a href="/wikipedia/en/Fleksy" title="Fleksy">Fleksy</a>—Eyes-free touch typing for touchscreen devices, also used by blind / visually impaired people.<sup id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup></li>
+<li><a href="/wikipedia/en/SwiftKey" title="SwiftKey">SwiftKey</a>—context-sensitive word-prediction<sup id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup><sup id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup></li>
+<li><a href="/wikipedia/en/FITALY" title="FITALY">FITALY</a> An array, almost square, which minimizes distance traveled from one letter to another.</li>
+<li><a href="/wikipedia/en/MessagEase" title="MessagEase">MessagEase</a>, an input method optimized for the most common letters, that can enter hundreds of characters with single hand motions</li>
+<li><a href="/wikipedia/en/Swype" title="Swype">Swype</a>, an input method that uses swiping gestures instead of tapping to quickly enter text</li>
+<li>8pen, an input method using circular swipes in an attempt to mimic hand movements</li>
+<li><a href="/wikipedia/en/Gboard" title="Gboard">Gboard</a>, the keyboard that comes bundled with the Android operating system</li>
+<li><a href="/wikipedia/en/Graffiti_(Palm_OS)" title="Graffiti (Palm OS)">Graffiti</a>, the Palm OS input method, entered using a stylus</li>
+<li>Pouces, an input method using touches and swipes</li></ul>
+<h2 id="references">References</h2>
+<div>
+<ol>
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> 
+<cite id="CITEREFMeddaugh2013">Meddaugh, Jason (2013-02-01), <a rel="nofollow" href="http://www.afb.org/afbpress/pub.asp?DocID=aw140203"><i>2012: A Technology Year in Review</i></a>, USA: American Foundation for the Blind, retrieved 2013-02-25, <q>Our top story of 2012 involves a formerly little-known app called Fleksy and its rise toward prominence and mainstream acceptance.</q></cite>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> 
+<cite id="CITEREFFiedlerová2012">Fiedlerová, Klára (2012-05-10), <a rel="nofollow" href="https://dip.felk.cvut.cz/browse/pdfcache/fiedlkla_2012dipl.pdf"><i>Possibilities of Text Input for Handicapped People</i></a> (PDF), Prague: Czech Technical University in Prague, p. 15, retrieved 2012-08-01, <q>Word prediction is used to speed up the text entry. The prediction system uses the context of the sentence to predict three words that could be used next.</q></cite>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> 
+<cite><a rel="nofollow" href="http://www.swiftkey.com">"For phones - SwiftKey"</a>. <i>SwiftKey</i>. TouchType. Retrieved 2016-10-21.</cite>
+</li>
+</ol></div>
+<h2 id="external_links">External links</h2>
+ 
+<ul><li><a rel="nofollow" href="http://www.microsoft.com/en-US/download/details.aspx?id=30390">Microsoft Input Method Editors (IMEs) for Chinese, Japanese and Korean</a></li>
+<li><a rel="nofollow" href="http://www.bhashaindia.com/">BhashaIndia</a>, the Microsoft portal for Indic languages, which has Indic IME for download.</li>
+<li><a rel="nofollow" href="http://www.google.com/ime/transliteration">Google Transliteration IMEs</a></li></ul>
+<div aria-labelledby="Input_method" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="Input_method"><a>Input method</a></div></th></tr><tr><th scope="row">By <a href="/wikipedia/en/Operating_system" title="Operating system">operating system</a></th><td><table><tbody><tr><th scope="row"><a href="/wikipedia/en/Microsoft_Windows" title="Microsoft Windows">Windows</a></th><td><div>
+<ul><li>Input Method Manager (IMM32)</li>
+<li><a href="/wikipedia/en/Text_Services_Framework" title="Text Services Framework">Text Services Framework (TSF)</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Unix" title="Unix">Unix</a>-like</th><td><div>
+<ul><li><a href="/wikipedia/en/Fcitx" title="Fcitx">Fcitx</a></li>
+<li><a href="/wikipedia/en/Intelligent_Input_Bus" title="Intelligent Input Bus">Intelligent Input Bus (IBus)</a></li>
+<li><a href="/wikipedia/en/Internet/Intranet_Input_Method_Framework" title="Internet/Intranet Input Method Framework">Internet/Intranet Input Method Framework (IIIMF)</a></li>
+<li><a href="/wikipedia/en/Maliit" title="Maliit">Maliit</a></li>
+<li><a href="/wikipedia/en/Smart_Common_Input_Method" title="Smart Common Input Method">Smart Common Input Method (SCIM)</a></li>
+<li><a href="/wikipedia/en/Uim" title="Uim">uim</a></li>
+<li><a href="/wikipedia/en/X_Input_Method" title="X Input Method">X Input Method (XIM)</a></li>
+<li><i><a>more…</a></i></li></ul>
+</div></td></tr><tr><th scope="row">Other</th><td><div>
+<ul><li><a href="/wikipedia/en/Google_IME" title="Google IME">Google IME</a></li>
+<li><a href="/wikipedia/en/OpenVanilla" title="OpenVanilla">OpenVanilla</a></li></ul>
+</div></td></tr></tbody></table></td></tr><tr><th scope="row">Conversion</th><td><table><tbody><tr><th scope="row">Japanese</th><td><div>
+<ul><li><a href="/wikipedia/en/Anthy" title="Anthy">Anthy</a></li>
+<li><a href="/wikipedia/en/ATOK" title="ATOK">ATOK</a></li>
+<li><a href="/wikipedia/en/Google_Japanese_Input" title="Google Japanese Input">Google Japanese Input</a></li>
+<li><a href="/wikipedia/en/Kotoeri" title="Kotoeri">Kotoeri</a></li>
+<li><a href="/wikipedia/en/Wnn" title="Wnn">Wnn</a></li></ul>
+</div></td></tr><tr><th scope="row">Chinese</th><td><div>
+<ul><li>Array</li>
+<li><a href="/wikipedia/en/Biaoxingma_method" title="Biaoxingma method">Biaoxingma</a></li>
+<li><a href="/wikipedia/en/Boshiamy_method" title="Boshiamy method">Boshiamy</a></li>
+<li><a href="/wikipedia/en/Cangjie_input_method" title="Cangjie input method">Cangjie</a> (<a href="/wikipedia/en/Simplified_Cangjie" title="Simplified Cangjie">Simplified / Express</a>)</li>
+<li><a href="/wikipedia/en/CKC_Chinese_Input_System" title="CKC Chinese Input System">CKC</a></li>
+<li><a href="/wikipedia/en/Dayi_method" title="Dayi method">Dayi</a></li>
+<li><a href="/wikipedia/en/Pinyin_method" title="Pinyin method">Pinyin</a>
+<ul><li><a href="/wikipedia/en/Google_Pinyin" title="Google Pinyin">Google</a></li>
+<li><a href="/wikipedia/en/Microsoft_Pinyin_IME" title="Microsoft Pinyin IME">Microsoft</a></li>
+<li><a href="/wikipedia/en/Sogou_Pinyin" title="Sogou Pinyin">Sogou</a></li></ul></li>
+<li><a href="/wikipedia/en/Stroke_count_method" title="Stroke count method">Stroke count</a></li>
+<li><a href="/wikipedia/en/Wubi_method" title="Wubi method">Wubi (Wang Ma)</a></li>
+<li><a href="/wikipedia/en/Zhengma_method" title="Zhengma method">ZhengMa</a></li></ul>
+</div></td></tr><tr><th scope="row">Korean</th><td><div>
+<ul><li>Nalgaeset</li></ul>
+</div></td></tr><tr><th scope="row">Vietnamese</th><td><div>
+<ul><li><a href="/wikipedia/en/VPSKeys" title="VPSKeys">VPSKeys</a></li>
+<li>WinVNKey</li>
+<li><a href="/wikipedia/en/UniKey_(software)" title="UniKey (software)">UniKey</a></li>
+<li>Vietkey</li></ul>
+</div></td></tr><tr><th scope="row">Indian</th><td><div>
+<ul><li><a href="/wikipedia/en/Bobble_Keyboard_(App)" title="Bobble Keyboard (App)">Bobble</a></li></ul>
+</div></td></tr></tbody></table></td></tr></tbody></table></div>
+<div aria-labelledby="Microsoft_APIs_and_frameworks" class="navbox"><table><tbody><tr><th scope="col" colspan="2"><div id="Microsoft_APIs_and_frameworks"><a href="/wikipedia/en/List_of_Microsoft_Windows_application_programming_interfaces_and_frameworks" title="List of Microsoft Windows application programming interfaces and frameworks">Microsoft APIs and frameworks</a></div></th></tr><tr><th scope="row">Graphics</th><td><div>
+<ul><li><a href="/wikipedia/en/Desktop_Window_Manager" title="Desktop Window Manager">Desktop Window Manager</a></li>
+<li><a href="/wikipedia/en/Direct2D" title="Direct2D">Direct2D</a></li>
+<li><a href="/wikipedia/en/Microsoft_Direct3D" title="Microsoft Direct3D">Direct3D</a></li>
+<li><a href="/wikipedia/en/D3DX" title="D3DX">D3D (extensions)</a></li>
+<li><a href="/wikipedia/en/Graphics_Device_Interface" title="Graphics Device Interface">GDI / GDI+</a></li>
+<li><a href="/wikipedia/en/Windows_Presentation_Foundation" title="Windows Presentation Foundation">WPF</a></li>
+<li><a href="/wikipedia/en/Microsoft_Silverlight" title="Microsoft Silverlight">Silverlight</a></li>
+<li><a href="/wikipedia/en/Windows_Runtime_XAML_Framework" title="Windows Runtime XAML Framework">WinRT XAML</a></li>
+<li><a href="/wikipedia/en/Windows_Color_System" title="Windows Color System">Windows Color System</a></li>
+<li><a href="/wikipedia/en/Windows_Image_Acquisition" title="Windows Image Acquisition">Windows Image Acquisition</a></li>
+<li><a href="/wikipedia/en/Windows_Imaging_Component" title="Windows Imaging Component">Windows Imaging Component</a></li>
+<li><a href="/wikipedia/en/DirectX_Graphics_Infrastructure" title="DirectX Graphics Infrastructure">DirectX Graphics Infrastructure (DXGI)</a></li>
+<li><a href="/wikipedia/en/Windows_Advanced_Rasterization_Platform" title="Windows Advanced Rasterization Platform">Windows Advanced Rasterization Platform</a></li>
+<li><a href="/wikipedia/en/WinG" title="WinG">WinG</a></li></ul>
+</div></td></tr><tr><th scope="row">Audio</th><td><div>
+<ul><li><a href="/wikipedia/en/DirectMusic" title="DirectMusic">DirectMusic</a></li>
+<li><a href="/wikipedia/en/DirectSound" title="DirectSound">DirectSound</a></li>
+<li><a href="/wikipedia/en/DirectX_plugin" title="DirectX plugin">DirectX plugin</a></li>
+<li><a href="/wikipedia/en/Cross-platform_Audio_Creation_Tool" title="Cross-platform Audio Creation Tool">XACT</a></li>
+<li><a href="/wikipedia/en/Microsoft_Speech_API" title="Microsoft Speech API">Speech API</a></li>
+<li><a href="/wikipedia/en/XAudio2" title="XAudio2">XAudio2</a></li></ul>
+</div></td></tr><tr><th scope="row">Multimedia</th><td><div>
+<ul><li><a href="/wikipedia/en/DirectX" title="DirectX">DirectX</a>
+<ul><li><a href="/wikipedia/en/DirectX_Media_Objects" title="DirectX Media Objects">Media Objects</a></li>
+<li><a href="/wikipedia/en/DirectX_Video_Acceleration" title="DirectX Video Acceleration">Video Acceleration</a></li></ul></li>
+<li><a href="/wikipedia/en/Xinput" title="Xinput">Xinput</a></li>
+<li><a href="/wikipedia/en/DirectInput" title="DirectInput">DirectInput</a></li>
+<li><a href="/wikipedia/en/DirectShow" title="DirectShow">DirectShow</a></li>
+<li><a href="/wikipedia/en/Image_Mastering_API" title="Image Mastering API">Image Mastering API</a></li>
+<li><a href="/wikipedia/en/Managed_DirectX" title="Managed DirectX">Managed DirectX</a></li>
+<li><a href="/wikipedia/en/Media_Foundation" title="Media Foundation">Media Foundation</a></li>
+<li><a href="/wikipedia/en/Microsoft_XNA" title="Microsoft XNA">XNA</a></li>
+<li><a href="/wikipedia/en/Windows_Media" title="Windows Media">Windows Media</a></li>
+<li><a href="/wikipedia/en/Video_for_Windows" title="Video for Windows">Video for Windows</a></li></ul>
+</div></td></tr><tr><th scope="row">Web</th><td><div>
+<ul><li><a href="/wikipedia/en/Trident_(layout_engine)" title="Trident (layout engine)">MSHTML</a></li>
+<li><a href="/wikipedia/en/Windows_RSS_Platform" title="Windows RSS Platform">RSS Platform</a></li>
+<li><a href="/wikipedia/en/JScript" title="JScript">JScript</a></li>
+<li><a href="/wikipedia/en/VBScript" title="VBScript">VBScript</a></li>
+<li><a href="/wikipedia/en/Browser_Helper_Object" title="Browser Helper Object">BHO</a></li>
+<li><a href="/wikipedia/en/XMLHttpRequest" title="XMLHttpRequest">XDR</a></li>
+<li><a href="/wikipedia/en/Microsoft_Gadgets" title="Microsoft Gadgets">SideBar Gadgets</a></li>
+<li><a href="/wikipedia/en/TypeScript" title="TypeScript">TypeScript</a></li></ul>
+</div></td></tr><tr><th scope="row">Data access</th><td><div>
+<ul><li><a href="/wikipedia/en/Microsoft_Data_Access_Components" title="Microsoft Data Access Components">Data Access Components (MDAC)</a>
+<ul><li><a href="/wikipedia/en/ActiveX_Data_Objects" title="ActiveX Data Objects">ADO</a></li>
+<li><a href="/wikipedia/en/ADO.NET" title="ADO.NET">ADO.NET</a></li>
+<li><a href="/wikipedia/en/ODBC" title="ODBC">ODBC</a></li>
+<li><a href="/wikipedia/en/OLE_DB" title="OLE DB">OLE DB</a></li></ul></li>
+<li><a href="/wikipedia/en/Extensible_Storage_Engine" title="Extensible Storage Engine">Extensible Storage Engine</a></li>
+<li><a href="/wikipedia/en/Entity_Framework" title="Entity Framework">Entity Framework</a></li>
+<li><a href="/wikipedia/en/Microsoft_Sync_Framework" title="Microsoft Sync Framework">Sync Framework</a></li>
+<li><a href="/wikipedia/en/Microsoft_Jet_Database_Engine" title="Microsoft Jet Database Engine">Jet Engine</a></li>
+<li><a href="/wikipedia/en/MSXML" title="MSXML">MSXML</a></li>
+<li><a href="/wikipedia/en/Open_Packaging_Conventions" title="Open Packaging Conventions">OPC</a></li></ul>
+</div></td></tr><tr><th scope="row">Networking</th><td><div>
+<ul><li><a href="/wikipedia/en/Winsock" title="Winsock">Winsock</a>
+<ul><li><a href="/wikipedia/en/Layered_Service_Provider" title="Layered Service Provider">LSP</a></li></ul></li>
+<li><a href="/wikipedia/en/Windows_Vista_networking_technologies#Winsock_Kernel" title="Windows Vista networking technologies">Winsock Kernel</a></li>
+<li><a href="/wikipedia/en/Windows_Filtering_Platform" title="Windows Filtering Platform">Filtering Platform</a></li>
+<li><a href="/wikipedia/en/Network_Driver_Interface_Specification" title="Network Driver Interface Specification">NDIS</a></li>
+<li><a href="/wikipedia/en/Windows_Rally" title="Windows Rally">Windows Rally</a></li>
+<li><a href="/wikipedia/en/Background_Intelligent_Transfer_Service" title="Background Intelligent Transfer Service">BITS</a></li>
+<li><a href="/wikipedia/en/Windows_Vista_networking_technologies#Peer-to-peer_communication" title="Windows Vista networking technologies">P2P API</a></li>
+<li><a href="/wikipedia/en/Microsoft_Message_Queuing" title="Microsoft Message Queuing">MSMQ</a></li>
+<li><a href="/wikipedia/en/Microsoft_Messaging_Passing_Interface" title="Microsoft Messaging Passing Interface">MS MPI</a></li>
+<li><a href="/wikipedia/en/DirectPlay" title="DirectPlay">DirectPlay</a></li></ul>
+</div></td></tr><tr><th scope="row">Communication</th><td><div>
+<ul><li><a href="/wikipedia/en/Messaging_Application_Programming_Interface" title="Messaging Application Programming Interface">Messaging API</a></li>
+<li><a href="/wikipedia/en/Telephony_Application_Programming_Interface" title="Telephony Application Programming Interface">Telephony API</a></li>
+<li><a href="/wikipedia/en/Windows_Communication_Foundation" title="Windows Communication Foundation">WCF</a></li></ul>
+</div></td></tr><tr><th scope="row">Administration and management</th><td><div>
+<ul><li><a href="/wikipedia/en/Win32_console" title="Win32 console">Win32 console</a></li>
+<li><a href="/wikipedia/en/Windows_Script_Host" title="Windows Script Host">Windows Script Host</a></li>
+<li><a href="/wikipedia/en/Windows_Management_Instrumentation" title="Windows Management Instrumentation">WMI (extensions)</a></li>
+<li><a href="/wikipedia/en/PowerShell" title="PowerShell">PowerShell</a></li>
+<li><a href="/wikipedia/en/Windows_Task_Scheduler" title="Windows Task Scheduler">Task Scheduler</a></li>
+<li><a href="/wikipedia/en/Windows_Vista_I/O_technologies#Offline_Files" title="Windows Vista I/O technologies">Offline Files</a></li>
+<li><a href="/wikipedia/en/Shadow_Copy" title="Shadow Copy">Shadow Copy</a></li>
+<li><a href="/wikipedia/en/Windows_Installer" title="Windows Installer">Windows Installer</a></li>
+<li><a href="/wikipedia/en/Windows_Error_Reporting" title="Windows Error Reporting">Error Reporting</a></li>
+<li><a href="/wikipedia/en/Event_Viewer#Windows_Event_Log" title="Event Viewer">Event Log</a></li>
+<li><a href="/wikipedia/en/Common_Log_File_System" title="Common Log File System">Common Log File System</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Component-based_software_engineering" title="Component-based software engineering">Component model</a></th><td><div>
+<ul><li><a href="/wikipedia/en/Component_Object_Model" title="Component Object Model">COM</a></li>
+<li><a href="/wikipedia/en/Component_Object_Model#COM+" title="Component Object Model">COM+</a></li>
+<li><a href="/wikipedia/en/ActiveX" title="ActiveX">ActiveX</a></li>
+<li><a href="/wikipedia/en/Distributed_Component_Object_Model" title="Distributed Component Object Model">Distributed Component Object Model</a></li>
+<li><a href="/wikipedia/en/.NET_Framework" title=".NET Framework">.NET Framework</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Library_(computing)" title="Library (computing)">Libraries</a></th><td><div>
+<ul><li><a href="/wikipedia/en/Framework_Class_Library" title="Framework Class Library">Framework Class Library</a></li>
+<li><a href="/wikipedia/en/Microsoft_Foundation_Class_Library" title="Microsoft Foundation Class Library">Microsoft Foundation Classes (MFC)</a></li>
+<li><a href="/wikipedia/en/Active_Template_Library" title="Active Template Library">Active Template Library (ATL)</a></li>
+<li><a href="/wikipedia/en/Windows_Template_Library" title="Windows Template Library">Windows Template Library (WTL)</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Device_driver" title="Device driver">Device drivers</a></th><td><div>
+<ul><li><a href="/wikipedia/en/Windows_Driver_Model" title="Windows Driver Model">WDM</a></li>
+<li><a href="/wikipedia/en/Windows_Driver_Frameworks" title="Windows Driver Frameworks">WDF</a>
+<ul><li><a href="/wikipedia/en/Kernel-Mode_Driver_Framework" title="Kernel-Mode Driver Framework">KMDF</a></li>
+<li><a href="/wikipedia/en/User-Mode_Driver_Framework" title="User-Mode Driver Framework">UMDF</a></li></ul></li>
+<li><a href="/wikipedia/en/Windows_Display_Driver_Model" title="Windows Display Driver Model">WDDM</a></li>
+<li><a href="/wikipedia/en/Network_Driver_Interface_Specification" title="Network Driver Interface Specification">NDIS</a></li>
+<li><a href="/wikipedia/en/Universal_Audio_Architecture" title="Universal Audio Architecture">UAA</a></li>
+<li><a href="/wikipedia/en/Broadcast_Driver_Architecture" title="Broadcast Driver Architecture">BDA</a></li>
+<li><a href="/wikipedia/en/VxD" title="VxD">VxD</a></li></ul>
+</div></td></tr><tr><th scope="row">Security</th><td><div>
+<ul><li><a href="/wikipedia/en/Microsoft_CryptoAPI" title="Microsoft CryptoAPI">Crypto API</a>
+<ul><li><a href="/wikipedia/en/CAPICOM" title="CAPICOM">CAPICOM</a></li></ul></li>
+<li><a href="/wikipedia/en/Windows_CardSpace" title="Windows CardSpace">Windows CardSpace</a></li>
+<li><a href="/wikipedia/en/Data_Protection_API" title="Data Protection API">Data Protection API</a></li>
+<li><a href="/wikipedia/en/Security_Support_Provider_Interface" title="Security Support Provider Interface">Security Support Provider Interface (SSPI)</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/.NET_Framework" title=".NET Framework">.NET</a></th><td><div>
+<ul><li><a href="/wikipedia/en/ASP.NET" title="ASP.NET">ASP.NET</a></li>
+<li><a href="/wikipedia/en/ADO.NET" title="ADO.NET">ADO.NET</a></li>
+<li><a href="/wikipedia/en/.NET_Remoting" title=".NET Remoting">Remoting</a></li>
+<li><a href="/wikipedia/en/Microsoft_Silverlight" title="Microsoft Silverlight">Silverlight</a></li>
+<li><a href="/wikipedia/en/Task_Parallel_Library" title="Task Parallel Library">TPL</a></li>
+<li><a href="/wikipedia/en/Windows_Communication_Foundation" title="Windows Communication Foundation">WCF</a></li>
+<li><a href="/wikipedia/en/Windows_CardSpace" title="Windows CardSpace">WCS</a></li>
+<li><a href="/wikipedia/en/Windows_Presentation_Foundation" title="Windows Presentation Foundation">WPF</a></li>
+<li><a href="/wikipedia/en/Windows_Workflow_Foundation" title="Windows Workflow Foundation">WF</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Software_Factory_(Microsoft_.NET)" title="Software Factory (Microsoft .NET)">Software factories</a></th><td><div>
+<ul><li><a href="/wikipedia/en/EFx_Factory" title="EFx Factory">EFx Factory</a></li>
+<li><a href="/wikipedia/en/Microsoft_Enterprise_Library" title="Microsoft Enterprise Library">Enterprise Library</a></li>
+<li><a href="/wikipedia/en/Composite_UI_Application_Block" title="Composite UI Application Block">Composite UI</a></li>
+<li><a href="/wikipedia/en/Microsoft_Customer_Care_Framework" title="Microsoft Customer Care Framework">CCF</a></li>
+<li><a href="/wikipedia/en/Microsoft_Connected_Services_Framework" title="Microsoft Connected Services Framework">CSF</a></li></ul>
+</div></td></tr><tr><th scope="row"><a href="/wikipedia/en/Inter-process_communication" title="Inter-process communication">IPC</a></th><td><div>
+<ul><li><a href="/wikipedia/en/Microsoft_RPC" title="Microsoft RPC">MSRPC</a></li>
+<li><a href="/wikipedia/en/Dynamic_Data_Exchange" title="Dynamic Data Exchange">Dynamic Data Exchange (DDE)</a></li>
+<li><a href="/wikipedia/en/.NET_Remoting" title=".NET Remoting">Remoting</a></li>
+<li><a href="/wikipedia/en/Windows_Communication_Foundation" title="Windows Communication Foundation">WCF</a></li></ul>
+</div></td></tr><tr><th scope="row">Accessibility</th><td><div>
+<ul><li><a href="/wikipedia/en/Microsoft_Active_Accessibility" title="Microsoft Active Accessibility">Active Accessibility</a></li>
+<li><a href="/wikipedia/en/Microsoft_UI_Automation" title="Microsoft UI Automation">UI Automation</a></li></ul>
+</div></td></tr><tr><th scope="row">Text and multilingual support</th><td><div>
+<ul><li><a href="/wikipedia/en/DirectWrite" title="DirectWrite">DirectWrite</a></li>
+<li><a href="/wikipedia/en/Text_Services_Framework" title="Text Services Framework">Text Services Framework</a></li>
+<li><a href="/wikipedia/en/Text_Object_Model" title="Text Object Model">Text Object Model</a></li>
+<li><a>Input method editor</a></li>
+<li><a href="/wikipedia/en/Language_Interface_Pack" title="Language Interface Pack">Language Interface Pack</a></li>
+<li><a href="/wikipedia/en/Multilingual_User_Interface" title="Multilingual User Interface">Multilingual User Interface</a></li>
+<li><a href="/wikipedia/en/Uniscribe" title="Uniscribe">Uniscribe</a></li></ul>
+</div></td></tr></tbody></table></div>
+</div>
+
+  </article>
+</main>
+
+<footer>
+  <button id="company-logo"><a href="https://zhiliaokeji.com/" target="_blank" title="Known LLC. (长沙知了信息科技有限公司)">
+    <p>Powered by</p>
+    <img src="/static/img/known.svg" alt="Known LLC. (长沙知了信息科技有限公司)">
+  </a></button>
+</footer>
+
+<script src="/static/libs/highlight/highlight.pack.js"></script>
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+<script src="/static/js/utils.js"></script>
+<script src="/static/js/toc.js"></script>
+<script src="/static/js/search-hint.js"></script>
+</body>
+</html>
