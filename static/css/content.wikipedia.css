@@ -368,3 +368,22 @@ table.navbox > tbody > tr > td {
   padding: 0;
   border: none;
 }
+
+table.table-img {
+  background: none;
+  border: none;
+  float: left;
+}
+
+table.table-img tbody {
+  width: auto;
+}
+
+table.table-img tbody td {
+  padding: 0;
+  border: none;
+}
+
+table.table-img tbody td figure {
+  margin-top: 0;
+}
