@@ -49,10 +49,7 @@ Home: <https://dookbook.info/>
 - Search Box (搜索框)
   - Smart Search Hints (搜索智能提示)
   - Input Damper™ (输入减振技术)
-- Content Page
-  - Layout: TOC + Content + Logo + Contributors + Search Box
-- Index Page
-  - Opening Animation (开场动画)
+- Opening Animation (开场动画)
 - Wikipedia Page (维基百科页面)
 
 ### Browser Compability
