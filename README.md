@@ -50,7 +50,7 @@ Home: <https://dookbook.info/>
   - Smart Search Hints (搜索智能提示)
   - **Input Damper™** (输入减振技术)
 - Opening Animation (开场动画)
-- **Styles for Wikipedia (Computer Science) Page**
+- **Pages of Wikipedia for Computer Science**
 
 ### Browser Compability
 
