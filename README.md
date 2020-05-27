@@ -12,6 +12,9 @@ Home: <https://dookbook.info/>
 
 ## Features
 
+- PC Pages
+  - *Content* + *About* + *Index*
+  - *Wikipedia for Computer Science*
 - Dark Mode (Focus Mode)
 - **Styles for *Markdown Documents Rendering Engine***
   - HTML Elements (32)
@@ -44,13 +47,11 @@ Home: <https://dookbook.info/>
     - **Bash**
     - **INI**/**TOML**
   - Code Block Themes (89)
-- PC Pages = *Content* + *About* + *Index*
 - Chinese / English Switching (中英文切换)
 - Search Box (搜索框)
   - Smart Search Hints (搜索智能提示)
   - **Input Damper™** (输入减振技术)
 - Opening Animation (开场动画)
-- **Pages of Wikipedia for Computer Science**
 
 ### Browser Compability
 
