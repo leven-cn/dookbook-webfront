@@ -47,6 +47,7 @@ Home: <https://dookbook.info/>
 - PC Pages = *Content* + *About* + *Index*
 - Chinese / English Switching (中英文切换)
 - Search Box (搜索框)
+  - Smart Search Hints (搜索智能提示)
   - Input Damper™ (输入减振技术)
 - Content Page
   - Layout: TOC + Content + Logo + Contributors + Search Box
