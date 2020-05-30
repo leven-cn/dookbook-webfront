@@ -186,6 +186,10 @@ table tr th:first-child{
   width: 200px;
 }
 
+table tr td.first-width{
+  width: auto;
+}
+
 table tr td,
 table tr th {
   border-bottom: 1px solid #666;
