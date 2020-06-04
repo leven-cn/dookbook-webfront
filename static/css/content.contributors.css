@@ -55,7 +55,7 @@ meter {
 
   flex: 1;
   margin-top: var(--meter-margin);
-  height: 24px;
+  height: 25px;
   border-radius: var(--meter-border-radius);
   background: var(--meter-background);
 }
@@ -125,6 +125,7 @@ meter::-webkit-meter-bar {
   border: var(--meter-border);
   border-radius: var(--meter-border-radius);
   padding: var(--meter-padding);
+  height: 26px;
 }
 
 /* Firefox */
