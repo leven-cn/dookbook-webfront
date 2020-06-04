@@ -130,6 +130,7 @@ aside ul li {
   float: left;
   background: none;
   box-sizing: border-box;
+  list-style: none;
 }
 
 aside ul li svg {
