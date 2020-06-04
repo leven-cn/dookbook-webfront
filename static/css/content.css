@@ -237,7 +237,7 @@ main article em {
 }
 
 main article img {
-  width: 100%;
+  max-width: 100%;
 }
 
 main blockquote p {
