@@ -369,6 +369,14 @@ table.navbox {
   margin-top: 0;
 }
 
+table.navbox th {
+  width: 150px;
+}
+
+table.navbox tr td:first-child {
+  width: 100%;
+}
+
 table.table-img {
   background: none;
   border: none;
