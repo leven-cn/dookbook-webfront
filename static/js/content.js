@@ -10,7 +10,7 @@ initSearch(searchInput, searchList)
 function safariStyle() {
   var isSafariBrowser = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
   if (isSafariBrowser) {
-    var meter = document.getElementsByTagName("meter")
+    var meter = document.getElementsByTagName('meter')
     for (var i = 0; i < meter.length; i++ ) {
       meter[i].style.webkitAppearance = "none"
     }
@@ -18,3 +18,28 @@ function safariStyle() {
 }
 
 safariStyle()
+
+function showMore () {
+  var learnMore = document.querySelector('.learn-more')
+  var learnMoreBox = document.querySelector('.learn-more-box')
+  var offon = true
+  learnMore.onclick = function (event) {
+    event.stopPropagation()
+    if (offon) {
+      learnMoreBox.style.display = 'block'
+      offon = false
+    } else {
+      learnMoreBox.style.display = 'none'
+      offon = true
+    }
+  }
+  document.body.onclick = function () {
+    learnMoreBox.style.display = 'none'
+    offon = true
+  }
+  learnMoreBox.onclick = function (event) {
+    event.stopPropagation()
+  }
+}
+
+showMore()
