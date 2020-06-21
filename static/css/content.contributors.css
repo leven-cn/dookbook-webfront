@@ -115,39 +115,12 @@ main button a:hover svg {
   transition: all 0.5s;
 }
 
-/* Firefox */
-meter:-moz-meter-sub-optimum {
-  border: var(--meter-border);
-}
-
 meter::-webkit-meter-bar {
   background: var(--meter-background);
   border: var(--meter-border);
   border-radius: var(--meter-border-radius);
   padding: var(--meter-padding);
   height: 26px;
-}
-
-/* Firefox */
-meter::-moz-meter-bar {
-  margin: var(--meter-margin);
-  padding: var(--meter-padding);
-  border-radius: var(--meter-border-radius);
-  height: 15px;
-  background: var(--meter-optimum-background);
-  background-image: linear-gradient(
-    90deg,
-    #8bcf69 5%,
-    #e6d450 5%,
-    #e6d450 15%,
-    #f28f68 15%,
-    #f28f68 55%,
-    #cf82bf 55%,
-    #cf82bf 95%,
-    #719fd1 95%,
-    #719fd1 100%
-  );
-  background-size: 100% 100%;
 }
 
 /* 最优 */
@@ -168,6 +141,22 @@ meter::-webkit-meter-even-less-good-value {
   background: rgb(255, 4, 4);
 }
 
+/* Firefox */
+meter::-moz-meter-bar {
+  margin: var(--meter-margin);
+  padding: var(--meter-padding);
+  border-radius: var(--meter-border-radius);
+  height: 15px;
+  background: var(--meter-optimum-background);
+  /* stylelint-disable-next-line unit-whitelist */
+  background-image: linear-gradient(90deg, #8bcf69 5%, #e6d450 5%, #e6d450 15%, #f28f68 15%, #f28f68 55%, #cf82bf 55%, #cf82bf 95%, #719fd1 95%, #719fd1 100%);
+  background-size: 100% 100%;
+}
+
+meter:-moz-meter-sub-optimum {
+  border: var(--meter-border);
+}
+
 .learn-more {
   font-size: 22px;
   width: 100%;
@@ -184,11 +173,6 @@ meter::-webkit-meter-even-less-good-value {
   width: 90px;
   height: auto;
   margin: 0;
-}
-
-.learn-more img:last-child {
-  width: 205px;
-  margin-top: 8px;
 }
 
 .learn-more hr {
@@ -219,6 +203,14 @@ meter::-webkit-meter-even-less-good-value {
   margin: 0;
 }
 
+.learn-more-box hr {
+  border: 1px solid #666;
+  margin: 0;
+  position: absolute;
+  top: 80px;
+  width: 220px;
+}
+
 .learn-more-box div {
   width: 220px;
   padding-left: 20px;
@@ -227,30 +219,27 @@ meter::-webkit-meter-even-less-good-value {
   position: relative;
 }
 
-.learn-more-box div img:first-child {
-  width: 120px;
-}
-
-.learn-more-box div hr {
-  border: 1px solid #666;
-  margin: 0;
-  position: absolute;
-  top: 80px;
-  width: 220px;
-}
-
 .learn-more-box div img {
   width: 220px;
   margin: 5px 0;
   float: none;
 }
 
-.learn-more-box div span {
+.learn-more-box div div {
   padding: 0 10px;
   display: inline-block;
   position: relative;
   z-index: 1;
   background: #d2d2d2;
+}
+
+.learn-more img:last-child {
+  width: 205px;
+  margin-top: 8px;
+}
+
+.learn-more-box div img:first-child {
+  width: 120px;
 }
 
 .learn-more-box svg.moon {
@@ -259,7 +248,6 @@ meter::-webkit-meter-even-less-good-value {
   border-radius: 35px;
   fill: #666;
   transition: all 0.3s;
-  
 }
 
 .learn-more-box svg.moon:hover {
