@@ -11,7 +11,7 @@ aside {
 
 aside ul {
   width: 100%;
-  height: calc(100% - 550px);
+  height: calc(100% - 350px);
   box-sizing: border-box;
   padding: 0 30px;
   margin-top: 40px;
@@ -61,9 +61,9 @@ meter {
 }
 
 aside button a {
-  border: 1px solid rgb(218, 218, 218);
+  border: 1px solid rgb(51, 51, 51);
   display: inline-block;
-  color: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
   padding: 0.5rem 1.2rem;
   border-radius: 5px;
   text-align: left;
@@ -73,18 +73,18 @@ aside button p {
   line-height: 0;
   padding: 0.4rem 0 0.8rem;
   font-size: 12px;
-  color: #ddd;
+  color: #333;
 }
 
 aside button {
   background: none;
   border: 0;
-  margin: 1.5rem auto;
+  margin-top: 1.5rem;
   width: 250px;
 }
 
 aside button svg {
-  fill: #fff;
+  fill: #333;
   width: 5rem;
 }
 
@@ -94,25 +94,25 @@ aside button em {
   display: inline-block;
 }
 
-.git-l {
+aside button em svg {
   width: 1.6rem;
   margin-left: 0.3rem;
 }
 
 main button a:hover p {
-  color: #000;
-  transition: all 2s;
+  color: #fff;
+  transition: all 0.8s;
 }
 
 main button a:hover {
   text-decoration: none;
-  background: #fff;
-  transition: all 2s;
+  background: #000;
+  transition: all 0.8s;
 }
 
 main button a:hover svg {
-  fill: #000;
-  transition: all 2s;
+  fill: #fff;
+  transition: all 0.5s;
 }
 
 /* Firefox */
@@ -168,10 +168,105 @@ meter::-webkit-meter-even-less-good-value {
   background: rgb(255, 4, 4);
 }
 
-iframe {
-  margin-left: 7px;
-  border: 3px dashed #222;
+.learn-more {
+  font-size: 22px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 25px;
+}
+
+.learn-more img {
+  float: none;
+  border-radius: 0;
+  width: 90px;
+  height: auto;
+  margin: 0;
+}
+
+.learn-more img:last-child {
+  width: 205px;
+  margin-top: 8px;
+}
+
+.learn-more hr {
+  width: 100%;
+  border: 1px solid #a5a5a7;
+  margin: 5px 0;
+}
+
+.learn-more-box {
+  display: none;
   position: absolute;
-  bottom: 130px;
-  left: 0;
+  bottom: 120px;
+  right: 250px;
+  background: #d2d2d2;
+  border: 2.5px solid #eee;
+  border-radius: 20px;
+  padding: 20px;
+  width: 390px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.learn-more-box img {
+  float: left;
+  width: 100px;
+  height: auto;
+  border-radius: 0;
+  margin: 0;
+}
+
+.learn-more-box div {
+  width: 220px;
+  padding-left: 20px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.learn-more-box div img:first-child {
+  width: 120px;
+}
+
+.learn-more-box div hr {
+  border: 1px solid #666;
+  margin: 0;
+  position: absolute;
+  top: 80px;
+  width: 220px;
+}
+
+.learn-more-box div img {
+  width: 220px;
+  margin: 5px 0;
+  float: none;
+}
+
+.learn-more-box div span {
+  padding: 0 10px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  background: #d2d2d2;
+}
+
+.learn-more-box svg.moon {
+  width: 35px;
+  border: 1px solid #666;
+  border-radius: 35px;
+  fill: #666;
+  transition: all 0.3s;
+  
+}
+
+.learn-more-box svg.moon:hover {
+  background: #000;
+  fill: #fff;
+}
+
+.learn-more:hover .learn-more-box {
+  display: block;
 }
