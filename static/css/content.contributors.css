@@ -189,7 +189,7 @@ meter:-moz-meter-sub-optimum {
   background: #d2d2d2;
   border: 2.5px solid #eee;
   border-radius: 20px;
-  padding: 20px;
+  padding: 18px;
   width: 390px;
   box-sizing: border-box;
   text-align: center;
@@ -197,7 +197,7 @@ meter:-moz-meter-sub-optimum {
 
 .learn-more-box img {
   float: left;
-  width: 100px;
+  width: 105px;
   height: auto;
   border-radius: 0;
   margin: 0;
@@ -212,8 +212,8 @@ meter:-moz-meter-sub-optimum {
 }
 
 .learn-more-box div {
-  width: 220px;
-  padding-left: 20px;
+  width: 222px;
+  padding-left: 16px;
   display: inline-block;
   text-align: center;
   position: relative;
@@ -223,9 +223,15 @@ meter:-moz-meter-sub-optimum {
   width: 220px;
   margin: 5px 0;
   float: none;
+  display: inline-block;
+}
+
+.learn-more-box div img:nth-child(2) {
+  margin-top: 0;
 }
 
 .learn-more-box div div {
+  width: auto;
   padding: 0 10px;
   display: inline-block;
   position: relative;
@@ -233,7 +239,7 @@ meter:-moz-meter-sub-optimum {
   background: #d2d2d2;
 }
 
-.learn-more img:last-child {
+.learn-more img:nth-child(3) {
   width: 205px;
   margin-top: 8px;
 }
