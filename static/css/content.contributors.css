@@ -264,3 +264,21 @@ meter:-moz-meter-sub-optimum {
 .learn-more:hover .learn-more-box {
   display: block;
 }
+
+/* 英文公众号样式 */
+
+#learn-more-en {
+  margin-top: 16px;
+}
+
+#learn-more-en img:nth-child(1) {
+  width: 128px;
+}
+
+#learn-more-box-en div img:first-child {
+  width: 60px;
+}
+
+#learn-more-box-en img:first-child {
+  width: 100px;
+}
