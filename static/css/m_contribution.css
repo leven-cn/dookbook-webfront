@@ -276,7 +276,7 @@ main {
   }
 }
 
-@keyframes contributionheight {
+@keyframes contributionRefund {
   0% {
     top: 0%;
   }
@@ -285,7 +285,7 @@ main {
   }
 }
 
-@keyframes contribution {
+@keyframes contributionBack {
   0% {
     top: -80%;
   }
@@ -303,7 +303,7 @@ main {
   }
 }
 
-@keyframes portraitheight {
+@keyframes portraitRefund {
   0% {
     bottom: 0%;
   }
@@ -312,20 +312,11 @@ main {
   }
 }
 
-@keyframes portrait {
+@keyframes portraitBack {
   0% {
     bottom: -40%;
   }
   100% {
     bottom: 0;
-  }
-}
-
-@keyframes showbg {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
