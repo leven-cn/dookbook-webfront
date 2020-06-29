@@ -63,7 +63,7 @@ header img {
   position: fixed;
   width: 100%;
   height: 80%;
-  background: #1b1b1b url("/static/img/contribution-bg1.png");
+  background: #1b1b1b url("/static/img/contribution-bg.png");
   background-size: 120%;
   animation: bgcolor 20s infinite;
   transform: all 8s;
